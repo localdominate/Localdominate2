@@ -1,28 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
 import TrustBadges from "@/components/TrustBadges";
-
-const benefits = [
-  "Komplette Profil-Optimierung (Titel, Beschreibung, Kategorien)",
-  "Keyword-Bombe: Die 50 umsatzstärksten Suchbegriffe deiner Branche",
-  "Psychologische Bilder-Strategie für maximale Klicks",
-  "5-Sterne-Automatismus Setup (QR-Codes + Link-Strategie)",
-  "Anti-Spam Schutz für deine Bewertungen",
-  "Schritt-für-Schritt Video-Anleitung",
-  "30 Tage E-Mail Support",
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const OfferSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-muted py-20 px-4">
       <div className="container max-w-4xl">
         {/* Section header */}
         <div className="text-center mb-12">
           <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">
-            Das Angebot
+            {t.offer.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground">
-            Der unwiderstehliche Deal
+            {t.offer.headline}
           </h2>
         </div>
         
@@ -32,10 +25,10 @@ const OfferSection = () => {
             {/* Left: Benefits */}
             <div>
               <h3 className="text-xl font-black text-foreground mb-6 uppercase">
-                Das bekommst du:
+                {t.offer.benefitsTitle}
               </h3>
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {t.offer.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 bg-success rounded-full flex items-center justify-center mt-0.5">
                       <Check className="w-4 h-4 text-success-foreground" />
@@ -49,23 +42,23 @@ const OfferSection = () => {
             {/* Right: Pricing */}
             <div className="flex flex-col justify-center items-center text-center bg-card p-6 md:p-8 border-2 border-dashed border-border">
               <p className="text-muted-foreground text-sm mb-2">
-                Agentur-Normalpreis:
+                {t.offer.agencyPrice}
               </p>
               <p className="text-3xl text-muted-foreground line-through mb-4">
                 1.500€
               </p>
               <p className="text-sm font-bold text-primary uppercase tracking-widest mb-2">
-                Dein Preis heute:
+                {t.offer.yourPrice}
               </p>
               <p className="text-6xl md:text-7xl font-black text-foreground mb-2">
                 299€
               </p>
               <p className="text-muted-foreground mb-6">
-                Einmalig. Keine versteckten Kosten.
+                {t.offer.oneTime}
               </p>
               
               <Button variant="cta" size="cta" className="w-full group">
-                Sofort-Zugang kaufen
+                {t.offer.ctaButton}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -76,7 +69,7 @@ const OfferSection = () => {
           {/* Bonus strip */}
           <div className="mt-10 bg-highlight/20 border-2 border-highlight p-4 text-center">
             <p className="font-bold text-foreground">
-              🎁 BONUS: Bestelle heute und erhalte unser "Google Maps Ranking Cheat Sheet" GRATIS dazu (Wert: 97€)
+              {t.offer.bonus}
             </p>
           </div>
         </div>

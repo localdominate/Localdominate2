@@ -1,9 +1,12 @@
-import { Lock, CreditCard, Shield } from "lucide-react";
+import { Lock, CreditCard } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const TrustBadges = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-wrap items-center justify-center gap-3 mt-4 opacity-60">
-      <span className="text-xs text-muted-foreground">Sichere Zahlung via:</span>
+      <span className="text-xs text-muted-foreground">{t.trust.securePayment}</span>
       <div className="flex items-center gap-2">
         {/* Stripe */}
         <div className="bg-muted px-2 py-1 rounded flex items-center gap-1">
