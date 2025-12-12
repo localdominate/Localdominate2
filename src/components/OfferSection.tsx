@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
+import TrustBadges from "@/components/TrustBadges";
 
 const benefits = [
   "Komplette Profil-Optimierung (Titel, Beschreibung, Kategorien)",
@@ -68,9 +69,7 @@ const OfferSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <p className="text-xs text-muted-foreground mt-4">
-                Sichere Zahlung via PayPal oder Kreditkarte
-              </p>
+              <TrustBadges />
             </div>
           </div>
           

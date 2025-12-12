@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import TrustBadges from "@/components/TrustBadges";
 
 const FinalCTASection = () => {
   return (
@@ -19,7 +20,9 @@ const FinalCTASection = () => {
           <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
         </Button>
         
-        <p className="text-pain-foreground/60 text-sm mt-6">
+        <TrustBadges />
+        
+        <p className="text-pain-foreground/60 text-sm mt-4">
           30-Tage Geld-zurück-Garantie • Einmalzahlung • Sofort-Zugang
         </p>
       </div>
