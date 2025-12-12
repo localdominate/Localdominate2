@@ -8,31 +8,31 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background py-12 px-4">
+    <section className="min-h-screen flex items-center justify-center bg-background py-16 md:py-20 px-4">
       <div className="container max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Text Content */}
-          <div className="text-center md:text-left order-2 md:order-1">
+          <div className="text-center md:text-left order-2 md:order-1 animate-fade-in-up">
             {/* Eyebrow */}
-            <p className="text-sm md:text-base font-bold tracking-widest text-primary uppercase mb-6 animate-pulse">
+            <p className="text-sm md:text-base font-semibold tracking-widest text-primary uppercase mb-6">
               {t.hero.eyebrow}
             </p>
             
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.05] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] mb-6">
               {t.hero.headline}{" "}
-              <span className="text-primary">{t.hero.headlineHighlight}</span> {t.hero.headlineEnd}
+              <span className="text-gradient">{t.hero.headlineHighlight}</span> {t.hero.headlineEnd}
             </h1>
             
             {/* Subheadline */}
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
-              {t.hero.subheadline} <span className="font-bold text-foreground">{t.hero.invisible}</span>
-              {t.hero.subheadlineMid} <span className="font-bold text-foreground">{t.hero.stopIt}</span>
+              {t.hero.subheadline} <span className="font-semibold text-foreground">{t.hero.invisible}</span>
+              {t.hero.subheadlineMid} <span className="font-semibold text-foreground">{t.hero.stopIt}</span>
               {" "}{t.hero.subheadlineEnd}
             </p>
             
             {/* CTA Button */}
-            <div className="flex flex-col items-center md:items-start gap-2 w-full max-w-md mx-auto md:mx-0">
+            <div className="flex flex-col items-center md:items-start gap-3 w-full max-w-md mx-auto md:mx-0">
               <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto">
                 <span className="hidden sm:inline">{t.hero.ctaFull}</span>
                 <span className="sm:hidden">{t.hero.ctaShort}</span>
@@ -41,7 +41,7 @@ const HeroSection = () => {
               
               {/* Trust text */}
               <p className="text-sm text-muted-foreground flex items-center gap-2 mt-2">
-                <span className="inline-block w-4 h-4 bg-success rounded-full"></span>
+                <span className="inline-block w-3 h-3 bg-success rounded-full"></span>
                 {t.hero.guarantee}
               </p>
               
@@ -50,19 +50,19 @@ const HeroSection = () => {
             </div>
             
             {/* Urgency element */}
-            <div className="mt-8 inline-block bg-highlight/20 border-2 border-highlight px-6 py-3">
-              <p className="text-sm font-bold text-foreground">
+            <div className="mt-8 inline-block bg-primary/5 border border-primary/20 rounded-xl px-6 py-3">
+              <p className="text-sm font-semibold text-foreground">
                 {t.hero.urgency} <span className="text-primary">{t.hero.spotsLeft}</span> {t.hero.urgencyEnd}
               </p>
             </div>
           </div>
           
           {/* Phone Mockup Image */}
-          <div className="order-1 md:order-2 flex justify-center">
+          <div className="order-1 md:order-2 flex justify-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <img 
               src={heroPhoneMockup} 
               alt="Google Maps Top 3 Ranking" 
-              className="w-64 md:w-80 lg:w-96 drop-shadow-2xl"
+              className="w-64 md:w-80 lg:w-96 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>

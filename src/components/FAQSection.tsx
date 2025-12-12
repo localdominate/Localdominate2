@@ -5,35 +5,37 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import useScrollReveal from "@/hooks/useScrollReveal";
 
 const FAQSection = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="bg-muted py-20 px-4">
-      <div className="container max-w-3xl">
+    <section className="bg-background-alt section-padding px-4">
+      <div ref={ref} className="container max-w-3xl">
         {/* Section header */}
-        <div className="text-center mb-12">
-          <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">
+        <div className={`text-center mb-12 reveal ${isVisible ? 'visible' : ''}`}>
+          <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-4">
             {t.faq.eyebrow}
           </p>
-          <h2 className="text-3xl md:text-4xl font-black text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             {t.faq.headline}
           </h2>
         </div>
         
         {/* Accordion */}
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3">
           {t.faq.items.map((faq, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-background border-2 border-border px-6 data-[state=open]:border-primary"
+              className={`bg-card border border-border/50 rounded-xl px-6 data-[state=open]:border-primary/50 data-[state=open]:shadow-md transition-all reveal reveal-delay-${Math.min(index + 1, 5)} ${isVisible ? 'visible' : ''}`}
             >
-              <AccordionTrigger className="text-left text-lg font-bold hover:no-underline hover:text-primary py-6">
+              <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline hover:text-primary py-5">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-foreground/80 text-base leading-relaxed pb-6">
+              <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
