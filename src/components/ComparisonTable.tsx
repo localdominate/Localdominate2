@@ -1,11 +1,14 @@
 import { Check, X } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const ComparisonTable = () => {
+  const { t } = useLanguage();
+  
   const rows = [
-    { label: "Kosten", agency: "1.500€+", diy: "Deine Lebenszeit", local: "299€ Festpreis" },
-    { label: "Dauer", agency: "Monate", diy: "Ewig", local: "48 Stunden" },
-    { label: "Garantie", agency: "Keine", diy: "Keine", local: "100% Geld-zurück" },
-    { label: "Ergebnis", agency: "Vielleicht", diy: "Frust", local: "Top-Rankings" },
+    t.comparison.rows.cost,
+    t.comparison.rows.duration,
+    t.comparison.rows.guarantee,
+    t.comparison.rows.result,
   ];
 
   return (
@@ -13,7 +16,7 @@ const ComparisonTable = () => {
       <div className="container max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-pain-foreground">
-            Warum <span className="text-primary">Local Dominator</span> anders ist
+            {t.comparison.headline} <span className="text-primary">{t.comparison.headlineHighlight}</span> {t.comparison.headlineEnd}
           </h2>
         </div>
 
@@ -24,18 +27,18 @@ const ComparisonTable = () => {
               <tr>
                 <th className="p-4"></th>
                 <th className="p-4 text-center text-pain-foreground/70 font-bold text-lg">
-                  Andere Agenturen
+                  {t.comparison.headers.agencies}
                 </th>
                 <th className="p-4 text-center text-pain-foreground/70 font-bold text-lg">
-                  Selber machen
+                  {t.comparison.headers.diy}
                 </th>
                 <th className="p-4 text-center relative">
                   {/* Bestseller Badge */}
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-success text-success-foreground text-xs font-black uppercase px-3 py-1 rounded-full">
-                    Bestseller
+                    {t.comparison.bestseller}
                   </div>
                   <div className="border-4 border-success bg-success/10 rounded-t-lg pt-6 pb-4 -mb-4">
-                    <span className="text-success font-black text-xl">Local Dominator</span>
+                    <span className="text-success font-black text-xl">{t.comparison.headers.localDominator}</span>
                   </div>
                 </th>
               </tr>
@@ -79,9 +82,9 @@ const ComparisonTable = () => {
           {/* Local Dominator Card - Featured */}
           <div className="relative border-4 border-success bg-success/10 p-6 rounded-lg">
             <div className="absolute -top-3 left-4 bg-success text-success-foreground text-xs font-black uppercase px-3 py-1 rounded-full">
-              Bestseller
+              {t.comparison.bestseller}
             </div>
-            <h3 className="text-success font-black text-xl mb-4 mt-2">Local Dominator</h3>
+            <h3 className="text-success font-black text-xl mb-4 mt-2">{t.comparison.headers.localDominator}</h3>
             <ul className="space-y-3">
               {rows.map((row, index) => (
                 <li key={index} className="flex justify-between">
@@ -98,7 +101,7 @@ const ComparisonTable = () => {
           {/* Other options - dimmed */}
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-pain-foreground/5 p-4 rounded-lg">
-              <h3 className="text-pain-foreground/50 font-bold text-sm mb-3">Andere Agenturen</h3>
+              <h3 className="text-pain-foreground/50 font-bold text-sm mb-3">{t.comparison.headers.agencies}</h3>
               <ul className="space-y-2 text-sm">
                 {rows.map((row, index) => (
                   <li key={index} className="flex items-center gap-1 text-pain-foreground/40">
@@ -109,7 +112,7 @@ const ComparisonTable = () => {
               </ul>
             </div>
             <div className="bg-pain-foreground/5 p-4 rounded-lg">
-              <h3 className="text-pain-foreground/50 font-bold text-sm mb-3">Selber machen</h3>
+              <h3 className="text-pain-foreground/50 font-bold text-sm mb-3">{t.comparison.headers.diy}</h3>
               <ul className="space-y-2 text-sm">
                 {rows.map((row, index) => (
                   <li key={index} className="flex items-center gap-1 text-pain-foreground/40">

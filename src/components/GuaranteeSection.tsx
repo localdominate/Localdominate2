@@ -1,6 +1,9 @@
 import { Shield } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const GuaranteeSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-background py-20 px-4">
       <div className="container max-w-3xl">
@@ -15,15 +18,14 @@ const GuaranteeSection = () => {
           {/* Text */}
           <div>
             <h3 className="text-2xl md:text-3xl font-black text-foreground mb-4">
-              Eisenharte 30-Tage Geld-zurück-Garantie
+              {t.guarantee.headline}
             </h3>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Wenn du nicht in <span className="font-bold">30 Tagen mehr Anrufe</span> bekommst, 
-              erstatten wir <span className="font-bold">jeden einzelnen Cent</span>. 
-              Kein Kleingedrucktes. Kein Risiko für dich.
+              {t.guarantee.text} <span className="font-bold">{t.guarantee.textBold1}</span> {t.guarantee.textMid}{" "}
+              <span className="font-bold">{t.guarantee.textBold2}</span>{t.guarantee.textEnd}
             </p>
             <p className="text-xl font-black text-primary mt-4">
-              Dein einziges Risiko ist, nichts zu tun.
+              {t.guarantee.onlyRisk}
             </p>
           </div>
         </div>
