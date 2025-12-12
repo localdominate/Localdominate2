@@ -179,6 +179,10 @@ export const translations = {
           question: "Muss ich technisch versiert sein?",
           answer: "Überhaupt nicht. Wir machen die gesamte technische Arbeit. Du musst nur den Zugang bereitstellen und unserer Video-Anleitung für den 5-Sterne-Automatismus folgen. Das kann wirklich jeder.",
         },
+        {
+          question: "Wie viel Zeit muss ich investieren?",
+          answer: "Genau 7 Minuten. Nach der Buchung füllst du ein kurzes Formular aus. Danach übernehmen wir alles. Du musst keine Technik verstehen und keine Texte schreiben.",
+        },
       ],
     },
     // FinalCTASection
@@ -195,10 +199,18 @@ export const translations = {
     },
     // Footer
     footer: {
-      copyright: "© 2024 Local Dominator. Alle Rechte vorbehalten.",
+      copyright: "© 2025 Local Dominator. All rights reserved.",
       imprint: "Impressum",
       privacy: "Datenschutz",
       terms: "AGB",
+      withdrawal: "Widerrufsrecht",
+      disclaimer: "Dieses Angebot steht in keiner Verbindung zu Google™ oder Facebook™. Dies sind Marken der jeweiligen Inhaber.",
+    },
+    // ExpertSection
+    expert: {
+      eyebrow: "Ihr Experte für lokale Sichtbarkeit",
+      text: "Wir sind keine anonyme KI-Firma. Mein Team und ich haben uns darauf spezialisiert, lokale Dienstleister in Deutschland, Österreich und der Schweiz sichtbar zu machen. Wir arbeiten nicht mit jedem – nur mit denen, die wachsen wollen.",
+      signature: "– Das Local Dominator Team",
     },
     // MobileStickyBar
     mobileBar: {
@@ -386,6 +398,10 @@ export const translations = {
           question: "Do I need to be tech-savvy?",
           answer: "Not at all. We do all the technical work. You just need to provide access and follow our video tutorial for the 5-star automatism. Anyone can do it.",
         },
+        {
+          question: "How much time do I need to invest?",
+          answer: "Exactly 7 minutes. After booking, you fill out a short form. After that, we take over everything. You don't need to understand technology or write any texts.",
+        },
       ],
     },
     // FinalCTASection
@@ -402,10 +418,18 @@ export const translations = {
     },
     // Footer
     footer: {
-      copyright: "© 2024 Local Dominator. All rights reserved.",
+      copyright: "© 2025 Local Dominator. All rights reserved.",
       imprint: "Imprint",
       privacy: "Privacy Policy",
       terms: "Terms",
+      withdrawal: "Right of Withdrawal",
+      disclaimer: "This offer is not affiliated with Google™ or Facebook™. These are trademarks of their respective owners.",
+    },
+    // ExpertSection
+    expert: {
+      eyebrow: "Your Expert for Local Visibility",
+      text: "We are not an anonymous AI company. My team and I specialize in making local service providers visible in Germany, Austria, and Switzerland. We don't work with everyone – only those who want to grow.",
+      signature: "– The Local Dominator Team",
     },
     // MobileStickyBar
     mobileBar: {
