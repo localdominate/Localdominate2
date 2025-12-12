@@ -61,10 +61,10 @@ export const translations = {
       },
       bestseller: "Bestseller",
       rows: {
-        cost: { label: "Kosten", agency: "1.500€+", diy: "Deine Lebenszeit", local: "299€ Festpreis" },
-        duration: { label: "Dauer", agency: "Monate", diy: "Ewig", local: "48 Stunden" },
-        guarantee: { label: "Garantie", agency: "Keine", diy: "Keine", local: "100% Geld-zurück" },
-        result: { label: "Ergebnis", agency: "Vielleicht", diy: "Frust", local: "Top-Rankings" },
+        cost: { label: "• Kosten:", agency: "1.500€+", diy: "Deine Lebenszeit", local: "299€ Festpreis" },
+        duration: { label: "• Dauer:", agency: "Monate", diy: "Ewig", local: "48 Stunden" },
+        guarantee: { label: "• Garantie:", agency: "Keine", diy: "Keine", local: "100% Geld-zurück" },
+        result: { label: "• Ergebnis:", agency: "Vielleicht", diy: "Frust", local: "Top-Rankings" },
       },
     },
     // SolutionSection
@@ -173,12 +173,12 @@ export const translations = {
     // GuaranteeSection
     guarantee: {
       headline: "Eisenharte 30-Tage Geld-zurück-Garantie",
-      text: "Wenn du nicht in",
-      textBold1: "30 Tagen mehr Anrufe",
-      textMid: "bekommst, erstatten wir",
-      textBold2: "jeden einzelnen Cent",
-      textEnd: ". Kein Kleingedrucktes. Kein Risiko für dich.",
-      onlyRisk: "Dein einziges Risiko ist, nichts zu tun.",
+      text: "Solltest du innerhalb von",
+      textBold1: "30 Tagen nach Umsetzung keine messbare Steigerung deiner Anfragen",
+      textMid: "verzeichnen, erstatten wir dir auf Anfrage",
+      textBold2: "den vollen Kaufpreis",
+      textEnd: ". Voraussetzung: Du hast alle Optimierungen gemäß unserer Anleitung umgesetzt und uns die Möglichkeit zur Nachbesserung gegeben.",
+      onlyRisk: "Dein einziges Risiko: Nicht zu handeln.",
     },
     // FAQSection
     faq: {
@@ -186,32 +186,32 @@ export const translations = {
       headline: "Häufige Fragen (ehrlich beantwortet)",
       items: [
         {
-          question: "Brauche ich Zugang zu meinem Google-Konto?",
-          answer: "Ja, du gewährst uns temporären Zugang zu deinem Google Business Profil. Das ist 100% sicher – wir arbeiten nach DSGVO-Standards und du kannst den Zugang jederzeit widerrufen. Ohne Zugang können wir die Optimierungen nicht durchführen.",
-        },
-        {
-          question: "Funktioniert das für meine Branche?",
-          answer: "Ja, wenn du ein lokales Geschäft betreibst und Kunden aus deiner Region anziehen willst. Egal ob Handwerker, Arztpraxis, Restaurant, Friseur, Anwalt oder Fitnessstudio – das System funktioniert branchenübergreifend.",
-        },
-        {
-          question: "Wie schnell sehe ich Ergebnisse?",
-          answer: "Die meisten Kunden sehen erste Ranking-Verbesserungen innerhalb von 14-21 Tagen. Die volle Wirkung entfaltet sich nach etwa 4-6 Wochen, wenn Google alle Änderungen indexiert hat.",
-        },
-        {
           question: "Was passiert, wenn es nicht funktioniert?",
-          answer: "Dann bekommst du dein Geld zurück. Punkt. Wir haben eine 30-Tage Geld-zurück-Garantie ohne Wenn und Aber. Wenn du nicht mehr Anrufe bekommst, schreibst du uns eine E-Mail und wir erstatten dir den vollen Betrag.",
+          answer: "Du bekommst dein Geld zurück – ohne Diskussion. Unsere 30-Tage Geld-zurück-Garantie schützt dich vollständig. Wenn du nach Umsetzung keine messbare Steigerung deiner Anfragen siehst, schreibst du uns eine E-Mail und wir erstatten den vollen Kaufpreis. Du gehst also kein Risiko ein.",
         },
         {
           question: "Ist das nicht einfach SEO?",
-          answer: "Nein. Klassische SEO-Agenturen verkaufen dir monatelange Verträge für Websites. Wir fokussieren uns laser-scharf auf Google Maps – den Ort, wo 86% aller lokalen Suchanfragen enden. Unterschiedliches Spielfeld, unterschiedliche Regeln.",
+          answer: "Nein, und das ist der entscheidende Unterschied. Klassische SEO-Agenturen verkaufen dir monatelange Verträge für Websites. Wir fokussieren uns laser-scharf auf Google Maps – den Ort, wo 86% aller lokalen Suchanfragen enden. Das ist unser Spezialgebiet, nicht ein Nebenprojekt.",
+        },
+        {
+          question: "Funktioniert das für meine Branche?",
+          answer: "Ja, wenn du ein lokales Geschäft betreibst und Kunden aus deiner Region anziehen willst. Handwerker, Ärzte, Restaurants, Friseure, Anwälte, Fitnessstudios – das System funktioniert branchenübergreifend. Die Prinzipien lokaler Sichtbarkeit sind universell.",
+        },
+        {
+          question: "Wie schnell sehe ich Ergebnisse?",
+          answer: "Die meisten Kunden sehen erste Ranking-Verbesserungen innerhalb von 14-21 Tagen. Die volle Wirkung entfaltet sich nach etwa 4-6 Wochen, wenn Google alle Änderungen indexiert hat. Und wenn nicht? Dann greift unsere Garantie.",
         },
         {
           question: "Muss ich technisch versiert sein?",
-          answer: "Überhaupt nicht. Wir machen die gesamte technische Arbeit. Du musst nur den Zugang bereitstellen und unserer Video-Anleitung für den 5-Sterne-Automatismus folgen. Das kann wirklich jeder.",
+          answer: "Überhaupt nicht. Wir übernehmen die gesamte technische Arbeit. Du gibst uns den Zugang und folgst unserer einfachen Video-Anleitung für den 5-Sterne-Automatismus. Das kann wirklich jeder – auch ohne Vorkenntnisse.",
         },
         {
           question: "Wie viel Zeit muss ich investieren?",
-          answer: "Genau 7 Minuten. Nach der Buchung füllst du ein kurzes Formular aus. Danach übernehmen wir alles. Du musst keine Technik verstehen und keine Texte schreiben.",
+          answer: "Genau 7 Minuten. Nach der Buchung füllst du ein kurzes Formular aus. Danach übernehmen wir alles. Du musst keine Technik verstehen und keine Texte schreiben. Wir erledigen die Arbeit – du erntest die Ergebnisse.",
+        },
+        {
+          question: "Brauche ich Zugang zu meinem Google-Konto?",
+          answer: "Ja, du gewährst uns temporären Zugang zu deinem Google Business Profil. Das ist 100% sicher – wir arbeiten nach DSGVO-Standards und du kannst den Zugang jederzeit widerrufen. Ohne diesen Zugang können wir die Optimierungen nicht durchführen.",
         },
       ],
     },
@@ -310,10 +310,10 @@ export const translations = {
       },
       bestseller: "Bestseller",
       rows: {
-        cost: { label: "Cost", agency: "$1,500+", diy: "Your lifetime", local: "$299 fixed" },
-        duration: { label: "Duration", agency: "Months", diy: "Forever", local: "48 hours" },
-        guarantee: { label: "Guarantee", agency: "None", diy: "None", local: "100% money-back" },
-        result: { label: "Result", agency: "Maybe", diy: "Frustration", local: "Top Rankings" },
+        cost: { label: "• Cost:", agency: "$1,500+", diy: "Your lifetime", local: "$299 fixed" },
+        duration: { label: "• Duration:", agency: "Months", diy: "Forever", local: "48 hours" },
+        guarantee: { label: "• Guarantee:", agency: "None", diy: "None", local: "100% money-back" },
+        result: { label: "• Result:", agency: "Maybe", diy: "Frustration", local: "Top Rankings" },
       },
     },
     // SolutionSection
@@ -422,12 +422,12 @@ export const translations = {
     // GuaranteeSection
     guarantee: {
       headline: "Ironclad 30-Day Money-Back Guarantee",
-      text: "If you don't get",
-      textBold1: "more calls in 30 days",
-      textMid: ", we refund",
-      textBold2: "every single cent",
-      textEnd: ". No fine print. Zero risk for you.",
-      onlyRisk: "Your only risk is doing nothing.",
+      text: "If you don't see a",
+      textBold1: "measurable increase in inquiries within 30 days of implementation",
+      textMid: ", we will refund",
+      textBold2: "the full purchase price",
+      textEnd: " upon request. Condition: You have implemented all optimizations according to our instructions and given us the opportunity to make improvements.",
+      onlyRisk: "Your only risk: Not taking action.",
     },
     // FAQSection
     faq: {
@@ -435,32 +435,32 @@ export const translations = {
       headline: "Frequently Asked Questions (Honestly Answered)",
       items: [
         {
-          question: "Do I need access to my Google account?",
-          answer: "Yes, you grant us temporary access to your Google Business Profile. This is 100% secure – we work according to GDPR standards and you can revoke access at any time. Without access, we cannot perform the optimizations.",
-        },
-        {
-          question: "Does this work for my industry?",
-          answer: "Yes, if you run a local business and want to attract customers from your region. Whether tradesman, medical practice, restaurant, hairdresser, lawyer, or gym – the system works across industries.",
-        },
-        {
-          question: "How quickly will I see results?",
-          answer: "Most customers see initial ranking improvements within 14-21 days. The full effect unfolds after about 4-6 weeks when Google has indexed all changes.",
-        },
-        {
           question: "What happens if it doesn't work?",
-          answer: "Then you get your money back. Period. We have a 30-day money-back guarantee with no ifs or buts. If you don't get more calls, you send us an email and we refund the full amount.",
+          answer: "You get your money back – no discussion. Our 30-day money-back guarantee protects you completely. If you don't see a measurable increase in inquiries after implementation, you send us an email and we refund the full purchase price. You take zero risk.",
         },
         {
           question: "Isn't this just SEO?",
-          answer: "No. Classic SEO agencies sell you months-long contracts for websites. We focus laser-sharp on Google Maps – the place where 86% of all local searches end. Different playing field, different rules.",
+          answer: "No, and that's the crucial difference. Classic SEO agencies sell you months-long contracts for websites. We focus laser-sharp on Google Maps – the place where 86% of all local searches end. This is our specialty, not a side project.",
+        },
+        {
+          question: "Does this work for my industry?",
+          answer: "Yes, if you run a local business and want to attract customers from your region. Tradesmen, doctors, restaurants, hairdressers, lawyers, gyms – the system works across industries. The principles of local visibility are universal.",
+        },
+        {
+          question: "How quickly will I see results?",
+          answer: "Most customers see initial ranking improvements within 14-21 days. The full effect unfolds after about 4-6 weeks when Google has indexed all changes. And if not? Our guarantee kicks in.",
         },
         {
           question: "Do I need to be tech-savvy?",
-          answer: "Not at all. We do all the technical work. You just need to provide access and follow our video tutorial for the 5-star automatism. Anyone can do it.",
+          answer: "Not at all. We handle all the technical work. You provide access and follow our simple video tutorial for the 5-star automatism. Anyone can do it – even without prior knowledge.",
         },
         {
           question: "How much time do I need to invest?",
-          answer: "Exactly 7 minutes. After booking, you fill out a short form. After that, we take over everything. You don't need to understand technology or write any texts.",
+          answer: "Exactly 7 minutes. After booking, you fill out a short form. After that, we take over everything. You don't need to understand technology or write any texts. We do the work – you reap the results.",
+        },
+        {
+          question: "Do I need access to my Google account?",
+          answer: "Yes, you grant us temporary access to your Google Business Profile. This is 100% secure – we work according to GDPR standards and you can revoke access at any time. Without this access, we cannot perform the optimizations.",
         },
       ],
     },
