@@ -120,6 +120,36 @@ export const translations = {
         },
       ],
     },
+    // ValueStackSection
+    valueStack: {
+      eyebrow: "Dein Lieferumfang",
+      headline: "Nicht nur eine Dienstleistung. Ein komplettes Waffen-Arsenal.",
+      items: [
+        {
+          title: "Die Core-Optimierung",
+          text: "Komplettes Setup deines Google Profils mit Keyword-Injektion und Premium-Foto-Uploads.",
+          value: "Wert: 299€",
+        },
+        {
+          title: "Der Bewertungs-Magnet",
+          text: "Druckfertiges Design für deinen Tresen-Aufsteller mit Smart-Link Technologie für sofortige 5-Sterne.",
+          value: "Wert: 149€",
+        },
+        {
+          title: "Das Mitarbeiter-Skript",
+          text: "Psychologischer Gesprächsleitfaden: So fragen deine Mitarbeiter nach Bewertungen, ohne zu nerven.",
+          value: "Wert: 99€",
+        },
+        {
+          title: "Die Ranking-Versicherung",
+          text: "Anti-Sperr-Checkliste & Guide, damit dein Profil sicher oben bleibt.",
+          value: "Wert: 79€",
+        },
+      ],
+      totalLabel: "Gesamtwert des Pakets:",
+      totalValue: "626€",
+      todayPrice: "Heute nur: 299€",
+    },
     // OfferSection
     offer: {
       eyebrow: "Das Angebot",
@@ -338,6 +368,36 @@ export const translations = {
           result: "#1 for 12 keywords",
         },
       ],
+    },
+    // ValueStackSection
+    valueStack: {
+      eyebrow: "Your Deliverables",
+      headline: "Not Just a Service. A Complete Weapons Arsenal.",
+      items: [
+        {
+          title: "The Core Optimization",
+          text: "Complete setup of your Google profile with keyword injection and premium photo uploads.",
+          value: "Value: $299",
+        },
+        {
+          title: "The Review Magnet",
+          text: "Print-ready design for your counter display with smart-link technology for instant 5-stars.",
+          value: "Value: $149",
+        },
+        {
+          title: "The Employee Script",
+          text: "Psychological conversation guide: How your employees ask for reviews without being annoying.",
+          value: "Value: $99",
+        },
+        {
+          title: "The Ranking Insurance",
+          text: "Anti-suspension checklist & guide to keep your profile safely at the top.",
+          value: "Value: $79",
+        },
+      ],
+      totalLabel: "Total package value:",
+      totalValue: "$626",
+      todayPrice: "Today only: $299",
     },
     // OfferSection
     offer: {
