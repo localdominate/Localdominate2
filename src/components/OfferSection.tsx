@@ -27,7 +27,7 @@ const OfferSection = () => {
         </div>
         
         {/* Offer box */}
-        <div className="bg-background shadow-offer p-8 md:p-12 border-4 border-foreground">
+        <div className="bg-background shadow-offer p-6 md:p-8 lg:p-12 border-4 border-foreground">
           <div className="grid md:grid-cols-2 gap-10">
             {/* Left: Benefits */}
             <div>
@@ -47,7 +47,7 @@ const OfferSection = () => {
             </div>
             
             {/* Right: Pricing */}
-            <div className="flex flex-col justify-center items-center text-center bg-card p-8 border-2 border-dashed border-border">
+            <div className="flex flex-col justify-center items-center text-center bg-card p-6 md:p-8 border-2 border-dashed border-border">
               <p className="text-muted-foreground text-sm mb-2">
                 Agentur-Normalpreis:
               </p>

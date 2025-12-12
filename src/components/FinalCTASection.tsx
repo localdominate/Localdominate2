@@ -15,10 +15,13 @@ const FinalCTASection = () => {
           Du kannst das ändern. Heute.
         </p>
         
-        <Button variant="cta" size="ctaLarge" className="group">
-          Jetzt Local Dominator starten (299€)
-          <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-        </Button>
+        <div className="flex justify-center">
+          <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto max-w-md">
+            <span className="hidden sm:inline">Jetzt Local Dominator starten (299€)</span>
+            <span className="sm:hidden">Jetzt starten (299€)</span>
+            <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
         
         <TrustBadges />
         
