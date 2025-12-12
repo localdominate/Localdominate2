@@ -25,10 +25,11 @@ const HeroSection = () => {
         </p>
         
         {/* CTA Button */}
-        <div className="flex flex-col items-center gap-2">
-          <Button variant="cta" size="ctaLarge" className="group">
-            Jetzt Marktherrschaft sichern (299€)
-            <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+        <div className="flex flex-col items-center gap-2 w-full max-w-md mx-auto">
+          <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto">
+            <span className="hidden sm:inline">Jetzt Marktherrschaft sichern (299€)</span>
+            <span className="sm:hidden">Jetzt starten (299€)</span>
+            <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
           </Button>
           
           {/* Trust text */}
