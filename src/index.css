@@ -46,6 +46,15 @@
     --success-foreground: 0 0% 100%;
     --highlight: 45 93% 47%;
     
+    /* Restaurant Page Tokens */
+    --trust-dark: 215 28% 10%;
+    --trust-dark-foreground: 210 40% 98%;
+    --action-green: 160 84% 39%;
+    --action-green-foreground: 0 0% 100%;
+    --alert-orange: 25 95% 53%;
+    --alert-orange-foreground: 0 0% 100%;
+    --roi-bg: 160 84% 12%;
+    
     /* Premium Shadows - Default Blue Glow */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
