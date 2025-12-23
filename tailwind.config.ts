@@ -60,6 +60,19 @@ export default {
           foreground: "hsl(var(--success-foreground))",
         },
         highlight: "hsl(var(--highlight))",
+        "trust-dark": {
+          DEFAULT: "hsl(var(--trust-dark))",
+          foreground: "hsl(var(--trust-dark-foreground))",
+        },
+        "action-green": {
+          DEFAULT: "hsl(var(--action-green))",
+          foreground: "hsl(var(--action-green-foreground))",
+        },
+        "alert-orange": {
+          DEFAULT: "hsl(var(--alert-orange))",
+          foreground: "hsl(var(--alert-orange-foreground))",
+        },
+        "roi-bg": "hsl(var(--roi-bg))",
       },
       borderRadius: {
         "2xl": "1rem",
