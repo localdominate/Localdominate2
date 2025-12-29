@@ -219,6 +219,30 @@
     }
   }
 
+  /* CTA Pulse Animation */
+  @keyframes cta-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.6);
+    }
+    50% { 
+      box-shadow: 0 0 0 12px hsl(var(--primary) / 0);
+    }
+  }
+
+  .cta-pulse {
+    animation: cta-pulse 2s ease-in-out infinite;
+  }
+
+  /* Subtle bounce for guarantee shield */
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 1s ease-in-out;
+  }
+
   /* Section spacing */
   .section-padding {
     @apply py-20 md:py-28 lg:py-32;
