@@ -9,8 +9,12 @@ const StickyHeader = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling 400px
-      setIsVisible(window.scrollY > 400);
+      const scrollY = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const halfwayPoint = documentHeight * 0.5;
+      
+      // Show between 400px and 50% of page
+      setIsVisible(scrollY > 400 && scrollY < halfwayPoint);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
