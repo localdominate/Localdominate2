@@ -53,7 +53,7 @@ const StickyHeader = () => {
           : "-translate-y-full opacity-0"
       }`}
     >
-      <div className="glass bg-background/95 border-b border-border shadow-lg">
+      <div className="bg-background border-b border-border shadow-lg">
         <div className="container max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}

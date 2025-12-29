@@ -202,7 +202,7 @@ const ExitIntentPopup = () => {
 
             <button
               onClick={handleClose}
-              className="text-xs text-muted-foreground/70 hover:text-muted-foreground transition-colors"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               {t.noThanks}
             </button>
@@ -249,18 +249,18 @@ const ExitIntentPopup = () => {
           <h3 className="text-2xl font-bold text-foreground mb-2">
             {t.headline}
           </h3>
-          <p className="text-lg font-semibold text-amber-500 mb-1">
+          <p className="text-lg font-semibold text-amber-700 dark:text-amber-400 mb-1">
             {t.subheadline}
           </p>
           <p className="text-sm text-muted-foreground mb-5 italic">
             {t.urgencyText}
           </p>
 
-          <div className="inline-block bg-amber-500/15 border-2 border-amber-500 rounded-xl px-6 py-4 mb-5">
-            <p className="text-amber-500 font-bold text-xl mb-1">{t.badge}</p>
+          <div className="inline-block bg-amber-500/20 border-2 border-amber-600 rounded-xl px-6 py-4 mb-5">
+            <p className="text-amber-700 dark:text-amber-300 font-bold text-xl mb-1">{t.badge}</p>
             <p className="text-2xl font-bold text-foreground mb-1">{t.bonusName}</p>
-            <p className="text-amber-500 font-semibold">{t.bonusValue}</p>
-            <p className="text-amber-600 font-medium text-sm mt-1">{t.valueText}</p>
+            <p className="text-amber-700 dark:text-amber-400 font-semibold">{t.bonusValue}</p>
+            <p className="text-amber-800 dark:text-amber-300 font-medium text-sm mt-1">{t.valueText}</p>
           </div>
 
           <Button 
@@ -275,7 +275,7 @@ const ExitIntentPopup = () => {
 
           <button
             onClick={handleClose}
-            className="text-xs text-muted-foreground/70 hover:text-muted-foreground transition-colors"
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
             {t.noThanks}
           </button>
