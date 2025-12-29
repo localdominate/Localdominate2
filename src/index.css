@@ -55,6 +55,14 @@
     --alert-orange-foreground: 0 0% 100%;
     --roi-bg: 155 70% 10%;
     
+    /* Elegant Menu Card Theme */
+    --menu-dark: 30 10% 8%;
+    --menu-cream: 40 30% 95%;
+    --menu-gold: 42 70% 55%;
+    --menu-gold-muted: 42 40% 40%;
+    --menu-burgundy: 345 60% 35%;
+    --menu-line: 40 20% 30%;
+    
     /* Premium Shadows - Default Blue Glow */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
@@ -299,5 +307,204 @@
 
   .animate-pulse-slow {
     animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  /* ============================================
+     ELEGANT MENU CARD STYLES
+     ============================================ */
+
+  /* Menu Page Background */
+  .menu-page {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--menu-dark)) 0%,
+      hsl(30 10% 6%) 100%
+    );
+    position: relative;
+  }
+
+  .menu-page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, hsl(var(--menu-gold) / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(var(--menu-burgundy) / 0.02) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Elegant Divider with Ornament */
+  .menu-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .menu-divider::before,
+  .menu-divider::after {
+    content: '';
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--menu-gold-muted)), transparent);
+  }
+
+  .menu-divider-ornament {
+    color: hsl(var(--menu-gold));
+    font-size: 1rem;
+  }
+
+  /* Decorative Corners */
+  .menu-corner {
+    position: relative;
+  }
+
+  .menu-corner::before,
+  .menu-corner::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 1px solid hsl(var(--menu-gold) / 0.5);
+  }
+
+  .menu-corner::before {
+    top: -8px;
+    left: -8px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .menu-corner::after {
+    bottom: -8px;
+    right: -8px;
+    border-left: none;
+    border-top: none;
+  }
+
+  /* Section Title - Like Menu Categories */
+  .menu-section-title {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    color: hsl(var(--menu-cream));
+  }
+
+  /* Subtitle with serif italic */
+  .menu-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: hsl(var(--menu-cream) / 0.7);
+  }
+
+  /* Price styling like on real menus */
+  .menu-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    color: hsl(var(--menu-gold));
+  }
+
+  /* Dotted line for price */
+  .menu-price-line {
+    flex: 1;
+    border-bottom: 1px dotted hsl(var(--menu-gold-muted) / 0.5);
+    margin: 0 1rem;
+    min-width: 2rem;
+  }
+
+  /* Card styling */
+  .menu-card {
+    background: hsl(var(--menu-dark) / 0.6);
+    border: 1px solid hsl(var(--menu-gold) / 0.2);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+  }
+
+  .menu-card:hover {
+    border-color: hsl(var(--menu-gold) / 0.4);
+    box-shadow: 0 0 40px hsl(var(--menu-gold) / 0.1);
+  }
+
+  /* Featured card */
+  .menu-card-featured {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--menu-dark) / 0.8) 0%,
+      hsl(var(--menu-burgundy) / 0.1) 100%
+    );
+    border: 1px solid hsl(var(--menu-gold) / 0.4);
+  }
+
+  /* Button styling */
+  .menu-button {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid hsl(var(--menu-gold));
+    color: hsl(var(--menu-gold));
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .menu-button:hover {
+    background: hsl(var(--menu-gold));
+    color: hsl(var(--menu-dark));
+  }
+
+  .menu-button-filled {
+    background: hsl(var(--menu-gold));
+    color: hsl(var(--menu-dark));
+  }
+
+  .menu-button-filled:hover {
+    background: hsl(var(--menu-gold-muted));
+  }
+
+  /* Elegant fade-in animation */
+  @keyframes menu-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .menu-fade-in {
+    animation: menu-fade-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+  }
+
+  /* Staggered delays */
+  .menu-delay-1 { animation-delay: 0.1s; }
+  .menu-delay-2 { animation-delay: 0.2s; }
+  .menu-delay-3 { animation-delay: 0.3s; }
+  .menu-delay-4 { animation-delay: 0.4s; }
+  .menu-delay-5 { animation-delay: 0.5s; }
+  .menu-delay-6 { animation-delay: 0.6s; }
+
+  /* Gold text gradient */
+  .text-menu-gradient {
+    background: linear-gradient(135deg, hsl(var(--menu-gold)) 0%, hsl(42 80% 70%) 50%, hsl(var(--menu-gold)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Elegant separator line */
+  .menu-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--menu-gold)), transparent);
+    margin: 0 auto;
   }
 }

@@ -1,21 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   Phone, 
   MessageCircle, 
-  MapPin, 
-  Smartphone, 
-  Settings, 
   ArrowRight,
   Check,
-  Star,
-  Users,
-  TrendingUp,
-  Clock,
-  Shield,
-  ChefHat,
-  Zap
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
@@ -65,6 +53,11 @@ const AnimatedCounter = ({ target, suffix = "", prefix = "" }: { target: number;
   return <span ref={ref}>{prefix}{count}{suffix}</span>;
 };
 
+// Ornament Component
+const Ornament = ({ className = "" }: { className?: string }) => (
+  <span className={`text-menu-gold font-menu-serif ${className}`}>◆</span>
+);
+
 const RestaurantMarketing = () => {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
 
@@ -88,498 +81,436 @@ const RestaurantMarketing = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-trust-dark text-trust-dark-foreground overflow-hidden">
-      {/* Hero Section */}
-      <section id="hero" className="relative px-4 pt-12 pb-16 md:pt-20 md:pb-24">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-action-green/5 via-transparent to-transparent pointer-events-none" />
-        
-        <div className="container max-w-4xl mx-auto text-center relative">
-          <Badge 
-            className="mb-6 bg-action-green/20 text-action-green border-action-green/40 px-4 py-2 animate-fade-in-up opacity-0"
-            style={{ animationDelay: '0.1s' }}
-          >
-            <Users className="w-4 h-4 mr-2 inline animate-pulse" />
-            Bereits 50+ Restaurants in Ihrer Region optimiert
-          </Badge>
+    <div className="min-h-screen menu-page text-menu-cream overflow-hidden font-menu-sans">
+      
+      {/* Hero Section - Elegant Welcome */}
+      <section id="hero" className="relative px-4 pt-16 pb-20 md:pt-24 md:pb-32">
+        <div className="container max-w-3xl mx-auto text-center relative">
           
-          <h1 
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in-up opacity-0"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Verlieren Sie <span className="text-alert-orange">heute Abend wieder</span>{" "}
-            <span className="relative inline-block">
-              3-4 volle Tische
-              <span className="absolute -bottom-1 left-0 right-0 h-1 bg-alert-orange/50 rounded-full" />
-            </span>{" "}
-            an die Konkurrenz?
+          {/* Top Divider */}
+          <div className="menu-divider menu-fade-in menu-delay-1">
+            <span className="menu-divider-ornament">◆</span>
+          </div>
+          
+          {/* Brand */}
+          <h1 className="font-menu-serif text-lg md:text-xl tracking-[0.4em] uppercase text-menu-gold mb-8 menu-fade-in menu-delay-2">
+            Local Dominator
           </h1>
           
-          <p 
-            className="text-lg md:text-xl text-trust-dark-foreground/90 mb-8 max-w-2xl mx-auto animate-fade-in-up opacity-0"
-            style={{ animationDelay: '0.4s' }}
-          >
-            <strong>90% der Gäste entscheiden am Handy</strong>, wo sie essen gehen.{" "}
-            <span className="text-alert-orange font-semibold">Wenn Ihre Karte dort nicht lädt, gehen sie woanders hin.</span>
+          {/* Second Divider */}
+          <div className="menu-line mb-12 menu-fade-in menu-delay-2" />
+          
+          {/* Main Headline */}
+          <h2 className="font-menu-serif text-3xl md:text-5xl lg:text-6xl font-normal leading-tight mb-8 menu-fade-in menu-delay-3 text-menu-cream">
+            „Verlieren Sie heute Abend wieder
+            <span className="block mt-2 text-menu-gold italic">3–4 volle Tische</span>
+            an die Konkurrenz?"
+          </h2>
+          
+          {/* Ornament */}
+          <div className="text-2xl text-menu-gold mb-8 menu-fade-in menu-delay-4">❧</div>
+          
+          {/* Subheadline */}
+          <p className="font-menu-serif text-xl md:text-2xl italic text-menu-cream/80 mb-12 max-w-xl mx-auto menu-fade-in menu-delay-4">
+            90% der Gäste entscheiden am Handy,
+            <span className="block">wo sie heute Abend essen.</span>
           </p>
           
-          <Button 
-            size="lg" 
-            className="bg-action-green hover:bg-action-green/90 text-action-green-foreground px-8 py-6 text-lg font-semibold shadow-lg shadow-action-green/40 cta-pulse hover:scale-105 transition-transform animate-fade-in-up opacity-0"
-            style={{ animationDelay: '0.6s' }}
-          >
-            <Zap className="w-5 h-5 mr-2" />
-            Gratis: Ihr Restaurant-Potenzial in 5 Min
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          {/* CTA Button */}
+          <button className="menu-button menu-fade-in menu-delay-5 group">
+            <span className="flex items-center gap-3">
+              Gratis Umsatz-Analyse
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
           
-          <p 
-            className="mt-4 text-sm text-trust-dark-foreground/70 animate-fade-in-up opacity-0"
-            style={{ animationDelay: '0.8s' }}
-          >
-            ✓ Unverbindlich • ✓ Keine Kosten • ✓ In 24h Ergebnis
+          {/* Trust Line */}
+          <p className="mt-8 text-sm tracking-wider text-menu-cream/50 menu-fade-in menu-delay-6">
+            Unverbindlich · Keine Kosten
           </p>
         </div>
       </section>
 
-      {/* Agitation Section - Split Screen Comparison */}
-      <section id="comparison" className="px-4 py-16 md:py-24 bg-gradient-to-b from-trust-dark/50 to-trust-dark">
-        <div className="container max-w-5xl mx-auto">
-          <h2 
-            className={`text-2xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${
-              visibleSections.has('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            Der Unterschied, den <span className="text-action-green">Ihre Gäste sehen</span>
-          </h2>
+      {/* Comparison Section - Das Problem / Die Lösung */}
+      <section id="comparison" className="px-4 py-16 md:py-24">
+        <div className="container max-w-4xl mx-auto">
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* Problem Side */}
-            <Card 
-              className={`bg-alert-orange/10 border-alert-orange/40 overflow-hidden hover-lift group transition-all duration-700 ${
-                visibleSections.has('comparison') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+            {/* Das Problem */}
+            <div 
+              className={`text-center transition-all duration-1000 ${
+                visibleSections.has('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
+              <div className="menu-divider mb-8">
+                <span className="menu-divider-ornament">◆</span>
+              </div>
+              <h3 className="menu-section-title text-sm mb-6">Das Problem</h3>
+              <div className="menu-divider mb-8">
+                <span className="menu-divider-ornament">◆</span>
+              </div>
+              
+              <div className="menu-card menu-corner p-8 md:p-10">
+                <div className="aspect-[4/3] bg-menu-dark/50 rounded mb-6 flex items-center justify-center border border-menu-line/20">
+                  <div className="text-center p-4 opacity-40 blur-[1px]">
+                    <div className="w-24 h-2 bg-menu-cream/30 rounded mb-3 mx-auto" />
+                    <div className="w-16 h-2 bg-menu-cream/20 rounded mb-3 mx-auto" />
+                    <div className="w-20 h-2 bg-menu-cream/20 rounded mx-auto" />
+                  </div>
+                </div>
+                <p className="font-menu-serif text-lg italic text-menu-cream/70">
+                  Ihre aktuelle Seite lädt nicht auf dem Handy.
+                </p>
+                <p className="font-menu-serif text-xl mt-4 text-menu-burgundy">
+                  Gäste sind genervt.
+                </p>
+              </div>
+            </div>
+
+            {/* Die Lösung */}
+            <div 
+              className={`text-center transition-all duration-1000 ${
+                visibleSections.has('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: '0.2s' }}
             >
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-alert-orange animate-flicker" />
-                  <span className="text-alert-orange font-bold text-sm uppercase tracking-wide">
-                    Das Problem
-                  </span>
+              <div className="menu-divider mb-8">
+                <span className="menu-divider-ornament">◆</span>
+              </div>
+              <h3 className="menu-section-title text-sm mb-6">Die Lösung</h3>
+              <div className="menu-divider mb-8">
+                <span className="menu-divider-ornament">◆</span>
+              </div>
+              
+              <div className="menu-card-featured menu-corner p-8 md:p-10 rounded">
+                <div className="aspect-[4/3] bg-gradient-to-b from-menu-dark/30 to-menu-dark/60 rounded mb-6 flex flex-col items-center justify-center border border-menu-gold/20 p-4">
+                  <div className="text-menu-gold text-3xl mb-3">✦</div>
+                  <p className="font-menu-serif text-lg text-menu-cream mb-2">Ristorante Milano</p>
+                  <div className="flex gap-1 text-menu-gold text-sm mb-4">★★★★★</div>
+                  <div className="w-20 h-1 bg-menu-gold/30 rounded" />
                 </div>
-                
-                <div className="bg-trust-dark rounded-xl p-4 mb-6 border border-alert-orange/30 group-hover:border-alert-orange/50 transition-colors">
-                  <div className="aspect-[9/16] max-h-64 bg-trust-dark/80 rounded-lg flex items-center justify-center relative overflow-hidden group-hover:animate-shake">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-trust-dark/50" />
-                    <div className="text-center p-4 blur-[2px] opacity-50">
-                      <div className="w-full h-3 bg-trust-dark-foreground/20 rounded mb-2" />
-                      <div className="w-3/4 h-3 bg-trust-dark-foreground/20 rounded mb-2 mx-auto" />
-                      <div className="w-1/2 h-3 bg-trust-dark-foreground/20 rounded mx-auto" />
-                    </div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-xs text-alert-orange font-bold px-3 py-1.5 bg-alert-orange/30 rounded-full animate-flicker border border-alert-orange/50">
-                        PDF lädt nicht...
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                
-                <p className="text-trust-dark-foreground/90 text-center font-medium">
-                  Ihre aktuelle Seite?{" "}
-                  <span className="text-alert-orange font-bold">Gäste sind genervt.</span>
+                <p className="font-menu-serif text-lg italic text-menu-cream/70">
+                  Schnell. Übersichtlich.
                 </p>
-              </CardContent>
-            </Card>
-
-            {/* Solution Side */}
-            <Card 
-              className={`bg-action-green/10 border-action-green/40 overflow-hidden hover-lift group transition-all duration-700 ${
-                visibleSections.has('comparison') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-              }`}
-              style={{ transitionDelay: '0.4s' }}
-            >
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-action-green animate-pulse" />
-                  <span className="text-action-green font-bold text-sm uppercase tracking-wide">
-                    Die Lösung
-                  </span>
-                </div>
-                
-                <div className="bg-trust-dark rounded-xl p-4 mb-6 border border-action-green/30 group-hover:border-action-green/50 group-hover:shadow-lg group-hover:shadow-action-green/20 transition-all">
-                  <div className="aspect-[9/16] max-h-64 bg-gradient-to-b from-trust-dark to-trust-dark/80 rounded-lg flex flex-col items-center justify-center p-4 relative overflow-hidden">
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-action-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    
-                    <ChefHat className="w-8 h-8 text-action-green mb-3 group-hover:scale-110 transition-transform" />
-                    <div className="text-center mb-4">
-                      <p className="font-bold text-sm mb-1">Ristorante Milano</p>
-                      <div className="flex items-center justify-center gap-1 text-yellow-400 text-xs">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-3 h-3 fill-current" />
-                        ))}
-                      </div>
-                    </div>
-                    <div className="space-y-2 w-full px-2">
-                      <div className="h-2 bg-trust-dark-foreground/30 rounded w-full" />
-                      <div className="h-2 bg-trust-dark-foreground/20 rounded w-3/4" />
-                    </div>
-                    <Button size="sm" className="mt-4 bg-action-green text-xs px-4 shadow-md shadow-action-green/30">
-                      Tisch reservieren
-                    </Button>
-                  </div>
-                </div>
-                
-                <p className="text-trust-dark-foreground/90 text-center font-medium">
-                  Was Gäste wollen:{" "}
-                  <span className="text-action-green font-bold">Schnell & übersichtlich.</span>
+                <p className="font-menu-serif text-xl mt-4 text-menu-gold">
+                  Auf jedem Gerät perfekt.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
           
+          {/* Warning */}
           <p 
-            className={`text-center mt-10 text-lg md:text-xl text-alert-orange font-bold transition-all duration-700 ${
-              visibleSections.has('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            className={`text-center mt-16 font-menu-serif text-lg italic text-menu-cream/60 transition-all duration-1000 ${
+              visibleSections.has('comparison') ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ transitionDelay: '0.6s' }}
+            style={{ transitionDelay: '0.4s' }}
           >
-            ⚠️ Ein Gast gibt Ihnen keine zweite Chance. Er klickt einfach weiter.
+            ※ Ein Gast gibt Ihnen keine zweite Chance. Er klickt einfach weiter.
           </p>
         </div>
       </section>
 
-      {/* ROI Calculation Section */}
-      <section id="roi" className="px-4 py-16 md:py-24 bg-gradient-to-b from-roi-bg to-trust-dark">
-        <div className="container max-w-3xl mx-auto">
-          <Card 
-            className={`bg-trust-dark border-action-green/60 shadow-2xl shadow-action-green/20 transition-all duration-700 ${
+      {/* ROI Section - Empfehlung des Hauses */}
+      <section id="roi" className="px-4 py-16 md:py-24">
+        <div className="container max-w-2xl mx-auto">
+          <div 
+            className={`text-center transition-all duration-1000 ${
               visibleSections.has('roi') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
-            <CardContent className="p-8 md:p-12">
-              <div className="flex items-center gap-2 justify-center mb-8">
-                <TrendingUp className="w-7 h-7 text-action-green" />
-                <h2 className="text-2xl md:text-3xl font-bold text-center">
-                  So schnell macht sich's bezahlt
-                </h2>
+            <div className="menu-divider mb-6">
+              <span className="menu-divider-ornament">◆</span>
+            </div>
+            <h3 className="menu-section-title text-sm mb-6">Empfehlung des Hauses</h3>
+            <div className="menu-divider mb-12">
+              <span className="menu-divider-ornament">◆</span>
+            </div>
+            
+            <div className="menu-card p-8 md:p-12 rounded">
+              {/* Item 1 */}
+              <div className="flex items-end justify-between mb-6">
+                <div className="text-left">
+                  <p className="font-menu-serif text-xl text-menu-cream">1 gewonnener Tisch</p>
+                  <p className="menu-subtitle text-sm">(4 Personen)</p>
+                </div>
+                <div className="menu-price-line" />
+                <p className="menu-price text-2xl">
+                  ~<AnimatedCounter target={100} suffix="€" />
+                </p>
               </div>
               
-              <div className="space-y-6">
-                <div className="flex items-center justify-between p-5 bg-action-green/20 rounded-xl border border-action-green/40 hover:border-action-green/60 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-action-green/30 flex items-center justify-center">
-                      <Users className="w-6 h-6 text-action-green" />
-                    </div>
-                    <span className="font-semibold text-trust-dark-foreground">1 gewonnener Tisch (4 Personen)</span>
-                  </div>
-                  <span className="text-2xl md:text-3xl font-bold text-action-green">
-                    ~<AnimatedCounter target={100} suffix="€" />
-                  </span>
+              {/* Item 2 */}
+              <div className="flex items-end justify-between mb-10">
+                <div className="text-left">
+                  <p className="font-menu-serif text-xl text-menu-cream">Unsere Optimierung</p>
+                  <p className="menu-subtitle text-sm">monatlich</p>
                 </div>
-                
-                <div className="flex items-center justify-center text-3xl font-bold text-trust-dark-foreground/60">
-                  −
-                </div>
-                
-                <div className="flex items-center justify-between p-5 bg-trust-dark-foreground/10 rounded-xl border border-trust-dark-foreground/30">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-trust-dark-foreground/20 flex items-center justify-center">
-                      <Settings className="w-6 h-6 text-trust-dark-foreground" />
-                    </div>
-                    <span className="font-semibold text-trust-dark-foreground">Unsere Optimierung</span>
-                  </div>
-                  <span className="text-2xl md:text-3xl font-bold text-trust-dark-foreground">
-                    <AnimatedCounter target={49} suffix="€/Monat" />
-                  </span>
-                </div>
-                
-                <div className="flex items-center justify-center text-3xl font-bold text-trust-dark-foreground/40">
-                  =
-                </div>
-                
-                <div 
-                  className={`p-6 bg-action-green/25 rounded-xl border-2 border-action-green text-center relative overflow-hidden transition-all duration-500 ${
-                    visibleSections.has('roi') ? 'shadow-lg shadow-action-green/30' : ''
-                  }`}
-                >
-                  {/* Success glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-action-green/0 via-action-green/10 to-action-green/0 animate-shimmer" />
-                  
-                  <Check className={`w-12 h-12 text-action-green mx-auto mb-3 transition-all duration-500 ${
-                    visibleSections.has('roi') ? 'scale-100 rotate-0' : 'scale-0 rotate-45'
-                  }`} style={{ transitionDelay: '0.5s' }} />
-                  <p className="text-xl md:text-2xl font-bold relative z-10">
-                    Bereits ab dem <span className="text-action-green">ersten zusätzlichen Gast</span> machen Sie Gewinn.
-                  </p>
-                </div>
+                <div className="menu-price-line" />
+                <p className="menu-price text-2xl">
+                  <AnimatedCounter target={49} suffix="€" />
+                </p>
               </div>
-            </CardContent>
-          </Card>
+              
+              {/* Divider */}
+              <div className="w-full h-px bg-menu-gold/30 mb-10" />
+              
+              {/* Conclusion */}
+              <div className="text-center">
+                <p className="font-menu-serif text-2xl md:text-3xl text-menu-cream mb-2">
+                  Bereits ab dem <span className="text-menu-gold italic">ersten</span>
+                </p>
+                <p className="font-menu-serif text-2xl md:text-3xl text-menu-cream">
+                  zusätzlichen Gast: <span className="text-menu-gold">Gewinn.</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Services Section - Benefit-Led */}
-      <section id="services" className="px-4 py-16 md:py-24 bg-trust-dark">
-        <div className="container max-w-4xl mx-auto">
-          <h2 
-            className={`text-2xl md:text-4xl font-bold text-center mb-4 transition-all duration-700 ${
-              visibleSections.has('services') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            Was Sie <span className="text-action-green">bekommen</span>
-          </h2>
-          <p 
-            className={`text-center text-trust-dark-foreground/70 mb-12 max-w-xl mx-auto transition-all duration-700 ${
-              visibleSections.has('services') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '0.1s' }}
-          >
-            Keine technischen Details – nur Ergebnisse, die zählen.
-          </p>
+      {/* Services Section - Unsere Spezialitäten */}
+      <section id="services" className="px-4 py-16 md:py-24">
+        <div className="container max-w-3xl mx-auto text-center">
+          <div className="menu-divider mb-6">
+            <span className="menu-divider-ornament">◆</span>
+          </div>
+          <h3 className={`menu-section-title text-sm mb-6 transition-all duration-700 ${
+            visibleSections.has('services') ? 'opacity-100' : 'opacity-0'
+          }`}>
+            Unsere Spezialitäten
+          </h3>
+          <div className="menu-divider mb-16">
+            <span className="menu-divider-ornament">◆</span>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="space-y-10">
             {[
               {
-                icon: MapPin,
-                title: 'Platz 1 bei "Italiener in der Nähe"',
-                desc: 'Gefunden werden, wenn Gäste hungrig sind.',
-                delay: '0.2s'
+                title: 'Platz 1 bei Google Maps',
+                desc: 'Gefunden werden, wenn Gäste hungrig sind',
               },
               {
-                icon: Smartphone,
-                title: 'Speisekarte, die auf jedem Handy sofort lädt',
-                desc: 'Keine PDFs, keine Wartezeit, keine genervten Gäste.',
-                delay: '0.3s'
+                title: 'Speisekarte auf jedem Handy',
+                desc: 'Keine PDFs, keine Wartezeit',
               },
               {
-                icon: Settings,
-                title: 'Technik, die einfach funktioniert',
-                desc: 'Nie wieder Updates machen oder sich um Hosting kümmern.',
-                delay: '0.4s'
+                title: 'Technik die funktioniert',
+                desc: 'Nie wieder Updates oder Hosting',
               }
             ].map((service, index) => (
-              <Card 
+              <div 
                 key={index}
-                className={`bg-trust-dark-foreground/5 border-trust-dark-foreground/20 hover:border-action-green/60 hover:bg-action-green/5 transition-all duration-500 group hover:scale-105 hover:shadow-xl hover:shadow-action-green/10 ${
+                className={`transition-all duration-700 ${
                   visibleSections.has('services') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
-                style={{ transitionDelay: service.delay }}
+                style={{ transitionDelay: `${0.1 + index * 0.1}s` }}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-action-green/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-action-green/20 group-hover:scale-110 transition-all">
-                    <service.icon className="w-8 h-8 text-action-green group-hover:rotate-6 transition-transform" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2 group-hover:text-action-green transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-trust-dark-foreground/70 text-sm">
-                    {service.desc}
-                  </p>
-                </CardContent>
-              </Card>
+                <h4 className="font-menu-serif text-2xl md:text-3xl text-menu-cream mb-2">
+                  {service.title}
+                </h4>
+                <p className="menu-subtitle text-lg">
+                  {service.desc}
+                </p>
+                {index < 2 && (
+                  <div className="menu-line mt-10" />
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section with Scarcity */}
-      <section id="pricing" className="px-4 py-16 md:py-24 bg-gradient-to-b from-trust-dark/50 to-trust-dark">
-        <div className="container max-w-4xl mx-auto">
-          <h2 
-            className={`text-2xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 ${
-              visibleSections.has('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            Investition in <span className="text-action-green">Ihren Erfolg</span>
-          </h2>
+      {/* Pricing Section - À la Carte */}
+      <section id="pricing" className="px-4 py-16 md:py-24">
+        <div className="container max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="menu-divider mb-6">
+              <span className="menu-divider-ornament">◆</span>
+            </div>
+            <h3 className={`menu-section-title text-sm tracking-[0.4em] mb-6 transition-all duration-700 ${
+              visibleSections.has('pricing') ? 'opacity-100' : 'opacity-0'
+            }`}>
+              À la Carte
+            </h3>
+            <div className="menu-divider">
+              <span className="menu-divider-ornament">◆</span>
+            </div>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <Card 
-              className={`bg-trust-dark border-trust-dark-foreground/30 hover:border-trust-dark-foreground/50 transition-all duration-700 hover-lift ${
-                visibleSections.has('pricing') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Starter Paket */}
+            <div 
+              className={`menu-card menu-corner p-8 rounded text-center transition-all duration-700 ${
+                visibleSections.has('pricing') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
               }`}
               style={{ transitionDelay: '0.2s' }}
             >
-              <CardContent className="p-8">
-                <p className="text-sm uppercase tracking-wide text-trust-dark-foreground/60 mb-2 font-semibold">
-                  Einmalig
+              <h4 className="menu-section-title text-xs mb-4">Starter-Paket</h4>
+              <p className="menu-subtitle text-sm mb-6">Website · Speisekarte · Maps</p>
+              
+              <div className="my-8">
+                <p className="font-menu-serif text-5xl text-menu-gold">
+                  <AnimatedCounter target={250} />
+                  <span className="text-2xl">€</span>
                 </p>
-                <h3 className="text-xl font-bold mb-4">Starter-Paket</h3>
-                <p className="text-4xl font-bold mb-6">
-                  <AnimatedCounter target={250} suffix="€" />
-                  <span className="text-lg font-normal text-trust-dark-foreground/60"> Setup</span>
-                </p>
-                <ul className="space-y-3 text-sm text-trust-dark-foreground/80">
-                  {['Website-Erstellung', 'Digitale Speisekarte', 'Google Maps Optimierung'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-action-green flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                <p className="menu-subtitle text-sm mt-2">einmalig</p>
+              </div>
+              
+              <ul className="space-y-3 text-left">
+                {['Website-Erstellung', 'Digitale Speisekarte', 'Google Maps Optimierung'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-menu-cream/80">
+                    <Check className="w-4 h-4 text-menu-gold flex-shrink-0" />
+                    <span className="font-menu-sans text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             
-            <Card 
-              className={`bg-action-green/10 border-action-green relative overflow-hidden hover:shadow-2xl hover:shadow-action-green/30 transition-all duration-700 hover-lift ${
-                visibleSections.has('pricing') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+            {/* Growth Abo - Featured */}
+            <div 
+              className={`menu-card-featured menu-corner p-8 rounded text-center relative transition-all duration-700 ${
+                visibleSections.has('pricing') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
               }`}
               style={{ transitionDelay: '0.3s' }}
             >
-              {/* Shine effect on badge */}
-              <div className="absolute top-0 right-0 bg-action-green text-action-green-foreground px-4 py-1.5 text-xs font-bold overflow-hidden">
-                <span className="relative z-10">⭐ Empfohlen</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shine" />
+              {/* Featured Badge */}
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-menu-gold text-menu-dark px-4 py-1 text-xs font-menu-serif tracking-wider">
+                ★ EMPFEHLUNG ★
               </div>
-              <CardContent className="p-8 pt-10">
-                <p className="text-sm uppercase tracking-wide text-action-green mb-2 font-bold">
-                  Monatlich
+              
+              <h4 className="menu-section-title text-xs mb-4 mt-4">Growth-Abo</h4>
+              <p className="menu-subtitle text-sm mb-6">Hosting · Updates · Support</p>
+              
+              <div className="my-8">
+                <p className="font-menu-serif text-5xl text-menu-gold">
+                  <AnimatedCounter target={49} />
+                  <span className="text-2xl">€</span>
                 </p>
-                <h3 className="text-xl font-bold mb-4">Growth-Abo</h3>
-                <p className="text-4xl font-bold mb-6">
-                  <AnimatedCounter target={49} suffix="€" />
-                  <span className="text-lg font-normal text-trust-dark-foreground/60"> /Monat</span>
+                <p className="menu-subtitle text-sm mt-2">pro Monat</p>
+              </div>
+              
+              <ul className="space-y-3 text-left">
+                {['Hosting & Wartung', 'Monatliche Updates', 'Persönlicher Support'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-menu-cream/80">
+                    <Check className="w-4 h-4 text-menu-gold flex-shrink-0" />
+                    <span className="font-menu-sans text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Scarcity */}
+              <div className="mt-8 pt-6 border-t border-menu-gold/20">
+                <p className="font-menu-serif italic text-menu-gold text-sm">
+                  Nur noch 3 Plätze verfügbar
                 </p>
-                <ul className="space-y-3 text-sm text-trust-dark-foreground/80">
-                  {['Hosting & Wartung', 'Monatliche Updates', 'Persönlicher Support'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-action-green flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-          
-          <div 
-            className={`text-center mt-10 transition-all duration-700 ${
-              visibleSections.has('pricing') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`}
-            style={{ transitionDelay: '0.5s' }}
-          >
-            <Badge className="bg-alert-orange/25 text-alert-orange border-alert-orange/50 px-6 py-2.5 text-sm font-bold shadow-lg shadow-alert-orange/20">
-              <Clock className="w-4 h-4 mr-2 inline animate-pulse" />
-              🔥 Nur noch 3 Neukunden-Plätze diesen Monat verfügbar
-            </Badge>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Section */}
-      <section id="trust" className="px-4 py-16 md:py-24 bg-gradient-to-b from-trust-dark to-trust-dark/90">
-        <div className="container max-w-3xl mx-auto text-center">
-          <Shield 
-            className={`w-14 h-14 text-action-green mx-auto mb-6 transition-all duration-700 ${
-              visibleSections.has('trust') ? 'opacity-100 translate-y-0 animate-bounce-subtle' : 'opacity-0 translate-y-8'
-            }`}
-          />
-          <h2 
-            className={`text-2xl md:text-4xl font-bold mb-6 transition-all duration-700 ${
-              visibleSections.has('trust') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '0.1s' }}
-          >
-            Kein Callcenter. <span className="text-action-green">Ihr Partner vor Ort.</span>
-          </h2>
-          <p 
-            className={`text-trust-dark-foreground/80 mb-8 max-w-xl mx-auto text-lg transition-all duration-700 ${
-              visibleSections.has('trust') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '0.2s' }}
-          >
-            Ich bin kein anonymer Dienstleister, sondern Ihr persönlicher Ansprechpartner. 
-            Bei Fragen erreichen Sie mich direkt – <strong className="text-action-green">keine Warteschleifen, keine Tickets.</strong>
-          </p>
-          
-          <div 
-            className={`flex items-center justify-center gap-4 p-6 bg-gradient-to-r from-trust-dark-foreground/5 via-action-green/5 to-trust-dark-foreground/5 rounded-2xl max-w-sm mx-auto border border-action-green/20 hover:border-action-green/40 transition-all duration-500 hover:shadow-lg hover:shadow-action-green/10 ${
-              visibleSections.has('trust') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`}
-            style={{ transitionDelay: '0.3s' }}
-          >
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-action-green to-action-green/50 flex items-center justify-center text-2xl font-bold shadow-lg shadow-action-green/30 animate-pulse-slow">
-              JD
-            </div>
-            <div className="text-left">
-              <p className="font-bold text-lg">Johannes Döring</p>
-              <p className="text-sm text-action-green font-medium">Ihr lokaler Partner</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="cta" className="px-4 py-16 md:py-24 bg-gradient-to-b from-action-green/10 to-action-green/20">
+      {/* Trust Section - Ihr Gastgeber */}
+      <section id="trust" className="px-4 py-16 md:py-24">
         <div className="container max-w-2xl mx-auto text-center">
-          <h2 
-            className={`text-2xl md:text-4xl font-bold mb-6 transition-all duration-700 ${
-              visibleSections.has('cta') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            Bereit, <span className="text-action-green">mehr Gäste</span> zu gewinnen?
-          </h2>
-          <p 
-            className={`text-trust-dark-foreground/80 mb-8 text-lg transition-all duration-700 ${
-              visibleSections.has('cta') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '0.1s' }}
-          >
-            Fordern Sie jetzt Ihre kostenlose Umsatz-Analyse an und erfahren Sie, 
-            wie viel Potenzial in Ihrem Restaurant steckt.
-          </p>
+          <div className="menu-divider mb-6">
+            <span className="menu-divider-ornament">◆</span>
+          </div>
+          <h3 className={`menu-section-title text-sm mb-6 transition-all duration-700 ${
+            visibleSections.has('trust') ? 'opacity-100' : 'opacity-0'
+          }`}>
+            Ihr Gastgeber
+          </h3>
+          <div className="menu-divider mb-12">
+            <span className="menu-divider-ornament">◆</span>
+          </div>
           
-          <Button 
-            size="lg" 
-            className={`bg-action-green hover:bg-action-green/90 text-action-green-foreground px-10 py-6 text-lg font-bold shadow-xl shadow-action-green/40 cta-pulse hover:scale-105 transition-all duration-300 ${
-              visibleSections.has('cta') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          <div 
+            className={`transition-all duration-700 ${
+              visibleSections.has('trust') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ transitionDelay: '0.2s' }}
           >
-            <Zap className="w-5 h-5 mr-2" />
-            Jetzt Analyse anfordern
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+            {/* Photo/Initials */}
+            <div className="w-24 h-24 rounded-full border-2 border-menu-gold/50 mx-auto mb-8 flex items-center justify-center bg-menu-dark/50">
+              <span className="font-menu-serif text-3xl text-menu-gold">JD</span>
+            </div>
+            
+            <h4 className="font-menu-serif text-2xl text-menu-cream mb-2">Johannes Döring</h4>
+            <p className="menu-subtitle text-lg mb-8">Ihr lokaler Partner</p>
+            
+            <p className="font-menu-serif text-xl italic text-menu-cream/70 max-w-md mx-auto">
+              „Kein Callcenter. Persönlicher Service.
+              <span className="block mt-2">Bei Fragen erreichen Sie mich direkt."</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section - Reservierung */}
+      <section id="cta" className="px-4 py-16 md:py-24">
+        <div className="container max-w-2xl mx-auto">
+          <div 
+            className={`menu-card-featured menu-corner p-10 md:p-16 rounded text-center transition-all duration-700 ${
+              visibleSections.has('cta') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`}
+          >
+            <h3 className="menu-section-title text-sm tracking-[0.4em] mb-8">Reservierung</h3>
+            
+            <p className="font-menu-serif text-2xl md:text-3xl text-menu-cream mb-4">
+              Bereit, mehr Gäste zu gewinnen?
+            </p>
+            <p className="menu-subtitle text-lg mb-10">
+              Fordern Sie jetzt Ihre kostenlose Analyse an.
+            </p>
+            
+            <button className="menu-button menu-button-filled group">
+              <span className="flex items-center gap-3">
+                Jetzt Tisch reservieren
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </button>
+            
+            <div className="mt-8 flex items-center justify-center gap-2 text-menu-cream/50">
+              <Phone className="w-4 h-4" />
+              <span className="font-menu-serif text-sm">Oder rufen Sie uns an</span>
+            </div>
+          </div>
           
           <Link 
             to="/" 
-            className={`block mt-8 text-trust-dark-foreground/60 hover:text-action-green transition-colors font-medium ${
-              visibleSections.has('cta') ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{ transitionDelay: '0.3s' }}
+            className="block mt-12 text-center text-menu-cream/40 hover:text-menu-gold transition-colors font-menu-serif text-sm tracking-wider"
           >
             ← Zurück zur Hauptseite
           </Link>
         </div>
       </section>
 
-      {/* Mobile Sticky Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-trust-dark/95 backdrop-blur-lg border-t border-action-green/30 p-3 flex gap-3 md:hidden z-50 shadow-2xl shadow-action-green/20">
+      {/* Mobile Sticky Bar - Elegant */}
+      <div className="fixed bottom-0 left-0 right-0 bg-menu-dark/95 backdrop-blur-lg border-t border-menu-gold/30 p-4 flex gap-3 md:hidden z-50">
         <Button 
-          className="flex-1 bg-action-green hover:bg-action-green/90 text-action-green-foreground font-bold shadow-lg shadow-action-green/30 cta-pulse"
+          className="flex-1 menu-button-filled font-menu-serif tracking-wider text-sm py-6"
           asChild
         >
           <a href="https://wa.me/491234567890" target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-5 h-5 mr-2" />
+            <MessageCircle className="w-4 h-4 mr-2" />
             WhatsApp
           </a>
         </Button>
         <Button 
           variant="outline" 
-          className="flex-1 border-trust-dark-foreground/40 text-trust-dark-foreground hover:bg-trust-dark-foreground/10 font-semibold"
+          className="flex-1 border-menu-gold/50 text-menu-gold hover:bg-menu-gold/10 font-menu-serif tracking-wider text-sm py-6"
           asChild
         >
           <a href="tel:+491234567890">
-            <Phone className="w-5 h-5 mr-2" />
+            <Phone className="w-4 h-4 mr-2" />
             Anrufen
           </a>
         </Button>
       </div>
       
       {/* Bottom padding for mobile sticky bar */}
-      <div className="h-20 md:hidden" />
+      <div className="h-24 md:hidden" />
     </div>
   );
 };

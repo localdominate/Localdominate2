@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        'menu-serif': ['Cormorant Garamond', 'Georgia', 'serif'],
+        'menu-sans': ['Lato', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -71,6 +73,14 @@ export default {
         "alert-orange": {
           DEFAULT: "hsl(var(--alert-orange))",
           foreground: "hsl(var(--alert-orange-foreground))",
+        },
+        "menu": {
+          dark: "hsl(var(--menu-dark))",
+          cream: "hsl(var(--menu-cream))",
+          gold: "hsl(var(--menu-gold))",
+          "gold-muted": "hsl(var(--menu-gold-muted))",
+          burgundy: "hsl(var(--menu-burgundy))",
+          line: "hsl(var(--menu-line))",
         },
         "roi-bg": "hsl(var(--roi-bg))",
       },
