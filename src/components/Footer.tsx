@@ -26,30 +26,24 @@ const Footer = () => {
         
         {/* Legal Links */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-6">
-          <a 
-            href="https://www.e-recht24.de/muster-impressum.html" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            to="/impressum"
             className="text-pain-foreground/80 hover:text-primary transition-colors font-medium"
           >
             {t.footer.imprint}
-          </a>
-          <a 
-            href="https://www.e-recht24.de/muster-datenschutzerklaerung.html" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          </Link>
+          <Link 
+            to="/datenschutz"
             className="text-pain-foreground/80 hover:text-primary transition-colors font-medium"
           >
             {t.footer.privacy}
-          </a>
-          <a 
-            href="https://www.e-recht24.de/muster-agb.html" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          </Link>
+          <Link 
+            to="/agb"
             className="text-pain-foreground/80 hover:text-primary transition-colors font-medium"
           >
             {t.footer.terms}
-          </a>
+          </Link>
           <a 
             href="https://www.e-recht24.de/muster-widerrufsbelehrung.html" 
             target="_blank" 

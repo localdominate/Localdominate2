@@ -13,10 +13,33 @@ import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import LanguageSwitch from "@/components/LanguageSwitch";
+import StickyHeader from "@/components/StickyHeader";
+import ScrollProgress from "@/components/ScrollProgress";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
+import SocialProofToast from "@/components/SocialProofToast";
+import CookieBanner from "@/components/CookieBanner";
+import useScrollDepthTracking from "@/hooks/useScrollDepthTracking";
+import { useEffect } from "react";
+import { initDataLayer, trackPageView } from "@/lib/dataLayer";
 
 const Index = () => {
+  // Initialize tracking
+  useScrollDepthTracking();
+  
+  useEffect(() => {
+    initDataLayer();
+    trackPageView("/", "Local Dominator - Home");
+  }, []);
+
   return (
     <main className="min-h-screen pb-16 md:pb-0">
+      {/* Global UI Components */}
+      <ScrollProgress />
+      <StickyHeader />
+      <ExitIntentPopup />
+      <SocialProofToast />
+      
+      {/* Page Content */}
       <AnnouncementBar />
       <LanguageSwitch />
       <HeroSection />
@@ -31,7 +54,10 @@ const Index = () => {
       <FAQSection />
       <FinalCTASection />
       <Footer />
+      
+      {/* Mobile/Bottom Components */}
       <MobileStickyBar />
+      <CookieBanner />
     </main>
   );
 };
