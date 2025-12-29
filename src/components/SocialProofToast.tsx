@@ -33,33 +33,28 @@ const SocialProofToast = () => {
   useEffect(() => {
     // Don't show on mobile
     if (window.innerWidth < 768) return;
+    
+    // Only show once per session
+    if (sessionStorage.getItem('social_proof_shown')) return;
 
     const showNotification = () => {
+      sessionStorage.setItem('social_proof_shown', 'true');
       const randomName = names[Math.floor(Math.random() * names.length)];
       const randomCity = cities[Math.floor(Math.random() * cities.length)];
       
       setNotification({ name: randomName, city: randomCity });
       setIsVisible(true);
 
-      // Hide after 5 seconds
+      // Hide after 3 seconds
       setTimeout(() => {
         setIsVisible(false);
-      }, 5000);
+      }, 3000);
     };
 
-    // Show first notification after 15 seconds
-    const initialTimer = setTimeout(showNotification, 15000);
+    // Show once after 15 seconds
+    const timer = setTimeout(showNotification, 15000);
 
-    // Then show every 30-60 seconds
-    const interval = setInterval(() => {
-      const randomDelay = Math.random() * 30000 + 30000; // 30-60 seconds
-      setTimeout(showNotification, randomDelay);
-    }, 60000);
-
-    return () => {
-      clearTimeout(initialTimer);
-      clearInterval(interval);
-    };
+    return () => clearTimeout(timer);
   }, [language, names, cities]);
 
   const content = {

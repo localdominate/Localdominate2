@@ -35,10 +35,14 @@ const TestimonialsSection = () => {
               key={index} 
               className={`card-premium p-6 md:p-8 reveal reveal-delay-${index + 1} ${isVisible ? 'visible' : ''}`}
             >
-              {/* Stars */}
+              {/* Stars with pulse animation */}
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-highlight text-highlight" />
+                  <Star 
+                    key={i} 
+                    className="w-5 h-5 fill-highlight text-highlight animate-pulse"
+                    style={{ animationDelay: `${i * 0.15}s`, animationDuration: '2s' }}
+                  />
                 ))}
               </div>
 

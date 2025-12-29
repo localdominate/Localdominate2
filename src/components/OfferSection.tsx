@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
 import TrustBadges from "@/components/TrustBadges";
 import CountdownTimer from "@/components/CountdownTimer";
+import AnimatedPriceCounter from "@/components/AnimatedPriceCounter";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { trackButtonClick } from "@/lib/dataLayer";
@@ -53,19 +54,19 @@ const OfferSection = () => {
                 {t.offer.agencyPrice}
               </p>
               <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-                1.500€
+                <AnimatedPriceCounter from={1500} to={1500} duration={0} />
               </p>
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
                 {t.offer.yourPrice}
               </p>
               <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-                299€
+                <AnimatedPriceCounter from={1500} to={299} duration={2000} />
               </p>
               <p className="text-muted-foreground mb-6">
                 {t.offer.oneTime}
               </p>
               
-              <Button variant="cta" size="cta" className="w-full group" onClick={handleCtaClick}>
+              <Button variant="cta" size="cta" className="w-full group cta-pulse" onClick={handleCtaClick}>
                 {t.offer.ctaButton}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>

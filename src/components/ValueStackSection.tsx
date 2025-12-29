@@ -1,6 +1,7 @@
 import { Rocket, QrCode, FileText, Shield } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import ValueComparisonBar from "@/components/ValueComparisonBar";
 
 const ValueStackSection = () => {
   const { t } = useLanguage();
@@ -94,6 +95,11 @@ const ValueStackSection = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Value Comparison Bar */}
+        <div className={`mb-8 reveal reveal-delay-5 ${isVisible ? 'visible' : ''}`}>
+          <ValueComparisonBar totalValue={649} yourPrice={299} />
         </div>
 
         {/* Total Value Line */}

@@ -20,7 +20,7 @@ const FinalCTASection = () => {
         </p>
         
         <div className={`flex justify-center reveal reveal-delay-2 ${isVisible ? 'visible' : ''}`}>
-          <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto max-w-md">
+          <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto max-w-md cta-pulse">
             <span className="hidden sm:inline">{t.finalCta.ctaFull}</span>
             <span className="sm:hidden">{t.finalCta.ctaShort}</span>
             <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
