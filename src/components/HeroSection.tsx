@@ -3,9 +3,14 @@ import { ArrowRight } from "lucide-react";
 import TrustBadges from "@/components/TrustBadges";
 import { useLanguage } from "@/i18n/LanguageContext";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
+import { trackButtonClick } from "@/lib/dataLayer";
 
 const HeroSection = () => {
   const { t } = useLanguage();
+  
+  const handleCtaClick = () => {
+    trackButtonClick("hero_cta", "hero_section", 299);
+  };
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-background py-16 md:py-20 px-4">
@@ -33,7 +38,7 @@ const HeroSection = () => {
             
             {/* CTA Button */}
             <div className="flex flex-col items-center md:items-start gap-3 w-full max-w-md mx-auto md:mx-0">
-              <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto">
+              <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto" onClick={handleCtaClick}>
                 <span className="hidden sm:inline">{t.hero.ctaFull}</span>
                 <span className="sm:hidden">{t.hero.ctaShort}</span>
                 <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />

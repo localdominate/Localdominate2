@@ -1,12 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
 import TrustBadges from "@/components/TrustBadges";
+import CountdownTimer from "@/components/CountdownTimer";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import { trackButtonClick } from "@/lib/dataLayer";
 
 const OfferSection = () => {
   const { t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
+  
+  const handleCtaClick = () => {
+    trackButtonClick("offer_cta", "offer_section", 299);
+  };
 
   return (
     <section className="bg-background-alt section-padding px-4">
@@ -59,12 +65,17 @@ const OfferSection = () => {
                 {t.offer.oneTime}
               </p>
               
-              <Button variant="cta" size="cta" className="w-full group">
+              <Button variant="cta" size="cta" className="w-full group" onClick={handleCtaClick}>
                 {t.offer.ctaButton}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
               <TrustBadges />
+              
+              {/* Countdown Timer */}
+              <div className="mt-4 w-full">
+                <CountdownTimer />
+              </div>
             </div>
           </div>
           
