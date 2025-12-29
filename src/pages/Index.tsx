@@ -1,6 +1,7 @@
 import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
 import PainSection from "@/components/PainSection";
+import ParallaxPortal from "@/components/ParallaxPortal";
 import ComparisonTable from "@/components/ComparisonTable";
 import SolutionSection from "@/components/SolutionSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -43,7 +44,9 @@ const Index = () => {
       <AnnouncementBar />
       <LanguageSwitch />
       <HeroSection />
-      <PainSection />
+      <ParallaxPortal>
+        <PainSection />
+      </ParallaxPortal>
       <ComparisonTable />
       <SolutionSection />
       <TestimonialsSection />
