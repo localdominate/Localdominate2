@@ -76,3 +76,18 @@ export const trackPopupInteraction = (popupName: string, action: "view" | "close
     timestamp: new Date().toISOString()
   });
 };
+
+// Track Exit Intent A/B Test
+export const trackExitIntentABTest = (
+  variant: "discount" | "bonus",
+  action: "view" | "click" | "close" | "expired"
+) => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "exit_intent_ab_test",
+    ab_variant: variant,
+    ab_action: action,
+    ab_variant_label: variant === "discount" ? "33% Rabatt" : "Gratis Bonus",
+    timestamp: new Date().toISOString()
+  });
+};
