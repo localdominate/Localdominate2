@@ -83,6 +83,18 @@ const RestaurantMarketing = () => {
   return (
     <div className="min-h-screen menu-page text-menu-cream overflow-hidden font-menu-sans">
       
+      {/* Fixed Golden Side Frames */}
+      <div className="menu-frame-left">
+        <div className="menu-frame-corner menu-frame-corner-tl" />
+        <span className="menu-frame-ornament">◆</span>
+        <div className="menu-frame-corner menu-frame-corner-bl" />
+      </div>
+      <div className="menu-frame-right">
+        <div className="menu-frame-corner menu-frame-corner-tr" />
+        <span className="menu-frame-ornament">◆</span>
+        <div className="menu-frame-corner menu-frame-corner-br" />
+      </div>
+      
       {/* Hero Section - Elegant Welcome */}
       <section id="hero" className="relative px-4 pt-16 pb-20 md:pt-24 md:pb-32">
         <div className="container max-w-3xl mx-auto text-center relative">

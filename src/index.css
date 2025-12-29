@@ -435,6 +435,114 @@
       0 4px 20px hsl(var(--menu-dark) / 0.5);
   }
 
+  /* Fixed Golden Side Frame Decoration */
+  .menu-frame-left,
+  .menu-frame-right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    pointer-events: none;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .menu-frame-left {
+    left: 0;
+  }
+
+  .menu-frame-right {
+    right: 0;
+  }
+
+  /* Vertical line */
+  .menu-frame-left::before,
+  .menu-frame-right::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(var(--menu-gold) / 0.3) 15%,
+      hsl(var(--menu-gold) / 0.5) 50%,
+      hsl(var(--menu-gold) / 0.3) 85%,
+      transparent 100%
+    );
+  }
+
+  .menu-frame-left::before {
+    left: 20px;
+  }
+
+  .menu-frame-right::before {
+    right: 20px;
+  }
+
+  /* Corner ornaments */
+  .menu-frame-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid hsl(var(--menu-gold) / 0.4);
+  }
+
+  .menu-frame-corner-tl {
+    top: 8%;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .menu-frame-corner-bl {
+    bottom: 8%;
+    border-right: none;
+    border-top: none;
+  }
+
+  .menu-frame-corner-tr {
+    top: 8%;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .menu-frame-corner-br {
+    bottom: 8%;
+    border-left: none;
+    border-top: none;
+  }
+
+  /* Center ornament on sides */
+  .menu-frame-ornament {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: hsl(var(--menu-gold) / 0.6);
+    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .menu-frame-left .menu-frame-ornament {
+    left: 12px;
+  }
+
+  .menu-frame-right .menu-frame-ornament {
+    right: 12px;
+  }
+
+  /* Hide on mobile for cleaner look */
+  @media (max-width: 768px) {
+    .menu-frame-left,
+    .menu-frame-right {
+      display: none;
+    }
+  }
+
   /* Elegant Divider with Ornament */
   .menu-divider {
     display: flex;
