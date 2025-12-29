@@ -267,30 +267,30 @@ const RestaurantMarketing = () => {
               </div>
               
               <div className="space-y-6">
-                <div className="flex items-center justify-between p-5 bg-action-green/15 rounded-xl border border-action-green/30 hover:border-action-green/50 transition-colors">
+                <div className="flex items-center justify-between p-5 bg-action-green/20 rounded-xl border border-action-green/40 hover:border-action-green/60 transition-colors">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-action-green/20 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-action-green/30 flex items-center justify-center">
                       <Users className="w-6 h-6 text-action-green" />
                     </div>
-                    <span className="font-medium">1 gewonnener Tisch (4 Personen)</span>
+                    <span className="font-semibold text-trust-dark-foreground">1 gewonnener Tisch (4 Personen)</span>
                   </div>
                   <span className="text-2xl md:text-3xl font-bold text-action-green">
                     ~<AnimatedCounter target={100} suffix="€" />
                   </span>
                 </div>
                 
-                <div className="flex items-center justify-center text-3xl font-bold text-trust-dark-foreground/40">
+                <div className="flex items-center justify-center text-3xl font-bold text-trust-dark-foreground/60">
                   −
                 </div>
                 
-                <div className="flex items-center justify-between p-5 bg-trust-dark-foreground/5 rounded-xl border border-trust-dark-foreground/20">
+                <div className="flex items-center justify-between p-5 bg-trust-dark-foreground/10 rounded-xl border border-trust-dark-foreground/30">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-trust-dark-foreground/10 flex items-center justify-center">
-                      <Settings className="w-6 h-6 text-trust-dark-foreground/70" />
+                    <div className="w-12 h-12 rounded-full bg-trust-dark-foreground/20 flex items-center justify-center">
+                      <Settings className="w-6 h-6 text-trust-dark-foreground" />
                     </div>
-                    <span className="font-medium">Unsere Optimierung</span>
+                    <span className="font-semibold text-trust-dark-foreground">Unsere Optimierung</span>
                   </div>
-                  <span className="text-2xl md:text-3xl font-bold">
+                  <span className="text-2xl md:text-3xl font-bold text-trust-dark-foreground">
                     <AnimatedCounter target={49} suffix="€/Monat" />
                   </span>
                 </div>
