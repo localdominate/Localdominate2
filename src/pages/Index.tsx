@@ -4,6 +4,7 @@ import PainSection from "@/components/PainSection";
 import ParallaxPortal from "@/components/ParallaxPortal";
 import ComparisonTable from "@/components/ComparisonTable";
 import SolutionSection from "@/components/SolutionSection";
+import ROICalculator from "@/components/ROICalculator";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ValueStackSection from "@/components/ValueStackSection";
 import OfferSection from "@/components/OfferSection";
@@ -49,6 +50,7 @@ const Index = () => {
       </ParallaxPortal>
       <ComparisonTable />
       <SolutionSection />
+      <ROICalculator />
       <TestimonialsSection />
       <ValueStackSection />
       <OfferSection />
