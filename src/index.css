@@ -178,6 +178,144 @@
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
   .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-delay-6 { transition-delay: 0.6s; }
+  .reveal-delay-7 { transition-delay: 0.7s; }
+  .reveal-delay-8 { transition-delay: 0.8s; }
+  .reveal-delay-9 { transition-delay: 0.9s; }
+  .reveal-delay-10 { transition-delay: 1.0s; }
+  .reveal-delay-12 { transition-delay: 1.2s; }
+  .reveal-delay-15 { transition-delay: 1.5s; }
+
+  /* Pain Section Enhanced Animations */
+  @keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slide-in-right {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.5); }
+    70% { transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes glow-pulse-red {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(0 84% 60% / 0.5); }
+    50% { box-shadow: 0 0 25px 8px hsl(0 84% 60% / 0.2); }
+  }
+
+  @keyframes count-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-pop-in {
+    animation: pop-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-glow-pulse-red {
+    animation: glow-pulse-red 2s ease-in-out infinite;
+  }
+
+  .animate-count-pulse {
+    animation: count-pulse 0.3s ease-out;
+  }
+
+  /* Staggered reveal for pain cards */
+  .pain-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pain-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .pain-card .pain-icon {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pain-card.visible .pain-icon {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.2s;
+  }
+
+  .pain-card .pain-title {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pain-card.visible .pain-title {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.35s;
+  }
+
+  .pain-card .pain-stat-badge {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pain-card.visible .pain-stat-badge {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.5s;
+  }
+
+  .pain-card .pain-bullet {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pain-card.visible .pain-bullet:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.7s;
+  }
+
+  .pain-card.visible .pain-bullet:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.85s;
+  }
+
+  .pain-card.visible .pain-bullet:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.0s;
+  }
+
+  /* Pain bottom punch animation */
+  .pain-bottom-punch {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pain-bottom-punch.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 
   /* Micro-interactions */
   .hover-lift {
