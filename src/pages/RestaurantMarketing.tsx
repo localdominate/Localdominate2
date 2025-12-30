@@ -106,37 +106,48 @@ const RestaurantMarketing = () => {
     <div className="relative">
       {renderVariant()}
 
-      {/* Admin Controls - bottom right */}
-      <div className="fixed bottom-4 right-4 z-50">
-        {showSwitch ? (
-          <div className="flex flex-col gap-2 bg-neutral-800/95 backdrop-blur-sm border border-neutral-700 rounded-xl p-3 shadow-2xl">
+      {/* Admin Controls - Footer Section */}
+      <div className="bg-neutral-900 border-t border-neutral-800 py-6 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             {/* Language Toggle */}
-            <div className="flex items-center justify-between gap-3 pb-2 border-b border-neutral-700">
-              <span className="text-neutral-400 text-xs font-medium flex items-center gap-1.5">
-                <Globe className="w-3.5 h-3.5" />
-                Sprache
-              </span>
+            <div className="flex items-center gap-2 bg-neutral-800 rounded-lg px-3 py-2">
+              <Globe className="w-4 h-4 text-neutral-400" />
+              <span className="text-neutral-400 text-sm">Sprache:</span>
               <button
-                onClick={toggleLanguage}
-                className="flex items-center gap-1 px-2 py-1 bg-neutral-700 rounded-md text-xs font-medium transition-all hover:bg-neutral-600"
+                onClick={() => setLanguage("de")}
+                className={`px-2 py-1 rounded text-sm font-medium transition-all ${
+                  language === "de"
+                    ? "bg-amber-500 text-neutral-900"
+                    : "text-neutral-400 hover:text-neutral-200"
+                }`}
               >
-                <span className={language === "de" ? "text-amber-400" : "text-neutral-400"}>DE</span>
-                <span className="text-neutral-500">/</span>
-                <span className={language === "en" ? "text-amber-400" : "text-neutral-400"}>EN</span>
+                DE
+              </button>
+              <button
+                onClick={() => setLanguage("en")}
+                className={`px-2 py-1 rounded text-sm font-medium transition-all ${
+                  language === "en"
+                    ? "bg-amber-500 text-neutral-900"
+                    : "text-neutral-400 hover:text-neutral-200"
+                }`}
+              >
+                EN
               </button>
             </div>
-            
-            {/* Variant Buttons */}
-            <div className="flex items-center gap-2">
-              <span className="text-neutral-400 text-xs font-medium mr-1">Variante:</span>
+
+            {/* Variant Switch */}
+            <div className="flex items-center gap-2 bg-neutral-800 rounded-lg px-3 py-2">
+              <Settings className="w-4 h-4 text-neutral-400" />
+              <span className="text-neutral-400 text-sm">Variante:</span>
               {(["A", "B", "C"] as Variant[]).map((v) => (
                 <button
                   key={v}
                   onClick={() => handleVariantChange(v)}
-                  className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                  className={`px-3 py-1 rounded text-sm font-medium transition-all ${
                     variant === v
                       ? "bg-amber-500 text-neutral-900"
-                      : "bg-neutral-700 text-neutral-400 hover:bg-neutral-600 hover:text-neutral-200"
+                      : "text-neutral-400 hover:text-neutral-200"
                   }`}
                   title={variantLabels[v]}
                 >
@@ -144,24 +155,13 @@ const RestaurantMarketing = () => {
                 </button>
               ))}
             </div>
-            
-            {/* Close Button */}
-            <button
-              onClick={() => setShowSwitch(false)}
-              className="mt-1 text-neutral-500 hover:text-neutral-300 text-xs text-center py-1"
-            >
-              Schließen ✕
-            </button>
           </div>
-        ) : (
-          <button
-            onClick={() => setShowSwitch(true)}
-            className="w-10 h-10 flex items-center justify-center bg-neutral-800/80 hover:bg-neutral-800 border border-neutral-700 rounded-full text-neutral-400 hover:text-amber-400 transition-all shadow-lg"
-            title="Admin: Einstellungen"
-          >
-            <Settings className="w-5 h-5" />
-          </button>
-        )}
+          
+          {/* Current variant info */}
+          <p className="text-center text-neutral-500 text-xs mt-3">
+            Aktiv: {variantLabels[variant]}
+          </p>
+        </div>
       </div>
     </div>
   );
