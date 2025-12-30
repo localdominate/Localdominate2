@@ -517,10 +517,11 @@ const RestaurantMarketing = () => {
         </div>
       </section>
 
-      {/* Pricing Section - Psychologisch optimiert */}
-      <section id="pricing" className="px-4 py-16 md:py-24 bg-gradient-to-b from-transparent via-[hsl(var(--menu-gold))]/5 to-transparent">
-        <div className="container max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+      {/* Pricing Section - Elegantes Cream-Design */}
+      <section id="pricing" className="px-4 py-16 md:py-24">
+        <div className="container max-w-3xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-10">
             <div className="menu-divider mb-6">
               <span className="menu-divider-ornament">◆</span>
             </div>
@@ -540,59 +541,64 @@ const RestaurantMarketing = () => {
             </div>
           </div>
           
-          {/* Main Pricing Card */}
+          {/* Main Pricing Card - Elegant Cream Design */}
           <div 
-            className={`menu-card-featured menu-corner p-8 md:p-12 rounded-2xl relative transition-all duration-700 ${
+            className={`menu-pricing-card p-6 md:p-10 relative transition-all duration-700 ${
               visibleSections.has('pricing') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
-            style={{ 
-              transitionDelay: '0.2s',
-              boxShadow: '0 0 60px hsl(var(--menu-gold) / 0.15)'
-            }}
+            style={{ transitionDelay: '0.2s' }}
           >
-            {/* Countdown Timer */}
-            <div className="mb-8">
-              <CountdownTimer />
-            </div>
+            {/* Inner Content */}
+            <div className="relative z-10">
+              {/* Countdown Timer */}
+              <div className="mb-8">
+                <CountdownTimer />
+              </div>
 
-            {/* Scarcity Indicator */}
-            <div className="mb-8">
-              <ScarcityIndicator spotsLeft={3} totalSpots={10} />
-            </div>
+              {/* Divider */}
+              <div className="pricing-divider mb-8">
+                <span className="text-[hsl(42_50%_70%)]">✦</span>
+              </div>
 
-            {/* Pricing Toggle & Display */}
-            <div className="mb-10">
-              <PricingToggle />
-            </div>
+              {/* Pricing Toggle & Display */}
+              <div className="mb-8">
+                <PricingToggle />
+              </div>
 
-            {/* Value Stack */}
-            <div className="mb-10 p-6 bg-[hsl(var(--menu-cream))]/5 rounded-xl border border-[hsl(var(--menu-gold))]/10">
-              <ValueStack />
-            </div>
+              {/* Scarcity Indicator */}
+              <div className="mb-8">
+                <ScarcityIndicator spotsLeft={3} totalSpots={10} />
+              </div>
 
-            {/* Bonus Stack */}
-            <div className="mb-10 p-6 bg-gradient-to-br from-[hsl(var(--menu-gold))]/10 to-transparent rounded-xl border border-[hsl(var(--menu-gold))]/20">
-              <BonusStack />
-            </div>
+              {/* Value Stack */}
+              <div className="mb-8 p-5 bg-[hsl(40_25%_94%)] rounded-xl border border-[hsl(42_35%_85%)]">
+                <ValueStack />
+              </div>
 
-            {/* CTA Button */}
-            <div className="text-center mb-8">
-              <button className="menu-button menu-button-filled menu-cta-glow text-lg px-10 py-5 group w-full md:w-auto">
-                <span className="flex items-center justify-center gap-3">
-                  Jetzt Rundum-Sorglos-Paket sichern
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
-              <p className="text-sm text-[hsl(var(--menu-brown))]/50 mt-4 dark:text-menu-cream/50">
-                Keine versteckten Kosten • Jederzeit kündbar • Sofort startklar
-              </p>
-            </div>
+              {/* Bonus Stack */}
+              <div className="mb-8 p-5 bg-gradient-to-br from-[hsl(42_60%_55%_/_0.08)] to-transparent rounded-xl border border-[hsl(42_45%_80%)]">
+                <BonusStack />
+              </div>
 
-            {/* Trust Badges */}
-            <TrustBadgesRestaurant />
+              {/* CTA Button */}
+              <div className="text-center mb-8">
+                <button className="pricing-cta-button pricing-cta-glow w-full md:w-auto group">
+                  <span className="flex items-center justify-center gap-3">
+                    Jetzt Rundum-Sorglos-Paket sichern
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </button>
+                <p className="text-xs text-[hsl(30_10%_55%)] mt-4">
+                  Keine versteckten Kosten • Jederzeit kündbar • Sofort startklar
+                </p>
+              </div>
+
+              {/* Trust Badges */}
+              <TrustBadgesRestaurant />
+            </div>
           </div>
 
-          {/* Alternative: Starter Paket (Smaller) */}
+          {/* Alternative: Starter Paket */}
           <div className="mt-12 text-center">
             <p className="menu-subtitle text-sm mb-4">Oder starten Sie kleiner:</p>
             <div 

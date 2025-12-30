@@ -1,88 +1,92 @@
-import { Gift, FileText, Instagram, Zap } from "lucide-react";
+import { Gift, FileText, Camera, Sparkles } from "lucide-react";
 
 const BonusStack = () => {
   const bonuses = [
     {
       icon: FileText,
       title: "Google Maps Ranking Cheat Sheet",
+      description: "Die 7 Geheimnisse für Top-Platzierungen",
       value: "97€",
-      description: "Top 3 in 30 Tagen"
     },
     {
-      icon: Instagram,
+      icon: Camera,
       title: "50 Instagram Reel-Ideen",
+      description: "Content-Vorlagen speziell für Restaurants",
       value: "47€",
-      description: "Für Restaurants optimiert"
     },
     {
-      icon: Zap,
+      icon: Sparkles,
       title: "Erster Monat GRATIS",
+      description: "Bei Jahres-Abo ohne Risiko starten",
       value: "49€",
-      description: "Bei Jahres-Abo",
-      highlight: true
-    }
+      highlight: true,
+    },
   ];
 
+  const totalBonusValue = bonuses.reduce((sum, b) => sum + parseInt(b.value), 0);
+
   return (
-    <div className="space-y-3">
-      <div className="flex items-center gap-2 mb-4">
-        <Gift className="w-5 h-5 text-[hsl(var(--menu-gold))]" />
-        <span className="text-lg font-serif font-semibold text-[hsl(var(--menu-brown))]">
+    <div className="space-y-4">
+      {/* Header */}
+      <div className="flex items-center justify-center gap-3">
+        <Gift className="w-5 h-5 text-[hsl(42_70%_45%)]" />
+        <h4 className="text-base font-['Cormorant_Garamond',serif] font-semibold text-[hsl(30_25%_18%)] uppercase tracking-[0.15em]">
           Exklusive Boni
-        </span>
-        <span className="text-xs bg-[hsl(var(--menu-gold))]/20 text-[hsl(var(--menu-gold))] px-2 py-1 rounded-full">
-          GRATIS
-        </span>
+        </h4>
+        <span className="pricing-bonus-tag">GRATIS</span>
       </div>
 
-      {bonuses.map((bonus, index) => {
-        const Icon = bonus.icon;
-        return (
+      <div className="pricing-divider">
+        <span className="text-[hsl(42_50%_65%)]">✦</span>
+      </div>
+
+      {/* Bonus Items */}
+      <div className="space-y-3">
+        {bonuses.map((bonus, index) => (
           <div
             key={index}
-            className={`flex items-center gap-4 p-4 rounded-xl transition-all duration-300 ${
+            className={`flex items-start gap-3 p-3 rounded-xl transition-all ${
               bonus.highlight
-                ? "bg-gradient-to-r from-[hsl(var(--menu-gold))]/15 to-[hsl(var(--menu-gold))]/5 border-2 border-[hsl(var(--menu-gold))]/40 bonus-glow"
-                : "bg-[hsl(var(--menu-cream))]/30 border border-[hsl(var(--menu-gold))]/10"
+                ? "bg-gradient-to-r from-[hsl(42_70%_55%_/_0.12)] to-[hsl(42_70%_55%_/_0.04)] border border-[hsl(42_50%_72%)]"
+                : "bg-[hsl(40_25%_95%)] border border-[hsl(42_35%_86%)]"
             }`}
           >
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-              bonus.highlight 
-                ? "bg-[hsl(var(--menu-gold))]" 
-                : "bg-[hsl(var(--menu-gold))]/20"
+            <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 ${
+              bonus.highlight
+                ? "bg-[hsl(42_70%_50%)] text-white"
+                : "bg-[hsl(42_45%_85%)] text-[hsl(42_60%_40%)]"
             }`}>
-              <Icon className={`w-5 h-5 ${
-                bonus.highlight 
-                  ? "text-[hsl(var(--menu-cream))]" 
-                  : "text-[hsl(var(--menu-gold))]"
-              }`} />
+              <bonus.icon className="w-4 h-4" />
             </div>
-            <div className="flex-1">
-              <p className={`font-medium ${
-                bonus.highlight 
-                  ? "text-[hsl(var(--menu-brown))]" 
-                  : "text-[hsl(var(--menu-brown))]/80"
+            <div className="flex-1 min-w-0">
+              <h5 className={`text-sm font-semibold ${
+                bonus.highlight ? "text-[hsl(30_25%_18%)]" : "text-[hsl(30_20%_28%)]"
               }`}>
                 {bonus.title}
-              </p>
-              <p className="text-xs text-[hsl(var(--menu-brown))]/60">
+              </h5>
+              <p className="text-xs text-[hsl(30_10%_50%)] mt-0.5">
                 {bonus.description}
               </p>
             </div>
-            <div className={`text-sm font-semibold ${
-              bonus.highlight 
-                ? "text-[hsl(var(--menu-gold))]" 
-                : "text-[hsl(var(--menu-brown))]/50"
+            <div className={`text-right flex-shrink-0 ${
+              bonus.highlight ? "text-[hsl(42_70%_40%)]" : "text-[hsl(30_10%_55%)]"
             }`}>
-              Wert: {bonus.value}
+              <span className="text-[10px] uppercase tracking-wide">Wert</span>
+              <p className={`text-sm font-semibold ${
+                bonus.highlight ? "text-[hsl(42_70%_40%)]" : "text-[hsl(30_18%_35%)]"
+              }`}>
+                {bonus.value}
+              </p>
             </div>
           </div>
-        );
-      })}
+        ))}
+      </div>
 
-      <div className="text-center mt-4 pt-4 border-t border-dashed border-[hsl(var(--menu-gold))]/30">
-        <span className="text-sm text-[hsl(var(--menu-brown))]/60">Bonus-Gesamtwert: </span>
-        <span className="text-lg font-bold text-[hsl(var(--menu-gold))]">193€</span>
+      {/* Total Bonus Value */}
+      <div className="text-center pt-3 border-t border-dashed border-[hsl(42_40%_80%)]">
+        <p className="text-sm text-[hsl(30_12%_50%)]">
+          Bonus-Gesamtwert: <span className="font-bold text-[hsl(42_70%_42%)]">{totalBonusValue}€</span>
+        </p>
       </div>
     </div>
   );

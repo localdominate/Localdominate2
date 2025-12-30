@@ -976,3 +976,213 @@
     }
   }
 }
+
+/* ============================================
+   ELEGANT PRICING CARD STYLES
+   Premium Cream-White Menu Design
+   ============================================ */
+
+/* Main Pricing Card - Elegant Cream Background */
+.menu-pricing-card {
+  background: linear-gradient(
+    135deg,
+    hsl(40 30% 97%) 0%,
+    hsl(38 28% 95%) 50%,
+    hsl(40 30% 96%) 100%
+  );
+  border: 2px solid hsl(42 50% 80%);
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 4px 6px -1px hsl(30 20% 20% / 0.05),
+    0 10px 40px -10px hsl(30 20% 20% / 0.1),
+    inset 0 1px 0 hsl(40 40% 98%),
+    inset 0 -1px 0 hsl(38 30% 88%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Paper Texture Overlay */
+.menu-pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+}
+
+/* Golden Double Border Frame */
+.menu-pricing-card::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px solid hsl(42 50% 78% / 0.6);
+  border-radius: 1.25rem;
+  pointer-events: none;
+}
+
+/* Pricing Section Text Colors for Cream Background */
+.pricing-text-primary {
+  color: hsl(30 25% 18%);
+}
+
+.pricing-text-secondary {
+  color: hsl(30 15% 40%);
+}
+
+.pricing-text-muted {
+  color: hsl(30 12% 55%);
+}
+
+.pricing-gold {
+  color: hsl(42 70% 42%);
+}
+
+.pricing-gold-bg {
+  background: linear-gradient(135deg, hsl(42 76% 55%) 0%, hsl(38 70% 48%) 100%);
+}
+
+/* Pricing Divider */
+.pricing-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: hsl(42 50% 65%);
+}
+
+.pricing-divider::before,
+.pricing-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(42 50% 78%), transparent);
+}
+
+/* Pricing Timer Box */
+.pricing-timer-box {
+  background: linear-gradient(180deg, hsl(40 28% 94%) 0%, hsl(38 25% 91%) 100%);
+  border: 1px solid hsl(42 40% 80%);
+  border-radius: 0.5rem;
+  box-shadow: 
+    inset 0 1px 2px hsl(30 20% 20% / 0.04),
+    0 1px 0 hsl(40 40% 98%);
+}
+
+/* Feature Item with Dotted Line */
+.pricing-feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px dotted hsl(42 30% 82%);
+  color: hsl(30 20% 28%);
+}
+
+.pricing-feature-item:last-child {
+  border-bottom: none;
+}
+
+/* Bonus Tag */
+.pricing-bonus-tag {
+  background: linear-gradient(135deg, hsl(42 76% 55% / 0.15) 0%, hsl(42 76% 55% / 0.08) 100%);
+  border: 1px solid hsl(42 50% 72%);
+  color: hsl(38 70% 38%);
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+
+/* Trust Badge */
+.pricing-trust-badge {
+  background: hsl(40 28% 96%);
+  border: 1px solid hsl(42 40% 84%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.pricing-trust-badge:hover {
+  border-color: hsl(42 50% 70%);
+  box-shadow: 0 2px 8px hsl(42 50% 50% / 0.1);
+}
+
+/* Guarantee Stamp */
+.pricing-guarantee-stamp {
+  background: linear-gradient(135deg, hsl(40 30% 97%) 0%, hsl(38 25% 94%) 100%);
+  border: 2px solid hsl(42 50% 72%);
+  border-radius: 50%;
+  padding: 0.75rem;
+  box-shadow: 
+    0 2px 8px hsl(30 20% 20% / 0.06),
+    inset 0 0 0 2px hsl(40 30% 97%),
+    inset 0 0 0 3px hsl(42 50% 78%);
+}
+
+/* Scarcity Bar */
+.pricing-scarcity-bar {
+  background: hsl(40 25% 90%);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+/* CTA Button for Cream Background */
+.pricing-cta-button {
+  background: linear-gradient(135deg, hsl(42 76% 55%) 0%, hsl(38 70% 48%) 100%);
+  color: hsl(30 25% 12%);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.03em;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 
+    0 4px 14px hsl(42 76% 55% / 0.35),
+    inset 0 1px 0 hsl(45 80% 70%);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.pricing-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px hsl(42 76% 55% / 0.45),
+    inset 0 1px 0 hsl(45 80% 75%);
+}
+
+/* Elegant fade-in animation */
+@keyframes pricing-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pricing-fade-in {
+  animation: pricing-fade-in 0.6s ease-out forwards;
+}
+
+/* Subtle pulsing glow for CTA */
+@keyframes pricing-cta-glow {
+  0%, 100% {
+    box-shadow: 
+      0 4px 14px hsl(42 76% 55% / 0.35),
+      inset 0 1px 0 hsl(45 80% 70%);
+  }
+  50% {
+    box-shadow: 
+      0 4px 25px hsl(42 76% 55% / 0.5),
+      0 0 40px hsl(42 76% 55% / 0.2),
+      inset 0 1px 0 hsl(45 80% 70%);
+  }
+}
+
+.pricing-cta-glow {
+  animation: pricing-cta-glow 2.5s ease-in-out infinite;
+}
