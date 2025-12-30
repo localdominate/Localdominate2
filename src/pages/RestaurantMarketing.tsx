@@ -243,21 +243,29 @@ const RestaurantMarketing = () => {
           <div className="menu-line mb-12 menu-fade-in menu-delay-2" />
           
           {/* Main Headline */}
-          <h2 className="font-menu-serif text-3xl md:text-5xl lg:text-6xl font-normal leading-tight mb-8 menu-fade-in menu-delay-3 text-menu-cream">
+          <h2
+            className={`font-menu-serif text-3xl md:text-5xl lg:text-6xl font-normal leading-tight mb-8 menu-fade-in menu-delay-3 ${
+              variant === "cream-gold" ? "text-[hsl(var(--rest-text))]" : "text-menu-cream"
+            }`}
+          >
             „Verlieren Sie heute Abend wieder
             <span className="block mt-2 text-menu-gold italic">3–4 volle Tische</span>
             an die Konkurrenz?"
           </h2>
-          
+
           {/* Ornament */}
           <div className="text-2xl text-menu-gold mb-8 menu-fade-in menu-delay-4">❧</div>
-          
+
           {/* Subheadline */}
-          <p className="font-menu-serif text-xl md:text-2xl italic text-menu-cream/80 mb-12 max-w-xl mx-auto menu-fade-in menu-delay-4">
+          <p
+            className={`font-menu-serif text-xl md:text-2xl italic mb-12 max-w-xl mx-auto menu-fade-in menu-delay-4 ${
+              variant === "cream-gold" ? "text-[hsl(var(--rest-text-muted))]" : "text-menu-cream/80"
+            }`}
+          >
             90% der Gäste entscheiden am Handy,
             <span className="block">wo sie heute Abend essen.</span>
           </p>
-          
+
           {/* CTA Button */}
           <button className="menu-button menu-fade-in menu-delay-5 group">
             <span className="flex items-center gap-3">
@@ -265,9 +273,13 @@ const RestaurantMarketing = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </span>
           </button>
-          
+
           {/* Trust Line */}
-          <p className="mt-8 text-sm tracking-wider text-menu-cream/50 menu-fade-in menu-delay-6">
+          <p
+            className={`mt-8 text-sm tracking-wider menu-fade-in menu-delay-6 ${
+              variant === "cream-gold" ? "text-[hsl(var(--rest-text-muted))]" : "text-menu-cream/50"
+            }`}
+          >
             Unverbindlich · Keine Kosten
           </p>
         </div>
