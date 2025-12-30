@@ -20,6 +20,12 @@ import ScarcityIndicator from "@/components/restaurant/ScarcityIndicator";
 import PricingToggle from "@/components/restaurant/PricingToggle";
 import TrustBadgesRestaurant from "@/components/restaurant/TrustBadgesRestaurant";
 import BonusStack from "@/components/restaurant/BonusStack";
+import { useRestaurantABTest, RestaurantABTestProvider } from "@/hooks/useRestaurantABTest";
+
+// Import theme styles
+import "@/styles/restaurant-dark-gold.css";
+import "@/styles/restaurant-cream-gold.css";
+import "@/styles/restaurant-michelin.css";
 
 // Animated Counter Component
 const AnimatedCounter = ({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) => {
@@ -99,6 +105,7 @@ const ParallaxHeroBackground = () => {
 };
 
 const RestaurantMarketing = () => {
+  const { variant, setVariantOverride } = useRestaurantABTest();
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const scrollProgress = usePageScrollProgress();
   const [isROISticky, setIsROISticky] = useState(false);
@@ -140,7 +147,29 @@ const RestaurantMarketing = () => {
   const ctaGlowIntensity = Math.min(1, scrollProgress * 1.5);
 
   return (
-    <div className="min-h-screen menu-page text-menu-cream overflow-hidden font-menu-sans">
+    <div className={`min-h-screen rest-page text-menu-cream overflow-hidden font-menu-sans ${variant === 'michelin' ? 'text-[hsl(var(--rest-text))]' : ''}`}>
+      
+      {/* A/B Test Variant Selector (Dev Mode) */}
+      <div className="fixed top-4 right-4 z-[100] bg-black/80 backdrop-blur-sm rounded-lg p-3 text-xs text-white">
+        <p className="mb-2 opacity-70">A/B Test Variante:</p>
+        <div className="flex flex-col gap-1">
+          {(['dark-gold', 'cream-gold', 'michelin'] as const).map((v) => (
+            <button
+              key={v}
+              onClick={() => setVariantOverride(v)}
+              className={`px-3 py-1 rounded text-left transition-all ${
+                variant === v 
+                  ? 'bg-menu-gold text-black font-medium' 
+                  : 'bg-white/10 hover:bg-white/20'
+              }`}
+            >
+              {v === 'dark-gold' && 'A: Schwarz/Gold'}
+              {v === 'cream-gold' && 'B: Creme/Gold'}
+              {v === 'michelin' && 'C: Michelin'}
+            </button>
+          ))}
+        </div>
+      </div>
       
       {/* Scroll Progress Bar */}
       <ScrollProgressBar />
@@ -737,4 +766,13 @@ const RestaurantMarketing = () => {
   );
 };
 
-export default RestaurantMarketing;
+// Wrapper with A/B Test Provider
+const RestaurantMarketingWithABTest = () => {
+  return (
+    <RestaurantABTestProvider>
+      <RestaurantMarketing />
+    </RestaurantABTestProvider>
+  );
+};
+
+export default RestaurantMarketingWithABTest;

@@ -1,0 +1,361 @@
+/* =========================================
+   VARIANTE A: SCHWARZ/GOLD (DARK LUXURY)
+   ========================================= */
+
+.theme-dark-gold {
+  /* Color Palette */
+  --rest-bg: 0 0% 4%;              /* #0A0A0A - Deep black */
+  --rest-bg-accent: 0 0% 8%;       /* #141414 - Slightly lighter */
+  --rest-bg-card: 0 0% 6%;         /* #0F0F0F - Card background */
+  --rest-text: 0 0% 96%;           /* #F5F5F5 - Warm white */
+  --rest-text-muted: 0 0% 60%;     /* #999999 - Muted text */
+  --rest-gold: 45 80% 52%;         /* #D4AF37 - Classic gold */
+  --rest-gold-bright: 48 100% 50%; /* #FFD700 - Bright gold for CTAs */
+  --rest-gold-muted: 42 40% 40%;   /* #917640 - Muted gold */
+  --rest-accent: 0 70% 45%;        /* Deep burgundy accent */
+  --rest-border: 45 30% 25%;       /* Gold-tinted border */
+  
+  /* Shadows */
+  --rest-shadow-glow: 0 0 60px hsl(45 80% 52% / 0.15);
+  --rest-shadow-card: 0 20px 60px hsl(0 0% 0% / 0.5);
+}
+
+/* Base Page Styling */
+.theme-dark-gold .rest-page {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--rest-bg)) 0%,
+    hsl(0 0% 3%) 50%,
+    hsl(var(--rest-bg)) 100%
+  );
+  color: hsl(var(--rest-text));
+  min-height: 100vh;
+}
+
+/* Linen Texture Overlay */
+.theme-dark-gold .rest-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Cards */
+.theme-dark-gold .rest-card {
+  background: hsl(var(--rest-bg-card));
+  border: 1px solid hsl(var(--rest-gold) / 0.2);
+  box-shadow: var(--rest-shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-dark-gold .rest-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid hsl(var(--rest-gold) / 0.1);
+  margin: 8px;
+  pointer-events: none;
+}
+
+.theme-dark-gold .rest-card-featured {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--rest-bg-card)) 0%,
+    hsl(0 0% 8%) 100%
+  );
+  border: 2px solid hsl(var(--rest-gold) / 0.4);
+  box-shadow: 
+    var(--rest-shadow-card),
+    inset 0 1px 0 hsl(var(--rest-gold) / 0.1);
+}
+
+/* Typography */
+.theme-dark-gold .rest-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: hsl(var(--rest-gold));
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.theme-dark-gold .rest-headline {
+  font-family: 'Cormorant Garamond', serif;
+  color: hsl(var(--rest-text));
+  font-weight: 400;
+}
+
+.theme-dark-gold .rest-headline-gold {
+  color: hsl(var(--rest-gold));
+}
+
+.theme-dark-gold .rest-subtitle {
+  font-family: 'Lato', sans-serif;
+  color: hsl(var(--rest-text-muted));
+  letter-spacing: 0.05em;
+}
+
+/* Dividers */
+.theme-dark-gold .rest-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.theme-dark-gold .rest-divider::before,
+.theme-dark-gold .rest-divider::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--rest-gold) / 0.5),
+    transparent
+  );
+}
+
+.theme-dark-gold .rest-divider-ornament {
+  color: hsl(var(--rest-gold));
+  font-size: 0.75rem;
+}
+
+/* Buttons */
+.theme-dark-gold .rest-button {
+  background: transparent;
+  border: 1px solid hsl(var(--rest-gold));
+  color: hsl(var(--rest-gold));
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-dark-gold .rest-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: hsl(var(--rest-gold));
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.theme-dark-gold .rest-button:hover {
+  color: hsl(var(--rest-bg));
+}
+
+.theme-dark-gold .rest-button:hover::before {
+  transform: translateX(0);
+}
+
+.theme-dark-gold .rest-button-filled {
+  background: hsl(var(--rest-gold));
+  color: hsl(var(--rest-bg));
+  border: none;
+  box-shadow: 0 0 30px hsl(var(--rest-gold) / 0.3);
+}
+
+.theme-dark-gold .rest-button-filled:hover {
+  background: hsl(var(--rest-gold-bright));
+  box-shadow: 0 0 50px hsl(var(--rest-gold) / 0.5);
+}
+
+/* CTA with Glow Animation */
+.theme-dark-gold .rest-cta-glow {
+  animation: dark-gold-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dark-gold-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--rest-gold) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--rest-gold) / 0.6);
+  }
+}
+
+/* Pricing Card */
+.theme-dark-gold .rest-pricing-card {
+  background: linear-gradient(
+    145deg,
+    hsl(0 0% 5%) 0%,
+    hsl(0 0% 8%) 50%,
+    hsl(0 0% 5%) 100%
+  );
+  border: 2px solid hsl(var(--rest-gold) / 0.3);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: var(--rest-shadow-card);
+}
+
+/* Double border frame */
+.theme-dark-gold .rest-pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid hsl(var(--rest-gold) / 0.15);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Timer Box */
+.theme-dark-gold .rest-timer-box {
+  background: hsl(var(--rest-bg-accent));
+  border: 1px solid hsl(var(--rest-gold) / 0.3);
+  color: hsl(var(--rest-gold));
+  padding: 0.5rem 0.75rem;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.theme-dark-gold .rest-timer-label {
+  color: hsl(var(--rest-text-muted));
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Price Display */
+.theme-dark-gold .rest-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 600;
+  color: hsl(var(--rest-gold));
+  line-height: 1;
+}
+
+.theme-dark-gold .rest-price-suffix {
+  font-size: 1.25rem;
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-dark-gold .rest-price-anchor {
+  text-decoration: line-through;
+  color: hsl(var(--rest-text-muted));
+  font-size: 1.25rem;
+}
+
+/* Feature Items */
+.theme-dark-gold .rest-feature-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid hsl(var(--rest-gold) / 0.1);
+}
+
+.theme-dark-gold .rest-feature-check {
+  color: hsl(var(--rest-gold));
+  margin-right: 0.75rem;
+}
+
+.theme-dark-gold .rest-feature-name {
+  color: hsl(var(--rest-text));
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.theme-dark-gold .rest-feature-value {
+  color: hsl(var(--rest-gold-muted));
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875rem;
+}
+
+/* Bonus Tag */
+.theme-dark-gold .rest-bonus-tag {
+  background: hsl(var(--rest-gold) / 0.1);
+  border: 1px solid hsl(var(--rest-gold) / 0.3);
+  color: hsl(var(--rest-gold));
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Scarcity Bar */
+.theme-dark-gold .rest-scarcity-bar {
+  background: hsl(var(--rest-bg-accent));
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.theme-dark-gold .rest-scarcity-fill {
+  background: linear-gradient(90deg, hsl(var(--rest-gold)), hsl(0 70% 50%));
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* Trust Badge */
+.theme-dark-gold .rest-trust-badge {
+  background: hsl(var(--rest-bg-accent));
+  border: 1px solid hsl(var(--rest-gold) / 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Gold Particles Effect */
+.theme-dark-gold .rest-gold-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: hsl(var(--rest-gold));
+  border-radius: 50%;
+  animation: particle-float 8s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.8;
+  }
+}
+
+/* Decorative Corner Ornaments */
+.theme-dark-gold .rest-corner-ornament {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: hsl(var(--rest-gold) / 0.3);
+}
+
+.theme-dark-gold .rest-corner-tl {
+  top: 12px;
+  left: 12px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.theme-dark-gold .rest-corner-tr {
+  top: 12px;
+  right: 12px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+.theme-dark-gold .rest-corner-bl {
+  bottom: 12px;
+  left: 12px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+}
+
+.theme-dark-gold .rest-corner-br {
+  bottom: 12px;
+  right: 12px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
