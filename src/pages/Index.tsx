@@ -1,5 +1,6 @@
 import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
+import RankingComparison from "@/components/RankingComparison";
 import PainSection from "@/components/PainSection";
 import ParallaxPortal from "@/components/ParallaxPortal";
 import ComparisonTable from "@/components/ComparisonTable";
@@ -45,6 +46,7 @@ const Index = () => {
       <AnnouncementBar />
       <LanguageSwitch />
       <HeroSection />
+      <RankingComparison />
       <ParallaxPortal>
         <PainSection />
       </ParallaxPortal>

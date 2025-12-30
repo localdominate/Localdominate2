@@ -24,6 +24,28 @@ export const translations = {
       urgency: "🔥 NUR NOCH",
       spotsLeft: "7 PLÄTZE",
       urgencyEnd: "DIESEN MONAT VERFÜGBAR",
+      trustBullets: {
+        fixedPrice: "Einmaliger Festpreis",
+        noSubscription: "Keine Abo-Falle",
+        provenResults: "Nachweisbare Ergebnisse",
+      },
+    },
+    // Ranking Comparison
+    ranking: {
+      eyebrow: "Echte Resultate",
+      headline: "So sehen unsere Ergebnisse aus",
+      tagline: "Wir verwandeln deine Standorte in lokale Marktführer.",
+      before: "VORHER",
+      after: "NACHHER",
+      position: "Google Maps Position",
+      visibility: "Sichtbarkeit",
+      calls: "Anrufe pro Monat",
+      beforePosition: "Platz 8-15",
+      afterPosition: "Top 3",
+      beforeVisibility: "Kaum sichtbar",
+      afterVisibility: "Maximale Präsenz",
+      beforeCalls: "2-5 Anrufe",
+      afterCalls: "30+ Anrufe",
     },
     // TrustBadges
     trust: {
@@ -186,6 +208,18 @@ export const translations = {
       headline: "Häufige Fragen (ehrlich beantwortet)",
       items: [
         {
+          question: "Wie lange dauert es bis zu den Top 3?",
+          answer: "Die meisten Kunden sehen erste Verbesserungen innerhalb von 2-4 Wochen. Die vollständige Optimierung zeigt ihre volle Wirkung nach 4-8 Wochen, abhängig von deiner Branche und lokalem Wettbewerb.",
+        },
+        {
+          question: "Für welche Branchen funktioniert das?",
+          answer: "Das System funktioniert für alle lokalen Dienstleister: Handwerker, Ärzte, Anwälte, Restaurants, Friseure, Fitnessstudios, Immobilienmakler und mehr. Wenn du lokale Kunden brauchst, ist Local Dominator für dich.",
+        },
+        {
+          question: "Was genau ist im Festpreis enthalten?",
+          answer: "Alles: Komplette Profil-Optimierung, Keyword-Analyse, Bilder-Strategie, Bewertungs-System Setup, Anti-Spam Schutz, Video-Anleitung und 30 Tage E-Mail Support. Keine versteckten Kosten, keine monatlichen Gebühren.",
+        },
+        {
           question: "Was passiert, wenn es nicht funktioniert?",
           answer: "Du bekommst dein Geld zurück – ohne Diskussion. Unsere 30-Tage Geld-zurück-Garantie schützt dich vollständig. Wenn du nach Umsetzung keine messbare Steigerung deiner Anfragen siehst, schreibst du uns eine E-Mail und wir erstatten den vollen Kaufpreis. Du gehst also kein Risiko ein.",
         },
@@ -194,24 +228,12 @@ export const translations = {
           answer: "Nein, und das ist der entscheidende Unterschied. Klassische SEO-Agenturen verkaufen dir monatelange Verträge für Websites. Wir fokussieren uns laser-scharf auf Google Maps – den Ort, wo 86% aller lokalen Suchanfragen enden. Das ist unser Spezialgebiet, nicht ein Nebenprojekt.",
         },
         {
-          question: "Funktioniert das für meine Branche?",
-          answer: "Ja, wenn du ein lokales Geschäft betreibst und Kunden aus deiner Region anziehen willst. Handwerker, Ärzte, Restaurants, Friseure, Anwälte, Fitnessstudios – das System funktioniert branchenübergreifend. Die Prinzipien lokaler Sichtbarkeit sind universell.",
-        },
-        {
-          question: "Wie schnell sehe ich Ergebnisse?",
-          answer: "Die meisten Kunden sehen erste Ranking-Verbesserungen innerhalb von 14-21 Tagen. Die volle Wirkung entfaltet sich nach etwa 4-6 Wochen, wenn Google alle Änderungen indexiert hat. Und wenn nicht? Dann greift unsere Garantie.",
-        },
-        {
           question: "Muss ich technisch versiert sein?",
           answer: "Überhaupt nicht. Wir übernehmen die gesamte technische Arbeit. Du gibst uns den Zugang und folgst unserer einfachen Video-Anleitung für den 5-Sterne-Automatismus. Das kann wirklich jeder – auch ohne Vorkenntnisse.",
         },
         {
           question: "Wie viel Zeit muss ich investieren?",
           answer: "Genau 7 Minuten. Nach der Buchung füllst du ein kurzes Formular aus. Danach übernehmen wir alles. Du musst keine Technik verstehen und keine Texte schreiben. Wir erledigen die Arbeit – du erntest die Ergebnisse.",
-        },
-        {
-          question: "Brauche ich Zugang zu meinem Google-Konto?",
-          answer: "Ja, du gewährst uns temporären Zugang zu deinem Google Business Profil. Das ist 100% sicher – wir arbeiten nach DSGVO-Standards und du kannst den Zugang jederzeit widerrufen. Ohne diesen Zugang können wir die Optimierungen nicht durchführen.",
         },
       ],
     },
@@ -374,6 +396,28 @@ export const translations = {
       urgency: "🔥 ONLY",
       spotsLeft: "7 SPOTS",
       urgencyEnd: "LEFT THIS MONTH",
+      trustBullets: {
+        fixedPrice: "One-time fixed price",
+        noSubscription: "No subscription trap",
+        provenResults: "Proven results",
+      },
+    },
+    // Ranking Comparison
+    ranking: {
+      eyebrow: "Real Results",
+      headline: "This is what our results look like",
+      tagline: "We transform your locations into local market leaders.",
+      before: "BEFORE",
+      after: "AFTER",
+      position: "Google Maps Position",
+      visibility: "Visibility",
+      calls: "Calls per month",
+      beforePosition: "Position 8-15",
+      afterPosition: "Top 3",
+      beforeVisibility: "Barely visible",
+      afterVisibility: "Maximum presence",
+      beforeCalls: "2-5 calls",
+      afterCalls: "30+ calls",
     },
     // TrustBadges
     trust: {
@@ -536,6 +580,18 @@ export const translations = {
       headline: "Frequently Asked Questions (Honestly Answered)",
       items: [
         {
+          question: "How long does it take to reach the Top 3?",
+          answer: "Most customers see initial improvements within 2-4 weeks. The full optimization shows its complete effect after 4-8 weeks, depending on your industry and local competition.",
+        },
+        {
+          question: "Which industries does this work for?",
+          answer: "The system works for all local service providers: tradesmen, doctors, lawyers, restaurants, hairdressers, gyms, real estate agents, and more. If you need local customers, Local Dominator is for you.",
+        },
+        {
+          question: "What exactly is included in the fixed price?",
+          answer: "Everything: Complete profile optimization, keyword analysis, image strategy, review system setup, anti-spam protection, video tutorial, and 30 days email support. No hidden costs, no monthly fees.",
+        },
+        {
           question: "What happens if it doesn't work?",
           answer: "You get your money back – no discussion. Our 30-day money-back guarantee protects you completely. If you don't see a measurable increase in inquiries after implementation, you send us an email and we refund the full purchase price. You take zero risk.",
         },
@@ -544,24 +600,12 @@ export const translations = {
           answer: "No, and that's the crucial difference. Classic SEO agencies sell you months-long contracts for websites. We focus laser-sharp on Google Maps – the place where 86% of all local searches end. This is our specialty, not a side project.",
         },
         {
-          question: "Does this work for my industry?",
-          answer: "Yes, if you run a local business and want to attract customers from your region. Tradesmen, doctors, restaurants, hairdressers, lawyers, gyms – the system works across industries. The principles of local visibility are universal.",
-        },
-        {
-          question: "How quickly will I see results?",
-          answer: "Most customers see initial ranking improvements within 14-21 days. The full effect unfolds after about 4-6 weeks when Google has indexed all changes. And if not? Our guarantee kicks in.",
-        },
-        {
           question: "Do I need to be tech-savvy?",
           answer: "Not at all. We handle all the technical work. You provide access and follow our simple video tutorial for the 5-star automatism. Anyone can do it – even without prior knowledge.",
         },
         {
           question: "How much time do I need to invest?",
           answer: "Exactly 7 minutes. After booking, you fill out a short form. After that, we take over everything. You don't need to understand technology or write any texts. We do the work – you reap the results.",
-        },
-        {
-          question: "Do I need access to my Google account?",
-          answer: "Yes, you grant us temporary access to your Google Business Profile. This is 100% secure – we work according to GDPR standards and you can revoke access at any time. Without this access, we cannot perform the optimizations.",
         },
       ],
     },

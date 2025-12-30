@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import TrustBadges from "@/components/TrustBadges";
 import { useLanguage } from "@/i18n/LanguageContext";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
@@ -44,6 +44,22 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               
+              {/* Trust Bullets */}
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-5 mt-3 text-sm text-muted-foreground">
+                <span className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-success" />
+                  {t.hero.trustBullets.fixedPrice}
+                </span>
+                <span className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-success" />
+                  {t.hero.trustBullets.noSubscription}
+                </span>
+                <span className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-success" />
+                  {t.hero.trustBullets.provenResults}
+                </span>
+              </div>
+              
               {/* Trust text */}
               <p className="text-sm text-muted-foreground flex items-center gap-2 mt-2">
                 <span className="inline-block w-3 h-3 bg-success rounded-full"></span>
@@ -66,7 +82,7 @@ const HeroSection = () => {
           <div className="order-1 md:order-2 flex justify-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <img 
               src={heroPhoneMockup} 
-              alt="Google Maps Top 3 Ranking" 
+              alt="Google Maps Top 3 Ranking Vorher-Nachher Vergleich - Local SEO Optimierung für lokale Unternehmen" 
               className="w-64 md:w-80 lg:w-96 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </div>
