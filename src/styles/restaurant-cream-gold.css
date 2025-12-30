@@ -3,14 +3,15 @@
    Kontrast-optimiert für WCAG AA Compliance
    ========================================= */
 
-.theme-cream-gold {
+.theme-cream-gold,
+.theme-cream-gold body {
   /* Color Palette - HIGH CONTRAST */
   --rest-bg: 40 30% 96%;              /* #F5F0E8 - Warm cream */
   --rest-bg-accent: 40 25% 92%;       /* #EDE8DF - Slightly darker cream */
   --rest-bg-card: 40 35% 97%;         /* #F8F4ED - Card background */
-  --rest-text: 30 30% 18%;            /* #3A3125 - Deep warm brown */
-  --rest-text-muted: 30 22% 38%;      /* #5E5245 - Muted but readable */
-  --rest-text-light: 30 18% 48%;      /* #7A6E5E - Lighter but still readable */
+  --rest-text: 30 35% 12%;            /* Darker headline/body text for readability */
+  --rest-text-muted: 30 18% 28%;      /* Muted but still readable */
+  --rest-text-light: 30 14% 38%;      /* Light-muted but readable */
   --rest-gold: 42 75% 34%;            /* Darker gold for strong contrast */
   --rest-gold-bright: 42 80% 40%;     /* Brighter (still readable) gold */
   --rest-gold-muted: 42 35% 48%;      /* Muted gold */
@@ -18,13 +19,14 @@
   --rest-border: 42 35% 78%;          /* Soft gold border */
 
   /* Map Restaurant "Menu" tokens to this light theme.
-     (RestaurantMarketing.tsx uses text-menu-* extensively.) */
-  --menu-dark: var(--rest-bg);         /* used as backgrounds */
-  --menu-cream: var(--rest-text);      /* used as main text color */
-  --menu-gold: var(--rest-gold);
-  --menu-gold-muted: var(--rest-text-muted);
-  --menu-burgundy: var(--rest-accent);
-  --menu-line: var(--rest-border);
+     (RestaurantMarketing.tsx uses text-menu-* extensively.)
+     Use direct HSL values to avoid var() forwarding quirks. */
+  --menu-dark: 40 30% 96%;        /* background */
+  --menu-cream: 30 35% 12%;       /* primary text */
+  --menu-gold: 42 75% 34%;        /* accent text */
+  --menu-gold-muted: 30 18% 28%;  /* secondary text */
+  --menu-burgundy: 0 50% 40%;
+  --menu-line: 42 35% 78%;
 
   /* Shadows */
   --rest-shadow-soft: 0 4px 20px hsl(30 20% 30% / 0.1);
