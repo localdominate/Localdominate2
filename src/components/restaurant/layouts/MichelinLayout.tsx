@@ -59,23 +59,28 @@ const MichelinLayout = () => {
   return (
     <div className="rest-page min-h-screen">
       {/* Header */}
-      <header className="py-12 text-center border-b border-[hsl(var(--rest-border))]">
-        <p className="rest-title mb-4">Dégustation</p>
-        <div className="rest-line" />
+      <header className="py-16 text-center">
+        <p className="rest-title mb-6">Dégustation</p>
+        <div className="rest-hairline" />
       </header>
 
+      {/* Section Divider */}
+      <div className="rest-section-divider" />
+
       {/* Menu Introduction */}
-      <section className="py-16 text-center px-4">
+      <section className="py-12 text-center px-4">
         <div className="max-w-2xl mx-auto">
-          <span className="rest-ornament">✦</span>
-          <h1 className="rest-headline text-4xl md:text-5xl mt-8 mb-6">
+          <div className="rest-diamond mb-10">
+            <span>◇</span>
+          </div>
+          <h1 className="rest-headline text-3xl md:text-4xl mb-8">
             Local Dominator
           </h1>
-          <p className="rest-subtitle text-lg leading-relaxed">
+          <p className="rest-subtitle text-base leading-relaxed max-w-md mx-auto">
             Ein kuratiertes Erlebnis für Restaurants, 
             die online gefunden werden möchten.
           </p>
-          <div className="rest-line mt-8" />
+          <div className="rest-hairline mt-12" />
         </div>
       </section>
 
@@ -91,15 +96,20 @@ const MichelinLayout = () => {
           isOffered
           price="Offert"
         >
-          <div className="flex items-center justify-center gap-6 mt-6 text-sm">
+          <div className="flex items-center justify-center gap-8 mt-8 text-sm">
             <span className="rest-subtitle flex items-center gap-2">
-              <Clock className="w-4 h-4" /> 15 Minuten
+              <Clock className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.7)]" /> 15 Minuten
             </span>
             <span className="rest-subtitle flex items-center gap-2">
-              <Check className="w-4 h-4" /> Unverbindlich
+              <Check className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.7)]" /> Unverbindlich
             </span>
           </div>
         </MenuCourse>
+      </div>
+
+      {/* Elegant Divider */}
+      <div className="rest-text-divider">
+        <span>le parcours</span>
       </div>
 
       {/* Course 2: Entrée */}
@@ -115,17 +125,21 @@ const MichelinLayout = () => {
         />
       </div>
 
+      {/* Dots Divider */}
+      <div className="rest-dots-minimal">
+        <span>·</span>
+      </div>
+
       {/* Course 3: Plat Principal - THE MAIN OFFER */}
       <div 
         data-course="3"
         className={`transition-all duration-1000 delay-200 ${visibleCourses.has(3) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
-        <section className="rest-course rest-course-main py-20 relative">
-          {/* Star indicator */}
-          <span className="absolute top-8 left-1/2 -translate-x-1/2 rest-ornament">★</span>
+        <section className="rest-course rest-course-main py-24 relative">
+          {/* Subtle star indicator handled by CSS */}
           
-          <p className="rest-course-title mt-8">Plat Principal</p>
-          <h2 className="rest-course-name text-3xl md:text-4xl">
+          <p className="rest-course-title mt-4">Plat Principal</p>
+          <h2 className="rest-course-name text-2xl md:text-3xl">
             Rundum-Sorglos-Paket
           </h2>
           <p className="rest-course-description">
@@ -134,8 +148,8 @@ const MichelinLayout = () => {
           </p>
 
           {/* Timer */}
-          <div className="mt-8 mb-4">
-            <p className="rest-scarcity-text mb-4">Angebot endet in</p>
+          <div className="mt-10 mb-6">
+            <p className="rest-scarcity-text mb-5">Angebot endet in</p>
             <MichelinTimer 
               hours={timeLeft.hours} 
               minutes={timeLeft.minutes} 
@@ -147,17 +161,17 @@ const MichelinLayout = () => {
           <MichelinPriceBadge price={49} anchor={99} />
 
           {/* Features */}
-          <div className="max-w-md mx-auto px-4">
+          <div className="max-w-sm mx-auto px-4 mt-8">
             <MichelinFeatureList features={features} />
           </div>
 
           {/* Chef's Recommendation */}
-          <div className="rest-chef-tag mt-8">
+          <div className="rest-chef-tag mt-10">
             Empfehlung des Küchenchefs
           </div>
 
           {/* CTA */}
-          <div className="mt-10">
+          <div className="mt-12">
             <button className="rest-cta-button group">
               <span className="flex items-center gap-3">
                 Jetzt reservieren
@@ -167,10 +181,15 @@ const MichelinLayout = () => {
           </div>
 
           {/* Scarcity - Subtle */}
-          <p className="rest-scarcity-text mt-6">
+          <p className="rest-scarcity-text mt-8">
             Nur noch 3 Plätze in diesem Monat verfügbar
           </p>
         </section>
+      </div>
+
+      {/* Text Divider */}
+      <div className="rest-text-divider">
+        <span>les extras</span>
       </div>
 
       {/* Course 4: Fromages - Bonuses */}
@@ -185,27 +204,32 @@ const MichelinLayout = () => {
           isOffered
           price="Offert"
         >
-          <div className="max-w-sm mx-auto mt-8 space-y-4">
+          <div className="max-w-xs mx-auto mt-10 space-y-4">
             {[
               { name: 'Google Ranking Guide', value: '49€' },
               { name: 'Social Media Vorlagen', value: '79€' },
               { name: 'SEO Checkliste', value: '29€' },
             ].map((bonus, idx) => (
-              <div key={idx} className="flex items-center justify-between py-2 border-b border-[hsl(var(--rest-border))]">
-                <span className="flex items-center gap-2 rest-subtitle">
-                  <Gift className="w-4 h-4 text-[hsl(var(--rest-gold))]" />
+              <div key={idx} className="flex items-center justify-between py-2.5 border-b border-[hsl(var(--rest-border))]">
+                <span className="flex items-center gap-2.5 rest-subtitle text-sm">
+                  <Gift className="w-3.5 h-3.5 text-[hsl(var(--rest-gold)_/_0.6)]" />
                   {bonus.name}
                 </span>
                 <span className="rest-bonus-tag">{bonus.value}</span>
               </div>
             ))}
-            <p className="text-center pt-4">
-              <span className="rest-subtitle">Gesamtwert: </span>
-              <span className="line-through rest-subtitle">157€</span>
+            <p className="text-center pt-5">
+              <span className="rest-subtitle text-sm">Gesamtwert: </span>
+              <span className="line-through rest-subtitle text-sm">157€</span>
               <span className="rest-bonus-tag ml-2">Gratis</span>
             </p>
           </div>
         </MenuCourse>
+      </div>
+
+      {/* Hairline Divider */}
+      <div className="py-8">
+        <div className="rest-hairline-wide max-w-md mx-auto" />
       </div>
 
       {/* Course 5: Dessert - Guarantee */}
@@ -218,47 +242,52 @@ const MichelinLayout = () => {
           name="Zufriedenheitsgarantie"
           description="30 Tage Geld-zurück ohne Wenn und Aber. Kein Risiko, nur Genuss."
         >
-          <div className="flex items-center justify-center gap-2 mt-6">
-            <Shield className="w-5 h-5 text-[hsl(var(--rest-gold))]" />
-            <span className="rest-subtitle">100% Risikofrei</span>
+          <div className="flex items-center justify-center gap-2.5 mt-8">
+            <Shield className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.6)]" />
+            <span className="rest-subtitle text-sm">100% Risikofrei</span>
           </div>
         </MenuCourse>
       </div>
 
       {/* Final CTA Section */}
-      <section className="py-20 text-center px-4 border-t border-[hsl(var(--rest-border))]">
-        <div className="max-w-lg mx-auto">
-          <span className="rest-ornament">◇</span>
-          <h2 className="rest-headline text-2xl md:text-3xl mt-8 mb-4">
+      <section className="py-24 text-center px-4">
+        <div className="rest-hairline-wide max-w-xs mx-auto mb-16" />
+        
+        <div className="max-w-md mx-auto">
+          <div className="rest-diamond mb-10">
+            <span>◇</span>
+          </div>
+          <h2 className="rest-headline text-xl md:text-2xl mb-6">
             Bereit für die Reservierung?
           </h2>
-          <p className="rest-subtitle mb-10">
+          <p className="rest-subtitle mb-12">
             Sichern Sie sich Ihren Platz in der digitalen Spitzenklasse.
           </p>
           
-          <button className="rest-cta-button group mb-8">
+          <button className="rest-cta-button group mb-10">
             <span className="flex items-center gap-3">
               Tisch reservieren
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </span>
           </button>
 
-          <div className="flex items-center justify-center gap-2 text-[hsl(var(--rest-text-muted))]">
-            <Phone className="w-4 h-4" />
-            <span className="rest-subtitle">Oder rufen Sie uns an</span>
+          <div className="flex items-center justify-center gap-2.5 text-[hsl(var(--rest-text-muted))]">
+            <Phone className="w-3.5 h-3.5" />
+            <span className="rest-subtitle text-sm">Oder rufen Sie uns an</span>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 text-center border-t border-[hsl(var(--rest-border))]">
+      <footer className="py-16 text-center">
+        <div className="rest-hairline mb-10" />
         <p className="rest-footer-note">
           Service et taxes inclus
         </p>
-        <div className="rest-line mt-6 mb-6" />
+        <div className="rest-hairline mt-10 mb-8" />
         <Link 
           to="/" 
-          className="rest-subtitle hover:text-[hsl(var(--rest-gold))] transition-colors"
+          className="rest-subtitle text-sm hover:text-[hsl(var(--rest-gold))] transition-colors duration-300"
         >
           ← Zurück zur Hauptseite
         </Link>

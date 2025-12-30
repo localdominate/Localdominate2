@@ -22,11 +22,11 @@ const ValueStack = () => {
     <div className="space-y-2">
       {/* Header */}
       <div className="text-center mb-5">
-        <h4 className="text-base font-['Cormorant_Garamond',serif] font-semibold text-[hsl(30_25%_18%)] uppercase tracking-[0.15em]">
+        <h4 className="text-base font-['Cormorant_Garamond',serif] font-semibold text-[hsl(30_30%_18%)] uppercase tracking-[0.15em]">
           Was Sie erhalten
         </h4>
         <div className="pricing-divider mt-2">
-          <span className="text-[hsl(42_50%_65%)]">◆</span>
+          <span className="text-[hsl(42_55%_55%)]">◆</span>
         </div>
       </div>
 
@@ -36,29 +36,29 @@ const ValueStack = () => {
           <div
             key={index}
             className={`pricing-feature-item ${
-              item.highlight ? "bg-[hsl(42_60%_55%_/_0.08)] -mx-2 px-2 rounded-lg" : ""
+              item.highlight ? "bg-[hsl(42_60%_55%_/_0.1)] -mx-2 px-2 rounded-lg" : ""
             }`}
           >
             <div className="flex items-center gap-3">
               <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
                 item.highlight 
-                  ? "bg-[hsl(42_70%_50%)] text-white" 
-                  : "bg-[hsl(42_45%_82%)] text-[hsl(42_60%_35%)]"
+                  ? "bg-[hsl(42_65%_48%)] text-white" 
+                  : "bg-[hsl(42_40%_80%)] text-[hsl(42_55%_35%)]"
               }`}>
                 <Check className="w-3 h-3" strokeWidth={3} />
               </div>
-              <span className={`text-sm ${
+              <span className={`pricing-feature-name text-sm ${
                 item.highlight 
-                  ? "font-semibold text-[hsl(30_25%_18%)]" 
-                  : "text-[hsl(30_18%_30%)]"
+                  ? "font-semibold text-[hsl(30_30%_18%)]" 
+                  : "text-[hsl(30_25%_25%)]"
               }`}>
                 {item.feature}
               </span>
             </div>
-            <span className={`text-sm italic ${
+            <span className={`text-sm ${
               item.highlight 
-                ? "text-[hsl(42_70%_40%)] font-medium not-italic" 
-                : "text-[hsl(30_10%_55%)]"
+                ? "pricing-feature-value-highlight text-[hsl(42_65%_38%)] font-medium" 
+                : "pricing-feature-value text-[hsl(30_18%_45%)] italic"
             }`}>
               {item.value}/Monat
             </span>
@@ -67,12 +67,12 @@ const ValueStack = () => {
       </div>
 
       {/* Total Value */}
-      <div className="pt-4 mt-3 border-t-2 border-[hsl(42_45%_78%)]">
+      <div className="pt-4 mt-3 border-t-2 border-[hsl(42_45%_75%)]">
         <div className="flex items-center justify-between">
-          <span className="text-sm font-['Cormorant_Garamond',serif] font-semibold text-[hsl(30_25%_18%)] uppercase tracking-wide">
+          <span className="text-sm font-['Cormorant_Garamond',serif] font-semibold text-[hsl(30_28%_20%)] uppercase tracking-wide">
             Gesamtwert
           </span>
-          <span className="text-2xl font-['Cormorant_Garamond',serif] font-bold text-[hsl(42_70%_42%)]">
+          <span className="text-2xl font-['Cormorant_Garamond',serif] font-bold text-[hsl(42_65%_40%)]">
             {totalValue}/Monat
           </span>
         </div>
