@@ -682,6 +682,58 @@ const RestaurantMarketing = () => {
               </div>
             </div>
           </div>
+
+          {/* Strategic Marketing Consultation */}
+          <div className="mt-12">
+            <div className="menu-divider mb-6">
+              <span className="menu-divider-ornament">◆</span>
+            </div>
+            <p className="menu-section-title text-xs tracking-[0.3em] text-center mb-6">
+              PERSÖNLICHE BERATUNG
+            </p>
+            <div 
+              className={`menu-card p-6 md:p-8 rounded-xl transition-all duration-700 ${
+                visibleSections.has('pricing') ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{ transitionDelay: '0.5s' }}
+            >
+              <div className="text-center mb-6">
+                <div className="text-3xl mb-3">💬</div>
+                <h4 className="font-menu-serif text-xl md:text-2xl text-menu-cream mb-2">
+                  Strategische Marketingberatung
+                </h4>
+                <p className="menu-subtitle text-base">
+                  Persönliche 1:1 Beratung mit Ihrem Marketing-Experten
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <span className="line-through text-menu-cream/40 text-lg">120€/h</span>
+                <span className="text-3xl font-menu-serif text-menu-gold font-medium">59€/h</span>
+              </div>
+              
+              <div className="space-y-3 max-w-xs mx-auto mb-6">
+                <div className="flex items-center gap-3 text-sm">
+                  <Check className="w-4 h-4 text-menu-gold flex-shrink-0" />
+                  <span className="text-menu-cream/80">Pre-Analyse inklusive</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <Check className="w-4 h-4 text-menu-gold flex-shrink-0" />
+                  <span className="text-menu-cream/80">Individuelle 1:1 Experten-Session</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <Check className="w-4 h-4 text-menu-gold flex-shrink-0" />
+                  <span className="text-menu-cream/80">Detaillierter Post-Bericht mit Handlungsempfehlungen</span>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <button className="menu-button text-sm">
+                  Beratung anfragen
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
