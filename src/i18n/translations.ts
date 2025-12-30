@@ -72,15 +72,30 @@ export const translations = {
       points: [
         {
           title: "Platz 4 ist der Friedhof",
-          description: "Wer nicht in den Top 3 (Map-Pack) ist, existiert für Kunden schlicht nicht. 92% aller Klicks gehen an die ersten drei Ergebnisse.",
+          stat: "92%",
+          statLabel: "aller Klicks gehen an die Top 3",
+          bullets: [
+            "Wer nicht oben ist, existiert für Kunden nicht",
+            "Deine Konkurrenz kassiert deine Anrufe"
+          ],
         },
         {
           title: "Bewertungen sind Währung",
-          description: "Dein Angebot ist völlig egal, wenn dein Nachbar 50 Sterne mehr hat. Menschen kaufen Vertrauen – nicht Produkte.",
+          stat: "4.7★",
+          statLabel: "Minimum für Vertrauen",
+          bullets: [
+            "Dein Angebot ist egal ohne Social Proof",
+            "Menschen kaufen Vertrauen – nicht Produkte"
+          ],
         },
         {
           title: "Geldverbrennung",
-          description: "Warum teure Google Ads schalten, wenn du den kostenlosen organischen Traffic komplett liegen lässt? Jeden Tag.",
+          stat: "86%",
+          statLabel: "der lokalen Suchen enden auf Maps",
+          bullets: [
+            "Kostenloser Traffic bleibt komplett ungenutzt",
+            "Jeden Tag verschenkst du Neukunden"
+          ],
         },
       ],
     },
@@ -112,19 +127,37 @@ export const translations = {
           number: "01",
           title: "Die Keyword-Injektion",
           subtitle: "(Statt SEO)",
-          description: "Wir erraten nicht, was deine Kunden suchen. Wir injizieren exakt die umsatzstärksten Suchbegriffe (Zahnarzt Notdienst statt nur Zahnarzt) tief in die Metadaten deines Profils, sodass Google dich als DIE Autorität erkennt.",
+          hook: "Wir erraten nicht. Wir wissen.",
+          bullets: [
+            "Analyse der umsatzstärksten Suchbegriffe deiner Branche",
+            "Injektion in Titel, Beschreibung & Metadaten",
+            "Google erkennt dich als DIE Autorität"
+          ],
+          result: "Beispiel: \"Zahnarzt Notdienst\" statt nur \"Zahnarzt\"",
         },
         {
           number: "02",
           title: "Der Psycho-Visuelle Anker",
           subtitle: "(Statt Bilder hochladen)",
-          description: "Menschen kaufen mit den Augen. Wir strukturieren deine Galerie nach verkaufspsychologischen Mustern, die Vertrauen erzwingen, noch bevor der Kunde den ersten Satz gelesen hat. Dein Profil wird zum digitalen Schaufenster, an dem niemand vorbeigeht.",
+          hook: "Menschen kaufen mit den Augen.",
+          bullets: [
+            "Galerie nach verkaufspsychologischen Mustern strukturiert",
+            "Vertrauensaufbau in Millisekunden",
+            "Dein Profil wird zum digitalen Schaufenster"
+          ],
+          result: "Ergebnis: Höhere Klickrate, mehr Anfragen",
         },
         {
           number: "03",
           title: "Der 5-Sterne-Automatismus",
           subtitle: "(Statt Bewertungen sammeln)",
-          description: "Betteln funktioniert nicht. Wir installieren einen simplen Prozess (QR und Link-Strategie), der zufriedene Kunden psychologisch nudged, dir sofort 5 Sterne zu geben. So baust du eine Festung aus Social Proof, die von der Konkurrenz nicht mehr einzuholen ist.",
+          hook: "Betteln funktioniert nicht. Systeme schon.",
+          bullets: [
+            "QR-Code und Smart-Link Strategie",
+            "Psychologisches Nudging für zufriedene Kunden",
+            "Festung aus Social Proof aufbauen"
+          ],
+          result: "Ergebnis: 5-Sterne Bewertungen auf Autopilot",
         },
       ],
     },
@@ -159,31 +192,37 @@ export const translations = {
     valueStack: {
       eyebrow: "Dein Lieferumfang",
       headline: "Nicht nur eine Dienstleistung. Ein komplettes Waffen-Arsenal.",
+      includedBadge: "INKL.",
       items: [
         {
           title: "Die Core-Optimierung",
           text: "Komplettes Setup deines Google Profils mit Keyword-Injektion und Premium-Foto-Uploads.",
-          value: "Wert: 299€",
+          value: "299€",
+          included: true,
         },
         {
           title: "Der Bewertungs-Magnet",
           text: "Druckfertiges Design für deinen Tresen-Aufsteller mit Smart-Link Technologie für sofortige 5-Sterne.",
-          value: "Wert: 149€",
+          value: "149€",
+          included: true,
         },
         {
           title: "Das Mitarbeiter-Skript",
           text: "Psychologischer Gesprächsleitfaden: So fragen deine Mitarbeiter nach Bewertungen, ohne zu nerven.",
-          value: "Wert: 99€",
+          value: "99€",
+          included: true,
         },
         {
           title: "Die Ranking-Versicherung",
           text: "Anti-Sperr-Checkliste & Guide, damit dein Profil sicher oben bleibt.",
-          value: "Wert: 79€",
+          value: "79€",
+          included: true,
         },
       ],
       totalLabel: "Gesamtwert des Pakets:",
       totalValue: "626€",
       todayPrice: "Heute nur: 299€",
+      freeLabel: "GRATIS",
     },
     // OfferSection
     offer: {
@@ -208,11 +247,21 @@ export const translations = {
     // GuaranteeSection
     guarantee: {
       headline: "Eisenharte 30-Tage Geld-zurück-Garantie",
-      text: "Solltest du innerhalb von",
-      textBold1: "30 Tagen nach Umsetzung keine messbare Steigerung deiner Anfragen",
-      textMid: "verzeichnen, erstatten wir dir auf Anfrage",
-      textBold2: "den vollen Kaufpreis",
-      textEnd: ". Voraussetzung: Du hast alle Optimierungen gemäß unserer Anleitung umgesetzt und uns die Möglichkeit zur Nachbesserung gegeben.",
+      subheadline: "Kein Risiko. Nur Ergebnisse.",
+      points: [
+        {
+          title: "30 Tage Geld-zurück",
+          description: "Keine messbaren Ergebnisse? Volle Erstattung.",
+        },
+        {
+          title: "Keine Fragen gestellt",
+          description: "Eine E-Mail genügt. Kein Kleingedrucktes.",
+        },
+        {
+          title: "100% Risikofrei",
+          description: "Du gewinnst oder bekommst dein Geld zurück.",
+        },
+      ],
       onlyRisk: "Dein einziges Risiko: Nicht zu handeln.",
     },
     // FAQSection
@@ -457,15 +506,30 @@ export const translations = {
       points: [
         {
           title: "Position 4 is the Graveyard",
-          description: "If you're not in the Top 3 (Map Pack), you simply don't exist for customers. 92% of all clicks go to the first three results.",
+          stat: "92%",
+          statLabel: "of clicks go to the Top 3",
+          bullets: [
+            "If you're not on top, you don't exist for customers",
+            "Your competition is stealing your calls"
+          ],
         },
         {
           title: "Reviews are Currency",
-          description: "Your offer doesn't matter if your neighbor has 50 more stars. People buy trust – not products.",
+          stat: "4.7★",
+          statLabel: "minimum for trust",
+          bullets: [
+            "Your offer doesn't matter without social proof",
+            "People buy trust – not products"
+          ],
         },
         {
           title: "Burning Money",
-          description: "Why run expensive Google Ads when you're completely ignoring the free organic traffic? Every single day.",
+          stat: "86%",
+          statLabel: "of local searches end on Maps",
+          bullets: [
+            "Free organic traffic is completely ignored",
+            "You're losing new customers every day"
+          ],
         },
       ],
     },
@@ -497,19 +561,37 @@ export const translations = {
           number: "01",
           title: "The Keyword Injection",
           subtitle: "(Instead of SEO)",
-          description: "We don't guess what your customers search for. We inject exactly the highest-revenue search terms (Emergency Dentist instead of just Dentist) deep into your profile's metadata, so Google recognizes you as THE authority.",
+          hook: "We don't guess. We know.",
+          bullets: [
+            "Analysis of highest-revenue search terms in your industry",
+            "Injection into title, description & metadata",
+            "Google recognizes you as THE authority"
+          ],
+          result: "Example: \"Emergency Dentist\" instead of just \"Dentist\"",
         },
         {
           number: "02",
           title: "The Psycho-Visual Anchor",
           subtitle: "(Instead of uploading images)",
-          description: "People buy with their eyes. We structure your gallery according to sales psychology patterns that force trust before the customer reads a single word. Your profile becomes a digital storefront no one walks past.",
+          hook: "People buy with their eyes.",
+          bullets: [
+            "Gallery structured by sales psychology patterns",
+            "Trust built in milliseconds",
+            "Your profile becomes a digital storefront"
+          ],
+          result: "Result: Higher click rate, more inquiries",
         },
         {
           number: "03",
           title: "The 5-Star Automatism",
           subtitle: "(Instead of collecting reviews)",
-          description: "Begging doesn't work. We install a simple process (QR and link strategy) that psychologically nudges satisfied customers to give you 5 stars immediately. This builds a fortress of social proof your competition can never catch up to.",
+          hook: "Begging doesn't work. Systems do.",
+          bullets: [
+            "QR code and smart-link strategy",
+            "Psychological nudging for satisfied customers",
+            "Build a fortress of social proof"
+          ],
+          result: "Result: 5-star reviews on autopilot",
         },
       ],
     },
@@ -544,31 +626,37 @@ export const translations = {
     valueStack: {
       eyebrow: "Your Deliverables",
       headline: "Not Just a Service. A Complete Weapons Arsenal.",
+      includedBadge: "INCL.",
       items: [
         {
           title: "The Core Optimization",
           text: "Complete setup of your Google profile with keyword injection and premium photo uploads.",
-          value: "Value: $299",
+          value: "$299",
+          included: true,
         },
         {
           title: "The Review Magnet",
           text: "Print-ready design for your counter display with smart-link technology for instant 5-stars.",
-          value: "Value: $149",
+          value: "$149",
+          included: true,
         },
         {
           title: "The Employee Script",
           text: "Psychological conversation guide: How your employees ask for reviews without being annoying.",
-          value: "Value: $99",
+          value: "$99",
+          included: true,
         },
         {
           title: "The Ranking Insurance",
           text: "Anti-suspension checklist & guide to keep your profile safely at the top.",
-          value: "Value: $79",
+          value: "$79",
+          included: true,
         },
       ],
       totalLabel: "Total package value:",
       totalValue: "$626",
       todayPrice: "Today only: $299",
+      freeLabel: "FREE",
     },
     // OfferSection
     offer: {
@@ -593,11 +681,21 @@ export const translations = {
     // GuaranteeSection
     guarantee: {
       headline: "Ironclad 30-Day Money-Back Guarantee",
-      text: "If you don't see a",
-      textBold1: "measurable increase in inquiries within 30 days of implementation",
-      textMid: ", we will refund",
-      textBold2: "the full purchase price",
-      textEnd: " upon request. Condition: You have implemented all optimizations according to our instructions and given us the opportunity to make improvements.",
+      subheadline: "No risk. Only results.",
+      points: [
+        {
+          title: "30-Day Money-Back",
+          description: "No measurable results? Full refund.",
+        },
+        {
+          title: "No Questions Asked",
+          description: "One email is enough. No fine print.",
+        },
+        {
+          title: "100% Risk-Free",
+          description: "You win or you get your money back.",
+        },
+      ],
       onlyRisk: "Your only risk: Not taking action.",
     },
     // FAQSection

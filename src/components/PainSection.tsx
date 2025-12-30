@@ -1,4 +1,4 @@
-import { Skull, Star, Flame } from "lucide-react";
+import { Skull, Star, Flame, AlertTriangle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 
@@ -31,12 +31,35 @@ const PainSection = () => {
                 className={`bg-pain-foreground/5 border border-pain-foreground/10 rounded-2xl p-8 hover:border-primary/50 hover:-translate-y-1 transition-all duration-300 reveal reveal-delay-${index + 1} ${isVisible ? 'visible' : ''}`}
               >
                 <Icon className="w-10 h-10 text-primary mb-6" strokeWidth={1.5} />
+                
                 <h3 className="text-xl md:text-2xl font-bold text-pain-foreground mb-4">
                   {point.title}
                 </h3>
-                <p className="text-pain-foreground/80 leading-relaxed">
-                  {point.description}
-                </p>
+                
+                {/* Statistic Badge */}
+                <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/30 rounded-lg px-4 py-2 mb-5">
+                  <span className="text-2xl md:text-3xl font-bold text-destructive">
+                    {point.stat}
+                  </span>
+                  <span className="text-sm text-pain-foreground/70">
+                    {point.statLabel}
+                  </span>
+                </div>
+                
+                {/* Bullet Points */}
+                <ul className="space-y-3">
+                  {point.bullets.map((bullet, bulletIndex) => (
+                    <li 
+                      key={bulletIndex}
+                      className="flex items-start gap-3"
+                    >
+                      <AlertTriangle className="w-4 h-4 text-destructive flex-shrink-0 mt-1" />
+                      <span className="text-pain-foreground/80 text-sm leading-relaxed">
+                        {bullet}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             );
           })}

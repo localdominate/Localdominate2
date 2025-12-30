@@ -1,4 +1,4 @@
-import { Rocket, QrCode, FileText, Shield } from "lucide-react";
+import { Rocket, QrCode, FileText, Shield, Check } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import ValueComparisonBar from "@/components/ValueComparisonBar";
@@ -7,36 +7,7 @@ const ValueStackSection = () => {
   const { t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
 
-  const items = [
-    {
-      icon: Rocket,
-      title: t.valueStack.items[0].title,
-      text: t.valueStack.items[0].text,
-      value: t.valueStack.items[0].value,
-      featured: true,
-    },
-    {
-      icon: QrCode,
-      title: t.valueStack.items[1].title,
-      text: t.valueStack.items[1].text,
-      value: t.valueStack.items[1].value,
-      featured: false,
-    },
-    {
-      icon: FileText,
-      title: t.valueStack.items[2].title,
-      text: t.valueStack.items[2].text,
-      value: t.valueStack.items[2].value,
-      featured: false,
-    },
-    {
-      icon: Shield,
-      title: t.valueStack.items[3].title,
-      text: t.valueStack.items[3].text,
-      value: t.valueStack.items[3].value,
-      featured: false,
-    },
-  ];
+  const icons = [Rocket, QrCode, FileText, Shield];
 
   return (
     <section className="bg-background section-padding px-4">
@@ -55,46 +26,75 @@ const ValueStackSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
           {/* Featured item - spans 2 columns on large screens */}
           <div 
-            className={`bento-item lg:col-span-2 lg:row-span-1 flex flex-col justify-between reveal reveal-delay-1 ${isVisible ? 'visible' : ''}`}
+            className={`relative bento-item lg:col-span-2 lg:row-span-1 flex flex-col justify-between reveal reveal-delay-1 ${isVisible ? 'visible' : ''}`}
           >
+            {/* Included Badge */}
+            <div className="absolute -top-3 right-6 bg-success text-success-foreground px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+              <Check className="w-3 h-3" />
+              {t.valueStack.includedBadge}
+            </div>
+            
             <div>
               <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
                 <Rocket className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                {items[0].title}
+                {t.valueStack.items[0].title}
               </h3>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-                {items[0].text}
+                {t.valueStack.items[0].text}
               </p>
             </div>
-            <p className="text-sm text-muted-foreground/70 font-medium">
-              {items[0].value}
-            </p>
+            
+            {/* Value Display */}
+            <div className="flex items-center gap-3">
+              <span className="text-lg text-muted-foreground line-through">
+                {t.valueStack.items[0].value}
+              </span>
+              <span className="bg-success/20 text-success font-bold px-3 py-1 rounded-lg text-sm">
+                {t.valueStack.freeLabel}
+              </span>
+            </div>
           </div>
 
           {/* Other items */}
-          {items.slice(1).map((item, index) => (
-            <div
-              key={index}
-              className={`bento-item flex flex-col justify-between reveal reveal-delay-${index + 2} ${isVisible ? 'visible' : ''}`}
-            >
-              <div>
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
-                  <item.icon className="w-6 h-6 text-primary" />
+          {t.valueStack.items.slice(1).map((item, index) => {
+            const Icon = icons[index + 1];
+            return (
+              <div
+                key={index}
+                className={`relative bento-item flex flex-col justify-between reveal reveal-delay-${index + 2} ${isVisible ? 'visible' : ''}`}
+              >
+                {/* Included Badge */}
+                <div className="absolute -top-3 right-6 bg-success text-success-foreground px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                  <Check className="w-3 h-3" />
+                  {t.valueStack.includedBadge}
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {item.text}
-                </p>
+                
+                <div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    {item.text}
+                  </p>
+                </div>
+                
+                {/* Value Display */}
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-muted-foreground line-through">
+                    {item.value}
+                  </span>
+                  <span className="bg-success/20 text-success font-bold px-2 py-0.5 rounded text-xs">
+                    {t.valueStack.freeLabel}
+                  </span>
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground/60 font-medium">
-                {item.value}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Value Comparison Bar */}
