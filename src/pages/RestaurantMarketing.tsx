@@ -21,6 +21,7 @@ import PricingToggle from "@/components/restaurant/PricingToggle";
 import TrustBadgesRestaurant from "@/components/restaurant/TrustBadgesRestaurant";
 import BonusStack from "@/components/restaurant/BonusStack";
 import { useRestaurantABTest, RestaurantABTestProvider } from "@/hooks/useRestaurantABTest";
+import MichelinLayout from "@/components/restaurant/layouts/MichelinLayout";
 
 // Import theme styles
 import "@/styles/restaurant-dark-gold.css";
@@ -146,8 +147,38 @@ const RestaurantMarketing = () => {
   // Calculate CTA glow intensity based on scroll
   const ctaGlowIntensity = Math.min(1, scrollProgress * 1.5);
 
+  // Render Michelin layout for variant C
+  if (variant === 'michelin') {
+    return (
+      <>
+        {/* A/B Test Variant Selector (Dev Mode) */}
+        <div className="fixed top-4 right-4 z-[100] bg-black/80 backdrop-blur-sm rounded-lg p-3 text-xs text-white">
+          <p className="mb-2 opacity-70">A/B Test Variante:</p>
+          <div className="flex flex-col gap-1">
+            {(['dark-gold', 'cream-gold', 'michelin'] as const).map((v) => (
+              <button
+                key={v}
+                onClick={() => setVariantOverride(v)}
+                className={`px-3 py-1 rounded text-left transition-all ${
+                  variant === v 
+                    ? 'bg-menu-gold text-black font-medium' 
+                    : 'bg-white/10 hover:bg-white/20'
+                }`}
+              >
+                {v === 'dark-gold' && 'A: Schwarz/Gold'}
+                {v === 'cream-gold' && 'B: Creme/Gold'}
+                {v === 'michelin' && 'C: Michelin'}
+              </button>
+            ))}
+          </div>
+        </div>
+        <MichelinLayout />
+      </>
+    );
+  }
+
   return (
-    <div className={`min-h-screen rest-page text-menu-cream overflow-hidden font-menu-sans ${variant === 'michelin' ? 'text-[hsl(var(--rest-text))]' : ''}`}>
+    <div className={`min-h-screen rest-page text-menu-cream overflow-hidden font-menu-sans`}>
       
       {/* A/B Test Variant Selector (Dev Mode) */}
       <div className="fixed top-4 right-4 z-[100] bg-black/80 backdrop-blur-sm rounded-lg p-3 text-xs text-white">

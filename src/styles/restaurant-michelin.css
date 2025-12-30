@@ -2,8 +2,9 @@
    VARIANTE C: MICHELIN 3-STERNE (ULTRA PREMIUM)
    ========================================= */
 
-.theme-michelin {
-  /* Color Palette - Ultra Minimal */
+/* Apply to html when theme is active */
+.theme-michelin,
+.theme-michelin body {
   --rest-bg: 0 0% 98%;              /* #FAFAFA - Purest white */
   --rest-bg-accent: 0 0% 96%;       /* #F5F5F5 - Subtle gray */
   --rest-bg-card: 0 0% 100%;        /* Pure white */
