@@ -1,27 +1,26 @@
 /* =========================================
    VARIANTE B: CREME/GOLD (WARM CLASSIC)
+   Kontrast-optimiert für WCAG AA Compliance
    ========================================= */
 
 .theme-cream-gold {
-  /* Color Palette */
-  --rest-bg: 40 30% 96%;            /* #F5F0E8 - Warm cream */
-  --rest-bg-accent: 40 25% 92%;     /* #EDE8DF - Slightly darker cream */
-  --rest-bg-card: 40 35% 97%;       /* #F8F4ED - Card background */
-  --rest-text: 30 25% 20%;          /* #3D3528 - Warm dark brown */
-  --rest-text-muted: 30 15% 45%;    /* #7A7060 - Muted brown */
-  --rest-gold: 42 65% 45%;          /* #B8860B - Dark gold */
-  --rest-gold-bright: 42 70% 50%;   /* #C9940C - Brighter gold */
-  --rest-gold-muted: 42 35% 60%;    /* #B5A07A - Muted gold */
-  --rest-accent: 0 50% 40%;         /* Burgundy accent */
-  --rest-border: 42 35% 80%;        /* Soft gold border */
-  
-  /* Menu-specific colors for contrast */
-  --rest-dark-text: 30 30% 15%;     /* Very dark brown for contrast */
+  /* Color Palette - HIGH CONTRAST */
+  --rest-bg: 40 30% 96%;              /* #F5F0E8 - Warm cream */
+  --rest-bg-accent: 40 25% 92%;       /* #EDE8DF - Slightly darker cream */
+  --rest-bg-card: 40 35% 97%;         /* #F8F4ED - Card background */
+  --rest-text: 30 30% 18%;            /* #3A3125 - Deep warm brown */
+  --rest-text-muted: 30 22% 38%;      /* #5E5245 - Muted but readable */
+  --rest-text-light: 30 18% 48%;      /* #7A6E5E - Lighter but still readable */
+  --rest-gold: 42 65% 42%;            /* #A67C10 - Rich dark gold */
+  --rest-gold-bright: 42 70% 48%;     /* #C9940C - Brighter gold */
+  --rest-gold-muted: 42 40% 55%;      /* #A89460 - Muted gold */
+  --rest-accent: 0 50% 40%;           /* Burgundy accent */
+  --rest-border: 42 35% 78%;          /* Soft gold border */
   
   /* Shadows */
-  --rest-shadow-soft: 0 4px 20px hsl(30 20% 30% / 0.08);
+  --rest-shadow-soft: 0 4px 20px hsl(30 20% 30% / 0.1);
   --rest-shadow-card: 
-    0 2px 10px hsl(30 20% 30% / 0.05),
+    0 2px 10px hsl(30 20% 30% / 0.06),
     inset 0 2px 4px hsl(40 40% 100% / 0.5);
 }
 
@@ -43,7 +42,7 @@
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23paper)'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  opacity: 0.035;
   pointer-events: none;
   z-index: 0;
 }
@@ -68,7 +67,7 @@
     0 0 30px hsl(var(--rest-gold) / 0.08);
 }
 
-/* Typography */
+/* Typography - HIGH CONTRAST */
 .theme-cream-gold .rest-title {
   font-family: 'Cormorant Garamond', serif;
   color: hsl(var(--rest-gold));
@@ -108,7 +107,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    hsl(var(--rest-gold) / 0.4),
+    hsl(var(--rest-gold) / 0.5),
     transparent
   );
 }
@@ -162,19 +161,19 @@
   }
 }
 
-/* Pricing Card */
+/* Pricing Card - Enhanced */
 .theme-cream-gold .rest-pricing-card {
   background: linear-gradient(
     165deg,
     hsl(40 45% 98%) 0%,
     hsl(40 30% 95%) 100%
   );
-  border: 2px solid hsl(var(--rest-gold) / 0.25);
+  border: 2px solid hsl(var(--rest-gold) / 0.3);
   border-radius: 8px;
   position: relative;
   box-shadow: 
-    0 8px 30px hsl(30 20% 30% / 0.08),
-    inset 0 1px 0 hsl(0 0% 100% / 0.5);
+    0 8px 30px hsl(30 20% 30% / 0.1),
+    inset 0 1px 0 hsl(0 0% 100% / 0.6);
 }
 
 /* Decorative double border */
@@ -182,7 +181,7 @@
   content: '';
   position: absolute;
   inset: 6px;
-  border: 1px solid hsl(var(--rest-gold) / 0.15);
+  border: 1px solid hsl(var(--rest-gold) / 0.2);
   border-radius: 4px;
   pointer-events: none;
 }
@@ -190,7 +189,7 @@
 /* Timer Box */
 .theme-cream-gold .rest-timer-box {
   background: hsl(var(--rest-bg-accent));
-  border: 1px solid hsl(var(--rest-gold) / 0.25);
+  border: 1px solid hsl(var(--rest-gold) / 0.3);
   color: hsl(var(--rest-text));
   padding: 0.5rem 0.75rem;
   min-width: 3rem;
@@ -205,7 +204,7 @@
   letter-spacing: 0.08em;
 }
 
-/* Price Display */
+/* Price Display - HIGH CONTRAST */
 .theme-cream-gold .rest-price {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5rem;
@@ -221,7 +220,7 @@
 
 .theme-cream-gold .rest-price-anchor {
   text-decoration: line-through;
-  color: hsl(var(--rest-text-muted));
+  color: hsl(var(--rest-text-light));
   font-size: 1.125rem;
 }
 
@@ -236,7 +235,7 @@
 .theme-cream-gold .rest-feature-item::after {
   content: '';
   flex: 1;
-  border-bottom: 1px dotted hsl(var(--rest-gold) / 0.3);
+  border-bottom: 1px dotted hsl(var(--rest-gold) / 0.4);
   margin: 0 0.75rem;
   margin-bottom: 4px;
 }
@@ -261,8 +260,8 @@
 
 /* Bonus Tag */
 .theme-cream-gold .rest-bonus-tag {
-  background: hsl(var(--rest-gold) / 0.08);
-  border: 1px solid hsl(var(--rest-gold) / 0.25);
+  background: hsl(var(--rest-gold) / 0.1);
+  border: 1px solid hsl(var(--rest-gold) / 0.3);
   color: hsl(var(--rest-gold));
   font-size: 0.75rem;
   padding: 0.25rem 0.625rem;
@@ -290,7 +289,7 @@
 /* Trust Badge */
 .theme-cream-gold .rest-trust-badge {
   background: hsl(var(--rest-bg-accent));
-  border: 1px solid hsl(var(--rest-gold) / 0.2);
+  border: 1px solid hsl(var(--rest-gold) / 0.25);
   padding: 1rem;
   text-align: center;
   border-radius: 6px;
@@ -298,7 +297,7 @@
 
 /* Guarantee Stamp Effect */
 .theme-cream-gold .rest-guarantee-stamp {
-  border: 2px dashed hsl(var(--rest-gold) / 0.4);
+  border: 2px dashed hsl(var(--rest-gold) / 0.5);
   border-radius: 50%;
   padding: 1.5rem;
   position: relative;
@@ -308,14 +307,14 @@
   content: '';
   position: absolute;
   inset: 4px;
-  border: 1px solid hsl(var(--rest-gold) / 0.2);
+  border: 1px solid hsl(var(--rest-gold) / 0.25);
   border-radius: 50%;
 }
 
 /* Decorative Corners */
 .theme-cream-gold .rest-corner-ornament {
   position: absolute;
-  color: hsl(var(--rest-gold) / 0.3);
+  color: hsl(var(--rest-gold) / 0.4);
   font-size: 1.25rem;
 }
 
@@ -337,4 +336,203 @@
 .theme-cream-gold .rest-corner-br {
   bottom: 16px;
   right: 16px;
+}
+
+/* =========================================
+   PRICING COMPONENT STYLES - HIGH CONTRAST
+   ========================================= */
+
+/* Pricing Toggle */
+.theme-cream-gold .pricing-toggle-bg {
+  background: hsl(40 22% 88%);
+  border: 1px solid hsl(var(--rest-border));
+}
+
+.theme-cream-gold .pricing-toggle-inactive {
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-cream-gold .pricing-toggle-inactive:hover {
+  color: hsl(var(--rest-text));
+}
+
+/* Pricing Bonus Tag */
+.theme-cream-gold .pricing-bonus-tag {
+  background: hsl(42 70% 45% / 0.15);
+  border: 1px solid hsl(42 60% 50% / 0.4);
+  color: hsl(42 65% 38%);
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Pricing Anchor Text */
+.theme-cream-gold .pricing-anchor-label {
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-cream-gold .pricing-anchor-price {
+  color: hsl(var(--rest-text-light));
+}
+
+/* Pricing Main Price */
+.theme-cream-gold .pricing-main-price {
+  color: hsl(var(--rest-text));
+}
+
+.theme-cream-gold .pricing-main-suffix {
+  color: hsl(var(--rest-text-muted));
+}
+
+/* Pricing Billing Info */
+.theme-cream-gold .pricing-billing-text {
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-cream-gold .pricing-billing-amount {
+  color: hsl(var(--rest-text));
+  font-weight: 600;
+}
+
+.theme-cream-gold .pricing-billing-savings {
+  color: hsl(42 65% 38%);
+  font-weight: 500;
+}
+
+/* Feature Item Styles */
+.theme-cream-gold .pricing-feature-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted hsl(var(--rest-gold) / 0.25);
+}
+
+.theme-cream-gold .pricing-feature-item:last-child {
+  border-bottom: none;
+}
+
+.theme-cream-gold .pricing-feature-name {
+  color: hsl(var(--rest-text));
+}
+
+.theme-cream-gold .pricing-feature-value {
+  color: hsl(var(--rest-text-muted));
+  font-style: italic;
+}
+
+.theme-cream-gold .pricing-feature-value-highlight {
+  color: hsl(42 65% 38%);
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Bonus Section */
+.theme-cream-gold .pricing-bonus-header {
+  color: hsl(var(--rest-text));
+}
+
+.theme-cream-gold .pricing-bonus-description {
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-cream-gold .pricing-bonus-value-label {
+  color: hsl(var(--rest-text-light));
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.theme-cream-gold .pricing-bonus-value {
+  color: hsl(var(--rest-text));
+  font-weight: 600;
+}
+
+.theme-cream-gold .pricing-total-label {
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-cream-gold .pricing-total-value {
+  color: hsl(42 65% 38%);
+  font-weight: 700;
+}
+
+/* Scarcity Indicator */
+.theme-cream-gold .pricing-scarcity-bar {
+  background: hsl(var(--rest-bg-accent));
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid hsl(var(--rest-border));
+}
+
+.theme-cream-gold .pricing-scarcity-label {
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-cream-gold .pricing-scarcity-count {
+  color: hsl(var(--rest-text));
+  font-weight: 600;
+}
+
+/* Trust Section */
+.theme-cream-gold .pricing-trust-badge {
+  background: hsl(var(--rest-bg-card));
+  border: 1px solid hsl(var(--rest-border));
+  padding: 0.375rem 0.625rem;
+  border-radius: 4px;
+}
+
+.theme-cream-gold .pricing-trust-text {
+  color: hsl(var(--rest-text));
+}
+
+.theme-cream-gold .pricing-guarantee-stamp {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 2px dashed hsl(var(--rest-gold) / 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.theme-cream-gold .pricing-guarantee-stamp::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid hsl(var(--rest-gold) / 0.3);
+  border-radius: 50%;
+}
+
+.theme-cream-gold .pricing-guarantee-title {
+  color: hsl(var(--rest-text));
+}
+
+.theme-cream-gold .pricing-guarantee-text {
+  color: hsl(var(--rest-text-muted));
+}
+
+/* Divider Style */
+.theme-cream-gold .pricing-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.theme-cream-gold .pricing-divider::before,
+.theme-cream-gold .pricing-divider::after {
+  content: '';
+  height: 1px;
+  width: 40px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--rest-gold) / 0.4),
+    transparent
+  );
 }

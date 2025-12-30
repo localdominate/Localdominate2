@@ -1,24 +1,25 @@
 /* =========================================
    VARIANTE C: MICHELIN 3-STERNE (ULTRA PREMIUM)
+   Elegante Haar-Linien und minimale Trenner
    ========================================= */
 
 /* Apply to html when theme is active */
 .theme-michelin,
 .theme-michelin body {
-  --rest-bg: 0 0% 98%;              /* #FAFAFA - Purest white */
-  --rest-bg-accent: 0 0% 96%;       /* #F5F5F5 - Subtle gray */
+  --rest-bg: 0 0% 99%;              /* #FCFCFC - Purest white */
+  --rest-bg-accent: 0 0% 97%;       /* #F7F7F7 - Subtle gray */
   --rest-bg-card: 0 0% 100%;        /* Pure white */
-  --rest-text: 0 0% 15%;            /* #262626 - Near black */
-  --rest-text-muted: 0 0% 45%;      /* #737373 - Medium gray */
-  --rest-gold: 38 35% 58%;          /* #C5A572 - Champagne gold */
-  --rest-gold-bright: 38 40% 65%;   /* Lighter champagne */
-  --rest-gold-muted: 38 20% 70%;    /* Very subtle gold */
+  --rest-text: 0 0% 12%;            /* #1F1F1F - Near black */
+  --rest-text-muted: 0 0% 40%;      /* #666666 - Medium gray */
+  --rest-gold: 38 35% 55%;          /* #C5A572 - Champagne gold */
+  --rest-gold-bright: 38 40% 62%;   /* Lighter champagne */
+  --rest-gold-muted: 38 25% 68%;    /* Very subtle gold */
   --rest-accent: 0 0% 10%;          /* Almost black accent */
-  --rest-border: 0 0% 90%;          /* Very light border */
+  --rest-border: 0 0% 92%;          /* Very light border */
   
   /* Shadows - Extremely Subtle */
-  --rest-shadow-soft: 0 1px 3px hsl(0 0% 0% / 0.04);
-  --rest-shadow-card: 0 4px 20px hsl(0 0% 0% / 0.03);
+  --rest-shadow-soft: 0 1px 3px hsl(0 0% 0% / 0.03);
+  --rest-shadow-card: 0 4px 20px hsl(0 0% 0% / 0.02);
 }
 
 /* Base Page Styling */
@@ -37,24 +38,24 @@
 
 .theme-michelin .rest-card-featured {
   background: hsl(var(--rest-bg-card));
-  border: 1px solid hsl(var(--rest-gold) / 0.3);
+  border: 1px solid hsl(var(--rest-gold) / 0.25);
 }
 
 /* Typography - Refined */
 .theme-michelin .rest-title {
   font-family: 'Cormorant Garamond', serif;
   color: hsl(var(--rest-text));
-  letter-spacing: 0.25em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
 }
 
 .theme-michelin .rest-headline {
   font-family: 'Cormorant Garamond', serif;
   color: hsl(var(--rest-text));
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .theme-michelin .rest-headline-gold {
@@ -69,39 +70,135 @@
   font-size: 0.875rem;
 }
 
-/* Dividers - Whisper Thin */
+/* =========================================
+   ELEGANT DIVIDERS - MICHELIN STYLE
+   ========================================= */
+
+/* Haar-feine Linie */
+.theme-michelin .rest-hairline {
+  height: 0.5px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(0 0% 80% / 0.5) 20%,
+    hsl(0 0% 80% / 0.5) 80%,
+    transparent 100%
+  );
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Breitere Haar-Linie für Sections */
+.theme-michelin .rest-hairline-wide {
+  height: 0.5px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(0 0% 85% / 0.6) 15%,
+    hsl(0 0% 85% / 0.6) 85%,
+    transparent 100%
+  );
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Minimaler Punkt-Ornament */
+.theme-michelin .rest-dots-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.theme-michelin .rest-dots-minimal::before,
+.theme-michelin .rest-dots-minimal::after {
+  content: '·';
+  font-size: 0.375rem;
+  color: hsl(var(--rest-gold) / 0.5);
+}
+
+.theme-michelin .rest-dots-minimal span {
+  font-size: 0.25rem;
+  color: hsl(var(--rest-gold) / 0.6);
+}
+
+/* Kursiver Text-Trenner */
+.theme-michelin .rest-text-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.theme-michelin .rest-text-divider::before,
+.theme-michelin .rest-text-divider::after {
+  content: '';
+  height: 0.5px;
+  width: 50px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(0 0% 80% / 0.4),
+    hsl(0 0% 80% / 0.4)
+  );
+}
+
+.theme-michelin .rest-text-divider::before {
+  background: linear-gradient(
+    90deg,
+    hsl(0 0% 80% / 0.4),
+    hsl(0 0% 80% / 0.4),
+    transparent
+  );
+}
+
+.theme-michelin .rest-text-divider span {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  color: hsl(var(--rest-gold) / 0.7);
+  text-transform: lowercase;
+}
+
+/* Standard Divider - verfeinert */
 .theme-michelin .rest-divider {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding: 0.5rem 0;
 }
 
 .theme-michelin .rest-divider::before,
 .theme-michelin .rest-divider::after {
   content: '';
-  height: 1px;
-  width: 100px;
+  height: 0.5px;
+  width: 60px;
   background: hsl(var(--rest-border));
 }
 
 .theme-michelin .rest-divider-ornament {
-  color: hsl(var(--rest-gold));
-  font-size: 0.5rem;
+  color: hsl(var(--rest-gold) / 0.5);
+  font-size: 0.375rem;
+  letter-spacing: 0.3em;
 }
 
 /* Buttons - Understated Elegance */
 .theme-michelin .rest-button {
   background: transparent;
-  border: 1px solid hsl(var(--rest-text));
+  border: 0.5px solid hsl(var(--rest-text));
   color: hsl(var(--rest-text));
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 400;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 1rem 2.5rem;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .theme-michelin .rest-button:hover {
@@ -120,96 +217,142 @@
   color: hsl(var(--rest-bg-card));
 }
 
-/* Menu Course Section */
+/* =========================================
+   MENU COURSE SECTIONS
+   ========================================= */
+
 .theme-michelin .rest-course {
-  padding: 4rem 0;
-  border-bottom: 1px solid hsl(var(--rest-border));
+  padding: 5rem 0;
   text-align: center;
   position: relative;
 }
 
-.theme-michelin .rest-course:last-child {
-  border-bottom: none;
+/* Haar-Linie zwischen Kursen */
+.theme-michelin .rest-course::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 0.5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(0 0% 85% / 0.5),
+    transparent
+  );
 }
 
+.theme-michelin .rest-course:last-child::after {
+  display: none;
+}
+
+/* Kursiver Gang-Titel */
 .theme-michelin .rest-course-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.625rem;
-  letter-spacing: 0.4em;
+  font-size: 0.5625rem;
+  font-style: italic;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: hsl(var(--rest-text-muted));
-  margin-bottom: 1.5rem;
+  color: hsl(var(--rest-gold) / 0.7);
+  margin-bottom: 1.75rem;
 }
 
 .theme-michelin .rest-course-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   font-weight: 400;
   color: hsl(var(--rest-text));
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .theme-michelin .rest-course-description {
   font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 300;
   color: hsl(var(--rest-text-muted));
-  max-width: 400px;
+  max-width: 380px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .theme-michelin .rest-course-price {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-style: italic;
   color: hsl(var(--rest-gold));
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
+  letter-spacing: 0.05em;
 }
 
-/* Main Course Highlight */
+/* Main Course Highlight - Subtiler */
 .theme-michelin .rest-course-main {
-  padding: 5rem 0;
+  padding: 6rem 0;
   position: relative;
 }
 
+/* Dezenter Stern statt großer Star */
 .theme-michelin .rest-course-main::before {
-  content: '★';
+  content: '✦';
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
-  color: hsl(var(--rest-gold));
-  font-size: 0.75rem;
+  color: hsl(var(--rest-gold) / 0.4);
+  font-size: 0.5rem;
+  letter-spacing: 0.5em;
 }
 
 .theme-michelin .rest-course-main .rest-course-name {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 
 .theme-michelin .rest-course-main .rest-course-price {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2.25rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* Chef's Recommendation Tag */
+/* Chef's Recommendation Tag - Eleganter */
 .theme-michelin .rest-chef-tag {
   display: inline-block;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.625rem;
+  font-size: 0.5625rem;
   font-style: italic;
-  letter-spacing: 0.15em;
-  color: hsl(var(--rest-gold));
-  border-top: 1px solid hsl(var(--rest-gold) / 0.3);
-  border-bottom: 1px solid hsl(var(--rest-gold) / 0.3);
-  padding: 0.5rem 1.5rem;
-  margin-top: 1.5rem;
+  letter-spacing: 0.2em;
+  color: hsl(var(--rest-gold) / 0.7);
+  position: relative;
+  padding: 0.625rem 2rem;
+  margin-top: 1.75rem;
+}
+
+.theme-michelin .rest-chef-tag::before,
+.theme-michelin .rest-chef-tag::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 0.5px;
+  background: hsl(var(--rest-gold) / 0.3);
+}
+
+.theme-michelin .rest-chef-tag::before {
+  left: -10px;
+  background: linear-gradient(90deg, transparent, hsl(var(--rest-gold) / 0.3));
+}
+
+.theme-michelin .rest-chef-tag::after {
+  right: -10px;
+  background: linear-gradient(90deg, hsl(var(--rest-gold) / 0.3), transparent);
 }
 
 /* Pricing Card - Ultra Minimal */
 .theme-michelin .rest-pricing-card {
   background: hsl(var(--rest-bg-card));
-  border: 1px solid hsl(var(--rest-border));
-  padding: 3rem;
+  border: 0.5px solid hsl(var(--rest-border));
+  padding: 3.5rem;
   max-width: 480px;
   margin: 0 auto;
 }
@@ -217,32 +360,32 @@
 /* Timer - Subtle */
 .theme-michelin .rest-timer-box {
   background: transparent;
-  border: 1px solid hsl(var(--rest-border));
+  border: 0.5px solid hsl(var(--rest-border));
   color: hsl(var(--rest-text));
-  padding: 0.625rem 0.875rem;
+  padding: 0.75rem 1rem;
   min-width: 3.5rem;
   text-align: center;
 }
 
 .theme-michelin .rest-timer-label {
   color: hsl(var(--rest-text-muted));
-  font-size: 0.5rem;
+  font-size: 0.4375rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   font-family: 'Inter', sans-serif;
 }
 
 /* Price Display */
 .theme-michelin .rest-price {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 400;
   color: hsl(var(--rest-text));
   line-height: 1;
 }
 
 .theme-michelin .rest-price-suffix {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: hsl(var(--rest-text-muted));
   font-weight: 300;
 }
@@ -250,7 +393,7 @@
 .theme-michelin .rest-price-anchor {
   text-decoration: line-through;
   color: hsl(var(--rest-text-muted));
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 300;
 }
 
@@ -260,7 +403,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 1px solid hsl(var(--rest-border));
+  border-bottom: 0.5px solid hsl(var(--rest-border));
 }
 
 .theme-michelin .rest-feature-item:last-child {
@@ -270,20 +413,20 @@
 .theme-michelin .rest-feature-check {
   color: hsl(var(--rest-gold));
   margin-right: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
 }
 
 .theme-michelin .rest-feature-name {
   color: hsl(var(--rest-text));
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .theme-michelin .rest-feature-value {
   color: hsl(var(--rest-text-muted));
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 300;
 }
 
@@ -291,31 +434,30 @@
 .theme-michelin .rest-bonus-tag {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   color: hsl(var(--rest-gold));
-  text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 /* Scarcity - Minimal Text */
 .theme-michelin .rest-scarcity-text {
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   color: hsl(var(--rest-text-muted));
   font-weight: 300;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 /* Trust - Minimal Badges */
 .theme-michelin .rest-trust-badge {
-  border-top: 1px solid hsl(var(--rest-border));
-  padding-top: 2rem;
-  margin-top: 2rem;
+  border-top: 0.5px solid hsl(var(--rest-border));
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .theme-michelin .rest-trust-text {
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   color: hsl(var(--rest-text-muted));
   font-weight: 300;
 }
@@ -323,24 +465,24 @@
 /* Footer Note - Like Real Michelin Menu */
 .theme-michelin .rest-footer-note {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-style: italic;
   color: hsl(var(--rest-text-muted));
   text-align: center;
-  margin-top: 3rem;
-  letter-spacing: 0.05em;
+  margin-top: 3.5rem;
+  letter-spacing: 0.08em;
 }
 
 /* Animation - Subtle Fade */
 .theme-michelin .rest-fade-in {
-  animation: michelin-fade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: michelin-fade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   opacity: 0;
 }
 
 @keyframes michelin-fade {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -350,67 +492,126 @@
 
 /* Hover Effects - Barely There */
 .theme-michelin .rest-hover-lift {
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .theme-michelin .rest-hover-lift:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
-/* CTA - No Glow, Just Class */
+/* CTA - Refined */
 .theme-michelin .rest-cta-button {
   background: hsl(var(--rest-text));
   color: hsl(var(--rest-bg-card));
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  padding: 1.25rem 3rem;
+  padding: 1.25rem 3.5rem;
   border: none;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
 }
 
 .theme-michelin .rest-cta-button:hover {
   background: hsl(var(--rest-gold));
 }
 
-/* Decorative Elements */
+/* Decorative Elements - More Subtle */
 .theme-michelin .rest-ornament {
-  color: hsl(var(--rest-gold));
-  font-size: 0.5rem;
+  color: hsl(var(--rest-gold) / 0.5);
+  font-size: 0.4375rem;
+  letter-spacing: 0.3em;
 }
 
 .theme-michelin .rest-line {
-  height: 1px;
-  background: hsl(var(--rest-border));
-  width: 60px;
-  margin: 2rem auto;
+  height: 0.5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--rest-border)),
+    transparent
+  );
+  width: 50px;
+  margin: 2.5rem auto;
+}
+
+/* Section Divider - Elegant */
+.theme-michelin .rest-section-divider {
+  position: relative;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-michelin .rest-section-divider::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    hsl(0 0% 85% / 0.4),
+    transparent
+  );
+}
+
+/* Diamond Ornament */
+.theme-michelin .rest-diamond {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.theme-michelin .rest-diamond::before,
+.theme-michelin .rest-diamond::after {
+  content: '';
+  width: 35px;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, hsl(0 0% 80% / 0.4));
+}
+
+.theme-michelin .rest-diamond::after {
+  background: linear-gradient(90deg, hsl(0 0% 80% / 0.4), transparent);
+}
+
+.theme-michelin .rest-diamond span {
+  font-size: 0.3125rem;
+  color: hsl(var(--rest-gold) / 0.5);
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .theme-michelin .rest-course {
-    padding: 3rem 0;
-  }
-  
-  .theme-michelin .rest-course-main {
     padding: 4rem 0;
   }
   
+  .theme-michelin .rest-course-main {
+    padding: 5rem 0;
+  }
+  
   .theme-michelin .rest-course-name {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
   
   .theme-michelin .rest-course-main .rest-course-name {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
   
   .theme-michelin .rest-price {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   
   .theme-michelin .rest-pricing-card {
     padding: 2rem;
+  }
+  
+  .theme-michelin .rest-hairline {
+    max-width: 120px;
   }
 }
