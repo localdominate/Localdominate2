@@ -1,9 +1,32 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Settings } from "lucide-react";
+import { useState, useEffect } from "react";
+
+type Variant = "A" | "B" | "C";
+
+const VARIANT_STORAGE_KEY = "restaurant_admin_variant";
 
 const RestaurantMarketing = () => {
+  const [variant, setVariant] = useState<Variant>("A");
+  const [showSwitch, setShowSwitch] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem(VARIANT_STORAGE_KEY) as Variant | null;
+    if (stored && ["A", "B", "C"].includes(stored)) {
+      setVariant(stored);
+    }
+  }, []);
+
+  const cycleVariant = () => {
+    const variants: Variant[] = ["A", "B", "C"];
+    const currentIndex = variants.indexOf(variant);
+    const nextVariant = variants[(currentIndex + 1) % variants.length];
+    setVariant(nextVariant);
+    localStorage.setItem(VARIANT_STORAGE_KEY, nextVariant);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-950 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-950 flex items-center justify-center px-4 relative">
       <div className="text-center max-w-2xl mx-auto">
         <div className="mb-8">
           <span className="inline-block px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400 text-sm font-medium tracking-wider uppercase">
@@ -23,6 +46,45 @@ const RestaurantMarketing = () => {
           <ArrowLeft className="w-5 h-5" />
           Zurück zur Startseite
         </Link>
+      </div>
+
+      {/* Admin Variant Switch - bottom right, subtle */}
+      <div className="fixed bottom-4 right-4 z-50">
+        {showSwitch ? (
+          <div className="flex items-center gap-2 bg-neutral-800/90 backdrop-blur-sm border border-neutral-700 rounded-lg p-2 shadow-lg">
+            {(["A", "B", "C"] as Variant[]).map((v) => (
+              <button
+                key={v}
+                onClick={() => {
+                  setVariant(v);
+                  localStorage.setItem(VARIANT_STORAGE_KEY, v);
+                }}
+                className={`w-8 h-8 rounded-md text-xs font-bold transition-all ${
+                  variant === v
+                    ? "bg-amber-500 text-neutral-900"
+                    : "bg-neutral-700 text-neutral-400 hover:bg-neutral-600"
+                } ${v === "C" ? "opacity-50" : ""}`}
+                title={v === "C" ? "Coming Soon" : `Variante ${v}`}
+              >
+                {v}
+              </button>
+            ))}
+            <button
+              onClick={() => setShowSwitch(false)}
+              className="ml-1 text-neutral-500 hover:text-neutral-300 text-xs"
+            >
+              ✕
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={() => setShowSwitch(true)}
+            className="w-8 h-8 flex items-center justify-center bg-neutral-800/50 hover:bg-neutral-800/80 border border-neutral-700/50 rounded-full text-neutral-500 hover:text-neutral-300 transition-all opacity-30 hover:opacity-100"
+            title="Admin: Variante wechseln"
+          >
+            <Settings className="w-4 h-4" />
+          </button>
+        )}
       </div>
     </div>
   );
