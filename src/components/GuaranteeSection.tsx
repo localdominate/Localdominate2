@@ -1,6 +1,8 @@
-import { Shield } from "lucide-react";
+import { Shield, RefreshCw, MessageCircle, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
+
+const icons = [RefreshCw, MessageCircle, CheckCircle];
 
 const GuaranteeSection = () => {
   const { t } = useLanguage();
@@ -8,28 +10,48 @@ const GuaranteeSection = () => {
 
   return (
     <section className="bg-background section-padding px-4">
-      <div ref={ref} className="container max-w-3xl">
-        <div className={`flex flex-col md:flex-row items-center gap-8 p-8 md:p-12 rounded-3xl border-2 border-success/30 bg-gradient-to-br from-success/5 to-success/10 reveal ${isVisible ? 'visible' : ''}`}>
-          {/* Shield Icon with animation */}
-          <div className="flex-shrink-0">
-            <div className={`w-24 h-24 md:w-28 md:h-28 bg-success/20 rounded-2xl flex items-center justify-center transition-transform duration-700 ${isVisible ? 'animate-bounce-subtle' : ''}`}>
-              <Shield className={`w-12 h-12 md:w-14 md:h-14 text-success transition-all duration-500 ${isVisible ? 'scale-110' : 'scale-100'}`} />
-            </div>
+      <div ref={ref} className="container max-w-4xl">
+        {/* Header */}
+        <div className={`text-center mb-12 reveal ${isVisible ? 'visible' : ''}`}>
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-success/20 rounded-2xl mb-6">
+            <Shield className="w-10 h-10 text-success" />
           </div>
-          
-          {/* Text */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              {t.guarantee.headline}
-            </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t.guarantee.text} <span className="font-semibold text-foreground">{t.guarantee.textBold1}</span> {t.guarantee.textMid}{" "}
-              <span className="font-semibold text-foreground">{t.guarantee.textBold2}</span>{t.guarantee.textEnd}
-            </p>
-            <p className="text-xl font-bold text-primary mt-4">
-              {t.guarantee.onlyRisk}
-            </p>
-          </div>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
+            {t.guarantee.headline}
+          </h3>
+          <p className="text-lg text-muted-foreground">
+            {t.guarantee.subheadline}
+          </p>
+        </div>
+        
+        {/* Guarantee Points */}
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {t.guarantee.points.map((point, index) => {
+            const Icon = icons[index];
+            return (
+              <div 
+                key={index}
+                className={`text-center p-6 bg-success/5 border border-success/20 rounded-2xl reveal reveal-delay-${index + 1} ${isVisible ? 'visible' : ''}`}
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-success/20 rounded-xl mb-4">
+                  <Icon className="w-7 h-7 text-success" />
+                </div>
+                <h4 className="text-lg font-bold text-foreground mb-2">
+                  {point.title}
+                </h4>
+                <p className="text-muted-foreground text-sm">
+                  {point.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        
+        {/* Bottom Punch */}
+        <div className={`text-center reveal reveal-delay-4 ${isVisible ? 'visible' : ''}`}>
+          <p className="text-xl md:text-2xl font-bold text-primary">
+            {t.guarantee.onlyRisk}
+          </p>
         </div>
       </div>
     </section>
