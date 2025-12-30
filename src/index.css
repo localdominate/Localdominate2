@@ -233,6 +233,16 @@
     animation: count-pulse 0.3s ease-out;
   }
 
+  /* Shimmer animation for visual effects */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
   /* Staggered reveal for pain cards */
   .pain-card {
     opacity: 0;
