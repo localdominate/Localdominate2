@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Phone, Check, Gift, Shield, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/i18n/LanguageContext';
 import MenuCourse from '../michelin/MenuCourse';
 import MichelinTimer from '../michelin/MichelinTimer';
 import MichelinFeatureList from '../michelin/MichelinFeatureList';
 import MichelinPriceBadge from '../michelin/MichelinPriceBadge';
 
 const MichelinLayout = () => {
+  const { t } = useLanguage();
   const [timeLeft, setTimeLeft] = useState({ hours: 23, minutes: 45, seconds: 12 });
   const [visibleCourses, setVisibleCourses] = useState<Set<number>>(new Set());
 
@@ -49,18 +51,18 @@ const MichelinLayout = () => {
   }, []);
 
   const features = [
-    { name: 'Premium Website Design', value: 'inkl.' },
-    { name: 'Google Maps Optimierung', value: 'inkl.' },
-    { name: 'Mobile Speisekarte', value: 'inkl.' },
-    { name: 'Technischer Support', value: 'inkl.' },
-    { name: 'Monatliche Updates', value: 'inkl.' },
+    { name: t.restaurant.platPrincipal.features.premiumWebsite, value: t.restaurant.platPrincipal.features.included },
+    { name: t.restaurant.platPrincipal.features.googleMaps, value: t.restaurant.platPrincipal.features.included },
+    { name: t.restaurant.platPrincipal.features.mobileMenu, value: t.restaurant.platPrincipal.features.included },
+    { name: t.restaurant.platPrincipal.features.support, value: t.restaurant.platPrincipal.features.included },
+    { name: t.restaurant.platPrincipal.features.updates, value: t.restaurant.platPrincipal.features.included },
   ];
 
   return (
     <div className="rest-page min-h-screen">
       {/* Header */}
       <header className="py-16 text-center">
-        <p className="rest-title mb-6">Dégustation</p>
+        <p className="rest-title mb-6">{t.restaurant.degustation}</p>
         <div className="rest-hairline" />
       </header>
 
@@ -74,11 +76,10 @@ const MichelinLayout = () => {
             <span>◇</span>
           </div>
           <h1 className="rest-headline text-3xl md:text-4xl mb-8">
-            Local Dominator
+            {t.restaurant.headline}
           </h1>
           <p className="rest-subtitle text-base leading-relaxed max-w-md mx-auto">
-            Ein kuratiertes Erlebnis für Restaurants, 
-            die online gefunden werden möchten.
+            {t.restaurant.subtitle}
           </p>
           <div className="rest-hairline mt-12" />
         </div>
@@ -90,18 +91,18 @@ const MichelinLayout = () => {
         className={`transition-all duration-1000 ${visibleCourses.has(1) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         <MenuCourse
-          title="Amuse-Bouche"
-          name="Kostenlose Analyse"
-          description="Ein erster Eindruck Ihrer digitalen Präsenz. Wir analysieren Ihren aktuellen Stand und zeigen Potenziale auf."
+          title={t.restaurant.amuseBouche.title}
+          name={t.restaurant.amuseBouche.name}
+          description={t.restaurant.amuseBouche.description}
           isOffered
-          price="Offert"
+          price={t.restaurant.amuseBouche.price}
         >
           <div className="flex items-center justify-center gap-8 mt-8 text-sm">
             <span className="rest-subtitle flex items-center gap-2">
-              <Clock className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.7)]" /> 15 Minuten
+              <Clock className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.7)]" /> {t.restaurant.amuseBouche.duration}
             </span>
             <span className="rest-subtitle flex items-center gap-2">
-              <Check className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.7)]" /> Unverbindlich
+              <Check className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.7)]" /> {t.restaurant.amuseBouche.nonBinding}
             </span>
           </div>
         </MenuCourse>
@@ -109,7 +110,7 @@ const MichelinLayout = () => {
 
       {/* Elegant Divider */}
       <div className="rest-text-divider">
-        <span>le parcours</span>
+        <span>{t.restaurant.leParcours}</span>
       </div>
 
       {/* Course 2: Entrée */}
@@ -118,10 +119,10 @@ const MichelinLayout = () => {
         className={`transition-all duration-1000 delay-100 ${visibleCourses.has(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         <MenuCourse
-          title="Entrée"
-          name="Website Erstellung"
-          description="Eine elegante, mobile-optimierte Präsenz. Ladezeit unter 2 Sekunden. Ihre digitale Visitenkarte."
-          price="ab 250€"
+          title={t.restaurant.entree.title}
+          name={t.restaurant.entree.name}
+          description={t.restaurant.entree.description}
+          price={t.restaurant.entree.price}
         />
       </div>
 
@@ -136,27 +137,21 @@ const MichelinLayout = () => {
         className={`transition-all duration-1000 delay-150 ${visibleCourses.has(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         <MenuCourse
-          title="Intermezzo"
-          name="Strategische Marketingberatung"
-          description="Persönliche 1:1 Beratung mit Ihrem dedizierten Marketing-Experten. Maßgeschneiderte Strategien für Ihr Restaurant."
-          price="59€ / Stunde"
+          title={t.restaurant.intermezzo.title}
+          name={t.restaurant.intermezzo.name}
+          description={t.restaurant.intermezzo.description}
+          price={t.restaurant.intermezzo.price}
         >
           <div className="max-w-xs mx-auto mt-8 space-y-3">
-            <div className="flex items-center gap-3 text-sm rest-subtitle">
-              <span className="text-[hsl(var(--rest-gold)_/_0.6)]">○</span>
-              <span>Pre-Analyse inklusive</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm rest-subtitle">
-              <span className="text-[hsl(var(--rest-gold)_/_0.6)]">○</span>
-              <span>Individuelle 1:1 Session</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm rest-subtitle">
-              <span className="text-[hsl(var(--rest-gold)_/_0.6)]">○</span>
-              <span>Detaillierter Post-Bericht</span>
-            </div>
+            {t.restaurant.intermezzo.features.map((feature, idx) => (
+              <div key={idx} className="flex items-center gap-3 text-sm rest-subtitle">
+                <span className="text-[hsl(var(--rest-gold)_/_0.6)]">○</span>
+                <span>{feature}</span>
+              </div>
+            ))}
           </div>
           <p className="text-center mt-6 text-xs rest-subtitle opacity-70">
-            Regulär 120€/h · Jetzt nur 59€/h
+            {t.restaurant.intermezzo.regularPrice}
           </p>
         </MenuCourse>
       </div>
@@ -174,18 +169,17 @@ const MichelinLayout = () => {
         <section className="rest-course rest-course-main py-24 relative">
           {/* Subtle star indicator handled by CSS */}
           
-          <p className="rest-course-title mt-4">Plat Principal</p>
+          <p className="rest-course-title mt-4">{t.restaurant.platPrincipal.title}</p>
           <h2 className="rest-course-name text-2xl md:text-3xl">
-            Rundum-Sorglos-Paket
+            {t.restaurant.platPrincipal.name}
           </h2>
           <p className="rest-course-description">
-            Alles, was Ihr Restaurant digital braucht. 
-            Website, Google Maps, Wartung und persönlicher Support.
+            {t.restaurant.platPrincipal.description}
           </p>
 
           {/* Timer */}
           <div className="mt-10 mb-6">
-            <p className="rest-scarcity-text mb-5">Angebot endet in</p>
+            <p className="rest-scarcity-text mb-5">{t.restaurant.platPrincipal.offerEnds}</p>
             <MichelinTimer 
               hours={timeLeft.hours} 
               minutes={timeLeft.minutes} 
@@ -203,14 +197,14 @@ const MichelinLayout = () => {
 
           {/* Chef's Recommendation */}
           <div className="rest-chef-tag mt-10">
-            Empfehlung des Küchenchefs
+            {t.restaurant.platPrincipal.chefRecommendation}
           </div>
 
           {/* CTA */}
           <div className="mt-12">
             <button className="rest-cta-button group">
               <span className="flex items-center gap-3">
-                Jetzt reservieren
+                {t.restaurant.platPrincipal.cta}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
@@ -218,14 +212,14 @@ const MichelinLayout = () => {
 
           {/* Scarcity - Subtle */}
           <p className="rest-scarcity-text mt-8">
-            Nur noch 3 Plätze in diesem Monat verfügbar
+            {t.restaurant.platPrincipal.scarcity}
           </p>
         </section>
       </div>
 
       {/* Text Divider */}
       <div className="rest-text-divider">
-        <span>les extras</span>
+        <span>{t.restaurant.lesExtras}</span>
       </div>
 
       {/* Course 4: Fromages - Bonuses */}
@@ -234,18 +228,14 @@ const MichelinLayout = () => {
         className={`transition-all duration-1000 delay-300 ${visibleCourses.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         <MenuCourse
-          title="Fromages"
-          name="Bonus-Kollektion"
-          description="Zusätzliche Ressourcen für Ihren Erfolg. Bei Buchung des Hauptgangs inklusive."
+          title={t.restaurant.fromages.title}
+          name={t.restaurant.fromages.name}
+          description={t.restaurant.fromages.description}
           isOffered
-          price="Offert"
+          price={t.restaurant.fromages.price}
         >
           <div className="max-w-xs mx-auto mt-10 space-y-4">
-            {[
-              { name: 'Google Ranking Guide', value: '49€' },
-              { name: 'Social Media Vorlagen', value: '79€' },
-              { name: 'SEO Checkliste', value: '29€' },
-            ].map((bonus, idx) => (
+            {t.restaurant.fromages.bonuses.map((bonus, idx) => (
               <div key={idx} className="flex items-center justify-between py-2.5 border-b border-[hsl(var(--rest-border))]">
                 <span className="flex items-center gap-2.5 rest-subtitle text-sm">
                   <Gift className="w-3.5 h-3.5 text-[hsl(var(--rest-gold)_/_0.6)]" />
@@ -255,9 +245,9 @@ const MichelinLayout = () => {
               </div>
             ))}
             <p className="text-center pt-5">
-              <span className="rest-subtitle text-sm">Gesamtwert: </span>
+              <span className="rest-subtitle text-sm">{t.restaurant.fromages.totalValue} </span>
               <span className="line-through rest-subtitle text-sm">157€</span>
-              <span className="rest-bonus-tag ml-2">Gratis</span>
+              <span className="rest-bonus-tag ml-2">{t.restaurant.fromages.free}</span>
             </p>
           </div>
         </MenuCourse>
@@ -274,13 +264,13 @@ const MichelinLayout = () => {
         className={`transition-all duration-1000 delay-400 ${visibleCourses.has(5) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         <MenuCourse
-          title="Dessert"
-          name="Zufriedenheitsgarantie"
-          description="30 Tage Geld-zurück ohne Wenn und Aber. Kein Risiko, nur Genuss."
+          title={t.restaurant.dessert.title}
+          name={t.restaurant.dessert.name}
+          description={t.restaurant.dessert.description}
         >
           <div className="flex items-center justify-center gap-2.5 mt-8">
             <Shield className="w-4 h-4 text-[hsl(var(--rest-gold)_/_0.6)]" />
-            <span className="rest-subtitle text-sm">100% Risikofrei</span>
+            <span className="rest-subtitle text-sm">{t.restaurant.dessert.riskFree}</span>
           </div>
         </MenuCourse>
       </div>
@@ -294,22 +284,22 @@ const MichelinLayout = () => {
             <span>◇</span>
           </div>
           <h2 className="rest-headline text-xl md:text-2xl mb-6">
-            Bereit für die Reservierung?
+            {t.restaurant.finalCta.headline}
           </h2>
           <p className="rest-subtitle mb-12">
-            Sichern Sie sich Ihren Platz in der digitalen Spitzenklasse.
+            {t.restaurant.finalCta.subtitle}
           </p>
           
           <button className="rest-cta-button group mb-10">
             <span className="flex items-center gap-3">
-              Tisch reservieren
+              {t.restaurant.finalCta.cta}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </span>
           </button>
 
           <div className="flex items-center justify-center gap-2.5 text-[hsl(var(--rest-text-muted))]">
             <Phone className="w-3.5 h-3.5" />
-            <span className="rest-subtitle text-sm">Oder rufen Sie uns an</span>
+            <span className="rest-subtitle text-sm">{t.restaurant.finalCta.callUs}</span>
           </div>
         </div>
       </section>
@@ -318,14 +308,14 @@ const MichelinLayout = () => {
       <footer className="py-16 text-center">
         <div className="rest-hairline mb-10" />
         <p className="rest-footer-note">
-          Service et taxes inclus
+          {t.restaurant.footer.taxNote}
         </p>
         <div className="rest-hairline mt-10 mb-8" />
         <Link 
           to="/" 
           className="rest-subtitle text-sm hover:text-[hsl(var(--rest-gold))] transition-colors duration-300"
         >
-          ← Zurück zur Hauptseite
+          ← {t.restaurant.footer.backToMain}
         </Link>
       </footer>
     </div>
