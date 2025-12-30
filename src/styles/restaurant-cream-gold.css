@@ -1,0 +1,340 @@
+/* =========================================
+   VARIANTE B: CREME/GOLD (WARM CLASSIC)
+   ========================================= */
+
+.theme-cream-gold {
+  /* Color Palette */
+  --rest-bg: 40 30% 96%;            /* #F5F0E8 - Warm cream */
+  --rest-bg-accent: 40 25% 92%;     /* #EDE8DF - Slightly darker cream */
+  --rest-bg-card: 40 35% 97%;       /* #F8F4ED - Card background */
+  --rest-text: 30 25% 20%;          /* #3D3528 - Warm dark brown */
+  --rest-text-muted: 30 15% 45%;    /* #7A7060 - Muted brown */
+  --rest-gold: 42 65% 45%;          /* #B8860B - Dark gold */
+  --rest-gold-bright: 42 70% 50%;   /* #C9940C - Brighter gold */
+  --rest-gold-muted: 42 35% 60%;    /* #B5A07A - Muted gold */
+  --rest-accent: 0 50% 40%;         /* Burgundy accent */
+  --rest-border: 42 35% 80%;        /* Soft gold border */
+  
+  /* Menu-specific colors for contrast */
+  --rest-dark-text: 30 30% 15%;     /* Very dark brown for contrast */
+  
+  /* Shadows */
+  --rest-shadow-soft: 0 4px 20px hsl(30 20% 30% / 0.08);
+  --rest-shadow-card: 
+    0 2px 10px hsl(30 20% 30% / 0.05),
+    inset 0 2px 4px hsl(40 40% 100% / 0.5);
+}
+
+/* Base Page Styling */
+.theme-cream-gold .rest-page {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--rest-bg)) 0%,
+    hsl(40 28% 94%) 50%,
+    hsl(var(--rest-bg)) 100%
+  );
+  color: hsl(var(--rest-text));
+  min-height: 100vh;
+}
+
+/* Parchment Texture Overlay */
+.theme-cream-gold .rest-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23paper)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Cards */
+.theme-cream-gold .rest-card {
+  background: hsl(var(--rest-bg-card));
+  border: 1px solid hsl(var(--rest-border));
+  box-shadow: var(--rest-shadow-card);
+  position: relative;
+}
+
+.theme-cream-gold .rest-card-featured {
+  background: linear-gradient(
+    145deg,
+    hsl(40 40% 98%) 0%,
+    hsl(var(--rest-bg-card)) 100%
+  );
+  border: 2px solid hsl(var(--rest-gold) / 0.4);
+  box-shadow: 
+    var(--rest-shadow-card),
+    0 0 30px hsl(var(--rest-gold) / 0.08);
+}
+
+/* Typography */
+.theme-cream-gold .rest-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: hsl(var(--rest-gold));
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.theme-cream-gold .rest-headline {
+  font-family: 'Cormorant Garamond', serif;
+  color: hsl(var(--rest-text));
+  font-weight: 500;
+}
+
+.theme-cream-gold .rest-headline-gold {
+  color: hsl(var(--rest-gold));
+}
+
+.theme-cream-gold .rest-subtitle {
+  font-family: 'Lato', sans-serif;
+  color: hsl(var(--rest-text-muted));
+  letter-spacing: 0.03em;
+}
+
+/* Dividers */
+.theme-cream-gold .rest-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.theme-cream-gold .rest-divider::before,
+.theme-cream-gold .rest-divider::after {
+  content: '';
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--rest-gold) / 0.4),
+    transparent
+  );
+}
+
+.theme-cream-gold .rest-divider-ornament {
+  color: hsl(var(--rest-gold));
+  font-size: 0.875rem;
+}
+
+/* Buttons */
+.theme-cream-gold .rest-button {
+  background: transparent;
+  border: 1px solid hsl(var(--rest-gold));
+  color: hsl(var(--rest-gold));
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.875rem 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.theme-cream-gold .rest-button:hover {
+  background: hsl(var(--rest-gold));
+  color: hsl(var(--rest-bg));
+}
+
+.theme-cream-gold .rest-button-filled {
+  background: linear-gradient(135deg, hsl(var(--rest-gold)), hsl(var(--rest-gold-bright)));
+  color: hsl(0 0% 100%);
+  border: none;
+  box-shadow: 0 4px 15px hsl(var(--rest-gold) / 0.3);
+}
+
+.theme-cream-gold .rest-button-filled:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px hsl(var(--rest-gold) / 0.4);
+}
+
+/* CTA with Subtle Glow */
+.theme-cream-gold .rest-cta-glow {
+  animation: cream-gold-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes cream-gold-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px hsl(var(--rest-gold) / 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 25px hsl(var(--rest-gold) / 0.45);
+  }
+}
+
+/* Pricing Card */
+.theme-cream-gold .rest-pricing-card {
+  background: linear-gradient(
+    165deg,
+    hsl(40 45% 98%) 0%,
+    hsl(40 30% 95%) 100%
+  );
+  border: 2px solid hsl(var(--rest-gold) / 0.25);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 
+    0 8px 30px hsl(30 20% 30% / 0.08),
+    inset 0 1px 0 hsl(0 0% 100% / 0.5);
+}
+
+/* Decorative double border */
+.theme-cream-gold .rest-pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid hsl(var(--rest-gold) / 0.15);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Timer Box */
+.theme-cream-gold .rest-timer-box {
+  background: hsl(var(--rest-bg-accent));
+  border: 1px solid hsl(var(--rest-gold) / 0.25);
+  color: hsl(var(--rest-text));
+  padding: 0.5rem 0.75rem;
+  min-width: 3rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.theme-cream-gold .rest-timer-label {
+  color: hsl(var(--rest-text-muted));
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Price Display */
+.theme-cream-gold .rest-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: hsl(var(--rest-gold));
+  line-height: 1;
+}
+
+.theme-cream-gold .rest-price-suffix {
+  font-size: 1.125rem;
+  color: hsl(var(--rest-text-muted));
+}
+
+.theme-cream-gold .rest-price-anchor {
+  text-decoration: line-through;
+  color: hsl(var(--rest-text-muted));
+  font-size: 1.125rem;
+}
+
+/* Feature Items - Menu Style with Dotted Lines */
+.theme-cream-gold .rest-feature-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.625rem 0;
+}
+
+.theme-cream-gold .rest-feature-item::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px dotted hsl(var(--rest-gold) / 0.3);
+  margin: 0 0.75rem;
+  margin-bottom: 4px;
+}
+
+.theme-cream-gold .rest-feature-check {
+  color: hsl(var(--rest-gold));
+  margin-right: 0.5rem;
+}
+
+.theme-cream-gold .rest-feature-name {
+  color: hsl(var(--rest-text));
+  font-family: 'Cormorant Garamond', serif;
+  flex-shrink: 0;
+}
+
+.theme-cream-gold .rest-feature-value {
+  color: hsl(var(--rest-gold));
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+/* Bonus Tag */
+.theme-cream-gold .rest-bonus-tag {
+  background: hsl(var(--rest-gold) / 0.08);
+  border: 1px solid hsl(var(--rest-gold) / 0.25);
+  color: hsl(var(--rest-gold));
+  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+/* Scarcity Bar */
+.theme-cream-gold .rest-scarcity-bar {
+  background: hsl(var(--rest-bg-accent));
+  border-radius: 6px;
+  height: 8px;
+  overflow: hidden;
+  border: 1px solid hsl(var(--rest-border));
+}
+
+.theme-cream-gold .rest-scarcity-fill {
+  background: linear-gradient(90deg, hsl(var(--rest-gold)), hsl(35 80% 50%));
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 6px;
+}
+
+/* Trust Badge */
+.theme-cream-gold .rest-trust-badge {
+  background: hsl(var(--rest-bg-accent));
+  border: 1px solid hsl(var(--rest-gold) / 0.2);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Guarantee Stamp Effect */
+.theme-cream-gold .rest-guarantee-stamp {
+  border: 2px dashed hsl(var(--rest-gold) / 0.4);
+  border-radius: 50%;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.theme-cream-gold .rest-guarantee-stamp::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid hsl(var(--rest-gold) / 0.2);
+  border-radius: 50%;
+}
+
+/* Decorative Corners */
+.theme-cream-gold .rest-corner-ornament {
+  position: absolute;
+  color: hsl(var(--rest-gold) / 0.3);
+  font-size: 1.25rem;
+}
+
+.theme-cream-gold .rest-corner-tl {
+  top: 16px;
+  left: 16px;
+}
+
+.theme-cream-gold .rest-corner-tr {
+  top: 16px;
+  right: 16px;
+}
+
+.theme-cream-gold .rest-corner-bl {
+  bottom: 16px;
+  left: 16px;
+}
+
+.theme-cream-gold .rest-corner-br {
+  bottom: 16px;
+  right: 16px;
+}
