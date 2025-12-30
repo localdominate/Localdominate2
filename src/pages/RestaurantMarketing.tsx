@@ -14,6 +14,12 @@ import TestimonialsTicker from "@/components/restaurant/TestimonialsTicker";
 import HorizontalScroller, { ScrollItem } from "@/components/restaurant/HorizontalScroller";
 import { useParallax } from "@/hooks/useParallax";
 import { usePageScrollProgress } from "@/hooks/useScrollProgress";
+import CountdownTimer from "@/components/restaurant/CountdownTimer";
+import ValueStack from "@/components/restaurant/ValueStack";
+import ScarcityIndicator from "@/components/restaurant/ScarcityIndicator";
+import PricingToggle from "@/components/restaurant/PricingToggle";
+import TrustBadgesRestaurant from "@/components/restaurant/TrustBadgesRestaurant";
+import BonusStack from "@/components/restaurant/BonusStack";
 
 // Animated Counter Component
 const AnimatedCounter = ({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) => {
@@ -511,155 +517,104 @@ const RestaurantMarketing = () => {
         </div>
       </section>
 
-      {/* Pricing Section - À la Carte with scale animation */}
-      <section id="pricing" className="px-4 py-16 md:py-24">
-        <div className="container max-w-3xl mx-auto">
-          <div className="text-center mb-16">
+      {/* Pricing Section - Psychologisch optimiert */}
+      <section id="pricing" className="px-4 py-16 md:py-24 bg-gradient-to-b from-transparent via-[hsl(var(--menu-gold))]/5 to-transparent">
+        <div className="container max-w-4xl mx-auto">
+          <div className="text-center mb-12">
             <div className="menu-divider mb-6">
               <span className="menu-divider-ornament">◆</span>
             </div>
-            <h3 className={`menu-section-title text-sm tracking-[0.4em] mb-6 transition-all duration-700 ${
+            <h3 className={`menu-section-title text-sm tracking-[0.4em] mb-4 transition-all duration-700 ${
               visibleSections.has('pricing') ? 'opacity-100' : 'opacity-0'
             }`}>
-              À la Carte
+              ★ EMPFEHLUNG DES HAUSES ★
             </h3>
-            <div className="menu-divider">
+            <p className="font-menu-serif text-2xl md:text-3xl text-menu-cream mb-2">
+              Das Rundum-Sorglos-Paket
+            </p>
+            <p className="menu-subtitle text-lg">
+              Alles, was Ihr Restaurant online braucht
+            </p>
+            <div className="menu-divider mt-6">
               <span className="menu-divider-ornament">◆</span>
             </div>
           </div>
           
-          {/* Desktop: Grid */}
-          <div className="hidden md:grid md:grid-cols-2 gap-8">
-            {/* Starter Paket - Scale up from left */}
-            <div 
-              className={`menu-card menu-corner p-8 rounded text-center transition-all duration-700 ${
-                visibleSections.has('pricing') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-              }`}
-              style={{ transitionDelay: '0.2s' }}
-            >
-              <h4 className="menu-section-title text-xs mb-4">Starter-Paket</h4>
-              <p className="menu-subtitle text-sm mb-6">Website · Speisekarte · Maps</p>
-              
-              <div className="my-8">
-                <p className="font-menu-serif text-5xl text-menu-gold">
-                  <AnimatedCounter target={250} />
-                  <span className="text-2xl">€</span>
-                </p>
-                <p className="menu-subtitle text-sm mt-2">einmalig</p>
-              </div>
-              
-              <ul className="space-y-3 text-left">
-                {['Website-Erstellung', 'Digitale Speisekarte', 'Google Maps Optimierung'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-menu-cream/80">
-                    <Check className="w-4 h-4 text-menu-gold flex-shrink-0" />
-                    <span className="font-menu-sans text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
+          {/* Main Pricing Card */}
+          <div 
+            className={`menu-card-featured menu-corner p-8 md:p-12 rounded-2xl relative transition-all duration-700 ${
+              visibleSections.has('pricing') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`}
+            style={{ 
+              transitionDelay: '0.2s',
+              boxShadow: '0 0 60px hsl(var(--menu-gold) / 0.15)'
+            }}
+          >
+            {/* Countdown Timer */}
+            <div className="mb-8">
+              <CountdownTimer />
             </div>
-            
-            {/* Growth Abo - Featured with glow */}
-            <div 
-              className={`menu-card-featured menu-corner p-8 rounded text-center relative transition-all duration-700 ${
-                visibleSections.has('pricing') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-              }`}
-              style={{ transitionDelay: '0.3s' }}
-            >
-              {/* Featured Badge */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-menu-gold text-menu-dark px-4 py-1 text-xs font-menu-serif tracking-wider">
-                ★ EMPFEHLUNG ★
-              </div>
-              
-              <h4 className="menu-section-title text-xs mb-4 mt-4">Growth-Abo</h4>
-              <p className="menu-subtitle text-sm mb-6">Hosting · Updates · Support</p>
-              
-              <div className="my-8">
-                <p className="font-menu-serif text-5xl text-menu-gold">
-                  <AnimatedCounter target={49} />
-                  <span className="text-2xl">€</span>
-                </p>
-                <p className="menu-subtitle text-sm mt-2">pro Monat</p>
-              </div>
-              
-              <ul className="space-y-3 text-left">
-                {['Hosting & Wartung', 'Monatliche Updates', 'Persönlicher Support'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-menu-cream/80">
-                    <Check className="w-4 h-4 text-menu-gold flex-shrink-0" />
-                    <span className="font-menu-sans text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              {/* Scarcity */}
-              <div className="mt-8 pt-6 border-t border-menu-gold/20">
-                <p className="font-menu-serif italic text-menu-gold text-sm">
-                  Nur noch 3 Plätze verfügbar
-                </p>
-              </div>
+
+            {/* Scarcity Indicator */}
+            <div className="mb-8">
+              <ScarcityIndicator spotsLeft={3} totalSpots={10} />
             </div>
+
+            {/* Pricing Toggle & Display */}
+            <div className="mb-10">
+              <PricingToggle />
+            </div>
+
+            {/* Value Stack */}
+            <div className="mb-10 p-6 bg-[hsl(var(--menu-cream))]/5 rounded-xl border border-[hsl(var(--menu-gold))]/10">
+              <ValueStack />
+            </div>
+
+            {/* Bonus Stack */}
+            <div className="mb-10 p-6 bg-gradient-to-br from-[hsl(var(--menu-gold))]/10 to-transparent rounded-xl border border-[hsl(var(--menu-gold))]/20">
+              <BonusStack />
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center mb-8">
+              <button className="menu-button menu-button-filled menu-cta-glow text-lg px-10 py-5 group w-full md:w-auto">
+                <span className="flex items-center justify-center gap-3">
+                  Jetzt Rundum-Sorglos-Paket sichern
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </button>
+              <p className="text-sm text-[hsl(var(--menu-brown))]/50 mt-4 dark:text-menu-cream/50">
+                Keine versteckten Kosten • Jederzeit kündbar • Sofort startklar
+              </p>
+            </div>
+
+            {/* Trust Badges */}
+            <TrustBadgesRestaurant />
           </div>
-          
-          {/* Mobile: Horizontal Scroll */}
-          <div className="md:hidden">
-            <HorizontalScroller showArrows={false} showDots={true}>
-              {/* Starter Paket */}
-              <ScrollItem className="w-[85vw] max-w-sm">
-                <div className="menu-card menu-corner p-6 rounded text-center">
-                  <h4 className="menu-section-title text-xs mb-3">Starter-Paket</h4>
-                  <p className="menu-subtitle text-sm mb-4">Website · Speisekarte · Maps</p>
-                  
-                  <div className="my-6">
-                    <p className="font-menu-serif text-4xl text-menu-gold">
-                      250<span className="text-xl">€</span>
-                    </p>
-                    <p className="menu-subtitle text-sm mt-1">einmalig</p>
-                  </div>
-                  
-                  <ul className="space-y-2 text-left">
-                    {['Website-Erstellung', 'Digitale Speisekarte', 'Google Maps Optimierung'].map((item, i) => (
-                      <li key={i} className="flex items-center gap-2 text-menu-cream/80">
-                        <Check className="w-3 h-3 text-menu-gold flex-shrink-0" />
-                        <span className="font-menu-sans text-xs">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+
+          {/* Alternative: Starter Paket (Smaller) */}
+          <div className="mt-12 text-center">
+            <p className="menu-subtitle text-sm mb-4">Oder starten Sie kleiner:</p>
+            <div 
+              className={`menu-card p-6 rounded-xl inline-block transition-all duration-700 ${
+                visibleSections.has('pricing') ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{ transitionDelay: '0.4s' }}
+            >
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                <div className="text-left">
+                  <h4 className="menu-section-title text-xs mb-1">Starter-Paket</h4>
+                  <p className="menu-subtitle text-sm">Website + Speisekarte + Maps</p>
                 </div>
-              </ScrollItem>
-              
-              {/* Growth Abo */}
-              <ScrollItem className="w-[85vw] max-w-sm">
-                <div className="menu-card-featured menu-corner p-6 rounded text-center relative">
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-menu-gold text-menu-dark px-3 py-0.5 text-[10px] font-menu-serif tracking-wider">
-                    ★ EMPFEHLUNG ★
-                  </div>
-                  
-                  <h4 className="menu-section-title text-xs mb-3 mt-3">Growth-Abo</h4>
-                  <p className="menu-subtitle text-sm mb-4">Hosting · Updates · Support</p>
-                  
-                  <div className="my-6">
-                    <p className="font-menu-serif text-4xl text-menu-gold">
-                      49<span className="text-xl">€</span>
-                    </p>
-                    <p className="menu-subtitle text-sm mt-1">pro Monat</p>
-                  </div>
-                  
-                  <ul className="space-y-2 text-left">
-                    {['Hosting & Wartung', 'Monatliche Updates', 'Persönlicher Support'].map((item, i) => (
-                      <li key={i} className="flex items-center gap-2 text-menu-cream/80">
-                        <Check className="w-3 h-3 text-menu-gold flex-shrink-0" />
-                        <span className="font-menu-sans text-xs">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="mt-6 pt-4 border-t border-menu-gold/20">
-                    <p className="font-menu-serif italic text-menu-gold text-xs">
-                      Nur noch 3 Plätze verfügbar
-                    </p>
-                  </div>
+                <div className="font-menu-serif text-3xl text-menu-gold">
+                  <AnimatedCounter target={250} />€
+                  <span className="text-base text-menu-cream/50 ml-2">einmalig</span>
                 </div>
-              </ScrollItem>
-            </HorizontalScroller>
+                <button className="menu-button text-sm whitespace-nowrap">
+                  Mehr erfahren
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
