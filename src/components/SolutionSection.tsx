@@ -126,7 +126,7 @@ const SolutionSection = () => {
               key={index}
               phase={phase}
               index={index}
-              delayOffset={index * 400}
+              delayOffset={index * 1200}
             />
           ))}
         </div>

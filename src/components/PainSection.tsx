@@ -22,7 +22,7 @@ const AnimatedStat = ({ stat }: { stat: string }) => {
   const { value, suffix, decimals } = parseStatValue(stat);
   const { formattedValue, ref, isVisible } = useAnimatedCounter({
     end: value,
-    duration: 2000,
+    duration: 3000,
     decimals,
     suffix
   });
@@ -198,7 +198,7 @@ const PainSection = () => {
               key={index} 
               point={point} 
               index={index}
-              delayOffset={index * 200} // 200ms stagger between cards
+              delayOffset={index * 800}
             />
           ))}
         </div>
