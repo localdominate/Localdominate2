@@ -7,6 +7,13 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
+import ScrollProgressBar from "@/components/restaurant/ScrollProgressBar";
+import FloatingElements from "@/components/restaurant/FloatingElements";
+import StickyCTA from "@/components/restaurant/StickyCTA";
+import TestimonialsTicker from "@/components/restaurant/TestimonialsTicker";
+import HorizontalScroller, { ScrollItem } from "@/components/restaurant/HorizontalScroller";
+import { useParallax } from "@/hooks/useParallax";
+import { usePageScrollProgress } from "@/hooks/useScrollProgress";
 
 // Animated Counter Component
 const AnimatedCounter = ({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) => {
@@ -58,8 +65,38 @@ const Ornament = ({ className = "" }: { className?: string }) => (
   <span className={`text-menu-gold font-menu-serif ${className}`}>◆</span>
 );
 
+// Parallax Hero Background
+const ParallaxHeroBackground = () => {
+  const { ref, style } = useParallax({ speed: 0.15, direction: "down" });
+  
+  return (
+    <div ref={ref} style={style} className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Floating gold ornaments */}
+      <span className="absolute top-[10%] left-[10%] text-menu-gold/10 text-6xl font-menu-serif animate-pulse">
+        ❧
+      </span>
+      <span className="absolute top-[30%] right-[15%] text-menu-gold/8 text-4xl font-menu-serif">
+        ✦
+      </span>
+      <span className="absolute bottom-[20%] left-[20%] text-menu-gold/10 text-5xl font-menu-serif">
+        ❦
+      </span>
+      
+      {/* Gold dust particles */}
+      <div className="gold-dust" style={{ top: '20%', left: '30%' }} />
+      <div className="gold-dust" style={{ top: '40%', right: '25%' }} />
+      <div className="gold-dust" style={{ top: '60%', left: '15%' }} />
+      <div className="gold-dust" style={{ top: '75%', right: '35%' }} />
+      <div className="gold-dust" style={{ top: '85%', left: '45%' }} />
+    </div>
+  );
+};
+
 const RestaurantMarketing = () => {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const scrollProgress = usePageScrollProgress();
+  const [isROISticky, setIsROISticky] = useState(false);
+  const roiRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,8 +117,33 @@ const RestaurantMarketing = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Handle ROI section sticky state
+  useEffect(() => {
+    const handleScroll = () => {
+      if (roiRef.current) {
+        const rect = roiRef.current.getBoundingClientRect();
+        setIsROISticky(rect.top <= 80 && rect.bottom > window.innerHeight * 0.5);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Calculate CTA glow intensity based on scroll
+  const ctaGlowIntensity = Math.min(1, scrollProgress * 1.5);
+
   return (
     <div className="min-h-screen menu-page text-menu-cream overflow-hidden font-menu-sans">
+      
+      {/* Scroll Progress Bar */}
+      <ScrollProgressBar />
+      
+      {/* Floating Parallax Elements */}
+      <FloatingElements />
+      
+      {/* Sticky CTA (appears after hero) */}
+      <StickyCTA showAfterScroll={0.12} />
       
       {/* Fixed Golden Side Frames */}
       <div className="menu-frame-left">
@@ -95,9 +157,11 @@ const RestaurantMarketing = () => {
         <div className="menu-frame-corner menu-frame-corner-br" />
       </div>
       
-      {/* Hero Section - Elegant Welcome */}
+      {/* Hero Section - Elegant Welcome with Parallax */}
       <section id="hero" className="relative px-4 pt-16 pb-20 md:pt-24 md:pb-32">
-        <div className="container max-w-3xl mx-auto text-center relative">
+        <ParallaxHeroBackground />
+        
+        <div className="container max-w-3xl mx-auto text-center relative z-10">
           
           {/* Top Divider */}
           <div className="menu-divider menu-fade-in menu-delay-1">
@@ -143,15 +207,16 @@ const RestaurantMarketing = () => {
         </div>
       </section>
 
-      {/* Comparison Section - Das Problem / Die Lösung */}
+      {/* Comparison Section - Das Problem / Die Lösung with Horizontal Swipe on Mobile */}
       <section id="comparison" className="px-4 py-16 md:py-24">
         <div className="container max-w-4xl mx-auto">
           
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-            {/* Das Problem */}
+          {/* Desktop: Grid Layout */}
+          <div className="hidden md:grid md:grid-cols-2 gap-12 md:gap-16">
+            {/* Das Problem - Slides from Left */}
             <div 
               className={`text-center transition-all duration-1000 ${
-                visibleSections.has('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                visibleSections.has('comparison') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
               }`}
             >
               <div className="menu-divider mb-8">
@@ -179,10 +244,10 @@ const RestaurantMarketing = () => {
               </div>
             </div>
 
-            {/* Die Lösung */}
+            {/* Die Lösung - Slides from Right */}
             <div 
               className={`text-center transition-all duration-1000 ${
-                visibleSections.has('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                visibleSections.has('comparison') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
               }`}
               style={{ transitionDelay: '0.2s' }}
             >
@@ -211,6 +276,68 @@ const RestaurantMarketing = () => {
             </div>
           </div>
           
+          {/* Mobile: Horizontal Scroll */}
+          <div className="md:hidden">
+            <HorizontalScroller showArrows={false} showDots={true}>
+              {/* Problem Card */}
+              <ScrollItem className="w-[85vw] max-w-sm">
+                <div className="text-center">
+                  <div className="menu-divider mb-6">
+                    <span className="menu-divider-ornament">◆</span>
+                  </div>
+                  <h3 className="menu-section-title text-sm mb-4">Das Problem</h3>
+                  <div className="menu-divider mb-6">
+                    <span className="menu-divider-ornament">◆</span>
+                  </div>
+                  
+                  <div className="menu-card menu-corner p-6">
+                    <div className="aspect-[4/3] bg-menu-dark/50 rounded mb-4 flex items-center justify-center border border-menu-line/20">
+                      <div className="text-center p-4 opacity-40 blur-[1px]">
+                        <div className="w-20 h-2 bg-menu-cream/30 rounded mb-2 mx-auto" />
+                        <div className="w-14 h-2 bg-menu-cream/20 rounded mb-2 mx-auto" />
+                        <div className="w-16 h-2 bg-menu-cream/20 rounded mx-auto" />
+                      </div>
+                    </div>
+                    <p className="font-menu-serif text-base italic text-menu-cream/70">
+                      Ihre aktuelle Seite lädt nicht auf dem Handy.
+                    </p>
+                    <p className="font-menu-serif text-lg mt-3 text-menu-burgundy">
+                      Gäste sind genervt.
+                    </p>
+                  </div>
+                </div>
+              </ScrollItem>
+              
+              {/* Solution Card */}
+              <ScrollItem className="w-[85vw] max-w-sm">
+                <div className="text-center">
+                  <div className="menu-divider mb-6">
+                    <span className="menu-divider-ornament">◆</span>
+                  </div>
+                  <h3 className="menu-section-title text-sm mb-4">Die Lösung</h3>
+                  <div className="menu-divider mb-6">
+                    <span className="menu-divider-ornament">◆</span>
+                  </div>
+                  
+                  <div className="menu-card-featured menu-corner p-6 rounded">
+                    <div className="aspect-[4/3] bg-gradient-to-b from-menu-dark/30 to-menu-dark/60 rounded mb-4 flex flex-col items-center justify-center border border-menu-gold/20 p-4">
+                      <div className="text-menu-gold text-2xl mb-2">✦</div>
+                      <p className="font-menu-serif text-base text-menu-cream mb-1">Ristorante Milano</p>
+                      <div className="flex gap-0.5 text-menu-gold text-xs mb-3">★★★★★</div>
+                      <div className="w-16 h-1 bg-menu-gold/30 rounded" />
+                    </div>
+                    <p className="font-menu-serif text-base italic text-menu-cream/70">
+                      Schnell. Übersichtlich.
+                    </p>
+                    <p className="font-menu-serif text-lg mt-3 text-menu-gold">
+                      Auf jedem Gerät perfekt.
+                    </p>
+                  </div>
+                </div>
+              </ScrollItem>
+            </HorizontalScroller>
+          </div>
+          
           {/* Warning */}
           <p 
             className={`text-center mt-16 font-menu-serif text-lg italic text-menu-cream/60 transition-all duration-1000 ${
@@ -223,11 +350,17 @@ const RestaurantMarketing = () => {
         </div>
       </section>
 
-      {/* ROI Section - Empfehlung des Hauses */}
+      {/* Testimonials Ticker - Auto-scrolling social proof */}
+      <section id="testimonials" className="py-8 md:py-12 overflow-hidden border-y border-menu-gold/10">
+        <TestimonialsTicker />
+      </section>
+
+      {/* ROI Section - Empfehlung des Hauses (Sticky on scroll) */}
       <section id="roi" className="px-4 py-16 md:py-24">
         <div className="container max-w-2xl mx-auto">
           <div 
-            className={`text-center transition-all duration-1000 ${
+            ref={roiRef}
+            className={`text-center transition-all duration-700 ${
               visibleSections.has('roi') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
@@ -239,7 +372,16 @@ const RestaurantMarketing = () => {
               <span className="menu-divider-ornament">◆</span>
             </div>
             
-            <div className="menu-card p-8 md:p-12 rounded">
+            <div 
+              className={`menu-card p-8 md:p-12 rounded menu-sticky-highlight transition-all duration-500 ${
+                isROISticky ? 'is-sticky' : ''
+              }`}
+              style={{
+                position: isROISticky ? 'sticky' : 'relative',
+                top: isROISticky ? '100px' : 'auto',
+                zIndex: isROISticky ? 30 : 'auto',
+              }}
+            >
               {/* Item 1 */}
               <div className="flex items-end justify-between mb-6">
                 <div className="text-left">
@@ -281,7 +423,7 @@ const RestaurantMarketing = () => {
         </div>
       </section>
 
-      {/* Services Section - Unsere Spezialitäten */}
+      {/* Services Section - Horizontal scroll on mobile */}
       <section id="services" className="px-4 py-16 md:py-24">
         <div className="container max-w-3xl mx-auto text-center">
           <div className="menu-divider mb-6">
@@ -296,7 +438,8 @@ const RestaurantMarketing = () => {
             <span className="menu-divider-ornament">◆</span>
           </div>
           
-          <div className="space-y-10">
+          {/* Desktop: Vertical Layout */}
+          <div className="hidden md:block space-y-10">
             {[
               {
                 title: 'Platz 1 bei Google Maps',
@@ -330,10 +473,45 @@ const RestaurantMarketing = () => {
               </div>
             ))}
           </div>
+          
+          {/* Mobile: Horizontal Scroll Cards */}
+          <div className="md:hidden">
+            <HorizontalScroller showArrows={false} showDots={true}>
+              {[
+                {
+                  title: 'Platz 1 bei Google Maps',
+                  desc: 'Gefunden werden, wenn Gäste hungrig sind',
+                  icon: '🗺️',
+                },
+                {
+                  title: 'Speisekarte auf jedem Handy',
+                  desc: 'Keine PDFs, keine Wartezeit',
+                  icon: '📱',
+                },
+                {
+                  title: 'Technik die funktioniert',
+                  desc: 'Nie wieder Updates oder Hosting',
+                  icon: '⚡',
+                }
+              ].map((service, index) => (
+                <ScrollItem key={index} className="w-[75vw] max-w-xs">
+                  <div className="menu-card p-6 text-center h-full">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <h4 className="font-menu-serif text-xl text-menu-cream mb-2">
+                      {service.title}
+                    </h4>
+                    <p className="menu-subtitle text-base">
+                      {service.desc}
+                    </p>
+                  </div>
+                </ScrollItem>
+              ))}
+            </HorizontalScroller>
+          </div>
         </div>
       </section>
 
-      {/* Pricing Section - À la Carte */}
+      {/* Pricing Section - À la Carte with scale animation */}
       <section id="pricing" className="px-4 py-16 md:py-24">
         <div className="container max-w-3xl mx-auto">
           <div className="text-center mb-16">
@@ -350,11 +528,12 @@ const RestaurantMarketing = () => {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Starter Paket */}
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-2 gap-8">
+            {/* Starter Paket - Scale up from left */}
             <div 
               className={`menu-card menu-corner p-8 rounded text-center transition-all duration-700 ${
-                visibleSections.has('pricing') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                visibleSections.has('pricing') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
               }`}
               style={{ transitionDelay: '0.2s' }}
             >
@@ -379,10 +558,10 @@ const RestaurantMarketing = () => {
               </ul>
             </div>
             
-            {/* Growth Abo - Featured */}
+            {/* Growth Abo - Featured with glow */}
             <div 
               className={`menu-card-featured menu-corner p-8 rounded text-center relative transition-all duration-700 ${
-                visibleSections.has('pricing') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                visibleSections.has('pricing') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
               }`}
               style={{ transitionDelay: '0.3s' }}
             >
@@ -418,6 +597,69 @@ const RestaurantMarketing = () => {
                 </p>
               </div>
             </div>
+          </div>
+          
+          {/* Mobile: Horizontal Scroll */}
+          <div className="md:hidden">
+            <HorizontalScroller showArrows={false} showDots={true}>
+              {/* Starter Paket */}
+              <ScrollItem className="w-[85vw] max-w-sm">
+                <div className="menu-card menu-corner p-6 rounded text-center">
+                  <h4 className="menu-section-title text-xs mb-3">Starter-Paket</h4>
+                  <p className="menu-subtitle text-sm mb-4">Website · Speisekarte · Maps</p>
+                  
+                  <div className="my-6">
+                    <p className="font-menu-serif text-4xl text-menu-gold">
+                      250<span className="text-xl">€</span>
+                    </p>
+                    <p className="menu-subtitle text-sm mt-1">einmalig</p>
+                  </div>
+                  
+                  <ul className="space-y-2 text-left">
+                    {['Website-Erstellung', 'Digitale Speisekarte', 'Google Maps Optimierung'].map((item, i) => (
+                      <li key={i} className="flex items-center gap-2 text-menu-cream/80">
+                        <Check className="w-3 h-3 text-menu-gold flex-shrink-0" />
+                        <span className="font-menu-sans text-xs">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollItem>
+              
+              {/* Growth Abo */}
+              <ScrollItem className="w-[85vw] max-w-sm">
+                <div className="menu-card-featured menu-corner p-6 rounded text-center relative">
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-menu-gold text-menu-dark px-3 py-0.5 text-[10px] font-menu-serif tracking-wider">
+                    ★ EMPFEHLUNG ★
+                  </div>
+                  
+                  <h4 className="menu-section-title text-xs mb-3 mt-3">Growth-Abo</h4>
+                  <p className="menu-subtitle text-sm mb-4">Hosting · Updates · Support</p>
+                  
+                  <div className="my-6">
+                    <p className="font-menu-serif text-4xl text-menu-gold">
+                      49<span className="text-xl">€</span>
+                    </p>
+                    <p className="menu-subtitle text-sm mt-1">pro Monat</p>
+                  </div>
+                  
+                  <ul className="space-y-2 text-left">
+                    {['Hosting & Wartung', 'Monatliche Updates', 'Persönlicher Support'].map((item, i) => (
+                      <li key={i} className="flex items-center gap-2 text-menu-cream/80">
+                        <Check className="w-3 h-3 text-menu-gold flex-shrink-0" />
+                        <span className="font-menu-sans text-xs">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="mt-6 pt-4 border-t border-menu-gold/20">
+                    <p className="font-menu-serif italic text-menu-gold text-xs">
+                      Nur noch 3 Plätze verfügbar
+                    </p>
+                  </div>
+                </div>
+              </ScrollItem>
+            </HorizontalScroller>
           </div>
         </div>
       </section>
@@ -459,13 +701,16 @@ const RestaurantMarketing = () => {
         </div>
       </section>
 
-      {/* CTA Section - Reservierung */}
+      {/* CTA Section - Reservierung with progressive glow */}
       <section id="cta" className="px-4 py-16 md:py-24">
         <div className="container max-w-2xl mx-auto">
           <div 
             className={`menu-card-featured menu-corner p-10 md:p-16 rounded text-center transition-all duration-700 ${
               visibleSections.has('cta') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
+            style={{
+              boxShadow: `0 0 ${30 + ctaGlowIntensity * 50}px hsl(var(--menu-gold) / ${0.1 + ctaGlowIntensity * 0.25})`,
+            }}
           >
             <h3 className="menu-section-title text-sm tracking-[0.4em] mb-8">Reservierung</h3>
             
@@ -476,7 +721,11 @@ const RestaurantMarketing = () => {
               Fordern Sie jetzt Ihre kostenlose Analyse an.
             </p>
             
-            <button className="menu-button menu-button-filled group">
+            <button 
+              className={`menu-button menu-button-filled group ${
+                ctaGlowIntensity > 0.7 ? 'menu-cta-glow' : ''
+              }`}
+            >
               <span className="flex items-center gap-3">
                 Jetzt Tisch reservieren
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
