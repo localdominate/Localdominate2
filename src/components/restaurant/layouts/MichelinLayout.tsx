@@ -130,6 +130,42 @@ const MichelinLayout = () => {
         <span>·</span>
       </div>
 
+      {/* Course 2.5: Intermezzo - Strategic Marketing Consultation */}
+      <div 
+        data-course="intermezzo"
+        className={`transition-all duration-1000 delay-150 ${visibleCourses.has(2) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+      >
+        <MenuCourse
+          title="Intermezzo"
+          name="Strategische Marketingberatung"
+          description="Persönliche 1:1 Beratung mit Ihrem dedizierten Marketing-Experten. Maßgeschneiderte Strategien für Ihr Restaurant."
+          price="59€ / Stunde"
+        >
+          <div className="max-w-xs mx-auto mt-8 space-y-3">
+            <div className="flex items-center gap-3 text-sm rest-subtitle">
+              <span className="text-[hsl(var(--rest-gold)_/_0.6)]">○</span>
+              <span>Pre-Analyse inklusive</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm rest-subtitle">
+              <span className="text-[hsl(var(--rest-gold)_/_0.6)]">○</span>
+              <span>Individuelle 1:1 Session</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm rest-subtitle">
+              <span className="text-[hsl(var(--rest-gold)_/_0.6)]">○</span>
+              <span>Detaillierter Post-Bericht</span>
+            </div>
+          </div>
+          <p className="text-center mt-6 text-xs rest-subtitle opacity-70">
+            Regulär 120€/h · Jetzt nur 59€/h
+          </p>
+        </MenuCourse>
+      </div>
+
+      {/* Hairline before main course */}
+      <div className="py-6">
+        <div className="rest-hairline-wide max-w-xs mx-auto" />
+      </div>
+
       {/* Course 3: Plat Principal - THE MAIN OFFER */}
       <div 
         data-course="3"
