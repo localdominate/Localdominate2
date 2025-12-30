@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Settings } from "lucide-react";
+import { ArrowLeft, Settings, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import MichelinLayout from "@/components/restaurant/layouts/MichelinLayout";
@@ -54,6 +54,7 @@ const ComingSoonPlaceholder = ({ variant }: { variant: Variant }) => {
 };
 
 const RestaurantMarketing = () => {
+  const { language, setLanguage } = useLanguage();
   const [variant, setVariant] = useState<Variant>("C");
   const [showSwitch, setShowSwitch] = useState(false);
 
@@ -85,6 +86,10 @@ const RestaurantMarketing = () => {
     localStorage.setItem(VARIANT_STORAGE_KEY, v);
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === "de" ? "en" : "de");
+  };
+
   // Render the appropriate layout
   const renderVariant = () => {
     switch (variant) {
@@ -101,38 +106,60 @@ const RestaurantMarketing = () => {
     <div className="relative">
       {renderVariant()}
 
-      {/* Admin Variant Switch - bottom right, subtle */}
+      {/* Admin Controls - bottom right */}
       <div className="fixed bottom-4 right-4 z-50">
         {showSwitch ? (
-          <div className="flex items-center gap-2 bg-neutral-800/90 backdrop-blur-sm border border-neutral-700 rounded-lg p-2 shadow-lg">
-            {(["A", "B", "C"] as Variant[]).map((v) => (
+          <div className="flex flex-col gap-2 bg-neutral-800/95 backdrop-blur-sm border border-neutral-700 rounded-xl p-3 shadow-2xl">
+            {/* Language Toggle */}
+            <div className="flex items-center justify-between gap-3 pb-2 border-b border-neutral-700">
+              <span className="text-neutral-400 text-xs font-medium flex items-center gap-1.5">
+                <Globe className="w-3.5 h-3.5" />
+                Sprache
+              </span>
               <button
-                key={v}
-                onClick={() => handleVariantChange(v)}
-                className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
-                  variant === v
-                    ? "bg-amber-500 text-neutral-900"
-                    : "bg-neutral-700 text-neutral-400 hover:bg-neutral-600 hover:text-neutral-200"
-                }`}
-                title={variantLabels[v]}
+                onClick={toggleLanguage}
+                className="flex items-center gap-1 px-2 py-1 bg-neutral-700 rounded-md text-xs font-medium transition-all hover:bg-neutral-600"
               >
-                {v}
+                <span className={language === "de" ? "text-amber-400" : "text-neutral-400"}>DE</span>
+                <span className="text-neutral-500">/</span>
+                <span className={language === "en" ? "text-amber-400" : "text-neutral-400"}>EN</span>
               </button>
-            ))}
+            </div>
+            
+            {/* Variant Buttons */}
+            <div className="flex items-center gap-2">
+              <span className="text-neutral-400 text-xs font-medium mr-1">Variante:</span>
+              {(["A", "B", "C"] as Variant[]).map((v) => (
+                <button
+                  key={v}
+                  onClick={() => handleVariantChange(v)}
+                  className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                    variant === v
+                      ? "bg-amber-500 text-neutral-900"
+                      : "bg-neutral-700 text-neutral-400 hover:bg-neutral-600 hover:text-neutral-200"
+                  }`}
+                  title={variantLabels[v]}
+                >
+                  {v}
+                </button>
+              ))}
+            </div>
+            
+            {/* Close Button */}
             <button
               onClick={() => setShowSwitch(false)}
-              className="ml-1 text-neutral-500 hover:text-neutral-300 text-xs px-1"
+              className="mt-1 text-neutral-500 hover:text-neutral-300 text-xs text-center py-1"
             >
-              ✕
+              Schließen ✕
             </button>
           </div>
         ) : (
           <button
             onClick={() => setShowSwitch(true)}
-            className="w-8 h-8 flex items-center justify-center bg-neutral-800/50 hover:bg-neutral-800/80 border border-neutral-700/50 rounded-full text-neutral-500 hover:text-neutral-300 transition-all opacity-30 hover:opacity-100"
-            title="Admin: Variante wechseln"
+            className="w-10 h-10 flex items-center justify-center bg-neutral-800/80 hover:bg-neutral-800 border border-neutral-700 rounded-full text-neutral-400 hover:text-amber-400 transition-all shadow-lg"
+            title="Admin: Einstellungen"
           >
-            <Settings className="w-4 h-4" />
+            <Settings className="w-5 h-5" />
           </button>
         )}
       </div>
