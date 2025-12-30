@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
               <div className="flex items-center gap-4 pt-4 border-t border-border/50">
                 <img 
                   src={images[index]} 
-                  alt={testimonial.name}
+                  alt={`${testimonial.name} - ${testimonial.business} - Kundenbewertung Local Dominator Google Maps Optimierung`}
                   className="w-12 h-12 rounded-full object-cover ring-2 ring-border"
                 />
                 <div>
@@ -80,7 +80,7 @@ const TestimonialsSection = () => {
                 <img 
                   key={i}
                   src={img} 
-                  alt=""
+                  alt={`Zufriedener Local Dominator Kunde ${i + 1} - Google Maps Top 3 Ranking erreicht`}
                   className="w-8 h-8 rounded-full border-2 border-background"
                 />
               ))}
