@@ -923,4 +923,56 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Countdown timer seconds pulse */
+  .countdown-seconds {
+    animation: countdown-pulse 1s ease-in-out infinite;
+  }
+
+  @keyframes countdown-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* Price glow effect */
+  .price-glow {
+    text-shadow: 0 0 30px hsl(var(--menu-gold) / 0.4),
+                 0 0 60px hsl(var(--menu-gold) / 0.2);
+    animation: price-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes price-pulse {
+    0%, 100% { 
+      text-shadow: 0 0 30px hsl(var(--menu-gold) / 0.4),
+                   0 0 60px hsl(var(--menu-gold) / 0.2);
+    }
+    50% { 
+      text-shadow: 0 0 40px hsl(var(--menu-gold) / 0.6),
+                   0 0 80px hsl(var(--menu-gold) / 0.3);
+    }
+  }
+
+  /* Scarcity pulse */
+  .scarcity-pulse {
+    animation: scarcity-blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes scarcity-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  /* Bonus glow effect */
+  .bonus-glow {
+    animation: bonus-shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes bonus-shimmer {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--menu-gold) / 0.1);
+    }
+    50% { 
+      box-shadow: 0 0 30px hsl(var(--menu-gold) / 0.25);
+    }
+  }
 }
