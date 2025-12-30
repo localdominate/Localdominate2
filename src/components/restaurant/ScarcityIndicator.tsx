@@ -1,4 +1,4 @@
-import { Users, AlertTriangle } from "lucide-react";
+import { Users, AlertCircle } from "lucide-react";
 
 interface ScarcityIndicatorProps {
   spotsLeft?: number;
@@ -13,58 +13,43 @@ const ScarcityIndicator = ({ spotsLeft = 3, totalSpots = 10 }: ScarcityIndicator
   return (
     <div className={`p-4 rounded-xl border ${
       isUrgent 
-        ? "bg-red-50/50 border-red-200" 
-        : "bg-[hsl(var(--menu-cream))]/30 border-[hsl(var(--menu-gold))]/20"
+        ? "bg-[hsl(0_50%_97%)] border-[hsl(0_40%_80%)]" 
+        : "bg-[hsl(40_28%_96%)] border-[hsl(42_40%_82%)]"
     }`}>
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           {isUrgent ? (
-            <AlertTriangle className="w-5 h-5 text-red-500 animate-pulse" />
+            <AlertCircle className="w-4 h-4 text-[hsl(0_55%_50%)]" />
           ) : (
-            <Users className="w-5 h-5 text-[hsl(var(--menu-gold))]" />
+            <Users className="w-4 h-4 text-[hsl(42_70%_45%)]" />
           )}
           <span className={`text-sm font-medium ${
-            isUrgent ? "text-red-600" : "text-[hsl(var(--menu-brown))]"
+            isUrgent ? "text-[hsl(0_45%_40%)]" : "text-[hsl(30_20%_35%)]"
           }`}>
-            {isUrgent ? "Fast ausgebucht!" : "Verfügbarkeit diesen Monat"}
+            {isUrgent ? "Fast ausgebucht" : "Verfügbarkeit diesen Monat"}
           </span>
         </div>
-        <span className={`text-sm font-bold ${
-          isUrgent ? "text-red-600 scarcity-pulse" : "text-[hsl(var(--menu-gold))]"
+        <span className={`text-sm font-semibold ${
+          isUrgent ? "text-[hsl(0_55%_45%)]" : "text-[hsl(42_70%_45%)]"
         }`}>
-          Nur noch {spotsLeft} Plätze!
+          Nur noch {spotsLeft} Plätze
         </span>
       </div>
 
       {/* Progress Bar */}
-      <div className="relative h-3 bg-[hsl(var(--menu-cream))] rounded-full overflow-hidden">
+      <div className="pricing-scarcity-bar h-2.5">
         <div
-          className={`absolute left-0 top-0 h-full rounded-full transition-all duration-1000 ${
+          className={`h-full rounded-full transition-all duration-1000 ${
             isUrgent 
-              ? "bg-gradient-to-r from-red-400 to-red-500" 
-              : "bg-gradient-to-r from-[hsl(var(--menu-gold))]/70 to-[hsl(var(--menu-gold))]"
+              ? "bg-gradient-to-r from-[hsl(0_50%_55%)] to-[hsl(0_55%_50%)]" 
+              : "bg-gradient-to-r from-[hsl(42_60%_60%)] to-[hsl(42_76%_55%)]"
           }`}
           style={{ width: `${percentage}%` }}
         />
-        {/* Animated dots for taken spots */}
-        <div className="absolute inset-0 flex items-center justify-around px-1">
-          {Array.from({ length: totalSpots }).map((_, i) => (
-            <div
-              key={i}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                i < spotsTaken
-                  ? isUrgent 
-                    ? "bg-white/80" 
-                    : "bg-white/60"
-                  : "bg-[hsl(var(--menu-brown))]/10"
-              }`}
-            />
-          ))}
-        </div>
       </div>
 
-      <p className="text-xs text-[hsl(var(--menu-brown))]/60 mt-2 text-center">
-        {spotsTaken} von {totalSpots} Plätzen bereits vergeben
+      <p className="text-xs text-[hsl(30_15%_50%)] mt-2 text-center">
+        {spotsTaken} von {totalSpots} Plätzen für diesen Monat vergeben
       </p>
     </div>
   );
