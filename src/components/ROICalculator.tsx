@@ -5,26 +5,38 @@ import { Slider } from "@/components/ui/slider";
 import { Calculator, TrendingUp, Zap, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick } from "@/lib/dataLayer";
+import { roiBranchConfigs, branchOrder, type ROIBranchConfig } from "@/data/roiCalculatorConfig";
+import { Database } from "@/integrations/supabase/types";
+import { cn } from "@/lib/utils";
+
+type BusinessCategory = Database["public"]["Enums"]["business_category"];
 
 const ROICalculator = () => {
   const { language } = useLanguage();
   const t = translations[language].roiCalculator;
   
-  const [guestsPerDay, setGuestsPerDay] = useState(75);
-  const [avgTicket, setAvgTicket] = useState(35);
+  const [selectedCategory, setSelectedCategory] = useState<BusinessCategory>('gastronomy');
+  const config = roiBranchConfigs[selectedCategory];
+  
+  const [metric1Value, setMetric1Value] = useState(config.metric1.default);
+  const [metric2Value, setMetric2Value] = useState(config.metric2.default);
   const [currentReviews, setCurrentReviews] = useState(25);
   
   const [animatedRevenue, setAnimatedRevenue] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // Calculation logic
-  const daysPerMonth = 30;
-  const visibilityBoost = 0.15; // 15% more visibility when in Top 3
-  
-  const currentMonthlyRevenue = guestsPerDay * avgTicket * daysPerMonth;
-  const additionalGuestsPerMonth = Math.round(guestsPerDay * visibilityBoost * daysPerMonth);
-  const additionalMonthlyRevenue = additionalGuestsPerMonth * avgTicket;
+  // Reset sliders when category changes
+  useEffect(() => {
+    const newConfig = roiBranchConfigs[selectedCategory];
+    setMetric1Value(newConfig.metric1.default);
+    setMetric2Value(newConfig.metric2.default);
+  }, [selectedCategory]);
+
+  // Calculation logic - universal formula
+  const currentMonthlyRevenue = metric1Value * metric2Value * config.daysMultiplier;
+  const additionalUnitsPerMonth = Math.round(metric1Value * config.visibilityBoost * config.daysMultiplier);
+  const additionalMonthlyRevenue = additionalUnitsPerMonth * metric2Value;
   const additionalYearlyRevenue = additionalMonthlyRevenue * 12;
   const newMonthlyRevenue = currentMonthlyRevenue + additionalMonthlyRevenue;
   
@@ -86,7 +98,7 @@ const ROICalculator = () => {
     <section ref={ref} className="section-padding bg-gradient-to-b from-background to-muted/30">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-4">
             <Calculator className="h-4 w-4" />
             {t.eyebrow}
@@ -99,6 +111,35 @@ const ROICalculator = () => {
           </p>
         </div>
 
+        {/* Branch Selection Tabs */}
+        <div className="mb-8">
+          <p className="text-center text-sm text-muted-foreground mb-4">
+            {language === 'de' ? 'Wähle deine Branche' : 'Select your industry'}
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {branchOrder.map((categoryId) => {
+              const branchConfig = roiBranchConfigs[categoryId];
+              const isSelected = selectedCategory === categoryId;
+              
+              return (
+                <button
+                  key={categoryId}
+                  onClick={() => setSelectedCategory(categoryId)}
+                  className={cn(
+                    "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
+                    isSelected
+                      ? "bg-primary text-primary-foreground shadow-md scale-105"
+                      : "bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  <span className="text-base">{branchConfig.icon}</span>
+                  <span className="hidden sm:inline">{branchConfig.name[language]}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Input Section */}
           <div className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-lg">
@@ -107,47 +148,47 @@ const ROICalculator = () => {
               {t.inputTitle}
             </h3>
             
-            {/* Guests per day slider */}
+            {/* Metric 1 slider */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-3">
                 <label className="text-sm font-medium text-foreground">
-                  {t.guestsLabel}
+                  {config.metric1.label[language]}
                 </label>
-                <span className="text-lg font-bold text-primary">{guestsPerDay}</span>
+                <span className="text-lg font-bold text-primary">{metric1Value}</span>
               </div>
               <Slider
-                value={[guestsPerDay]}
-                onValueChange={(value) => setGuestsPerDay(value[0])}
-                min={20}
-                max={200}
-                step={5}
+                value={[metric1Value]}
+                onValueChange={(value) => setMetric1Value(value[0])}
+                min={config.metric1.min}
+                max={config.metric1.max}
+                step={config.metric1.step}
                 className="w-full"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                <span>20</span>
-                <span>200</span>
+                <span>{config.metric1.min}</span>
+                <span>{config.metric1.max}</span>
               </div>
             </div>
 
-            {/* Average ticket slider */}
+            {/* Metric 2 slider */}
             <div className="mb-8">
               <div className="flex justify-between items-center mb-3">
                 <label className="text-sm font-medium text-foreground">
-                  {t.avgTicketLabel}
+                  {config.metric2.label[language]}
                 </label>
-                <span className="text-lg font-bold text-primary">{avgTicket}€</span>
+                <span className="text-lg font-bold text-primary">{metric2Value}€</span>
               </div>
               <Slider
-                value={[avgTicket]}
-                onValueChange={(value) => setAvgTicket(value[0])}
-                min={15}
-                max={80}
-                step={5}
+                value={[metric2Value]}
+                onValueChange={(value) => setMetric2Value(value[0])}
+                min={config.metric2.min}
+                max={config.metric2.max}
+                step={config.metric2.step}
                 className="w-full"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                <span>15€</span>
-                <span>80€</span>
+                <span>{config.metric2.min}€</span>
+                <span>{config.metric2.max}€</span>
               </div>
             </div>
 
