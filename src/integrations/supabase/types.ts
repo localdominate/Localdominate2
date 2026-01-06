@@ -14,7 +14,127 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      customers: {
+        Row: {
+          address: string | null
+          business_category:
+            | Database["public"]["Enums"]["business_category"]
+            | null
+          business_name: string | null
+          created_at: string
+          email: string | null
+          id: string
+          phone: string | null
+          questionnaire_completed: boolean | null
+          questionnaire_completed_at: string | null
+          stripe_session_id: string | null
+          updated_at: string
+          website: string | null
+        }
+        Insert: {
+          address?: string | null
+          business_category?:
+            | Database["public"]["Enums"]["business_category"]
+            | null
+          business_name?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          phone?: string | null
+          questionnaire_completed?: boolean | null
+          questionnaire_completed_at?: string | null
+          stripe_session_id?: string | null
+          updated_at?: string
+          website?: string | null
+        }
+        Update: {
+          address?: string | null
+          business_category?:
+            | Database["public"]["Enums"]["business_category"]
+            | null
+          business_name?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          phone?: string | null
+          questionnaire_completed?: boolean | null
+          questionnaire_completed_at?: string | null
+          stripe_session_id?: string | null
+          updated_at?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
+      questionnaire_responses: {
+        Row: {
+          created_at: string
+          customer_id: string
+          id: string
+          response_data: Json
+          step_key: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          customer_id: string
+          id?: string
+          response_data?: Json
+          step_key: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          customer_id?: string
+          id?: string
+          response_data?: Json
+          step_key?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "questionnaire_responses_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      uploaded_assets: {
+        Row: {
+          asset_type: string
+          created_at: string
+          customer_id: string
+          file_name: string | null
+          id: string
+          storage_path: string
+        }
+        Insert: {
+          asset_type: string
+          created_at?: string
+          customer_id: string
+          file_name?: string | null
+          id?: string
+          storage_path: string
+        }
+        Update: {
+          asset_type?: string
+          created_at?: string
+          customer_id?: string
+          file_name?: string | null
+          id?: string
+          storage_path?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "uploaded_assets_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +143,14 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      business_category:
+        | "gastronomy"
+        | "beauty_wellness"
+        | "crafts"
+        | "health"
+        | "retail"
+        | "fitness"
+        | "services"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +277,16 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      business_category: [
+        "gastronomy",
+        "beauty_wellness",
+        "crafts",
+        "health",
+        "retail",
+        "fitness",
+        "services",
+      ],
+    },
   },
 } as const
