@@ -43,7 +43,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
+    // Return safe defaults when used outside provider
+    return {
+      language: "de",
+      setLanguage: () => {},
+      t: translations["de"]
+    };
   }
   return context;
 };
