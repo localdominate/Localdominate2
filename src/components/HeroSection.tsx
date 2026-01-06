@@ -4,12 +4,14 @@ import TrustBadges from "@/components/TrustBadges";
 import { useLanguage } from "@/i18n/LanguageContext";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
 import { trackButtonClick } from "@/lib/dataLayer";
+import { openStripeCheckout } from "@/lib/stripe";
 
 const HeroSection = () => {
   const { t } = useLanguage();
   
   const handleCtaClick = () => {
     trackButtonClick("hero_cta", "hero_section", 299);
+    openStripeCheckout("standard");
   };
 
   return (

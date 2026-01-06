@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { trackButtonClick } from "@/lib/dataLayer";
+import { openStripeCheckout } from "@/lib/stripe";
 
 const StickyHeader = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,18 +24,8 @@ const StickyHeader = () => {
   }, []);
 
   const handleClick = () => {
-    // Track event
-    if (typeof window !== "undefined" && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
-        event: "sticky_header_cta_click"
-      });
-    }
-    // Scroll to offer section
-    const offerSection = document.getElementById("offer") || 
-                         document.querySelector('section:nth-of-type(7)');
-    if (offerSection) {
-      offerSection.scrollIntoView({ behavior: "smooth" });
-    }
+    trackButtonClick("sticky_header_cta", "sticky_header", 299);
+    openStripeCheckout("standard");
   };
 
   const content = {
