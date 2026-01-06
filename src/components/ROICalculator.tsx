@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { Slider } from "@/components/ui/slider";
-import { Calculator, TrendingUp, Zap, Target } from "lucide-react";
+import { Calculator, TrendingUp, Zap, Target, Clock, AlertTriangle, BadgeCheck, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
-import { roiBranchConfigs, branchOrder, type ROIBranchConfig } from "@/data/roiCalculatorConfig";
+import { roiBranchConfigs, branchOrder, type ScenarioType } from "@/data/roiCalculatorConfig";
 import { Database } from "@/integrations/supabase/types";
 import { cn } from "@/lib/utils";
 
@@ -17,13 +17,15 @@ const ROICalculator = () => {
   const t = translations[language].roiCalculator;
   
   const [selectedCategory, setSelectedCategory] = useState<BusinessCategory>('gastronomy');
+  const [selectedScenario, setSelectedScenario] = useState<ScenarioType>('realistic');
+  const [showAlternatives, setShowAlternatives] = useState(false);
   const config = roiBranchConfigs[selectedCategory];
   
   const [metric1Value, setMetric1Value] = useState(config.metric1.default);
   const [metric2Value, setMetric2Value] = useState(config.metric2.default);
   const [currentReviews, setCurrentReviews] = useState(25);
   
-  const [animatedRevenue, setAnimatedRevenue] = useState(0);
+  const [animatedProfit, setAnimatedProfit] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -34,16 +36,34 @@ const ROICalculator = () => {
     setMetric2Value(newConfig.metric2.default);
   }, [selectedCategory]);
 
-  // Calculation logic - universal formula
+  // Get visibility boost based on scenario
+  const visibilityBoost = config.visibilityBoost[selectedScenario];
+
+  // Calculation logic with profit margins
   const currentMonthlyRevenue = metric1Value * metric2Value * config.daysMultiplier;
-  const additionalUnitsPerMonth = Math.round(metric1Value * config.visibilityBoost * config.daysMultiplier);
+  const additionalUnitsPerMonth = Math.round(metric1Value * visibilityBoost * config.daysMultiplier);
   const additionalMonthlyRevenue = additionalUnitsPerMonth * metric2Value;
-  const additionalYearlyRevenue = additionalMonthlyRevenue * 12;
+  
+  // NEW: Profit calculations
+  const additionalMonthlyProfit = Math.round(additionalMonthlyRevenue * config.profitMargin);
+  const additionalYearlyProfit = additionalMonthlyProfit * 12;
+  
   const newMonthlyRevenue = currentMonthlyRevenue + additionalMonthlyRevenue;
   
   const investment = 299;
-  const roiPercentage = Math.round((additionalYearlyRevenue / investment) * 100);
-  const breakevenDays = Math.max(1, Math.round(investment / (additionalMonthlyRevenue / 30)));
+  
+  // NEW: Breakeven based on profit (not revenue)
+  const dailyProfit = additionalMonthlyProfit / 30;
+  const breakevenDays = dailyProfit > 0 ? Math.max(1, Math.round(investment / dailyProfit)) : 999;
+  
+  // ROI based on yearly profit
+  const roiPercentage = Math.round((additionalYearlyProfit / investment) * 100);
+  
+  // Cost of inaction
+  const weeklyLostProfit = Math.round(additionalMonthlyProfit / 4);
+  
+  // Marketing alternative comparison
+  const yearlyAlternativeCost = config.monthlyMarketingAlternative * 12;
 
   // Intersection observer for animation trigger
   useEffect(() => {
@@ -65,7 +85,7 @@ const ROICalculator = () => {
     return () => observer.disconnect();
   }, [isVisible]);
 
-  // Animate revenue counter
+  // Animate profit counter
   useEffect(() => {
     if (!isVisible) return;
     
@@ -77,7 +97,7 @@ const ROICalculator = () => {
       const progress = Math.min(elapsed / duration, 1);
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       
-      setAnimatedRevenue(Math.round(additionalYearlyRevenue * easeOutQuart));
+      setAnimatedProfit(Math.round(additionalYearlyProfit * easeOutQuart));
       
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -85,7 +105,7 @@ const ROICalculator = () => {
     };
     
     requestAnimationFrame(animate);
-  }, [isVisible, additionalYearlyRevenue]);
+  }, [isVisible, additionalYearlyProfit]);
 
   const handleCTAClick = () => {
     trackButtonClick("roi_calculator_cta", "roi_calculator", 299);
@@ -94,6 +114,12 @@ const ROICalculator = () => {
 
   const currentBarWidth = 60;
   const newBarWidth = Math.min(100, (newMonthlyRevenue / currentMonthlyRevenue) * currentBarWidth);
+
+  const scenarioLabels = {
+    conservative: { de: 'Konservativ', en: 'Conservative' },
+    realistic: { de: 'Realistisch', en: 'Realistic' },
+    optimistic: { de: 'Optimistisch', en: 'Optimistic' },
+  };
 
   return (
     <section ref={ref} className="section-padding bg-gradient-to-b from-background to-muted/30">
@@ -148,6 +174,33 @@ const ROICalculator = () => {
               <Target className="h-5 w-5 text-primary" />
               {t.inputTitle}
             </h3>
+            
+            {/* Scenario Selector */}
+            <div className="mb-6">
+              <label className="text-sm font-medium text-foreground mb-3 block">
+                {t.scenarioLabel}
+              </label>
+              <div className="flex gap-2">
+                {(['conservative', 'realistic', 'optimistic'] as ScenarioType[]).map((scenario) => (
+                  <button
+                    key={scenario}
+                    onClick={() => setSelectedScenario(scenario)}
+                    className={cn(
+                      "flex-1 py-2 px-3 rounded-lg text-xs font-medium transition-all",
+                      selectedScenario === scenario
+                        ? scenario === 'conservative' 
+                          ? "bg-blue-500/20 text-blue-600 border border-blue-500/30"
+                          : scenario === 'realistic'
+                          ? "bg-primary/20 text-primary border border-primary/30"
+                          : "bg-green-500/20 text-green-600 border border-green-500/30"
+                        : "bg-muted text-muted-foreground hover:bg-muted/80"
+                    )}
+                  >
+                    {scenarioLabels[scenario][language]}
+                  </button>
+                ))}
+              </div>
+            </div>
             
             {/* Metric 1 slider */}
             <div className="mb-8">
@@ -214,6 +267,14 @@ const ROICalculator = () => {
                 <span>200</span>
               </div>
             </div>
+
+            {/* Conservative estimate badge */}
+            <div className="flex items-center gap-2 mt-6 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+              <BadgeCheck className="h-4 w-4 text-blue-500 flex-shrink-0" />
+              <p className="text-xs text-blue-600">
+                {t.conservativeBadge}
+              </p>
+            </div>
           </div>
 
           {/* Results Section */}
@@ -224,7 +285,7 @@ const ROICalculator = () => {
             </h3>
 
             {/* Revenue comparison bars */}
-            <div className="mb-8 space-y-4">
+            <div className="mb-6 space-y-4">
               <div>
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-muted-foreground">{t.beforeLabel}</span>
@@ -232,7 +293,7 @@ const ROICalculator = () => {
                     {currentMonthlyRevenue.toLocaleString("de-DE")}€
                   </span>
                 </div>
-                <div className="h-4 bg-muted rounded-full overflow-hidden">
+                <div className="h-3 bg-muted rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-muted-foreground/40 rounded-full transition-all duration-1000"
                     style={{ width: isVisible ? `${currentBarWidth}%` : "0%" }}
@@ -247,7 +308,7 @@ const ROICalculator = () => {
                     {newMonthlyRevenue.toLocaleString("de-DE")}€
                   </span>
                 </div>
-                <div className="h-4 bg-muted rounded-full overflow-hidden">
+                <div className="h-3 bg-muted rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full transition-all duration-1000 delay-300"
                     style={{ width: isVisible ? `${newBarWidth}%` : "0%" }}
@@ -256,28 +317,88 @@ const ROICalculator = () => {
               </div>
             </div>
 
-            {/* Additional revenue highlight */}
-            <div className="bg-primary/10 rounded-xl p-4 mb-6 text-center">
-              <p className="text-sm text-muted-foreground mb-1">{t.additionalRevenue}</p>
-              <p className="text-3xl md:text-4xl font-bold text-primary">
-                +{animatedRevenue.toLocaleString("de-DE")}€
+            {/* Additional PROFIT highlight */}
+            <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-5 mb-4 text-center border border-primary/20">
+              <p className="text-sm text-muted-foreground mb-1">{t.additionalProfit}</p>
+              <p className="text-4xl md:text-5xl font-bold text-primary">
+                +{animatedProfit.toLocaleString("de-DE")}€
               </p>
-              <p className="text-xs text-muted-foreground">{t.perYear}</p>
+              <p className="text-xs text-muted-foreground mt-1">{t.perYear}</p>
+            </div>
+
+            {/* Breakeven highlight */}
+            <div className={cn(
+              "rounded-xl p-4 mb-4 text-center",
+              breakevenDays <= 30 
+                ? "bg-green-500/10 border border-green-500/20" 
+                : "bg-muted/50"
+            )}>
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Zap className={cn("h-5 w-5", breakevenDays <= 30 ? "text-green-500" : "text-primary")} />
+                <p className="text-sm font-medium text-foreground">{t.breakeven}</p>
+              </div>
+              <p className={cn(
+                "text-3xl font-bold",
+                breakevenDays <= 30 ? "text-green-600" : "text-foreground"
+              )}>
+                {breakevenDays} {t.days}
+              </p>
+              {breakevenDays <= 30 && (
+                <p className="text-xs text-green-600 mt-1">{t.breakevenFast}</p>
+              )}
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-2 gap-3 mb-4">
               <div className="bg-muted/50 rounded-lg p-3 text-center">
-                <Zap className="h-5 w-5 text-primary mx-auto mb-1" />
-                <p className="text-xs text-muted-foreground">{t.breakeven}</p>
-                <p className="text-lg font-bold text-foreground">{breakevenDays} {t.days}</p>
+                <TrendingUp className="h-4 w-4 text-primary mx-auto mb-1" />
+                <p className="text-xs text-muted-foreground">{t.roi}</p>
+                <p className="text-xl font-bold text-primary">{roiPercentage.toLocaleString("de-DE")}%</p>
               </div>
               <div className="bg-muted/50 rounded-lg p-3 text-center">
-                <TrendingUp className="h-5 w-5 text-primary mx-auto mb-1" />
-                <p className="text-xs text-muted-foreground">{t.roi}</p>
-                <p className="text-lg font-bold text-primary animate-pulse">{roiPercentage.toLocaleString("de-DE")}%</p>
+                <Clock className="h-4 w-4 text-primary mx-auto mb-1" />
+                <p className="text-xs text-muted-foreground">{t.profitMarginLabel}</p>
+                <p className="text-xl font-bold text-foreground">{Math.round(config.profitMargin * 100)}%</p>
               </div>
             </div>
+
+            {/* Cost of inaction */}
+            <div className="bg-destructive/10 rounded-xl p-4 mb-4 border border-destructive/20">
+              <div className="flex items-center gap-2 mb-2">
+                <AlertTriangle className="h-4 w-4 text-destructive" />
+                <p className="text-sm font-semibold text-destructive">{t.costOfInaction}</p>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                {t.weeklyLoss}: <span className="font-bold text-destructive">~{weeklyLostProfit.toLocaleString("de-DE")}€</span>
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">{t.waitingCost}</p>
+            </div>
+
+            {/* Alternatives comparison (collapsible) */}
+            <button
+              onClick={() => setShowAlternatives(!showAlternatives)}
+              className="w-full flex items-center justify-between p-3 bg-muted/30 rounded-lg text-sm text-muted-foreground hover:bg-muted/50 transition-colors mb-4"
+            >
+              <span>{t.alternativesTitle}</span>
+              {showAlternatives ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+            </button>
+            
+            {showAlternatives && (
+              <div className="bg-muted/20 rounded-lg p-4 mb-4 space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Google Ads:</span>
+                  <span className="text-foreground">{config.monthlyMarketingAlternative}€/Monat</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">{t.yearlyAlternative}:</span>
+                  <span className="text-foreground">{yearlyAlternativeCost.toLocaleString("de-DE")}€</span>
+                </div>
+                <div className="border-t border-border pt-2 mt-2 flex justify-between">
+                  <span className="text-primary font-medium">Local Dominator:</span>
+                  <span className="text-primary font-bold">299€ {t.oneTime}</span>
+                </div>
+              </div>
+            )}
 
             {/* CTA */}
             <Button 
