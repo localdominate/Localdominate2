@@ -184,6 +184,7 @@ export function useOnboarding(sessionId: string | null) {
     setState(prev => ({ ...prev, isSaving: true }));
 
     try {
+      // Mark questionnaire as complete
       await supabase
         .from('customers')
         .update({
@@ -191,6 +192,35 @@ export function useOnboarding(sessionId: string | null) {
           questionnaire_completed_at: new Date().toISOString(),
         })
         .eq('id', state.customerId);
+
+      // Get customer email from responses or customer table
+      const { data: customer } = await supabase
+        .from('customers')
+        .select('email')
+        .eq('id', state.customerId)
+        .single();
+
+      // Send confirmation email with questionnaire results
+      // Using your configured recipient email - change this to your email
+      const recipientEmail = 'your-email@example.com'; // TODO: Replace with actual admin email
+      
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-questionnaire-email', {
+          body: {
+            customerId: state.customerId,
+            recipientEmail: recipientEmail,
+          },
+        });
+
+        if (emailError) {
+          console.error('Error sending questionnaire email:', emailError);
+        } else {
+          console.log('Questionnaire completion email sent successfully');
+        }
+      } catch (emailErr) {
+        console.error('Failed to send email:', emailErr);
+        // Don't throw - questionnaire is still complete even if email fails
+      }
 
       setState(prev => ({
         ...prev,
