@@ -5,6 +5,7 @@ import { Slider } from "@/components/ui/slider";
 import { Calculator, TrendingUp, Zap, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick } from "@/lib/dataLayer";
+import { openStripeCheckout } from "@/lib/stripe";
 import { roiBranchConfigs, branchOrder, type ROIBranchConfig } from "@/data/roiCalculatorConfig";
 import { Database } from "@/integrations/supabase/types";
 import { cn } from "@/lib/utils";
@@ -88,7 +89,7 @@ const ROICalculator = () => {
 
   const handleCTAClick = () => {
     trackButtonClick("roi_calculator_cta", "roi_calculator", 299);
-    window.open("https://buy.stripe.com/6oE29t8GN1vM7wAdQQ", "_blank");
+    openStripeCheckout("standard");
   };
 
   const currentBarWidth = 60;
