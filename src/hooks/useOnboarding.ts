@@ -70,6 +70,19 @@ export function useOnboarding(sessionId: string | null) {
 
           if (error) throw error;
 
+          // Send notification about new customer
+          try {
+            await supabase.functions.invoke('send-new-customer-notification', {
+              body: {
+                customerId: newCustomer.id,
+                recipientEmail: 'markuswimboeck@gmail.com',
+              },
+            });
+            console.log('New customer notification sent');
+          } catch (notifyErr) {
+            console.error('Failed to send new customer notification:', notifyErr);
+          }
+
           setState(prev => ({
             ...prev,
             customerId: newCustomer.id,
@@ -201,8 +214,7 @@ export function useOnboarding(sessionId: string | null) {
         .single();
 
       // Send confirmation email with questionnaire results
-      // Using your configured recipient email - change this to your email
-      const recipientEmail = 'your-email@example.com'; // TODO: Replace with actual admin email
+      const recipientEmail = 'markuswimboeck@gmail.com';
       
       try {
         const { error: emailError } = await supabase.functions.invoke('send-questionnaire-email', {

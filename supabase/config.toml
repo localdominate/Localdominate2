@@ -2,3 +2,6 @@ project_id = "minijgyozgjuhqgkmilj"
 
 [functions.send-questionnaire-email]
 verify_jwt = false
+
+[functions.send-new-customer-notification]
+verify_jwt = false
