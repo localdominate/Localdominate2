@@ -28,47 +28,55 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Testimonials - horizontal scroll on mobile, grid on desktop */}
+        <div className="mobile-scroll-container md:grid md:grid-cols-3 md:gap-6">
           {t.testimonials.items.map((testimonial, index) => (
             <div 
               key={index} 
-              className={`card-premium p-6 md:p-8 reveal reveal-delay-${index + 1} ${isVisible ? 'visible' : ''}`}
+              className={`mobile-scroll-item card-premium p-5 md:p-8 reveal reveal-delay-${index + 1} ${isVisible ? 'visible' : ''}`}
             >
               {/* Stars with pulse animation */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3 md:mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star 
                     key={i} 
-                    className="w-5 h-5 fill-highlight text-highlight animate-pulse"
+                    className="w-4 h-4 md:w-5 md:h-5 fill-highlight text-highlight animate-pulse"
                     style={{ animationDelay: `${i * 0.15}s`, animationDuration: '2s' }}
                   />
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="text-foreground text-lg mb-6 leading-relaxed">
+              <blockquote className="text-foreground text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>
 
               {/* Result badge */}
-              <div className="inline-block bg-success/10 text-success font-semibold text-sm px-3 py-1.5 rounded-lg mb-6">
+              <div className="inline-block bg-success/10 text-success font-semibold text-sm px-3 py-1.5 rounded-lg mb-4 md:mb-6">
                 {testimonial.result}
               </div>
 
               {/* Author */}
-              <div className="flex items-center gap-4 pt-4 border-t border-border/50">
+              <div className="flex items-center gap-3 md:gap-4 pt-3 md:pt-4 border-t border-border/50">
                 <img 
                   src={images[index]} 
                   alt={`${testimonial.name} - ${testimonial.business} - Kundenbewertung Local Dominator Google Maps Optimierung`}
-                  className="w-12 h-12 rounded-full object-cover ring-2 ring-border"
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover ring-2 ring-border"
+                  loading="lazy"
                 />
                 <div>
-                  <p className="font-bold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.business}</p>
+                  <p className="font-bold text-foreground text-sm md:text-base">{testimonial.name}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">{testimonial.business}</p>
                 </div>
               </div>
             </div>
+          ))}
+        </div>
+        
+        {/* Mobile scroll indicators */}
+        <div className="scroll-indicator md:hidden">
+          {t.testimonials.items.map((_, index) => (
+            <div key={index} className="scroll-indicator-dot" />
           ))}
         </div>
 

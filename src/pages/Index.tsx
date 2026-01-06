@@ -35,7 +35,7 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen pb-16 md:pb-0">
+    <main className="min-h-screen pb-20 md:pb-0">
       {/* Global UI Components */}
       <ScrollProgress />
       <StickyHeader />
