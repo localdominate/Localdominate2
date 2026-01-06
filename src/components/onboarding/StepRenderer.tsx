@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { QuestionnaireStep } from '@/data/questionnaireConfig';
 import { QuestionCard } from './QuestionCard';
 import { MotivationMessage } from './MotivationMessage';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Sparkles } from 'lucide-react';
 
 interface StepRendererProps {
   step: QuestionnaireStep;
@@ -35,7 +35,7 @@ export function StepRenderer({
   useEffect(() => {
     setFormData(initialData);
     setShowMotivation(true);
-    const timer = setTimeout(() => setShowMotivation(false), 2000);
+    const timer = setTimeout(() => setShowMotivation(false), 2500);
     return () => clearTimeout(timer);
   }, [step.key, initialData]);
 
@@ -67,42 +67,47 @@ export function StepRenderer({
   return (
     <motion.div
       key={step.key}
-      initial={{ opacity: 0, x: 50 }}
+      initial={{ opacity: 0, x: 60 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -50 }}
-      transition={{ duration: 0.3 }}
+      exit={{ opacity: 0, x: -60 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
       className="max-w-2xl mx-auto"
     >
       {/* Motivation Message */}
-      {showMotivation && step.motivationMessage && (
-        <MotivationMessage 
-          message={step.motivationMessage} 
-          showConfetti={showConfetti}
-        />
-      )}
+      <AnimatePresence>
+        {showMotivation && step.motivationMessage && (
+          <MotivationMessage 
+            message={step.motivationMessage} 
+            showConfetti={showConfetti}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Step Header */}
-      <div className="text-center mb-8">
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="text-center mb-10"
+      >
         <motion.h2 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-2xl md:text-3xl font-bold mb-2"
+          className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent"
         >
           {step.title}
         </motion.h2>
         {step.subtitle && (
-          <p className="text-muted-foreground">{step.subtitle}</p>
+          <p className="text-lg text-muted-foreground">{step.subtitle}</p>
         )}
-      </div>
+      </motion.div>
 
       {/* Questions */}
-      <div className="space-y-8 mb-10">
+      <div className="space-y-10 mb-12">
         {step.questions.map((question, index) => (
           <motion.div
             key={question.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: 0.15 + index * 0.1 }}
           >
             <QuestionCard
               question={question}
@@ -115,12 +120,17 @@ export function StepRenderer({
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between items-center pt-6 border-t">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="flex justify-between items-center pt-8 border-t border-border/50"
+      >
         <Button
-          variant="outline"
+          variant="ghost"
           onClick={onPrev}
           disabled={stepIndex === 0 || isSaving}
-          className="gap-2"
+          className="gap-2 text-base px-6 py-5 rounded-xl hover:bg-muted/50"
         >
           <ArrowLeft className="w-4 h-4" />
           Zurück
@@ -129,23 +139,28 @@ export function StepRenderer({
         <Button
           onClick={handleSubmit}
           disabled={!isValid || isSaving}
-          className="gap-2 min-w-[140px]"
+          className="gap-3 min-w-[180px] text-base px-8 py-6 rounded-xl shadow-lg shadow-primary/20 
+                     hover:shadow-xl hover:shadow-primary/30 transition-all disabled:opacity-50"
         >
           {isSaving ? (
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-foreground" />
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+              className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full"
+            />
           ) : isLastStep ? (
             <>
+              <Sparkles className="w-5 h-5" />
               Abschließen
-              <Check className="w-4 h-4" />
             </>
           ) : (
             <>
               Weiter
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-5 h-5" />
             </>
           )}
         </Button>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
