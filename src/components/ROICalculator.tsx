@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { Slider } from "@/components/ui/slider";
-import { Calculator, TrendingUp, Zap, Target, Clock, AlertTriangle, BadgeCheck, ChevronDown, ChevronUp } from "lucide-react";
+import { Calculator, TrendingUp, Zap, Target, Clock, AlertTriangle, BadgeCheck, ChevronDown, ChevronUp, LineChart } from "lucide-react";
+import AmortizationChart from "@/components/AmortizationChart";
 import { Button } from "@/components/ui/button";
 import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
@@ -346,6 +347,21 @@ const ROICalculator = () => {
               {breakevenDays <= 30 && (
                 <p className="text-xs text-green-600 mt-1">{t.breakevenFast}</p>
               )}
+            </div>
+
+            {/* Amortization Chart */}
+            <div className="mb-4 p-4 bg-muted/30 rounded-xl border border-border">
+              <div className="flex items-center gap-2 mb-3">
+                <LineChart className="h-4 w-4 text-primary" />
+                <h4 className="text-sm font-medium text-foreground">
+                  {language === 'de' ? 'Gewinnentwicklung über 90 Tage' : 'Profit Development Over 90 Days'}
+                </h4>
+              </div>
+              <AmortizationChart
+                dailyProfit={dailyProfit}
+                investment={investment}
+                breakevenDays={breakevenDays}
+              />
             </div>
 
             {/* Stats row */}
