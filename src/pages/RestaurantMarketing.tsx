@@ -3,6 +3,7 @@ import { ArrowLeft, Settings, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import MichelinLayout from "@/components/restaurant/layouts/MichelinLayout";
+import SEOHead from "@/components/SEOHead";
 import "../styles/restaurant-michelin.css";
 import "../styles/restaurant-dark-gold.css";
 import "../styles/restaurant-cream-gold.css";
@@ -102,8 +103,34 @@ const RestaurantMarketing = () => {
     }
   };
 
+  const restaurantJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Restaurant Marketing Pro",
+    "description": "Professionelles Online-Marketing für Restaurants. Website, Google Maps Optimierung und digitale Präsenz zum Festpreis.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Local Dominator"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "49",
+      "priceCurrency": "EUR",
+      "priceValidUntil": "2026-12-31"
+    },
+    "serviceType": "Restaurant Marketing"
+  };
+
   return (
     <div className="relative">
+      <SEOHead
+        title="Restaurant Marketing Pro – Mehr Gäste durch digitale Präsenz"
+        description="Professionelles Online-Marketing für Restaurants. Website, Google Maps Optimierung und digitale Präsenz zum Festpreis ab 49€/Monat."
+        canonicalUrl="https://localdominator.de/restaurant-marketing"
+        keywords="Restaurant Marketing, Gastronomie Marketing, Restaurant Website, Google Maps Restaurant, Online Reservierung, Restaurant SEO"
+        lang={language}
+        jsonLd={restaurantJsonLd}
+      />
       {renderVariant()}
 
       {/* Admin Controls - Footer Section */}
