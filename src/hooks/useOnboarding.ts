@@ -13,7 +13,7 @@ interface OnboardingState {
   isComplete: boolean;
 }
 
-export function useOnboarding(sessionId: string | null) {
+export function useOnboarding(sessionId: string | null, isTestMode: boolean = false) {
   const [state, setState] = useState<OnboardingState>({
     customerId: null,
     currentStepIndex: 0,
@@ -26,13 +26,45 @@ export function useOnboarding(sessionId: string | null) {
 
   // Initialize or fetch customer
   useEffect(() => {
-    if (!sessionId) {
+    if (!sessionId && !isTestMode) {
       setState(prev => ({ ...prev, isLoading: false }));
       return;
     }
 
     async function initCustomer() {
       try {
+        // In test mode, create a test customer without stripe session
+        if (isTestMode) {
+          const testSessionId = `test_${Date.now()}`;
+          const { data: newCustomer, error } = await supabase
+            .from('customers')
+            .insert({ stripe_session_id: testSessionId })
+            .select()
+            .single();
+
+          if (error) throw error;
+
+          // Send notification about new customer
+          try {
+            await supabase.functions.invoke('send-new-customer-notification', {
+              body: {
+                customerId: newCustomer.id,
+                recipientEmail: 'markuswimboeck@googlemail.com',
+              },
+            });
+            console.log('New customer notification sent (test mode)');
+          } catch (notifyErr) {
+            console.error('Failed to send new customer notification:', notifyErr);
+          }
+
+          setState(prev => ({
+            ...prev,
+            customerId: newCustomer.id,
+            isLoading: false,
+          }));
+          return;
+        }
+
         // Check if customer already exists
         const { data: existing } = await supabase
           .from('customers')
@@ -75,7 +107,7 @@ export function useOnboarding(sessionId: string | null) {
             await supabase.functions.invoke('send-new-customer-notification', {
               body: {
                 customerId: newCustomer.id,
-                recipientEmail: 'markuswimboeck@gmail.com',
+                recipientEmail: 'markuswimboeck@googlemail.com',
               },
             });
             console.log('New customer notification sent');
@@ -214,7 +246,7 @@ export function useOnboarding(sessionId: string | null) {
         .single();
 
       // Send confirmation email with questionnaire results
-      const recipientEmail = 'markuswimboeck@gmail.com';
+      const recipientEmail = 'markuswimboeck@googlemail.com';
       
       try {
         const { error: emailError } = await supabase.functions.invoke('send-questionnaire-email', {

@@ -6,6 +6,7 @@ import { FileText, Clock, Shield } from 'lucide-react';
 export default function Onboarding() {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get('session_id');
+  const isTestMode = searchParams.get('test') === 'true';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
@@ -57,7 +58,7 @@ export default function Onboarding() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <OnboardingWizard sessionId={sessionId} />
+          <OnboardingWizard sessionId={sessionId} isTestMode={isTestMode} />
         </motion.div>
       </div>
     </div>
