@@ -1,6 +1,6 @@
 export const STRIPE_URLS = {
-  standard: "https://buy.stripe.com/6oU5kDbka60fePsdnh0ZW00",
-  discount: "https://buy.stripe.com/00w8wPgEuewLazc1Ez0ZW01"
+  standard: "https://buy.stripe.com/eVq14n73U74jdLocjd0ZW02",  // 299€
+  discount: "https://buy.stripe.com/aFaeVd2NE3S7dLoab50ZW03"   // 199€
 };
 
 export const STRIPE_PRICE_IDS = {
