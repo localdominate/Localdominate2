@@ -8,9 +8,10 @@ import { Loader2 } from 'lucide-react';
 
 interface OnboardingWizardProps {
   sessionId: string | null;
+  isTestMode?: boolean;
 }
 
-export function OnboardingWizard({ sessionId }: OnboardingWizardProps) {
+export function OnboardingWizard({ sessionId, isTestMode = false }: OnboardingWizardProps) {
   const {
     isLoading,
     isSaving,
@@ -28,7 +29,7 @@ export function OnboardingWizard({ sessionId }: OnboardingWizardProps) {
     prevStep,
     completeQuestionnaire,
     uploadFile,
-  } = useOnboarding(sessionId);
+  } = useOnboarding(sessionId, isTestMode);
 
   if (isLoading) {
     return (
@@ -41,7 +42,7 @@ export function OnboardingWizard({ sessionId }: OnboardingWizardProps) {
     );
   }
 
-  if (!sessionId) {
+  if (!sessionId && !isTestMode) {
     return (
       <div className="min-h-[50vh] flex items-center justify-center">
         <div className="text-center max-w-md">
