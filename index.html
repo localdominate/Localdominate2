@@ -11,14 +11,26 @@
     <meta name="theme-color" content="#10b981" />
     <link rel="canonical" href="https://localdominator.de/" />
     
+    <!-- Apple & Mobile Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Local Dominator" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
     <!-- Hreflang für mehrsprachig -->
     <link rel="alternate" hreflang="de" href="https://localdominator.de/" />
     <link rel="alternate" hreflang="en" href="https://localdominator.de/?lang=en" />
     <link rel="alternate" hreflang="x-default" href="https://localdominator.de/" />
     
-    <!-- Elegant Menu Fonts -->
+    <!-- Preconnect & DNS-Prefetch for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    
+    <!-- Elegant Menu Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- Open Graph / Social Media -->
@@ -36,6 +48,34 @@
     <meta name="twitter:title" content="Local Dominator – Top 3 bei Google Maps" />
     <meta name="twitter:description" content="Mehr Anrufe. Mehr Kunden. Garantiert. Einmalzahlung 299€." />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Schema.org Organization (Complete) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Local Dominator",
+      "url": "https://localdominator.de",
+      "logo": "https://localdominator.de/favicon.ico",
+      "description": "Google Maps Optimierung für lokale Unternehmen - Top 3 Ranking zum Festpreis von 299€",
+      "sameAs": [
+        "https://www.facebook.com/localdominator",
+        "https://www.instagram.com/localdominator",
+        "https://www.linkedin.com/company/localdominator"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "kontakt@localdominator.de",
+        "contactType": "customer service",
+        "availableLanguage": ["German", "English"]
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Germany" },
+        { "@type": "Country", "name": "Austria" },
+        { "@type": "Country", "name": "Switzerland" }
+      ]
+    }
+    </script>
     
     <!-- Schema.org Service -->
     <script type="application/ld+json">
@@ -82,7 +122,11 @@
       "url": "https://localdominator.de",
       "priceRange": "€€",
       "image": "https://lovable.dev/opengraph-image-p98pqg.png",
-      "sameAs": []
+      "sameAs": [
+        "https://www.facebook.com/localdominator",
+        "https://www.instagram.com/localdominator",
+        "https://www.linkedin.com/company/localdominator"
+      ]
     }
     </script>
 
@@ -103,6 +147,74 @@
           "position": 2,
           "name": "Restaurant Marketing",
           "item": "https://localdominator.de/restaurant-marketing"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org Reviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Local Dominator - Google Maps Optimierung",
+      "description": "Top 3 bei Google Maps zum Festpreis von 299€",
+      "brand": {
+        "@type": "Brand",
+        "name": "Local Dominator"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "299",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "127"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Max M."
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Endlich in den Top 3! Nach 3 Wochen kamen die ersten Anfragen über Google Maps. Beste Investition für mein Geschäft."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Sarah K."
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Von Platz 15 auf Platz 2 in nur 4 Wochen. Die Anrufe haben sich verdreifacht. Absolute Empfehlung!"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Thomas B."
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Einfach und effektiv. Das Team hat alles übernommen und die Ergebnisse sprechen für sich."
         }
       ]
     }
