@@ -235,7 +235,7 @@ export const translations = {
         "Psychologische Bilder-Strategie für maximale Klicks",
         "5-Sterne-Automatismus Setup (QR-Codes + Link-Strategie)",
         "Anti-Spam Schutz für deine Bewertungen",
-        "Schritt-für-Schritt Video-Anleitung",
+        "Schritt-für-Schritt Handbuch für die Implementierung",
         "30 Tage E-Mail Support",
       ],
       agencyPrice: "Agentur-Normalpreis:",
@@ -279,7 +279,7 @@ export const translations = {
         },
         {
           question: "Was genau ist im Festpreis enthalten?",
-          answer: "Alles: Komplette Profil-Optimierung, Keyword-Analyse, Bilder-Strategie, Bewertungs-System Setup, Anti-Spam Schutz, Video-Anleitung und 30 Tage E-Mail Support. Keine versteckten Kosten, keine monatlichen Gebühren.",
+          answer: "Alles: Komplette Profil-Optimierung, Keyword-Analyse, Bilder-Strategie, Bewertungs-System Setup, Anti-Spam Schutz, Implementierungs-Handbuch und 30 Tage E-Mail Support. Keine versteckten Kosten, keine monatlichen Gebühren.",
         },
         {
           question: "Was passiert, wenn es nicht funktioniert?",
@@ -291,7 +291,7 @@ export const translations = {
         },
         {
           question: "Muss ich technisch versiert sein?",
-          answer: "Überhaupt nicht. Wir übernehmen die gesamte technische Arbeit. Du gibst uns den Zugang und folgst unserer einfachen Video-Anleitung für den 5-Sterne-Automatismus. Das kann wirklich jeder – auch ohne Vorkenntnisse.",
+          answer: "Überhaupt nicht. Wir übernehmen die gesamte technische Arbeit. Du gibst uns den Zugang und folgst unserem einfachen Handbuch für den 5-Sterne-Automatismus. Das kann wirklich jeder – auch ohne Vorkenntnisse.",
         },
         {
           question: "Wie viel Zeit muss ich investieren?",
