@@ -8,6 +8,8 @@ import { ABTestProvider } from "@/hooks/useABTest";
 import HeatmapTracker from "@/components/HeatmapTracker";
 import Index from "./pages/Index";
 import RestaurantMarketing from "./pages/RestaurantMarketing";
+import Danke from "./pages/Danke";
+import Onboarding from "./pages/Onboarding";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import AGB from "./pages/AGB";
@@ -27,6 +29,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
+              <Route path="/danke" element={<Danke />} />
+              <Route path="/onboarding" element={<Onboarding />} />
               <Route path="/impressum" element={<Impressum />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/agb" element={<AGB />} />
