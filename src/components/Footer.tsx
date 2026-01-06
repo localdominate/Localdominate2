@@ -24,23 +24,23 @@ const Footer = () => {
           </Link>
         </div>
         
-        {/* Legal Links */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-6">
+        {/* Legal Links - touch-friendly spacing */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-8 mb-6">
           <Link 
             to="/impressum"
-            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium"
+            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.imprint}
           </Link>
           <Link 
             to="/datenschutz"
-            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium"
+            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.privacy}
           </Link>
           <Link 
             to="/agb"
-            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium"
+            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.terms}
           </Link>
@@ -48,7 +48,7 @@ const Footer = () => {
             href="https://www.e-recht24.de/muster-widerrufsbelehrung.html" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium"
+            className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.withdrawal}
           </a>

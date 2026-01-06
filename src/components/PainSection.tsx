@@ -191,15 +191,23 @@ const PainSection = () => {
           </p>
         </div>
         
-        {/* Pain cards with individual observers and staggered delays */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        {/* Pain cards - horizontal scroll on mobile, grid on desktop */}
+        <div className="mobile-scroll-container md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
           {t.pain.points.map((point, index) => (
-            <PainCard 
-              key={index} 
-              point={point} 
-              index={index}
-              delayOffset={index * 800}
-            />
+            <div key={index} className="mobile-scroll-item">
+              <PainCard 
+                point={point} 
+                index={index}
+                delayOffset={index * 800}
+              />
+            </div>
+          ))}
+        </div>
+        
+        {/* Mobile scroll indicators */}
+        <div className="scroll-indicator md:hidden">
+          {t.pain.points.map((_, index) => (
+            <div key={index} className="scroll-indicator-dot" />
           ))}
         </div>
         

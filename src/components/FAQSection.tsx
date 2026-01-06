@@ -24,18 +24,18 @@ const FAQSection = () => {
           </h2>
         </div>
         
-        {/* Accordion */}
+        {/* Accordion - touch-optimized */}
         <Accordion type="single" collapsible className="space-y-3">
           {t.faq.items.map((faq, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className={`bg-card border border-border/50 rounded-xl px-6 data-[state=open]:border-primary/50 data-[state=open]:shadow-md transition-all reveal reveal-delay-${Math.min(index + 1, 5)} ${isVisible ? 'visible' : ''}`}
+              className={`bg-card border border-border/50 rounded-xl px-4 md:px-6 data-[state=open]:border-primary/50 data-[state=open]:shadow-md transition-all reveal reveal-delay-${Math.min(index + 1, 5)} ${isVisible ? 'visible' : ''}`}
             >
-              <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline hover:text-primary py-5">
+              <AccordionTrigger className="text-left text-base md:text-lg font-semibold hover:no-underline hover:text-primary py-4 md:py-5 min-h-[56px]">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-5">
+              <AccordionContent className="text-muted-foreground text-sm md:text-base leading-relaxed pb-4 md:pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

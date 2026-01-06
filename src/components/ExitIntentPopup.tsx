@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, Gift, ArrowRight, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { trackExitIntentABTest } from "@/lib/dataLayer";
 import { useExitIntentABTest } from "@/hooks/useExitIntentABTest";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ExitIntentPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,9 +12,12 @@ const ExitIntentPopup = () => {
   const [timeLeft, setTimeLeft] = useState(180); // 3 minutes in seconds
   const { language } = useLanguage();
   const { variant, isLoaded } = useExitIntentABTest();
+  const isMobile = useIsMobile();
+  const scrollTriggeredRef = useRef(false);
 
+  // Desktop: Mouse leave trigger
   useEffect(() => {
-    if (!isLoaded) return;
+    if (!isLoaded || isMobile) return;
     
     const alreadyShown = sessionStorage.getItem("exitIntentShown");
     if (alreadyShown) {
@@ -38,7 +42,41 @@ const ExitIntentPopup = () => {
       clearTimeout(timer);
       document.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [hasShown, isLoaded, variant]);
+  }, [hasShown, isLoaded, variant, isMobile]);
+
+  // Mobile: Scroll-based trigger at 70% scroll depth
+  useEffect(() => {
+    if (!isLoaded || !isMobile || hasShown || scrollTriggeredRef.current) return;
+    
+    const alreadyShown = sessionStorage.getItem("exitIntentShown");
+    if (alreadyShown) {
+      setHasShown(true);
+      return;
+    }
+
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollProgress = window.scrollY / scrollHeight;
+      
+      if (scrollProgress >= 0.7 && !scrollTriggeredRef.current) {
+        scrollTriggeredRef.current = true;
+        setIsVisible(true);
+        setHasShown(true);
+        sessionStorage.setItem("exitIntentShown", "true");
+        trackExitIntentABTest(variant, "view");
+      }
+    };
+
+    // Delay adding listener
+    const timer = setTimeout(() => {
+      window.addEventListener("scroll", handleScroll, { passive: true });
+    }, 10000);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasShown, isLoaded, variant, isMobile]);
 
   // Countdown timer logic
   useEffect(() => {
@@ -148,12 +186,13 @@ const ExitIntentPopup = () => {
         />
         
         <div className="relative bg-card rounded-2xl shadow-2xl max-w-md w-full p-8 animate-scale-in border-2 border-success">
-          <button
-            onClick={handleClose}
-            className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <X className="w-6 h-6" />
-          </button>
+        <button
+          onClick={handleClose}
+          className="absolute top-3 right-3 p-2 text-muted-foreground hover:text-foreground transition-colors touch-target"
+          aria-label="Close popup"
+        >
+          <X className="w-6 h-6" />
+        </button>
 
           <div className={`flex items-center justify-center gap-2 mb-4 py-3 px-4 rounded-lg ${
             isCritical ? "bg-destructive/20 text-destructive" : 
