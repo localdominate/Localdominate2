@@ -22,8 +22,14 @@ export interface ROIBranchConfig {
     step: number;
     default: number;
   };
-  visibilityBoost: number;
-  daysMultiplier: number; // How many days to multiply metric1 to get monthly value
+  visibilityBoost: {
+    conservative: number;
+    realistic: number;
+    optimistic: number;
+  };
+  profitMargin: number;
+  monthlyMarketingAlternative: number;
+  daysMultiplier: number;
 }
 
 export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
@@ -47,7 +53,9 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
       step: 5,
       default: 35,
     },
-    visibilityBoost: 0.15,
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.25,
+    monthlyMarketingAlternative: 800,
     daysMultiplier: 30,
   },
   beauty_wellness: {
@@ -70,8 +78,10 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
       step: 10,
       default: 60,
     },
-    visibilityBoost: 0.15,
-    daysMultiplier: 4.33, // weeks per month
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.45,
+    monthlyMarketingAlternative: 600,
+    daysMultiplier: 4.33,
   },
   crafts: {
     id: 'crafts',
@@ -93,8 +103,10 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
       step: 50,
       default: 500,
     },
-    visibilityBoost: 0.15,
-    daysMultiplier: 1, // already per month
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.30,
+    monthlyMarketingAlternative: 1000,
+    daysMultiplier: 1,
   },
   health: {
     id: 'health',
@@ -116,8 +128,10 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
       step: 10,
       default: 100,
     },
-    visibilityBoost: 0.15,
-    daysMultiplier: 22, // working days per month
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.40,
+    monthlyMarketingAlternative: 1200,
+    daysMultiplier: 22,
   },
   retail: {
     id: 'retail',
@@ -139,8 +153,10 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
       step: 5,
       default: 45,
     },
-    visibilityBoost: 0.15,
-    daysMultiplier: 26, // days open per month
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.30,
+    monthlyMarketingAlternative: 700,
+    daysMultiplier: 26,
   },
   fitness: {
     id: 'fitness',
@@ -162,8 +178,10 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
       step: 5,
       default: 40,
     },
-    visibilityBoost: 0.15,
-    daysMultiplier: 12, // multiply by 12 for yearly value (LTV)
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.65,
+    monthlyMarketingAlternative: 900,
+    daysMultiplier: 12,
   },
   services: {
     id: 'services',
@@ -185,8 +203,10 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
       step: 50,
       default: 300,
     },
-    visibilityBoost: 0.15,
-    daysMultiplier: 1, // already per month
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.50,
+    monthlyMarketingAlternative: 1100,
+    daysMultiplier: 1,
   },
 };
 
@@ -199,3 +219,5 @@ export const branchOrder: BusinessCategory[] = [
   'fitness',
   'services',
 ];
+
+export type ScenarioType = 'conservative' | 'realistic' | 'optimistic';
