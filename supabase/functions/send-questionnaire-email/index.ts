@@ -23,10 +23,58 @@ const categoryLabels: Record<string, string> = {
   services: "Dienstleistungen",
 };
 
+// GMB field labels for copy-paste friendly output
+const gmbFieldLabels: Record<string, string> = {
+  business_name: "Unternehmensname",
+  owner_name: "Inhaber",
+  opening_date_year: "Eröffnungsjahr",
+  opening_date_month: "Eröffnungsmonat",
+  street: "Straße",
+  postal_code: "PLZ",
+  city: "Stadt",
+  address_extra: "Adresszusatz",
+  has_physical_location: "Standorttyp",
+  service_areas: "Einzugsgebiet",
+  service_radius_km: "Einsatzradius (km)",
+  hours_monday: "Montag",
+  hours_tuesday: "Dienstag",
+  hours_wednesday: "Mittwoch",
+  hours_thursday: "Donnerstag",
+  hours_friday: "Freitag",
+  hours_saturday: "Samstag",
+  hours_sunday: "Sonntag",
+  special_hours_note: "Sonderöffnungszeiten",
+  phone_primary: "Telefon (primär)",
+  phone_secondary: "Telefon (zusätzlich)",
+  email: "E-Mail",
+  whatsapp_number: "WhatsApp",
+  website_url: "Website",
+  booking_url: "Termin-URL",
+  menu_url: "Menü-URL",
+  order_url: "Bestell-URL",
+  instagram_url: "Instagram",
+  facebook_url: "Facebook",
+  linkedin_url: "LinkedIn",
+  youtube_url: "YouTube",
+  tiktok_url: "TikTok",
+  twitter_url: "X (Twitter)",
+  pinterest_url: "Pinterest",
+  business_description: "Beschreibung (GMB)",
+  unique_selling_points: "USPs (intern)",
+  gmb_main_category: "Hauptkategorie",
+  gmb_secondary_categories: "Nebenkategorien",
+  current_rating: "Aktuelle Bewertung",
+  review_count: "Anzahl Bewertungen",
+  has_gmb_profile: "GMB-Status",
+  gmb_profile_url: "GMB-Profil-URL",
+  main_challenges: "Herausforderungen",
+  main_goal: "Hauptziel",
+  competitor_name: "Konkurrent",
+};
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("send-questionnaire-email function called");
   
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -40,12 +88,10 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("customerId and recipientEmail are required");
     }
 
-    // Initialize Supabase client
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    // Fetch customer data
     const { data: customer, error: customerError } = await supabase
       .from("customers")
       .select("*")
@@ -57,9 +103,6 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Customer not found");
     }
 
-    console.log("Customer data:", customer);
-
-    // Fetch questionnaire responses
     const { data: responses, error: responsesError } = await supabase
       .from("questionnaire_responses")
       .select("step_key, response_data")
@@ -70,83 +113,102 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Failed to fetch questionnaire responses");
     }
 
-    console.log("Responses count:", responses?.length);
-
-    // Format responses for email
-    const formattedResponses = responses?.map((r) => {
+    // Build copy-paste friendly sections
+    const sections: string[] = [];
+    
+    responses?.forEach((r) => {
       const data = r.response_data as Record<string, unknown>;
-      return `
-        <tr style="border-bottom: 1px solid #e5e7eb;">
-          <td style="padding: 12px; font-weight: bold; background-color: #f9fafb; width: 200px;">
-            ${formatStepKey(r.step_key)}
-          </td>
-          <td style="padding: 12px;">
-            ${formatResponseData(data)}
-          </td>
-        </tr>
-      `;
-    }).join("");
+      const stepTitle = formatStepKey(r.step_key);
+      
+      const fields = Object.entries(data)
+        .filter(([_, value]) => value !== undefined && value !== null && value !== "")
+        .map(([key, value]) => {
+          const label = gmbFieldLabels[key] || key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+          const formattedValue = Array.isArray(value) ? value.join(", ") : String(value);
+          return `
+            <tr>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e5e7eb; font-weight: 600; color: #374151; width: 200px; vertical-align: top;">
+                ${label}
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e5e7eb; font-family: 'Courier New', monospace; background: #f9fafb;">
+                ${formattedValue}
+              </td>
+            </tr>
+          `;
+        })
+        .join("");
+      
+      if (fields) {
+        sections.push(`
+          <div style="margin-bottom: 24px;">
+            <h3 style="margin: 0 0 12px 0; padding: 10px 15px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; border-radius: 8px 8px 0 0; font-size: 16px;">
+              📋 ${stepTitle}
+            </h3>
+            <table style="width: 100%; border-collapse: collapse; border: 1px solid #e5e7eb; border-top: none;">
+              ${fields}
+            </table>
+          </div>
+        `);
+      }
+    });
 
-    // Create email HTML
     const emailHtml = `
       <!DOCTYPE html>
       <html>
         <head>
           <meta charset="utf-8">
-          <title>Fragebogen abgeschlossen</title>
+          <title>Fragebogen - Copy-Paste Ready</title>
         </head>
-        <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; background-color: #f3f4f6;">
-          <div style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); padding: 30px; border-radius: 12px 12px 0 0;">
+        <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f3f4f6;">
+          <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 30px; border-radius: 12px 12px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 24px;">
-              🎉 Neuer Fragebogen abgeschlossen!
+              ✅ Fragebogen abgeschlossen - Copy-Paste Ready
             </h1>
-            <p style="color: rgba(255,255,255,0.9); margin: 10px 0 0 0;">
-              Ein Kunde hat seinen Fragebogen erfolgreich ausgefüllt
+            <p style="color: rgba(255,255,255,0.9); margin: 10px 0 0 0; font-size: 16px;">
+              Alle Daten für Google Business Profile
             </p>
           </div>
           
           <div style="background-color: white; padding: 30px; border-radius: 0 0 12px 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <div style="background-color: #f0f9ff; border-left: 4px solid #3b82f6; padding: 15px; margin-bottom: 25px; border-radius: 0 8px 8px 0;">
-              <h2 style="margin: 0 0 10px 0; color: #1e40af; font-size: 18px;">
-                📋 Kundendaten
-              </h2>
-              <p style="margin: 5px 0; color: #374151;">
-                <strong>Firma:</strong> ${customer.business_name || "Nicht angegeben"}
-              </p>
-              <p style="margin: 5px 0; color: #374151;">
-                <strong>E-Mail:</strong> ${customer.email || "Nicht angegeben"}
-              </p>
-              <p style="margin: 5px 0; color: #374151;">
-                <strong>Telefon:</strong> ${customer.phone || "Nicht angegeben"}
-              </p>
-              <p style="margin: 5px 0; color: #374151;">
-                <strong>Adresse:</strong> ${customer.address || "Nicht angegeben"}
-              </p>
-              <p style="margin: 5px 0; color: #374151;">
-                <strong>Branche:</strong> ${categoryLabels[customer.business_category] || customer.business_category || "Nicht angegeben"}
-              </p>
-              <p style="margin: 5px 0; color: #374151;">
-                <strong>Abgeschlossen am:</strong> ${new Date(customer.questionnaire_completed_at || new Date()).toLocaleString("de-DE", { 
-                  day: "2-digit",
-                  month: "2-digit", 
-                  year: "numeric",
-                  hour: "2-digit",
-                  minute: "2-digit"
-                })}
+            
+            <!-- Quick Summary -->
+            <div style="background: #ecfdf5; border: 2px solid #10b981; padding: 20px; margin-bottom: 30px; border-radius: 12px;">
+              <h2 style="margin: 0 0 15px 0; color: #065f46; font-size: 18px;">🏢 Schnellübersicht</h2>
+              <table style="width: 100%;">
+                <tr>
+                  <td style="padding: 5px 0; font-weight: 600; width: 150px;">Firma:</td>
+                  <td style="font-family: 'Courier New', monospace; font-size: 15px;">${customer.business_name || "—"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 5px 0; font-weight: 600;">Branche:</td>
+                  <td>${categoryLabels[customer.business_category] || customer.business_category || "—"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 5px 0; font-weight: 600;">E-Mail:</td>
+                  <td style="font-family: 'Courier New', monospace;">${customer.email || "—"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 5px 0; font-weight: 600;">Telefon:</td>
+                  <td style="font-family: 'Courier New', monospace;">${customer.phone || "—"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 5px 0; font-weight: 600;">Abgeschlossen:</td>
+                  <td>${new Date(customer.questionnaire_completed_at || new Date()).toLocaleString("de-DE")}</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- All Sections -->
+            ${sections.join("") || "<p>Keine Antworten gefunden</p>"}
+
+            <div style="margin-top: 30px; padding: 20px; background: #fef3c7; border-radius: 12px; border: 2px solid #f59e0b;">
+              <p style="margin: 0; color: #92400e; font-size: 14px;">
+                <strong>💡 Tipp:</strong> Alle Felder mit Monospace-Schrift sind copy-paste ready für Google Business Profile.
               </p>
             </div>
 
-            <h2 style="color: #1f2937; font-size: 18px; margin-bottom: 15px;">
-              📝 Fragebogen-Antworten
-            </h2>
-            
-            <table style="width: 100%; border-collapse: collapse; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
-              ${formattedResponses || "<tr><td style='padding: 20px; text-align: center; color: #6b7280;'>Keine Antworten gefunden</td></tr>"}
-            </table>
-
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
-              <p style="color: #6b7280; font-size: 14px; margin: 0;">
-                Diese E-Mail wurde automatisch generiert.<br>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
+              <p style="color: #6b7280; font-size: 12px; margin: 0;">
                 Kunde-ID: ${customerId}
               </p>
             </div>
@@ -155,7 +217,6 @@ const handler = async (req: Request): Promise<Response> => {
       </html>
     `;
 
-    // Send email using Resend API
     const emailResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -165,14 +226,13 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "Fragebogen <onboarding@resend.dev>",
         to: [recipientEmail],
-        subject: `Neuer Fragebogen abgeschlossen: ${customer.business_name || "Unbekannter Kunde"}`,
+        subject: `✅ GMB-Ready: ${customer.business_name || "Neuer Kunde"} - Fragebogen komplett`,
         html: emailHtml,
       }),
     });
 
     const emailData = await emailResponse.json();
-
-    console.log("Email sent successfully:", emailData);
+    console.log("Email sent:", emailData);
 
     if (!emailResponse.ok) {
       throw new Error(emailData.message || "Failed to send email");
@@ -184,63 +244,37 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : "Unknown error";
-    console.error("Error in send-questionnaire-email function:", errorMessage);
-    return new Response(
-      JSON.stringify({ error: errorMessage }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
+    console.error("Error:", errorMessage);
+    return new Response(JSON.stringify({ error: errorMessage }), {
+      status: 500,
+      headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
   }
 };
 
 function formatStepKey(key: string): string {
   const labels: Record<string, string> = {
-    basic_info: "Grundinformationen",
-    contact: "Kontaktdaten",
+    business_info: "Unternehmensdaten",
+    address: "Adresse",
+    service_area: "Einzugsgebiet",
     opening_hours: "Öffnungszeiten",
-    services: "Dienstleistungen",
-    branding: "Branding & Design",
-    photos: "Fotos & Bilder",
-    target_audience: "Zielgruppe",
-    competition: "Wettbewerb",
-    goals: "Ziele",
-    additional_info: "Zusätzliche Infos",
-    menu: "Speisekarte",
-    ambiance: "Ambiente",
-    specialties: "Spezialitäten",
-    treatments: "Behandlungen",
-    products: "Produkte",
-    equipment: "Ausstattung",
-    certifications: "Zertifizierungen",
-    insurance: "Versicherungen",
+    contact: "Kontaktdaten",
+    website_links: "Website & Links",
+    social_media: "Social Media",
+    description: "Beschreibung",
+    gmb_categories: "Google Kategorien",
+    gastro_attributes: "Restaurant-Attribute",
+    beauty_attributes: "Salon-Attribute",
+    crafts_attributes: "Handwerker-Attribute",
+    health_attributes: "Praxis-Attribute",
+    retail_attributes: "Geschäfts-Attribute",
+    fitness_attributes: "Fitness-Attribute",
+    services_attributes: "Dienstleistungs-Attribute",
+    current_gmb_status: "GMB-Status",
+    goals_challenges: "Ziele & Herausforderungen",
+    photos_assets: "Fotos & Assets",
   };
   return labels[key] || key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-}
-
-function formatResponseData(data: Record<string, unknown>): string {
-  if (!data || Object.keys(data).length === 0) {
-    return "<em style='color: #9ca3af;'>Keine Angaben</em>";
-  }
-
-  return Object.entries(data)
-    .filter(([_, value]) => value !== undefined && value !== null && value !== "")
-    .map(([key, value]) => {
-      const formattedKey = key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-      let formattedValue: string;
-
-      if (Array.isArray(value)) {
-        formattedValue = value.join(", ");
-      } else if (typeof value === "object") {
-        formattedValue = JSON.stringify(value, null, 2);
-      } else {
-        formattedValue = String(value);
-      }
-
-      return `<div style="margin-bottom: 8px;"><strong style="color: #4b5563;">${formattedKey}:</strong> ${formattedValue}</div>`;
-    })
-    .join("");
 }
 
 serve(handler);

@@ -4,7 +4,6 @@ import { Question } from '@/data/questionnaireConfig';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Slider } from '@/components/ui/slider';
-import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Upload, Check, Image, Sparkles } from 'lucide-react';
 
@@ -51,6 +50,23 @@ export function QuestionCard({ question, value, onChange, onFileUpload }: Questi
     }
   }, [onFileUpload, onChange]);
 
+  // Character counter for textarea with maxLength
+  const renderCharacterCount = () => {
+    if (question.type !== 'textarea' || !question.maxLength) return null;
+    const currentLength = ((value as string) || '').length;
+    const isNearLimit = currentLength > question.maxLength * 0.8;
+    const isOverLimit = currentLength > question.maxLength;
+    
+    return (
+      <div className={`text-sm mt-2 text-right font-medium ${
+        isOverLimit ? 'text-destructive' : isNearLimit ? 'text-amber-500' : 'text-muted-foreground'
+      }`}>
+        {currentLength} / {question.maxLength} Zeichen
+        {isOverLimit && <span className="ml-2">⚠️ Zu lang!</span>}
+      </div>
+    );
+  };
+
   const renderInput = () => {
     switch (question.type) {
       case 'text':
@@ -77,16 +93,81 @@ export function QuestionCard({ question, value, onChange, onFileUpload }: Questi
           </div>
         );
 
+      case 'time':
+        return (
+          <div className="relative group">
+            <Input
+              type="text"
+              value={(value as string) || ''}
+              onChange={(e) => onChange(e.target.value)}
+              placeholder={question.placeholder || '09:00 - 18:00'}
+              className="text-lg py-7 px-5 rounded-xl border-2 border-border bg-background
+                         focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all
+                         placeholder:text-muted-foreground/50 font-mono"
+            />
+            {value && (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                className="absolute right-4 top-1/2 -translate-y-1/2"
+              >
+                <Check className="w-5 h-5 text-primary" />
+              </motion.div>
+            )}
+          </div>
+        );
+
       case 'textarea':
         return (
-          <Textarea
-            value={(value as string) || ''}
-            onChange={(e) => onChange(e.target.value)}
-            placeholder={question.placeholder}
-            className="min-h-[140px] text-lg p-5 rounded-xl border-2 border-border bg-background
-                       focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all resize-none
-                       placeholder:text-muted-foreground/50"
-          />
+          <div>
+            <Textarea
+              value={(value as string) || ''}
+              onChange={(e) => onChange(e.target.value)}
+              placeholder={question.placeholder}
+              className={`min-h-[140px] text-lg p-5 rounded-xl border-2 bg-background
+                         focus:ring-4 focus:ring-primary/10 transition-all resize-none
+                         placeholder:text-muted-foreground/50
+                         ${question.maxLength && ((value as string) || '').length > question.maxLength 
+                           ? 'border-destructive focus:border-destructive' 
+                           : 'border-border focus:border-primary'}`}
+            />
+            {renderCharacterCount()}
+          </div>
+        );
+
+      case 'toggle':
+        const isToggled = value === true || value === 'yes';
+        return (
+          <div className="flex gap-4">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => onChange('yes')}
+              className={`flex-1 p-5 rounded-xl border-2 text-center transition-all duration-200
+                ${isToggled
+                  ? 'border-primary bg-primary/5 shadow-lg shadow-primary/10'
+                  : 'border-border hover:border-primary/50 hover:bg-muted/30'
+                }`}
+            >
+              <span className={`font-medium text-lg ${isToggled ? 'text-primary' : 'text-foreground'}`}>
+                Ja
+              </span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => onChange('no')}
+              className={`flex-1 p-5 rounded-xl border-2 text-center transition-all duration-200
+                ${value === 'no'
+                  ? 'border-primary bg-primary/5 shadow-lg shadow-primary/10'
+                  : 'border-border hover:border-primary/50 hover:bg-muted/30'
+                }`}
+            >
+              <span className={`font-medium text-lg ${value === 'no' ? 'text-primary' : 'text-foreground'}`}>
+                Nein
+              </span>
+            </motion.button>
+          </div>
         );
 
       case 'select':
@@ -300,11 +381,16 @@ export function QuestionCard({ question, value, onChange, onFileUpload }: Questi
       className="space-y-4"
     >
       <div className="space-y-2">
-        <Label className="text-xl font-semibold text-foreground flex items-center gap-2">
+        <Label className="text-xl font-semibold text-foreground flex items-center gap-2 flex-wrap">
           {question.question}
           {question.required && (
             <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
               Pflicht
+            </span>
+          )}
+          {question.gmbField && !question.gmbField.startsWith('Intern') && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-600 font-medium">
+              GMB: {question.gmbField}
             </span>
           )}
         </Label>
