@@ -2,9 +2,23 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const Impressum = () => {
   const { language } = useLanguage();
+
+  const seoContent = {
+    de: {
+      title: "Impressum",
+      description: "Impressum und rechtliche Angaben von Local Dominator - Ihr Partner für Google Maps Optimierung."
+    },
+    en: {
+      title: "Legal Notice",
+      description: "Legal notice and imprint of Local Dominator - Your partner for Google Maps optimization."
+    }
+  };
+
+  const seo = seoContent[language];
 
   const content = {
     de: {
@@ -82,8 +96,16 @@ Email: [Your Email Address]`
   const t = content[language];
 
   return (
-    <main className="min-h-screen bg-background py-12 px-4">
-      <div className="container max-w-3xl">
+    <>
+      <SEOHead 
+        title={seo.title}
+        description={seo.description}
+        noindex={true}
+        lang={language}
+        canonicalUrl={`https://localdominator.de/impressum`}
+      />
+      <main className="min-h-screen bg-background py-12 px-4">
+        <div className="container max-w-3xl">
         <Link to="/">
           <Button variant="ghost" className="mb-8 group">
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
@@ -111,6 +133,7 @@ Email: [Your Email Address]`
         </p>
       </div>
     </main>
+    </>
   );
 };
 

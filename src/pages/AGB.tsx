@@ -2,9 +2,23 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const AGB = () => {
   const { language } = useLanguage();
+
+  const seoContent = {
+    de: {
+      title: "Allgemeine Geschäftsbedingungen",
+      description: "AGB von Local Dominator - Unsere allgemeinen Geschäftsbedingungen für Google Maps Optimierung."
+    },
+    en: {
+      title: "Terms and Conditions",
+      description: "Terms and conditions of Local Dominator - Our general terms for Google Maps optimization services."
+    }
+  };
+
+  const seo = seoContent[language];
 
   const content = {
     de: {
@@ -150,8 +164,16 @@ By agreeing to the start of contract execution before the expiry of the withdraw
   const t = content[language];
 
   return (
-    <main className="min-h-screen bg-background py-12 px-4">
-      <div className="container max-w-3xl">
+    <>
+      <SEOHead 
+        title={seo.title}
+        description={seo.description}
+        noindex={true}
+        lang={language}
+        canonicalUrl={`https://localdominator.de/agb`}
+      />
+      <main className="min-h-screen bg-background py-12 px-4">
+        <div className="container max-w-3xl">
         <Link to="/">
           <Button variant="ghost" className="mb-8 group">
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
@@ -179,6 +201,7 @@ By agreeing to the start of contract execution before the expiry of the withdraw
         </p>
       </div>
     </main>
+    </>
   );
 };
 

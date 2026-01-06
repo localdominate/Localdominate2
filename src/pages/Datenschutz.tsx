@@ -2,9 +2,23 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const Datenschutz = () => {
   const { language } = useLanguage();
+
+  const seoContent = {
+    de: {
+      title: "Datenschutzerklärung",
+      description: "Datenschutzerklärung von Local Dominator - Informationen zum Umgang mit Ihren personenbezogenen Daten."
+    },
+    en: {
+      title: "Privacy Policy",
+      description: "Privacy policy of Local Dominator - Information about how we handle your personal data."
+    }
+  };
+
+  const seo = seoContent[language];
 
   const content = {
     de: {
@@ -152,8 +166,16 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
   const t = content[language];
 
   return (
-    <main className="min-h-screen bg-background py-12 px-4">
-      <div className="container max-w-3xl">
+    <>
+      <SEOHead 
+        title={seo.title}
+        description={seo.description}
+        noindex={true}
+        lang={language}
+        canonicalUrl={`https://localdominator.de/datenschutz`}
+      />
+      <main className="min-h-screen bg-background py-12 px-4">
+        <div className="container max-w-3xl">
         <Link to="/">
           <Button variant="ghost" className="mb-8 group">
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
@@ -181,6 +203,7 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
         </p>
       </div>
     </main>
+    </>
   );
 };
 
