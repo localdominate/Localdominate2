@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { ArrowRight } from "lucide-react";
 import { trackButtonClick } from "@/lib/dataLayer";
+import { openStripeCheckout } from "@/lib/stripe";
 
 const MobileStickyBar = () => {
   const { language, t } = useLanguage();
@@ -9,10 +10,7 @@ const MobileStickyBar = () => {
 
   const handleClick = () => {
     trackButtonClick("mobile_sticky_cta", "mobile_sticky_bar", 299);
-    const offerSection = document.getElementById("offer");
-    if (offerSection) {
-      offerSection.scrollIntoView({ behavior: "smooth" });
-    }
+    openStripeCheckout("standard");
   };
 
   return (

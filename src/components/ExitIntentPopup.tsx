@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { trackExitIntentABTest } from "@/lib/dataLayer";
 import { useExitIntentABTest } from "@/hooks/useExitIntentABTest";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { openStripeCheckout } from "@/lib/stripe";
 
 const ExitIntentPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -109,11 +110,7 @@ const ExitIntentPopup = () => {
 
   const handleClaim = () => {
     trackExitIntentABTest(variant, "click");
-    
-    const offerSection = document.getElementById("offer");
-    if (offerSection) {
-      offerSection.scrollIntoView({ behavior: "smooth" });
-    }
+    openStripeCheckout("discount");
     setIsVisible(false);
   };
 

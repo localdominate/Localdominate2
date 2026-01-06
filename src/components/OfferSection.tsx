@@ -6,6 +6,7 @@ import AnimatedPriceCounter from "@/components/AnimatedPriceCounter";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { trackButtonClick } from "@/lib/dataLayer";
+import { openStripeCheckout } from "@/lib/stripe";
 
 const OfferSection = () => {
   const { t } = useLanguage();
@@ -13,6 +14,7 @@ const OfferSection = () => {
   
   const handleCtaClick = () => {
     trackButtonClick("offer_cta", "offer_section", 299);
+    openStripeCheckout("standard");
   };
 
   return (
