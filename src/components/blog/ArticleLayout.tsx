@@ -18,9 +18,10 @@ import {
 interface ArticleLayoutProps {
   article: BlogArticle;
   children: ReactNode;
+  additionalSchema?: object;
 }
 
-const ArticleLayout = ({ article, children }: ArticleLayoutProps) => {
+const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutProps) => {
   const relatedArticles = getRelatedArticles(article.slug, 3);
   
   const articleSchema = {
@@ -45,6 +46,11 @@ const ArticleLayout = ({ article, children }: ArticleLayoutProps) => {
     }
   };
 
+  // Combine Article schema with additional schema (like FAQPage)
+  const combinedSchema = additionalSchema 
+    ? [articleSchema, additionalSchema]
+    : articleSchema;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -52,7 +58,7 @@ const ArticleLayout = ({ article, children }: ArticleLayoutProps) => {
         description={article.metaDescription}
         canonicalUrl={`https://localdominator.de/blog/${article.slug}`}
         keywords={article.keywords.join(", ")}
-        jsonLd={articleSchema}
+        jsonLd={combinedSchema}
       />
       
       {/* Header */}

@@ -18,6 +18,9 @@ import GoogleBewertungen from "./pages/blog/GoogleBewertungen";
 import LocalSeoRestaurant from "./pages/blog/LocalSeoRestaurant";
 import GoogleMyBusiness from "./pages/blog/GoogleMyBusiness";
 import LokaleSeo2026 from "./pages/blog/LokaleSeo2026";
+import NapKonsistenz from "./pages/blog/NapKonsistenz";
+import LocalSeoHandwerker from "./pages/blog/LocalSeoHandwerker";
+import LocalSeoAuditCheckliste from "./pages/blog/LocalSeoAuditCheckliste";
 import Analytics from "./pages/Analytics";
 import ABTestDashboard from "./pages/ABTestDashboard";
 import NotFound from "./pages/NotFound";
@@ -48,6 +51,9 @@ const App = () => (
               <Route path="/blog/local-seo-fuer-restaurants" element={<LocalSeoRestaurant />} />
               <Route path="/blog/google-my-business-optimieren" element={<GoogleMyBusiness />} />
               <Route path="/blog/lokale-suchmaschinenoptimierung-2026" element={<LokaleSeo2026 />} />
+              <Route path="/blog/nap-konsistenz-local-seo" element={<NapKonsistenz />} />
+              <Route path="/blog/local-seo-handwerker" element={<LocalSeoHandwerker />} />
+              <Route path="/blog/local-seo-audit-checkliste" element={<LocalSeoAuditCheckliste />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
