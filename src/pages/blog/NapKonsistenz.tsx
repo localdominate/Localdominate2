@@ -1,7 +1,9 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
+import napKonsistenzImg from "@/assets/blog/nap-konsistenz.jpg";
 import { 
   CheckCircle, 
   AlertTriangle, 
@@ -120,6 +122,12 @@ const NapKonsistenz = () => {
         deine Adresse oder Telefonnummer in verschiedenen Verzeichnissen unterschiedlich sind, verliert 
         Google das Vertrauen in deine Daten – und dein Ranking leidet.
       </p>
+
+      <BlogImage 
+        src={napKonsistenzImg} 
+        alt="NAP-Konsistenz über verschiedene Verzeichnisse"
+        caption="Konsistente NAP-Daten sind entscheidend für lokales Ranking"
+      />
 
       {/* Was ist NAP */}
       <section id="was-ist-nap" className="mb-12">

@@ -1,9 +1,11 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { UtensilsCrossed, Camera, Clock, MapPin, Star, Lightbulb } from "lucide-react";
+import localSeoRestaurantImg from "@/assets/blog/local-seo-restaurant.jpg";
 
 const LocalSeoRestaurant = () => {
   const { language } = useLanguage();
@@ -162,6 +164,12 @@ const LocalSeoRestaurant = () => {
       <p className="text-xl leading-relaxed mb-8">
         <strong>{t.intro.keyword}</strong> {t.intro.text}
       </p>
+
+      <BlogImage 
+        src={localSeoRestaurantImg} 
+        alt={language === "de" ? "Restaurant Food-Fotografie für Google" : "Restaurant food photography for Google"}
+        caption={language === "de" ? "Appetitliche Fotos sind entscheidend für den Erfolg auf Google" : "Appetizing photos are crucial for success on Google"}
+      />
 
       <section id="ranking-faktoren" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section1.title}</h2>

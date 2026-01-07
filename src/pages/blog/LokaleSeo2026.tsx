@@ -1,9 +1,11 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Sparkles, Mic, Search, Smartphone, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";
+import lokaleSeo2026Img from "@/assets/blog/lokale-seo-2026.jpg";
 
 const LokaleSeo2026 = () => {
   const { language } = useLanguage();
@@ -182,6 +184,12 @@ const LokaleSeo2026 = () => {
       <p className="text-xl leading-relaxed mb-8">
         <strong>{t.intro}</strong>
       </p>
+
+      <BlogImage 
+        src={lokaleSeo2026Img} 
+        alt={language === "de" ? "Lokale SEO Trends 2026" : "Local SEO Trends 2026"}
+        caption={language === "de" ? "KI und Voice Search prägen die lokale Suche der Zukunft" : "AI and Voice Search shape the future of local search"}
+      />
 
       <section id="trends" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section1.title}</h2>

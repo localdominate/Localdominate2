@@ -1,9 +1,11 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle } from "lucide-react";
+import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
@@ -162,6 +164,12 @@ const GoogleBewertungen = () => {
       <p className="text-xl leading-relaxed mb-8">
         <strong>{t.intro.stat}</strong> {t.intro.text}
       </p>
+
+      <BlogImage 
+        src={googleBewertungenImg} 
+        alt={language === "de" ? "Kunden hinterlassen Google Bewertungen" : "Customers leaving Google reviews"}
+        caption={language === "de" ? "Zufriedene Kunden sind der Schlüssel zu mehr Bewertungen" : "Satisfied customers are the key to more reviews"}
+      />
 
       <section id="wichtigkeit" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">

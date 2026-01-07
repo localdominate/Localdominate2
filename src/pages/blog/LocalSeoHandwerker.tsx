@@ -1,7 +1,9 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
+import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
 import { 
   CheckCircle, 
   AlertTriangle, 
@@ -132,6 +134,12 @@ const LocalSeoHandwerker = () => {
         Aufträge an die Konkurrenz. Dieser Guide zeigt dir, wie du mit Local SEO mehr qualifizierte 
         Anfragen bekommst.
       </p>
+
+      <BlogImage 
+        src={localSeoHandwerkerImg} 
+        alt="Handwerker mit Google Business Profil auf Smartphone"
+        caption="Lokale Sichtbarkeit bringt Handwerkern mehr qualifizierte Anfragen"
+      />
 
       {/* Statistik-Karten */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
