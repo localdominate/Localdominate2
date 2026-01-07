@@ -21,6 +21,7 @@ import LokaleSeo2026 from "./pages/blog/LokaleSeo2026";
 import NapKonsistenz from "./pages/blog/NapKonsistenz";
 import LocalSeoHandwerker from "./pages/blog/LocalSeoHandwerker";
 import LocalSeoAuditCheckliste from "./pages/blog/LocalSeoAuditCheckliste";
+import LocalSeoKeywords from "./pages/blog/LocalSeoKeywords";
 import Analytics from "./pages/Analytics";
 import ABTestDashboard from "./pages/ABTestDashboard";
 import NotFound from "./pages/NotFound";
@@ -54,6 +55,7 @@ const App = () => (
               <Route path="/blog/nap-konsistenz-local-seo" element={<NapKonsistenz />} />
               <Route path="/blog/local-seo-handwerker" element={<LocalSeoHandwerker />} />
               <Route path="/blog/local-seo-audit-checkliste" element={<LocalSeoAuditCheckliste />} />
+              <Route path="/blog/local-seo-keywords-finden" element={<LocalSeoKeywords />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

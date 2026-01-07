@@ -15,6 +15,20 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "local-seo-keywords-finden",
+    title: "Local SEO Keywords finden: Der komplette Keyword-Recherche Guide 2026",
+    metaTitle: "Local SEO Keywords finden: Keyword-Recherche Guide 2026",
+    metaDescription: "Finde die perfekten lokalen Keywords für dein Unternehmen. Kostenlose Tools, Schritt-für-Schritt Anleitung und 10 Fehler die du vermeiden musst.",
+    excerpt: "Der komplette Guide zur lokalen Keyword-Recherche. Lerne welche Keywords Kunden bringen und wie du sie findest.",
+    readingTime: 18,
+    publishedAt: "2026-01-07",
+    updatedAt: "2026-01-07",
+    icon: "🔍",
+    category: "Strategie",
+    keywords: ["local seo keywords", "keyword recherche", "lokale keywords finden"],
+    featured: true
+  },
+  {
     slug: "google-maps-ranking-verbessern",
     title: "Google Maps Ranking verbessern: Der ultimative Guide 2026",
     metaTitle: "Google Maps Ranking verbessern: Ultimativer Guide 2026",
@@ -128,7 +142,30 @@ export const getArticleBySlug = (slug: string): BlogArticle | undefined => {
 };
 
 export const getRelatedArticles = (currentSlug: string, count: number = 3): BlogArticle[] => {
-  return blogArticles
-    .filter(article => article.slug !== currentSlug)
-    .slice(0, count);
+  const current = getArticleBySlug(currentSlug);
+  if (!current) {
+    return blogArticles.filter(a => a.slug !== currentSlug).slice(0, count);
+  }
+  
+  // Prioritize same category, then different categories
+  const sameCategory = blogArticles.filter(
+    a => a.slug !== currentSlug && a.category === current.category
+  );
+  const otherCategory = blogArticles.filter(
+    a => a.slug !== currentSlug && a.category !== current.category
+  );
+  
+  return [...sameCategory, ...otherCategory].slice(0, count);
+};
+
+export const getCategories = (): string[] => {
+  const categories = new Set(blogArticles.map(a => a.category));
+  return Array.from(categories);
+};
+
+export const getArticleCountByCategory = (): Record<string, number> => {
+  return blogArticles.reduce((acc, article) => {
+    acc[article.category] = (acc[article.category] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
 };
