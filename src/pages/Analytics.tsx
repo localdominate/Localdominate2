@@ -356,6 +356,12 @@ const Analytics = () => {
             <RefreshCw className="mr-2 h-4 w-4" />
             Aktualisieren
           </Button>
+          <Link to="/ab-test">
+            <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary/10">
+              <Palette className="mr-2 h-4 w-4" />
+              A/B Test Dashboard
+            </Button>
+          </Link>
           <Link to="/?heatmap=true">
             <Button variant="outline" size="sm">
               <Map className="mr-2 h-4 w-4" />
