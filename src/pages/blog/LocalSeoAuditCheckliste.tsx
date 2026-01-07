@@ -3,6 +3,8 @@ import { getArticleBySlug } from '@/data/blogArticles';
 import ArticleLayout from '@/components/blog/ArticleLayout';
 import TableOfContents from '@/components/blog/TableOfContents';
 import ArticleCTA from '@/components/blog/ArticleCTA';
+import BlogImage from '@/components/blog/BlogImage';
+import localSeoAuditImg from '@/assets/blog/local-seo-audit.jpg';
 import { useAuditChecklist } from '@/hooks/useAuditChecklist';
 import { AuditProgressBar } from '@/components/audit/AuditProgressBar';
 import { AuditCategorySection } from '@/components/audit/AuditCategorySection';
@@ -93,6 +95,12 @@ const LocalSeoAuditCheckliste = () => {
         <strong> Klicke auf jeden Punkt</strong>, um ihn als erledigt zu markieren – dein Fortschritt 
         wird automatisch gespeichert!
       </p>
+
+      <BlogImage 
+        src={localSeoAuditImg} 
+        alt="Local SEO Audit Checkliste"
+        caption="Systematische Audits sind der Schlüssel zur kontinuierlichen Verbesserung"
+      />
 
       {/* Why Audits Section */}
       <section id="warum-audit" className="mb-12">

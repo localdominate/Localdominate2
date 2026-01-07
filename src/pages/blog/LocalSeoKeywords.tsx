@@ -1,7 +1,9 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
+import localSeoKeywordsImg from "@/assets/blog/local-seo-keywords.jpg";
 import { 
   Search, 
   Target, 
@@ -150,6 +152,12 @@ const LocalSeoKeywords = () => {
         verschwendest du Zeit und Geld – selbst wenn du auf Platz 1 rankst. In diesem umfassenden Guide lernst du, 
         wie du die <strong>perfekten lokalen Keywords</strong> für dein Unternehmen findest und gezielt einsetzt.
       </p>
+
+      <BlogImage 
+        src={localSeoKeywordsImg} 
+        alt="Lokale Keyword-Recherche"
+        caption="Die richtige Keyword-Recherche ist der Grundstein für lokale SEO-Erfolge"
+      />
 
       {/* Key Takeaways Box */}
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-8">

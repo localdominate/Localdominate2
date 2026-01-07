@@ -1,9 +1,11 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, AlertTriangle, Lightbulb } from "lucide-react";
+import googleMapsRankingImg from "@/assets/blog/google-maps-ranking.jpg";
 
 const GoogleMapsRanking = () => {
   const { language } = useLanguage();
@@ -215,6 +217,12 @@ const GoogleMapsRanking = () => {
       <p className="text-xl leading-relaxed mb-8">
         <strong>{t.intro.stat}</strong> {t.intro.text}
       </p>
+
+      <BlogImage 
+        src={googleMapsRankingImg} 
+        alt={language === "de" ? "Google Maps Ranking für lokale Unternehmen" : "Google Maps ranking for local businesses"}
+        caption={language === "de" ? "Sichtbarkeit auf Google Maps ist entscheidend für lokale Unternehmen" : "Visibility on Google Maps is crucial for local businesses"}
+      />
 
       <section id="warum-wichtig" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">

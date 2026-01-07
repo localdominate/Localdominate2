@@ -1,9 +1,11 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, Settings, Image, MessageSquare, BarChart3, Lightbulb } from "lucide-react";
+import googleMyBusinessImg from "@/assets/blog/google-my-business.jpg";
 
 const GoogleMyBusiness = () => {
   const { language } = useLanguage();
@@ -194,6 +196,12 @@ const GoogleMyBusiness = () => {
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8" dangerouslySetInnerHTML={{ __html: t.intro }} />
+
+      <BlogImage 
+        src={googleMyBusinessImg} 
+        alt={language === "de" ? "Google Business Profil Dashboard" : "Google Business Profile Dashboard"}
+        caption={language === "de" ? "Das Google Business Profil ist dein Schaufenster in der Google-Suche" : "Your Google Business Profile is your storefront in Google Search"}
+      />
 
       <section id="grundlagen" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section1.title}</h2>
