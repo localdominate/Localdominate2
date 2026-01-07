@@ -9,41 +9,202 @@ const GoogleMyBusiness = () => {
   const { language } = useLanguage();
   const article = getArticleBySlug("google-my-business-optimieren", language)!;
 
-  const tocItems = [
-    { id: "grundlagen", title: "Grundlagen: Profil einrichten und verifizieren" },
-    { id: "vollstaendigkeit", title: "Profil-Vollständigkeit maximieren" },
-    { id: "kategorien", title: "Kategorien richtig wählen" },
-    { id: "posts", title: "Google Posts strategisch nutzen" },
-    { id: "insights", title: "Insights verstehen und nutzen" },
-    { id: "faq", title: "Häufig gestellte Fragen" },
-  ];
+  const content = {
+    de: {
+      tocItems: [
+        { id: "grundlagen", title: "Grundlagen: Profil einrichten und verifizieren" },
+        { id: "vollstaendigkeit", title: "Profil-Vollständigkeit maximieren" },
+        { id: "kategorien", title: "Kategorien richtig wählen" },
+        { id: "posts", title: "Google Posts strategisch nutzen" },
+        { id: "insights", title: "Insights verstehen und nutzen" },
+        { id: "faq", title: "Häufig gestellte Fragen" },
+      ],
+      intro: "Dein <strong>Google Business Profil</strong> (früher Google My Business) ist das Schaufenster deines Unternehmens in der Google-Suche. Ein vollständig optimiertes Profil kann deine lokale Sichtbarkeit um bis zu 70% steigern. Diese Anleitung zeigt dir jeden Schritt.",
+      section1: {
+        title: "Grundlagen: Profil einrichten und verifizieren",
+        text: "Falls du noch kein Google Business Profil hast, ist der erste Schritt die Erstellung und Verifizierung.",
+        stepsTitle: "Schritt-für-Schritt Erstellung:",
+        steps: [
+          "Gehe zu business.google.com",
+          "Klicke auf \"Jetzt verwalten\"",
+          "Suche nach deinem Unternehmen oder erstelle ein neues",
+          "Fülle alle Grundinformationen aus",
+          "Wähle eine Verifizierungsmethode (meist Postkarte)",
+          "Warte auf den Verifizierungscode (5-14 Tage)",
+          "Gib den Code ein und dein Profil ist live"
+        ],
+        tip: "Bei einigen Unternehmen ist auch eine Video-Verifizierung möglich. Das geht schneller als der Postweg."
+      },
+      section2: {
+        title: "Profil-Vollständigkeit maximieren",
+        text: "Google bevorzugt vollständige Profile. Je mehr Informationen du bereitstellst, desto besser dein Ranking.",
+        items: [
+          { title: "Unternehmensbeschreibung", desc: "750 Zeichen nutzen. Keywords natürlich einbauen. Beschreibe was dich einzigartig macht.", status: "Pflicht" },
+          { title: "Öffnungszeiten", desc: "Reguläre Zeiten + Sonderzeiten für Feiertage. Wird regelmäßig von Google abgefragt.", status: "Pflicht" },
+          { title: "Kontaktdaten", desc: "Telefon, Website, E-Mail. Nutze die lokale Telefonnummer, nicht 0800.", status: "Pflicht" },
+          { title: "Dienstleistungen/Produkte", desc: "Liste alle Angebote mit Preisen und Beschreibungen.", status: "Wichtig" },
+          { title: "Attribute", desc: "Rollstuhlgerecht, WLAN, Parkplätze etc. Jedes zutreffende Attribut hinzufügen.", status: "Wichtig" },
+          { title: "Fragen & Antworten", desc: "Beantworte häufige Fragen proaktiv selbst.", status: "Empfohlen" },
+        ]
+      },
+      section3: {
+        title: "Kategorien richtig wählen",
+        text: "Die Kategorie-Auswahl bestimmt, für welche Suchanfragen du erscheinst. Wähle sorgfältig!",
+        main: "Hauptkategorie",
+        mainText: "Wähle die Kategorie, die dein Kerngeschäft am besten beschreibt. Beispiel: \"Zahnarzt\" statt \"Gesundheitswesen\".",
+        secondary: "Nebenkategorien",
+        secondaryText: "Du kannst bis zu 9 weitere Kategorien hinzufügen. Nutze nur relevante Kategorien, die du auch anbietest.",
+        example: "Beispiel: Bäckerei",
+        exampleMain: "Hauptkategorie:",
+        exampleMainVal: "Bäckerei",
+        exampleSec: "Nebenkategorien:",
+        exampleSecVal: "Café, Konditorei, Frühstücksrestaurant"
+      },
+      section4: {
+        title: "Google Posts strategisch nutzen",
+        text: "Google Posts sind wie Social Media Posts, die direkt in deinem Google Profil erscheinen. Sie zeigen Aktivität und können Klicks generieren.",
+        types: [
+          { title: "Updates", desc: "Neuigkeiten, Änderungen, allgemeine Infos" },
+          { title: "Angebote", desc: "Rabatte, Aktionen mit Start- und Enddatum" },
+          { title: "Events", desc: "Veranstaltungen mit Datum und Uhrzeit" },
+          { title: "Produkte", desc: "Neue Produkte oder Dienstleistungen vorstellen" },
+        ],
+        bestPractices: "Best Practices für Posts",
+        tips: [
+          "Poste mindestens 1x pro Woche",
+          "Nutze immer ein ansprechendes Bild (1200x900 px)",
+          "Füge einen Call-to-Action Button hinzu",
+          "Halte den Text kurz (150-300 Zeichen)",
+          "Verlinke auf deine Website oder Buchungsseite"
+        ]
+      },
+      section5: {
+        title: "Insights verstehen und nutzen",
+        text: "Google liefert wertvolle Daten darüber, wie Kunden mit deinem Profil interagieren. Nutze diese für Optimierungen.",
+        items: [
+          { title: "Suchanfragen", desc: "Zeigt, mit welchen Keywords Kunden dich finden. Nutze beliebte Begriffe in deiner Beschreibung und Posts." },
+          { title: "Kundenaktionen", desc: "Website-Klicks, Anrufe, Routenanfragen. Zeigt, welche Aktionen Kunden am häufigsten durchführen." },
+          { title: "Foto-Aufrufe", desc: "Vergleiche mit ähnlichen Unternehmen. Mehr Fotos = mehr Engagement." },
+        ]
+      },
+      faq: {
+        title: "Häufig gestellte Fragen",
+        items: [
+          { q: "Ist Google Business Profil kostenlos?", a: "Ja, die Erstellung und Nutzung des Profils ist komplett kostenlos. Du bezahlst nur, wenn du Google Ads schaltest." },
+          { q: "Kann ich mehrere Standorte verwalten?", a: "Ja, mit einem Account kannst du mehrere Standorte verwalten. Jeder Standort braucht aber ein eigenes, verifiziertes Profil." },
+          { q: "Wie oft sollte ich mein Profil aktualisieren?", a: "Mindestens monatlich neue Fotos und Posts. Öffnungszeiten und Infos sofort aktualisieren, wenn sich etwas ändert." },
+          { q: "Was tun, wenn jemand falsche Infos meldet?", a: "Prüfe regelmäßig dein Profil auf \"Vorgeschlagene Änderungen\". Du kannst gemeldete Änderungen ablehnen oder den Support kontaktieren." },
+        ]
+      }
+    },
+    en: {
+      tocItems: [
+        { id: "grundlagen", title: "Basics: Setting Up and Verifying Your Profile" },
+        { id: "vollstaendigkeit", title: "Maximizing Profile Completeness" },
+        { id: "kategorien", title: "Choosing the Right Categories" },
+        { id: "posts", title: "Using Google Posts Strategically" },
+        { id: "insights", title: "Understanding and Using Insights" },
+        { id: "faq", title: "Frequently Asked Questions" },
+      ],
+      intro: "Your <strong>Google Business Profile</strong> (formerly Google My Business) is your business's storefront in Google Search. A fully optimized profile can increase your local visibility by up to 70%. This guide shows you every step.",
+      section1: {
+        title: "Basics: Setting Up and Verifying Your Profile",
+        text: "If you don't have a Google Business Profile yet, the first step is creation and verification.",
+        stepsTitle: "Step-by-Step Creation:",
+        steps: [
+          "Go to business.google.com",
+          "Click on \"Manage now\"",
+          "Search for your business or create a new one",
+          "Fill in all basic information",
+          "Choose a verification method (usually postcard)",
+          "Wait for the verification code (5-14 days)",
+          "Enter the code and your profile is live"
+        ],
+        tip: "Some businesses can also use video verification. This is faster than postal mail."
+      },
+      section2: {
+        title: "Maximizing Profile Completeness",
+        text: "Google favors complete profiles. The more information you provide, the better your ranking.",
+        items: [
+          { title: "Business Description", desc: "Use 750 characters. Include keywords naturally. Describe what makes you unique.", status: "Required" },
+          { title: "Business Hours", desc: "Regular hours + special hours for holidays. Google regularly checks this.", status: "Required" },
+          { title: "Contact Information", desc: "Phone, website, email. Use a local phone number, not toll-free.", status: "Required" },
+          { title: "Services/Products", desc: "List all offerings with prices and descriptions.", status: "Important" },
+          { title: "Attributes", desc: "Wheelchair accessible, WiFi, parking, etc. Add every applicable attribute.", status: "Important" },
+          { title: "Q&A", desc: "Proactively answer frequently asked questions yourself.", status: "Recommended" },
+        ]
+      },
+      section3: {
+        title: "Choosing the Right Categories",
+        text: "Category selection determines which search queries you appear for. Choose carefully!",
+        main: "Primary Category",
+        mainText: "Choose the category that best describes your core business. Example: \"Dentist\" instead of \"Healthcare\".",
+        secondary: "Secondary Categories",
+        secondaryText: "You can add up to 9 additional categories. Only use relevant categories that you actually offer.",
+        example: "Example: Bakery",
+        exampleMain: "Primary Category:",
+        exampleMainVal: "Bakery",
+        exampleSec: "Secondary Categories:",
+        exampleSecVal: "Café, Pastry Shop, Breakfast Restaurant"
+      },
+      section4: {
+        title: "Using Google Posts Strategically",
+        text: "Google Posts are like social media posts that appear directly in your Google Profile. They show activity and can generate clicks.",
+        types: [
+          { title: "Updates", desc: "News, changes, general information" },
+          { title: "Offers", desc: "Discounts, promotions with start and end dates" },
+          { title: "Events", desc: "Events with date and time" },
+          { title: "Products", desc: "Introduce new products or services" },
+        ],
+        bestPractices: "Best Practices for Posts",
+        tips: [
+          "Post at least once a week",
+          "Always use an appealing image (1200x900 px)",
+          "Add a call-to-action button",
+          "Keep the text short (150-300 characters)",
+          "Link to your website or booking page"
+        ]
+      },
+      section5: {
+        title: "Understanding and Using Insights",
+        text: "Google provides valuable data about how customers interact with your profile. Use this for optimization.",
+        items: [
+          { title: "Search Queries", desc: "Shows which keywords customers use to find you. Use popular terms in your description and posts." },
+          { title: "Customer Actions", desc: "Website clicks, calls, direction requests. Shows which actions customers perform most often." },
+          { title: "Photo Views", desc: "Compare with similar businesses. More photos = more engagement." },
+        ]
+      },
+      faq: {
+        title: "Frequently Asked Questions",
+        items: [
+          { q: "Is Google Business Profile free?", a: "Yes, creating and using the profile is completely free. You only pay if you run Google Ads." },
+          { q: "Can I manage multiple locations?", a: "Yes, you can manage multiple locations with one account. However, each location needs its own verified profile." },
+          { q: "How often should I update my profile?", a: "At least monthly new photos and posts. Update hours and info immediately when something changes." },
+          { q: "What to do when someone reports false info?", a: "Regularly check your profile for \"Suggested edits\". You can reject reported changes or contact support." },
+        ]
+      }
+    }
+  };
+
+  const t = content[language];
+  const postIcons = [Image, MessageSquare, CheckCircle, BarChart3];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
-      <TableOfContents items={tocItems} />
+    <ArticleLayout article={article} tocItems={t.tocItems}>
+      <TableOfContents items={t.tocItems} />
 
-      <p className="text-xl leading-relaxed mb-8">
-        Dein <strong>Google Business Profil</strong> (früher Google My Business) ist das Schaufenster deines Unternehmens in der Google-Suche. Ein vollständig optimiertes Profil kann deine lokale Sichtbarkeit um bis zu 70% steigern. Diese Anleitung zeigt dir jeden Schritt.
-      </p>
+      <p className="text-xl leading-relaxed mb-8" dangerouslySetInnerHTML={{ __html: t.intro }} />
 
       <section id="grundlagen" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          Grundlagen: Profil einrichten und verifizieren
-        </h2>
-        <p className="mb-4">
-          Falls du noch kein Google Business Profil hast, ist der erste Schritt die Erstellung und Verifizierung.
-        </p>
+        <h2 className="text-2xl font-bold text-foreground mb-4">{t.section1.title}</h2>
+        <p className="mb-4">{t.section1.text}</p>
         
         <div className="bg-muted/50 rounded-xl p-6 mb-6">
-          <h3 className="font-semibold text-foreground mb-3">Schritt-für-Schritt Erstellung:</h3>
+          <h3 className="font-semibold text-foreground mb-3">{t.section1.stepsTitle}</h3>
           <ol className="list-decimal pl-6 space-y-2">
-            <li>Gehe zu <span className="text-primary">business.google.com</span></li>
-            <li>Klicke auf "Jetzt verwalten"</li>
-            <li>Suche nach deinem Unternehmen oder erstelle ein neues</li>
-            <li>Fülle alle Grundinformationen aus</li>
-            <li>Wähle eine Verifizierungsmethode (meist Postkarte)</li>
-            <li>Warte auf den Verifizierungscode (5-14 Tage)</li>
-            <li>Gib den Code ein und dein Profil ist live</li>
+            {t.section1.steps.map((step, i) => (
+              <li key={i}>{step}</li>
+            ))}
           </ol>
         </div>
 
@@ -51,41 +212,28 @@ const GoogleMyBusiness = () => {
           <div className="flex items-start gap-3">
             <Lightbulb className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
             <div>
-              <strong className="text-foreground">Tipp:</strong>
-              <p className="text-muted-foreground mt-1">
-                Bei einigen Unternehmen ist auch eine Video-Verifizierung möglich. Das geht schneller als der Postweg.
-              </p>
+              <strong className="text-foreground">{language === 'de' ? 'Tipp:' : 'Tip:'}</strong>
+              <p className="text-muted-foreground mt-1">{t.section1.tip}</p>
             </div>
           </div>
         </div>
       </section>
 
       <section id="vollstaendigkeit" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          Profil-Vollständigkeit maximieren
-        </h2>
-        <p className="mb-4">
-          Google bevorzugt vollständige Profile. Je mehr Informationen du bereitstellst, desto besser dein Ranking.
-        </p>
+        <h2 className="text-2xl font-bold text-foreground mb-4">{t.section2.title}</h2>
+        <p className="mb-4">{t.section2.text}</p>
 
         <div className="space-y-4">
-          {[
-            { title: "Unternehmensbeschreibung", desc: "750 Zeichen nutzen. Keywords natürlich einbauen. Beschreibe was dich einzigartig macht.", status: "Pflicht" },
-            { title: "Öffnungszeiten", desc: "Reguläre Zeiten + Sonderzeiten für Feiertage. Wird regelmäßig von Google abgefragt.", status: "Pflicht" },
-            { title: "Kontaktdaten", desc: "Telefon, Website, E-Mail. Nutze die lokale Telefonnummer, nicht 0800.", status: "Pflicht" },
-            { title: "Dienstleistungen/Produkte", desc: "Liste alle Angebote mit Preisen und Beschreibungen.", status: "Wichtig" },
-            { title: "Attribute", desc: "Rollstuhlgerecht, WLAN, Parkplätze etc. Jedes zutreffende Attribut hinzufügen.", status: "Wichtig" },
-            { title: "Fragen & Antworten", desc: "Beantworte häufige Fragen proaktiv selbst.", status: "Empfohlen" },
-          ].map((item, index) => (
+          {t.section2.items.map((item, index) => (
             <div key={index} className="flex items-start gap-3 p-4 bg-muted/50 rounded-xl">
               <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <strong className="text-foreground">{item.title}</strong>
                   <span className={`text-xs px-2 py-0.5 rounded-full ${
-                    item.status === "Pflicht" 
+                    item.status === "Pflicht" || item.status === "Required"
                       ? "bg-destructive/10 text-destructive" 
-                      : item.status === "Wichtig"
+                      : item.status === "Wichtig" || item.status === "Important"
                       ? "bg-primary/10 text-primary"
                       : "bg-muted text-muted-foreground"
                   }`}>
@@ -102,143 +250,83 @@ const GoogleMyBusiness = () => {
       <ArticleCTA variant="inline" />
 
       <section id="kategorien" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          Kategorien richtig wählen
-        </h2>
-        <p className="mb-4">
-          Die Kategorie-Auswahl bestimmt, für welche Suchanfragen du erscheinst. Wähle sorgfältig!
-        </p>
+        <h2 className="text-2xl font-bold text-foreground mb-4">{t.section3.title}</h2>
+        <p className="mb-4">{t.section3.text}</p>
 
-        <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Hauptkategorie</h3>
-        <p className="mb-4">
-          Wähle die Kategorie, die dein Kerngeschäft am besten beschreibt. Beispiel: "Zahnarzt" statt "Gesundheitswesen".
-        </p>
+        <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section3.main}</h3>
+        <p className="mb-4">{t.section3.mainText}</p>
 
-        <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Nebenkategorien</h3>
-        <p className="mb-4">
-          Du kannst bis zu 9 weitere Kategorien hinzufügen. Nutze nur relevante Kategorien, die du auch anbietest.
-        </p>
+        <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section3.secondary}</h3>
+        <p className="mb-4">{t.section3.secondaryText}</p>
 
         <div className="bg-muted/50 rounded-xl p-6">
           <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
             <Settings className="h-5 w-5 text-primary" />
-            Beispiel: Bäckerei
+            {t.section3.example}
           </h3>
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-2">
-              <span className="text-primary font-medium">Hauptkategorie:</span>
-              <span className="text-muted-foreground">Bäckerei</span>
+              <span className="text-primary font-medium">{t.section3.exampleMain}</span>
+              <span className="text-muted-foreground">{t.section3.exampleMainVal}</span>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-primary font-medium">Nebenkategorien:</span>
-              <span className="text-muted-foreground">Café, Konditorei, Frühstücksrestaurant</span>
+              <span className="text-primary font-medium">{t.section3.exampleSec}</span>
+              <span className="text-muted-foreground">{t.section3.exampleSecVal}</span>
             </div>
           </div>
         </div>
       </section>
 
       <section id="posts" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          Google Posts strategisch nutzen
-        </h2>
-        <p className="mb-4">
-          Google Posts sind wie Social Media Posts, die direkt in deinem Google Profil erscheinen. Sie zeigen Aktivität und können Klicks generieren.
-        </p>
+        <h2 className="text-2xl font-bold text-foreground mb-4">{t.section4.title}</h2>
+        <p className="mb-4">{t.section4.text}</p>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
-          {[
-            { icon: Image, title: "Updates", desc: "Neuigkeiten, Änderungen, allgemeine Infos" },
-            { icon: MessageSquare, title: "Angebote", desc: "Rabatte, Aktionen mit Start- und Enddatum" },
-            { icon: CheckCircle, title: "Events", desc: "Veranstaltungen mit Datum und Uhrzeit" },
-            { icon: BarChart3, title: "Produkte", desc: "Neue Produkte oder Dienstleistungen vorstellen" },
-          ].map((type, index) => (
-            <div key={index} className="flex items-start gap-3 p-4 bg-muted/50 rounded-xl">
-              <type.icon className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-foreground">{type.title}</strong>
-                <p className="text-sm text-muted-foreground mt-1">{type.desc}</p>
+          {t.section4.types.map((type, index) => {
+            const Icon = postIcons[index];
+            return (
+              <div key={index} className="flex items-start gap-3 p-4 bg-muted/50 rounded-xl">
+                <Icon className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-foreground">{type.title}</strong>
+                  <p className="text-sm text-muted-foreground mt-1">{type.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Best Practices für Posts</h3>
+        <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section4.bestPractices}</h3>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Poste mindestens 1x pro Woche</li>
-          <li>Nutze immer ein ansprechendes Bild (1200x900 px)</li>
-          <li>Füge einen Call-to-Action Button hinzu</li>
-          <li>Halte den Text kurz (150-300 Zeichen)</li>
-          <li>Verlinke auf deine Website oder Buchungsseite</li>
+          {t.section4.tips.map((tip, i) => (
+            <li key={i}>{tip}</li>
+          ))}
         </ul>
       </section>
 
       <section id="insights" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          Insights verstehen und nutzen
-        </h2>
-        <p className="mb-4">
-          Google liefert wertvolle Daten darüber, wie Kunden mit deinem Profil interagieren. Nutze diese für Optimierungen.
-        </p>
+        <h2 className="text-2xl font-bold text-foreground mb-4">{t.section5.title}</h2>
+        <p className="mb-4">{t.section5.text}</p>
 
         <div className="space-y-4">
-          <div className="p-4 bg-muted/50 rounded-xl">
-            <h3 className="font-semibold text-foreground mb-2">Suchanfragen</h3>
-            <p className="text-sm text-muted-foreground">
-              Zeigt, mit welchen Keywords Kunden dich finden. Nutze beliebte Begriffe in deiner Beschreibung und Posts.
-            </p>
-          </div>
-          <div className="p-4 bg-muted/50 rounded-xl">
-            <h3 className="font-semibold text-foreground mb-2">Kundenaktionen</h3>
-            <p className="text-sm text-muted-foreground">
-              Website-Klicks, Anrufe, Routenanfragen. Zeigt, welche Aktionen Kunden am häufigsten durchführen.
-            </p>
-          </div>
-          <div className="p-4 bg-muted/50 rounded-xl">
-            <h3 className="font-semibold text-foreground mb-2">Foto-Aufrufe</h3>
-            <p className="text-sm text-muted-foreground">
-              Vergleiche mit ähnlichen Unternehmen. Mehr Fotos = mehr Engagement.
-            </p>
-          </div>
+          {t.section5.items.map((item, index) => (
+            <div key={index} className="p-4 bg-muted/50 rounded-xl">
+              <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       <section id="faq" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-6">
-          Häufig gestellte Fragen
-        </h2>
+        <h2 className="text-2xl font-bold text-foreground mb-6">{t.faq.title}</h2>
         <div className="space-y-6">
-          <div className="border-b border-border pb-4">
-            <h3 className="font-semibold text-foreground mb-2">
-              Ist Google Business Profil kostenlos?
-            </h3>
-            <p className="text-muted-foreground">
-              Ja, die Erstellung und Nutzung des Profils ist komplett kostenlos. Du bezahlst nur, wenn du Google Ads schaltest.
-            </p>
-          </div>
-          <div className="border-b border-border pb-4">
-            <h3 className="font-semibold text-foreground mb-2">
-              Kann ich mehrere Standorte verwalten?
-            </h3>
-            <p className="text-muted-foreground">
-              Ja, mit einem Account kannst du mehrere Standorte verwalten. Jeder Standort braucht aber ein eigenes, verifiziertes Profil.
-            </p>
-          </div>
-          <div className="border-b border-border pb-4">
-            <h3 className="font-semibold text-foreground mb-2">
-              Wie oft sollte ich mein Profil aktualisieren?
-            </h3>
-            <p className="text-muted-foreground">
-              Mindestens monatlich neue Fotos und Posts. Öffnungszeiten und Infos sofort aktualisieren, wenn sich etwas ändert.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-foreground mb-2">
-              Was tun, wenn jemand falsche Infos meldet?
-            </h3>
-            <p className="text-muted-foreground">
-              Prüfe regelmäßig dein Profil auf "Vorgeschlagene Änderungen". Du kannst gemeldete Änderungen ablehnen oder den Support kontaktieren.
-            </p>
-          </div>
+          {t.faq.items.map((item, index) => (
+            <div key={index} className={index < t.faq.items.length - 1 ? "border-b border-border pb-4" : ""}>
+              <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
+              <p className="text-muted-foreground">{item.a}</p>
+            </div>
+          ))}
         </div>
       </section>
 
