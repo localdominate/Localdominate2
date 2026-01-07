@@ -16,7 +16,7 @@ const SEOHead = ({
   title,
   description,
   canonicalUrl,
-  ogImage = "https://lovable.dev/opengraph-image-p98pqg.png",
+  ogImage = "https://localdominator.de/og-image.png",
   ogType = "website",
   keywords,
   noindex = false,
