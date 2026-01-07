@@ -14,6 +14,159 @@ export type Database = {
   }
   public: {
     Tables: {
+      analytics_conversions: {
+        Row: {
+          ab_variant_color: string | null
+          ab_variant_restaurant: string | null
+          amount: number | null
+          conversion_type: string
+          created_at: string
+          cta_location: string | null
+          cta_text: string | null
+          id: string
+          page_path: string | null
+          session_id: string | null
+        }
+        Insert: {
+          ab_variant_color?: string | null
+          ab_variant_restaurant?: string | null
+          amount?: number | null
+          conversion_type: string
+          created_at?: string
+          cta_location?: string | null
+          cta_text?: string | null
+          id?: string
+          page_path?: string | null
+          session_id?: string | null
+        }
+        Update: {
+          ab_variant_color?: string | null
+          ab_variant_restaurant?: string | null
+          amount?: number | null
+          conversion_type?: string
+          created_at?: string
+          cta_location?: string | null
+          cta_text?: string | null
+          id?: string
+          page_path?: string | null
+          session_id?: string | null
+        }
+        Relationships: []
+      }
+      analytics_events: {
+        Row: {
+          created_at: string
+          event_data: Json | null
+          event_name: string | null
+          event_type: string
+          id: string
+          page_path: string | null
+          session_id: string
+        }
+        Insert: {
+          created_at?: string
+          event_data?: Json | null
+          event_name?: string | null
+          event_type: string
+          id?: string
+          page_path?: string | null
+          session_id: string
+        }
+        Update: {
+          created_at?: string
+          event_data?: Json | null
+          event_name?: string | null
+          event_type?: string
+          id?: string
+          page_path?: string | null
+          session_id?: string
+        }
+        Relationships: []
+      }
+      analytics_heatmap: {
+        Row: {
+          created_at: string
+          element_path: string | null
+          id: string
+          interaction_type: string | null
+          page_path: string | null
+          session_id: string | null
+          x: number
+          y: number
+        }
+        Insert: {
+          created_at?: string
+          element_path?: string | null
+          id?: string
+          interaction_type?: string | null
+          page_path?: string | null
+          session_id?: string | null
+          x: number
+          y: number
+        }
+        Update: {
+          created_at?: string
+          element_path?: string | null
+          id?: string
+          interaction_type?: string | null
+          page_path?: string | null
+          session_id?: string | null
+          x?: number
+          y?: number
+        }
+        Relationships: []
+      }
+      analytics_sessions: {
+        Row: {
+          ab_variant_color: string | null
+          ab_variant_restaurant: string | null
+          created_at: string
+          device: string | null
+          end_time: string | null
+          entry_page: string | null
+          exit_page: string | null
+          id: string
+          page_views: number | null
+          referrer: string | null
+          scroll_depths: number[] | null
+          session_id: string
+          start_time: string
+          user_agent: string | null
+        }
+        Insert: {
+          ab_variant_color?: string | null
+          ab_variant_restaurant?: string | null
+          created_at?: string
+          device?: string | null
+          end_time?: string | null
+          entry_page?: string | null
+          exit_page?: string | null
+          id?: string
+          page_views?: number | null
+          referrer?: string | null
+          scroll_depths?: number[] | null
+          session_id: string
+          start_time?: string
+          user_agent?: string | null
+        }
+        Update: {
+          ab_variant_color?: string | null
+          ab_variant_restaurant?: string | null
+          created_at?: string
+          device?: string | null
+          end_time?: string | null
+          entry_page?: string | null
+          exit_page?: string | null
+          id?: string
+          page_views?: number | null
+          referrer?: string | null
+          scroll_depths?: number[] | null
+          session_id?: string
+          start_time?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       customers: {
         Row: {
           address: string | null
@@ -62,6 +215,39 @@ export type Database = {
           stripe_session_id?: string | null
           updated_at?: string
           website?: string | null
+        }
+        Relationships: []
+      }
+      daily_reports: {
+        Row: {
+          created_at: string
+          id: string
+          report_date: string
+          sent_at: string | null
+          total_conversions: number | null
+          total_revenue: number | null
+          total_sessions: number | null
+          variant_analysis: Json | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          report_date: string
+          sent_at?: string | null
+          total_conversions?: number | null
+          total_revenue?: number | null
+          total_sessions?: number | null
+          variant_analysis?: Json | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          report_date?: string
+          sent_at?: string | null
+          total_conversions?: number | null
+          total_revenue?: number | null
+          total_sessions?: number | null
+          variant_analysis?: Json | null
         }
         Relationships: []
       }

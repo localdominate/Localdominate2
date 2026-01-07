@@ -25,7 +25,7 @@ const StickyHeader = () => {
 
   const handleClick = () => {
     trackButtonClick("sticky_header_cta", "sticky_header", 299);
-    openStripeCheckout("standard");
+    openStripeCheckout("standard", "sticky_header", t.cta);
   };
 
   const content = {

@@ -14,7 +14,7 @@ const OfferSection = () => {
   
   const handleCtaClick = () => {
     trackButtonClick("offer_cta", "offer_section", 299);
-    openStripeCheckout("standard");
+    openStripeCheckout("standard", "offer_section", t.offer.ctaButton);
   };
 
   return (

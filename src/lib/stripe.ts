@@ -1,3 +1,5 @@
+import { trackConversion } from "./analyticsStorage";
+
 export const STRIPE_URLS = {
   standard: "https://buy.stripe.com/eVq14n73U74jdLocjd0ZW02",  // 299€
   discount: "https://buy.stripe.com/aFaeVd2NE3S7dLoab50ZW03"   // 199€
@@ -14,6 +16,10 @@ export const getStripeSuccessUrl = () => {
   return `${baseUrl}/danke?session_id={CHECKOUT_SESSION_ID}`;
 };
 
-export const openStripeCheckout = (type: "standard" | "discount" = "standard") => {
+export const openStripeCheckout = (type: "standard" | "discount" = "standard", ctaLocation?: string, ctaText?: string) => {
+  // Track conversion with A/B variant info
+  const amount = type === "standard" ? 299 : 199;
+  trackConversion("stripe_checkout", ctaLocation || "unknown", ctaText || "CTA", amount);
+  
   window.open(STRIPE_URLS[type], "_blank");
 };

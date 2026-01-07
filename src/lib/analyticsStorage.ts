@@ -1,4 +1,5 @@
 // Analytics data storage and retrieval utilities
+import { supabase } from "@/integrations/supabase/client";
 
 export interface HeatmapPoint {
   x: number;
@@ -19,6 +20,8 @@ export interface SessionData {
   referrer: string;
   device: "mobile" | "tablet" | "desktop";
   userAgent: string;
+  abVariantColor?: string;
+  abVariantRestaurant?: string;
 }
 
 export interface AnalyticsEvent {
@@ -33,6 +36,8 @@ const STORAGE_KEYS = {
   SESSIONS: "analytics_sessions",
   EVENTS: "analytics_events",
   CURRENT_SESSION: "current_session_id",
+  AB_VARIANT_COLOR: "ab_test_variant",
+  AB_VARIANT_RESTAURANT: "restaurant_ab_variant",
 };
 
 // Device detection
@@ -48,6 +53,28 @@ const generateSessionId = (): string => {
   return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 };
 
+// Get A/B variants from localStorage
+const getABVariants = () => {
+  return {
+    color: localStorage.getItem(STORAGE_KEYS.AB_VARIANT_COLOR) || undefined,
+    restaurant: localStorage.getItem(STORAGE_KEYS.AB_VARIANT_RESTAURANT) || undefined,
+  };
+};
+
+// Track to Supabase (non-blocking)
+const trackToSupabase = async (type: string, data: Record<string, any>) => {
+  try {
+    const { error } = await supabase.functions.invoke("track-analytics", {
+      body: { type, data },
+    });
+    if (error) {
+      console.warn("Supabase tracking error:", error);
+    }
+  } catch (e) {
+    console.warn("Failed to track to Supabase:", e);
+  }
+};
+
 // Get or create current session
 export const getCurrentSession = (): SessionData => {
   const existingSessionId = sessionStorage.getItem(STORAGE_KEYS.CURRENT_SESSION);
@@ -58,6 +85,8 @@ export const getCurrentSession = (): SessionData => {
     if (existing) return existing;
   }
   
+  const variants = getABVariants();
+  
   // Create new session
   const newSession: SessionData = {
     id: generateSessionId(),
@@ -67,10 +96,23 @@ export const getCurrentSession = (): SessionData => {
     referrer: document.referrer || "direct",
     device: getDeviceType(),
     userAgent: navigator.userAgent,
+    abVariantColor: variants.color,
+    abVariantRestaurant: variants.restaurant,
   };
   
   sessionStorage.setItem(STORAGE_KEYS.CURRENT_SESSION, newSession.id);
   saveSession(newSession);
+  
+  // Track session start to Supabase
+  trackToSupabase("session_start", {
+    session_id: newSession.id,
+    entry_page: window.location.pathname,
+    device: newSession.device,
+    referrer: newSession.referrer,
+    user_agent: newSession.userAgent,
+    ab_variant_color: variants.color,
+    ab_variant_restaurant: variants.restaurant,
+  });
   
   return newSession;
 };
@@ -80,6 +122,15 @@ export const updateSession = (updates: Partial<SessionData>): void => {
   const session = getCurrentSession();
   const updatedSession = { ...session, ...updates, endTime: Date.now() };
   saveSession(updatedSession);
+  
+  // Track session update to Supabase
+  trackToSupabase("session_update", {
+    session_id: session.id,
+    exit_page: updates.exitPage || window.location.pathname,
+    page_views: updatedSession.pageViews.length,
+    scroll_depths: updatedSession.scrollDepths,
+    end_time: new Date().toISOString(),
+  });
 };
 
 // Save session
@@ -131,8 +182,89 @@ export const saveEvent = (event: Omit<AnalyticsEvent, "timestamp">): void => {
     // Keep only last 500 events
     const trimmedEvents = events.slice(-500);
     localStorage.setItem(STORAGE_KEYS.EVENTS, JSON.stringify(trimmedEvents));
+    
+    // Track event to Supabase
+    const session = getCurrentSession();
+    trackToSupabase("event", {
+      session_id: session.id,
+      event_type: event.type,
+      event_name: event.name,
+      event_data: event.data,
+      page_path: window.location.pathname,
+    });
   } catch (e) {
     console.warn("Failed to save event:", e);
+  }
+};
+
+// Track conversion
+export const trackConversion = (
+  conversionType: string,
+  ctaLocation?: string,
+  ctaText?: string,
+  amount?: number
+): void => {
+  try {
+    const session = getCurrentSession();
+    const variants = getABVariants();
+    
+    trackToSupabase("conversion", {
+      session_id: session.id,
+      ab_variant_color: variants.color,
+      ab_variant_restaurant: variants.restaurant,
+      conversion_type: conversionType,
+      cta_location: ctaLocation,
+      cta_text: ctaText,
+      amount: amount,
+      page_path: window.location.pathname,
+    });
+    
+    // Also save as local event
+    saveEvent({
+      type: "conversion",
+      name: conversionType,
+      data: { ctaLocation, ctaText, amount },
+    });
+  } catch (e) {
+    console.warn("Failed to track conversion:", e);
+  }
+};
+
+// Track heatmap click
+export const trackHeatmapClick = (
+  x: number,
+  y: number,
+  elementPath?: string
+): void => {
+  try {
+    const session = getCurrentSession();
+    
+    // Save locally
+    const heatmapData = getHeatmapData();
+    heatmapData.push({
+      x,
+      y,
+      value: 1,
+      timestamp: Date.now(),
+      type: "click",
+      path: elementPath || "",
+    });
+    
+    // Keep only last 1000 points
+    const trimmed = heatmapData.slice(-1000);
+    localStorage.setItem(STORAGE_KEYS.HEATMAP, JSON.stringify(trimmed));
+    
+    // Track to Supabase
+    trackToSupabase("heatmap", {
+      session_id: session.id,
+      x: x / window.innerWidth,
+      y: y / document.documentElement.scrollHeight,
+      interaction_type: "click",
+      element_path: elementPath,
+      page_path: window.location.pathname,
+    });
+  } catch (e) {
+    console.warn("Failed to track heatmap click:", e);
   }
 };
 
@@ -205,6 +337,12 @@ export const calculateMetrics = () => {
     return acc;
   }, {} as Record<string, number>);
   
+  // A/B variant breakdown
+  const variantBreakdown = {
+    blue: sessions.filter(s => s.abVariantColor === "blue").length,
+    red: sessions.filter(s => s.abVariantColor === "red").length,
+  };
+  
   return {
     totalSessions,
     avgSessionDuration,
@@ -216,6 +354,7 @@ export const calculateMetrics = () => {
     eventsByType,
     totalClicks: clicks.length,
     totalEvents: events.length,
+    variantBreakdown,
   };
 };
 
