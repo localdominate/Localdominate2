@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Clock, Calendar } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
+import LanguageSwitch from "@/components/LanguageSwitch";
 import AuthorBox from "./AuthorBox";
 import RelatedArticles from "./RelatedArticles";
 import SocialShare from "./SocialShare";
@@ -109,8 +110,8 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
       />
       
       {/* Header */}
-      <header className="sticky top-1 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="container max-w-4xl py-4">
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+        <div className="container max-w-4xl py-4 flex items-center justify-between">
           <Link 
             to="/" 
             className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
@@ -119,6 +120,8 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
           </Link>
         </div>
       </header>
+      
+      <LanguageSwitch />
 
       <main className="container max-w-4xl py-8 px-4">
         {/* Breadcrumb */}

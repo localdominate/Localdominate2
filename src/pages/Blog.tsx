@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, BookOpen, Sparkles } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
+import LanguageSwitch from "@/components/LanguageSwitch";
 import ArticleCard from "@/components/blog/ArticleCard";
 import CategoryFilter from "@/components/blog/CategoryFilter";
 import { getAllArticles, getCategories, getArticleCountByCategory } from "@/data/blogArticles";
@@ -100,6 +101,8 @@ const Blog = () => {
           </Link>
         </div>
       </header>
+      
+      <LanguageSwitch />
 
       <main className="container max-w-5xl py-8 px-4">
         {/* Breadcrumb */}
