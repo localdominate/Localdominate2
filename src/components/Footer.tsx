@@ -9,8 +9,17 @@ const Footer = () => {
   return (
     <footer className="bg-pain py-12 px-4">
       <div className="container max-w-5xl">
-        {/* Restaurant Marketing Link */}
-        <div className="flex justify-center mb-10">
+        {/* Links */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <Link to="/blog">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+            >
+              📚 Blog
+            </Button>
+          </Link>
           <Link to="/restaurant-marketing">
             <Button 
               variant="outline" 
@@ -18,7 +27,7 @@ const Footer = () => {
               className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
             >
               <Utensils className="w-5 h-5 mr-2" />
-              Restaurant-Marketing entdecken
+              Restaurant-Marketing
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
