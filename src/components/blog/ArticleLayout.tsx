@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import AuthorBox from "./AuthorBox";
 import RelatedArticles from "./RelatedArticles";
 import SocialShare from "./SocialShare";
+import ReadingProgress from "./ReadingProgress";
 import { BlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import {
   Breadcrumb,
@@ -47,13 +48,39 @@ const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutPro
     }
   };
 
-  // Combine Article schema with additional schema (like FAQPage)
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://localdominator.de"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://localdominator.de/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": `https://localdominator.de/blog/${article.slug}`
+      }
+    ]
+  };
+
   const combinedSchema = additionalSchema 
-    ? [articleSchema, additionalSchema]
-    : articleSchema;
+    ? [articleSchema, breadcrumbSchema, additionalSchema]
+    : [articleSchema, breadcrumbSchema];
 
   return (
     <div className="min-h-screen bg-background">
+      <ReadingProgress />
+      
       <SEOHead
         title={article.metaTitle}
         description={article.metaDescription}
@@ -63,7 +90,7 @@ const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutPro
       />
       
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+      <header className="sticky top-1 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container max-w-4xl py-4">
           <Link 
             to="/" 
@@ -95,14 +122,14 @@ const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutPro
               <ChevronRight className="h-4 w-4" />
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbPage>{article.title}</BreadcrumbPage>
+              <BreadcrumbPage className="line-clamp-1">{article.title}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
 
         {/* Article Header */}
         <header className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
               {article.category}
             </span>
@@ -114,6 +141,11 @@ const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutPro
               <Calendar className="h-4 w-4" />
               {new Date(article.publishedAt).toLocaleDateString("de-DE")}
             </span>
+            {article.updatedAt !== article.publishedAt && (
+              <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded">
+                Aktualisiert
+              </span>
+            )}
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
             {article.title}
@@ -121,7 +153,7 @@ const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutPro
         </header>
 
         {/* Article Content */}
-        <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary">
+        <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary prose-li:text-muted-foreground">
           {children}
         </article>
 
