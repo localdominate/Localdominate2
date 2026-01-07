@@ -1,19 +1,20 @@
+import * as React from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Utensils, ArrowRight } from "lucide-react";
 
-const Footer = () => {
+const Footer = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>((_, ref) => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-pain py-12 px-4">
+    <footer ref={ref} className="bg-pain py-12 px-4">
       <div className="container max-w-5xl">
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <Link to="/blog">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
             >
@@ -21,8 +22,8 @@ const Footer = () => {
             </Button>
           </Link>
           <Link to="/restaurant-marketing">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all group"
             >
@@ -32,42 +33,40 @@ const Footer = () => {
             </Button>
           </Link>
         </div>
-        
+
         {/* Legal Links - touch-friendly spacing */}
         <div className="flex flex-wrap justify-center gap-2 md:gap-8 mb-6">
-          <Link 
+          <Link
             to="/impressum"
             className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.imprint}
           </Link>
-          <Link 
+          <Link
             to="/datenschutz"
             className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.privacy}
           </Link>
-          <Link 
+          <Link
             to="/agb"
             className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.terms}
           </Link>
-          <a 
-            href="https://www.e-recht24.de/muster-widerrufsbelehrung.html" 
-            target="_blank" 
+          <a
+            href="https://www.e-recht24.de/muster-widerrufsbelehrung.html"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-pain-foreground/80 hover:text-primary transition-colors font-medium px-3 py-2 touch-target inline-flex items-center justify-center"
           >
             {t.footer.withdrawal}
           </a>
         </div>
-        
+
         {/* Copyright */}
-        <p className="text-pain-foreground/80 text-center mb-6">
-          {t.footer.copyright}
-        </p>
-        
+        <p className="text-pain-foreground/80 text-center mb-6">{t.footer.copyright}</p>
+
         {/* Disclaimer */}
         <p className="text-pain-foreground/50 text-xs text-center max-w-2xl mx-auto">
           {t.footer.disclaimer}
@@ -75,6 +74,7 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+Footer.displayName = "Footer";
 
 export default Footer;
