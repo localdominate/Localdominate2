@@ -143,7 +143,7 @@ const LocalSeoKeywords = () => {
   };
 
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
       {/* Intro */}
       <p className="text-xl leading-relaxed mb-8">
         <strong>Keywords sind das Fundament jeder erfolgreichen Local SEO Strategie.</strong> Wenn du die falschen Keywords wählst, 

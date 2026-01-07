@@ -17,7 +17,7 @@ const GoogleMyBusiness = () => {
   ];
 
   return (
-    <ArticleLayout article={article}>
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">

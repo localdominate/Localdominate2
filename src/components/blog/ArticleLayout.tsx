@@ -7,6 +7,7 @@ import AuthorBox from "./AuthorBox";
 import RelatedArticles from "./RelatedArticles";
 import SocialShare from "./SocialShare";
 import ReadingProgress from "./ReadingProgress";
+import StickyTableOfContents from "./StickyTableOfContents";
 import { BlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import {
   Breadcrumb,
@@ -17,13 +18,20 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
+interface TOCItem {
+  id: string;
+  title: string;
+  level?: number;
+}
+
 interface ArticleLayoutProps {
   article: BlogArticle;
   children: ReactNode;
   additionalSchema?: object;
+  tocItems?: TOCItem[];
 }
 
-const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutProps) => {
+const ArticleLayout = ({ article, children, additionalSchema, tocItems }: ArticleLayoutProps) => {
   const relatedArticles = getRelatedArticles(article.slug, 3);
   
   const articleSchema = {
@@ -80,6 +88,11 @@ const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutPro
   return (
     <div className="min-h-screen bg-background">
       <ReadingProgress />
+      
+      {/* Sticky TOC for Desktop */}
+      {tocItems && tocItems.length > 0 && (
+        <StickyTableOfContents items={tocItems} />
+      )}
       
       <SEOHead
         title={article.metaTitle}
