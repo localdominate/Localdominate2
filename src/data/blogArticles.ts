@@ -80,6 +80,46 @@ export const blogArticles: BlogArticle[] = [
     category: "Trends",
     keywords: ["lokale seo", "suchmaschinenoptimierung", "local seo 2026"],
     featured: true
+  },
+  {
+    slug: "nap-konsistenz-local-seo",
+    title: "NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten",
+    metaTitle: "NAP-Konsistenz für Local SEO: Der ultimative Guide 2026",
+    metaDescription: "NAP (Name, Adresse, Telefon) konsistent halten für bessere Rankings. Kompletter Guide mit Checkliste und 15+ FAQ.",
+    excerpt: "Erfahre, warum einheitliche Unternehmensdaten (NAP) für dein lokales Ranking entscheidend sind.",
+    readingTime: 12,
+    publishedAt: "2026-01-07",
+    updatedAt: "2026-01-07",
+    icon: "📋",
+    category: "Local SEO",
+    keywords: ["nap konsistenz", "citations", "branchenverzeichnisse", "local seo"]
+  },
+  {
+    slug: "local-seo-handwerker",
+    title: "Local SEO für Handwerker: Mehr Aufträge durch Google",
+    metaTitle: "Local SEO für Handwerker: Komplette Anleitung 2026",
+    metaDescription: "Local SEO speziell für Handwerksbetriebe. Von Elektriker bis Maler - so gewinnst du mehr lokale Aufträge durch Google.",
+    excerpt: "Speziell für Handwerksbetriebe: So optimierst du deine Online-Präsenz für mehr lokale Kundenanfragen.",
+    readingTime: 14,
+    publishedAt: "2026-01-07",
+    updatedAt: "2026-01-07",
+    icon: "🔧",
+    category: "Branchen",
+    keywords: ["handwerker seo", "local seo handwerk", "handwerker marketing"]
+  },
+  {
+    slug: "local-seo-audit-checkliste",
+    title: "Local SEO Audit Checkliste: 50+ Punkte für mehr Sichtbarkeit",
+    metaTitle: "Local SEO Audit Checkliste 2026: 50+ Prüfpunkte",
+    metaDescription: "Komplette Local SEO Audit Checkliste mit 50+ Punkten. Google Business, Website, Citations, Bewertungen - alles prüfen!",
+    excerpt: "Die ultimative Checkliste für dein Local SEO Audit. Prüfe alle wichtigen Faktoren für maximale lokale Sichtbarkeit.",
+    readingTime: 15,
+    publishedAt: "2026-01-07",
+    updatedAt: "2026-01-07",
+    icon: "✅",
+    category: "Strategie",
+    keywords: ["local seo audit", "seo checkliste", "local seo analyse"],
+    featured: true
   }
 ];
 
