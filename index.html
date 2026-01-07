@@ -297,9 +297,14 @@
     }
     </script>
     
-    <!-- Google Analytics / GTM dataLayer init -->
+    <!-- Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BS2B48THVM');
+    </script>
     </script>
   </head>
 
