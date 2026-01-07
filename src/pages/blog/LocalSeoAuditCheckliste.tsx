@@ -83,7 +83,7 @@ const LocalSeoAuditCheckliste = () => {
   };
 
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       {/* Intro */}
