@@ -2,6 +2,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Utensils, ArrowRight } from "lucide-react";
+import { CookieSettingsButton } from "@/components/CookieBanner";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -86,7 +87,12 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <p className="text-pain-foreground/80 text-center mb-6">{t.footer.copyright}</p>
+        <p className="text-pain-foreground/80 text-center mb-4">{t.footer.copyright}</p>
+
+        {/* Cookie Settings */}
+        <div className="flex justify-center mb-4">
+          <CookieSettingsButton />
+        </div>
 
         {/* Disclaimer */}
         <p className="text-pain-foreground/50 text-xs text-center max-w-2xl mx-auto">
