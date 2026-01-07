@@ -21,13 +21,16 @@ import ScrollProgress from "@/components/ScrollProgress";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import SocialProofToast from "@/components/SocialProofToast";
 import CookieBanner from "@/components/CookieBanner";
+import HeatmapTracker from "@/components/HeatmapTracker";
 import useScrollDepthTracking from "@/hooks/useScrollDepthTracking";
+import useAnalyticsSession from "@/hooks/useAnalyticsSession";
 import { useEffect } from "react";
 import { initDataLayer, trackPageView } from "@/lib/dataLayer";
 
 const Index = () => {
   // Initialize tracking
   useScrollDepthTracking();
+  useAnalyticsSession();
   
   useEffect(() => {
     initDataLayer();
@@ -63,6 +66,9 @@ const Index = () => {
       {/* Mobile/Bottom Components */}
       <MobileStickyBar />
       <CookieBanner />
+      
+      {/* Analytics Tracking */}
+      <HeatmapTracker enabled={true} />
     </main>
   );
 };

@@ -72,13 +72,14 @@ const HeatmapTracker = ({
 
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
+      const className = typeof target.className === "string" ? target.className : "";
       const point: HeatmapPoint = {
         x: e.pageX,
         y: e.pageY,
         value: 10,
         timestamp: Date.now(),
         type: "click",
-        path: target.tagName + (target.className ? `.${target.className.split(" ")[0]}` : ""),
+        path: target.tagName + (className ? `.${className.split(" ")[0]}` : ""),
       };
       savePoint(point);
     };
