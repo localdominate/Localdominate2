@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./i18n/LanguageContext";  
 import { ABTestProvider } from "@/hooks/useABTest";
-import HeatmapTracker from "@/components/HeatmapTracker";
 import Index from "./pages/Index";
 import RestaurantMarketing from "./pages/RestaurantMarketing";
 import Danke from "./pages/Danke";
@@ -19,6 +18,7 @@ import GoogleBewertungen from "./pages/blog/GoogleBewertungen";
 import LocalSeoRestaurant from "./pages/blog/LocalSeoRestaurant";
 import GoogleMyBusiness from "./pages/blog/GoogleMyBusiness";
 import LokaleSeo2026 from "./pages/blog/LokaleSeo2026";
+import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,10 +30,10 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <HeatmapTracker enabled={true} />
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/analytics" element={<Analytics />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />
