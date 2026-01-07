@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
@@ -54,9 +54,7 @@ const StickyHeader = () => {
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src="/favicon.png" alt="Local Dominator" className="w-8 h-8" />
               <span className="font-bold text-foreground text-lg hidden sm:block">
                 {t.brand}
               </span>

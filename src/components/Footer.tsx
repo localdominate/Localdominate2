@@ -9,6 +9,12 @@ const Footer = () => {
   return (
     <footer className="bg-pain py-12 px-4">
       <div className="container max-w-5xl">
+        {/* Logo */}
+        <div className="flex justify-center mb-8">
+          <Link to="/" className="flex items-center gap-3">
+            <img src="/logo.png" alt="Local Dominator Logo" className="h-12 w-auto" />
+          </Link>
+        </div>
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <Link to="/blog">
