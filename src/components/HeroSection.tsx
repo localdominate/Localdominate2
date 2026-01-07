@@ -11,7 +11,7 @@ const HeroSection = () => {
   
   const handleCtaClick = () => {
     trackButtonClick("hero_cta", "hero_section", 299);
-    openStripeCheckout("standard");
+    openStripeCheckout("standard", "hero_section", t.hero.ctaFull);
   };
 
   return (

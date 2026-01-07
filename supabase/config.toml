@@ -5,3 +5,9 @@ verify_jwt = false
 
 [functions.send-new-customer-notification]
 verify_jwt = false
+
+[functions.send-daily-analytics-report]
+verify_jwt = false
+
+[functions.track-analytics]
+verify_jwt = false

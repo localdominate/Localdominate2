@@ -12,7 +12,7 @@ const FinalCTASection = () => {
 
   const handleCtaClick = () => {
     trackButtonClick("final_cta", "final_cta_section", 299);
-    openStripeCheckout("standard");
+    openStripeCheckout("standard", "final_cta_section", t.finalCta.ctaFull);
   };
 
   return (
