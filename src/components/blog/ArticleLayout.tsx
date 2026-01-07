@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import AuthorBox from "./AuthorBox";
 import RelatedArticles from "./RelatedArticles";
+import SocialShare from "./SocialShare";
 import { BlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import {
   Breadcrumb,
@@ -123,6 +124,15 @@ const ArticleLayout = ({ article, children, additionalSchema }: ArticleLayoutPro
         <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary">
           {children}
         </article>
+
+        {/* Social Share */}
+        <div className="my-8 py-6 border-t border-b border-border">
+          <SocialShare 
+            url={`https://localdominator.de/blog/${article.slug}`}
+            title={article.title}
+            description={article.metaDescription}
+          />
+        </div>
 
         <AuthorBox />
         <RelatedArticles articles={relatedArticles} />
