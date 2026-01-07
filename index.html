@@ -297,13 +297,36 @@
     }
     </script>
     
-    <!-- Google Analytics 4 (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM"></script>
+    <!-- Google Analytics 4 (GA4) - Loaded only after consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BS2B48THVM');
+      
+      // Check if user has given consent
+      function loadGA4() {
+        if (document.querySelector('script[src*="googletagmanager.com/gtag"]')) return;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM';
+        document.head.appendChild(script);
+        gtag('js', new Date());
+        gtag('config', 'G-BS2B48THVM', { 'anonymize_ip': true });
+      }
+      
+      // Check consent on page load
+      (function() {
+        var consent = localStorage.getItem('cookieConsent');
+        if (consent === 'all') {
+          loadGA4();
+        }
+      })();
+      
+      // Listen for consent changes
+      window.addEventListener('storage', function(e) {
+        if (e.key === 'cookieConsent' && e.newValue === 'all') {
+          loadGA4();
+        }
+      });
     </script>
   </head>
 
