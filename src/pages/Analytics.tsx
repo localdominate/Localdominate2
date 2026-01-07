@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { 
   BarChart3, 
@@ -14,7 +14,9 @@ import {
   Download,
   RefreshCw,
   Eye,
-  Map
+  Map,
+  Lock,
+  LogOut
 } from "lucide-react";
 import { 
   calculateMetrics, 
@@ -25,6 +27,8 @@ import {
 } from "@/lib/analyticsStorage";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Table,
   TableBody,
@@ -35,8 +39,91 @@ import {
 } from "@/components/ui/table";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area } from "recharts";
 
+const ADMIN_USERNAME = "admin";
+const ADMIN_PASSWORD = "localdominator240686";
+const AUTH_KEY = "analytics_authenticated";
+
 const Analytics = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return sessionStorage.getItem(AUTH_KEY) === "true";
+  });
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
+  
   const [refreshKey, setRefreshKey] = useState(0);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+      sessionStorage.setItem(AUTH_KEY, "true");
+      setIsAuthenticated(true);
+      setLoginError("");
+    } else {
+      setLoginError("Falscher Benutzername oder Passwort");
+    }
+  };
+
+  const handleLogout = () => {
+    sessionStorage.removeItem(AUTH_KEY);
+    setIsAuthenticated(false);
+    setUsername("");
+    setPassword("");
+  };
+
+  // Login Screen
+  if (!isAuthenticated) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <Lock className="h-6 w-6 text-primary" />
+            </div>
+            <CardTitle>Analytics Dashboard</CardTitle>
+            <CardDescription>Bitte melde dich an, um fortzufahren</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="username">Benutzername</Label>
+                <Input
+                  id="username"
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Benutzername eingeben"
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password">Passwort</Label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Passwort eingeben"
+                  required
+                />
+              </div>
+              {loginError && (
+                <p className="text-sm text-destructive">{loginError}</p>
+              )}
+              <Button type="submit" className="w-full">
+                Anmelden
+              </Button>
+            </form>
+            <div className="mt-4 text-center">
+              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
+                ← Zurück zur Website
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
   
   const metrics = useMemo(() => calculateMetrics(), [refreshKey]);
   const heatmapData = useMemo(() => getHeatmapData(), [refreshKey]);
@@ -132,7 +219,7 @@ const Analytics = () => {
           <p className="text-muted-foreground">Verstehe, wie Nutzer mit deiner Website interagieren</p>
         </div>
         
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <Button variant="outline" size="sm" onClick={() => setRefreshKey(k => k + 1)}>
             <RefreshCw className="mr-2 h-4 w-4" />
             Aktualisieren
@@ -150,6 +237,10 @@ const Analytics = () => {
           <Button variant="destructive" size="sm" onClick={handleClearData}>
             <Trash2 className="mr-2 h-4 w-4" />
             Löschen
+          </Button>
+          <Button variant="ghost" size="sm" onClick={handleLogout}>
+            <LogOut className="mr-2 h-4 w-4" />
+            Abmelden
           </Button>
         </div>
       </div>
