@@ -13,6 +13,12 @@ import Onboarding from "./pages/Onboarding";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import AGB from "./pages/AGB";
+import Blog from "./pages/Blog";
+import GoogleMapsRanking from "./pages/blog/GoogleMapsRanking";
+import GoogleBewertungen from "./pages/blog/GoogleBewertungen";
+import LocalSeoRestaurant from "./pages/blog/LocalSeoRestaurant";
+import GoogleMyBusiness from "./pages/blog/GoogleMyBusiness";
+import LokaleSeo2026 from "./pages/blog/LokaleSeo2026";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +40,12 @@ const App = () => (
               <Route path="/impressum" element={<Impressum />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/agb" element={<AGB />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/google-maps-ranking-verbessern" element={<GoogleMapsRanking />} />
+              <Route path="/blog/google-bewertungen-bekommen" element={<GoogleBewertungen />} />
+              <Route path="/blog/local-seo-fuer-restaurants" element={<LocalSeoRestaurant />} />
+              <Route path="/blog/google-my-business-optimieren" element={<GoogleMyBusiness />} />
+              <Route path="/blog/lokale-suchmaschinenoptimierung-2026" element={<LokaleSeo2026 />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
