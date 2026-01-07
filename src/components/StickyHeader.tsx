@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -53,12 +54,12 @@ const StickyHeader = () => {
         <div className="container max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
-            <div className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <img src="/favicon.png" alt="Local Dominator" className="w-8 h-8" />
               <span className="font-bold text-foreground text-lg hidden sm:block">
                 {t.brand}
               </span>
-            </div>
+            </Link>
 
             {/* CTA Button */}
             <Button 

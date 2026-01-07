@@ -19,6 +19,7 @@ import LanguageSwitch from "@/components/LanguageSwitch";
 import StickyHeader from "@/components/StickyHeader";
 import ScrollProgress from "@/components/ScrollProgress";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import BackToTop from "@/components/BackToTop";
 import SocialProofToast from "@/components/SocialProofToast";
 import CookieBanner from "@/components/CookieBanner";
 import HeatmapTracker from "@/components/HeatmapTracker";
@@ -65,6 +66,7 @@ const Index = () => {
       
       {/* Mobile/Bottom Components */}
       <MobileStickyBar />
+      <BackToTop />
       <CookieBanner />
       
       {/* Analytics Tracking */}
