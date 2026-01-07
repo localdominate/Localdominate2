@@ -2,10 +2,12 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { UtensilsCrossed, Camera, Clock, MapPin, Star, Lightbulb } from "lucide-react";
 
 const LocalSeoRestaurant = () => {
-  const article = getArticleBySlug("local-seo-fuer-restaurants")!;
+  const { language } = useLanguage();
+  const article = getArticleBySlug("local-seo-fuer-restaurants", language)!;
 
   const tocItems = [
     { id: "ranking-faktoren", title: "Restaurant-spezifische Ranking-Faktoren" },

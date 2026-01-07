@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
-import { BlogArticle } from "@/data/blogArticles";
+import { ResolvedBlogArticle } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface ArticleCardProps {
-  article: BlogArticle;
+  article: ResolvedBlogArticle;
   featured?: boolean;
 }
 
 const ArticleCard = ({ article, featured = false }: ArticleCardProps) => {
+  const { language } = useLanguage();
+  
   return (
     <Link
       to={`/blog/${article.slug}`}
@@ -24,7 +27,7 @@ const ArticleCard = ({ article, featured = false }: ArticleCardProps) => {
             </span>
             <span className="flex items-center gap-1 text-xs text-muted-foreground">
               <Clock className="h-3 w-3" />
-              {article.readingTime} Min. Lesezeit
+              {article.readingTime} {language === "de" ? "Min. Lesezeit" : "min read"}
             </span>
           </div>
           <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
@@ -32,7 +35,7 @@ const ArticleCard = ({ article, featured = false }: ArticleCardProps) => {
           </h3>
           <p className="text-sm text-muted-foreground mb-4">{article.excerpt}</p>
           <span className="inline-flex items-center text-sm font-medium text-primary group-hover:gap-2 transition-all">
-            Artikel lesen
+            {language === "de" ? "Artikel lesen" : "Read article"}
             <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
           </span>
         </div>

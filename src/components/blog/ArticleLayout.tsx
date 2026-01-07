@@ -8,7 +8,8 @@ import RelatedArticles from "./RelatedArticles";
 import SocialShare from "./SocialShare";
 import ReadingProgress from "./ReadingProgress";
 import StickyTableOfContents from "./StickyTableOfContents";
-import { BlogArticle, getRelatedArticles } from "@/data/blogArticles";
+import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -25,14 +26,15 @@ interface TOCItem {
 }
 
 interface ArticleLayoutProps {
-  article: BlogArticle;
+  article: ResolvedBlogArticle;
   children: ReactNode;
   additionalSchema?: object;
   tocItems?: TOCItem[];
 }
 
 const ArticleLayout = ({ article, children, additionalSchema, tocItems }: ArticleLayoutProps) => {
-  const relatedArticles = getRelatedArticles(article.slug, 3);
+  const { language } = useLanguage();
+  const relatedArticles = getRelatedArticles(article.slug, 3, language);
   
   const articleSchema = {
     "@context": "https://schema.org",
@@ -84,6 +86,10 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
   const combinedSchema = additionalSchema 
     ? [articleSchema, breadcrumbSchema, additionalSchema]
     : [articleSchema, breadcrumbSchema];
+
+  const readingTimeText = language === "de" ? "Min. Lesezeit" : "min read";
+  const updatedText = language === "de" ? "Aktualisiert" : "Updated";
+  const dateLocale = language === "de" ? "de-DE" : "en-US";
 
   return (
     <div className="min-h-screen bg-background">
@@ -148,15 +154,15 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
             </span>
             <span className="flex items-center gap-1 text-sm text-muted-foreground">
               <Clock className="h-4 w-4" />
-              {article.readingTime} Min. Lesezeit
+              {article.readingTime} {readingTimeText}
             </span>
             <span className="flex items-center gap-1 text-sm text-muted-foreground">
               <Calendar className="h-4 w-4" />
-              {new Date(article.publishedAt).toLocaleDateString("de-DE")}
+              {new Date(article.publishedAt).toLocaleDateString(dateLocale)}
             </span>
             {article.updatedAt !== article.publishedAt && (
               <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded">
-                Aktualisiert
+                {updatedText}
               </span>
             )}
           </div>

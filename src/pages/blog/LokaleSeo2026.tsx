@@ -2,10 +2,12 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Sparkles, Mic, Search, Smartphone, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";
 
 const LokaleSeo2026 = () => {
-  const article = getArticleBySlug("lokale-suchmaschinenoptimierung-2026")!;
+  const { language } = useLanguage();
+  const article = getArticleBySlug("lokale-suchmaschinenoptimierung-2026", language)!;
 
   const tocItems = [
     { id: "trends", title: "Die wichtigsten Trends 2026" },

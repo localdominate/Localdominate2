@@ -5,7 +5,8 @@ import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import ArticleCard from "@/components/blog/ArticleCard";
 import CategoryFilter from "@/components/blog/CategoryFilter";
-import { blogArticles, getCategories, getArticleCountByCategory } from "@/data/blogArticles";
+import { getAllArticles, getCategories, getArticleCountByCategory } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -16,15 +17,17 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const Blog = () => {
+  const { language } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   
-  const categories = useMemo(() => getCategories(), []);
-  const articleCounts = useMemo(() => getArticleCountByCategory(), []);
+  const allArticles = useMemo(() => getAllArticles(language), [language]);
+  const categories = useMemo(() => getCategories(language), [language]);
+  const articleCounts = useMemo(() => getArticleCountByCategory(language), [language]);
   
   const filteredArticles = useMemo(() => {
-    if (!activeCategory) return blogArticles;
-    return blogArticles.filter(a => a.category === activeCategory);
-  }, [activeCategory]);
+    if (!activeCategory) return allArticles;
+    return allArticles.filter(a => a.category === activeCategory);
+  }, [activeCategory, allArticles]);
 
   const featuredArticle = filteredArticles.find(a => a.featured) || filteredArticles[0];
   const otherArticles = filteredArticles.filter(a => a.slug !== featuredArticle?.slug);
@@ -33,13 +36,15 @@ const Blog = () => {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Local Dominator Blog",
-    "description": "Expertenwissen für lokale Suchmaschinenoptimierung",
+    "description": language === "de" 
+      ? "Expertenwissen für lokale Suchmaschinenoptimierung"
+      : "Expert knowledge for local search engine optimization",
     "url": "https://localdominator.de/blog",
     "publisher": {
       "@type": "Organization",
       "name": "Local Dominator"
     },
-    "blogPost": blogArticles.map(article => ({
+    "blogPost": allArticles.map(article => ({
       "@type": "BlogPosting",
       "headline": article.title,
       "description": article.metaDescription,
@@ -49,13 +54,38 @@ const Blog = () => {
     }))
   };
 
+  const texts = {
+    de: {
+      pageTitle: "Blog - Local SEO Tipps & Strategien | Local Dominator",
+      pageDescription: "Expertenwissen für lokale Suchmaschinenoptimierung. Google Maps Ranking, Bewertungen, Local SEO Tipps für mehr lokale Kunden.",
+      heroTitle: "Local SEO Blog",
+      heroDescription: "Expertenwissen für mehr lokale Sichtbarkeit. Praktische Tipps und Strategien für Google Maps, Bewertungen und lokale Suchmaschinenoptimierung.",
+      articlesAvailable: "Artikel verfügbar",
+      featured: "Featured",
+      readingTime: "Min. Lesezeit",
+      noArticles: "Keine Artikel in dieser Kategorie gefunden.",
+    },
+    en: {
+      pageTitle: "Blog - Local SEO Tips & Strategies | Local Dominator",
+      pageDescription: "Expert knowledge for local search engine optimization. Google Maps ranking, reviews, local SEO tips for more local customers.",
+      heroTitle: "Local SEO Blog",
+      heroDescription: "Expert knowledge for more local visibility. Practical tips and strategies for Google Maps, reviews, and local search engine optimization.",
+      articlesAvailable: "articles available",
+      featured: "Featured",
+      readingTime: "min read",
+      noArticles: "No articles found in this category.",
+    }
+  };
+
+  const t = texts[language];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Blog - Local SEO Tipps & Strategien | Local Dominator"
-        description="Expertenwissen für lokale Suchmaschinenoptimierung. Google Maps Ranking, Bewertungen, Local SEO Tipps für mehr lokale Kunden."
+        title={t.pageTitle}
+        description={t.pageDescription}
         canonicalUrl="https://localdominator.de/blog"
-        keywords="local seo blog, google maps tipps, lokale seo strategien"
+        keywords="local seo blog, google maps tips, local seo strategies"
         jsonLd={blogSchema}
       />
 
@@ -95,14 +125,14 @@ const Blog = () => {
             <BookOpen className="h-8 w-8 text-primary" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Local SEO Blog
+            {t.heroTitle}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-2">
-            Expertenwissen für mehr lokale Sichtbarkeit. Praktische Tipps und Strategien für Google Maps, Bewertungen und lokale Suchmaschinenoptimierung.
+            {t.heroDescription}
           </p>
           <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 px-3 py-1.5 rounded-full">
             <Sparkles className="h-4 w-4 text-primary" />
-            {blogArticles.length} Artikel verfügbar
+            {allArticles.length} {t.articlesAvailable}
           </div>
         </div>
 
@@ -123,7 +153,7 @@ const Blog = () => {
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-                  Featured
+                  {t.featured}
                 </span>
                 <span className="text-xs font-medium text-muted-foreground">
                   {featuredArticle.category}
@@ -137,7 +167,7 @@ const Blog = () => {
                   </h2>
                   <p className="text-muted-foreground mb-3">{featuredArticle.excerpt}</p>
                   <span className="text-sm text-primary font-medium">
-                    {featuredArticle.readingTime} Min. Lesezeit →
+                    {featuredArticle.readingTime} {t.readingTime} →
                   </span>
                 </div>
               </div>
@@ -157,7 +187,7 @@ const Blog = () => {
 
         {filteredArticles.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-muted-foreground">Keine Artikel in dieser Kategorie gefunden.</p>
+            <p className="text-muted-foreground">{t.noArticles}</p>
           </div>
         )}
       </main>
