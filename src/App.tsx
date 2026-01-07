@@ -19,6 +19,7 @@ import LocalSeoRestaurant from "./pages/blog/LocalSeoRestaurant";
 import GoogleMyBusiness from "./pages/blog/GoogleMyBusiness";
 import LokaleSeo2026 from "./pages/blog/LokaleSeo2026";
 import Analytics from "./pages/Analytics";
+import ABTestDashboard from "./pages/ABTestDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/analytics" element={<Analytics />} />
+              <Route path="/ab-test" element={<ABTestDashboard />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />
