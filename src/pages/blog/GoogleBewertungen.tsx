@@ -2,10 +2,12 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle } from "lucide-react";
 
 const GoogleBewertungen = () => {
-  const article = getArticleBySlug("google-bewertungen-bekommen")!;
+  const { language } = useLanguage();
+  const article = getArticleBySlug("google-bewertungen-bekommen", language)!;
 
   const tocItems = [
     { id: "wichtigkeit", title: "Warum Bewertungen Kunden-Magnete sind" },

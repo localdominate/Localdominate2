@@ -2,10 +2,12 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, Settings, Image, MessageSquare, BarChart3, Lightbulb } from "lucide-react";
 
 const GoogleMyBusiness = () => {
-  const article = getArticleBySlug("google-my-business-optimieren")!;
+  const { language } = useLanguage();
+  const article = getArticleBySlug("google-my-business-optimieren", language)!;
 
   const tocItems = [
     { id: "grundlagen", title: "Grundlagen: Profil einrichten und verifizieren" },
