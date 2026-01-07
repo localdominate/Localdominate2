@@ -92,17 +92,16 @@ const Blog = () => {
 
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-        <div className="container max-w-5xl py-4">
+        <div className="container max-w-5xl py-4 flex items-center justify-between">
           <Link 
             to="/" 
             className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
           >
             Local Dominator
           </Link>
+          <LanguageSwitch variant="inline" showBlogLink={false} />
         </div>
       </header>
-      
-      <LanguageSwitch />
 
       <main className="container max-w-5xl py-8 px-4">
         {/* Breadcrumb */}

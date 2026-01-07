@@ -118,10 +118,9 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
           >
             Local Dominator
           </Link>
+          <LanguageSwitch variant="inline" showBlogLink={false} />
         </div>
       </header>
-      
-      <LanguageSwitch />
 
       <main className="container max-w-4xl py-8 px-4">
         {/* Breadcrumb */}
