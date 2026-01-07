@@ -1,14 +1,13 @@
-import * as React from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Utensils, ArrowRight } from "lucide-react";
 
-const Footer = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"footer">>((_, ref) => {
+const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer ref={ref} className="bg-pain py-12 px-4">
+    <footer className="bg-pain py-12 px-4">
       <div className="container max-w-5xl">
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -74,7 +73,6 @@ const Footer = React.forwardRef<HTMLElement, React.ComponentPropsWithoutRef<"foo
       </div>
     </footer>
   );
-});
-Footer.displayName = "Footer";
+};
 
 export default Footer;
