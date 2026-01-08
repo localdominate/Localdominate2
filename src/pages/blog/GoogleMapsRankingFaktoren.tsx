@@ -28,10 +28,7 @@ const GoogleMapsRankingFaktoren = () => {
         Ranking-Faktor Gewichtungs-Slider.
       </p>
 
-      <ArticleCTA 
-        title="Google Maps Optimierung"
-        description="Erreichen Sie Platz 1 im Local Pack."
-      />
+      <ArticleCTA />
 
       <section id="proximity" className="mb-12">
         <h2>Proximity (Nähe)</h2>

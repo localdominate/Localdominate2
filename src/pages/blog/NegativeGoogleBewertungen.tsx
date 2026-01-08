@@ -28,10 +28,7 @@ const NegativeGoogleBewertungen = () => {
         interaktiven Antwort-Generator.
       </p>
 
-      <ArticleCTA 
-        title="Bewertungsmanagement"
-        description="Professioneller Umgang mit allen Arten von Bewertungen."
-      />
+      <ArticleCTA />
 
       <section id="psychologie" className="mb-12">
         <h2>Psychologie negativer Bewertungen</h2>

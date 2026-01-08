@@ -27,10 +27,7 @@ const LocalLinkBuilding = () => {
         Link-Building Ideen Generator.
       </p>
 
-      <ArticleCTA 
-        title="Lokale Backlinks aufbauen"
-        description="Wir helfen Ihnen, wertvolle lokale Links zu gewinnen."
-      />
+      <ArticleCTA />
 
       <section id="lokale-quellen" className="mb-12">
         <h2>Lokale Link-Quellen</h2>

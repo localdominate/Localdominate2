@@ -28,10 +28,7 @@ const SchemaMarkupLocalSeo = () => {
         Testing-Tools und einem interaktiven Schema Generator.
       </p>
 
-      <ArticleCTA 
-        title="Schema Markup Implementierung"
-        description="Wir implementieren strukturierte Daten für Ihr lokales Unternehmen."
-      />
+      <ArticleCTA />
 
       <section id="local-business" className="mb-12">
         <h2>LocalBusiness Schema</h2>

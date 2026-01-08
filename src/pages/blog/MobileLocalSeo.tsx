@@ -27,10 +27,7 @@ const MobileLocalSeo = () => {
         du dafür optimierst.
       </p>
 
-      <ArticleCTA 
-        title="Mobile Optimierung"
-        description="Machen Sie Ihre lokale Präsenz mobil-freundlich."
-      />
+      <ArticleCTA />
 
       <section id="mobile-first" className="mb-12">
         <h2>Mobile-First Indexing</h2>

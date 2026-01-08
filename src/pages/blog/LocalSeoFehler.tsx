@@ -27,10 +27,7 @@ const LocalSeoFehler = () => {
         Lösungen für jedes Problem.
       </p>
 
-      <ArticleCTA 
-        title="Fehler-Analyse"
-        description="Finden Sie heraus, was Sie zurückhält."
-      />
+      <ArticleCTA />
 
       <section id="technische-fehler" className="mb-12">
         <h2>Technische Fehler (1-5)</h2>
