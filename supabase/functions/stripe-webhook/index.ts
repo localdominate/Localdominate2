@@ -183,33 +183,10 @@ serve(async (req) => {
           console.log("Payment conversion tracked successfully");
         }
 
-        // Send notification email using existing edge function
-        try {
-          const notificationResponse = await fetch(
-            `${supabaseUrl}/functions/v1/send-new-customer-notification`,
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${supabaseServiceKey}`,
-              },
-              body: JSON.stringify({
-                customerEmail,
-                customerName,
-                amountPaid,
-                stripeSessionId,
-              }),
-            }
-          );
-          
-          if (notificationResponse.ok) {
-            console.log("Customer notification sent successfully");
-          } else {
-            console.error("Failed to send notification:", await notificationResponse.text());
-          }
-        } catch (notifyError) {
-          console.error("Error sending notification:", notifyError);
-        }
+        // If we created a new customer, send notification email
+        // The notification function expects customerId and recipientEmail
+        // For now, we log the successful payment - notification will come after questionnaire
+        console.log("Payment completed for:", customerEmail, "Amount:", amountPaid, "€");
       }
     }
 

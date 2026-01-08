@@ -69,6 +69,8 @@ interface DBConversion {
   cta_location: string | null;
   amount: number | null;
   created_at: string;
+  payment_verified: boolean | null;
+  conversion_type: string | null;
 }
 
 const ABTestDashboard = () => {
@@ -162,6 +164,14 @@ const ABTestDashboard = () => {
       return depths.length > 0 ? depths.reduce((a, b) => a + b, 0) / depths.length : 0;
     };
 
+    // Calculate verified vs unverified revenue
+    const blueVerifiedRevenue = dbConversions
+      .filter(c => c.ab_variant_color === "blue" && c.payment_verified)
+      .reduce((sum, c) => sum + (c.amount || 0), 0);
+    const redVerifiedRevenue = dbConversions
+      .filter(c => c.ab_variant_color === "red" && c.payment_verified)
+      .reduce((sum, c) => sum + (c.amount || 0), 0);
+
     return {
       result,
       blue: {
@@ -174,6 +184,7 @@ const ABTestDashboard = () => {
         revenue: dbConversions
           .filter(c => c.ab_variant_color === "blue")
           .reduce((sum, c) => sum + (c.amount || 0), 0),
+        verifiedRevenue: blueVerifiedRevenue,
       },
       red: {
         visitors: redVisitors,
@@ -185,8 +196,16 @@ const ABTestDashboard = () => {
         revenue: dbConversions
           .filter(c => c.ab_variant_color === "red")
           .reduce((sum, c) => sum + (c.amount || 0), 0),
+        verifiedRevenue: redVerifiedRevenue,
       },
       power,
+      // Overall stats
+      totalVerifiedRevenue: blueVerifiedRevenue + redVerifiedRevenue,
+      totalClickRevenue: dbConversions
+        .filter(c => !c.payment_verified)
+        .reduce((sum, c) => sum + (c.amount || 0), 0),
+      verifiedConversions: dbConversions.filter(c => c.payment_verified).length,
+      clickConversions: dbConversions.filter(c => !c.payment_verified).length,
     };
   }, [dbSessions, dbConversions]);
 
@@ -375,6 +394,75 @@ const ABTestDashboard = () => {
                   {colorTestAnalysis.result.relativeImprovement.toFixed(1)}%
                 </p>
               </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Revenue Breakdown: Verified vs Clicks */}
+        <Card className="mb-8 border-2 border-green-200">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Target className="h-5 w-5 text-green-600" />
+              Umsatz-Übersicht: Echte Zahlungen vs. Checkout-Klicks
+            </CardTitle>
+            <CardDescription>
+              Unterscheidung zwischen bestätigten Stripe-Zahlungen und CTA-Klicks
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-lg bg-green-50 border border-green-200 p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                  <p className="text-sm font-medium text-green-800">Bestätigte Zahlungen</p>
+                </div>
+                <p className="text-3xl font-bold text-green-600">
+                  {colorTestAnalysis.totalVerifiedRevenue?.toFixed(0) || 0}€
+                </p>
+                <p className="text-xs text-green-600/70 mt-1">
+                  {colorTestAnalysis.verifiedConversions || 0} Transaktionen
+                </p>
+              </div>
+              
+              <div className="rounded-lg bg-yellow-50 border border-yellow-200 p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Zap className="h-5 w-5 text-yellow-600" />
+                  <p className="text-sm font-medium text-yellow-800">Checkout-Klicks</p>
+                </div>
+                <p className="text-3xl font-bold text-yellow-600">
+                  {colorTestAnalysis.totalClickRevenue?.toFixed(0) || 0}€
+                </p>
+                <p className="text-xs text-yellow-600/70 mt-1">
+                  {colorTestAnalysis.clickConversions || 0} Klicks (nicht verifiziert)
+                </p>
+              </div>
+
+              <div className="rounded-lg bg-blue-50 border border-blue-200 p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="h-3 w-3 rounded-full bg-blue-600" />
+                  <p className="text-sm font-medium text-blue-800">Blau - Verifiziert</p>
+                </div>
+                <p className="text-2xl font-bold text-blue-600">
+                  {colorTestAnalysis.blue.verifiedRevenue?.toFixed(0) || 0}€
+                </p>
+              </div>
+
+              <div className="rounded-lg bg-red-50 border border-red-200 p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="h-3 w-3 rounded-full bg-red-600" />
+                  <p className="text-sm font-medium text-red-800">Rot - Verifiziert</p>
+                </div>
+                <p className="text-2xl font-bold text-red-600">
+                  {colorTestAnalysis.red.verifiedRevenue?.toFixed(0) || 0}€
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 p-3 bg-muted/50 rounded-lg">
+              <p className="text-sm text-muted-foreground">
+                <strong>Hinweis:</strong> "Bestätigte Zahlungen" sind via Stripe Webhook verifiziert. 
+                "Checkout-Klicks" zeigen Nutzer, die den Checkout geöffnet haben, aber möglicherweise nicht bezahlt haben.
+              </p>
             </div>
           </CardContent>
         </Card>
