@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleLayout from '@/components/blog/ArticleLayout';
-import { blogArticles } from '@/data/blogArticles';
+import { getArticleBySlug } from '@/data/blogArticles';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
@@ -39,7 +40,8 @@ import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer
 import ArticleCTA from '@/components/blog/ArticleCTA';
 
 const LocalSeoFriseur: React.FC = () => {
-  const article = blogArticles.find(a => a.slug === 'local-seo-friseursalon-beauty');
+  const { language } = useLanguage();
+  const article = getArticleBySlug('local-seo-friseursalon-beauty', language);
   
   if (!article) {
     return <div>Artikel nicht gefunden</div>;
@@ -1203,14 +1205,7 @@ const LocalSeoFriseur: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <ArticleCTA 
-        variant="expert"
-        headline="Professionelle Local SEO für deinen Salon"
-        description="Keine Zeit, alles selbst umzusetzen? Wir optimieren dein Google Business Profil, 
-        richten ein Buchungssystem ein und entwickeln deine Social Media Strategie."
-        buttonText="Kostenloses Erstgespräch"
-        buttonLink="/"
-      />
+      <ArticleCTA variant="box" />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
