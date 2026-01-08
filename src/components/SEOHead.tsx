@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect, forwardRef } from "react";
 
 interface SEOHeadProps {
   title: string;
@@ -12,7 +12,7 @@ interface SEOHeadProps {
   jsonLd?: object;
 }
 
-const SEOHead = ({
+const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
   title,
   description,
   canonicalUrl,
@@ -22,7 +22,7 @@ const SEOHead = ({
   noindex = false,
   lang = "de",
   jsonLd,
-}: SEOHeadProps) => {
+}, _ref) => {
   const fullTitle = title.includes("Local Dominator") 
     ? title 
     : `${title} | Local Dominator`;
@@ -102,6 +102,8 @@ const SEOHead = ({
   }, [fullTitle, description, canonicalUrl, ogImage, ogType, keywords, noindex, lang, jsonLd]);
 
   return null;
-};
+});
+
+SEOHead.displayName = "SEOHead";
 
 export default SEOHead;
