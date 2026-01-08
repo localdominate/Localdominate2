@@ -16,9 +16,15 @@ import {
   RefreshCw,
   Eye,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Users,
+  BarChart3,
+  Mail
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CustomerTable } from "@/components/admin/CustomerTable";
+import { AnalyticsOverview } from "@/components/admin/AnalyticsOverview";
+import { EmailTestPanel } from "@/components/admin/EmailTestPanel";
 import { format, parseISO, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths, isAfter, isBefore, isToday } from "date-fns";
 import { de } from "date-fns/locale";
 
@@ -174,8 +180,8 @@ const ContentPlanDashboard = () => {
             </Link>
             <div className="h-6 w-px bg-border" />
             <h1 className="text-xl font-bold flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-primary" />
-              Content-Plan Dashboard
+              <BarChart3 className="w-5 h-5 text-primary" />
+              Admin Dashboard
             </h1>
           </div>
           <div className="flex items-center gap-2">
@@ -241,7 +247,7 @@ const ContentPlanDashboard = () => {
         </div>
 
         <Tabs defaultValue="calendar" className="space-y-6">
-          <TabsList>
+          <TabsList className="flex-wrap h-auto gap-1">
             <TabsTrigger value="calendar" className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               Kalender
@@ -249,6 +255,18 @@ const ContentPlanDashboard = () => {
             <TabsTrigger value="list" className="flex items-center gap-2">
               <FileText className="w-4 h-4" />
               Alle Artikel
+            </TabsTrigger>
+            <TabsTrigger value="customers" className="flex items-center gap-2">
+              <Users className="w-4 h-4" />
+              Kunden
+            </TabsTrigger>
+            <TabsTrigger value="analytics" className="flex items-center gap-2">
+              <BarChart3 className="w-4 h-4" />
+              Analytics
+            </TabsTrigger>
+            <TabsTrigger value="emails" className="flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              E-Mails
             </TabsTrigger>
           </TabsList>
 
@@ -436,6 +454,18 @@ const ContentPlanDashboard = () => {
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          <TabsContent value="customers">
+            <CustomerTable />
+          </TabsContent>
+
+          <TabsContent value="analytics">
+            <AnalyticsOverview />
+          </TabsContent>
+
+          <TabsContent value="emails">
+            <EmailTestPanel />
           </TabsContent>
         </Tabs>
 
