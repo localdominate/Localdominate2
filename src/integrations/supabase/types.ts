@@ -25,7 +25,9 @@ export type Database = {
           cta_text: string | null
           id: string
           page_path: string | null
+          payment_verified: boolean | null
           session_id: string | null
+          stripe_session_id: string | null
         }
         Insert: {
           ab_variant_color?: string | null
@@ -37,7 +39,9 @@ export type Database = {
           cta_text?: string | null
           id?: string
           page_path?: string | null
+          payment_verified?: boolean | null
           session_id?: string | null
+          stripe_session_id?: string | null
         }
         Update: {
           ab_variant_color?: string | null
@@ -49,7 +53,9 @@ export type Database = {
           cta_text?: string | null
           id?: string
           page_path?: string | null
+          payment_verified?: boolean | null
           session_id?: string | null
+          stripe_session_id?: string | null
         }
         Relationships: []
       }
@@ -177,9 +183,13 @@ export type Database = {
           created_at: string
           email: string | null
           id: string
+          payment_amount: number | null
+          payment_completed_at: string | null
+          payment_status: string | null
           phone: string | null
           questionnaire_completed: boolean | null
           questionnaire_completed_at: string | null
+          stripe_customer_id: string | null
           stripe_session_id: string | null
           updated_at: string
           website: string | null
@@ -193,9 +203,13 @@ export type Database = {
           created_at?: string
           email?: string | null
           id?: string
+          payment_amount?: number | null
+          payment_completed_at?: string | null
+          payment_status?: string | null
           phone?: string | null
           questionnaire_completed?: boolean | null
           questionnaire_completed_at?: string | null
+          stripe_customer_id?: string | null
           stripe_session_id?: string | null
           updated_at?: string
           website?: string | null
@@ -209,9 +223,13 @@ export type Database = {
           created_at?: string
           email?: string | null
           id?: string
+          payment_amount?: number | null
+          payment_completed_at?: string | null
+          payment_status?: string | null
           phone?: string | null
           questionnaire_completed?: boolean | null
           questionnaire_completed_at?: string | null
+          stripe_customer_id?: string | null
           stripe_session_id?: string | null
           updated_at?: string
           website?: string | null
