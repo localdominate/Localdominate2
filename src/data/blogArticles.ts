@@ -594,6 +594,31 @@ export const blogArticles: BlogArticle[] = [
     icon: "🚫",
     keywords: ["local seo fehler", "seo probleme", "nicht gefunden werden", "seo diagnose", "ranking probleme"],
     featured: true
+  },
+
+  // === NEUER MEGA-ARTIKEL: DÖNER ===
+  {
+    slug: "local-seo-doener-kebab-imbiss",
+    de: {
+      title: "Local SEO für Döner & Kebab-Imbisse: Der ultimative Marketing-Guide 2026",
+      metaTitle: "Local SEO für Döner-Läden | Der ultimative Kebab-Marketing Guide 2026",
+      metaDescription: "Der längste SEO-Guide für Döner-Läden im deutschsprachigen Internet. Keywords, Google Business, Bewertungen, Lieferportale, Social Media und mehr. Mit 3 interaktiven Tools!",
+      excerpt: "Von Keywords über Bewertungen bis Lieferportale: Alles was Döner-Imbisse brauchen, um bei Google gefunden zu werden.",
+      category: "Gastronomie"
+    },
+    en: {
+      title: "Local SEO for Döner & Kebab Shops: The Ultimate Marketing Guide 2026",
+      metaTitle: "Local SEO for Döner Shops | The Ultimate Kebab Marketing Guide 2026",
+      metaDescription: "The longest SEO guide for Döner shops on the internet. Keywords, Google Business, reviews, delivery platforms, social media and more. With 3 interactive tools!",
+      excerpt: "From keywords to reviews to delivery platforms: Everything Döner shops need to be found on Google.",
+      category: "Restaurants"
+    },
+    readingTime: 25,
+    publishedAt: "2026-01-08",
+    updatedAt: "2026-01-08",
+    icon: "🥙",
+    keywords: ["döner seo", "kebab marketing", "imbiss google", "döner laden mehr kunden", "döner bewertungen", "döner lieferando", "türkisches restaurant seo"],
+    featured: true
   }
 ];
 
