@@ -25,6 +25,21 @@ import LocalSeoKeywords from "./pages/blog/LocalSeoKeywords";
 import Analytics from "./pages/Analytics";
 import ABTestDashboard from "./pages/ABTestDashboard";
 import NotFound from "./pages/NotFound";
+import LocalSeoSchweiz from "./pages/blog/LocalSeoSchweiz";
+import LocalSeoZuerich from "./pages/blog/LocalSeoZuerich";
+import LocalSeoMuenchen from "./pages/blog/LocalSeoMuenchen";
+import LocalSeoAerzte from "./pages/blog/LocalSeoAerzte";
+import LocalSeoAnwaelte from "./pages/blog/LocalSeoAnwaelte";
+import LocalSeoHotels from "./pages/blog/LocalSeoHotels";
+import LocalSeoFitness from "./pages/blog/LocalSeoFitness";
+import SchemaMarkupLocalSeo from "./pages/blog/SchemaMarkupLocalSeo";
+import MobileLocalSeo from "./pages/blog/MobileLocalSeo";
+import GoogleMapsRankingFaktoren from "./pages/blog/GoogleMapsRankingFaktoren";
+import LocalLinkBuilding from "./pages/blog/LocalLinkBuilding";
+import NegativeGoogleBewertungen from "./pages/blog/NegativeGoogleBewertungen";
+import LocalContentMarketing from "./pages/blog/LocalContentMarketing";
+import LocalSeoCaseStudy from "./pages/blog/LocalSeoCaseStudy";
+import LocalSeoFehler from "./pages/blog/LocalSeoFehler";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +71,21 @@ const App = () => (
               <Route path="/blog/local-seo-handwerker" element={<LocalSeoHandwerker />} />
               <Route path="/blog/local-seo-audit-checkliste" element={<LocalSeoAuditCheckliste />} />
               <Route path="/blog/local-seo-keywords-finden" element={<LocalSeoKeywords />} />
+              <Route path="/blog/local-seo-schweiz" element={<LocalSeoSchweiz />} />
+              <Route path="/blog/local-seo-zuerich" element={<LocalSeoZuerich />} />
+              <Route path="/blog/local-seo-muenchen" element={<LocalSeoMuenchen />} />
+              <Route path="/blog/local-seo-aerzte-praxen" element={<LocalSeoAerzte />} />
+              <Route path="/blog/local-seo-anwaelte-kanzleien" element={<LocalSeoAnwaelte />} />
+              <Route path="/blog/local-seo-hotels" element={<LocalSeoHotels />} />
+              <Route path="/blog/local-seo-fitness" element={<LocalSeoFitness />} />
+              <Route path="/blog/schema-markup-local-seo" element={<SchemaMarkupLocalSeo />} />
+              <Route path="/blog/mobile-local-seo" element={<MobileLocalSeo />} />
+              <Route path="/blog/google-maps-seo-ranking-faktoren" element={<GoogleMapsRankingFaktoren />} />
+              <Route path="/blog/local-link-building" element={<LocalLinkBuilding />} />
+              <Route path="/blog/negative-google-bewertungen" element={<NegativeGoogleBewertungen />} />
+              <Route path="/blog/local-content-marketing" element={<LocalContentMarketing />} />
+              <Route path="/blog/local-seo-case-study-baecker" element={<LocalSeoCaseStudy />} />
+              <Route path="/blog/local-seo-fehler" element={<LocalSeoFehler />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

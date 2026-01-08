@@ -27,10 +27,7 @@ const LocalSeoFitness = () => {
         Foto-Strategien und Tipps zur Mitgliedergewinnung.
       </p>
 
-      <ArticleCTA 
-        title="Local SEO für Ihr Studio"
-        description="Füllen Sie Ihr Fitnessstudio mit neuen Mitgliedern."
-      />
+      <ArticleCTA />
 
       <section id="saisonale-keywords" className="mb-12">
         <h2>Saisonale Keywords nutzen</h2>

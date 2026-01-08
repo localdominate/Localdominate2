@@ -28,10 +28,7 @@ const LocalContentMarketing = () => {
         einem Content-Kalender Template zum Download.
       </p>
 
-      <ArticleCTA 
-        title="Lokale Content-Strategie"
-        description="Content, der wirklich lokale Kunden bringt."
-      />
+      <ArticleCTA />
 
       <section id="content-ideen" className="mb-12">
         <h2>Lokale Content-Ideen</h2>

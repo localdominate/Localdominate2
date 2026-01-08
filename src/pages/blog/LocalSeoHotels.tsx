@@ -27,10 +27,7 @@ const LocalSeoHotels = () => {
         und Tipps für mehr Direktbuchungen.
       </p>
 
-      <ArticleCTA 
-        title="Local SEO für Ihr Hotel"
-        description="Steigern Sie Ihre Direktbuchungen durch bessere lokale Sichtbarkeit."
-      />
+      <ArticleCTA />
 
       <section id="direktbuchungen" className="mb-12">
         <h2>Der Kampf gegen Booking.com</h2>

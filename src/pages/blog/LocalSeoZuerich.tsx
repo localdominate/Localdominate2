@@ -27,10 +27,7 @@ const LocalSeoZuerich = () => {
         Tipps speziell für den Zürcher Markt.
       </p>
 
-      <ArticleCTA 
-        title="Zürich Local SEO Experten"
-        description="Wir helfen Zürcher Unternehmen dabei, bei Google Platz 1 zu erreichen."
-      />
+      <ArticleCTA />
 
       <section id="zuercher-markt" className="mb-12">
         <h2>Der Zürcher Markt</h2>

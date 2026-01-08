@@ -27,10 +27,7 @@ const LocalSeoCaseStudy = () => {
         ihre Kundenfrequenz verdreifachte.
       </p>
 
-      <ArticleCTA 
-        title="Ihre Erfolgsgeschichte schreiben"
-        description="Werden Sie das nächste Erfolgsbeispiel."
-      />
+      <ArticleCTA />
 
       <section id="ausgangssituation" className="mb-12">
         <h2>Ausgangssituation</h2>

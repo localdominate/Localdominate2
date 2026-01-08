@@ -27,10 +27,7 @@ const LocalSeoAnwaelte = () => {
         und E-E-A-T-Strategien.
       </p>
 
-      <ArticleCTA 
-        title="Local SEO für Ihre Kanzlei"
-        description="Gewinnen Sie mehr Mandanten durch bessere lokale Sichtbarkeit."
-      />
+      <ArticleCTA />
 
       <section id="rechtsgebiete" className="mb-12">
         <h2>Rechtsgebiets-Keywords</h2>

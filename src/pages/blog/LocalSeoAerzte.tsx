@@ -27,10 +27,7 @@ const LocalSeoAerzte = () => {
         und Strategien zur Patientengewinnung.
       </p>
 
-      <ArticleCTA 
-        title="Local SEO für Ihre Praxis"
-        description="Gewinnen Sie mehr Patienten durch bessere lokale Sichtbarkeit."
-      />
+      <ArticleCTA />
 
       <section id="ymyl" className="mb-12">
         <h2>YMYL-Anforderungen</h2>

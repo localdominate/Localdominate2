@@ -27,10 +27,7 @@ const LocalSeoMuenchen = () => {
         bayerischen Dialekt-Keywords und saisonalen Tipps.
       </p>
 
-      <ArticleCTA 
-        title="München Local SEO Experten"
-        description="Wir helfen Münchner Unternehmen dabei, in der bayerischen Hauptstadt gefunden zu werden."
-      />
+      <ArticleCTA />
 
       <section id="muenchner-markt" className="mb-12">
         <h2>Der Münchner Markt</h2>
