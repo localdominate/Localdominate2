@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoHotels = () => {
@@ -27,7 +27,7 @@ const LocalSeoHotels = () => {
         und Tipps für mehr Direktbuchungen.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-hotels" position="intro" />
 
       <section id="direktbuchungen" className="mb-12">
         <h2>Der Kampf gegen Booking.com</h2>

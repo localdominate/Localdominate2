@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalContentMarketing = () => {
@@ -28,7 +28,7 @@ const LocalContentMarketing = () => {
         einem Content-Kalender Template zum Download.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-content-marketing" position="intro" />
 
       <section id="content-ideen" className="mb-12">
         <h2>Lokale Content-Ideen</h2>

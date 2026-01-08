@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const GoogleMapsRankingFaktoren = () => {
@@ -28,7 +28,7 @@ const GoogleMapsRankingFaktoren = () => {
         Ranking-Faktor Gewichtungs-Slider.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="google-maps-seo-ranking-faktoren" position="intro" />
 
       <section id="proximity" className="mb-12">
         <h2>Proximity (Nähe)</h2>

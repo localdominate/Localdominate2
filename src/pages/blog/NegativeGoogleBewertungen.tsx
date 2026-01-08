@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import ReviewResponseGenerator from "@/components/blog/ReviewResponseGenerator";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
@@ -209,7 +209,7 @@ const NegativeGoogleBewertungen = () => {
         </ul>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="negative-google-bewertungen" position="intro" />
 
       {/* Psychology Section */}
       <section id="psychologie" className="mb-12">
@@ -959,7 +959,7 @@ const NegativeGoogleBewertungen = () => {
         </div>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="negative-google-bewertungen" position="end" />
     </ArticleLayout>
   );
 };

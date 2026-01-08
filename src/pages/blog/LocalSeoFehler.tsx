@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoFehler = () => {
@@ -27,7 +27,7 @@ const LocalSeoFehler = () => {
         Lösungen für jedes Problem.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-fehler" position="intro" />
 
       <section id="technische-fehler" className="mb-12">
         <h2>Technische Fehler (1-5)</h2>

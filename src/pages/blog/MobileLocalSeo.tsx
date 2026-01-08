@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const MobileLocalSeo = () => {
@@ -27,7 +27,7 @@ const MobileLocalSeo = () => {
         du dafür optimierst.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="mobile-local-seo" position="intro" />
 
       <section id="mobile-first" className="mb-12">
         <h2>Mobile-First Indexing</h2>

@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoCaseStudy = () => {
@@ -27,7 +27,7 @@ const LocalSeoCaseStudy = () => {
         ihre Kundenfrequenz verdreifachte.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-case-study-baecker" position="intro" />
 
       <section id="ausgangssituation" className="mb-12">
         <h2>Ausgangssituation</h2>
