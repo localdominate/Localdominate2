@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -229,7 +229,7 @@ const LocalSeoMuenchen = () => {
         Google-Suche dominieren.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-muenchen" position="intro" />
 
       {/* Münchner Markt Section */}
       <section id="muenchner-markt" className="mb-12">
@@ -777,7 +777,7 @@ const LocalSeoMuenchen = () => {
         </div>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-muenchen" position="middle" />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">

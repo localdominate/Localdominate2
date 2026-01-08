@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoFitness = () => {
@@ -27,7 +27,7 @@ const LocalSeoFitness = () => {
         Foto-Strategien und Tipps zur Mitgliedergewinnung.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-fitness" position="intro" />
 
       <section id="saisonale-keywords" className="mb-12">
         <h2>Saisonale Keywords nutzen</h2>

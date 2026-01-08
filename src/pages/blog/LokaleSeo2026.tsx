@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -239,7 +239,7 @@ const LokaleSeo2026 = () => {
         </div>
       </section>
 
-      <ArticleCTA variant="inline" />
+      <BlogCTAABTest articleSlug="lokale-suchmaschinenoptimierung-2026" position="middle" />
 
       <section id="voice" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section3.title}</h2>
@@ -307,7 +307,7 @@ const LokaleSeo2026 = () => {
         </div>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="lokale-suchmaschinenoptimierung-2026" position="end" />
     </ArticleLayout>
   );
 };

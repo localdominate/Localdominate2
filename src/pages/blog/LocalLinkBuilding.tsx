@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalLinkBuilding = () => {
@@ -27,7 +27,7 @@ const LocalLinkBuilding = () => {
         Link-Building Ideen Generator.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-link-building" position="intro" />
 
       <section id="lokale-quellen" className="mb-12">
         <h2>Lokale Link-Quellen</h2>

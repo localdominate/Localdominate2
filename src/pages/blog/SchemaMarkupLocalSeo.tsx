@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const SchemaMarkupLocalSeo = () => {
@@ -28,7 +28,7 @@ const SchemaMarkupLocalSeo = () => {
         Testing-Tools und einem interaktiven Schema Generator.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="schema-markup-local-seo" position="intro" />
 
       <section id="local-business" className="mb-12">
         <h2>LocalBusiness Schema</h2>

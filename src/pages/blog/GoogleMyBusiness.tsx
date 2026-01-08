@@ -1,6 +1,6 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -255,7 +255,7 @@ const GoogleMyBusiness = () => {
         </div>
       </section>
 
-      <ArticleCTA variant="inline" />
+      <BlogCTAABTest articleSlug="google-my-business-optimieren" position="middle" />
 
       <section id="kategorien" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section3.title}</h2>
@@ -338,7 +338,7 @@ const GoogleMyBusiness = () => {
         </div>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="google-my-business-optimieren" position="end" />
     </ArticleLayout>
   );
 };

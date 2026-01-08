@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SwissCantonSelector from "@/components/blog/SwissCantonSelector";
 import SwissDirectoriesTable from "@/components/blog/SwissDirectoriesTable";
@@ -102,7 +102,7 @@ const LocalSeoSchweiz = () => {
         </div>
       </div>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-schweiz" position="intro" />
 
       {/* Section: Der Schweizer Markt */}
       <section id="schweizer-markt" className="mb-12">
@@ -556,7 +556,7 @@ const LocalSeoSchweiz = () => {
           Wir helfen Schweizer Unternehmen dabei, in ihrer Region gefunden zu werden. 
           Von Zürich bis Genf, von Basel bis Lugano.
         </p>
-        <ArticleCTA variant="inline" />
+        <BlogCTAABTest articleSlug="local-seo-schweiz" position="end" />
       </div>
     </ArticleLayout>
   );

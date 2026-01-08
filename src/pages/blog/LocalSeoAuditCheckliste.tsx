@@ -2,7 +2,7 @@ import React from 'react';
 import { getArticleBySlug } from '@/data/blogArticles';
 import ArticleLayout from '@/components/blog/ArticleLayout';
 import TableOfContents from '@/components/blog/TableOfContents';
-import ArticleCTA from '@/components/blog/ArticleCTA';
+import BlogCTAABTest from '@/components/blog/BlogCTAABTest';
 import BlogImage from '@/components/blog/BlogImage';
 import localSeoAuditImg from '@/assets/blog/local-seo-audit.jpg';
 import { useAuditChecklist } from '@/hooks/useAuditChecklist';
@@ -220,7 +220,7 @@ const LocalSeoAuditCheckliste = () => {
         </div>
       </section>
 
-      <ArticleCTA variant="inline" />
+      <BlogCTAABTest articleSlug="local-seo-audit-checkliste" position="middle" />
 
       {/* Website Audit Section */}
       <section id="website-audit" className="mb-12">
@@ -336,7 +336,7 @@ const LocalSeoAuditCheckliste = () => {
         </div>
       </section>
 
-      <ArticleCTA variant="box" />
+      <BlogCTAABTest articleSlug="local-seo-audit-checkliste" position="end" />
     </ArticleLayout>
   );
 };

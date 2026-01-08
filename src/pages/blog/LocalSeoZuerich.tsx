@@ -1,6 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -158,7 +158,7 @@ const LocalSeoZuerich = () => {
         Keyword-Strategie massgeblich beeinflusst.
       </p>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-zuerich" position="intro" />
 
       {/* Zürcher Markt */}
       <section id="zuercher-markt" className="mb-12">
@@ -614,7 +614,7 @@ const LocalSeoZuerich = () => {
         </Card>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="local-seo-zuerich" position="middle" />
 
       {/* FAQ */}
       <section id="faq" className="mb-12">
