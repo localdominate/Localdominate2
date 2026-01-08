@@ -1,6 +1,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import napKonsistenzImg from "@/assets/blog/nap-konsistenz.jpg";
@@ -263,7 +264,7 @@ const NapKonsistenz = () => {
         </ul>
       </section>
 
-      <ArticleCTA variant="inline" />
+      <BlogCTAABTest articleSlug="nap-konsistenz-local-seo" position="intro" />
 
       {/* Wichtige Verzeichnisse */}
       <section id="wichtige-verzeichnisse" className="mb-12">
@@ -493,7 +494,7 @@ const NapKonsistenz = () => {
         </div>
       </section>
 
-      <ArticleCTA variant="inline" />
+      <BlogCTAABTest articleSlug="nap-konsistenz-local-seo" position="middle" />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
@@ -511,7 +512,7 @@ const NapKonsistenz = () => {
         </div>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="nap-konsistenz-local-seo" position="end" />
     </ArticleLayout>
   );
 };

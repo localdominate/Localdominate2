@@ -1,6 +1,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -210,7 +211,7 @@ const GoogleBewertungen = () => {
         </div>
       </section>
 
-      <ArticleCTA variant="inline" />
+      <BlogCTAABTest articleSlug="google-bewertungen-bekommen" position="intro" />
 
       <section id="qr-code" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -260,6 +261,8 @@ const GoogleBewertungen = () => {
         </div>
       </section>
 
+      <BlogCTAABTest articleSlug="google-bewertungen-bekommen" position="middle" />
+
       <section id="faq" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6">
           {t.faq.title}
@@ -274,7 +277,7 @@ const GoogleBewertungen = () => {
         </div>
       </section>
 
-      <ArticleCTA />
+      <BlogCTAABTest articleSlug="google-bewertungen-bekommen" position="end" />
     </ArticleLayout>
   );
 };

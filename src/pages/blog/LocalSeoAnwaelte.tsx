@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LegalSpecialtySelector from "@/components/blog/LegalSpecialtySelector";
 import LawyerPortalsTable from "@/components/blog/LawyerPortalsTable";
@@ -249,6 +250,8 @@ const LocalSeoAnwaelte = () => {
           </ul>
         </div>
       </section>
+
+      <BlogCTAABTest articleSlug="local-seo-anwaelte-kanzleien" position="intro" />
 
       {/* Anwaltsportale */}
       <section id="portale" className="mb-12">
@@ -696,6 +699,8 @@ const LocalSeoAnwaelte = () => {
             <span>Anwaltsportale für Backlinks und Mandatsanfragen nutzen</span>
           </li>
         </ul>
+
+        <BlogCTAABTest articleSlug="local-seo-anwaelte-kanzleien" position="end" />
       </section>
     </ArticleLayout>
   );

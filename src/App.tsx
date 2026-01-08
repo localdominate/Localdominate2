@@ -24,6 +24,7 @@ import LocalSeoAuditCheckliste from "./pages/blog/LocalSeoAuditCheckliste";
 import LocalSeoKeywords from "./pages/blog/LocalSeoKeywords";
 import Analytics from "./pages/Analytics";
 import ABTestDashboard from "./pages/ABTestDashboard";
+import ABTestZentrale from "./pages/ABTestZentrale";
 import NotFound from "./pages/NotFound";
 import LocalSeoSchweiz from "./pages/blog/LocalSeoSchweiz";
 import LocalSeoZuerich from "./pages/blog/LocalSeoZuerich";
@@ -55,6 +56,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/ab-test" element={<ABTestDashboard />} />
+              <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />
