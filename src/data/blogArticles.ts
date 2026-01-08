@@ -619,6 +619,29 @@ export const blogArticles: BlogArticle[] = [
     icon: "🥙",
     keywords: ["döner seo", "kebab marketing", "imbiss google", "döner laden mehr kunden", "döner bewertungen", "döner lieferando", "türkisches restaurant seo"],
     featured: true
+  },
+  {
+    slug: "local-seo-friseursalon-beauty",
+    de: {
+      title: "Local SEO für Friseursalons & Beauty-Studios: Der ultimative Guide mit Buchungsintegration 2026",
+      metaTitle: "Local SEO für Friseure & Beauty-Studios | Der ultimative Guide 2026",
+      metaDescription: "Der längste SEO-Guide für Friseursalons, Kosmetikstudios & Barbershops. Mit Buchungsintegration, Keyword-Generator und Portfolio-Tipps. 6.000+ Worte!",
+      excerpt: "Von Keywords über Buchungssysteme bis Social Media: Alles was Friseure und Beauty-Studios brauchen, um bei Google gefunden zu werden.",
+      category: "Beauty & Wellness"
+    },
+    en: {
+      title: "Local SEO for Hair Salons & Beauty Studios: The Ultimate Guide with Booking Integration 2026",
+      metaTitle: "Local SEO for Hair Salons & Beauty Studios | The Ultimate Guide 2026",
+      metaDescription: "The longest SEO guide for hair salons, beauty studios & barbershops. With booking integration, keyword generator and portfolio tips. 6,000+ words!",
+      excerpt: "From keywords to booking systems to social media: Everything hair salons and beauty studios need to be found on Google.",
+      category: "Beauty & Wellness"
+    },
+    readingTime: 25,
+    publishedAt: "2026-01-08",
+    updatedAt: "2026-01-08",
+    icon: "💇",
+    keywords: ["friseur seo", "beauty marketing", "friseursalon google", "kosmetikstudio marketing", "friseur mehr kunden", "buchungssystem friseur"],
+    featured: true
   }
 ];
 
