@@ -41,6 +41,7 @@ import NegativeGoogleBewertungen from "./pages/blog/NegativeGoogleBewertungen";
 import LocalContentMarketing from "./pages/blog/LocalContentMarketing";
 import LocalSeoCaseStudy from "./pages/blog/LocalSeoCaseStudy";
 import LocalSeoFehler from "./pages/blog/LocalSeoFehler";
+import LocalSeoDoenerladen from "./pages/blog/LocalSeoDoenerladen";
 
 const queryClient = new QueryClient();
 
@@ -88,6 +89,7 @@ const App = () => (
               <Route path="/blog/local-content-marketing" element={<LocalContentMarketing />} />
               <Route path="/blog/local-seo-case-study-baecker" element={<LocalSeoCaseStudy />} />
               <Route path="/blog/local-seo-fehler" element={<LocalSeoFehler />} />
+              <Route path="/blog/local-seo-doener-kebab-imbiss" element={<LocalSeoDoenerladen />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
