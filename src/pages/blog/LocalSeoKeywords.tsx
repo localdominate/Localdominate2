@@ -1,6 +1,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoKeywordsImg from "@/assets/blog/local-seo-keywords.jpg";
@@ -1088,7 +1089,7 @@ const LocalSeoKeywords = () => {
         </div>
       </section>
 
-      <ArticleCTA variant="box" />
+      <BlogCTAABTest articleSlug="local-seo-keywords-finden" position="end" />
 
       {/* FAQ Section */}
       <section id="faq" className="scroll-mt-20">

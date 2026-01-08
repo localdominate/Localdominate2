@@ -14,11 +14,87 @@ export type Database = {
   }
   public: {
     Tables: {
+      ab_test_views: {
+        Row: {
+          created_at: string | null
+          id: string
+          page_url: string | null
+          session_id: string
+          test_id: string
+          variant: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          page_url?: string | null
+          session_id: string
+          test_id: string
+          variant: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          page_url?: string | null
+          session_id?: string
+          test_id?: string
+          variant?: string
+        }
+        Relationships: []
+      }
+      ab_tests: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          end_date: string | null
+          id: string
+          name: string
+          start_date: string | null
+          status: string | null
+          target_sample_size: number | null
+          test_id: string
+          updated_at: string | null
+          variants: Json
+          winning_variant: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          name: string
+          start_date?: string | null
+          status?: string | null
+          target_sample_size?: number | null
+          test_id: string
+          updated_at?: string | null
+          variants?: Json
+          winning_variant?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          end_date?: string | null
+          id?: string
+          name?: string
+          start_date?: string | null
+          status?: string | null
+          target_sample_size?: number | null
+          test_id?: string
+          updated_at?: string | null
+          variants?: Json
+          winning_variant?: string | null
+        }
+        Relationships: []
+      }
       analytics_conversions: {
         Row: {
+          ab_test_id: string | null
           ab_variant_color: string | null
           ab_variant_restaurant: string | null
           amount: number | null
+          blog_article_slug: string | null
+          blog_cta_position: string | null
+          blog_cta_variant: string | null
           conversion_type: string
           created_at: string
           cta_location: string | null
@@ -30,9 +106,13 @@ export type Database = {
           stripe_session_id: string | null
         }
         Insert: {
+          ab_test_id?: string | null
           ab_variant_color?: string | null
           ab_variant_restaurant?: string | null
           amount?: number | null
+          blog_article_slug?: string | null
+          blog_cta_position?: string | null
+          blog_cta_variant?: string | null
           conversion_type: string
           created_at?: string
           cta_location?: string | null
@@ -44,9 +124,13 @@ export type Database = {
           stripe_session_id?: string | null
         }
         Update: {
+          ab_test_id?: string | null
           ab_variant_color?: string | null
           ab_variant_restaurant?: string | null
           amount?: number | null
+          blog_article_slug?: string | null
+          blog_cta_position?: string | null
+          blog_cta_variant?: string | null
           conversion_type?: string
           created_at?: string
           cta_location?: string | null
