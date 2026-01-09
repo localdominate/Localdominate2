@@ -4,6 +4,8 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle } from "lucide-react";
@@ -241,6 +243,22 @@ const GoogleBewertungen = () => {
         <strong>{t.intro.stat}</strong> lesen Online-Bewertungen, bevor sie ein lokales Unternehmen besuchen. <LexikonLink term="Reviews (Bewertungen)">Google Bewertungen</LexikonLink> sind der wichtigste Vertrauensfaktor für potenzielle Kunden. Hier erfährst du, wie du mehr authentische Bewertungen bekommst – ohne gegen Googles Richtlinien zu verstoßen.
       </p>
 
+      <KeyTakeawaysBox 
+        items={language === "de" ? [
+          "Warum Bewertungen entscheidend für lokales Ranking sind",
+          "7 ethische Strategien für mehr Google Reviews",
+          "QR-Code Taktiken für höhere Bewertungsraten",
+          "Negative Bewertungen professionell managen",
+          "Tools und Templates für systematisches Bewertungsmanagement"
+        ] : [
+          "Why reviews are crucial for local ranking",
+          "7 ethical strategies for more Google reviews",
+          "QR code tactics for higher review rates",
+          "Managing negative reviews professionally",
+          "Tools and templates for systematic review management"
+        ]}
+      />
+
       <BlogImage 
         src={googleBewertungenImg} 
         alt={language === "de" ? "Kunden hinterlassen Google Bewertungen" : "Customers leaving Google reviews"}
@@ -353,6 +371,15 @@ const GoogleBewertungen = () => {
           ))}
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Business Profile Bewertungen", url: "https://support.google.com/business/answer/3474122", type: "documentation", description: language === "de" ? "Offizielle Google-Richtlinien für Bewertungen" : "Official Google guidelines for reviews" },
+          { title: "Google Bewertungsrichtlinien", url: "https://support.google.com/contributionpolicy/answer/7400114", type: "documentation", description: language === "de" ? "Was bei Reviews erlaubt ist und was nicht" : "What is and isn't allowed in reviews" },
+          { title: "BrightLocal Consumer Review Survey", url: "https://www.brightlocal.com/research/local-consumer-review-survey/", type: "study", description: language === "de" ? "Aktuelle Studie zum Bewertungsverhalten" : "Current study on review behavior" },
+          { title: "MOZ Review Management Guide", url: "https://moz.com/learn/seo/review-management", type: "article", description: language === "de" ? "Leitfaden zum Bewertungsmanagement" : "Guide to review management" }
+        ]}
+      />
 
       <BlogCTAABTest articleSlug="google-bewertungen-bekommen" position="end" />
     </ArticleLayout>

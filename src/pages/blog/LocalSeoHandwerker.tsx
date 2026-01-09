@@ -4,6 +4,8 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
 import { 
@@ -136,6 +138,16 @@ const LocalSeoHandwerker = () => {
         Aufträge an die Konkurrenz. Dieser Guide zeigt dir, wie du mit <LexikonLink term="Local SEO" /> mehr qualifizierte 
         Anfragen bekommst und im <LexikonLink term="Local Pack" /> erscheinst.
       </p>
+
+      <KeyTakeawaysBox 
+        items={[
+          "Warum 85% der Kunden heute online nach Handwerkern suchen",
+          "Google Business Profil speziell für Handwerker optimieren",
+          "Bewertungen systematisch und rechtssicher sammeln",
+          "Vorher-Nachher-Bilder strategisch für mehr Aufträge einsetzen",
+          "Google Garantie und lokale Dienstleistungsanzeigen nutzen"
+        ]}
+      />
 
       <BlogImage 
         src={localSeoHandwerkerImg} 
@@ -575,6 +587,15 @@ const LocalSeoHandwerker = () => {
           ))}
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Business Profile Hilfe", url: "https://support.google.com/business", type: "documentation", description: "Offizielle Google-Dokumentation für Unternehmensprofile" },
+          { title: "Google Lokale Dienstleistungen", url: "https://ads.google.com/local-services-ads/", type: "documentation", description: "Informationen zu Google Garantie und lokalen Anzeigen" },
+          { title: "Handwerkskammer Digitalisierung", url: "https://www.zdh.de/", type: "article", description: "Zentralverband des Deutschen Handwerks" },
+          { title: "MyHammer für Handwerker", url: "https://www.myhammer.de/", type: "tool", description: "Plattform zur Auftragsgewinnung" }
+        ]}
+      />
 
       <ArticleCTA />
     </ArticleLayout>

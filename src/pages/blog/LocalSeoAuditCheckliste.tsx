@@ -5,6 +5,8 @@ import TableOfContents from '@/components/blog/TableOfContents';
 import BlogCTAABTest from '@/components/blog/BlogCTAABTest';
 import BlogImage from '@/components/blog/BlogImage';
 import LexikonLink from '@/components/blog/LexikonLink';
+import KeyTakeawaysBox from '@/components/blog/KeyTakeawaysBox';
+import SourcesSection from '@/components/blog/SourcesSection';
 import localSeoAuditImg from '@/assets/blog/local-seo-audit.jpg';
 import { useAuditChecklist } from '@/hooks/useAuditChecklist';
 import { AuditProgressBar } from '@/components/audit/AuditProgressBar';
@@ -158,6 +160,16 @@ const LocalSeoAuditCheckliste = () => {
         <strong> Klicke auf jeden Punkt</strong>, um ihn als erledigt zu markieren – dein Fortschritt 
         wird automatisch gespeichert!
       </p>
+
+      <KeyTakeawaysBox 
+        items={[
+          "50-Punkte interaktive Checkliste mit Fortschrittsspeicherung",
+          "Alle Bereiche abgedeckt: GBP, Website, Citations, Reviews",
+          "Prioritätssystem für effiziente Optimierung",
+          "Praktische Tipps und Erklärungen für jeden Punkt",
+          "Exportierbar als Arbeitsgrundlage für dein Team"
+        ]}
+      />
 
       <BlogImage 
         src={localSeoAuditImg} 
@@ -399,6 +411,16 @@ const LocalSeoAuditCheckliste = () => {
           ))}
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Search Console", url: "https://search.google.com/search-console", type: "tool", description: "Kostenloses Tool zur Überwachung deiner Website-Performance" },
+          { title: "Google Business Profile Hilfe", url: "https://support.google.com/business", type: "documentation", description: "Offizielle Google-Dokumentation" },
+          { title: "MOZ Local Search Ranking Factors", url: "https://moz.com/local-search-ranking-factors", type: "study", description: "Jährliche Studie zu lokalen Ranking-Faktoren" },
+          { title: "Schema.org LocalBusiness", url: "https://schema.org/LocalBusiness", type: "documentation", description: "Strukturierte Daten für lokale Unternehmen" },
+          { title: "PageSpeed Insights", url: "https://pagespeed.web.dev/", type: "tool", description: "Core Web Vitals testen" }
+        ]}
+      />
 
       <BlogCTAABTest articleSlug="local-seo-audit-checkliste" position="end" />
     </ArticleLayout>

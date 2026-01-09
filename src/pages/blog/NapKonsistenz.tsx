@@ -4,6 +4,8 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import napKonsistenzImg from "@/assets/blog/nap-konsistenz.jpg";
 import { 
@@ -124,6 +126,16 @@ const NapKonsistenz = () => {
         deine Adresse oder Telefonnummer in verschiedenen Verzeichnissen unterschiedlich sind, verliert 
         Google das Vertrauen in deine Daten – und dein Ranking leidet.
       </p>
+
+      <KeyTakeawaysBox 
+        items={[
+          "Was NAP bedeutet und warum es für lokales Ranking entscheidend ist",
+          "Die 20 wichtigsten deutschen Verzeichnisse für Citations",
+          "Schritt-für-Schritt NAP-Audit durchführen",
+          "Tools für effizientes NAP-Management im Überblick",
+          "Häufige NAP-Fehler erkennen und vermeiden"
+        ]}
+      />
 
       <BlogImage 
         src={napKonsistenzImg} 
@@ -512,6 +524,16 @@ const NapKonsistenz = () => {
           ))}
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "MOZ Local SEO Guide", url: "https://moz.com/learn/seo/local", type: "article", description: "Umfassender Leitfaden zu Local SEO von MOZ" },
+          { title: "Gelbe Seiten", url: "https://www.gelbeseiten.de/", type: "tool", description: "Deutsches Branchenverzeichnis" },
+          { title: "Das Örtliche", url: "https://www.dasoertliche.de/", type: "tool", description: "Lokales Telefonbuch und Branchenbuch" },
+          { title: "BrightLocal Citation Tracker", url: "https://www.brightlocal.com/", type: "tool", description: "Tool zur Citation-Verwaltung" },
+          { title: "Semrush Listing Management", url: "https://www.semrush.com/local/", type: "tool", description: "NAP-Management-Tool" }
+        ]}
+      />
 
       <BlogCTAABTest articleSlug="nap-konsistenz-local-seo" position="end" />
     </ArticleLayout>

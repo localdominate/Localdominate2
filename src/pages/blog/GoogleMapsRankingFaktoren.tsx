@@ -1,6 +1,8 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, XCircle, MapPin, Star, TrendingUp, Building, Users, Globe, AlertTriangle, Award, Target, Zap, Shield } from "lucide-react";
@@ -153,6 +155,16 @@ const GoogleMapsRankingFaktoren = () => {
         Relevance (Relevanz) und Prominence (Bekanntheit). Wer diese Faktoren versteht 
         und optimiert, dominiert das Local Pack und gewinnt mehr Kunden.
       </p>
+
+      <KeyTakeawaysBox 
+        items={[
+          "Die 3 Hauptfaktoren: Proximity, Relevance, Prominence erklärt",
+          "20 konkrete Ranking-Faktoren mit Gewichtung und Optimierungs-Tipps",
+          "Welche Faktoren du aktiv beeinflussen kannst (und welche nicht)",
+          "Negative Faktoren die dein Ranking zerstören können",
+          "Praxis-Case-Study mit konkreten Ranking-Verbesserungen"
+        ]}
+      />
 
       <BlogCTAABTest articleSlug="google-maps-seo-ranking-faktoren" position="intro" />
 
@@ -615,6 +627,15 @@ const GoogleMapsRankingFaktoren = () => {
           </ol>
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Business Profile Richtlinien", url: "https://support.google.com/business/answer/3038177", type: "documentation", description: "Offizielle Richtlinien von Google für Unternehmensprofile" },
+          { title: "MOZ Local Search Ranking Factors", url: "https://moz.com/local-search-ranking-factors", type: "study", description: "Jährliche Studie zu lokalen Ranking-Faktoren" },
+          { title: "BrightLocal Local SEO Survey", url: "https://www.brightlocal.com/research/", type: "study", description: "Aktuelle Forschung zu Local SEO" },
+          { title: "Google Maps Hilfe", url: "https://support.google.com/maps", type: "documentation", description: "Offizielle Google Maps Dokumentation" }
+        ]}
+      />
     </ArticleLayout>
   );
 };

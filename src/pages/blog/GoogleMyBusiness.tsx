@@ -3,6 +3,8 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, Settings, Image, MessageSquare, BarChart3, Lightbulb } from "lucide-react";
@@ -274,6 +276,22 @@ const GoogleMyBusiness = () => {
         Dein <LexikonLink term="Google Business Profile" /> (früher Google My Business) ist das Schaufenster deines Unternehmens in der Google-Suche. Ein vollständig optimiertes Profil kann deine lokale Sichtbarkeit im <LexikonLink term="Local Pack" /> um bis zu 70% steigern. Diese Anleitung zeigt dir jeden Schritt.
       </p>
 
+      <KeyTakeawaysBox 
+        items={language === "de" ? [
+          "Profil einrichten und schnell verifizieren lassen",
+          "100% Profil-Vollständigkeit für maximale Sichtbarkeit",
+          "Kategorien strategisch wählen für mehr Relevanz",
+          "Google Posts effektiv nutzen für Engagement",
+          "Insights analysieren und optimieren"
+        ] : [
+          "Set up your profile and get verified quickly",
+          "100% profile completeness for maximum visibility",
+          "Choose categories strategically for more relevance",
+          "Use Google Posts effectively for engagement",
+          "Analyze and optimize insights"
+        ]}
+      />
+
       <BlogImage 
         src={googleMyBusinessImg} 
         alt={language === "de" ? "Google Business Profil Dashboard" : "Google Business Profile Dashboard"}
@@ -414,6 +432,15 @@ const GoogleMyBusiness = () => {
           ))}
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Business Profile Hilfe", url: "https://support.google.com/business", type: "documentation", description: language === "de" ? "Offizielle Google-Dokumentation" : "Official Google documentation" },
+          { title: "GBP Richtlinien", url: "https://support.google.com/business/answer/3038177", type: "documentation", description: language === "de" ? "Richtlinien für die Darstellung deines Unternehmens" : "Guidelines for representing your business" },
+          { title: "Google Posts Best Practices", url: "https://support.google.com/business/answer/7662907", type: "documentation", description: language === "de" ? "So nutzt du Google Posts optimal" : "How to use Google Posts optimally" },
+          { title: "Schema.org LocalBusiness", url: "https://schema.org/LocalBusiness", type: "documentation", description: language === "de" ? "Strukturierte Daten für lokale Unternehmen" : "Structured data for local businesses" }
+        ]}
+      />
 
       <BlogCTAABTest articleSlug="google-my-business-optimieren" position="end" />
     </ArticleLayout>

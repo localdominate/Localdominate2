@@ -3,6 +3,8 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoKeywordsImg from "@/assets/blog/local-seo-keywords.jpg";
 import { 
@@ -1169,6 +1171,16 @@ const LocalSeoKeywords = () => {
           Starte mit 10 Keywords und erweitere kontinuierlich.
         </p>
       </div>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Keyword Planner", url: "https://ads.google.com/home/tools/keyword-planner/", type: "tool", description: "Kostenloser Keyword-Recherche-Tool von Google" },
+          { title: "MOZ Keyword Research Guide", url: "https://moz.com/beginners-guide-to-seo/keyword-research", type: "article", description: "Umfassender Leitfaden zur Keyword-Recherche" },
+          { title: "Google Trends", url: "https://trends.google.de/", type: "tool", description: "Suchtrends und Saisonalität analysieren" },
+          { title: "AlsoAsked", url: "https://alsoasked.com/", type: "tool", description: "Fragen-Tool für Long-Tail Keywords" },
+          { title: "AnswerThePublic", url: "https://answerthepublic.com/", type: "tool", description: "Visualisierung von Suchanfragen und Fragen" }
+        ]}
+      />
     </ArticleLayout>
   );
 };
