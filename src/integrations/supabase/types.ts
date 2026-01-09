@@ -43,9 +43,12 @@ export type Database = {
       }
       ab_tests: {
         Row: {
+          auto_managed: boolean | null
           config: Json | null
           created_at: string | null
           description: string | null
+          element_id: string | null
+          element_type: string | null
           end_date: string | null
           id: string
           is_ready: boolean | null
@@ -54,14 +57,19 @@ export type Database = {
           status: string | null
           target_sample_size: number | null
           test_id: string
+          traffic_split_a: number | null
+          traffic_split_b: number | null
           updated_at: string | null
           variants: Json
           winning_variant: string | null
         }
         Insert: {
+          auto_managed?: boolean | null
           config?: Json | null
           created_at?: string | null
           description?: string | null
+          element_id?: string | null
+          element_type?: string | null
           end_date?: string | null
           id?: string
           is_ready?: boolean | null
@@ -70,14 +78,19 @@ export type Database = {
           status?: string | null
           target_sample_size?: number | null
           test_id: string
+          traffic_split_a?: number | null
+          traffic_split_b?: number | null
           updated_at?: string | null
           variants?: Json
           winning_variant?: string | null
         }
         Update: {
+          auto_managed?: boolean | null
           config?: Json | null
           created_at?: string | null
           description?: string | null
+          element_id?: string | null
+          element_type?: string | null
           end_date?: string | null
           id?: string
           is_ready?: boolean | null
@@ -86,6 +99,8 @@ export type Database = {
           status?: string | null
           target_sample_size?: number | null
           test_id?: string
+          traffic_split_a?: number | null
+          traffic_split_b?: number | null
           updated_at?: string | null
           variants?: Json
           winning_variant?: string | null
@@ -263,6 +278,54 @@ export type Database = {
         }
         Relationships: []
       }
+      auto_test_queue: {
+        Row: {
+          created_at: string
+          current_variant_a: string | null
+          current_variant_b: string | null
+          current_winner: string | null
+          element_id: string
+          element_type: string
+          id: string
+          max_variants: number
+          priority: number
+          status: string
+          tested_variants: Json
+          updated_at: string
+          variants_to_test: Json
+        }
+        Insert: {
+          created_at?: string
+          current_variant_a?: string | null
+          current_variant_b?: string | null
+          current_winner?: string | null
+          element_id: string
+          element_type: string
+          id?: string
+          max_variants?: number
+          priority?: number
+          status?: string
+          tested_variants?: Json
+          updated_at?: string
+          variants_to_test?: Json
+        }
+        Update: {
+          created_at?: string
+          current_variant_a?: string | null
+          current_variant_b?: string | null
+          current_winner?: string | null
+          element_id?: string
+          element_type?: string
+          id?: string
+          max_variants?: number
+          priority?: number
+          status?: string
+          tested_variants?: Json
+          updated_at?: string
+          variants_to_test?: Json
+        }
+        Relationships: []
+      }
       customers: {
         Row: {
           address: string | null
@@ -359,6 +422,39 @@ export type Database = {
           total_revenue?: number | null
           total_sessions?: number | null
           variant_analysis?: Json | null
+        }
+        Relationships: []
+      }
+      optimized_elements: {
+        Row: {
+          created_at: string
+          element_id: string
+          element_type: string
+          id: string
+          locked_until: string | null
+          test_history: Json
+          updated_at: string
+          winning_value: string
+        }
+        Insert: {
+          created_at?: string
+          element_id: string
+          element_type: string
+          id?: string
+          locked_until?: string | null
+          test_history?: Json
+          updated_at?: string
+          winning_value: string
+        }
+        Update: {
+          created_at?: string
+          element_id?: string
+          element_type?: string
+          id?: string
+          locked_until?: string | null
+          test_history?: Json
+          updated_at?: string
+          winning_value?: string
         }
         Relationships: []
       }

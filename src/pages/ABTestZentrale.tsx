@@ -10,7 +10,8 @@ import {
   CheckCircle2,
   AlertCircle,
   Clock,
-  Target
+  Target,
+  Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,6 +22,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { generateRecommendations, testIdeas, getBlogCTAAnalysis, type ABTestRecommendation } from "@/lib/abTestRecommendations";
 import TestControlButtons from "@/components/admin/TestControlButtons";
 import TestIdeaCard from "@/components/admin/TestIdeaCard";
+import AutoOptimizerPanel from "@/components/admin/AutoOptimizerPanel";
 
 interface ABTest {
   id: string;
@@ -204,8 +206,12 @@ const ABTestZentrale = () => {
           </Button>
         </div>
 
-        <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4 max-w-2xl">
+        <Tabs defaultValue="auto-optimizer" className="space-y-6">
+          <TabsList className="grid w-full grid-cols-5 max-w-3xl">
+            <TabsTrigger value="auto-optimizer" className="flex items-center gap-1">
+              <Zap className="h-4 w-4" />
+              Auto-Optimizer
+            </TabsTrigger>
             <TabsTrigger value="overview">
               Übersicht
               {activeTests > 0 && <Badge className="ml-2 bg-green-500 text-xs">{activeTests}</Badge>}
@@ -219,9 +225,13 @@ const ABTestZentrale = () => {
             </TabsTrigger>
             <TabsTrigger value="ideas">
               Test-Ideen
-              {pausedTests > 0 && <Badge className="ml-2 bg-yellow-500 text-xs">{pausedTests} bereit</Badge>}
             </TabsTrigger>
           </TabsList>
+
+          {/* Auto-Optimizer Tab */}
+          <TabsContent value="auto-optimizer">
+            <AutoOptimizerPanel />
+          </TabsContent>
 
           {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-6">
