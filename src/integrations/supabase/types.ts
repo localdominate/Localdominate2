@@ -14,6 +14,90 @@ export type Database = {
   }
   public: {
     Tables: {
+      ab_test_engagement: {
+        Row: {
+          clicked_cta: boolean | null
+          completed_checkout: boolean | null
+          created_at: string | null
+          cta_hover_count: number | null
+          cta_hover_duration_ms: number | null
+          element_interactions: number | null
+          engagement_score: number | null
+          id: string
+          intent_score: number | null
+          max_scroll_depth: number | null
+          price_hover_duration_ms: number | null
+          scroll_past_cta: boolean | null
+          scroll_to_cta_percent: number | null
+          session_duration_ms: number | null
+          session_id: string
+          started_checkout: boolean | null
+          test_id: string
+          time_on_offer_section_ms: number | null
+          time_to_first_click_ms: number | null
+          time_to_first_cta_ms: number | null
+          variant: string
+          viewed_cta: boolean | null
+          viewed_hero: boolean | null
+          viewed_offer: boolean | null
+          viewed_testimonials: boolean | null
+        }
+        Insert: {
+          clicked_cta?: boolean | null
+          completed_checkout?: boolean | null
+          created_at?: string | null
+          cta_hover_count?: number | null
+          cta_hover_duration_ms?: number | null
+          element_interactions?: number | null
+          engagement_score?: number | null
+          id?: string
+          intent_score?: number | null
+          max_scroll_depth?: number | null
+          price_hover_duration_ms?: number | null
+          scroll_past_cta?: boolean | null
+          scroll_to_cta_percent?: number | null
+          session_duration_ms?: number | null
+          session_id: string
+          started_checkout?: boolean | null
+          test_id: string
+          time_on_offer_section_ms?: number | null
+          time_to_first_click_ms?: number | null
+          time_to_first_cta_ms?: number | null
+          variant: string
+          viewed_cta?: boolean | null
+          viewed_hero?: boolean | null
+          viewed_offer?: boolean | null
+          viewed_testimonials?: boolean | null
+        }
+        Update: {
+          clicked_cta?: boolean | null
+          completed_checkout?: boolean | null
+          created_at?: string | null
+          cta_hover_count?: number | null
+          cta_hover_duration_ms?: number | null
+          element_interactions?: number | null
+          engagement_score?: number | null
+          id?: string
+          intent_score?: number | null
+          max_scroll_depth?: number | null
+          price_hover_duration_ms?: number | null
+          scroll_past_cta?: boolean | null
+          scroll_to_cta_percent?: number | null
+          session_duration_ms?: number | null
+          session_id?: string
+          started_checkout?: boolean | null
+          test_id?: string
+          time_on_offer_section_ms?: number | null
+          time_to_first_click_ms?: number | null
+          time_to_first_cta_ms?: number | null
+          variant?: string
+          viewed_cta?: boolean | null
+          viewed_hero?: boolean | null
+          viewed_offer?: boolean | null
+          viewed_testimonials?: boolean | null
+        }
+        Relationships: []
+      }
       ab_test_views: {
         Row: {
           created_at: string | null
@@ -227,6 +311,72 @@ export type Database = {
         }
         Relationships: []
       }
+      analytics_heatmap_enhanced: {
+        Row: {
+          ab_variant: string | null
+          created_at: string | null
+          device: string | null
+          element_selector: string | null
+          element_text: string | null
+          element_type: string | null
+          hover_duration_ms: number | null
+          id: string
+          interaction_type: string | null
+          is_dead_click: boolean | null
+          is_missed_cta: boolean | null
+          is_rage_click: boolean | null
+          page_path: string | null
+          section_name: string | null
+          session_id: string
+          viewport_height: number | null
+          viewport_width: number | null
+          x_percent: number | null
+          y_percent: number | null
+        }
+        Insert: {
+          ab_variant?: string | null
+          created_at?: string | null
+          device?: string | null
+          element_selector?: string | null
+          element_text?: string | null
+          element_type?: string | null
+          hover_duration_ms?: number | null
+          id?: string
+          interaction_type?: string | null
+          is_dead_click?: boolean | null
+          is_missed_cta?: boolean | null
+          is_rage_click?: boolean | null
+          page_path?: string | null
+          section_name?: string | null
+          session_id: string
+          viewport_height?: number | null
+          viewport_width?: number | null
+          x_percent?: number | null
+          y_percent?: number | null
+        }
+        Update: {
+          ab_variant?: string | null
+          created_at?: string | null
+          device?: string | null
+          element_selector?: string | null
+          element_text?: string | null
+          element_type?: string | null
+          hover_duration_ms?: number | null
+          id?: string
+          interaction_type?: string | null
+          is_dead_click?: boolean | null
+          is_missed_cta?: boolean | null
+          is_rage_click?: boolean | null
+          page_path?: string | null
+          section_name?: string | null
+          session_id?: string
+          viewport_height?: number | null
+          viewport_width?: number | null
+          x_percent?: number | null
+          y_percent?: number | null
+        }
+        Relationships: []
+      }
       analytics_sessions: {
         Row: {
           ab_variant_color: string | null
@@ -422,6 +572,51 @@ export type Database = {
           total_revenue?: number | null
           total_sessions?: number | null
           variant_analysis?: Json | null
+        }
+        Relationships: []
+      }
+      keyword_performance: {
+        Row: {
+          avg_scroll_depth: number | null
+          avg_session_duration_ms: number | null
+          bounce_rate: number | null
+          conversions: number | null
+          created_at: string | null
+          date: string
+          id: string
+          impressions: number | null
+          keyword: string
+          revenue: number | null
+          sessions: number | null
+          source: string | null
+        }
+        Insert: {
+          avg_scroll_depth?: number | null
+          avg_session_duration_ms?: number | null
+          bounce_rate?: number | null
+          conversions?: number | null
+          created_at?: string | null
+          date: string
+          id?: string
+          impressions?: number | null
+          keyword: string
+          revenue?: number | null
+          sessions?: number | null
+          source?: string | null
+        }
+        Update: {
+          avg_scroll_depth?: number | null
+          avg_session_duration_ms?: number | null
+          bounce_rate?: number | null
+          conversions?: number | null
+          created_at?: string | null
+          date?: string
+          id?: string
+          impressions?: number | null
+          keyword?: string
+          revenue?: number | null
+          sessions?: number | null
+          source?: string | null
         }
         Relationships: []
       }

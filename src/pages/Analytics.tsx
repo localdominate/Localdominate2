@@ -21,7 +21,9 @@ import {
   LogOut,
   Zap,
   Target,
-  Palette
+  Palette,
+  Search,
+  Flame
 } from "lucide-react";
 import { 
   calculateMetrics, 
@@ -35,6 +37,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Table,
   TableBody,
@@ -44,6 +47,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area } from "recharts";
+import HeatmapAnalyzer from "@/components/admin/HeatmapAnalyzer";
+import KeywordPerformance from "@/components/admin/KeywordPerformance";
 
 const ADMIN_USERNAME = "admin";
 const ADMIN_PASSWORD = "localdominator240686";
@@ -388,6 +393,33 @@ const Analytics = () => {
           </Button>
         </div>
       </div>
+
+      {/* Main Tabs */}
+      <Tabs defaultValue="overview" className="space-y-6">
+        <TabsList className="grid w-full grid-cols-3 lg:w-auto lg:inline-flex">
+          <TabsTrigger value="overview" className="gap-2">
+            <BarChart3 className="h-4 w-4" />
+            Übersicht
+          </TabsTrigger>
+          <TabsTrigger value="heatmap" className="gap-2">
+            <Flame className="h-4 w-4" />
+            Heatmap Analyse
+          </TabsTrigger>
+          <TabsTrigger value="keywords" className="gap-2">
+            <Search className="h-4 w-4" />
+            Keywords
+          </TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="heatmap">
+          <HeatmapAnalyzer />
+        </TabsContent>
+
+        <TabsContent value="keywords">
+          <KeywordPerformance />
+        </TabsContent>
+
+        <TabsContent value="overview">
 
       {/* Database KPI Cards */}
       <div className="mb-8 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
