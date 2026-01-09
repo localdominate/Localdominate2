@@ -973,6 +973,8 @@ const Analytics = () => {
           </p>
         </CardContent>
       </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };
