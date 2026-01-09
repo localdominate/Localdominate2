@@ -12,7 +12,7 @@ const ExpertSection = () => {
         <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 reveal ${isVisible ? 'visible' : ''}`}>
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl border border-primary/20 overflow-hidden">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl border border-primary/20 overflow-hidden shadow-lg shadow-primary/10 transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:scale-105">
               <img 
                 src={expertProfile} 
                 alt="Local SEO Experte"
