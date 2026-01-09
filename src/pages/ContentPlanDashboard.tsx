@@ -20,12 +20,14 @@ import {
   ChevronRight,
   Users,
   BarChart3,
-  Mail
+  Mail,
+  Rocket
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CustomerTable } from "@/components/admin/CustomerTable";
 import { AnalyticsOverview } from "@/components/admin/AnalyticsOverview";
 import { EmailTestPanel } from "@/components/admin/EmailTestPanel";
+import { ScheduledPostsPanel } from "@/components/admin/ScheduledPostsPanel";
 import { format, parseISO, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths, isAfter, isBefore, isToday } from "date-fns";
 import { de } from "date-fns/locale";
 
@@ -271,6 +273,10 @@ const ContentPlanDashboard = () => {
                 <Mail className="w-4 h-4" />
                 E-Mails
               </TabsTrigger>
+              <TabsTrigger value="scheduled" className="flex items-center gap-2">
+                <Rocket className="w-4 h-4" />
+                Geplante Posts
+              </TabsTrigger>
             </TabsList>
           </Tabs>
           <Link to="/admin/kunden">
@@ -476,6 +482,10 @@ const ContentPlanDashboard = () => {
 
           <TabsContent value="emails">
             <EmailTestPanel />
+          </TabsContent>
+
+          <TabsContent value="scheduled">
+            <ScheduledPostsPanel />
           </TabsContent>
         </Tabs>
 
