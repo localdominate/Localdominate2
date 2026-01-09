@@ -50,6 +50,7 @@ import LocalSeoAutowerkstatt from "./pages/blog/LocalSeoAutowerkstatt";
 import LocalSeoFrankfurt from "./pages/blog/LocalSeoFrankfurt";
 import CoreWebVitalsLocalSeo from "./pages/blog/CoreWebVitalsLocalSeo";
 import LocalSeoBerlin from "./pages/blog/LocalSeoBerlin";
+import KostenloseSeo from "./pages/blog/KostenloseSeo";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 import SeoLexikon from "./pages/SeoLexikon";
@@ -112,6 +113,7 @@ const App = () => (
               <Route path="/blog/local-seo-frankfurt" element={<LocalSeoFrankfurt />} />
               <Route path="/blog/core-web-vitals-local-seo" element={<CoreWebVitalsLocalSeo />} />
               <Route path="/blog/local-seo-berlin" element={<LocalSeoBerlin />} />
+              <Route path="/blog/kostenloses-seo-guide" element={<KostenloseSeo />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
