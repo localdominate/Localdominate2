@@ -11,4 +11,16 @@
     <loc>https://localdominator.de/sitemap-images.xml</loc>
     <lastmod>2026-01-09</lastmod>
   </sitemap>
+  
+  <!-- Blog Sitemap (höhere Crawl-Priorität) -->
+  <sitemap>
+    <loc>https://localdominator.de/sitemap-blog.xml</loc>
+    <lastmod>2026-01-09</lastmod>
+  </sitemap>
+  
+  <!-- SEO Lexikon Sitemap -->
+  <sitemap>
+    <loc>https://localdominator.de/sitemap-lexikon.xml</loc>
+    <lastmod>2026-01-09</lastmod>
+  </sitemap>
 </sitemapindex>

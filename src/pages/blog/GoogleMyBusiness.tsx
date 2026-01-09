@@ -205,8 +205,69 @@ const GoogleMyBusiness = () => {
     }))
   };
 
+  // HowTo Schema für Google Business Profil Optimierung
+  const howToSchema = {
+    "@type": "HowTo",
+    "name": language === "de" 
+      ? "Google Business Profil optimieren - Schritt für Schritt Anleitung"
+      : "Optimize Google Business Profile - Step by Step Guide",
+    "description": language === "de"
+      ? "Vollständige Anleitung zur Optimierung deines Google Business Profils für bessere lokale Sichtbarkeit."
+      : "Complete guide to optimizing your Google Business Profile for better local visibility.",
+    "totalTime": "PT1H",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "EUR",
+      "value": "0"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Profil erstellen und verifizieren" : "Create and verify profile",
+        "text": language === "de" 
+          ? "Gehe zu business.google.com, erstelle dein Profil und verifiziere es per Postkarte oder Video."
+          : "Go to business.google.com, create your profile and verify it via postcard or video.",
+        "position": 1
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Alle Informationen ausfüllen" : "Complete all information",
+        "text": language === "de"
+          ? "Fülle alle Felder aus: Beschreibung (750 Zeichen), Öffnungszeiten, Kontaktdaten, Attribute."
+          : "Fill in all fields: description (750 characters), business hours, contact info, attributes.",
+        "position": 2
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Kategorien wählen" : "Choose categories",
+        "text": language === "de"
+          ? "Wähle eine präzise Hauptkategorie und bis zu 9 relevante Nebenkategorien."
+          : "Choose a precise primary category and up to 9 relevant secondary categories.",
+        "position": 3
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Fotos hochladen" : "Upload photos",
+        "text": language === "de"
+          ? "Lade hochwertige Fotos hoch: Logo, Titelbild, Innenansichten, Team, Produkte."
+          : "Upload high-quality photos: logo, cover image, interior views, team, products.",
+        "position": 4
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Google Posts nutzen" : "Use Google Posts",
+        "text": language === "de"
+          ? "Veröffentliche regelmäßig Posts mit Neuigkeiten, Angeboten und Events."
+          : "Regularly publish posts with news, offers and events.",
+        "position": 5
+      }
+    ]
+  };
+
+  const combinedSchema = [faqSchema, howToSchema];
+
   return (
-    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={combinedSchema}>
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">

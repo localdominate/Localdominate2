@@ -172,8 +172,69 @@ const GoogleBewertungen = () => {
     }))
   };
 
+  // HowTo Schema für Bewertungen bekommen
+  const howToSchema = {
+    "@type": "HowTo",
+    "name": language === "de" 
+      ? "Mehr Google Bewertungen bekommen - 7 ethische Strategien"
+      : "Get More Google Reviews - 7 Ethical Strategies",
+    "description": language === "de"
+      ? "Schritt-für-Schritt Anleitung um mehr authentische Google Bewertungen zu erhalten ohne gegen Richtlinien zu verstoßen."
+      : "Step-by-step guide to get more authentic Google reviews without violating guidelines.",
+    "totalTime": "PT30M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "EUR",
+      "value": "0"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Bewertungslink erstellen" : "Create review link",
+        "text": language === "de"
+          ? "Öffne dein Google Business Profil und kopiere den direkten Bewertungslink."
+          : "Open your Google Business Profile and copy the direct review link.",
+        "position": 1
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "QR-Code generieren" : "Generate QR code",
+        "text": language === "de"
+          ? "Erstelle einen QR-Code mit dem Bewertungslink für Visitenkarten und Rechnungen."
+          : "Create a QR code with the review link for business cards and invoices.",
+        "position": 2
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Nach dem Kauf fragen" : "Ask after purchase",
+        "text": language === "de"
+          ? "Bitte zufriedene Kunden direkt nach einer positiven Erfahrung um eine Bewertung."
+          : "Ask satisfied customers for a review right after a positive experience.",
+        "position": 3
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Follow-up E-Mail senden" : "Send follow-up email",
+        "text": language === "de"
+          ? "Sende 1-2 Tage nach dem Kauf eine freundliche E-Mail mit Bewertungslink."
+          : "Send a friendly email with review link 1-2 days after purchase.",
+        "position": 4
+      },
+      {
+        "@type": "HowToStep",
+        "name": language === "de" ? "Auf Bewertungen antworten" : "Respond to reviews",
+        "text": language === "de"
+          ? "Antworte persönlich auf jede Bewertung um weitere Kunden zu ermutigen."
+          : "Respond personally to every review to encourage more customers.",
+        "position": 5
+      }
+    ]
+  };
+
+  const combinedSchema = [faqSchema, howToSchema];
+
   return (
-    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={combinedSchema}>
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">

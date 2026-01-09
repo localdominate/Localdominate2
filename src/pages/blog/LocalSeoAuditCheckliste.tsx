@@ -85,8 +85,69 @@ const LocalSeoAuditCheckliste = () => {
     })),
   };
 
+  // HowTo Schema für interaktive Checkliste
+  const howToSchema = {
+    '@type': 'HowTo',
+    name: 'Local SEO Audit durchführen - 50-Punkte Checkliste',
+    description: 'Vollständige Anleitung für einen systematischen Local SEO Audit mit interaktiver Checkliste für Google Business Profil, Website, Citations und Bewertungen.',
+    totalTime: 'PT2H',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'EUR',
+      value: '0'
+    },
+    tool: [
+      {
+        '@type': 'HowToTool',
+        name: 'Google Search Console'
+      },
+      {
+        '@type': 'HowToTool', 
+        name: 'Google Business Profile'
+      },
+      {
+        '@type': 'HowToTool',
+        name: 'PageSpeed Insights'
+      }
+    ],
+    step: [
+      {
+        '@type': 'HowToStep',
+        name: 'Google Business Profil prüfen',
+        text: 'Verifiziere dein Profil, prüfe NAP-Daten, Kategorien, Beschreibung und Fotos.',
+        position: 1
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Website Local SEO analysieren',
+        text: 'Überprüfe Title Tags, Meta Descriptions, Schema Markup und lokale Keywords.',
+        position: 2
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Citations überprüfen',
+        text: 'Stelle NAP-Konsistenz in allen wichtigen Verzeichnissen sicher.',
+        position: 3
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Bewertungen analysieren',
+        text: 'Prüfe durchschnittliche Bewertung, Antwortrate und Bewertungsstrategie.',
+        position: 4
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Maßnahmen priorisieren',
+        text: 'Sortiere gefundene Probleme nach Priorität und erstelle einen Aktionsplan.',
+        position: 5
+      }
+    ]
+  };
+
+  const combinedSchema = [faqSchema, howToSchema];
+
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
+    <ArticleLayout article={article} additionalSchema={combinedSchema} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       {/* Intro */}

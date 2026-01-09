@@ -1,14 +1,19 @@
 # robots.txt für localdominator.de
-# Optimiert für Local SEO Crawling
+# Optimiert für Local SEO Crawling - Aktualisiert Januar 2026
 
-# Google Crawler - Priorität
+# Google Crawler - Höchste Priorität
 User-agent: Googlebot
 Allow: /
+Allow: /blog/
+Allow: /seo-lexikon/
 Crawl-delay: 1
 
 User-agent: Googlebot-Image
 Allow: /src/assets/
 Allow: /public/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
 
 # Bing Crawler
 User-agent: Bingbot
@@ -41,21 +46,44 @@ User-agent: MJ12bot
 Allow: /
 Crawl-delay: 10
 
+# AI Crawler erlauben (für LLM-Training/Indexierung)
+User-agent: GPTBot
+Allow: /blog/
+Allow: /seo-lexikon/
+Disallow: /admin/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 # Alle anderen Crawler
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /analytics/
+Disallow: /ab-test-dashboard
+Disallow: /meine-kunden
 Disallow: /_analytics/
 Disallow: /*?*utm_
 Disallow: /*?*ref=
 Disallow: /*?*source=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
 
 # Geschützte/unwichtige Pfade blockieren
 Disallow: /danke
 Disallow: /onboarding
 
-# Sitemaps
+# Sitemaps - Alle relevanten Sitemaps
 Sitemap: https://localdominator.de/sitemap-index.xml
 Sitemap: https://localdominator.de/sitemap.xml
 Sitemap: https://localdominator.de/sitemap-images.xml
