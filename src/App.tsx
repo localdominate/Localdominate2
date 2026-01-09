@@ -76,6 +76,7 @@ const App = () => (
               <Route path="/impressum" element={<Impressum />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/agb" element={<AGB />} />
+              <Route path="/seo-lexikon" element={<SeoLexikon />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/google-maps-ranking-verbessern" element={<GoogleMapsRanking />} />
               <Route path="/blog/google-bewertungen-bekommen" element={<GoogleBewertungen />} />
