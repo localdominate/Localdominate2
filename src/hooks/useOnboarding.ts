@@ -128,7 +128,7 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     }
 
     initCustomer();
-  }, [sessionId]);
+  }, [sessionId, isTestMode]);
 
   const selectCategory = useCallback(async (category: BusinessCategory) => {
     if (!state.customerId) return;
