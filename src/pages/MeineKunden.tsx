@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, RefreshCw, Users, Download } from "lucide-react";
 import { CustomerTable } from "@/components/admin/CustomerTable";
+import SEOHead from "@/components/SEOHead";
 
 export default function MeineKunden() {
   const exportCustomers = () => {
@@ -12,6 +13,11 @@ export default function MeineKunden() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Meine Kunden - Local Dominator"
+        description="Interne Kundenverwaltung"
+        noindex={true}
+      />
       {/* Header */}
       <header className="border-b bg-card sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">

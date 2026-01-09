@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import { 
   BarChart3, 
   MousePointerClick, 
@@ -337,6 +338,11 @@ const Analytics = () => {
 
   return (
     <div className="min-h-screen bg-background p-4 md:p-8">
+      <SEOHead 
+        title="Analytics Dashboard - Local Dominator"
+        description="Internes Analytics Dashboard"
+        noindex={true}
+      />
       {/* Header */}
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>

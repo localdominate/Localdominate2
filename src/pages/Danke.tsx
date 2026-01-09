@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Check, Download, FileText, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
+import SEOHead from '@/components/SEOHead';
 
 export default function Danke() {
   const [searchParams] = useSearchParams();
@@ -64,6 +65,11 @@ export default function Danke() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Danke - Local Dominator"
+        description="Vielen Dank für deinen Kauf"
+        noindex={true}
+      />
       {/* Confetti Animation Background */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {[...Array(30)].map((_, i) => (
