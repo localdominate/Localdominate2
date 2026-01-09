@@ -9,6 +9,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, Settings, Image, MessageSquare, BarChart3, Lightbulb } from "lucide-react";
 import googleMyBusinessImg from "@/assets/blog/google-my-business.jpg";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 
 const GoogleMyBusiness = () => {
   const { language } = useLanguage();
@@ -441,6 +442,8 @@ const GoogleMyBusiness = () => {
           { title: "Schema.org LocalBusiness", url: "https://schema.org/LocalBusiness", type: "documentation", description: language === "de" ? "Strukturierte Daten für lokale Unternehmen" : "Structured data for local businesses" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="google-my-business-optimieren" />
 
       <BlogCTAABTest articleSlug="google-my-business-optimieren" position="end" />
     </ArticleLayout>

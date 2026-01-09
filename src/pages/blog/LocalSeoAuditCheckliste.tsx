@@ -22,6 +22,7 @@ import {
   BarChart3,
   Users
 } from 'lucide-react';
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 
 const LocalSeoAuditCheckliste = () => {
   const article = getArticleBySlug('local-seo-audit-checkliste');
@@ -421,6 +422,8 @@ const LocalSeoAuditCheckliste = () => {
           { title: "PageSpeed Insights", url: "https://pagespeed.web.dev/", type: "tool", description: "Core Web Vitals testen" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="local-seo-audit-checkliste" />
 
       <BlogCTAABTest articleSlug="local-seo-audit-checkliste" position="end" />
     </ArticleLayout>
