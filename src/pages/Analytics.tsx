@@ -373,6 +373,12 @@ const Analytics = () => {
               A/B Test Dashboard
             </Button>
           </Link>
+          <Link to="/admin/article-feedback">
+            <Button variant="outline" size="sm" className="border-green-500 text-green-600 hover:bg-green-500/10">
+              <TrendingUp className="mr-2 h-4 w-4" />
+              Artikel-Feedback
+            </Button>
+          </Link>
           <Link to="/?heatmap=true">
             <Button variant="outline" size="sm">
               <Map className="mr-2 h-4 w-4" />
