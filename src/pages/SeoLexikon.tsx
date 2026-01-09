@@ -24,7 +24,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
-import { seoLexikonData, getAllLetters, getTermByLetter, searchTerms, SEOTerm } from "@/data/seoLexikonData";
+import { seoLexikonData, getAllLetters, getTermsByLetter, searchTerms, SEOTerm, getTotalTermsCount } from "@/data/seoLexikonData";
 
 const iconMap = {
   trending: TrendingUp,
@@ -44,11 +44,13 @@ const difficultyColors = {
 const TermCard = ({ 
   term, 
   isSelected, 
-  onClick 
+  onClick,
+  showLetter = true
 }: { 
   term: SEOTerm; 
   isSelected: boolean; 
   onClick: () => void;
+  showLetter?: boolean;
 }) => {
   return (
     <motion.div
@@ -66,16 +68,18 @@ const TermCard = ({
       }`}
     >
       <div className="flex items-start gap-3">
-        <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center text-xl font-bold ${
-          isSelected ? "bg-primary text-primary-foreground" : "bg-primary/20 text-primary"
-        }`}>
-          {term.letter}
-        </div>
+        {showLetter && (
+          <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold ${
+            isSelected ? "bg-primary text-primary-foreground" : "bg-primary/20 text-primary"
+          }`}>
+            {term.letter}
+          </div>
+        )}
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-foreground mb-1 truncate">{term.term}</h3>
+          <h3 className="font-semibold text-foreground mb-1">{term.term}</h3>
           <p className="text-sm text-muted-foreground line-clamp-2">{term.shortDescription}</p>
-          <div className="flex items-center gap-2 mt-2">
-            <Badge variant="outline" className={difficultyColors[term.difficulty]}>
+          <div className="flex items-center gap-2 mt-2 flex-wrap">
+            <Badge variant="outline" className={`${difficultyColors[term.difficulty]} text-xs`}>
               {term.difficulty}
             </Badge>
             <div className="flex items-center gap-0.5">
@@ -88,7 +92,7 @@ const TermCard = ({
             </div>
           </div>
         </div>
-        <ChevronRight className={`w-5 h-5 transition-transform ${isSelected ? "rotate-90 text-primary" : "text-muted-foreground"}`} />
+        <ChevronRight className={`w-5 h-5 flex-shrink-0 transition-transform ${isSelected ? "rotate-90 text-primary" : "text-muted-foreground"}`} />
       </div>
     </motion.div>
   );
@@ -262,13 +266,14 @@ const SeoLexikon = () => {
   const [selectedTerm, setSelectedTerm] = useState<SEOTerm | null>(seoLexikonData[0]);
 
   const letters = getAllLetters();
+  const totalTerms = getTotalTermsCount();
 
   const filteredTerms = useMemo(() => {
     if (searchQuery) {
       return searchTerms(searchQuery);
     }
     if (selectedLetter) {
-      return seoLexikonData.filter(term => term.letter === selectedLetter);
+      return getTermsByLetter(selectedLetter);
     }
     return seoLexikonData;
   }, [searchQuery, selectedLetter]);
@@ -276,9 +281,9 @@ const SeoLexikon = () => {
   const handleLetterClick = (letter: string) => {
     setSearchQuery("");
     setSelectedLetter(letter);
-    const term = getTermByLetter(letter);
-    if (term) {
-      setSelectedTerm(term);
+    const terms = getTermsByLetter(letter);
+    if (terms.length > 0) {
+      setSelectedTerm(terms[0]);
     }
   };
 
@@ -351,9 +356,12 @@ const SeoLexikon = () => {
                 A-Z
               </span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-2">
               Alle wichtigen SEO-Begriffe verständlich erklärt. Mit Statistiken, Features und praktischen Tipps für dein Local SEO.
             </p>
+            <Badge className="bg-primary/10 text-primary border-primary/30">
+              {totalTerms} Begriffe
+            </Badge>
           </motion.div>
 
           {/* Search Bar */}
@@ -407,13 +415,26 @@ const SeoLexikon = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Terms List */}
             <div className="lg:col-span-2 space-y-3 max-h-[600px] overflow-y-auto pr-2 scrollbar-thin">
+              {selectedLetter && !searchQuery && (
+                <div className="flex items-center gap-2 mb-4 p-3 rounded-lg bg-card/50 border border-border/50">
+                  <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-lg font-bold text-primary-foreground">
+                    {selectedLetter}
+                  </div>
+                  <div>
+                    <span className="text-sm text-muted-foreground">
+                      {filteredTerms.length} {filteredTerms.length === 1 ? 'Begriff' : 'Begriffe'}
+                    </span>
+                  </div>
+                </div>
+              )}
               <AnimatePresence mode="popLayout">
-                {filteredTerms.map((term) => (
+                {filteredTerms.map((term, index) => (
                   <TermCard
-                    key={term.letter}
+                    key={`${term.letter}-${term.term}`}
                     term={term}
-                    isSelected={selectedTerm?.letter === term.letter}
+                    isSelected={selectedTerm?.term === term.term}
                     onClick={() => handleTermClick(term)}
+                    showLetter={!!searchQuery || (selectedLetter ? index === 0 : true)}
                   />
                 ))}
               </AnimatePresence>
@@ -434,7 +455,7 @@ const SeoLexikon = () => {
               <div className="sticky top-24 bg-card/30 rounded-2xl border border-border/50 p-6 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
                   {selectedTerm ? (
-                    <TermDetail key={selectedTerm.letter} term={selectedTerm} />
+                    <TermDetail key={`${selectedTerm.letter}-${selectedTerm.term}`} term={selectedTerm} />
                   ) : (
                     <motion.div
                       initial={{ opacity: 0 }}

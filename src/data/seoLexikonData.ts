@@ -16,6 +16,7 @@ export interface SEOTerm {
 }
 
 export const seoLexikonData: SEOTerm[] = [
+  // === A ===
   {
     letter: "A",
     term: "Alt-Text",
@@ -43,6 +44,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 3
   },
   {
+    letter: "A",
+    term: "Anchor Text",
+    shortDescription: "Der klickbare Text eines Hyperlinks.",
+    fullDescription: "Anchor Text (Ankertext) ist der sichtbare, klickbare Text eines Links. Er gibt Suchmaschinen wichtige Hinweise über den Inhalt der verlinkten Seite. Für SEO ist eine natürliche Variation der Anchor Texte wichtig - zu viele exakte Keywords können als Spam gewertet werden.",
+    features: [
+      "Signalisiert Themenrelevanz an Google",
+      "Verschiedene Typen: Exact Match, Partial Match, Branded, Generic",
+      "Interne und externe Verlinkung",
+      "Natürliche Variation wichtig"
+    ],
+    statistics: [
+      { label: "Links mit 'Click here' Anchor", value: "65%", icon: "percent" },
+      { label: "Einfluss auf Backlink-Wert", value: "Hoch", icon: "trending" },
+      { label: "Überoptimierung-Risiko", value: ">3%", icon: "chart" }
+    ],
+    benefits: [
+      "Bessere Keyword-Relevanz signalisieren",
+      "Höhere Rankings für verlinkte Seiten",
+      "Nutzerführung verbessern",
+      "Interne Verlinkungsstrategie optimieren"
+    ],
+    relatedTerms: ["Backlinks", "Internal Linking", "Link Building"],
+    difficulty: "anfänger",
+    importance: 4
+  },
+  // === B ===
+  {
     letter: "B",
     term: "Backlinks",
     shortDescription: "Eingehende Links von anderen Websites auf deine Seite.",
@@ -68,6 +96,33 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "fortgeschritten",
     importance: 5
   },
+  {
+    letter: "B",
+    term: "Bounce Rate",
+    shortDescription: "Prozentsatz der Besucher, die ohne Interaktion wieder gehen.",
+    fullDescription: "Die Bounce Rate (Absprungrate) zeigt den Anteil der Besucher, die eine Website nach nur einer Seite wieder verlassen, ohne weitere Interaktion. Eine hohe Bounce Rate kann auf Probleme mit Content, UX oder Ladezeit hinweisen. Google nutzt Engagement-Signale als Ranking-Faktor.",
+    features: [
+      "Wird in Google Analytics gemessen",
+      "Branchenspezifische Durchschnittswerte",
+      "Unterschied zwischen Bounce und Exit",
+      "Beeinflusst von Seitentyp und Intent"
+    ],
+    statistics: [
+      { label: "Durchschnittliche Bounce Rate", value: "41-55%", icon: "percent" },
+      { label: "E-Commerce Benchmark", value: "20-45%", icon: "chart" },
+      { label: "Blog-Artikel typisch", value: "70-90%", icon: "trending" }
+    ],
+    benefits: [
+      "Indikator für Content-Qualität",
+      "UX-Probleme identifizieren",
+      "Conversion-Optimierung ermöglichen",
+      "Engagement messen"
+    ],
+    relatedTerms: ["User Experience", "Dwell Time", "Engagement Signals"],
+    difficulty: "anfänger",
+    importance: 3
+  },
+  // === C ===
   {
     letter: "C",
     term: "Citations",
@@ -95,6 +150,85 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 4
   },
   {
+    letter: "C",
+    term: "Canonical URL",
+    shortDescription: "Bevorzugte URL-Version zur Vermeidung von Duplicate Content.",
+    fullDescription: "Eine Canonical URL gibt an, welche Version einer Seite die 'Hauptversion' ist. Dies verhindert Duplicate Content-Probleme, wenn derselbe Inhalt unter verschiedenen URLs erreichbar ist (z.B. mit/ohne www, mit Parametern). Das canonical-Tag im HTML-Header zeigt Suchmaschinen die bevorzugte URL.",
+    features: [
+      "rel='canonical' HTML-Tag",
+      "Selbstreferenzierende Canonicals empfohlen",
+      "Cross-Domain Canonicals möglich",
+      "Hilft bei URL-Parameter-Problemen"
+    ],
+    statistics: [
+      { label: "Websites mit Canonical-Fehlern", value: "30%", icon: "percent" },
+      { label: "Duplicate Content vermeiden", value: "100%", icon: "chart" },
+      { label: "Von Google bestätigt", value: "Ja", icon: "trending" }
+    ],
+    benefits: [
+      "Duplicate Content eliminieren",
+      "PageRank auf eine URL konzentrieren",
+      "Crawl-Budget optimieren",
+      "Klare Signale an Suchmaschinen"
+    ],
+    relatedTerms: ["Duplicate Content", "URL-Struktur", "Technical SEO"],
+    difficulty: "fortgeschritten",
+    importance: 4
+  },
+  {
+    letter: "C",
+    term: "Core Web Vitals",
+    shortDescription: "Googles Metriken für Nutzererfahrung (LCP, INP, CLS).",
+    fullDescription: "Core Web Vitals sind drei spezifische Metriken, die Google zur Messung der Nutzererfahrung verwendet: LCP (Largest Contentful Paint), INP (Interaction to Next Paint) und CLS (Cumulative Layout Shift). Sie sind seit 2021 ein bestätigter Ranking-Faktor.",
+    features: [
+      "LCP: Ladezeit des größten Elements (<2.5s)",
+      "INP: Reaktionszeit auf Interaktion (<200ms)",
+      "CLS: Visuelle Stabilität (<0.1)",
+      "Messbar in Search Console und PageSpeed Insights"
+    ],
+    statistics: [
+      { label: "Seiten die alle CWV bestehen", value: "33%", icon: "percent" },
+      { label: "Mobile schlechter als Desktop", value: "2x", icon: "chart" },
+      { label: "Ranking-Einfluss", value: "Moderat", icon: "trending" }
+    ],
+    benefits: [
+      "Direkter Ranking-Faktor bei Google",
+      "Bessere User Experience",
+      "Höhere Conversion-Rates",
+      "Professioneller Website-Auftritt"
+    ],
+    relatedTerms: ["PageSpeed", "User Experience", "Technical SEO"],
+    difficulty: "fortgeschritten",
+    importance: 4
+  },
+  {
+    letter: "C",
+    term: "Crawling",
+    shortDescription: "Prozess, bei dem Suchmaschinen Websites durchsuchen.",
+    fullDescription: "Crawling ist der Vorgang, bei dem Suchmaschinen-Bots (wie Googlebot) Websites besuchen und deren Inhalte lesen. Der Crawler folgt Links, um neue und aktualisierte Seiten zu entdecken. Ein effizientes Crawling ist die Voraussetzung für eine erfolgreiche Indexierung.",
+    features: [
+      "Googlebot besucht regelmäßig Websites",
+      "Crawl-Budget pro Website begrenzt",
+      "Steuerung via robots.txt möglich",
+      "Sitemap beschleunigt Entdeckung"
+    ],
+    statistics: [
+      { label: "Googlebot crawlt täglich", value: "Mrd. Seiten", icon: "search" },
+      { label: "Durchschnittliche Crawl-Frequenz", value: "1-30 Tage", icon: "clock" },
+      { label: "Neue Seiten entdeckt", value: "Via Links", icon: "trending" }
+    ],
+    benefits: [
+      "Voraussetzung für Indexierung",
+      "Aktuelle Inhalte werden erkannt",
+      "Strukturprobleme aufdecken",
+      "SEO-Grundlagen verstehen"
+    ],
+    relatedTerms: ["Indexierung", "Robots.txt", "Sitemap"],
+    difficulty: "anfänger",
+    importance: 4
+  },
+  // === D ===
+  {
     letter: "D",
     term: "Domain Authority",
     shortDescription: "Moz-Metrik zur Bewertung der Stärke einer Website.",
@@ -121,6 +255,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 3
   },
   {
+    letter: "D",
+    term: "Duplicate Content",
+    shortDescription: "Identischer oder sehr ähnlicher Inhalt auf mehreren URLs.",
+    fullDescription: "Duplicate Content bezeichnet identische oder nahezu identische Inhalte, die unter verschiedenen URLs auffindbar sind. Dies kann durch technische Probleme (URL-Parameter, www/non-www) oder absichtliche Kopien entstehen. Google wertet Duplicate Content ab und wählt eine Version für das Ranking.",
+    features: [
+      "Interne vs. externe Duplikate",
+      "Canonical Tags als Lösung",
+      "Erkennung via Screaming Frog",
+      "Kein direkter Penalty, aber Rankingverlust"
+    ],
+    statistics: [
+      { label: "Websites mit Duplicate Content", value: "29%", icon: "percent" },
+      { label: "Ranking-Einfluss", value: "Negativ", icon: "trending" },
+      { label: "Crawl-Budget-Verschwendung", value: "Hoch", icon: "chart" }
+    ],
+    benefits: [
+      "Probleme erkennen und beheben",
+      "PageRank nicht verwässern",
+      "Crawl-Budget optimieren",
+      "Klare Signale an Google senden"
+    ],
+    relatedTerms: ["Canonical URL", "Robots.txt", "Technical SEO"],
+    difficulty: "fortgeschritten",
+    importance: 4
+  },
+  // === E ===
+  {
     letter: "E",
     term: "E-E-A-T",
     shortDescription: "Experience, Expertise, Authoritativeness, Trustworthiness - Googles Qualitätskriterien.",
@@ -146,6 +307,7 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "fortgeschritten",
     importance: 5
   },
+  // === F ===
   {
     letter: "F",
     term: "Featured Snippet",
@@ -172,6 +334,7 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "fortgeschritten",
     importance: 3
   },
+  // === G ===
   {
     letter: "G",
     term: "Google Business Profile",
@@ -199,6 +362,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 5
   },
   {
+    letter: "G",
+    term: "Geo-Targeting",
+    shortDescription: "Ausrichtung von Inhalten auf bestimmte geografische Regionen.",
+    fullDescription: "Geo-Targeting bezeichnet die Optimierung und Ausrichtung von Inhalten auf spezifische geografische Regionen oder Standorte. Für Local SEO bedeutet dies, Inhalte für bestimmte Städte, Stadtteile oder Regionen zu erstellen und zu optimieren, um dort besser zu ranken.",
+    features: [
+      "Lokale Landing Pages erstellen",
+      "Standort-spezifische Keywords",
+      "Hreflang für internationale Seiten",
+      "IP-basierte Weiterleitung"
+    ],
+    statistics: [
+      { label: "Lokale Suchen zu Ladenbesuch", value: "72%", icon: "users" },
+      { label: "Conversion lokaler Suchen", value: "+28%", icon: "trending" },
+      { label: "Mobile lokale Suchen", value: "76%", icon: "percent" }
+    ],
+    benefits: [
+      "Höhere Relevanz für lokale Suchen",
+      "Bessere Conversion-Rates",
+      "Weniger Wettbewerb pro Region",
+      "Gezielte lokale Präsenz aufbauen"
+    ],
+    relatedTerms: ["Local SEO", "Local Pack", "Proximity"],
+    difficulty: "fortgeschritten",
+    importance: 4
+  },
+  // === H ===
+  {
     letter: "H",
     term: "HTTPS",
     shortDescription: "Sichere Verschlüsselung der Website-Verbindung.",
@@ -224,6 +414,33 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "anfänger",
     importance: 4
   },
+  {
+    letter: "H",
+    term: "Heading Tags (H1-H6)",
+    shortDescription: "HTML-Überschriften zur Strukturierung von Inhalten.",
+    fullDescription: "Heading Tags (H1-H6) sind HTML-Elemente, die Überschriften und Unterüberschriften auf Webseiten definieren. H1 ist die wichtigste Überschrift und sollte das Hauptthema der Seite beschreiben. Eine logische Hierarchie der Headings hilft Suchmaschinen und Nutzern, den Inhalt zu verstehen.",
+    features: [
+      "H1: Eine pro Seite (Hauptthema)",
+      "H2-H6: Unterüberschriften in Hierarchie",
+      "Keywords natürlich integrieren",
+      "Strukturierung für Screenreader"
+    ],
+    statistics: [
+      { label: "Seiten mit H1-H3", value: "+40% Ranking", icon: "trending" },
+      { label: "Seiten ohne H1", value: "20%", icon: "percent" },
+      { label: "Optimale Länge H1", value: "20-70 Zeichen", icon: "chart" }
+    ],
+    benefits: [
+      "Klare Content-Struktur",
+      "Besseres Ranking-Signal",
+      "Verbesserte Lesbarkeit",
+      "Featured Snippet-Optimierung"
+    ],
+    relatedTerms: ["On-Page SEO", "Content-Struktur", "Title Tag"],
+    difficulty: "anfänger",
+    importance: 4
+  },
+  // === I ===
   {
     letter: "I",
     term: "Indexierung",
@@ -251,6 +468,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 5
   },
   {
+    letter: "I",
+    term: "Internal Linking",
+    shortDescription: "Verlinkung zwischen Seiten der eigenen Website.",
+    fullDescription: "Internal Linking bezeichnet die Verlinkung zwischen verschiedenen Seiten derselben Website. Eine durchdachte interne Verlinkungsstrategie verteilt PageRank, hilft Suchmaschinen die Seitenstruktur zu verstehen und führt Nutzer zu relevanten Inhalten.",
+    features: [
+      "Verteilt PageRank intern",
+      "Zeigt thematische Zusammenhänge",
+      "Verbessert Crawling-Effizienz",
+      "Anchor-Text-Optimierung"
+    ],
+    statistics: [
+      { label: "Top-Seiten haben Links", value: "40+", icon: "chart" },
+      { label: "Ranking-Einfluss", value: "Hoch", icon: "trending" },
+      { label: "Verweildauer-Steigerung", value: "+40%", icon: "clock" }
+    ],
+    benefits: [
+      "PageRank-Verteilung optimieren",
+      "Nutzer länger auf der Seite halten",
+      "Themenautorität aufbauen",
+      "Crawl-Budget effizient nutzen"
+    ],
+    relatedTerms: ["Anchor Text", "Site Architecture", "PageRank"],
+    difficulty: "anfänger",
+    importance: 4
+  },
+  // === J ===
+  {
     letter: "J",
     term: "JSON-LD",
     shortDescription: "Format für strukturierte Daten zur besseren Google-Verständlichkeit.",
@@ -276,6 +520,7 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "fortgeschritten",
     importance: 4
   },
+  // === K ===
   {
     letter: "K",
     term: "Keywords",
@@ -303,6 +548,59 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 5
   },
   {
+    letter: "K",
+    term: "Keyword Density",
+    shortDescription: "Prozentuale Häufigkeit eines Keywords im Text.",
+    fullDescription: "Keyword Density bezeichnet den prozentualen Anteil eines Keywords im Verhältnis zur Gesamtwortzahl eines Textes. Früher war dies ein wichtiger Ranking-Faktor, heute bewertet Google semantische Relevanz wichtiger. Übertriebene Keyword-Dichte (Keyword Stuffing) wird abgestraft.",
+    features: [
+      "Formel: (Keyword-Anzahl / Gesamtwörter) × 100",
+      "Optimal: 1-2%",
+      "Über 3% gilt als Spam-Risiko",
+      "Semantische Variationen wichtiger"
+    ],
+    statistics: [
+      { label: "Optimale Keyword Density", value: "1-2%", icon: "percent" },
+      { label: "Spam-Grenze", value: ">3%", icon: "chart" },
+      { label: "Bedeutung heute", value: "Gering", icon: "trending" }
+    ],
+    benefits: [
+      "Natürlichen Content schreiben",
+      "Keyword Stuffing vermeiden",
+      "Semantische SEO verstehen",
+      "Content-Qualität priorisieren"
+    ],
+    relatedTerms: ["Keyword Stuffing", "On-Page SEO", "Content SEO"],
+    difficulty: "anfänger",
+    importance: 2
+  },
+  {
+    letter: "K",
+    term: "Knowledge Graph",
+    shortDescription: "Googles Wissensdatenbank für vernetzte Informationen.",
+    fullDescription: "Der Knowledge Graph ist Googles Wissensdatenbank, die Informationen über Personen, Orte, Unternehmen und Konzepte vernetzt. Er speist die Knowledge Panels in den Suchergebnissen. Lokale Unternehmen können durch GBP-Optimierung und strukturierte Daten im Knowledge Graph erscheinen.",
+    features: [
+      "Über 5 Milliarden Entitäten",
+      "Vernetzt Informationen semantisch",
+      "Speist Knowledge Panels",
+      "Basiert auf verschiedenen Datenquellen"
+    ],
+    statistics: [
+      { label: "Entitäten im Knowledge Graph", value: "5+ Mrd", icon: "chart" },
+      { label: "Suchanfragen mit KG-Ergebnis", value: "40%", icon: "percent" },
+      { label: "CTR Knowledge Panel", value: "+10%", icon: "trending" }
+    ],
+    benefits: [
+      "Erhöhte Markenbekanntheit",
+      "Prominent in Suchergebnissen",
+      "Vertrauenswürdigkeit signalisieren",
+      "Zero-Click-Präsenz sichern"
+    ],
+    relatedTerms: ["Knowledge Panel", "Schema Markup", "Entity SEO"],
+    difficulty: "experte",
+    importance: 3
+  },
+  // === L ===
+  {
     letter: "L",
     term: "Local Pack",
     shortDescription: "Die 3 lokalen Ergebnisse mit Karte in der Google-Suche.",
@@ -328,6 +626,59 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "anfänger",
     importance: 5
   },
+  {
+    letter: "L",
+    term: "Long-Tail Keywords",
+    shortDescription: "Längere, spezifischere Suchanfragen mit weniger Wettbewerb.",
+    fullDescription: "Long-Tail Keywords sind längere, spezifischere Suchphrasen (meist 3+ Wörter), die ein geringeres Suchvolumen, aber höhere Conversion-Raten aufweisen. Sie machen 70% aller Suchanfragen aus und sind oft leichter zu ranken als generische Short-Tail Keywords.",
+    features: [
+      "3+ Wörter typischerweise",
+      "Geringeres Suchvolumen",
+      "Höhere Conversion-Intent",
+      "Weniger Wettbewerb"
+    ],
+    statistics: [
+      { label: "Anteil aller Suchanfragen", value: "70%", icon: "percent" },
+      { label: "Conversion-Rate höher", value: "2.5x", icon: "trending" },
+      { label: "Wettbewerb niedriger", value: "5-10x", icon: "chart" }
+    ],
+    benefits: [
+      "Leichter zu ranken",
+      "Höhere Conversion-Raten",
+      "Gezielterer Traffic",
+      "Besserer ROI"
+    ],
+    relatedTerms: ["Keywords", "Keyword-Recherche", "Search Intent"],
+    difficulty: "anfänger",
+    importance: 4
+  },
+  {
+    letter: "L",
+    term: "Link Building",
+    shortDescription: "Strategischer Aufbau von Backlinks zur Website.",
+    fullDescription: "Link Building ist der strategische Prozess, qualitativ hochwertige Backlinks von anderen Websites zu erhalten. Es ist einer der wichtigsten Ranking-Faktoren. Methoden umfassen Gastbeiträge, PR, Broken Link Building und das Erstellen linkwürdiger Inhalte.",
+    features: [
+      "Qualität vor Quantität",
+      "Natürlicher Linkaufbau bevorzugt",
+      "Gastbeiträge und PR",
+      "Content Marketing Strategie"
+    ],
+    statistics: [
+      { label: "Top-Ranking-Faktor", value: "#1-2", icon: "trending" },
+      { label: "Seiten mit 0 Backlinks", value: "66%", icon: "percent" },
+      { label: "Kosten pro hochwertigen Link", value: "€100-500", icon: "chart" }
+    ],
+    benefits: [
+      "Höhere Domain Authority",
+      "Bessere Rankings",
+      "Mehr organischer Traffic",
+      "Markenbekanntheit steigern"
+    ],
+    relatedTerms: ["Backlinks", "Domain Authority", "Anchor Text"],
+    difficulty: "fortgeschritten",
+    importance: 5
+  },
+  // === M ===
   {
     letter: "M",
     term: "Meta-Tags",
@@ -355,6 +706,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 4
   },
   {
+    letter: "M",
+    term: "Mobile First Index",
+    shortDescription: "Google indexiert primär die mobile Version einer Website.",
+    fullDescription: "Mobile First Index bedeutet, dass Google primär die mobile Version einer Website für Indexierung und Ranking verwendet. Seit 2021 ist Mobile First für alle Websites aktiv. Eine nicht-mobile-freundliche Website wird schlechter ranken, besonders bei mobilen Suchanfragen.",
+    features: [
+      "Mobile Version ist maßgeblich",
+      "Responsive Design empfohlen",
+      "Gleicher Content auf Mobile/Desktop",
+      "Mobile Usability Test in Search Console"
+    ],
+    statistics: [
+      { label: "Mobile Traffic weltweit", value: "60%+", icon: "percent" },
+      { label: "Mobile lokale Suchen", value: "76%", icon: "search" },
+      { label: "Mobile First seit", value: "2021", icon: "clock" }
+    ],
+    benefits: [
+      "Bessere mobile Rankings",
+      "Größere Zielgruppe erreichen",
+      "Zukunftssichere Website",
+      "Bessere User Experience"
+    ],
+    relatedTerms: ["Responsive Design", "Core Web Vitals", "Mobile SEO"],
+    difficulty: "fortgeschritten",
+    importance: 5
+  },
+  // === N ===
+  {
     letter: "N",
     term: "NAP",
     shortDescription: "Name, Address, Phone - Die Basis lokaler Unternehmensdaten.",
@@ -380,6 +758,33 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "anfänger",
     importance: 5
   },
+  {
+    letter: "N",
+    term: "Nofollow Link",
+    shortDescription: "Link, der keinen PageRank weitergibt.",
+    fullDescription: "Ein Nofollow Link enthält das Attribut rel='nofollow', das Suchmaschinen signalisiert, diesem Link nicht zu folgen und keinen PageRank weiterzugeben. Seit 2020 behandelt Google Nofollow als 'Hinweis' statt als strikte Anweisung. Nofollow wird für bezahlte Links und User-Generated Content verwendet.",
+    features: [
+      "rel='nofollow' Attribut",
+      "Kein direkter PageRank-Transfer",
+      "Seit 2020 als Hinweis behandelt",
+      "Auch: rel='sponsored', rel='ugc'"
+    ],
+    statistics: [
+      { label: "Backlinks mit Nofollow", value: "30%", icon: "percent" },
+      { label: "Indirekter SEO-Wert", value: "Vorhanden", icon: "trending" },
+      { label: "Traffic-Wert", value: "100%", icon: "chart" }
+    ],
+    benefits: [
+      "Natürliches Linkprofil aufbauen",
+      "Traffic trotz Nofollow erhalten",
+      "Markenerwähnungen nutzen",
+      "Linkbuilding-Strategie diversifizieren"
+    ],
+    relatedTerms: ["Backlinks", "PageRank", "Link Building"],
+    difficulty: "fortgeschritten",
+    importance: 3
+  },
+  // === O ===
   {
     letter: "O",
     term: "On-Page SEO",
@@ -407,6 +812,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 5
   },
   {
+    letter: "O",
+    term: "Off-Page SEO",
+    shortDescription: "Alle SEO-Maßnahmen außerhalb der eigenen Website.",
+    fullDescription: "Off-Page SEO umfasst alle Optimierungsmaßnahmen, die außerhalb der eigenen Website stattfinden. Der wichtigste Faktor ist Link Building, aber auch Social Signals, Markenerwähnungen, lokale Citations und Online-Reputation zählen dazu.",
+    features: [
+      "Backlink-Aufbau",
+      "Brand Mentions",
+      "Social Signals",
+      "Lokale Citations"
+    ],
+    statistics: [
+      { label: "Ranking-Einfluss", value: "~50%", icon: "percent" },
+      { label: "Backlinks wichtigster Faktor", value: "#1-2", icon: "trending" },
+      { label: "Zeit bis Wirkung", value: "3-6 Monate", icon: "clock" }
+    ],
+    benefits: [
+      "Höhere Domain Authority",
+      "Bessere Rankings",
+      "Mehr Referral-Traffic",
+      "Markenbekanntheit steigern"
+    ],
+    relatedTerms: ["On-Page SEO", "Link Building", "Backlinks"],
+    difficulty: "fortgeschritten",
+    importance: 5
+  },
+  // === P ===
+  {
     letter: "P",
     term: "PageSpeed",
     shortDescription: "Ladegeschwindigkeit einer Website als Ranking-Faktor.",
@@ -433,6 +865,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 4
   },
   {
+    letter: "P",
+    term: "Proximity (Entfernung)",
+    shortDescription: "Entfernung zwischen Nutzer und Unternehmen als Ranking-Faktor.",
+    fullDescription: "Proximity bezeichnet die geografische Nähe zwischen dem Standort des Suchenden und einem lokalen Unternehmen. Es ist einer der drei wichtigsten Local SEO Ranking-Faktoren (neben Relevanz und Prominenz). Google zeigt bevorzugt Unternehmen in der Nähe des Nutzers an.",
+    features: [
+      "GPS-basiert auf Mobilgeräten",
+      "IP-basiert auf Desktop",
+      "Stadtteile und Bezirke relevant",
+      "Nicht direkt beeinflussbar"
+    ],
+    statistics: [
+      { label: "Im 1km Radius erscheinen", value: "72%", icon: "percent" },
+      { label: "Local Pack Einfluss", value: "~25%", icon: "trending" },
+      { label: "Mobile Suchen 'in meiner Nähe'", value: "+200%", icon: "chart" }
+    ],
+    benefits: [
+      "Verstehen des Ranking-Faktors",
+      "Lokale Landing Pages erstellen",
+      "Service Areas definieren",
+      "Standortvorteile nutzen"
+    ],
+    relatedTerms: ["Local Pack", "Local SEO", "Geo-Targeting"],
+    difficulty: "anfänger",
+    importance: 4
+  },
+  // === Q ===
+  {
     letter: "Q",
     term: "Quality Raters",
     shortDescription: "Menschen, die Suchergebnisqualität für Google bewerten.",
@@ -458,6 +917,7 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "experte",
     importance: 2
   },
+  // === R ===
   {
     letter: "R",
     term: "Reviews (Bewertungen)",
@@ -485,6 +945,59 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 5
   },
   {
+    letter: "R",
+    term: "Robots.txt",
+    shortDescription: "Datei zur Steuerung des Suchmaschinen-Crawlings.",
+    fullDescription: "Die robots.txt ist eine Textdatei im Stammverzeichnis einer Website, die Suchmaschinen-Crawlern Anweisungen gibt, welche Bereiche sie crawlen dürfen und welche nicht. Sie ist kein Sicherheitsmechanismus, sondern eine Empfehlung an gutartige Bots.",
+    features: [
+      "Liegt im Root-Verzeichnis",
+      "Steuert Crawling (nicht Indexierung)",
+      "Disallow und Allow Direktiven",
+      "Sitemap-Verweis möglich"
+    ],
+    statistics: [
+      { label: "Websites mit robots.txt", value: "80%", icon: "percent" },
+      { label: "Falsch konfiguriert", value: "15%", icon: "chart" },
+      { label: "Kann Rankings blockieren", value: "Ja", icon: "trending" }
+    ],
+    benefits: [
+      "Crawl-Budget optimieren",
+      "Unwichtige Bereiche ausschließen",
+      "Admin-Bereiche verstecken",
+      "Duplicate Content vermeiden"
+    ],
+    relatedTerms: ["Crawling", "Indexierung", "Technical SEO"],
+    difficulty: "fortgeschritten",
+    importance: 3
+  },
+  {
+    letter: "R",
+    term: "Rich Snippets",
+    shortDescription: "Erweiterte Suchergebnisse mit zusätzlichen Informationen.",
+    fullDescription: "Rich Snippets sind erweiterte Suchergebnisse, die zusätzliche Informationen wie Bewertungssterne, Preise, Verfügbarkeit oder Rezeptzeiten anzeigen. Sie entstehen durch strukturierte Daten (Schema Markup) und erhöhen die Klickrate deutlich.",
+    features: [
+      "Bewertungssterne",
+      "Produktpreise und Verfügbarkeit",
+      "FAQ-Antworten",
+      "Event-Informationen"
+    ],
+    statistics: [
+      { label: "CTR-Steigerung", value: "+30%", icon: "trending" },
+      { label: "Websites mit Rich Snippets", value: "33%", icon: "percent" },
+      { label: "Klickratenerhöhung bei Reviews", value: "+87%", icon: "chart" }
+    ],
+    benefits: [
+      "Höhere Klickraten",
+      "Mehr Aufmerksamkeit in SERP",
+      "Mehr Informationen vorab zeigen",
+      "Vertrauenswürdigkeit steigern"
+    ],
+    relatedTerms: ["Schema Markup", "JSON-LD", "SERP"],
+    difficulty: "fortgeschritten",
+    importance: 4
+  },
+  // === S ===
+  {
     letter: "S",
     term: "SERP",
     shortDescription: "Search Engine Results Page - Die Suchergebnisseite.",
@@ -510,6 +1023,85 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "anfänger",
     importance: 4
   },
+  {
+    letter: "S",
+    term: "Schema Markup",
+    shortDescription: "Strukturierte Daten nach Schema.org Standard.",
+    fullDescription: "Schema Markup ist eine standardisierte Form strukturierter Daten, die Suchmaschinen hilft, Inhalte besser zu verstehen. Es verwendet das Schema.org Vokabular und kann in verschiedenen Formaten (JSON-LD, Microdata) implementiert werden. Für Local SEO ist das LocalBusiness Schema besonders wichtig.",
+    features: [
+      "Schema.org Vokabular",
+      "LocalBusiness, Product, FAQ, etc.",
+      "JSON-LD bevorzugtes Format",
+      "Rich Results ermöglichen"
+    ],
+    statistics: [
+      { label: "Websites mit Schema", value: "33%", icon: "percent" },
+      { label: "Rich Results wahrscheinlicher", value: "+30%", icon: "trending" },
+      { label: "CTR-Steigerung", value: "25%", icon: "chart" }
+    ],
+    benefits: [
+      "Rich Snippets erhalten",
+      "Google Verständnis verbessern",
+      "Lokale Präsenz stärken",
+      "Voice Search optimieren"
+    ],
+    relatedTerms: ["JSON-LD", "Rich Snippets", "Strukturierte Daten"],
+    difficulty: "fortgeschritten",
+    importance: 4
+  },
+  {
+    letter: "S",
+    term: "Search Intent",
+    shortDescription: "Die Absicht hinter einer Suchanfrage.",
+    fullDescription: "Search Intent (Suchintention) beschreibt, was ein Nutzer tatsächlich erreichen möchte, wenn er eine Suchanfrage stellt. Google ordnet jeder Suchanfrage eine Intention zu und bevorzugt Ergebnisse, die diese erfüllen. Die vier Haupttypen sind: informational, navigational, commercial und transactional.",
+    features: [
+      "Informational: Wissen suchen",
+      "Navigational: Bestimmte Seite finden",
+      "Commercial: Recherche vor Kauf",
+      "Transactional: Direkt kaufen/buchen"
+    ],
+    statistics: [
+      { label: "Informational Suchen", value: "80%", icon: "percent" },
+      { label: "Transactional Suchen", value: "10%", icon: "chart" },
+      { label: "Intent-Match für Ranking", value: "Kritisch", icon: "trending" }
+    ],
+    benefits: [
+      "Passenden Content erstellen",
+      "Bessere Rankings erzielen",
+      "Höhere Conversion-Rates",
+      "Nutzer zufriedenstellen"
+    ],
+    relatedTerms: ["Keywords", "Content-Strategie", "User Experience"],
+    difficulty: "anfänger",
+    importance: 5
+  },
+  {
+    letter: "S",
+    term: "SSL-Zertifikat",
+    shortDescription: "Verschlüsselungszertifikat für sichere HTTPS-Verbindungen.",
+    fullDescription: "Ein SSL-Zertifikat (Secure Sockets Layer) ermöglicht die verschlüsselte Kommunikation zwischen Browser und Server (HTTPS). Es zeigt das Schloss-Symbol im Browser an und ist seit 2014 ein bestätigter Google Ranking-Faktor. Für lokale Unternehmen schafft es Vertrauen bei Kunden.",
+    features: [
+      "Verschlüsselte Datenübertragung",
+      "Schloss-Symbol im Browser",
+      "Verschiedene Zertifikatstypen",
+      "Kostenlos via Let's Encrypt"
+    ],
+    statistics: [
+      { label: "Top 100 Websites mit SSL", value: "95%", icon: "percent" },
+      { label: "Google Chrome Warnung ohne", value: "Ja", icon: "chart" },
+      { label: "Ranking-Boost", value: "Leicht", icon: "trending" }
+    ],
+    benefits: [
+      "Pflicht für moderne Websites",
+      "Nutzervertrauen steigern",
+      "Ranking-Signal",
+      "Datenschutz gewährleisten"
+    ],
+    relatedTerms: ["HTTPS", "Website-Sicherheit", "Technical SEO"],
+    difficulty: "anfänger",
+    importance: 4
+  },
+  // === T ===
   {
     letter: "T",
     term: "Title Tag",
@@ -537,6 +1129,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 5
   },
   {
+    letter: "T",
+    term: "Technical SEO",
+    shortDescription: "Technische Optimierung der Website-Infrastruktur.",
+    fullDescription: "Technical SEO umfasst alle technischen Aspekte, die das Crawling, die Indexierung und das Rendering einer Website beeinflussen. Dazu gehören Seitengeschwindigkeit, Mobile-Freundlichkeit, strukturierte Daten, URL-Struktur und Servereinstellungen.",
+    features: [
+      "Crawling und Indexierung",
+      "Core Web Vitals optimieren",
+      "Schema Markup implementieren",
+      "Sitemap und robots.txt"
+    ],
+    statistics: [
+      { label: "Websites mit technischen Fehlern", value: "42%", icon: "percent" },
+      { label: "Crawl-Probleme", value: "25%", icon: "chart" },
+      { label: "PageSpeed unter 3s", value: "Nur 25%", icon: "clock" }
+    ],
+    benefits: [
+      "Solide SEO-Grundlage",
+      "Besseres Crawling",
+      "Höhere Rankings",
+      "Professioneller Auftritt"
+    ],
+    relatedTerms: ["Core Web Vitals", "Crawling", "Indexierung"],
+    difficulty: "experte",
+    importance: 5
+  },
+  // === U ===
+  {
     letter: "U",
     term: "User Experience (UX)",
     shortDescription: "Das Gesamterlebnis eines Nutzers auf der Website.",
@@ -563,6 +1182,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 4
   },
   {
+    letter: "U",
+    term: "URL-Struktur",
+    shortDescription: "Aufbau und Formatierung von Website-Adressen.",
+    fullDescription: "Die URL-Struktur bezeichnet den Aufbau der Webadressen einer Website. SEO-freundliche URLs sind kurz, beschreibend, enthalten Keywords und folgen einer logischen Hierarchie. Für Local SEO können Ortsnamen in URLs integriert werden.",
+    features: [
+      "Kurz und beschreibend",
+      "Keywords enthalten",
+      "Logische Hierarchie",
+      "Bindestrich statt Unterstrich"
+    ],
+    statistics: [
+      { label: "Kurze URLs ranken besser", value: "+10%", icon: "trending" },
+      { label: "Optimale URL-Länge", value: "50-60 Zeichen", icon: "chart" },
+      { label: "Keywords in URL", value: "Wichtig", icon: "percent" }
+    ],
+    benefits: [
+      "Bessere Klickraten",
+      "Leicht merkbare URLs",
+      "Keyword-Relevanz zeigen",
+      "Klare Seitenstruktur"
+    ],
+    relatedTerms: ["On-Page SEO", "Seitenstruktur", "Technical SEO"],
+    difficulty: "anfänger",
+    importance: 3
+  },
+  // === V ===
+  {
     letter: "V",
     term: "Voice Search",
     shortDescription: "Sprachsuche über Siri, Google Assistant und Alexa.",
@@ -588,6 +1234,7 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "fortgeschritten",
     importance: 3
   },
+  // === W ===
   {
     letter: "W",
     term: "White Hat SEO",
@@ -615,6 +1262,33 @@ export const seoLexikonData: SEOTerm[] = [
     importance: 5
   },
   {
+    letter: "W",
+    term: "Webmaster Tools / Search Console",
+    shortDescription: "Googles kostenlose Tools zur Website-Analyse.",
+    fullDescription: "Google Search Console (früher Webmaster Tools) ist ein kostenloses Tool von Google zur Überwachung und Optimierung der Website-Präsenz in der Suche. Es zeigt Indexierungsstatus, Suchanfragen, Klickdaten, Core Web Vitals und technische Probleme an.",
+    features: [
+      "Indexierungsstatus überwachen",
+      "Suchanfragen und Klicks analysieren",
+      "Core Web Vitals prüfen",
+      "Sitemaps einreichen"
+    ],
+    statistics: [
+      { label: "Unverzichtbar für SEO", value: "100%", icon: "percent" },
+      { label: "Daten bis zu 16 Monate", value: "Ja", icon: "chart" },
+      { label: "Kosten", value: "Kostenlos", icon: "trending" }
+    ],
+    benefits: [
+      "Unverzichtbares SEO-Tool",
+      "Direkte Google-Daten",
+      "Technische Probleme erkennen",
+      "Performance überwachen"
+    ],
+    relatedTerms: ["Indexierung", "Core Web Vitals", "Technical SEO"],
+    difficulty: "anfänger",
+    importance: 5
+  },
+  // === X ===
+  {
     letter: "X",
     term: "XML-Sitemap",
     shortDescription: "Maschinenlesbare Übersicht aller Website-Seiten.",
@@ -640,6 +1314,7 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "anfänger",
     importance: 4
   },
+  // === Y ===
   {
     letter: "Y",
     term: "YMYL",
@@ -666,6 +1341,7 @@ export const seoLexikonData: SEOTerm[] = [
     difficulty: "fortgeschritten",
     importance: 4
   },
+  // === Z ===
   {
     letter: "Z",
     term: "Zero-Click Search",
@@ -694,15 +1370,21 @@ export const seoLexikonData: SEOTerm[] = [
   }
 ];
 
-export const getAllLetters = () => {
-  return seoLexikonData.map(term => term.letter);
+// Utility functions
+export const getAllLetters = (): string[] => {
+  const letters = [...new Set(seoLexikonData.map(term => term.letter))];
+  return letters.sort();
 };
 
-export const getTermByLetter = (letter: string) => {
+export const getTermsByLetter = (letter: string): SEOTerm[] => {
+  return seoLexikonData.filter(term => term.letter.toLowerCase() === letter.toLowerCase());
+};
+
+export const getTermByLetter = (letter: string): SEOTerm | undefined => {
   return seoLexikonData.find(term => term.letter.toLowerCase() === letter.toLowerCase());
 };
 
-export const searchTerms = (query: string) => {
+export const searchTerms = (query: string): SEOTerm[] => {
   const lowerQuery = query.toLowerCase();
   return seoLexikonData.filter(
     term =>
@@ -710,4 +1392,12 @@ export const searchTerms = (query: string) => {
       term.shortDescription.toLowerCase().includes(lowerQuery) ||
       term.fullDescription.toLowerCase().includes(lowerQuery)
   );
+};
+
+export const getTotalTermsCount = (): number => {
+  return seoLexikonData.length;
+};
+
+export const getTermsCountByLetter = (letter: string): number => {
+  return seoLexikonData.filter(term => term.letter === letter).length;
 };
