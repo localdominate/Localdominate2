@@ -37,31 +37,93 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
   const { language } = useLanguage();
   const relatedArticles = getRelatedArticles(article.slug, 3, language);
   
+  // Enhanced Article Schema for AI Systems (ChatGPT, Perplexity, etc.)
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `https://localdominator.de/blog/${article.slug}#article`,
     "headline": article.title,
+    "name": article.title,
     "description": article.metaDescription,
+    "articleBody": article.excerpt,
+    "wordCount": article.readingTime * 200, // Approximate words based on reading time
     "author": {
       "@type": "Organization",
-      "name": "Local Dominator"
+      "@id": "https://localdominator.de/#organization",
+      "name": "Local Dominator",
+      "url": "https://localdominator.de"
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://localdominator.de/#organization",
       "name": "Local Dominator",
-      "url": "https://localdominator.de"
+      "url": "https://localdominator.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://localdominator.de/logo.png"
+      }
     },
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://localdominator.de/blog/${article.slug}`
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": `https://localdominator.de/og-image.png`,
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": language === "de" ? "de-DE" : "en-US",
+    "isPartOf": {
+      "@id": "https://localdominator.de/#website"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": article.category
+    },
+    "keywords": article.keywords.join(", "),
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", ".article-intro", "meta[name='description']"]
+    },
+    "citation": article.keywords.slice(0, 3).map(keyword => ({
+      "@type": "CreativeWork",
+      "name": keyword
+    }))
+  };
+
+  // WebPage Schema for the article page
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://localdominator.de/blog/${article.slug}#webpage`,
+    "url": `https://localdominator.de/blog/${article.slug}`,
+    "name": article.title,
+    "description": article.metaDescription,
+    "isPartOf": {
+      "@id": "https://localdominator.de/#website"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://localdominator.de/og-image.png"
+    },
+    "datePublished": article.publishedAt,
+    "dateModified": article.updatedAt,
+    "breadcrumb": {
+      "@id": `https://localdominator.de/blog/${article.slug}#breadcrumb`
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".article-intro", "meta[name='description']"]
     }
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `https://localdominator.de/blog/${article.slug}#breadcrumb`,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -85,8 +147,8 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
   };
 
   const combinedSchema = additionalSchema 
-    ? [articleSchema, breadcrumbSchema, additionalSchema]
-    : [articleSchema, breadcrumbSchema];
+    ? [articleSchema, webPageSchema, breadcrumbSchema, additionalSchema]
+    : [articleSchema, webPageSchema, breadcrumbSchema];
 
   const readingTimeText = language === "de" ? "Min. Lesezeit" : "min read";
   const updatedText = language === "de" ? "Aktualisiert" : "Updated";
