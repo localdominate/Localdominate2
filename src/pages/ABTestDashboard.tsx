@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import {
   ArrowLeft,
   RefreshCw,
@@ -297,6 +298,11 @@ const ABTestDashboard = () => {
   return (
     <TooltipProvider>
       <div className="min-h-screen bg-background p-4 md:p-8">
+        <SEOHead 
+          title="A/B Test Dashboard - Local Dominator"
+          description="Internes A/B Test Dashboard"
+          noindex={true}
+        />
         {/* Header */}
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>

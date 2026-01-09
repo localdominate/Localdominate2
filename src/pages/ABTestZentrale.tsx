@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import { 
   ArrowLeft, 
   BarChart3, 
@@ -163,6 +164,11 @@ const ABTestZentrale = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="A/B Test Zentrale - Local Dominator"
+        description="Interne A/B Test Verwaltung"
+        noindex={true}
+      />
       <div className="container max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

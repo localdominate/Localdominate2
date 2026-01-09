@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import { OnboardingWizard } from '@/components/onboarding/OnboardingWizard';
 import { motion } from 'framer-motion';
 import { FileText, Clock, Shield } from 'lucide-react';
+import SEOHead from '@/components/SEOHead';
 
 export default function Onboarding() {
   const [searchParams] = useSearchParams();
@@ -10,6 +11,11 @@ export default function Onboarding() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
+      <SEOHead 
+        title="Onboarding - Local Dominator"
+        description="Onboarding Fragebogen"
+        noindex={true}
+      />
       {/* Decorative background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
