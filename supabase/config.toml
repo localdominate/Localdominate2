@@ -20,3 +20,6 @@ verify_jwt = false
 
 [functions.auto-optimizer]
 verify_jwt = false
+
+[functions.sync-lexikon-links]
+verify_jwt = false
