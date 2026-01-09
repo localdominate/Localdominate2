@@ -14,6 +14,10 @@ interface SEOHeadProps {
   articleModifiedTime?: string;
   articleAuthor?: string;
   articleSection?: string;
+  alternateUrls?: {
+    de?: string;
+    en?: string;
+  };
 }
 
 const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
@@ -30,6 +34,7 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
   articleModifiedTime,
   articleAuthor = "Local Dominator",
   articleSection,
+  alternateUrls,
 }, _ref) => {
   const fullTitle = title.includes("Local Dominator") 
     ? title 
@@ -118,6 +123,32 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
       canonical.remove();
     }
 
+    // Hreflang links for international SEO
+    const updateHreflang = (hreflang: string, href: string) => {
+      let link = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+      if (!link) {
+        link = document.createElement("link");
+        link.setAttribute("rel", "alternate");
+        link.setAttribute("hreflang", hreflang);
+        document.head.appendChild(link);
+      }
+      link.setAttribute("href", href);
+    };
+
+    // Remove old hreflang links first
+    const existingHreflang = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    existingHreflang.forEach(el => el.remove());
+
+    if (canonicalUrl) {
+      const baseUrl = canonicalUrl.replace(/\?.*$/, '');
+      const deUrl = alternateUrls?.de || baseUrl;
+      const enUrl = alternateUrls?.en || `${baseUrl}?lang=en`;
+      
+      updateHreflang("de", deUrl);
+      updateHreflang("en", enUrl);
+      updateHreflang("x-default", deUrl);
+    }
+
     // JSON-LD - Handle single object or array
     const existingJsonLd = document.querySelectorAll('script[data-seo-jsonld]');
     existingJsonLd.forEach(el => el.remove());
@@ -137,8 +168,10 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
     return () => {
       const jsonLdScripts = document.querySelectorAll('script[data-seo-jsonld]');
       jsonLdScripts.forEach(script => script.remove());
+      const hreflangLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
+      hreflangLinks.forEach(link => link.remove());
     };
-  }, [fullTitle, description, canonicalUrl, ogImage, ogType, keywords, noindex, lang, jsonLd, articlePublishedTime, articleModifiedTime, articleAuthor, articleSection]);
+  }, [fullTitle, description, canonicalUrl, ogImage, ogType, keywords, noindex, lang, jsonLd, articlePublishedTime, articleModifiedTime, articleAuthor, articleSection, alternateUrls]);
 
   return null;
 });

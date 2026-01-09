@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Blog: Google Maps Ranking -->
+  <url>
+    <loc>https://localdominator.de/blog/google-maps-ranking-verbessern</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/google-maps-ranking.jpg</image:loc>
+      <image:title>Google Maps Ranking verbessern - Local SEO Guide 2026</image:title>
+      <image:caption>So verbesserst du dein Google Maps Ranking und gewinnst mehr lokale Kunden</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google Bewertungen -->
+  <url>
+    <loc>https://localdominator.de/blog/google-bewertungen-bekommen</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/google-bewertungen.jpg</image:loc>
+      <image:title>Google Bewertungen bekommen - 7 Strategien für mehr Rezensionen</image:title>
+      <image:caption>Bewährte Methoden um mehr authentische Google Bewertungen zu erhalten</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google My Business -->
+  <url>
+    <loc>https://localdominator.de/blog/google-my-business-optimieren</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/google-my-business.jpg</image:loc>
+      <image:title>Google My Business optimieren - Schritt-für-Schritt Anleitung</image:title>
+      <image:caption>Komplette Anleitung zur Optimierung deines Google Business Profils</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Audit Checkliste -->
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-audit-checkliste</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/local-seo-audit.jpg</image:loc>
+      <image:title>Local SEO Audit Checkliste - 50+ Prüfpunkte</image:title>
+      <image:caption>Die ultimative Checkliste für dein Local SEO Audit</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Handwerker -->
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-handwerker</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/local-seo-handwerker.jpg</image:loc>
+      <image:title>Local SEO für Handwerker - Mehr Aufträge durch Google</image:title>
+      <image:caption>Wie Handwerksbetriebe mehr lokale Kunden durch SEO gewinnen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Keywords -->
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-keywords-finden</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/local-seo-keywords.jpg</image:loc>
+      <image:title>Local SEO Keywords finden - Keyword-Recherche Guide</image:title>
+      <image:caption>Der komplette Guide zur lokalen Keyword-Recherche</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Restaurant -->
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-fuer-restaurants</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/local-seo-restaurant.jpg</image:loc>
+      <image:title>Local SEO für Restaurants - Mehr Gäste durch Google</image:title>
+      <image:caption>So optimierst du dein Restaurant für lokale Suchanfragen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Lokale SEO 2026 -->
+  <url>
+    <loc>https://localdominator.de/blog/lokale-suchmaschinenoptimierung-2026</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/lokale-seo-2026.jpg</image:loc>
+      <image:title>Lokale Suchmaschinenoptimierung 2026 - Trends und Strategien</image:title>
+      <image:caption>Die wichtigsten Trends für lokale SEO im Jahr 2026</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: NAP Konsistenz -->
+  <url>
+    <loc>https://localdominator.de/blog/nap-konsistenz-local-seo</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/blog/nap-konsistenz.jpg</image:loc>
+      <image:title>NAP-Konsistenz für Local SEO - Der ultimative Guide</image:title>
+      <image:caption>Warum einheitliche Unternehmensdaten dein Ranking boosten</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Homepage Hero Image -->
+  <url>
+    <loc>https://localdominator.de/</loc>
+    <image:image>
+      <image:loc>https://localdominator.de/assets/hero-phone-mockup.png</image:loc>
+      <image:title>Local Dominator - Top 3 bei Google Maps</image:title>
+      <image:caption>Google Maps Optimierung für lokale Unternehmen zum Festpreis</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://localdominator.de/og-image.png</image:loc>
+      <image:title>Local Dominator - Google Maps SEO Service</image:title>
+      <image:caption>Mehr Kunden durch Top 3 Ranking bei Google Maps</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://localdominator.de/logo.png</image:loc>
+      <image:title>Local Dominator Logo</image:title>
+      <image:caption>Logo von Local Dominator - Google Maps Optimierung</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+</urlset>
