@@ -3,6 +3,7 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle } from "lucide-react";
@@ -176,7 +177,7 @@ const GoogleBewertungen = () => {
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">
-        <strong>{t.intro.stat}</strong> {t.intro.text}
+        <strong>{t.intro.stat}</strong> lesen Online-Bewertungen, bevor sie ein lokales Unternehmen besuchen. <LexikonLink term="Reviews (Bewertungen)">Google Bewertungen</LexikonLink> sind der wichtigste Vertrauensfaktor für potenzielle Kunden. Hier erfährst du, wie du mehr authentische Bewertungen bekommst – ohne gegen Googles Richtlinien zu verstoßen.
       </p>
 
       <BlogImage 
@@ -189,7 +190,9 @@ const GoogleBewertungen = () => {
         <h2 className="text-2xl font-bold text-foreground mb-4">
           {t.section1.title}
         </h2>
-        <p className="mb-4">{t.section1.text1}</p>
+        <p className="mb-4">
+          <LexikonLink term="Reviews (Bewertungen)">Google Bewertungen</LexikonLink> beeinflussen nicht nur das Vertrauen potenzieller Kunden, sondern auch dein Ranking im <LexikonLink term="Local Pack" />.
+        </p>
         <div className="grid md:grid-cols-3 gap-4 mb-6">
           {t.section1.stats.map((item, index) => (
             <div key={index} className="bg-primary/5 rounded-xl p-4 text-center">

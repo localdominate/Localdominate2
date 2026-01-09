@@ -1,3 +1,8 @@
+export interface RelatedArticle {
+  slug: string;
+  title: string;
+}
+
 export interface SEOTerm {
   letter: string;
   term: string;
@@ -13,6 +18,7 @@ export interface SEOTerm {
   relatedTerms: string[];
   difficulty: "anfänger" | "fortgeschritten" | "experte";
   importance: 1 | 2 | 3 | 4 | 5;
+  relatedArticles?: RelatedArticle[];
 }
 
 export const seoLexikonData: SEOTerm[] = [
@@ -41,7 +47,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Bild-SEO", "On-Page SEO", "Barrierefreiheit"],
     difficulty: "anfänger",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO: Der ultimative Guide" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
+    ]
   },
   {
     letter: "A",
@@ -67,7 +77,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Backlinks", "Internal Linking", "Link Building"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-link-building", title: "Local Link Building Strategien" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === B ===
   {
@@ -94,7 +108,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Link Building", "Domain Authority", "Anchor Text"],
     difficulty: "fortgeschritten",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "local-link-building", title: "Local Link Building Strategien" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ]
   },
   {
     letter: "B",
@@ -120,7 +139,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["User Experience", "Dwell Time", "Engagement Signals"],
     difficulty: "anfänger",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === C ===
   {
@@ -147,7 +170,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["NAP", "Branchenverzeichnis", "Google Business Profile"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "nap-konsistenz", title: "NAP-Konsistenz Guide" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "C",
@@ -173,7 +201,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Duplicate Content", "URL-Struktur", "Technical SEO"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" },
+      { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" }
+    ]
   },
   {
     letter: "C",
@@ -199,7 +231,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["PageSpeed", "User Experience", "Technical SEO"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "C",
@@ -225,7 +262,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Indexierung", "Robots.txt", "Sitemap"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === D ===
   {
@@ -252,7 +293,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Backlinks", "Page Authority", "Trust Flow"],
     difficulty: "fortgeschritten",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "local-link-building", title: "Local Link Building Strategien" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ]
   },
   {
     letter: "D",
@@ -278,7 +323,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Canonical URL", "Robots.txt", "Technical SEO"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === E ===
   {
@@ -305,7 +354,13 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["YMYL", "Quality Raters", "Content Quality"],
     difficulty: "fortgeschritten",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "local-seo-aerzte", title: "Local SEO für Ärzte" },
+      { slug: "local-seo-anwaelte", title: "Local SEO für Anwälte" },
+      { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" },
+      { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" }
+    ]
   },
   // === F ===
   {
@@ -332,7 +387,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["SERP", "Voice Search", "Zero-Click Search"],
     difficulty: "fortgeschritten",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" }
+    ]
   },
   // === G ===
   {
@@ -359,7 +418,13 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Local Pack", "NAP", "Google Maps"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
+      { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "G",
@@ -385,7 +450,13 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Local SEO", "Local Pack", "Proximity"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-seo-schweiz", title: "Local SEO Schweiz" },
+      { slug: "local-seo-zuerich", title: "Local SEO Zürich" },
+      { slug: "local-seo-muenchen", title: "Local SEO München" },
+      { slug: "local-seo-berlin", title: "Local SEO Berlin" }
+    ]
   },
   // === H ===
   {
@@ -412,7 +483,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["SSL-Zertifikat", "Website-Sicherheit", "Core Web Vitals"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "H",
@@ -438,7 +512,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["On-Page SEO", "Content-Struktur", "Title Tag"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === I ===
   {
@@ -465,7 +542,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Crawling", "Sitemap", "Robots.txt"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "I",
@@ -491,7 +572,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Anchor Text", "Site Architecture", "PageRank"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "local-content-marketing", title: "Local Content Marketing" }
+    ]
   },
   // === J ===
   {
@@ -518,7 +603,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Schema Markup", "Rich Snippets", "Strukturierte Daten"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === K ===
   {
@@ -545,7 +634,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Keyword-Recherche", "Suchintention", "Long-Tail Keywords"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "local-seo-keywords", title: "Local SEO Keywords finden" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "K",
@@ -571,7 +664,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Keyword Stuffing", "On-Page SEO", "Content SEO"],
     difficulty: "anfänger",
-    importance: 2
+    importance: 2,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "K",
@@ -624,7 +720,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Google Business Profile", "Local SEO", "Google Maps"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
+      { slug: "google-maps-ranking-faktoren", title: "Google Maps Ranking Faktoren" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ]
   },
   {
     letter: "L",
@@ -650,7 +751,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Keywords", "Keyword-Recherche", "Search Intent"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-seo-keywords", title: "Local SEO Keywords finden" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "L",
@@ -676,7 +781,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Backlinks", "Domain Authority", "Anchor Text"],
     difficulty: "fortgeschritten",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "local-link-building", title: "Local Link Building Strategien" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === M ===
   {
@@ -703,7 +812,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Title-Tag", "On-Page SEO", "SERP"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "M",
@@ -729,7 +841,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Responsive Design", "Core Web Vitals", "Mobile SEO"],
     difficulty: "fortgeschritten",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" },
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" }
+    ]
   },
   // === N ===
   {
@@ -756,7 +872,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Citations", "Branchenverzeichnis", "Local SEO"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "nap-konsistenz", title: "NAP-Konsistenz Guide" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
+    ]
   },
   {
     letter: "N",
@@ -809,7 +930,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Off-Page SEO", "Technical SEO", "Content SEO"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
+    ]
   },
   {
     letter: "O",
@@ -835,7 +960,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["On-Page SEO", "Link Building", "Backlinks"],
     difficulty: "fortgeschritten",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "local-link-building", title: "Local Link Building Strategien" }
+    ]
   },
   // === P ===
   {
@@ -862,7 +990,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Core Web Vitals", "Mobile First", "Technical SEO"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
+    ]
   },
   {
     letter: "P",
@@ -888,7 +1020,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Local Pack", "Local SEO", "Geo-Targeting"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "google-maps-ranking-faktoren", title: "Google Maps Ranking Faktoren" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ]
   },
   // === Q ===
   {
@@ -942,7 +1078,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Reputation Management", "Google Business Profile", "Social Proof"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" },
+      { slug: "negative-google-bewertungen", title: "Negative Google Bewertungen managen" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ]
   },
   {
     letter: "R",
@@ -968,7 +1109,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Crawling", "Indexierung", "Technical SEO"],
     difficulty: "fortgeschritten",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "R",
@@ -994,7 +1139,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Schema Markup", "JSON-LD", "SERP"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" }
+    ]
   },
   // === S ===
   {
@@ -1021,7 +1169,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Organische Suche", "Featured Snippet", "Local Pack"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "S",
@@ -1047,7 +1199,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["JSON-LD", "Rich Snippets", "Strukturierte Daten"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "S",
@@ -1073,7 +1229,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Keywords", "Content-Strategie", "User Experience"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "local-seo-keywords", title: "Local SEO Keywords finden" },
+      { slug: "local-content-marketing", title: "Local Content Marketing" }
+    ]
   },
   {
     letter: "S",
@@ -1099,7 +1259,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["HTTPS", "Website-Sicherheit", "Technical SEO"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === T ===
   {
@@ -1126,7 +1289,10 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Meta-Tags", "On-Page SEO", "CTR"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "T",
@@ -1152,7 +1318,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Core Web Vitals", "Crawling", "Indexierung"],
     difficulty: "experte",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
+    ]
   },
   // === U ===
   {
@@ -1179,7 +1350,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Core Web Vitals", "Mobile First", "PageSpeed"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
+    ]
   },
   {
     letter: "U",
@@ -1205,7 +1380,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["On-Page SEO", "Seitenstruktur", "Technical SEO"],
     difficulty: "anfänger",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === V ===
   {
@@ -1232,7 +1411,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Featured Snippet", "Long-Tail Keywords", "Local SEO"],
     difficulty: "fortgeschritten",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   // === W ===
   {
@@ -1285,7 +1468,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Indexierung", "Core Web Vitals", "Technical SEO"],
     difficulty: "anfänger",
-    importance: 5
+    importance: 5,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
+    ]
   },
   // === X ===
   {
@@ -1312,7 +1499,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["Indexierung", "Crawling", "Google Search Console"],
     difficulty: "anfänger",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
+    ]
   },
   // === Y ===
   {
@@ -1339,7 +1530,12 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["E-E-A-T", "Quality Raters", "Content Quality"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-seo-aerzte", title: "Local SEO für Ärzte" },
+      { slug: "local-seo-anwaelte", title: "Local SEO für Anwälte" },
+      { slug: "local-seo-steuerberater", title: "Local SEO für Steuerberater" }
+    ]
   },
   // === Z ===
   {
@@ -1366,7 +1562,11 @@ export const seoLexikonData: SEOTerm[] = [
     ],
     relatedTerms: ["SERP", "Featured Snippet", "Google Business Profile"],
     difficulty: "fortgeschritten",
-    importance: 4
+    importance: 4,
+    relatedArticles: [
+      { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ]
   }
 ];
 
@@ -1400,4 +1600,16 @@ export const getTotalTermsCount = (): number => {
 
 export const getTermsCountByLetter = (letter: string): number => {
   return seoLexikonData.filter(term => term.letter === letter).length;
+};
+
+// Helper to generate slug for anchor links
+export const getTermSlug = (term: string): string => {
+  return term
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9-]/g, '');
 };

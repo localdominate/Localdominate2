@@ -2,6 +2,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, Settings, Image, MessageSquare, BarChart3, Lightbulb } from "lucide-react";
@@ -208,7 +209,9 @@ const GoogleMyBusiness = () => {
     <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={faqSchema}>
       <TableOfContents items={t.tocItems} />
 
-      <p className="text-xl leading-relaxed mb-8" dangerouslySetInnerHTML={{ __html: t.intro }} />
+      <p className="text-xl leading-relaxed mb-8">
+        Dein <LexikonLink term="Google Business Profile" /> (früher Google My Business) ist das Schaufenster deines Unternehmens in der Google-Suche. Ein vollständig optimiertes Profil kann deine lokale Sichtbarkeit im <LexikonLink term="Local Pack" /> um bis zu 70% steigern. Diese Anleitung zeigt dir jeden Schritt.
+      </p>
 
       <BlogImage 
         src={googleMyBusinessImg} 

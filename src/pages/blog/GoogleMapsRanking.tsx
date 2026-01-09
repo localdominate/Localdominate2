@@ -3,6 +3,7 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, AlertTriangle, Lightbulb } from "lucide-react";
@@ -30,7 +31,8 @@ const GoogleMapsRanking = () => {
         p1: "Die meisten Kunden entscheiden sich für ein lokales Unternehmen, bevor sie jemals dessen Website besuchen. Der Google Maps Eintrag ist oft der erste und einzige Kontaktpunkt.",
         tip: "Wusstest du?",
         tipText: "76% der Nutzer, die nach einem lokalen Unternehmen suchen, besuchen innerhalb von 24 Stunden ein Geschäft.",
-        p2: "Dein Google Business Profil zeigt Öffnungszeiten, Bewertungen, Fotos und den direkten Anfahrtsweg – alles, was ein Kunde für eine schnelle Entscheidung braucht."
+        p2: "Dein Google Business Profil zeigt Öffnungszeiten, Bewertungen, Fotos und den direkten Anfahrtsweg – alles, was ein Kunde für eine schnelle Entscheidung braucht.",
+        p2WithLinks: true
       },
       section2: {
         title: "Die 7 entscheidenden Ranking-Faktoren",
@@ -41,7 +43,7 @@ const GoogleMapsRanking = () => {
           { title: "Profil-Vollständigkeit", desc: "Je mehr Informationen du bereitstellst, desto besser versteht Google dein Unternehmen." },
           { title: "Kategoriewahl", desc: "Die richtige Haupt- und Nebenkategorien bestimmen, für welche Suchanfragen du erscheinst." },
           { title: "Bewertungen", desc: "Anzahl, Durchschnitt und Aktualität deiner Google Bewertungen." },
-          { title: "NAP-Konsistenz", desc: "Name, Adresse, Telefonnummer müssen überall identisch sein." },
+          { title: "NAP-Konsistenz", desc: "Name, Adresse, Telefonnummer müssen überall identisch sein.", hasLink: true },
           { title: "Fotos & Medien", desc: "Regelmäßig neue, hochwertige Bilder signalisieren Aktivität." },
           { title: "Google Posts", desc: "Regelmäßige Updates zeigen, dass dein Unternehmen aktiv ist." },
           { title: "Website-Signale", desc: "Eine optimierte Website stärkt dein gesamtes lokales Profil." },
@@ -252,7 +254,9 @@ const GoogleMapsRanking = () => {
             </div>
           </div>
         </div>
-        <p>{t.section1.p2}</p>
+        <p>
+          Dein <LexikonLink term="Google Business Profile" /> zeigt Öffnungszeiten, <LexikonLink term="Reviews (Bewertungen)">Bewertungen</LexikonLink>, Fotos und den direkten Anfahrtsweg – alles, was ein Kunde für eine schnelle Entscheidung braucht.
+        </p>
       </section>
 
       <section id="ranking-faktoren" className="mb-12">
@@ -268,7 +272,11 @@ const GoogleMapsRanking = () => {
               <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
               <div>
                 <strong className="text-foreground">{factor.title}:</strong>
-                <span className="text-muted-foreground ml-1">{factor.desc}</span>
+                <span className="text-muted-foreground ml-1">
+                  {factor.title === "NAP-Konsistenz" ? (
+                    <><LexikonLink term="NAP">Name, Adresse, Telefonnummer</LexikonLink> müssen überall identisch sein.</>
+                  ) : factor.desc}
+                </span>
               </div>
             </div>
           ))}
