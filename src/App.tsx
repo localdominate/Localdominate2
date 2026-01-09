@@ -52,6 +52,7 @@ import CoreWebVitalsLocalSeo from "./pages/blog/CoreWebVitalsLocalSeo";
 import LocalSeoBerlin from "./pages/blog/LocalSeoBerlin";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
+import SeoLexikon from "./pages/SeoLexikon";
 
 const queryClient = new QueryClient();
 
