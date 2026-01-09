@@ -3,6 +3,8 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import LexikonLink from "@/components/blog/LexikonLink";
 import FreeToolsTable from "@/components/blog/FreeToolsTable";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { 
   CheckCircle, 
@@ -152,6 +154,16 @@ const KostenloseSeo = () => {
         50 Gratis-Tools, bewährten Strategien und Schritt-für-Schritt Anleitungen. Alles, was du brauchst, 
         ist Zeit und die Bereitschaft zu lernen.
       </p>
+
+      <KeyTakeawaysBox 
+        items={[
+          "50+ kostenlose SEO-Tools für sofortigen Einsatz",
+          "Google Business Profil optimal nutzen (100% gratis)",
+          "Technisches SEO ohne Budget-Tools prüfen und optimieren",
+          "Keyword-Recherche ohne teure Software durchführen",
+          "Backlinks kostenlos und nachhaltig aufbauen"
+        ]}
+      />
 
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -1027,6 +1039,17 @@ const KostenloseSeo = () => {
           </p>
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Search Console Hilfe", url: "https://support.google.com/webmasters", type: "documentation", description: "Offizielle Google-Dokumentation zur Search Console" },
+          { title: "Google Business Profile Hilfe", url: "https://support.google.com/business", type: "documentation", description: "Offizieller Google-Leitfaden für Unternehmensprofile" },
+          { title: "MOZ Beginner's Guide to SEO", url: "https://moz.com/beginners-guide-to-seo", type: "article", description: "Umfassender Einsteiger-Guide von MOZ" },
+          { title: "Web.dev - Core Web Vitals", url: "https://web.dev/vitals/", type: "documentation", description: "Google's Leitfaden zu Core Web Vitals" },
+          { title: "Schema.org LocalBusiness", url: "https://schema.org/LocalBusiness", type: "documentation", description: "Strukturierte Daten für lokale Unternehmen" },
+          { title: "PageSpeed Insights", url: "https://pagespeed.web.dev/", type: "tool", description: "Kostenloser Google-Test für Website-Geschwindigkeit" }
+        ]}
+      />
     </ArticleLayout>
   );
 };

@@ -2,6 +2,8 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { useLanguage } from "@/i18n/LanguageContext";
 import MobileSpeedCalculator from "@/components/blog/MobileSpeedCalculator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -78,6 +80,16 @@ const MobileLocalSeo = () => {
         <p className="lead text-xl text-muted-foreground mb-6">
           <strong>80% aller lokalen Suchanfragen erfolgen über Smartphones.</strong> Wenn deine Website nicht für mobile Nutzer optimiert ist, verlierst du täglich potenzielle Kunden. Dieser Guide zeigt dir, wie du deine lokale Website perfekt für Mobile optimierst – von der technischen Grundlage bis zur Conversion-Optimierung.
         </p>
+
+        <KeyTakeawaysBox 
+          items={[
+            "Mobile-First Indexing verstehen und richtig umsetzen",
+            "Click-to-Call und Google Maps optimal integrieren",
+            "Core Web Vitals für mobile lokale Websites optimieren",
+            "Mobile UX Best Practices für höhere Conversions",
+            "Komplette Mobile Local SEO Checkliste zum Abhaken"
+          ]}
+        />
 
         <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-8">
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -784,6 +796,16 @@ const MobileLocalSeo = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Mobile-First Indexing", url: "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing", type: "documentation", description: "Offizielle Google-Dokumentation zu Mobile-First Indexing" },
+          { title: "Web.dev Core Web Vitals", url: "https://web.dev/vitals/", type: "documentation", description: "Google's Leitfaden zu Core Web Vitals" },
+          { title: "PageSpeed Insights", url: "https://pagespeed.web.dev/", type: "tool", description: "Google-Tool zur Messung der Seitengeschwindigkeit" },
+          { title: "Google Search Console Mobile Usability", url: "https://support.google.com/webmasters/answer/9063469", type: "documentation", description: "Mobile Usability Bericht in der Search Console" },
+          { title: "Think with Google Mobile Speed", url: "https://www.thinkwithgoogle.com/intl/de-de/marketing-strategien/app-und-mobile/mobile-page-speed-new-industry-benchmarks/", type: "article", description: "Mobile Speed Benchmarks" }
+        ]}
+      />
     </ArticleLayout>
   );
 };

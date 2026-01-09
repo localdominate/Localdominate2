@@ -3,6 +3,8 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
+import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
+import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Sparkles, Mic, Search, Smartphone, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";
@@ -199,6 +201,22 @@ const LokaleSeo2026 = () => {
         <strong>{t.intro}</strong>
       </p>
 
+      <KeyTakeawaysBox 
+        items={language === "de" ? [
+          "Die 5 wichtigsten Local SEO Trends für 2026",
+          "Wie KI und AI Overviews die lokale Suche verändern",
+          "Voice Search Optimierung für lokale Unternehmen",
+          "Zero-Click-Searches als Chance nutzen",
+          "Zukunftssichere Local SEO Strategien entwickeln"
+        ] : [
+          "The 5 most important Local SEO trends for 2026",
+          "How AI and AI Overviews are changing local search",
+          "Voice Search optimization for local businesses",
+          "Using Zero-Click Searches as an opportunity",
+          "Developing future-proof Local SEO strategies"
+        ]}
+      />
+
       <BlogImage 
         src={lokaleSeo2026Img} 
         alt={language === "de" ? "Lokale SEO Trends 2026" : "Local SEO Trends 2026"}
@@ -320,6 +338,15 @@ const LokaleSeo2026 = () => {
           ))}
         </div>
       </section>
+
+      <SourcesSection 
+        sources={[
+          { title: "Google Search Central Blog", url: "https://developers.google.com/search/blog", type: "documentation", description: language === "de" ? "Offizielle Google-Updates zu Suche und SEO" : "Official Google updates on search and SEO" },
+          { title: "Google AI Overview Documentation", url: "https://support.google.com/websearch/answer/14901683", type: "documentation", description: language === "de" ? "Informationen zu Google AI Overviews" : "Information about Google AI Overviews" },
+          { title: "Schema.org", url: "https://schema.org/", type: "documentation", description: language === "de" ? "Strukturierte Daten Spezifikationen" : "Structured data specifications" },
+          { title: "Think with Google", url: "https://www.thinkwithgoogle.com/", type: "article", description: language === "de" ? "Google-Insights zu Suchtrends" : "Google insights on search trends" }
+        ]}
+      />
 
       <BlogCTAABTest articleSlug="lokale-suchmaschinenoptimierung-2026" position="end" />
     </ArticleLayout>
