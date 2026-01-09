@@ -2,6 +2,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Sparkles, Mic, Search, Smartphone, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";

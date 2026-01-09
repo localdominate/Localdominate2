@@ -17,16 +17,22 @@ import {
   ExternalLink,
   Star,
   FileText,
-  ArrowRight
+  ArrowRight,
+  Filter,
+  Check,
+  Copy,
+  CheckCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import { seoLexikonData, getAllLetters, getTermsByLetter, searchTerms, SEOTerm, getTotalTermsCount, getTermSlug } from "@/data/seoLexikonData";
+import { useToast } from "@/hooks/use-toast";
 
 const iconMap = {
   trending: TrendingUp,
@@ -103,7 +109,28 @@ const TermCard = ({
   );
 };
 
-const TermDetail = ({ term }: { term: SEOTerm }) => {
+const TermDetail = ({ term, onTermClick, readTerms, onToggleRead }: { 
+  term: SEOTerm; 
+  onTermClick: (term: SEOTerm) => void;
+  readTerms: string[];
+  onToggleRead: (termName: string) => void;
+}) => {
+  const { toast } = useToast();
+  const isRead = readTerms.includes(term.term);
+  
+  const copyLink = () => {
+    const url = `${window.location.origin}/seo-lexikon#${getTermSlug(term.term)}`;
+    navigator.clipboard.writeText(url);
+    toast({
+      title: "Link kopiert!",
+      description: "Der Link wurde in die Zwischenablage kopiert.",
+    });
+  };
+
+  const findRelatedTerm = (name: string): SEOTerm | undefined => {
+    return seoLexikonData.find(t => t.term.toLowerCase() === name.toLowerCase() || 
+      t.relatedTerms.some(r => r.toLowerCase() === name.toLowerCase()));
+  };
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -117,7 +144,28 @@ const TermDetail = ({ term }: { term: SEOTerm }) => {
           {term.letter}
         </div>
         <div className="flex-1">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{term.term}</h2>
+          <div className="flex items-start justify-between gap-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{term.term}</h2>
+            <div className="flex gap-2 flex-shrink-0">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={copyLink}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <Copy className="w-4 h-4" />
+              </Button>
+              <Button 
+                variant={isRead ? "default" : "outline"} 
+                size="sm" 
+                onClick={() => onToggleRead(term.term)}
+                className={isRead ? "bg-green-600 hover:bg-green-700" : ""}
+              >
+                <CheckCircle className="w-4 h-4 mr-1" />
+                {isRead ? "Gelesen" : "Als gelesen markieren"}
+              </Button>
+            </div>
+          </div>
           <p className="text-muted-foreground">{term.shortDescription}</p>
           <div className="flex flex-wrap items-center gap-2 mt-3">
             <Badge variant="outline" className={difficultyColors[term.difficulty]}>
@@ -169,11 +217,20 @@ const TermDetail = ({ term }: { term: SEOTerm }) => {
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {term.relatedTerms.map((related) => (
-                  <Badge key={related} variant="secondary" className="cursor-pointer hover:bg-primary/20">
-                    {related}
-                  </Badge>
-                ))}
+                {term.relatedTerms.map((related) => {
+                  const relatedTerm = findRelatedTerm(related);
+                  return (
+                    <Badge 
+                      key={related} 
+                      variant="secondary" 
+                      className={`cursor-pointer hover:bg-primary/20 transition-colors ${relatedTerm ? 'hover:scale-105' : 'opacity-70'}`}
+                      onClick={() => relatedTerm && onTermClick(relatedTerm)}
+                    >
+                      {related}
+                      {relatedTerm && <ArrowRight className="w-3 h-3 ml-1" />}
+                    </Badge>
+                  );
+                })}
               </div>
             </CardContent>
           </Card>
@@ -295,10 +352,31 @@ const SeoLexikon = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLetter, setSelectedLetter] = useState<string | null>("A");
   const [selectedTerm, setSelectedTerm] = useState<SEOTerm | null>(seoLexikonData[0]);
+  const [difficultyFilter, setDifficultyFilter] = useState<string>("all");
+  const [sortBy, setSortBy] = useState<string>("alpha");
+  const [readTerms, setReadTerms] = useState<string[]>(() => {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(localStorage.getItem('seo-lexikon-progress') || '[]');
+    }
+    return [];
+  });
   const location = useLocation();
 
   const letters = getAllLetters();
   const totalTerms = getTotalTermsCount();
+  
+  // Save read terms to localStorage
+  useEffect(() => {
+    localStorage.setItem('seo-lexikon-progress', JSON.stringify(readTerms));
+  }, [readTerms]);
+
+  const toggleReadTerm = (termName: string) => {
+    setReadTerms(prev => 
+      prev.includes(termName) 
+        ? prev.filter(t => t !== termName) 
+        : [...prev, termName]
+    );
+  };
 
   // Handle anchor links from URL hash
   useEffect(() => {
@@ -321,14 +399,30 @@ const SeoLexikon = () => {
   }, [location.hash]);
 
   const filteredTerms = useMemo(() => {
+    let terms = seoLexikonData;
+    
+    // Apply search filter
     if (searchQuery) {
-      return searchTerms(searchQuery);
+      terms = searchTerms(searchQuery);
+    } else if (selectedLetter) {
+      terms = getTermsByLetter(selectedLetter);
     }
-    if (selectedLetter) {
-      return getTermsByLetter(selectedLetter);
+    
+    // Apply difficulty filter
+    if (difficultyFilter !== "all") {
+      terms = terms.filter(t => t.difficulty === difficultyFilter);
     }
-    return seoLexikonData;
-  }, [searchQuery, selectedLetter]);
+    
+    // Apply sorting
+    if (sortBy === "importance") {
+      terms = [...terms].sort((a, b) => b.importance - a.importance);
+    } else if (sortBy === "difficulty") {
+      const diffOrder = { anfänger: 1, fortgeschritten: 2, experte: 3 };
+      terms = [...terms].sort((a, b) => diffOrder[a.difficulty] - diffOrder[b.difficulty]);
+    }
+    
+    return terms;
+  }, [searchQuery, selectedLetter, difficultyFilter, sortBy]);
 
   const handleLetterClick = (letter: string) => {
     setSearchQuery("");
@@ -438,6 +532,48 @@ const SeoLexikon = () => {
             </div>
           </motion.div>
 
+          {/* Filters Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="flex flex-wrap items-center justify-center gap-4 mb-6"
+          >
+            <div className="flex items-center gap-2">
+              <Filter className="w-4 h-4 text-muted-foreground" />
+              <Select value={difficultyFilter} onValueChange={setDifficultyFilter}>
+                <SelectTrigger className="w-[160px] bg-card/50">
+                  <SelectValue placeholder="Schwierigkeit" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Alle Level</SelectItem>
+                  <SelectItem value="anfänger">👶 Anfänger</SelectItem>
+                  <SelectItem value="fortgeschritten">🎯 Fortgeschritten</SelectItem>
+                  <SelectItem value="experte">🏆 Experte</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="flex items-center gap-2">
+              <BarChart3 className="w-4 h-4 text-muted-foreground" />
+              <Select value={sortBy} onValueChange={setSortBy}>
+                <SelectTrigger className="w-[160px] bg-card/50">
+                  <SelectValue placeholder="Sortierung" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="alpha">Alphabetisch</SelectItem>
+                  <SelectItem value="importance">Nach Wichtigkeit</SelectItem>
+                  <SelectItem value="difficulty">Nach Schwierigkeit</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="flex items-center gap-2 px-3 py-2 bg-card/50 rounded-lg border border-border/50">
+              <CheckCircle className="w-4 h-4 text-green-500" />
+              <span className="text-sm text-muted-foreground">
+                {readTerms.length}/{totalTerms} gelesen
+              </span>
+            </div>
+          </motion.div>
+
           {/* Alphabet Navigation */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -508,7 +644,13 @@ const SeoLexikon = () => {
               <div className="sticky top-24 bg-card/30 rounded-2xl border border-border/50 p-6 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
                   {selectedTerm ? (
-                    <TermDetail key={`${selectedTerm.letter}-${selectedTerm.term}`} term={selectedTerm} />
+                    <TermDetail 
+                      key={`${selectedTerm.letter}-${selectedTerm.term}`} 
+                      term={selectedTerm} 
+                      onTermClick={handleTermClick}
+                      readTerms={readTerms}
+                      onToggleRead={toggleReadTerm}
+                    />
                   ) : (
                     <motion.div
                       initial={{ opacity: 0 }}

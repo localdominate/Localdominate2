@@ -425,6 +425,78 @@ export type Database = {
         }
         Relationships: []
       }
+      lexikon_article_links: {
+        Row: {
+          article_slug: string
+          article_title: string
+          created_at: string | null
+          id: string
+          link_type: string | null
+          relevance_score: number | null
+          term_name: string
+          term_slug: string
+          updated_at: string | null
+        }
+        Insert: {
+          article_slug: string
+          article_title: string
+          created_at?: string | null
+          id?: string
+          link_type?: string | null
+          relevance_score?: number | null
+          term_name: string
+          term_slug: string
+          updated_at?: string | null
+        }
+        Update: {
+          article_slug?: string
+          article_title?: string
+          created_at?: string | null
+          id?: string
+          link_type?: string | null
+          relevance_score?: number | null
+          term_name?: string
+          term_slug?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      lexikon_sync_log: {
+        Row: {
+          articles_scanned: number | null
+          duration_ms: number | null
+          error_message: string | null
+          id: string
+          links_updated: number | null
+          new_links_created: number | null
+          run_at: string | null
+          status: string | null
+          terms_processed: number | null
+        }
+        Insert: {
+          articles_scanned?: number | null
+          duration_ms?: number | null
+          error_message?: string | null
+          id?: string
+          links_updated?: number | null
+          new_links_created?: number | null
+          run_at?: string | null
+          status?: string | null
+          terms_processed?: number | null
+        }
+        Update: {
+          articles_scanned?: number | null
+          duration_ms?: number | null
+          error_message?: string | null
+          id?: string
+          links_updated?: number | null
+          new_links_created?: number | null
+          run_at?: string | null
+          status?: string | null
+          terms_processed?: number | null
+        }
+        Relationships: []
+      }
       optimized_elements: {
         Row: {
           created_at: string

@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { useLanguage } from "@/i18n/LanguageContext";
 import MobileSpeedCalculator from "@/components/blog/MobileSpeedCalculator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
