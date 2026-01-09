@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LegalSpecialtySelector from "@/components/blog/LegalSpecialtySelector";
 import LawyerPortalsTable from "@/components/blog/LawyerPortalsTable";
@@ -108,6 +109,12 @@ const LocalSeoAnwaelte = () => {
       article={article} 
       tocItems={tocItems}
     >
+      <LastReviewedBadge 
+        reviewDate="2026-01-08" 
+        reviewerName="Rechtsanwalt Fachredaktion" 
+        variant="detailed" 
+      />
+
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <Card className="text-center p-4">

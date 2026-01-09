@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
@@ -185,6 +186,12 @@ const LocalSeoAerzte = () => {
 
       {/* Introduction */}
       <section id="intro" className="mb-12">
+        <LastReviewedBadge 
+          reviewDate="2026-01-08" 
+          reviewerName="Dr. med. Fachredaktion" 
+          variant="detailed" 
+        />
+
         <p className="lead text-xl text-muted-foreground mb-6">
           <strong>Die Patientengewinnung hat sich fundamental verändert:</strong> Über 78% aller 
           Patienten recherchieren heute online, bevor sie einen Arzttermin vereinbaren. Eine starke 

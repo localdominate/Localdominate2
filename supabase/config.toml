@@ -23,3 +23,6 @@ verify_jwt = false
 
 [functions.sync-lexikon-links]
 verify_jwt = false
+
+[functions.check-content-freshness]
+verify_jwt = false

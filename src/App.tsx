@@ -54,6 +54,7 @@ import KostenloseSeo from "./pages/blog/KostenloseSeo";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 import SeoLexikon from "./pages/SeoLexikon";
+import ArticleFeedbackDashboard from "./pages/ArticleFeedbackDashboard";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,7 @@ const App = () => (
               <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
               <Route path="/admin/content-plan" element={<ContentPlanDashboard />} />
               <Route path="/admin/kunden" element={<MeineKunden />} />
+              <Route path="/admin/article-feedback" element={<ArticleFeedbackDashboard />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />
