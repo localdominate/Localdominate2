@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Search, 
@@ -15,7 +15,9 @@ import {
   Lightbulb,
   ArrowLeft,
   ExternalLink,
-  Star
+  Star,
+  FileText,
+  ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,7 +26,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
-import { seoLexikonData, getAllLetters, getTermsByLetter, searchTerms, SEOTerm, getTotalTermsCount } from "@/data/seoLexikonData";
+import { seoLexikonData, getAllLetters, getTermsByLetter, searchTerms, SEOTerm, getTotalTermsCount, getTermSlug } from "@/data/seoLexikonData";
 
 const iconMap = {
   trending: TrendingUp,
@@ -45,15 +47,18 @@ const TermCard = ({
   term, 
   isSelected, 
   onClick,
-  showLetter = true
+  showLetter = true,
+  id
 }: { 
   term: SEOTerm; 
   isSelected: boolean; 
   onClick: () => void;
   showLetter?: boolean;
+  id?: string;
 }) => {
   return (
     <motion.div
+      id={id}
       layout
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -172,6 +177,32 @@ const TermDetail = ({ term }: { term: SEOTerm }) => {
               </div>
             </CardContent>
           </Card>
+
+          {/* Related Articles Section */}
+          {term.relatedArticles && term.relatedArticles.length > 0 && (
+            <Card className="bg-card/50 border-border/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <FileText className="w-5 h-5 text-primary" />
+                  Passende Blog-Artikel
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  {term.relatedArticles.map((article) => (
+                    <Link 
+                      key={article.slug}
+                      to={`/blog/${article.slug}`}
+                      className="flex items-center gap-2 p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors group"
+                    >
+                      <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                      <span className="text-sm text-foreground">{article.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </TabsContent>
 
         <TabsContent value="features" className="mt-4">
@@ -264,9 +295,30 @@ const SeoLexikon = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLetter, setSelectedLetter] = useState<string | null>("A");
   const [selectedTerm, setSelectedTerm] = useState<SEOTerm | null>(seoLexikonData[0]);
+  const location = useLocation();
 
   const letters = getAllLetters();
   const totalTerms = getTotalTermsCount();
+
+  // Handle anchor links from URL hash
+  useEffect(() => {
+    if (location.hash) {
+      const termSlug = location.hash.substring(1); // Remove #
+      const term = seoLexikonData.find(t => getTermSlug(t.term) === termSlug);
+      if (term) {
+        setSearchQuery("");
+        setSelectedLetter(term.letter);
+        setSelectedTerm(term);
+        // Scroll to term card after a brief delay
+        setTimeout(() => {
+          const element = document.getElementById(`term-${termSlug}`);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   const filteredTerms = useMemo(() => {
     if (searchQuery) {
@@ -435,6 +487,7 @@ const SeoLexikon = () => {
                     isSelected={selectedTerm?.term === term.term}
                     onClick={() => handleTermClick(term)}
                     showLetter={!!searchQuery || (selectedLetter ? index === 0 : true)}
+                    id={`term-${getTermSlug(term.term)}`}
                   />
                 ))}
               </AnimatePresence>
