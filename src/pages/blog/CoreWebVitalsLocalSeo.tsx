@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -192,15 +193,15 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Introduction */}
       <section id="intro">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum Core Web Vitals für lokale Unternehmen entscheidend sind</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum <LexikonLink term="Core Web Vitals" /> für lokale Unternehmen entscheidend sind</h2>
         <p className="text-lg mb-4">
-          Core Web Vitals sind seit 2021 ein <strong>offizieller Google-Ranking-Faktor</strong>. Für lokale Unternehmen sind sie besonders wichtig: 92% der lokalen Suchen kommen vom Smartphone – und mobile Nutzer sind ungeduldig.
+          <LexikonLink term="Core Web Vitals" /> sind seit 2021 ein <strong>offizieller Google-Ranking-Faktor</strong>. Für lokale Unternehmen sind sie besonders wichtig: 92% der lokalen Suchen kommen vom Smartphone – und mobile Nutzer sind ungeduldig. Das beeinflusst direkt dein <LexikonLink term="Mobile First Index" /> Ranking.
         </p>
         <p className="mb-4">
-          Studien zeigen: <strong>53% der mobilen Nutzer</strong> verlassen eine Website, die länger als 3 Sekunden zum Laden braucht. Bei Notfall-Suchen wie "Zahnarzt Notdienst" oder "Autowerkstatt in der Nähe" ist die Geduld noch geringer.
+          Studien zeigen: <strong>53% der mobilen Nutzer</strong> verlassen eine Website, die länger als 3 Sekunden zum Laden braucht. Bei Notfall-Suchen wie "Zahnarzt Notdienst" oder "Autowerkstatt in der Nähe" ist die Geduld noch geringer – hohe <LexikonLink term="Bounce Rate" /> ist die Folge.
         </p>
         <p className="mb-6">
-          Dieser Guide erklärt Ihnen, was Core Web Vitals sind, wie Sie sie messen und – am wichtigsten – wie Sie sie <strong>für Ihre lokale Website optimieren</strong>.
+          Dieser Guide erklärt Ihnen, was Core Web Vitals sind, wie Sie sie messen und – am wichtigsten – wie Sie sie <strong>für Ihre lokale Website optimieren</strong> und damit Ihre <LexikonLink term="User Experience (UX)" /> verbessern.
         </p>
       </section>
 
@@ -208,10 +209,10 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Was sind Core Web Vitals? */}
       <section id="was-sind-cwv">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Was sind Core Web Vitals?</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Was sind <LexikonLink term="Core Web Vitals" />?</h2>
         
         <p className="mb-4">
-          Core Web Vitals sind drei von Google definierte <strong>Metriken für die Nutzererfahrung</strong>:
+          <LexikonLink term="Core Web Vitals" /> sind drei von Google definierte <strong>Metriken für die <LexikonLink term="User Experience (UX)">Nutzererfahrung</LexikonLink></strong> und Teil des <LexikonLink term="Technical SEO" />:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -271,7 +272,7 @@ const CoreWebVitalsLocalSeo = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-4">LCP: Largest Contentful Paint optimieren</h2>
         
         <p className="mb-4">
-          LCP misst, wann das <strong>größte sichtbare Element</strong> im Viewport geladen ist. Das kann ein Hero-Bild, eine große Überschrift oder ein Video-Thumbnail sein.
+          LCP misst, wann das <strong>größte sichtbare Element</strong> im Viewport geladen ist. Das kann ein Hero-Bild, eine große Überschrift oder ein Video-Thumbnail sein. Gute LCP-Werte verbessern auch dein <LexikonLink term="PageSpeed" /> Ranking.
         </p>
 
         <div className="overflow-x-auto mb-6">

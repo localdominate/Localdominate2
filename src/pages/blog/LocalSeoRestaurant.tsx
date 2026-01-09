@@ -2,6 +2,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { UtensilsCrossed, Camera, Clock, MapPin, Star, Lightbulb } from "lucide-react";
@@ -162,7 +163,8 @@ const LocalSeoRestaurant = () => {
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">
-        <strong>{t.intro.keyword}</strong> {t.intro.text}
+        <strong>{t.intro.keyword}</strong> {t.intro.text} Mit dem richtigen <LexikonLink term="Google Business Profile" /> und 
+        einer Strategie für <LexikonLink term="Reviews (Bewertungen)">Bewertungen</LexikonLink> erreichst du das <LexikonLink term="Local Pack" />.
       </p>
 
       <BlogImage 
@@ -205,7 +207,9 @@ const LocalSeoRestaurant = () => {
             <Lightbulb className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
             <div>
               <strong className="text-foreground">{language === 'de' ? 'Profi-Tipp:' : 'Pro Tip:'}</strong>
-              <p className="text-muted-foreground mt-1">{t.section2.tip}</p>
+              <p className="text-muted-foreground mt-1">
+                {t.section2.tip} Das verbessert auch dein <LexikonLink term="Schema Markup" /> für <LexikonLink term="Rich Snippets" />.
+              </p>
             </div>
           </div>
         </div>
@@ -218,7 +222,7 @@ const LocalSeoRestaurant = () => {
 
       <section id="bilder" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section3.title}</h2>
-        <p className="mb-4">{t.section3.text}</p>
+        <p className="mb-4">{t.section3.text} Vergiss nicht den <LexikonLink term="Alt-Text" /> für bessere <LexikonLink term="Indexierung" />.</p>
 
         <div className="space-y-4">
           {t.section3.steps.map((step, index) => (
