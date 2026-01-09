@@ -5,6 +5,7 @@ import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Sparkles, Mic, Search, Smartphone, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";
@@ -347,6 +348,8 @@ const LokaleSeo2026 = () => {
           { title: "Think with Google", url: "https://www.thinkwithgoogle.com/", type: "article", description: language === "de" ? "Google-Insights zu Suchtrends" : "Google insights on search trends" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="lokale-suchmaschinenoptimierung-2026" />
 
       <BlogCTAABTest articleSlug="lokale-suchmaschinenoptimierung-2026" position="end" />
     </ArticleLayout>

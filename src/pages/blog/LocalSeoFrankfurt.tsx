@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -525,6 +526,8 @@ const LocalSeoFrankfurt = () => {
           ))}
         </Accordion>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-seo-frankfurt" />
 
       <BlogCTAABTest position="end" articleSlug="local-seo-frankfurt" />
 

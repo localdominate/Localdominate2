@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LinkBuildingIdeaGenerator from "@/components/blog/LinkBuildingIdeaGenerator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -699,6 +700,8 @@ Beste Grüße
           </AccordionItem>
         </Accordion>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-link-building" />
     </ArticleLayout>
   );
 };

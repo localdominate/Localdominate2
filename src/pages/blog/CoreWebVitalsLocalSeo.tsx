@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -605,6 +606,8 @@ const CoreWebVitalsLocalSeo = () => {
           ))}
         </Accordion>
       </section>
+
+      <HelpfulnessWidget articleSlug="core-web-vitals-local-seo" />
 
       <BlogCTAABTest position="end" articleSlug="core-web-vitals-local-seo" />
 

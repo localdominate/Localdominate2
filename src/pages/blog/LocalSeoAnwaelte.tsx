@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LegalSpecialtySelector from "@/components/blog/LegalSpecialtySelector";
 import LawyerPortalsTable from "@/components/blog/LawyerPortalsTable";
@@ -699,6 +700,8 @@ const LocalSeoAnwaelte = () => {
             <span>Anwaltsportale für Backlinks und Mandatsanfragen nutzen</span>
           </li>
         </ul>
+
+        <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 
         <BlogCTAABTest articleSlug="local-seo-anwaelte-kanzleien" position="end" />
       </section>

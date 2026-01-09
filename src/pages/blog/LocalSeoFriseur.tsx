@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleLayout from '@/components/blog/ArticleLayout';
 import { getArticleBySlug } from '@/data/blogArticles';
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -1324,6 +1325,8 @@ const LocalSeoFriseur: React.FC = () => {
           </a>
         </div>
       </div>
+
+      <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>
   );
 };

@@ -5,6 +5,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoKeywordsImg from "@/assets/blog/local-seo-keywords.jpg";
 import { 
@@ -1181,6 +1182,8 @@ const LocalSeoKeywords = () => {
           { title: "AnswerThePublic", url: "https://answerthepublic.com/", type: "tool", description: "Visualisierung von Suchanfragen und Fragen" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="local-seo-keywords" />
     </ArticleLayout>
   );
 };

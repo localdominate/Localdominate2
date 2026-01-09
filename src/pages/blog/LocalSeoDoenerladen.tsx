@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
@@ -1263,6 +1264,8 @@ const LocalSeoDoenerladen = () => {
           <strong>Der wichtigste Tipp zum Schluss:</strong> Fang heute an. Nicht morgen, nicht nächste Woche. Jeder Tag, den du wartest, ist ein Tag, an dem die Konkurrenz an dir vorbeizieht. Die Tools in diesem Artikel machen den Start einfach – nutze sie!
         </p>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-seo-doener-kebab-imbiss" />
     </ArticleLayout>
   );
 };

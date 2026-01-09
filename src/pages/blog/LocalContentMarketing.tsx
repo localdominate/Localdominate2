@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, FileText, MapPin, Calendar, Users, Repeat, Download, Lightbulb, AlertTriangle, TrendingUp } from "lucide-react";
@@ -664,6 +665,8 @@ const LocalContentMarketing = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-content-marketing" />
     </ArticleLayout>
   );
 };

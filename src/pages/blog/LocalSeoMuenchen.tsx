@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -842,6 +843,8 @@ const LocalSeoMuenchen = () => {
           </Card>
         </div>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-seo-muenchen" />
     </ArticleLayout>
   );
 };

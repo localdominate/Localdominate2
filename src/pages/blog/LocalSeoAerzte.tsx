@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
@@ -1020,6 +1021,8 @@ const LocalSeoAerzte = () => {
           Wettbewerbsvorteil in Ihrer Region.
         </p>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-seo-aerzte-praxen" />
     </ArticleLayout>
   );
 };
