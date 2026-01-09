@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Local Dominator Blog - Local SEO Tipps &amp; Strategien</title>
+    <link>https://localdominator.de/blog</link>
+    <description>Expertenwissen zu Local SEO, Google Maps Optimierung und lokaler Suchmaschinenoptimierung für Unternehmen in Deutschland, Österreich und der Schweiz.</description>
+    <language>de-DE</language>
+    <copyright>© 2026 Local Dominator. Alle Rechte vorbehalten.</copyright>
+    <lastBuildDate>Thu, 09 Jan 2026 12:00:00 +0100</lastBuildDate>
+    <managingEditor>kontakt@localdominator.de (Local Dominator)</managingEditor>
+    <webMaster>kontakt@localdominator.de (Local Dominator)</webMaster>
+    <ttl>60</ttl>
+    <image>
+      <url>https://localdominator.de/logo.png</url>
+      <title>Local Dominator Blog</title>
+      <link>https://localdominator.de/blog</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+    <atom:link href="https://localdominator.de/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <!-- Featured Articles -->
+    <item>
+      <title>Local SEO Keywords finden: Der komplette Keyword-Recherche Guide 2026</title>
+      <link>https://localdominator.de/blog/local-seo-keywords-finden</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-keywords-finden</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Strategie</category>
+      <description><![CDATA[Der komplette Guide zur lokalen Keyword-Recherche. Lerne welche Keywords Kunden bringen und wie du sie findest. Mit kostenlosen Tools und Schritt-für-Schritt Anleitung.]]></description>
+    </item>
+    
+    <item>
+      <title>Google Maps Ranking verbessern: Der ultimative Guide 2026</title>
+      <link>https://localdominator.de/blog/google-maps-ranking-verbessern</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/google-maps-ranking-verbessern</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Local SEO</category>
+      <description><![CDATA[Erfahre, wie du mit bewährten Strategien dein Google Maps Ranking verbesserst und mehr lokale Kunden gewinnst. 7 Schritte die wirklich funktionieren.]]></description>
+    </item>
+    
+    <item>
+      <title>Google Bewertungen bekommen: 7 bewährte Strategien</title>
+      <link>https://localdominator.de/blog/google-bewertungen-bekommen</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/google-bewertungen-bekommen</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Bewertungen</category>
+      <description><![CDATA[Lerne 7 bewährte Methoden, um mehr authentische Google Bewertungen von zufriedenen Kunden zu erhalten. Mit Vorlagen und QR-Code Tipps.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO für Restaurants: Mehr Gäste durch Google</title>
+      <link>https://localdominator.de/blog/local-seo-fuer-restaurants</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-fuer-restaurants</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Gastronomie</category>
+      <description><![CDATA[Local SEO speziell für Restaurants erklärt. Von Speisekarten-Optimierung bis Bilder-Strategie. Jetzt mehr Reservierungen!]]></description>
+    </item>
+    
+    <item>
+      <title>Google My Business optimieren: Schritt-für-Schritt Anleitung</title>
+      <link>https://localdominator.de/blog/google-my-business-optimieren</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/google-my-business-optimieren</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Google Business</category>
+      <description><![CDATA[Die komplette Anleitung zur Optimierung deines Google Business Profils für maximale lokale Sichtbarkeit. 10 Schritte mit Screenshots.]]></description>
+    </item>
+    
+    <item>
+      <title>Lokale Suchmaschinenoptimierung 2026: Was wirklich funktioniert</title>
+      <link>https://localdominator.de/blog/lokale-suchmaschinenoptimierung-2026</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/lokale-suchmaschinenoptimierung-2026</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Trends</category>
+      <description><![CDATA[Die wichtigsten Trends und Strategien für lokale SEO im Jahr 2026. KI-Einfluss, Voice Search und mehr. Bleibe deiner Konkurrenz voraus.]]></description>
+    </item>
+    
+    <item>
+      <title>NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten</title>
+      <link>https://localdominator.de/blog/nap-konsistenz-local-seo</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/nap-konsistenz-local-seo</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Local SEO</category>
+      <description><![CDATA[Erfahre, warum einheitliche Unternehmensdaten (NAP) für dein lokales Ranking entscheidend sind. Kompletter Guide mit Checkliste.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO für Handwerker: Mehr Aufträge durch Google</title>
+      <link>https://localdominator.de/blog/local-seo-handwerker</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-handwerker</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Branchen</category>
+      <description><![CDATA[Local SEO speziell für Handwerksbetriebe. Von Elektriker bis Maler - so gewinnst du mehr lokale Aufträge durch Google.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO Audit Checkliste: 50+ Punkte für mehr Sichtbarkeit</title>
+      <link>https://localdominator.de/blog/local-seo-audit-checkliste</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-audit-checkliste</guid>
+      <pubDate>Tue, 07 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Strategie</category>
+      <description><![CDATA[Die ultimative Checkliste für dein Local SEO Audit. Prüfe alle wichtigen Faktoren für maximale lokale Sichtbarkeit.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO Schweiz: Der komplette Leitfaden für KMUs</title>
+      <link>https://localdominator.de/blog/local-seo-schweiz</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-schweiz</guid>
+      <pubDate>Fri, 10 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Regionen</category>
+      <description><![CDATA[Der nationale Local SEO Guide für Schweizer Unternehmen. Mehrsprachigkeit, Schweizer Verzeichnisse und Google Business für alle Kantone.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO Zürich: So dominierst du den Zürcher Markt</title>
+      <link>https://localdominator.de/blog/local-seo-zuerich</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-zuerich</guid>
+      <pubDate>Sun, 12 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Regionen</category>
+      <description><![CDATA[Der ultimative Local SEO Guide für Zürcher Unternehmen. Stadtteile, Keywords, Verzeichnisse und Strategien für die größte Schweizer Stadt.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO München: Der Guide für bayerische Unternehmen</title>
+      <link>https://localdominator.de/blog/local-seo-muenchen</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-muenchen</guid>
+      <pubDate>Wed, 14 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Regionen</category>
+      <description><![CDATA[Local SEO speziell für München und Bayern. Stadtteil-Keywords, lokale Verzeichnisse und Strategien für die bayerische Landeshauptstadt.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO Berlin: Der komplette Guide für die Hauptstadt 2026</title>
+      <link>https://localdominator.de/blog/local-seo-berlin</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-berlin</guid>
+      <pubDate>Thu, 09 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Regionen</category>
+      <description><![CDATA[Der ultimative Local SEO Guide für Berliner Unternehmen. Bezirke, Keywords, Verzeichnisse und Strategien für die deutsche Hauptstadt.]]></description>
+    </item>
+    
+  </channel>
+</rss>

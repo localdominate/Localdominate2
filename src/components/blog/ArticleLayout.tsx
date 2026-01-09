@@ -37,6 +37,24 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
   const { language } = useLanguage();
   const relatedArticles = getRelatedArticles(article.slug, 3, language);
   
+  // Dynamic OG Image based on article slug
+  const getOgImage = (slug: string): string => {
+    const imageMap: Record<string, string> = {
+      'google-maps-ranking-verbessern': 'https://localdominator.de/assets/blog/google-maps-ranking.jpg',
+      'google-bewertungen-bekommen': 'https://localdominator.de/assets/blog/google-bewertungen.jpg',
+      'google-my-business-optimieren': 'https://localdominator.de/assets/blog/google-my-business.jpg',
+      'local-seo-audit-checkliste': 'https://localdominator.de/assets/blog/local-seo-audit.jpg',
+      'local-seo-handwerker': 'https://localdominator.de/assets/blog/local-seo-handwerker.jpg',
+      'local-seo-keywords-finden': 'https://localdominator.de/assets/blog/local-seo-keywords.jpg',
+      'local-seo-fuer-restaurants': 'https://localdominator.de/assets/blog/local-seo-restaurant.jpg',
+      'lokale-suchmaschinenoptimierung-2026': 'https://localdominator.de/assets/blog/lokale-seo-2026.jpg',
+      'nap-konsistenz-local-seo': 'https://localdominator.de/assets/blog/nap-konsistenz.jpg',
+    };
+    return imageMap[slug] || 'https://localdominator.de/og-image.png';
+  };
+
+  const articleOgImage = getOgImage(article.slug);
+  
   // Enhanced Article Schema for AI Systems (ChatGPT, Perplexity, etc.)
   const articleSchema = {
     "@context": "https://schema.org",
@@ -71,7 +89,7 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
     },
     "image": {
       "@type": "ImageObject",
-      "url": `https://localdominator.de/og-image.png`,
+      "url": articleOgImage,
       "width": 1200,
       "height": 630
     },
@@ -107,7 +125,7 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": "https://localdominator.de/og-image.png"
+      "url": articleOgImage
     },
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
@@ -167,6 +185,7 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
         title={article.metaTitle}
         description={article.metaDescription}
         canonicalUrl={`https://localdominator.de/blog/${article.slug}`}
+        ogImage={articleOgImage}
         keywords={article.keywords.join(", ")}
         jsonLd={combinedSchema}
         ogType="article"
@@ -174,6 +193,10 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
         articleModifiedTime={article.updatedAt}
         articleSection={article.category}
         lang={language}
+        alternateUrls={{
+          de: `https://localdominator.de/blog/${article.slug}`,
+          en: `https://localdominator.de/blog/${article.slug}?lang=en`
+        }}
       />
       
       {/* Header */}

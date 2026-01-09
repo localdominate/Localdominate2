@@ -56,7 +56,9 @@ Disallow: /danke
 Disallow: /onboarding
 
 # Sitemaps
+Sitemap: https://localdominator.de/sitemap-index.xml
 Sitemap: https://localdominator.de/sitemap.xml
+Sitemap: https://localdominator.de/sitemap-images.xml
 
 # Host-Direktive für Yandex
 Host: https://localdominator.de
