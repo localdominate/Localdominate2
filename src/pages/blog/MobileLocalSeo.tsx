@@ -8,6 +8,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import MobileSpeedCalculator from "@/components/blog/MobileSpeedCalculator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Smartphone, Phone, Zap, Layout, FileCode, AlertTriangle, ThumbsUp } from "lucide-react";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 
 const MobileLocalSeo = () => {
   const { language } = useLanguage();
@@ -806,6 +807,8 @@ const MobileLocalSeo = () => {
           { title: "Think with Google Mobile Speed", url: "https://www.thinkwithgoogle.com/intl/de-de/marketing-strategien/app-und-mobile/mobile-page-speed-new-industry-benchmarks/", type: "article", description: "Mobile Speed Benchmarks" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="mobile-local-seo" />
     </ArticleLayout>
   );
 };

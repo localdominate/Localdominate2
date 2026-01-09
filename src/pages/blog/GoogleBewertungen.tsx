@@ -10,6 +10,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle } from "lucide-react";
 import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
@@ -380,6 +381,8 @@ const GoogleBewertungen = () => {
           { title: "MOZ Review Management Guide", url: "https://moz.com/learn/seo/review-management", type: "article", description: language === "de" ? "Leitfaden zum Bewertungsmanagement" : "Guide to review management" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />
 
       <BlogCTAABTest articleSlug="google-bewertungen-bekommen" position="end" />
     </ArticleLayout>
