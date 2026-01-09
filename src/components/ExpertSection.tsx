@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import expertProfile from "@/assets/expert-profile.png";
 
 const ExpertSection = () => {
   const { t } = useLanguage();
@@ -9,16 +10,14 @@ const ExpertSection = () => {
     <section className="bg-background section-padding px-4">
       <div ref={ref} className="container max-w-4xl">
         <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 reveal ${isVisible ? 'visible' : ''}`}>
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <div className="flex-shrink-0">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/20 border border-primary/20 flex items-center justify-center overflow-hidden">
-              <svg 
-                className="w-20 h-20 md:w-24 md:h-24 text-primary/40" 
-                fill="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl border border-primary/20 overflow-hidden">
+              <img 
+                src={expertProfile} 
+                alt="Local SEO Experte"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
