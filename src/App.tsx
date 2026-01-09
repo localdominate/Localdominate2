@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./i18n/LanguageContext";  
 import { ABTestProvider } from "@/hooks/useABTest";
+import CoreWebVitalsTracker from "@/components/CoreWebVitalsTracker";
 import Index from "./pages/Index";
 import RestaurantMarketing from "./pages/RestaurantMarketing";
 import Danke from "./pages/Danke";
@@ -65,6 +66,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
+          <CoreWebVitalsTracker trackToDatabase={false} />
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
