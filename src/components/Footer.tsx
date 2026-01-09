@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Utensils, ArrowRight, Hotel } from "lucide-react";
+import { Utensils, ArrowRight, Hotel, BookOpen } from "lucide-react";
 import { CookieSettingsButton } from "@/components/CookieBanner";
 
 const Footer = () => {
@@ -31,6 +31,21 @@ const Footer = () => {
               }`}
             >
               📚 Blog
+            </Button>
+          </Link>
+          <Link to="/seo-lexikon">
+            <Button
+              variant="outline"
+              size="lg"
+              className={`border-primary/50 transition-all group ${
+                currentPath === '/seo-lexikon'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-primary hover:bg-primary hover:text-primary-foreground'
+              }`}
+            >
+              <BookOpen className="w-5 h-5 mr-2" />
+              SEO Lexikon A-Z
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
           <Link to="/restaurant-marketing">
