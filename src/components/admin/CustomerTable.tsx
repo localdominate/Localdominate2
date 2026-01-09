@@ -29,15 +29,86 @@ interface QuestionnaireResponse {
   response_data: unknown;
 }
 
+// Kategorie-Labels passend zu den Datenbank-Werten
 const categoryLabels: Record<string, string> = {
-  restaurant: "Restaurant",
-  handwerker: "Handwerker",
-  arzt: "Arzt/Praxis",
-  anwalt: "Anwalt/Kanzlei",
-  friseur: "Friseur/Beauty",
+  gastronomy: "Gastronomie",
+  beauty_wellness: "Beauty & Wellness",
+  crafts: "Handwerk",
+  health: "Gesundheit/Praxis",
+  retail: "Einzelhandel",
   fitness: "Fitness",
-  hotel: "Hotel",
+  services: "Dienstleistungen",
   other: "Sonstiges",
+};
+
+// Antwort-Feld-Labels für lesbare Darstellung
+const fieldLabels: Record<string, string> = {
+  businessName: "Unternehmensname",
+  ownerName: "Inhaber",
+  email: "E-Mail",
+  phone: "Telefon",
+  website: "Website",
+  address: "Adresse",
+  street: "Straße",
+  city: "Stadt",
+  postalCode: "PLZ",
+  country: "Land",
+  description: "Beschreibung",
+  shortDescription: "Kurzbeschreibung",
+  services: "Leistungen",
+  specialties: "Spezialitäten",
+  openingHours: "Öffnungszeiten",
+  monday: "Montag",
+  tuesday: "Dienstag",
+  wednesday: "Mittwoch",
+  thursday: "Donnerstag",
+  friday: "Freitag",
+  saturday: "Samstag",
+  sunday: "Sonntag",
+  primaryCategory: "Hauptkategorie",
+  secondaryCategories: "Nebenkategorien",
+  attributes: "Attribute",
+  photos: "Fotos",
+  logo: "Logo",
+  coverPhoto: "Titelbild",
+  instagram: "Instagram",
+  facebook: "Facebook",
+  twitter: "Twitter",
+  linkedin: "LinkedIn",
+  youtube: "YouTube",
+  tiktok: "TikTok",
+  googleProfile: "Google Profil",
+  hasGoogleProfile: "Hat Google Profil",
+  profileUrl: "Profil-URL",
+  challenges: "Herausforderungen",
+  goals: "Ziele",
+  competitors: "Wettbewerber",
+  targetAudience: "Zielgruppe",
+  uniqueSellingPoints: "Alleinstellungsmerkmale",
+  priceRange: "Preisklasse",
+  paymentMethods: "Zahlungsmethoden",
+  languages: "Sprachen",
+  accessibility: "Barrierefreiheit",
+  parking: "Parkmöglichkeiten",
+  wifi: "WLAN",
+  reservations: "Reservierungen",
+  delivery: "Lieferung",
+  takeaway: "Abholung",
+  cuisineType: "Küche",
+  seatingCapacity: "Sitzplätze",
+  treatmentTypes: "Behandlungsarten",
+  certifications: "Zertifizierungen",
+  insurance: "Versicherung",
+  emergencyService: "Notdienst",
+  homeService: "Hausbesuche",
+  onlineBooking: "Online-Buchung",
+  consultationTypes: "Beratungsarten",
+  specializations: "Spezialisierungen",
+  equipmentBrands: "Gerätemarken",
+  membershipOptions: "Mitgliedschaftsoptionen",
+  trialOffers: "Probetraining",
+  groupClasses: "Gruppenkurse",
+  personalTraining: "Personal Training",
 };
 
 export const CustomerTable = () => {
@@ -97,9 +168,29 @@ export const CustomerTable = () => {
 
   const formatStepKey = (key: string): string => {
     const labels: Record<string, string> = {
+      // Allgemeine Steps
+      basic_info: "Grunddaten",
+      business_info: "Unternehmensdaten",
+      contact: "Kontaktdaten",
+      contact_info: "Kontaktinformationen",
+      address: "Adresse",
+      address_info: "Adressinformationen",
+      website: "Website",
+      website_info: "Website-Informationen",
+      opening_hours: "Öffnungszeiten",
+      google_profile: "Google Business Profil",
+      social_media: "Social Media",
+      current_situation: "Aktuelle Situation",
+      challenges: "Herausforderungen",
+      goals: "Ziele",
+      description: "Beschreibung",
+      photos: "Fotos",
+      photo_upload: "Foto-Upload",
+      
+      // GMB Steps
       gmb_status: "Google Business Status",
       gmb_verification: "Verifizierung",
-      gmb_basic_info: "Grunddaten",
+      gmb_basic_info: "GMB Grunddaten",
       gmb_categories: "Kategorien",
       gmb_description: "Beschreibung",
       gmb_photos: "Fotos",
@@ -108,8 +199,67 @@ export const CustomerTable = () => {
       gmb_posts: "Beiträge",
       gmb_qa: "Fragen & Antworten",
       gmb_reviews: "Bewertungen",
+      
+      // Branchenspezifische Steps
+      restaurant_details: "Restaurant-Details",
+      gastronomy_details: "Gastronomie-Details",
+      gastronomy_specialties: "Gastronomie-Spezialitäten",
+      gastronomy_services: "Gastronomie-Services",
+      beauty_details: "Beauty-Details",
+      beauty_wellness_details: "Beauty & Wellness-Details",
+      beauty_wellness_services: "Beauty & Wellness-Leistungen",
+      craft_details: "Handwerk-Details",
+      crafts_details: "Handwerk-Details",
+      crafts_services: "Handwerk-Leistungen",
+      crafts_specialties: "Handwerk-Spezialisierungen",
+      fitness_details: "Fitness-Details",
+      fitness_services: "Fitness-Angebot",
+      fitness_equipment: "Fitness-Ausstattung",
+      health_details: "Praxis-Details",
+      health_services: "Medizinische Leistungen",
+      health_specialties: "Fachgebiete",
+      retail_details: "Einzelhandel-Details",
+      retail_products: "Produktsortiment",
+      services_details: "Dienstleistungs-Details",
+      services_offerings: "Leistungsangebot",
+      
+      // Finale Steps
+      final_info: "Abschließende Informationen",
+      summary: "Zusammenfassung",
+      confirmation: "Bestätigung",
     };
-    return labels[key] || key;
+    return labels[key] || key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+  };
+
+  // Formatiert response_data lesbar
+  const formatResponseData = (data: unknown): React.ReactNode => {
+    if (data === null || data === undefined) return "—";
+    if (typeof data === "string") return data;
+    if (typeof data === "boolean") return data ? "Ja" : "Nein";
+    if (typeof data === "number") return data.toString();
+    if (Array.isArray(data)) {
+      return data.length > 0 ? data.join(", ") : "—";
+    }
+    if (typeof data === "object") {
+      const entries = Object.entries(data as Record<string, unknown>);
+      if (entries.length === 0) return "—";
+      return (
+        <div className="space-y-1">
+          {entries.map(([key, value]) => {
+            const label = fieldLabels[key] || key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+            const formattedValue = formatResponseData(value);
+            if (formattedValue === "—" || formattedValue === "") return null;
+            return (
+              <div key={key} className="flex gap-2">
+                <span className="font-medium text-foreground/80">{label}:</span>
+                <span>{formattedValue}</span>
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
+    return String(data);
   };
 
   return (
@@ -251,13 +401,11 @@ export const CustomerTable = () => {
                                       key={response.step_key}
                                       className="p-3 rounded-lg bg-muted/50"
                                     >
-                                      <h4 className="font-medium text-sm mb-2">
+                                      <h4 className="font-medium text-sm mb-2 text-primary">
                                         {formatStepKey(response.step_key)}
                                       </h4>
                                       <div className="text-sm text-muted-foreground">
-                                        <pre className="whitespace-pre-wrap font-sans">
-                                          {JSON.stringify(response.response_data, null, 2)}
-                                        </pre>
+                                        {formatResponseData(response.response_data)}
                                       </div>
                                     </div>
                                   ))}
