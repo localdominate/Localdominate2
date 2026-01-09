@@ -19,6 +19,8 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { generateRecommendations, testIdeas, getBlogCTAAnalysis, type ABTestRecommendation } from "@/lib/abTestRecommendations";
+import TestControlButtons from "@/components/admin/TestControlButtons";
+import TestIdeaCard from "@/components/admin/TestIdeaCard";
 
 interface ABTest {
   id: string;
@@ -29,6 +31,8 @@ interface ABTest {
   status: string;
   start_date: string;
   target_sample_size: number;
+  is_ready?: boolean;
+  config?: Record<string, any>;
 }
 
 interface TestStats {
@@ -59,7 +63,8 @@ const ABTestZentrale = () => {
     if (testsData) {
       const parsedTests = testsData.map(t => ({
         ...t,
-        variants: Array.isArray(t.variants) ? t.variants : JSON.parse(t.variants as string)
+        variants: Array.isArray(t.variants) ? t.variants : JSON.parse(t.variants as string),
+        config: t.config as Record<string, any> | undefined
       })) as ABTest[];
       setTests(parsedTests);
 
@@ -162,6 +167,15 @@ const ABTestZentrale = () => {
     }
   };
 
+  // Get list of existing test IDs and their statuses for TestIdeaCard
+  const existingTestIds = tests.map(t => t.test_id);
+  const testStatuses = tests.reduce((acc, t) => ({ ...acc, [t.test_id]: t.status }), {} as Record<string, string>);
+
+  // Summary stats
+  const activeTests = tests.filter(t => t.status === 'running').length;
+  const pausedTests = tests.filter(t => t.status === 'paused').length;
+  const completedTests = tests.filter(t => t.status === 'completed').length;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
@@ -192,21 +206,40 @@ const ABTestZentrale = () => {
 
         <Tabs defaultValue="overview" className="space-y-6">
           <TabsList className="grid w-full grid-cols-4 max-w-2xl">
-            <TabsTrigger value="overview">Übersicht</TabsTrigger>
+            <TabsTrigger value="overview">
+              Übersicht
+              {activeTests > 0 && <Badge className="ml-2 bg-green-500 text-xs">{activeTests}</Badge>}
+            </TabsTrigger>
             <TabsTrigger value="blog-cta">Blog CTAs</TabsTrigger>
-            <TabsTrigger value="recommendations">Empfehlungen</TabsTrigger>
-            <TabsTrigger value="ideas">Test-Ideen</TabsTrigger>
+            <TabsTrigger value="recommendations">
+              Empfehlungen
+              {recommendations.filter(r => r.priority === 'high').length > 0 && (
+                <Badge className="ml-2 bg-red-500 text-xs">{recommendations.filter(r => r.priority === 'high').length}</Badge>
+              )}
+            </TabsTrigger>
+            <TabsTrigger value="ideas">
+              Test-Ideen
+              {pausedTests > 0 && <Badge className="ml-2 bg-yellow-500 text-xs">{pausedTests} bereit</Badge>}
+            </TabsTrigger>
           </TabsList>
 
           {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <Card>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-sm font-medium text-muted-foreground">Aktive Tests</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold">{tests.filter(t => t.status === 'running').length}</div>
+                  <div className="text-3xl font-bold text-green-600">{activeTests}</div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-sm font-medium text-muted-foreground">Bereit zum Start</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-bold text-yellow-600">{pausedTests}</div>
                 </CardContent>
               </Card>
               <Card>
@@ -221,75 +254,105 @@ const ABTestZentrale = () => {
               </Card>
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-sm font-medium text-muted-foreground">Handlungsbedarf</CardTitle>
+                  <CardTitle className="text-sm font-medium text-muted-foreground">Abgeschlossen</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold text-red-500">
-                    {recommendations.filter(r => r.priority === 'high').length}
-                  </div>
+                  <div className="text-3xl font-bold text-blue-600">{completedTests}</div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Active Tests */}
+            {/* Active and Paused Tests */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <BarChart3 className="h-5 w-5" />
-                  Laufende Tests
+                  Alle Tests
                 </CardTitle>
+                <CardDescription>
+                  Klicke auf "Starten" um einen vorbereiteten Test zu aktivieren
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                {tests.map(test => {
-                  const testStats = stats[test.test_id];
-                  if (!testStats) return null;
+                {tests.length === 0 ? (
+                  <div className="text-center py-8 text-muted-foreground">
+                    <Clock className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                    <p>Noch keine Tests erstellt.</p>
+                    <p className="text-sm">Gehe zu "Test-Ideen" um deinen ersten Test vorzubereiten.</p>
+                  </div>
+                ) : (
+                  tests.map(test => {
+                    const testStats = stats[test.test_id] || {
+                      views: {},
+                      conversions: {},
+                      conversionRates: {},
+                      confidence: 0,
+                      winner: null,
+                      sampleSize: 0
+                    };
 
-                  return (
-                    <div key={test.id} className="border rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <h3 className="font-semibold">{test.name}</h3>
-                          <p className="text-sm text-muted-foreground">{test.description}</p>
+                    return (
+                      <div key={test.id} className="border rounded-lg p-4">
+                        <div className="flex items-center justify-between mb-4">
+                          <div>
+                            <h3 className="font-semibold">{test.name}</h3>
+                            <p className="text-sm text-muted-foreground">{test.description}</p>
+                            {test.config?.component && (
+                              <Badge variant="outline" className="mt-1 text-xs">
+                                {test.config.component}
+                              </Badge>
+                            )}
+                          </div>
+                          {getStatusBadge(test.status)}
                         </div>
-                        {getStatusBadge(test.status)}
-                      </div>
 
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                        {test.variants.map((variant: string) => (
-                          <div key={variant} className="text-center p-3 bg-muted rounded-lg">
-                            <div className="text-xs text-muted-foreground uppercase mb-1">{variant}</div>
-                            <div className="text-xl font-bold">{testStats.conversionRates[variant]?.toFixed(1)}%</div>
-                            <div className="text-xs text-muted-foreground">
-                              {testStats.conversions[variant]} / {testStats.views[variant]} Views
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                          {test.variants.map((variant: string) => (
+                            <div key={variant} className="text-center p-3 bg-muted rounded-lg">
+                              <div className="text-xs text-muted-foreground uppercase mb-1">{variant}</div>
+                              <div className="text-xl font-bold">
+                                {testStats.conversionRates[variant]?.toFixed(1) || '0.0'}%
+                              </div>
+                              <div className="text-xs text-muted-foreground">
+                                {testStats.conversions[variant] || 0} / {testStats.views[variant] || 0} Views
+                              </div>
                             </div>
-                          </div>
-                        ))}
-                      </div>
+                          ))}
+                        </div>
 
-                      <div className="flex items-center gap-4">
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between text-sm mb-1">
-                            <span>Konfidenz</span>
-                            <span className="font-medium">{testStats.confidence}%</span>
+                        <div className="flex items-center gap-4">
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between text-sm mb-1">
+                              <span>Konfidenz</span>
+                              <span className="font-medium">{testStats.confidence}%</span>
+                            </div>
+                            <Progress value={testStats.confidence} />
                           </div>
-                          <Progress value={testStats.confidence} />
+                          <div className="text-sm text-muted-foreground">
+                            {testStats.sampleSize} / {test.target_sample_size} Samples
+                          </div>
                         </div>
-                        <div className="text-sm text-muted-foreground">
-                          {testStats.sampleSize} / {test.target_sample_size} Samples
-                        </div>
-                      </div>
 
-                      {testStats.winner && (
-                        <div className="mt-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center gap-2">
-                          <CheckCircle2 className="h-5 w-5 text-green-500" />
-                          <span className="font-medium text-green-700">
-                            Gewinner: {testStats.winner} ({testStats.conversionRates[testStats.winner]?.toFixed(1)}% CR)
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+                        {testStats.winner && (
+                          <div className="mt-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center gap-2">
+                            <CheckCircle2 className="h-5 w-5 text-green-500" />
+                            <span className="font-medium text-green-700">
+                              Gewinner: {testStats.winner} ({testStats.conversionRates[testStats.winner]?.toFixed(1)}% CR)
+                            </span>
+                          </div>
+                        )}
+
+                        <TestControlButtons
+                          testId={test.test_id}
+                          status={test.status}
+                          winner={testStats.winner}
+                          confidence={testStats.confidence}
+                          onUpdate={loadData}
+                        />
+                      </div>
+                    );
+                  })
+                )}
               </CardContent>
             </Card>
           </TabsContent>
@@ -403,22 +466,22 @@ const ABTestZentrale = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Lightbulb className="h-5 w-5" />
-                  Zukünftige Test-Ideen
+                  Test-Ideen
                 </CardTitle>
                 <CardDescription>
-                  Bewährte A/B-Tests für höhere Conversion-Rates
+                  Klicke auf "Vorbereiten" um einen Test zu erstellen, dann auf "Starten" um ihn zu aktivieren
                 </CardDescription>
               </CardHeader>
               <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {testIdeas.map(idea => (
-                  <div key={idea.id} className="p-4 border rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className={`w-2 h-2 rounded-full ${getPriorityColor(idea.priority)}`} />
-                      <h3 className="font-semibold">{idea.title}</h3>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-3">{idea.description}</p>
-                    <Badge variant="secondary">{idea.action}</Badge>
-                  </div>
+                  <TestIdeaCard
+                    key={idea.id}
+                    idea={idea}
+                    existingTestIds={existingTestIds}
+                    testStatuses={testStatuses}
+                    onTestCreated={loadData}
+                    getPriorityColor={getPriorityColor}
+                  />
                 ))}
               </CardContent>
             </Card>

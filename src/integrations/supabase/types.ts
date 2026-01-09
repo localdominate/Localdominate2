@@ -43,10 +43,12 @@ export type Database = {
       }
       ab_tests: {
         Row: {
+          config: Json | null
           created_at: string | null
           description: string | null
           end_date: string | null
           id: string
+          is_ready: boolean | null
           name: string
           start_date: string | null
           status: string | null
@@ -57,10 +59,12 @@ export type Database = {
           winning_variant: string | null
         }
         Insert: {
+          config?: Json | null
           created_at?: string | null
           description?: string | null
           end_date?: string | null
           id?: string
+          is_ready?: boolean | null
           name: string
           start_date?: string | null
           status?: string | null
@@ -71,10 +75,12 @@ export type Database = {
           winning_variant?: string | null
         }
         Update: {
+          config?: Json | null
           created_at?: string | null
           description?: string | null
           end_date?: string | null
           id?: string
+          is_ready?: boolean | null
           name?: string
           start_date?: string | null
           status?: string | null
