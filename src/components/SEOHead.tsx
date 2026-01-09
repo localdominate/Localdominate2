@@ -9,7 +9,11 @@ interface SEOHeadProps {
   keywords?: string;
   noindex?: boolean;
   lang?: "de" | "en";
-  jsonLd?: object;
+  jsonLd?: object | object[];
+  articlePublishedTime?: string;
+  articleModifiedTime?: string;
+  articleAuthor?: string;
+  articleSection?: string;
 }
 
 const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
@@ -22,6 +26,10 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
   noindex = false,
   lang = "de",
   jsonLd,
+  articlePublishedTime,
+  articleModifiedTime,
+  articleAuthor = "Local Dominator",
+  articleSection,
 }, _ref) => {
   const fullTitle = title.includes("Local Dominator") 
     ? title 
@@ -43,27 +51,59 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
       meta.setAttribute("content", content);
     };
 
-    // Update html lang
+    // Update html lang and prefix for Open Graph
     document.documentElement.lang = lang;
+    document.documentElement.setAttribute("prefix", "og: https://ogp.me/ns#");
 
     // Basic meta tags
     updateMeta("description", description);
-    updateMeta("robots", noindex ? "noindex, nofollow" : "index, follow");
+    updateMeta("robots", noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    updateMeta("googlebot", noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
     if (keywords) updateMeta("keywords", keywords);
+
+    // AI/LLM Optimization Meta Tags
+    updateMeta("ai-content-declaration", "human-written");
+    updateMeta("abstract", description);
+    updateMeta("citation_title", fullTitle);
+    updateMeta("citation_author", articleAuthor);
+    if (articlePublishedTime) {
+      updateMeta("citation_publication_date", articlePublishedTime.split("T")[0]);
+    }
+    updateMeta("citation_language", lang);
+
+    // Dublin Core Metadata for AI Systems
+    updateMeta("DC.title", fullTitle);
+    updateMeta("DC.creator", articleAuthor);
+    if (articleSection) updateMeta("DC.subject", articleSection);
+    updateMeta("DC.description", description);
+    updateMeta("DC.publisher", "Local Dominator");
+    updateMeta("DC.language", lang);
 
     // Open Graph
     updateMeta("og:type", ogType, true);
     updateMeta("og:title", fullTitle, true);
     updateMeta("og:description", description, true);
     updateMeta("og:image", ogImage, true);
+    updateMeta("og:image:width", "1200", true);
+    updateMeta("og:image:height", "630", true);
     updateMeta("og:locale", lang === "de" ? "de_DE" : "en_US", true);
+    updateMeta("og:site_name", "Local Dominator", true);
     if (canonicalUrl) updateMeta("og:url", canonicalUrl, true);
+
+    // Article-specific Open Graph
+    if (ogType === "article") {
+      if (articlePublishedTime) updateMeta("article:published_time", articlePublishedTime, true);
+      if (articleModifiedTime) updateMeta("article:modified_time", articleModifiedTime, true);
+      updateMeta("article:author", articleAuthor, true);
+      if (articleSection) updateMeta("article:section", articleSection, true);
+    }
 
     // Twitter
     updateMeta("twitter:card", "summary_large_image");
     updateMeta("twitter:title", fullTitle);
     updateMeta("twitter:description", description);
     updateMeta("twitter:image", ogImage);
+    updateMeta("twitter:site", "@localdominator");
 
     // Canonical link
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -78,28 +118,27 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
       canonical.remove();
     }
 
-    // JSON-LD
-    const existingJsonLd = document.querySelector('script[data-seo-jsonld]');
+    // JSON-LD - Handle single object or array
+    const existingJsonLd = document.querySelectorAll('script[data-seo-jsonld]');
+    existingJsonLd.forEach(el => el.remove());
+    
     if (jsonLd) {
-      if (existingJsonLd) {
-        existingJsonLd.textContent = JSON.stringify(jsonLd);
-      } else {
+      const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+      schemas.forEach((schema, index) => {
         const script = document.createElement("script");
         script.type = "application/ld+json";
-        script.setAttribute("data-seo-jsonld", "true");
-        script.textContent = JSON.stringify(jsonLd);
+        script.setAttribute("data-seo-jsonld", `true-${index}`);
+        script.textContent = JSON.stringify(schema);
         document.head.appendChild(script);
-      }
-    } else if (existingJsonLd) {
-      existingJsonLd.remove();
+      });
     }
 
     // Cleanup function
     return () => {
-      const jsonLdScript = document.querySelector('script[data-seo-jsonld]');
-      if (jsonLdScript) jsonLdScript.remove();
+      const jsonLdScripts = document.querySelectorAll('script[data-seo-jsonld]');
+      jsonLdScripts.forEach(script => script.remove());
     };
-  }, [fullTitle, description, canonicalUrl, ogImage, ogType, keywords, noindex, lang, jsonLd]);
+  }, [fullTitle, description, canonicalUrl, ogImage, ogType, keywords, noindex, lang, jsonLd, articlePublishedTime, articleModifiedTime, articleAuthor, articleSection]);
 
   return null;
 });
