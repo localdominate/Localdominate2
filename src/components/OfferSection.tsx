@@ -7,14 +7,133 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
+import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
+import { CTA_COLOR_VARIANTS, PRICE_DISPLAY_VARIANTS } from "@/lib/autoOptimizerConfig";
 
 const OfferSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
+  const { getEffectiveValue } = useAutoOptimizerContext();
+  
+  // Get optimized values
+  const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
+  const ctaText = getEffectiveValue('cta_text', 'offer_cta', t.offer.ctaButton);
+  const priceDisplay = getEffectiveValue('price_display', 'offer', 'standard');
+  
+  // Get button variant from color
+  const buttonVariant = CTA_COLOR_VARIANTS[ctaColor] || 'cta';
+  
+  // Get price display badge
+  const priceDisplayText = PRICE_DISPLAY_VARIANTS[priceDisplay]?.[language] || t.offer.oneTime;
   
   const handleCtaClick = () => {
     trackButtonClick("offer_cta", "offer_section", 299);
-    openStripeCheckout("standard", "offer_section", t.offer.ctaButton);
+    openStripeCheckout("standard", "offer_section", ctaText);
+  };
+
+  // Render price section based on variant
+  const renderPriceSection = () => {
+    switch (priceDisplay) {
+      case 'daily':
+        return (
+          <>
+            <p className="text-muted-foreground text-sm mb-2">
+              {t.offer.agencyPrice}
+            </p>
+            <p className="text-3xl text-muted-foreground/50 line-through mb-4">
+              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+            </p>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
+              {priceDisplayText}
+            </p>
+            <p className="text-5xl md:text-6xl font-bold text-foreground mb-2">
+              &lt;1€
+            </p>
+            <p className="text-muted-foreground mb-6">
+              {language === 'de' ? 'pro Tag für ein Jahr' : 'per day for a year'}
+            </p>
+          </>
+        );
+      case 'savings':
+        return (
+          <>
+            <p className="text-muted-foreground text-sm mb-2">
+              {t.offer.agencyPrice}
+            </p>
+            <p className="text-3xl text-muted-foreground/50 line-through mb-4">
+              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+            </p>
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-2">
+              {priceDisplayText}
+            </p>
+            <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
+              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+            </p>
+            <p className="text-muted-foreground mb-6">
+              {t.offer.oneTime}
+            </p>
+          </>
+        );
+      case 'comparison':
+        return (
+          <>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
+              {priceDisplayText}
+            </p>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="text-center">
+                <p className="text-2xl text-muted-foreground/50 line-through">1.500€+</p>
+                <p className="text-xs text-muted-foreground">{language === 'de' ? 'Agentur' : 'Agency'}</p>
+              </div>
+              <span className="text-2xl">→</span>
+              <div className="text-center">
+                <p className="text-4xl md:text-5xl font-bold text-foreground">299€</p>
+                <p className="text-xs text-primary font-semibold">Local Dominator</p>
+              </div>
+            </div>
+            <p className="text-muted-foreground mb-6">
+              {t.offer.oneTime}
+            </p>
+          </>
+        );
+      case 'roi':
+        return (
+          <>
+            <p className="text-muted-foreground text-sm mb-2">
+              {t.offer.agencyPrice}
+            </p>
+            <p className="text-3xl text-muted-foreground/50 line-through mb-4">
+              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+            </p>
+            <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
+              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+            </p>
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-6">
+              {priceDisplayText}
+            </p>
+          </>
+        );
+      default: // 'standard'
+        return (
+          <>
+            <p className="text-muted-foreground text-sm mb-2">
+              {t.offer.agencyPrice}
+            </p>
+            <p className="text-3xl text-muted-foreground/50 line-through mb-4">
+              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+            </p>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
+              {t.offer.yourPrice}
+            </p>
+            <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
+              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+            </p>
+            <p className="text-muted-foreground mb-6">
+              {t.offer.oneTime}
+            </p>
+          </>
+        );
+    }
   };
 
   return (
@@ -50,26 +169,17 @@ const OfferSection = () => {
               </ul>
             </div>
             
-            {/* Right: Pricing */}
+            {/* Right: Pricing - Dynamic based on A/B test */}
             <div className="flex flex-col justify-center items-center text-center bg-gradient-to-br from-primary/5 to-primary/10 p-6 md:p-8 rounded-2xl border border-primary/20">
-              <p className="text-muted-foreground text-sm mb-2">
-                {t.offer.agencyPrice}
-              </p>
-              <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-                <AnimatedPriceCounter from={1500} to={1500} duration={0} />
-              </p>
-              <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
-                {t.offer.yourPrice}
-              </p>
-              <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-                <AnimatedPriceCounter from={1500} to={299} duration={2000} />
-              </p>
-              <p className="text-muted-foreground mb-6">
-                {t.offer.oneTime}
-              </p>
+              {renderPriceSection()}
               
-              <Button variant="cta" size="cta" className="w-full group cta-pulse" onClick={handleCtaClick}>
-                {t.offer.ctaButton}
+              <Button 
+                variant={buttonVariant} 
+                size="cta" 
+                className="w-full group cta-pulse" 
+                onClick={handleCtaClick}
+              >
+                {ctaText}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               

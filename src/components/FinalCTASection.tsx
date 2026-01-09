@@ -5,10 +5,17 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
+import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
+import { CTA_COLOR_VARIANTS } from "@/lib/autoOptimizerConfig";
 
 const FinalCTASection = () => {
   const { t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
+  const { getEffectiveValue } = useAutoOptimizerContext();
+  
+  // Get optimized CTA color
+  const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
+  const buttonVariant = CTA_COLOR_VARIANTS[ctaColor] || 'cta';
 
   const handleCtaClick = () => {
     trackButtonClick("final_cta", "final_cta_section", 299);
@@ -27,7 +34,12 @@ const FinalCTASection = () => {
         </p>
         
         <div className={`flex justify-center reveal reveal-delay-2 ${isVisible ? 'visible' : ''}`}>
-          <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto max-w-md cta-pulse" onClick={handleCtaClick}>
+          <Button 
+            variant={buttonVariant} 
+            size="ctaLarge" 
+            className="group w-full sm:w-auto max-w-md cta-pulse" 
+            onClick={handleCtaClick}
+          >
             <span className="hidden sm:inline">{t.finalCta.ctaFull}</span>
             <span className="sm:hidden">{t.finalCta.ctaShort}</span>
             <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />

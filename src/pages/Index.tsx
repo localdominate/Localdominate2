@@ -23,6 +23,7 @@ import BackToTop from "@/components/BackToTop";
 import SocialProofToast from "@/components/SocialProofToast";
 import CookieBanner from "@/components/CookieBanner";
 import HeatmapTracker from "@/components/HeatmapTracker";
+import { AutoOptimizerProvider } from "@/components/AutoOptimizerProvider";
 import useScrollDepthTracking from "@/hooks/useScrollDepthTracking";
 import useAnalyticsSession from "@/hooks/useAnalyticsSession";
 import { useEffect } from "react";
@@ -39,39 +40,41 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen pb-20 md:pb-0">
-      {/* Global UI Components */}
-      <ScrollProgress />
-      <StickyHeader />
-      <ExitIntentPopup />
-      <SocialProofToast />
-      
-      {/* Page Content */}
-      <AnnouncementBar />
-      <LanguageSwitch />
-      <HeroSection />
-      <RankingComparison />
-      <PainSection />
-      <ComparisonTable />
-      <SolutionSection />
-      <ROICalculator />
-      <TestimonialsSection />
-      <ValueStackSection />
-      <OfferSection />
-      <GuaranteeSection />
-      <ExpertSection />
-      <FAQSection />
-      <FinalCTASection />
-      <Footer />
-      
-      {/* Mobile/Bottom Components */}
-      <MobileStickyBar />
-      <BackToTop />
-      <CookieBanner />
-      
-      {/* Analytics Tracking */}
-      <HeatmapTracker enabled={true} />
-    </main>
+    <AutoOptimizerProvider>
+      <main className="min-h-screen pb-20 md:pb-0">
+        {/* Global UI Components */}
+        <ScrollProgress />
+        <StickyHeader />
+        <ExitIntentPopup />
+        <SocialProofToast />
+        
+        {/* Page Content */}
+        <AnnouncementBar />
+        <LanguageSwitch />
+        <HeroSection />
+        <RankingComparison />
+        <PainSection />
+        <ComparisonTable />
+        <SolutionSection />
+        <ROICalculator />
+        <TestimonialsSection />
+        <ValueStackSection />
+        <OfferSection />
+        <GuaranteeSection />
+        <ExpertSection />
+        <FAQSection />
+        <FinalCTASection />
+        <Footer />
+        
+        {/* Mobile/Bottom Components */}
+        <MobileStickyBar />
+        <BackToTop />
+        <CookieBanner />
+        
+        {/* Analytics Tracking */}
+        <HeatmapTracker enabled={true} />
+      </main>
+    </AutoOptimizerProvider>
   );
 };
 

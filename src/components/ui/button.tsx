@@ -17,6 +17,11 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline min-h-0",
         cta: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 animate-glow text-base md:text-lg font-bold tracking-tight active:scale-95",
         ctaSecondary: "bg-success text-success-foreground hover:bg-success/90 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 text-base md:text-lg font-bold tracking-tight active:scale-95",
+        // Auto-Optimizer CTA color variants
+        ctaGreen: "bg-green-600 text-white hover:bg-green-700 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 animate-glow text-base md:text-lg font-bold tracking-tight active:scale-95",
+        ctaOrange: "bg-orange-500 text-white hover:bg-orange-600 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 animate-glow text-base md:text-lg font-bold tracking-tight active:scale-95",
+        ctaPurple: "bg-purple-600 text-white hover:bg-purple-700 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 animate-glow text-base md:text-lg font-bold tracking-tight active:scale-95",
+        ctaRed: "bg-red-600 text-white hover:bg-red-700 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 animate-glow text-base md:text-lg font-bold tracking-tight active:scale-95",
       },
       size: {
         default: "h-11 px-5 py-2",
