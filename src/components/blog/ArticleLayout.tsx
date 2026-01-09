@@ -169,6 +169,11 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
         canonicalUrl={`https://localdominator.de/blog/${article.slug}`}
         keywords={article.keywords.join(", ")}
         jsonLd={combinedSchema}
+        ogType="article"
+        articlePublishedTime={article.publishedAt}
+        articleModifiedTime={article.updatedAt}
+        articleSection={article.category}
+        lang={language}
       />
       
       {/* Header */}
