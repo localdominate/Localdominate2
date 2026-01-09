@@ -391,6 +391,39 @@ export type Database = {
           },
         ]
       }
+      scheduled_posts: {
+        Row: {
+          created_at: string | null
+          id: string
+          published_at: string | null
+          scheduled_at: string
+          slug: string
+          status: string | null
+          title: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          published_at?: string | null
+          scheduled_at: string
+          slug: string
+          status?: string | null
+          title: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          published_at?: string | null
+          scheduled_at?: string
+          slug?: string
+          status?: string | null
+          title?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       uploaded_assets: {
         Row: {
           asset_type: string
