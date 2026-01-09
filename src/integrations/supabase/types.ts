@@ -267,6 +267,7 @@ export type Database = {
           created_at: string
           email: string | null
           id: string
+          is_seeded: boolean | null
           payment_amount: number | null
           payment_completed_at: string | null
           payment_status: string | null
@@ -287,6 +288,7 @@ export type Database = {
           created_at?: string
           email?: string | null
           id?: string
+          is_seeded?: boolean | null
           payment_amount?: number | null
           payment_completed_at?: string | null
           payment_status?: string | null
@@ -307,6 +309,7 @@ export type Database = {
           created_at?: string
           email?: string | null
           id?: string
+          is_seeded?: boolean | null
           payment_amount?: number | null
           payment_completed_at?: string | null
           payment_status?: string | null

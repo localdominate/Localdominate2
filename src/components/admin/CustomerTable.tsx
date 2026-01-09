@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Search, Eye, Mail, Building2, Phone, Globe, CreditCard, FileText } from "lucide-react";
+import { Search, Eye, Mail, Building2, Phone, Globe, CreditCard, FileText, FlaskConical } from "lucide-react";
 import { format } from "date-fns";
 import { de } from "date-fns/locale";
 
@@ -21,6 +21,7 @@ interface Customer {
   payment_amount: number | null;
   payment_completed_at: string | null;
   questionnaire_completed: boolean | null;
+  is_seeded: boolean | null;
   created_at: string;
 }
 
@@ -304,7 +305,15 @@ export const CustomerTable = () => {
                 {filteredCustomers.map((customer) => (
                   <tr key={customer.id} className="border-b hover:bg-muted/50">
                     <td className="py-3 px-4">
-                      <div className="font-medium">{customer.business_name || "—"}</div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">{customer.business_name || "—"}</span>
+                        {customer.is_seeded && (
+                          <Badge className="bg-purple-500/10 text-purple-600 border-purple-500/20 text-xs">
+                            <FlaskConical className="w-3 h-3 mr-1" />
+                            Test
+                          </Badge>
+                        )}
+                      </div>
                       {customer.address && (
                         <div className="text-xs text-muted-foreground">{customer.address}</div>
                       )}
