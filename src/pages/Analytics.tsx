@@ -49,6 +49,9 @@ import {
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area } from "recharts";
 import HeatmapAnalyzer from "@/components/admin/HeatmapAnalyzer";
 import KeywordPerformance from "@/components/admin/KeywordPerformance";
+import SEOHealthDashboard from "@/components/admin/SEOHealthDashboard";
+import ContentFreshnessAlerts from "@/components/admin/ContentFreshnessAlerts";
+import CoreWebVitalsPanel from "@/components/admin/CoreWebVitalsPanel";
 
 const ADMIN_USERNAME = "admin";
 const ADMIN_PASSWORD = "localdominator240686";
@@ -402,18 +405,30 @@ const Analytics = () => {
 
       {/* Main Tabs */}
       <Tabs defaultValue="overview" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-3 lg:w-auto lg:inline-flex">
+        <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:inline-flex">
           <TabsTrigger value="overview" className="gap-2">
             <BarChart3 className="h-4 w-4" />
             Übersicht
           </TabsTrigger>
           <TabsTrigger value="heatmap" className="gap-2">
             <Flame className="h-4 w-4" />
-            Heatmap Analyse
+            Heatmap
           </TabsTrigger>
           <TabsTrigger value="keywords" className="gap-2">
             <Search className="h-4 w-4" />
             Keywords
+          </TabsTrigger>
+          <TabsTrigger value="seo-health" className="gap-2">
+            <TrendingUp className="h-4 w-4" />
+            SEO Health
+          </TabsTrigger>
+          <TabsTrigger value="freshness" className="gap-2">
+            <Clock className="h-4 w-4" />
+            Freshness
+          </TabsTrigger>
+          <TabsTrigger value="vitals" className="gap-2">
+            <Zap className="h-4 w-4" />
+            Web Vitals
           </TabsTrigger>
         </TabsList>
 
@@ -425,8 +440,19 @@ const Analytics = () => {
           <KeywordPerformance />
         </TabsContent>
 
-        <TabsContent value="overview">
+        <TabsContent value="seo-health">
+          <SEOHealthDashboard />
+        </TabsContent>
 
+        <TabsContent value="freshness">
+          <ContentFreshnessAlerts />
+        </TabsContent>
+
+        <TabsContent value="vitals">
+          <CoreWebVitalsPanel />
+        </TabsContent>
+
+        <TabsContent value="overview">
       {/* Database KPI Cards */}
       <div className="mb-8 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
         <Card className="border-primary/50 bg-primary/5">
