@@ -5,13 +5,56 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
 import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
+import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
+import { CTA_COLOR_VARIANTS, HEADLINE_VARIANTS, URGENCY_VARIANTS } from "@/lib/autoOptimizerConfig";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const { getEffectiveValue, isLoading } = useAutoOptimizerContext();
+  
+  // Get optimized values
+  const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
+  const ctaText = getEffectiveValue('cta_text', 'hero_cta', t.hero.ctaFull);
+  const headlineStyle = getEffectiveValue('headline_style', 'hero', 'emotional');
+  const urgencyType = getEffectiveValue('urgency_type', 'hero', 'spots');
+  
+  // Get button variant from color
+  const buttonVariant = CTA_COLOR_VARIANTS[ctaColor] || 'cta';
+  
+  // Get headline content based on style
+  const headlineContent = HEADLINE_VARIANTS[headlineStyle]?.[language] || t.hero.headline;
+  
+  // Get urgency content
+  const urgencyContent = URGENCY_VARIANTS[urgencyType]?.[language] || '';
   
   const handleCtaClick = () => {
     trackButtonClick("hero_cta", "hero_section", 299);
-    openStripeCheckout("standard", "hero_section", t.hero.ctaFull);
+    openStripeCheckout("standard", "hero_section", ctaText);
+  };
+
+  // Render urgency element based on type
+  const renderUrgencyElement = () => {
+    if (urgencyType === 'none' || !urgencyContent) return null;
+    
+    if (urgencyType === 'countdown') {
+      return (
+        <div className="mt-6 md:mt-8 inline-block bg-primary/5 border border-primary/20 rounded-xl px-4 md:px-6 py-2 md:py-3">
+          <p className="text-xs md:text-sm font-semibold text-foreground mb-2">
+            {urgencyContent}
+          </p>
+          <CountdownTimer />
+        </div>
+      );
+    }
+    
+    return (
+      <div className="mt-6 md:mt-8 inline-block bg-primary/5 border border-primary/20 rounded-xl px-4 md:px-6 py-2 md:py-3">
+        <p className="text-xs md:text-sm font-semibold text-foreground">
+          {urgencyContent}
+        </p>
+      </div>
+    );
   };
 
   return (
@@ -25,10 +68,16 @@ const HeroSection = () => {
               {t.hero.eyebrow}
             </p>
             
-            {/* Main Headline */}
+            {/* Main Headline - Dynamic based on A/B test */}
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.15] mb-4 md:mb-6">
-              {t.hero.headline}{" "}
-              <span className="text-gradient">{t.hero.headlineHighlight}</span> {t.hero.headlineEnd}
+              {headlineStyle === 'emotional' ? (
+                <>
+                  {t.hero.headline}{" "}
+                  <span className="text-gradient">{t.hero.headlineHighlight}</span> {t.hero.headlineEnd}
+                </>
+              ) : (
+                headlineContent
+              )}
             </h1>
             
             {/* Subheadline */}
@@ -38,10 +87,15 @@ const HeroSection = () => {
               {" "}{t.hero.subheadlineEnd}
             </p>
             
-            {/* CTA Button */}
+            {/* CTA Button - Dynamic color and text */}
             <div className="flex flex-col items-center md:items-start gap-3 w-full max-w-md mx-auto md:mx-0">
-              <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto" onClick={handleCtaClick}>
-                <span className="hidden sm:inline">{t.hero.ctaFull}</span>
+              <Button 
+                variant={buttonVariant} 
+                size="ctaLarge" 
+                className="group w-full sm:w-auto" 
+                onClick={handleCtaClick}
+              >
+                <span className="hidden sm:inline">{ctaText}</span>
                 <span className="sm:hidden">{t.hero.ctaShort}</span>
                 <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -72,12 +126,8 @@ const HeroSection = () => {
               <TrustBadges />
             </div>
             
-            {/* Urgency element */}
-            <div className="mt-6 md:mt-8 inline-block bg-primary/5 border border-primary/20 rounded-xl px-4 md:px-6 py-2 md:py-3">
-              <p className="text-xs md:text-sm font-semibold text-foreground">
-                {t.hero.urgency} <span className="text-primary">{t.hero.spotsLeft}</span> {t.hero.urgencyEnd}
-              </p>
-            </div>
+            {/* Urgency element - Dynamic based on A/B test */}
+            {renderUrgencyElement()}
           </div>
           
           {/* Phone Mockup Image */}

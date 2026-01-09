@@ -60,13 +60,13 @@ export const TESTABLE_ELEMENTS: TestableElement[] = [
   }
 ];
 
-// Color mappings for CTA variants
-export const CTA_COLOR_CLASSES: Record<string, string> = {
-  primary: 'bg-primary hover:bg-primary/90',
-  green: 'bg-green-600 hover:bg-green-700',
-  orange: 'bg-orange-500 hover:bg-orange-600',
-  purple: 'bg-purple-600 hover:bg-purple-700',
-  red: 'bg-red-600 hover:bg-red-700'
+// Color mappings for CTA variants to button variants
+export const CTA_COLOR_VARIANTS: Record<string, 'cta' | 'ctaGreen' | 'ctaOrange' | 'ctaPurple' | 'ctaRed'> = {
+  primary: 'cta',
+  green: 'ctaGreen',
+  orange: 'ctaOrange',
+  purple: 'ctaPurple',
+  red: 'ctaRed'
 };
 
 // Headline variants content
@@ -92,6 +92,57 @@ export const HEADLINE_VARIANTS: Record<string, { de: string; en: string }> = {
     en: 'Are you losing customers to your competitors every day?'
   }
 };
+
+// Price display variants
+export const PRICE_DISPLAY_VARIANTS: Record<string, { de: string; en: string }> = {
+  standard: {
+    de: '299€ (einmalig)',
+    en: '€299 (one-time)'
+  },
+  daily: {
+    de: 'Unter 1€ pro Tag',
+    en: 'Less than €1 per day'
+  },
+  savings: {
+    de: 'Du sparst 1.201€',
+    en: 'You save €1,201'
+  },
+  comparison: {
+    de: '6x günstiger als Agentur',
+    en: '6x cheaper than agency'
+  },
+  roi: {
+    de: 'ROI innerhalb 30 Tagen',
+    en: 'ROI within 30 days'
+  }
+};
+
+// Urgency type variants
+export const URGENCY_VARIANTS: Record<string, { de: string; en: string }> = {
+  countdown: {
+    de: '⏰ Angebot endet in',
+    en: '⏰ Offer ends in'
+  },
+  spots: {
+    de: '🔥 NUR NOCH 7 PLÄTZE DIESEN MONAT',
+    en: '🔥 ONLY 7 SPOTS LEFT THIS MONTH'
+  },
+  time_limited: {
+    de: '⚡ Limitiertes Angebot – nur noch heute',
+    en: '⚡ Limited offer – today only'
+  },
+  social: {
+    de: '👥 12 Kunden haben heute gebucht',
+    en: '👥 12 customers booked today'
+  },
+  none: {
+    de: '',
+    en: ''
+  }
+};
+
+// Trust position variants
+export type TrustPosition = 'hero' | 'after_pain' | 'before_cta' | 'floating' | 'multiple';
 
 // Minimum requirements for test completion
 export const TEST_REQUIREMENTS = {
