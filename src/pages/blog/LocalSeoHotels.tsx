@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, XCircle, Star, TrendingUp, Calendar, Users, Globe, Phone, MapPin, Award, AlertTriangle, Percent, Building, Bed } from "lucide-react";
@@ -928,6 +929,8 @@ const LocalSeoHotels = () => {
           </ol>
         </div>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-seo-hotels" />
     </ArticleLayout>
   );
 };

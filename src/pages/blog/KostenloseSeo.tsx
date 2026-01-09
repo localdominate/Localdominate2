@@ -5,6 +5,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import FreeToolsTable from "@/components/blog/FreeToolsTable";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { 
   CheckCircle, 
@@ -1050,6 +1051,8 @@ const KostenloseSeo = () => {
           { title: "PageSpeed Insights", url: "https://pagespeed.web.dev/", type: "tool", description: "Kostenloser Google-Test für Website-Geschwindigkeit" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="kostenlose-seo-massnahmen" />
     </ArticleLayout>
   );
 };

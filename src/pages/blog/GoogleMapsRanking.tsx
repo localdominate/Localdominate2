@@ -4,6 +4,7 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, AlertTriangle, Lightbulb } from "lucide-react";
@@ -345,6 +346,8 @@ const GoogleMapsRanking = () => {
           ))}
         </div>
       </section>
+
+      <HelpfulnessWidget articleSlug="google-maps-ranking-verbessern" />
 
       <ArticleCTA />
     </ArticleLayout>

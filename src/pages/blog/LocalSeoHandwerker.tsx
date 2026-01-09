@@ -6,6 +6,7 @@ import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
 import { 
@@ -596,6 +597,8 @@ const LocalSeoHandwerker = () => {
           { title: "MyHammer für Handwerker", url: "https://www.myhammer.de/", type: "tool", description: "Plattform zur Auftragsgewinnung" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <ArticleCTA />
     </ArticleLayout>

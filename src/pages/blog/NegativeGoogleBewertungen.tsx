@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewResponseGenerator from "@/components/blog/ReviewResponseGenerator";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
@@ -958,6 +959,8 @@ const NegativeGoogleBewertungen = () => {
           </div>
         </div>
       </section>
+
+      <HelpfulnessWidget articleSlug="negative-google-bewertungen" />
 
       <BlogCTAABTest articleSlug="negative-google-bewertungen" position="end" />
     </ArticleLayout>

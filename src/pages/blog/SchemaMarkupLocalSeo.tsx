@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LocalBusinessSchemaGenerator from "@/components/blog/LocalBusinessSchemaGenerator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -1210,6 +1211,8 @@ const SchemaMarkupLocalSeo = () => {
           </ol>
         </div>
       </section>
+
+      <HelpfulnessWidget articleSlug="schema-markup-local-seo" />
     </ArticleLayout>
   );
 };

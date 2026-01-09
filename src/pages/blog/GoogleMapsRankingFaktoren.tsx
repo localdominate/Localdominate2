@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, XCircle, MapPin, Star, TrendingUp, Building, Users, Globe, AlertTriangle, Award, Target, Zap, Shield } from "lucide-react";
@@ -636,6 +637,8 @@ const GoogleMapsRankingFaktoren = () => {
           { title: "Google Maps Hilfe", url: "https://support.google.com/maps", type: "documentation", description: "Offizielle Google Maps Dokumentation" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="google-maps-ranking-faktoren" />
     </ArticleLayout>
   );
 };

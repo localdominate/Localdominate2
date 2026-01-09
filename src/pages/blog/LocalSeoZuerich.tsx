@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -706,6 +707,8 @@ const LocalSeoZuerich = () => {
           </CardContent>
         </Card>
       </section>
+
+      <HelpfulnessWidget articleSlug="local-seo-zuerich" />
     </ArticleLayout>
   );
 };

@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SwissCantonSelector from "@/components/blog/SwissCantonSelector";
 import SwissDirectoriesTable from "@/components/blog/SwissDirectoriesTable";
@@ -556,6 +557,7 @@ const LocalSeoSchweiz = () => {
           Wir helfen Schweizer Unternehmen dabei, in ihrer Region gefunden zu werden. 
           Von Zürich bis Genf, von Basel bis Lugano.
         </p>
+        <HelpfulnessWidget articleSlug="local-seo-schweiz" />
         <BlogCTAABTest articleSlug="local-seo-schweiz" position="end" />
       </div>
     </ArticleLayout>

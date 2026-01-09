@@ -6,6 +6,7 @@ import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
+import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
 import napKonsistenzImg from "@/assets/blog/nap-konsistenz.jpg";
 import { 
@@ -534,6 +535,8 @@ const NapKonsistenz = () => {
           { title: "Semrush Listing Management", url: "https://www.semrush.com/local/", type: "tool", description: "NAP-Management-Tool" }
         ]}
       />
+
+      <HelpfulnessWidget articleSlug="nap-konsistenz-local-seo" />
 
       <BlogCTAABTest articleSlug="nap-konsistenz-local-seo" position="end" />
     </ArticleLayout>
