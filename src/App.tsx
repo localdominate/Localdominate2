@@ -43,6 +43,9 @@ import LocalSeoCaseStudy from "./pages/blog/LocalSeoCaseStudy";
 import LocalSeoFehler from "./pages/blog/LocalSeoFehler";
 import LocalSeoDoenerladen from "./pages/blog/LocalSeoDoenerladen";
 import LocalSeoFriseur from "./pages/blog/LocalSeoFriseur";
+import LocalSeoImmobilienmakler from "./pages/blog/LocalSeoImmobilienmakler";
+import LocalSeoHamburg from "./pages/blog/LocalSeoHamburg";
+import LocalSeoSteuerberater from "./pages/blog/LocalSeoSteuerberater";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 
@@ -96,6 +99,9 @@ const App = () => (
               <Route path="/blog/local-seo-fehler" element={<LocalSeoFehler />} />
               <Route path="/blog/local-seo-doener-kebab-imbiss" element={<LocalSeoDoenerladen />} />
               <Route path="/blog/local-seo-friseursalon-beauty" element={<LocalSeoFriseur />} />
+              <Route path="/blog/local-seo-immobilienmakler" element={<LocalSeoImmobilienmakler />} />
+              <Route path="/blog/local-seo-hamburg" element={<LocalSeoHamburg />} />
+              <Route path="/blog/local-seo-steuerberater" element={<LocalSeoSteuerberater />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
