@@ -29,11 +29,26 @@ interface TOCItem {
 interface ArticleLayoutProps {
   article: ResolvedBlogArticle;
   children: ReactNode;
-  additionalSchema?: object;
+  additionalSchema?: object | object[];
   tocItems?: TOCItem[];
+  /** For YMYL articles - adds reviewedBy schema */
+  reviewedBy?: {
+    name: string;
+    credentials: string;
+    reviewDate: string;
+  };
+  /** Article type for specialized schema */
+  articleType?: 'standard' | 'medical' | 'legal' | 'financial';
 }
 
-const ArticleLayout = ({ article, children, additionalSchema, tocItems }: ArticleLayoutProps) => {
+const ArticleLayout = ({ 
+  article, 
+  children, 
+  additionalSchema, 
+  tocItems,
+  reviewedBy,
+  articleType = 'standard'
+}: ArticleLayoutProps) => {
   const { language } = useLanguage();
   const relatedArticles = getRelatedArticles(article.slug, 3, language);
   
@@ -55,22 +70,53 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
 
   const articleOgImage = getOgImage(article.slug);
   
+  // Author/Organization Schema
+  const authorSchema = {
+    "@type": "Organization",
+    "@id": "https://localdominator.de/#organization",
+    "name": "Local Dominator",
+    "url": "https://localdominator.de",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://localdominator.de/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "sameAs": [
+      "https://twitter.com/localdominator",
+      "https://linkedin.com/company/localdominator"
+    ]
+  };
+
+  // Expert reviewer for YMYL articles
+  const reviewerSchema = reviewedBy ? {
+    "@type": "Person",
+    "name": reviewedBy.name,
+    "jobTitle": reviewedBy.credentials,
+    "worksFor": authorSchema
+  } : null;
+
+  // Determine WebPage type based on article type
+  const getWebPageType = () => {
+    switch (articleType) {
+      case 'medical': return 'MedicalWebPage';
+      case 'legal': return 'WebPage';
+      case 'financial': return 'WebPage';
+      default: return 'WebPage';
+    }
+  };
+
   // Enhanced Article Schema for AI Systems (ChatGPT, Perplexity, etc.)
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": articleType === 'medical' ? 'MedicalWebPage' : 'Article',
     "@id": `https://localdominator.de/blog/${article.slug}#article`,
     "headline": article.title,
     "name": article.title,
     "description": article.metaDescription,
     "articleBody": article.excerpt,
-    "wordCount": article.readingTime * 200, // Approximate words based on reading time
-    "author": {
-      "@type": "Organization",
-      "@id": "https://localdominator.de/#organization",
-      "name": "Local Dominator",
-      "url": "https://localdominator.de"
-    },
+    "wordCount": article.readingTime * 200,
+    "author": authorSchema,
     "publisher": {
       "@type": "Organization",
       "@id": "https://localdominator.de/#organization",
@@ -81,6 +127,10 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
         "url": "https://localdominator.de/logo.png"
       }
     },
+    ...(reviewerSchema && {
+      "reviewedBy": reviewerSchema,
+      "lastReviewed": reviewedBy?.reviewDate
+    }),
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
     "mainEntityOfPage": {
@@ -112,10 +162,10 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
     }))
   };
 
-  // WebPage Schema for the article page
+  // WebPage Schema for the article page (uses specialized type for YMYL)
   const webPageSchema = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": getWebPageType(),
     "@id": `https://localdominator.de/blog/${article.slug}#webpage`,
     "url": `https://localdominator.de/blog/${article.slug}`,
     "name": article.title,
@@ -129,6 +179,10 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
     },
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
+    ...(reviewerSchema && {
+      "reviewedBy": reviewerSchema,
+      "lastReviewed": reviewedBy?.reviewDate
+    }),
     "breadcrumb": {
       "@id": `https://localdominator.de/blog/${article.slug}#breadcrumb`
     },
@@ -164,9 +218,20 @@ const ArticleLayout = ({ article, children, additionalSchema, tocItems }: Articl
     ]
   };
 
-  const combinedSchema = additionalSchema 
-    ? [articleSchema, webPageSchema, breadcrumbSchema, additionalSchema]
-    : [articleSchema, webPageSchema, breadcrumbSchema];
+  // Combine all schemas, flatten arrays from additionalSchema
+  const buildCombinedSchema = () => {
+    const baseSchemas = [articleSchema, webPageSchema, breadcrumbSchema];
+    
+    if (!additionalSchema) return baseSchemas;
+    
+    // If additionalSchema is an array, spread it; otherwise add as single item
+    if (Array.isArray(additionalSchema)) {
+      return [...baseSchemas, ...additionalSchema];
+    }
+    return [...baseSchemas, additionalSchema];
+  };
+
+  const combinedSchema = buildCombinedSchema();
 
   const readingTimeText = language === "de" ? "Min. Lesezeit" : "min read";
   const updatedText = language === "de" ? "Aktualisiert" : "Updated";

@@ -151,6 +151,12 @@ const LocalSeoAerzte = () => {
       article={article} 
       tocItems={tocItems}
       additionalSchema={[faqSchema, medicalBusinessSchema]}
+      articleType="medical"
+      reviewedBy={{
+        name: "Dr. Med. Fachredaktion",
+        credentials: "Medizinische Fachredaktion",
+        reviewDate: "2026-01-08"
+      }}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 not-prose">

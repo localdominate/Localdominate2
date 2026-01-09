@@ -192,6 +192,12 @@ const LocalSeoSteuerberater = () => {
       article={article} 
       tocItems={tocItems}
       additionalSchema={[faqSchema, accountingServiceSchema]}
+      articleType="financial"
+      reviewedBy={{
+        name: "Steuerberater Fachredaktion",
+        credentials: "Steuerrechtliche Fachredaktion",
+        reviewDate: "2026-01-08"
+      }}
     >
       <LastReviewedBadge 
         reviewDate="2026-01-08" 

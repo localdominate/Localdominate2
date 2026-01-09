@@ -108,6 +108,13 @@ const LocalSeoAnwaelte = () => {
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
+      additionalSchema={faqSchema}
+      articleType="legal"
+      reviewedBy={{
+        name: "Rechtsanwalt Fachredaktion",
+        credentials: "Juristische Fachredaktion",
+        reviewDate: "2026-01-08"
+      }}
     >
       <LastReviewedBadge 
         reviewDate="2026-01-08" 
