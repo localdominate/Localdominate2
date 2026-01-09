@@ -106,4 +106,5 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
 
 SEOHead.displayName = "SEOHead";
 
+// Default export for import SEOHead from "@/components/SEOHead"
 export default SEOHead;
