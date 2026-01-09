@@ -44,6 +44,7 @@ import LocalSeoFehler from "./pages/blog/LocalSeoFehler";
 import LocalSeoDoenerladen from "./pages/blog/LocalSeoDoenerladen";
 import LocalSeoFriseur from "./pages/blog/LocalSeoFriseur";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
+import MeineKunden from "./pages/MeineKunden";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +62,7 @@ const App = () => (
               <Route path="/ab-test" element={<ABTestDashboard />} />
               <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
               <Route path="/admin/content-plan" element={<ContentPlanDashboard />} />
+              <Route path="/admin/kunden" element={<MeineKunden />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />

@@ -246,29 +246,36 @@ const ContentPlanDashboard = () => {
           </Card>
         </div>
 
-        <Tabs defaultValue="calendar" className="space-y-6">
-          <TabsList className="flex-wrap h-auto gap-1">
-            <TabsTrigger value="calendar" className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              Kalender
-            </TabsTrigger>
-            <TabsTrigger value="list" className="flex items-center gap-2">
-              <FileText className="w-4 h-4" />
-              Alle Artikel
-            </TabsTrigger>
-            <TabsTrigger value="customers" className="flex items-center gap-2">
+        <div className="flex items-center justify-between mb-6">
+          <Tabs defaultValue="calendar" className="flex-1">
+            <TabsList className="flex-wrap h-auto gap-1">
+              <TabsTrigger value="calendar" className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                Kalender
+              </TabsTrigger>
+              <TabsTrigger value="list" className="flex items-center gap-2">
+                <FileText className="w-4 h-4" />
+                Alle Artikel
+              </TabsTrigger>
+              <TabsTrigger value="analytics" className="flex items-center gap-2">
+                <BarChart3 className="w-4 h-4" />
+                Analytics
+              </TabsTrigger>
+              <TabsTrigger value="emails" className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                E-Mails
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+          <Link to="/admin/kunden">
+            <Button variant="outline" className="flex items-center gap-2">
               <Users className="w-4 h-4" />
-              Kunden
-            </TabsTrigger>
-            <TabsTrigger value="analytics" className="flex items-center gap-2">
-              <BarChart3 className="w-4 h-4" />
-              Analytics
-            </TabsTrigger>
-            <TabsTrigger value="emails" className="flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              E-Mails
-            </TabsTrigger>
-          </TabsList>
+              Meine Kunden
+            </Button>
+          </Link>
+        </div>
+
+        <Tabs defaultValue="calendar" className="space-y-6">
 
           <TabsContent value="calendar" className="space-y-6">
             <div className="grid lg:grid-cols-3 gap-6">
@@ -456,9 +463,6 @@ const ContentPlanDashboard = () => {
             </Card>
           </TabsContent>
 
-          <TabsContent value="customers">
-            <CustomerTable />
-          </TabsContent>
 
           <TabsContent value="analytics">
             <AnalyticsOverview />
