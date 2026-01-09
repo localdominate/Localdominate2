@@ -211,8 +211,21 @@ const GoogleMapsRanking = () => {
 
   const t = content[language];
 
+  // FAQ Schema for structured data
+  const faqSchema = {
+    "@type": "FAQPage",
+    "mainEntity": t.faq.items.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
   return (
-    <ArticleLayout article={article} tocItems={t.tocItems}>
+    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={faqSchema}>
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">
