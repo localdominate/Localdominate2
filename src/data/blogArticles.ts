@@ -642,6 +642,1312 @@ export const blogArticles: BlogArticle[] = [
     icon: "💇",
     keywords: ["friseur seo", "beauty marketing", "friseursalon google", "kosmetikstudio marketing", "friseur mehr kunden", "buchungssystem friseur"],
     featured: true
+  },
+
+  // === CONTENT PLAN: JANUAR - APRIL 2026 (55 neue Artikel) ===
+
+  // BRANCHEN-SPEZIFISCHE GUIDES
+  {
+    slug: "local-seo-immobilienmakler",
+    de: {
+      title: "Local SEO für Immobilienmakler: Objektanfragen durch Google",
+      metaTitle: "Local SEO für Immobilienmakler | Mehr Anfragen 2026",
+      metaDescription: "Wie Immobilienmakler durch Local SEO mehr Objektanfragen generieren. Stadtteil-Keywords, Immobilienportale und Google Business für Makler.",
+      excerpt: "So werden Immobilienkäufer und Verkäufer auf Ihr Maklerbüro aufmerksam.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Real Estate Agents: Property Inquiries Through Google",
+      metaTitle: "Local SEO for Real Estate Agents | More Inquiries 2026",
+      metaDescription: "How real estate agents generate more property inquiries through Local SEO. District keywords, property portals and Google Business for agents.",
+      excerpt: "How property buyers and sellers discover your real estate office.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-01-11",
+    updatedAt: "2026-01-11",
+    icon: "🏠",
+    keywords: ["immobilienmakler seo", "makler marketing", "local seo immobilien", "objektanfragen"],
+    featured: false
+  },
+  {
+    slug: "local-seo-steuerberater",
+    de: {
+      title: "Local SEO für Steuerberater & Buchhalter: Mandanten gewinnen",
+      metaTitle: "Local SEO für Steuerberater | Mandantengewinnung 2026",
+      metaDescription: "Wie Steuerberater und Buchhalter durch Local SEO neue Mandanten gewinnen. Steuer-Keywords, Branchenportale und E-E-A-T für Finanzexperten.",
+      excerpt: "Der Branchenguide für Steuerberater: So finden potenzielle Mandanten Ihre Kanzlei.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Tax Consultants & Accountants: Winning Clients",
+      metaTitle: "Local SEO for Tax Consultants | Client Acquisition 2026",
+      metaDescription: "How tax consultants and accountants win new clients through Local SEO. Tax keywords, industry portals and E-E-A-T for financial experts.",
+      excerpt: "The industry guide for tax consultants: How potential clients find your practice.",
+      category: "Industries"
+    },
+    readingTime: 15,
+    publishedAt: "2026-01-15",
+    updatedAt: "2026-01-15",
+    icon: "📊",
+    keywords: ["steuerberater seo", "buchhalter marketing", "local seo steuerberater", "mandantengewinnung"],
+    featured: false
+  },
+  {
+    slug: "local-seo-autowerkstatt",
+    de: {
+      title: "Local SEO für Autowerkstätten & KFZ-Betriebe",
+      metaTitle: "Local SEO für Autowerkstätten | KFZ Marketing 2026",
+      metaDescription: "Wie Autowerkstätten durch Local SEO mehr Kunden gewinnen. Notfall-Keywords, Google Business für KFZ-Betriebe und Bewertungsstrategien.",
+      excerpt: "So wird Ihre Werkstatt zur ersten Wahl bei Autoproblemen in der Region.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Auto Repair Shops & Car Dealerships",
+      metaTitle: "Local SEO for Auto Repair Shops | Automotive Marketing 2026",
+      metaDescription: "How auto repair shops win more customers through Local SEO. Emergency keywords, Google Business for automotive businesses and review strategies.",
+      excerpt: "How your workshop becomes the first choice for car problems in the region.",
+      category: "Industries"
+    },
+    readingTime: 13,
+    publishedAt: "2026-01-19",
+    updatedAt: "2026-01-19",
+    icon: "🚗",
+    keywords: ["autowerkstatt seo", "kfz marketing", "local seo werkstatt", "autohaus seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-tierarzt",
+    de: {
+      title: "Local SEO für Tierärzte & Tierpraxen",
+      metaTitle: "Local SEO für Tierärzte | Praxis-Marketing 2026",
+      metaDescription: "Wie Tierarztpraxen durch Local SEO mehr Patienten gewinnen. Notfall-Keywords, Tier-Portale und emotionales Content-Marketing.",
+      excerpt: "Der komplette Guide für Tierärzte zur lokalen Patientengewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Veterinarians & Animal Clinics",
+      metaTitle: "Local SEO for Veterinarians | Practice Marketing 2026",
+      metaDescription: "How veterinary practices win more patients through Local SEO. Emergency keywords, pet portals and emotional content marketing.",
+      excerpt: "The complete guide for veterinarians for local patient acquisition.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-01-23",
+    updatedAt: "2026-01-23",
+    icon: "🐕",
+    keywords: ["tierarzt seo", "tierpraxis marketing", "local seo tierarzt", "veterinär marketing"],
+    featured: false
+  },
+  {
+    slug: "local-seo-fotograf",
+    de: {
+      title: "Local SEO für Fotografen: Mehr Buchungen durch Google",
+      metaTitle: "Local SEO für Fotografen | Mehr Buchungen 2026",
+      metaDescription: "Wie Fotografen durch Local SEO mehr Buchungen generieren. Portfolio-SEO, Hochzeits-Keywords und Google Business für Fotografen.",
+      excerpt: "So werden Sie der gefragteste Fotograf in Ihrer Region.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Photographers: More Bookings Through Google",
+      metaTitle: "Local SEO for Photographers | More Bookings 2026",
+      metaDescription: "How photographers generate more bookings through Local SEO. Portfolio SEO, wedding keywords and Google Business for photographers.",
+      excerpt: "How to become the most sought-after photographer in your region.",
+      category: "Industries"
+    },
+    readingTime: 13,
+    publishedAt: "2026-01-29",
+    updatedAt: "2026-01-29",
+    icon: "📸",
+    keywords: ["fotograf seo", "fotografen marketing", "local seo fotograf", "hochzeitsfotograf seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-yoga-pilates",
+    de: {
+      title: "Local SEO für Yoga-Studios & Pilates",
+      metaTitle: "Local SEO für Yoga-Studios | Mehr Teilnehmer 2026",
+      metaDescription: "Wie Yoga- und Pilates-Studios durch Local SEO mehr Teilnehmer gewinnen. Kurs-Keywords, Wellness-Content und Community-Building.",
+      excerpt: "Der Guide für Yoga-Studios: So füllen Sie Ihre Kurse mit lokalen Suchenden.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Yoga Studios & Pilates",
+      metaTitle: "Local SEO for Yoga Studios | More Participants 2026",
+      metaDescription: "How yoga and pilates studios win more participants through Local SEO. Course keywords, wellness content and community building.",
+      excerpt: "The guide for yoga studios: How to fill your classes with local searchers.",
+      category: "Industries"
+    },
+    readingTime: 12,
+    publishedAt: "2026-02-02",
+    updatedAt: "2026-02-02",
+    icon: "🧘",
+    keywords: ["yoga studio seo", "pilates marketing", "local seo yoga", "wellness studio seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-tattoo-piercing",
+    de: {
+      title: "Local SEO für Tattoo-Studios & Piercing",
+      metaTitle: "Local SEO für Tattoo-Studios | Mehr Kunden 2026",
+      metaDescription: "Wie Tattoo- und Piercing-Studios durch Local SEO mehr Kunden gewinnen. Portfolio-Optimierung, Style-Keywords und Instagram-Integration.",
+      excerpt: "Der ultimative Guide für Tattoo-Künstler zur lokalen Kundengewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Tattoo Studios & Piercing",
+      metaTitle: "Local SEO for Tattoo Studios | More Customers 2026",
+      metaDescription: "How tattoo and piercing studios win more customers through Local SEO. Portfolio optimization, style keywords and Instagram integration.",
+      excerpt: "The ultimate guide for tattoo artists for local customer acquisition.",
+      category: "Industries"
+    },
+    readingTime: 13,
+    publishedAt: "2026-02-08",
+    updatedAt: "2026-02-08",
+    icon: "🎨",
+    keywords: ["tattoo studio seo", "piercing marketing", "local seo tattoo", "tattoo künstler seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-apotheke",
+    de: {
+      title: "Local SEO für Apotheken: Lokale Gesundheitsversorgung",
+      metaTitle: "Local SEO für Apotheken | Gesundheits-Marketing 2026",
+      metaDescription: "Wie Apotheken durch Local SEO mehr Kunden gewinnen. Notdienst-Keywords, Gesundheitsberatung-Content und lokale Positionierung.",
+      excerpt: "Der Guide für Apotheken: So werden Sie zur Stamm-Apotheke in Ihrer Region.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Pharmacies: Local Healthcare",
+      metaTitle: "Local SEO for Pharmacies | Health Marketing 2026",
+      metaDescription: "How pharmacies win more customers through Local SEO. Emergency service keywords, health advice content and local positioning.",
+      excerpt: "The guide for pharmacies: How to become the go-to pharmacy in your region.",
+      category: "Industries"
+    },
+    readingTime: 12,
+    publishedAt: "2026-02-14",
+    updatedAt: "2026-02-14",
+    icon: "💊",
+    keywords: ["apotheke seo", "apotheken marketing", "local seo apotheke", "notdienst apotheke"],
+    featured: false
+  },
+  {
+    slug: "local-seo-fahrschule",
+    de: {
+      title: "Local SEO für Fahrschulen: Mehr Fahrschüler gewinnen",
+      metaTitle: "Local SEO für Fahrschulen | Mehr Fahrschüler 2026",
+      metaDescription: "Wie Fahrschulen durch Local SEO mehr Fahrschüler gewinnen. Führerschein-Keywords, Preisgestaltung und Bewertungsmanagement.",
+      excerpt: "Der komplette Guide für Fahrschulen zur lokalen Schülergewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Driving Schools: Win More Students",
+      metaTitle: "Local SEO for Driving Schools | More Students 2026",
+      metaDescription: "How driving schools win more students through Local SEO. License keywords, pricing and review management.",
+      excerpt: "The complete guide for driving schools for local student acquisition.",
+      category: "Industries"
+    },
+    readingTime: 11,
+    publishedAt: "2026-02-20",
+    updatedAt: "2026-02-20",
+    icon: "🚦",
+    keywords: ["fahrschule seo", "fahrschüler gewinnen", "local seo fahrschule", "führerschein marketing"],
+    featured: false
+  },
+  {
+    slug: "local-seo-hochzeitsdienstleister",
+    de: {
+      title: "Local SEO für Hochzeitsdienstleister: Florist bis DJ",
+      metaTitle: "Local SEO Hochzeitsdienstleister | Mehr Buchungen 2026",
+      metaDescription: "Wie Hochzeitsdienstleister durch Local SEO mehr Buchungen bekommen. Saisonale Keywords, Hochzeitsportale und Emotionale Bildsprache.",
+      excerpt: "Der Guide für alle Hochzeitsdienstleister: Floristen, DJs, Caterer und mehr.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Wedding Vendors: Florist to DJ",
+      metaTitle: "Local SEO Wedding Vendors | More Bookings 2026",
+      metaDescription: "How wedding vendors get more bookings through Local SEO. Seasonal keywords, wedding portals and emotional imagery.",
+      excerpt: "The guide for all wedding vendors: Florists, DJs, caterers and more.",
+      category: "Industries"
+    },
+    readingTime: 15,
+    publishedAt: "2026-02-26",
+    updatedAt: "2026-02-26",
+    icon: "💒",
+    keywords: ["hochzeitsdienstleister seo", "hochzeit marketing", "local seo hochzeit", "wedding vendor seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-umzugsunternehmen",
+    de: {
+      title: "Local SEO für Umzugsunternehmen & Entrümpelungen",
+      metaTitle: "Local SEO für Umzugsunternehmen | Mehr Aufträge 2026",
+      metaDescription: "Wie Umzugsunternehmen durch Local SEO mehr Aufträge generieren. Umzugs-Keywords, Preisrechner-Integration und Bewertungsstrategien.",
+      excerpt: "Der Guide für Umzugsunternehmen: So bekommen Sie mehr Anfragen.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Moving Companies & Clearances",
+      metaTitle: "Local SEO for Moving Companies | More Jobs 2026",
+      metaDescription: "How moving companies generate more jobs through Local SEO. Moving keywords, price calculator integration and review strategies.",
+      excerpt: "The guide for moving companies: How to get more inquiries.",
+      category: "Industries"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-04",
+    updatedAt: "2026-03-04",
+    icon: "📦",
+    keywords: ["umzugsunternehmen seo", "umzug marketing", "local seo umzug", "entrümpelung seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-reinigungsunternehmen",
+    de: {
+      title: "Local SEO für Reinigungsunternehmen & Gebäudereinigung",
+      metaTitle: "Local SEO für Reinigungsunternehmen | Mehr Kunden 2026",
+      metaDescription: "Wie Reinigungsunternehmen durch Local SEO mehr Kunden gewinnen. Service-Keywords, B2B-Content und lokale Positionierung.",
+      excerpt: "Der Guide für Reinigungsunternehmen: So gewinnen Sie mehr Aufträge.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Cleaning Companies & Building Maintenance",
+      metaTitle: "Local SEO for Cleaning Companies | More Customers 2026",
+      metaDescription: "How cleaning companies win more customers through Local SEO. Service keywords, B2B content and local positioning.",
+      excerpt: "The guide for cleaning companies: How to win more contracts.",
+      category: "Industries"
+    },
+    readingTime: 11,
+    publishedAt: "2026-03-10",
+    updatedAt: "2026-03-10",
+    icon: "🧹",
+    keywords: ["reinigungsunternehmen seo", "gebäudereinigung marketing", "local seo reinigung", "putzfirma seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-sprachschule",
+    de: {
+      title: "Local SEO für Sprachschulen & Nachhilfe-Institute",
+      metaTitle: "Local SEO für Sprachschulen | Mehr Schüler 2026",
+      metaDescription: "Wie Sprachschulen durch Local SEO mehr Schüler gewinnen. Sprach-Keywords, Kursangebote und saisonale Kampagnen.",
+      excerpt: "Der Guide für Sprachschulen: So füllen Sie Ihre Kurse.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Language Schools & Tutoring Institutes",
+      metaTitle: "Local SEO for Language Schools | More Students 2026",
+      metaDescription: "How language schools win more students through Local SEO. Language keywords, course offerings and seasonal campaigns.",
+      excerpt: "The guide for language schools: How to fill your courses.",
+      category: "Industries"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-16",
+    updatedAt: "2026-03-16",
+    icon: "📚",
+    keywords: ["sprachschule seo", "nachhilfe marketing", "local seo sprachschule", "bildung seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-baeckerei-konditorei",
+    de: {
+      title: "Local SEO für Bäckereien & Konditoreien",
+      metaTitle: "Local SEO für Bäckereien | Mehr Kunden 2026",
+      metaDescription: "Wie Bäckereien durch Local SEO mehr Kunden gewinnen. Frische-Keywords, Öffnungszeiten-Optimierung und lokale Traditionspositionierung.",
+      excerpt: "Der Guide für Bäckereien: So werden Sie zur Lieblingsbäckerei im Viertel.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Bakeries & Pastry Shops",
+      metaTitle: "Local SEO for Bakeries | More Customers 2026",
+      metaDescription: "How bakeries win more customers through Local SEO. Freshness keywords, opening hours optimization and local tradition positioning.",
+      excerpt: "The guide for bakeries: How to become the favorite bakery in the neighborhood.",
+      category: "Industries"
+    },
+    readingTime: 11,
+    publishedAt: "2026-03-22",
+    updatedAt: "2026-03-22",
+    icon: "🥖",
+    keywords: ["bäckerei seo", "konditorei marketing", "local seo bäckerei", "handwerksbäcker seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-cafe-coffeeshop",
+    de: {
+      title: "Local SEO für Cafés & Coffee Shops",
+      metaTitle: "Local SEO für Cafés | Mehr Gäste 2026",
+      metaDescription: "Wie Cafés durch Local SEO mehr Gäste gewinnen. Atmosphären-Keywords, Instagram-Integration und Arbeitsplatz-Positionierung.",
+      excerpt: "Der Guide für Cafés: So werden Sie zum Treffpunkt der Nachbarschaft.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Cafés & Coffee Shops",
+      metaTitle: "Local SEO for Cafés | More Guests 2026",
+      metaDescription: "How cafés win more guests through Local SEO. Atmosphere keywords, Instagram integration and workspace positioning.",
+      excerpt: "The guide for cafés: How to become the neighborhood meeting spot.",
+      category: "Industries"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-28",
+    updatedAt: "2026-03-28",
+    icon: "☕",
+    keywords: ["cafe seo", "coffeeshop marketing", "local seo cafe", "kaffee seo"],
+    featured: false
+  },
+
+  // REGIONALE GUIDES
+  {
+    slug: "local-seo-hamburg",
+    de: {
+      title: "Local SEO Hamburg: Der Hanseatische Marketing-Guide",
+      metaTitle: "Local SEO Hamburg | Der Hansestadt-Guide 2026",
+      metaDescription: "Local SEO speziell für Hamburg. Stadtteil-Keywords von Altona bis Winterhude, Hamburger Verzeichnisse und Strategien für die Elbmetropole.",
+      excerpt: "Von der Reeperbahn bis zur Hafencity: So werden Sie in Hamburg gefunden.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Hamburg: The Hanseatic Marketing Guide",
+      metaTitle: "Local SEO Hamburg | The Hanseatic City Guide 2026",
+      metaDescription: "Local SEO specifically for Hamburg. District keywords from Altona to Winterhude, Hamburg directories and strategies for the Elbe metropolis.",
+      excerpt: "From Reeperbahn to Hafencity: How to be found in Hamburg.",
+      category: "Regions"
+    },
+    readingTime: 16,
+    publishedAt: "2026-01-13",
+    updatedAt: "2026-01-13",
+    icon: "⚓",
+    keywords: ["local seo hamburg", "seo hamburg", "marketing hamburg", "hamburger unternehmen"],
+    featured: false
+  },
+  {
+    slug: "local-seo-frankfurt",
+    de: {
+      title: "Local SEO Frankfurt: Finanzmetropole richtig nutzen",
+      metaTitle: "Local SEO Frankfurt | Finance-Hub Guide 2026",
+      metaDescription: "Local SEO speziell für Frankfurt am Main. B2B-Keywords, Finanzdienstleister-Strategien und lokale Sichtbarkeit in der Mainmetropole.",
+      excerpt: "So nutzen Sie das Potenzial der Finanzmetropole für Ihr Unternehmen.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Frankfurt: Leveraging the Financial Metropolis",
+      metaTitle: "Local SEO Frankfurt | Finance Hub Guide 2026",
+      metaDescription: "Local SEO specifically for Frankfurt am Main. B2B keywords, financial services strategies and local visibility in the Main metropolis.",
+      excerpt: "How to leverage the potential of the financial metropolis for your business.",
+      category: "Regions"
+    },
+    readingTime: 15,
+    publishedAt: "2026-01-21",
+    updatedAt: "2026-01-21",
+    icon: "🏦",
+    keywords: ["local seo frankfurt", "seo frankfurt", "marketing frankfurt", "frankfurter unternehmen"],
+    featured: false
+  },
+  {
+    slug: "local-seo-koeln",
+    de: {
+      title: "Local SEO Köln: Rheinland-Marketing für lokale Unternehmen",
+      metaTitle: "Local SEO Köln | Rheinland-Guide 2026",
+      metaDescription: "Local SEO speziell für Köln und das Rheinland. Kölsche Keywords, Veedel-Strategien und lokale Sichtbarkeit am Dom.",
+      excerpt: "Von Ehrenfeld bis Deutz: So werden Sie in ganz Köln gefunden.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Cologne: Rhineland Marketing for Local Businesses",
+      metaTitle: "Local SEO Cologne | Rhineland Guide 2026",
+      metaDescription: "Local SEO specifically for Cologne and the Rhineland. Cologne keywords, neighborhood strategies and local visibility at the cathedral.",
+      excerpt: "From Ehrenfeld to Deutz: How to be found throughout Cologne.",
+      category: "Regions"
+    },
+    readingTime: 15,
+    publishedAt: "2026-01-27",
+    updatedAt: "2026-01-27",
+    icon: "🎭",
+    keywords: ["local seo köln", "seo köln", "marketing köln", "kölner unternehmen"],
+    featured: false
+  },
+  {
+    slug: "local-seo-wien",
+    de: {
+      title: "Local SEO Wien: Der Österreich-Guide für KMUs",
+      metaTitle: "Local SEO Wien | Österreich-Guide 2026",
+      metaDescription: "Local SEO speziell für Wien und Österreich. Bezirks-Keywords, österreichische Verzeichnisse und Strategien für die Donaumetropole.",
+      excerpt: "Der komplette Guide für Wiener Unternehmen zur lokalen Sichtbarkeit.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Vienna: The Austria Guide for SMEs",
+      metaTitle: "Local SEO Vienna | Austria Guide 2026",
+      metaDescription: "Local SEO specifically for Vienna and Austria. District keywords, Austrian directories and strategies for the Danube metropolis.",
+      excerpt: "The complete guide for Viennese businesses for local visibility.",
+      category: "Regions"
+    },
+    readingTime: 17,
+    publishedAt: "2026-02-06",
+    updatedAt: "2026-02-06",
+    icon: "🇦🇹",
+    keywords: ["local seo wien", "seo wien", "marketing wien", "österreich seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-stuttgart",
+    de: {
+      title: "Local SEO Stuttgart: Automobilregion & mehr",
+      metaTitle: "Local SEO Stuttgart | Baden-Württemberg Guide 2026",
+      metaDescription: "Local SEO speziell für Stuttgart und die Region. Industrie-Keywords, Zulieferer-Strategien und lokale Sichtbarkeit im Ländle.",
+      excerpt: "So werden Sie in der Automobilhauptstadt Deutschlands gefunden.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Stuttgart: Automotive Region & More",
+      metaTitle: "Local SEO Stuttgart | Baden-Württemberg Guide 2026",
+      metaDescription: "Local SEO specifically for Stuttgart and the region. Industry keywords, supplier strategies and local visibility in the Ländle.",
+      excerpt: "How to be found in Germany's automotive capital.",
+      category: "Regions"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-12",
+    updatedAt: "2026-02-12",
+    icon: "🚙",
+    keywords: ["local seo stuttgart", "seo stuttgart", "marketing stuttgart", "schwaben seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-duesseldorf",
+    de: {
+      title: "Local SEO Düsseldorf: Mode, Messe & mehr Kunden",
+      metaTitle: "Local SEO Düsseldorf | NRW-Guide 2026",
+      metaDescription: "Local SEO speziell für Düsseldorf. Fashion-Keywords, Messe-Strategien und lokale Sichtbarkeit in der Landeshauptstadt NRW.",
+      excerpt: "Der Guide für Düsseldorfer Unternehmen: Von der Kö bis Flingern.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Düsseldorf: Fashion, Trade Fairs & More Customers",
+      metaTitle: "Local SEO Düsseldorf | NRW Guide 2026",
+      metaDescription: "Local SEO specifically for Düsseldorf. Fashion keywords, trade fair strategies and local visibility in the NRW capital.",
+      excerpt: "The guide for Düsseldorf businesses: From the Kö to Flingern.",
+      category: "Regions"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-18",
+    updatedAt: "2026-02-18",
+    icon: "👔",
+    keywords: ["local seo düsseldorf", "seo düsseldorf", "marketing düsseldorf", "nrw seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-basel",
+    de: {
+      title: "Local SEO Basel: Grenzregion Schweiz-Deutschland-Frankreich",
+      metaTitle: "Local SEO Basel | Dreiländereck-Guide 2026",
+      metaDescription: "Local SEO für Basel und das Dreiländereck. Mehrsprachige Keywords, Pharma-Branche und grenzüberschreitendes Marketing.",
+      excerpt: "Der einzigartige Guide für Basler Unternehmen im Dreiländereck.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Basel: Border Region Switzerland-Germany-France",
+      metaTitle: "Local SEO Basel | Tri-Border Guide 2026",
+      metaDescription: "Local SEO for Basel and the tri-border region. Multilingual keywords, pharma industry and cross-border marketing.",
+      excerpt: "The unique guide for Basel businesses in the tri-border region.",
+      category: "Regions"
+    },
+    readingTime: 16,
+    publishedAt: "2026-02-24",
+    updatedAt: "2026-02-24",
+    icon: "🌉",
+    keywords: ["local seo basel", "seo basel", "marketing basel", "dreiländereck seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-leipzig-dresden",
+    de: {
+      title: "Local SEO Leipzig & Dresden: Ostdeutschland-Guide",
+      metaTitle: "Local SEO Leipzig Dresden | Sachsen-Guide 2026",
+      metaDescription: "Local SEO für Leipzig, Dresden und Sachsen. Aufstrebende Städte, Start-up-Szene und regionale Besonderheiten.",
+      excerpt: "Der Guide für sächsische Unternehmen: Zwei Städte, ein Ziel.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Leipzig & Dresden: East Germany Guide",
+      metaTitle: "Local SEO Leipzig Dresden | Saxony Guide 2026",
+      metaDescription: "Local SEO for Leipzig, Dresden and Saxony. Emerging cities, start-up scene and regional specifics.",
+      excerpt: "The guide for Saxon businesses: Two cities, one goal.",
+      category: "Regions"
+    },
+    readingTime: 15,
+    publishedAt: "2026-03-02",
+    updatedAt: "2026-03-02",
+    icon: "🎵",
+    keywords: ["local seo leipzig", "local seo dresden", "seo sachsen", "ostdeutschland seo"],
+    featured: false
+  },
+
+  // TECHNISCHE DEEP-DIVES
+  {
+    slug: "core-web-vitals-local-seo",
+    de: {
+      title: "Core Web Vitals für lokale Websites: Performance-Guide",
+      metaTitle: "Core Web Vitals Local SEO | Performance 2026",
+      metaDescription: "Wie lokale Unternehmen ihre Core Web Vitals optimieren. LCP, FID, CLS für bessere Rankings und mehr Conversions.",
+      excerpt: "Der technische Guide zur Website-Performance für lokale Rankings.",
+      category: "Technik"
+    },
+    en: {
+      title: "Core Web Vitals for Local Websites: Performance Guide",
+      metaTitle: "Core Web Vitals Local SEO | Performance 2026",
+      metaDescription: "How local businesses optimize their Core Web Vitals. LCP, FID, CLS for better rankings and more conversions.",
+      excerpt: "The technical guide to website performance for local rankings.",
+      category: "Technical"
+    },
+    readingTime: 18,
+    publishedAt: "2026-01-17",
+    updatedAt: "2026-01-17",
+    icon: "⚡",
+    keywords: ["core web vitals", "page speed", "local seo performance", "lcp fid cls"],
+    featured: false
+  },
+  {
+    slug: "local-seo-voice-search",
+    de: {
+      title: "Local SEO & Voice Search: Hey Google, wo ist...",
+      metaTitle: "Voice Search Local SEO | Sprachsuche 2026",
+      metaDescription: "Wie lokale Unternehmen für Sprachsuche optimieren. Conversational Keywords, Featured Snippets und Voice-First-Strategien.",
+      excerpt: "So werden Sie gefunden, wenn Kunden Alexa, Siri oder Google fragen.",
+      category: "Technik"
+    },
+    en: {
+      title: "Local SEO & Voice Search: Hey Google, where is...",
+      metaTitle: "Voice Search Local SEO | Voice Search 2026",
+      metaDescription: "How local businesses optimize for voice search. Conversational keywords, featured snippets and voice-first strategies.",
+      excerpt: "How to be found when customers ask Alexa, Siri or Google.",
+      category: "Technical"
+    },
+    readingTime: 14,
+    publishedAt: "2026-01-25",
+    updatedAt: "2026-01-25",
+    icon: "🎤",
+    keywords: ["voice search", "sprachsuche", "local seo voice", "alexa siri google"],
+    featured: false
+  },
+  {
+    slug: "google-posts-ranking-faktor",
+    de: {
+      title: "Google Posts optimal nutzen: Der unterschätzte Ranking-Faktor",
+      metaTitle: "Google Posts | Unterschätzter Ranking-Faktor 2026",
+      metaDescription: "Wie Google Posts Ihr lokales Ranking verbessern. Content-Strategien, Posting-Frequenz und Conversion-Optimierung.",
+      excerpt: "Der vergessene Hebel für lokale Rankings: Google Posts richtig nutzen.",
+      category: "Technik"
+    },
+    en: {
+      title: "Optimally Using Google Posts: The Underrated Ranking Factor",
+      metaTitle: "Google Posts | Underrated Ranking Factor 2026",
+      metaDescription: "How Google Posts improve your local ranking. Content strategies, posting frequency and conversion optimization.",
+      excerpt: "The forgotten lever for local rankings: Using Google Posts correctly.",
+      category: "Technical"
+    },
+    readingTime: 12,
+    publishedAt: "2026-01-31",
+    updatedAt: "2026-01-31",
+    icon: "📝",
+    keywords: ["google posts", "gbp posts", "google business posts", "lokale posts"],
+    featured: false
+  },
+  {
+    slug: "lokale-landing-pages",
+    de: {
+      title: "Lokale Landing Pages erstellen: One-Page pro Standort",
+      metaTitle: "Lokale Landing Pages | Standort-Seiten 2026",
+      metaDescription: "Wie Sie effektive lokale Landing Pages erstellen. Stadteil-Seiten, Geo-Keywords und Conversion-Optimierung für Multi-Location.",
+      excerpt: "Der Guide zur Erstellung von Location-Pages, die ranken und konvertieren.",
+      category: "Technik"
+    },
+    en: {
+      title: "Creating Local Landing Pages: One Page Per Location",
+      metaTitle: "Local Landing Pages | Location Pages 2026",
+      metaDescription: "How to create effective local landing pages. District pages, geo-keywords and conversion optimization for multi-location.",
+      excerpt: "The guide to creating location pages that rank and convert.",
+      category: "Technical"
+    },
+    readingTime: 16,
+    publishedAt: "2026-02-10",
+    updatedAt: "2026-02-10",
+    icon: "🎯",
+    keywords: ["lokale landing pages", "standort seiten", "geo landing pages", "multi location seo"],
+    featured: false
+  },
+  {
+    slug: "multi-location-seo",
+    de: {
+      title: "Multi-Location SEO: Mehrere Standorte richtig optimieren",
+      metaTitle: "Multi-Location SEO | Filial-Marketing 2026",
+      metaDescription: "Wie Unternehmen mit mehreren Standorten ihre Local SEO skalieren. Zentrale vs. dezentrale Strategien und Best Practices.",
+      excerpt: "Der Guide für Unternehmen mit 2 bis 200 Standorten.",
+      category: "Technik"
+    },
+    en: {
+      title: "Multi-Location SEO: Properly Optimizing Multiple Locations",
+      metaTitle: "Multi-Location SEO | Branch Marketing 2026",
+      metaDescription: "How businesses with multiple locations scale their Local SEO. Central vs. decentralized strategies and best practices.",
+      excerpt: "The guide for businesses with 2 to 200 locations.",
+      category: "Technical"
+    },
+    readingTime: 18,
+    publishedAt: "2026-02-22",
+    updatedAt: "2026-02-22",
+    icon: "📍",
+    keywords: ["multi location seo", "filialen seo", "franchise seo", "mehrere standorte"],
+    featured: false
+  },
+  {
+    slug: "lokale-keyword-kannibalisierung",
+    de: {
+      title: "Lokale Keyword-Kannibalisierung vermeiden",
+      metaTitle: "Keyword-Kannibalisierung Local SEO | Guide 2026",
+      metaDescription: "Wie Sie Keyword-Kannibalisierung bei lokalen Seiten vermeiden. Diagnose, Lösung und Prävention für bessere Rankings.",
+      excerpt: "Wenn Ihre eigenen Seiten gegeneinander kämpfen: So lösen Sie das Problem.",
+      category: "Technik"
+    },
+    en: {
+      title: "Avoiding Local Keyword Cannibalization",
+      metaTitle: "Keyword Cannibalization Local SEO | Guide 2026",
+      metaDescription: "How to avoid keyword cannibalization with local pages. Diagnosis, solution and prevention for better rankings.",
+      excerpt: "When your own pages fight against each other: How to solve the problem.",
+      category: "Technical"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-06",
+    updatedAt: "2026-03-06",
+    icon: "🦈",
+    keywords: ["keyword kannibalisierung", "duplicate content", "lokale seo probleme", "seiten konkurrenz"],
+    featured: false
+  },
+  {
+    slug: "ai-overviews-local-seo",
+    de: {
+      title: "AI-Overviews & Local SEO: Wie KI die lokale Suche verändert",
+      metaTitle: "AI-Overviews Local SEO | KI-Suche 2026",
+      metaDescription: "Wie AI-Overviews (SGE) die lokale Suche verändern. Optimierungsstrategien für die KI-gesteuerte Suchergebnisseite.",
+      excerpt: "Die Zukunft der lokalen Suche: Was AI-Overviews für Ihr Unternehmen bedeuten.",
+      category: "Technik"
+    },
+    en: {
+      title: "AI Overviews & Local SEO: How AI is Changing Local Search",
+      metaTitle: "AI Overviews Local SEO | AI Search 2026",
+      metaDescription: "How AI Overviews (SGE) are changing local search. Optimization strategies for the AI-powered search results page.",
+      excerpt: "The future of local search: What AI Overviews mean for your business.",
+      category: "Technical"
+    },
+    readingTime: 15,
+    publishedAt: "2026-03-18",
+    updatedAt: "2026-03-18",
+    icon: "🤖",
+    keywords: ["ai overviews", "sge local seo", "ki suche", "google ai"],
+    featured: true
+  },
+  {
+    slug: "local-seo-tracking-kpis",
+    de: {
+      title: "Local SEO Tracking: KPIs und Reporting richtig aufsetzen",
+      metaTitle: "Local SEO KPIs | Tracking & Reporting 2026",
+      metaDescription: "Die wichtigsten KPIs für Local SEO und wie Sie sie messen. Google Analytics, Search Console und GBP Insights richtig nutzen.",
+      excerpt: "Was messen, wie messen, wie berichten: Der KPI-Guide für Local SEO.",
+      category: "Technik"
+    },
+    en: {
+      title: "Local SEO Tracking: Setting Up KPIs and Reporting",
+      metaTitle: "Local SEO KPIs | Tracking & Reporting 2026",
+      metaDescription: "The most important KPIs for Local SEO and how to measure them. Properly using Google Analytics, Search Console and GBP Insights.",
+      excerpt: "What to measure, how to measure, how to report: The KPI guide for Local SEO.",
+      category: "Technical"
+    },
+    readingTime: 16,
+    publishedAt: "2026-03-30",
+    updatedAt: "2026-03-30",
+    icon: "📈",
+    keywords: ["local seo kpis", "seo tracking", "local seo reporting", "google analytics lokal"],
+    featured: false
+  },
+
+  // STRATEGIE & BEST PRACTICES
+  {
+    slug: "wettbewerbsanalyse-local-seo",
+    de: {
+      title: "Wettbewerbsanalyse im Local SEO: Konkurrenz ausstechen",
+      metaTitle: "Wettbewerbsanalyse Local SEO | Konkurrenz 2026",
+      metaDescription: "Wie Sie Ihre lokale Konkurrenz analysieren und übertreffen. Tools, Methoden und Strategien für den lokalen Wettbewerbsvorteil.",
+      excerpt: "Lernen Sie von der Konkurrenz und werden Sie besser.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Competitive Analysis in Local SEO: Outperforming the Competition",
+      metaTitle: "Competitive Analysis Local SEO | Competition 2026",
+      metaDescription: "How to analyze and outperform your local competition. Tools, methods and strategies for local competitive advantage.",
+      excerpt: "Learn from the competition and become better.",
+      category: "Strategy"
+    },
+    readingTime: 15,
+    publishedAt: "2026-02-03",
+    updatedAt: "2026-02-03",
+    icon: "🔎",
+    keywords: ["wettbewerbsanalyse", "konkurrenzanalyse", "local seo wettbewerb", "konkurrenz ausspähen"],
+    featured: false
+  },
+  {
+    slug: "citation-strategie-verzeichnisse",
+    de: {
+      title: "Lokale Citation-Strategie: Die 50 wichtigsten Verzeichnisse",
+      metaTitle: "Citation-Strategie | 50 Verzeichnisse 2026",
+      metaDescription: "Die wichtigsten lokalen Verzeichnisse für DACH und wie Sie Ihre Citations optimal aufbauen. Mit vollständiger Verzeichnisliste.",
+      excerpt: "Die Blaupause für Ihren Citation-Aufbau in Deutschland, Österreich und Schweiz.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local Citation Strategy: The 50 Most Important Directories",
+      metaTitle: "Citation Strategy | 50 Directories 2026",
+      metaDescription: "The most important local directories for DACH and how to optimally build your citations. With complete directory list.",
+      excerpt: "The blueprint for your citation building in Germany, Austria and Switzerland.",
+      category: "Strategy"
+    },
+    readingTime: 20,
+    publishedAt: "2026-02-09",
+    updatedAt: "2026-02-09",
+    icon: "📒",
+    keywords: ["citations", "branchenverzeichnisse", "lokale verzeichnisse", "nap aufbau"],
+    featured: false
+  },
+  {
+    slug: "bewertungs-automation",
+    de: {
+      title: "Bewertungs-Automation: Systematisch mehr Reviews generieren",
+      metaTitle: "Bewertungs-Automation | Mehr Reviews 2026",
+      metaDescription: "Wie Sie systematisch und automatisiert mehr Google-Bewertungen sammeln. Tools, Workflows und ethische Methoden.",
+      excerpt: "Von 10 auf 100 Bewertungen: Der systematische Ansatz für mehr Reviews.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Review Automation: Systematically Generate More Reviews",
+      metaTitle: "Review Automation | More Reviews 2026",
+      metaDescription: "How to systematically and automatically collect more Google reviews. Tools, workflows and ethical methods.",
+      excerpt: "From 10 to 100 reviews: The systematic approach for more reviews.",
+      category: "Strategy"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-15",
+    updatedAt: "2026-02-15",
+    icon: "⚙️",
+    keywords: ["bewertungen automatisieren", "review generation", "mehr bewertungen", "rezensionen sammeln"],
+    featured: false
+  },
+  {
+    slug: "local-seo-vs-organisch",
+    de: {
+      title: "Local SEO vs. organisches SEO: Die wichtigsten Unterschiede",
+      metaTitle: "Local SEO vs Organic SEO | Unterschiede 2026",
+      metaDescription: "Was unterscheidet Local SEO von klassischem SEO? Gemeinsamkeiten, Unterschiede und wann Sie welche Strategie brauchen.",
+      excerpt: "Local Pack vs. Organische Suche: Verstehen Sie die Unterschiede.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO vs. Organic SEO: The Key Differences",
+      metaTitle: "Local SEO vs Organic SEO | Differences 2026",
+      metaDescription: "What distinguishes Local SEO from classic SEO? Similarities, differences and when you need which strategy.",
+      excerpt: "Local Pack vs. Organic Search: Understand the differences.",
+      category: "Strategy"
+    },
+    readingTime: 12,
+    publishedAt: "2026-02-21",
+    updatedAt: "2026-02-21",
+    icon: "⚖️",
+    keywords: ["local seo vs seo", "organische suche", "local pack", "seo unterschiede"],
+    featured: false
+  },
+  {
+    slug: "saisonales-local-seo",
+    de: {
+      title: "Saisonales Local SEO: Weihnachten, Sommer & Co.",
+      metaTitle: "Saisonales Local SEO | Jahreszeiten 2026",
+      metaDescription: "Wie Sie saisonale Schwankungen für Ihr Local SEO nutzen. Vorausplanung, Keyword-Strategien und zeitgebundene Optimierung.",
+      excerpt: "Die richtige Strategie für jede Jahreszeit: Saisonales Local SEO.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Seasonal Local SEO: Christmas, Summer & Co.",
+      metaTitle: "Seasonal Local SEO | Seasons 2026",
+      metaDescription: "How to leverage seasonal fluctuations for your Local SEO. Advance planning, keyword strategies and time-bound optimization.",
+      excerpt: "The right strategy for every season: Seasonal Local SEO.",
+      category: "Strategy"
+    },
+    readingTime: 13,
+    publishedAt: "2026-02-27",
+    updatedAt: "2026-02-27",
+    icon: "🎄",
+    keywords: ["saisonales seo", "weihnachten seo", "sommer marketing", "jahreszeiten local seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-budget-planen",
+    de: {
+      title: "Local SEO Budget planen: Was kostet gutes Marketing?",
+      metaTitle: "Local SEO Budget | Kosten & Planung 2026",
+      metaDescription: "Was kostet Local SEO wirklich? Budget-Planung, ROI-Berechnung und Prioritäten für kleine und mittlere Unternehmen.",
+      excerpt: "Der ehrliche Guide zu Local SEO Kosten und Investitionen.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Planning Local SEO Budget: What Does Good Marketing Cost?",
+      metaTitle: "Local SEO Budget | Costs & Planning 2026",
+      metaDescription: "What does Local SEO really cost? Budget planning, ROI calculation and priorities for small and medium businesses.",
+      excerpt: "The honest guide to Local SEO costs and investments.",
+      category: "Strategy"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "💰",
+    keywords: ["local seo kosten", "seo budget", "marketing budget", "seo investition"],
+    featured: false
+  },
+  {
+    slug: "diy-local-seo",
+    de: {
+      title: "DIY Local SEO: Was kannst du selbst, wann brauchst du Profis?",
+      metaTitle: "DIY Local SEO | Selbst vs. Agentur 2026",
+      metaDescription: "Was können Sie selbst bei Local SEO machen und wann lohnt sich eine Agentur? Der ehrliche Vergleich mit Zeitaufwand.",
+      excerpt: "Die Wahrheit: Was Sie selbst machen können und wo Sie Hilfe brauchen.",
+      category: "Strategie"
+    },
+    en: {
+      title: "DIY Local SEO: What Can You Do Yourself, When Do You Need Pros?",
+      metaTitle: "DIY Local SEO | Self vs. Agency 2026",
+      metaDescription: "What can you do yourself with Local SEO and when is an agency worth it? The honest comparison with time investment.",
+      excerpt: "The truth: What you can do yourself and where you need help.",
+      category: "Strategy"
+    },
+    readingTime: 13,
+    publishedAt: "2026-03-11",
+    updatedAt: "2026-03-11",
+    icon: "🛠️",
+    keywords: ["diy seo", "seo selbst machen", "seo agentur", "local seo lernen"],
+    featured: false
+  },
+  {
+    slug: "lokales-social-media-marketing",
+    de: {
+      title: "Lokales Social Media Marketing: Facebook, Instagram & TikTok",
+      metaTitle: "Lokales Social Media | Marketing 2026",
+      metaDescription: "Wie lokale Unternehmen Social Media für mehr Sichtbarkeit nutzen. Plattform-Strategien, lokaler Content und Community-Aufbau.",
+      excerpt: "Social Media für lokale Unternehmen: Was funktioniert wirklich?",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local Social Media Marketing: Facebook, Instagram & TikTok",
+      metaTitle: "Local Social Media | Marketing 2026",
+      metaDescription: "How local businesses use social media for more visibility. Platform strategies, local content and community building.",
+      excerpt: "Social media for local businesses: What actually works?",
+      category: "Strategy"
+    },
+    readingTime: 15,
+    publishedAt: "2026-03-17",
+    updatedAt: "2026-03-17",
+    icon: "📱",
+    keywords: ["lokales social media", "instagram lokal", "facebook lokal", "tiktok lokal"],
+    featured: false
+  },
+  {
+    slug: "lokale-pr-pressearbeit",
+    de: {
+      title: "Lokale PR & Pressearbeit: Zeitungen, Blogs & Radio",
+      metaTitle: "Lokale PR | Pressearbeit 2026",
+      metaDescription: "Wie lokale Unternehmen durch PR und Pressearbeit Sichtbarkeit gewinnen. Pressemitteilungen, Blogger-Relations und lokale Medien.",
+      excerpt: "Der Guide zur lokalen Öffentlichkeitsarbeit für mehr Reichweite.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local PR & Press Work: Newspapers, Blogs & Radio",
+      metaTitle: "Local PR | Press Work 2026",
+      metaDescription: "How local businesses gain visibility through PR and press work. Press releases, blogger relations and local media.",
+      excerpt: "The guide to local public relations for more reach.",
+      category: "Strategy"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-23",
+    updatedAt: "2026-03-23",
+    icon: "📰",
+    keywords: ["lokale pr", "pressearbeit", "pressemitteilung", "lokale medien"],
+    featured: false
+  },
+  {
+    slug: "google-business-fotos",
+    de: {
+      title: "Google Business Fotos: Der visuelle Ranking-Boost",
+      metaTitle: "Google Business Fotos | Visuelles SEO 2026",
+      metaDescription: "Wie Fotos Ihr Google Business Ranking verbessern. Bildoptimierung, Geotagging und Strategien für mehr Klicks.",
+      excerpt: "Der unterschätzte Ranking-Faktor: Bilder in Ihrem Google Business Profil.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Google Business Photos: The Visual Ranking Boost",
+      metaTitle: "Google Business Photos | Visual SEO 2026",
+      metaDescription: "How photos improve your Google Business ranking. Image optimization, geotagging and strategies for more clicks.",
+      excerpt: "The underrated ranking factor: Images in your Google Business Profile.",
+      category: "Strategy"
+    },
+    readingTime: 11,
+    publishedAt: "2026-03-29",
+    updatedAt: "2026-03-29",
+    icon: "📷",
+    keywords: ["google business fotos", "bilder seo", "gbp fotos", "visuelles marketing"],
+    featured: false
+  },
+
+  // CASE STUDIES & ERFOLGSGESCHICHTEN
+  {
+    slug: "case-study-zahnarzt",
+    de: {
+      title: "Case Study: Zahnarztpraxis von Seite 3 auf Platz 1",
+      metaTitle: "Case Study Zahnarzt | Local SEO Erfolg",
+      metaDescription: "Wie eine Zahnarztpraxis durch Local SEO von Seite 3 auf Platz 1 kam. Mit Zahlen, Maßnahmen und Timeline.",
+      excerpt: "Eine echte Erfolgsgeschichte: 6 Monate Local SEO für eine Zahnarztpraxis.",
+      category: "Case Study"
+    },
+    en: {
+      title: "Case Study: Dental Practice from Page 3 to Position 1",
+      metaTitle: "Case Study Dentist | Local SEO Success",
+      metaDescription: "How a dental practice went from page 3 to position 1 through Local SEO. With numbers, measures and timeline.",
+      excerpt: "A real success story: 6 months of Local SEO for a dental practice.",
+      category: "Case Study"
+    },
+    readingTime: 10,
+    publishedAt: "2026-03-07",
+    updatedAt: "2026-03-07",
+    icon: "🦷",
+    keywords: ["zahnarzt case study", "local seo erfolg", "ranking erfolg", "praxis marketing"],
+    featured: false
+  },
+  {
+    slug: "case-study-restaurant-reservierungen",
+    de: {
+      title: "Case Study: Restaurant verdreifacht Reservierungen",
+      metaTitle: "Case Study Restaurant | 3x Reservierungen",
+      metaDescription: "Wie ein Restaurant durch Local SEO seine Reservierungen verdreifachte. Konkrete Maßnahmen und messbare Ergebnisse.",
+      excerpt: "Von halb leer zu ausgebucht: Die Local SEO Transformation eines Restaurants.",
+      category: "Case Study"
+    },
+    en: {
+      title: "Case Study: Restaurant Triples Reservations",
+      metaTitle: "Case Study Restaurant | 3x Reservations",
+      metaDescription: "How a restaurant tripled its reservations through Local SEO. Concrete measures and measurable results.",
+      excerpt: "From half empty to fully booked: The Local SEO transformation of a restaurant.",
+      category: "Case Study"
+    },
+    readingTime: 11,
+    publishedAt: "2026-03-13",
+    updatedAt: "2026-03-13",
+    icon: "🍴",
+    keywords: ["restaurant case study", "reservierungen steigern", "gastro marketing", "local seo erfolg"],
+    featured: false
+  },
+  {
+    slug: "case-study-handwerker-anfragen",
+    de: {
+      title: "Case Study: Handwerker-Firma automatisiert Anfragen",
+      metaTitle: "Case Study Handwerker | Automatisierte Anfragen",
+      metaDescription: "Wie eine Handwerker-Firma durch Local SEO automatisiert Anfragen generiert. Vom Telefon-Chaos zum Lead-System.",
+      excerpt: "Wie ein Elektriker-Betrieb heute 80% seiner Anfragen über Google bekommt.",
+      category: "Case Study"
+    },
+    en: {
+      title: "Case Study: Contractor Automates Inquiries",
+      metaTitle: "Case Study Contractor | Automated Inquiries",
+      metaDescription: "How a contractor automated inquiries through Local SEO. From phone chaos to lead system.",
+      excerpt: "How an electrical contractor now gets 80% of inquiries through Google.",
+      category: "Case Study"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-19",
+    updatedAt: "2026-03-19",
+    icon: "🔨",
+    keywords: ["handwerker case study", "anfragen automatisieren", "lead generierung", "elektriker marketing"],
+    featured: false
+  },
+  {
+    slug: "case-study-fitnessstudio-corona",
+    de: {
+      title: "Case Study: Fitnessstudio nach Corona-Comeback",
+      metaTitle: "Case Study Fitnessstudio | Corona-Comeback",
+      metaDescription: "Wie ein Fitnessstudio nach Corona durch Local SEO wieder durchstartete. Mitgliedergewinnung und Repositionierung.",
+      excerpt: "Vom Lockdown zum vollen Studio: Die Comeback-Story eines Fitnessstudios.",
+      category: "Case Study"
+    },
+    en: {
+      title: "Case Study: Gym's Post-Corona Comeback",
+      metaTitle: "Case Study Gym | Corona Comeback",
+      metaDescription: "How a gym restarted through Local SEO after Corona. Member acquisition and repositioning.",
+      excerpt: "From lockdown to full studio: The comeback story of a gym.",
+      category: "Case Study"
+    },
+    readingTime: 11,
+    publishedAt: "2026-03-25",
+    updatedAt: "2026-03-25",
+    icon: "💪",
+    keywords: ["fitnessstudio case study", "corona comeback", "mitglieder gewinnen", "fitness marketing"],
+    featured: false
+  },
+  {
+    slug: "case-study-hotel-direktbuchungen",
+    de: {
+      title: "Case Study: Hotel steigert Direktbuchungen um 150%",
+      metaTitle: "Case Study Hotel | 150% mehr Direktbuchungen",
+      metaDescription: "Wie ein Boutique-Hotel seine Direktbuchungen um 150% steigerte. Strategie gegen Booking.com und Co.",
+      excerpt: "Unabhängigkeit von Buchungsportalen: So schaffte es ein Hotel.",
+      category: "Case Study"
+    },
+    en: {
+      title: "Case Study: Hotel Increases Direct Bookings by 150%",
+      metaTitle: "Case Study Hotel | 150% More Direct Bookings",
+      metaDescription: "How a boutique hotel increased its direct bookings by 150%. Strategy against Booking.com and Co.",
+      excerpt: "Independence from booking portals: How a hotel did it.",
+      category: "Case Study"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-31",
+    updatedAt: "2026-03-31",
+    icon: "🛎️",
+    keywords: ["hotel case study", "direktbuchungen", "booking alternative", "hotel marketing"],
+    featured: false
+  },
+  {
+    slug: "case-study-friseur-stadtteile",
+    de: {
+      title: "Case Study: Friseursalon dominiert 3 Stadtteile",
+      metaTitle: "Case Study Friseur | Multi-Location Erfolg",
+      metaDescription: "Wie ein Friseursalon in 3 Stadtteilen die lokale Suche dominiert. Multi-Location-Strategie in der Praxis.",
+      excerpt: "Ein Salon, drei Standorte, überall auf Platz 1: Die Friseur-Success-Story.",
+      category: "Case Study"
+    },
+    en: {
+      title: "Case Study: Hair Salon Dominates 3 Districts",
+      metaTitle: "Case Study Hair Salon | Multi-Location Success",
+      metaDescription: "How a hair salon dominates local search in 3 districts. Multi-location strategy in practice.",
+      excerpt: "One salon, three locations, position 1 everywhere: The salon success story.",
+      category: "Case Study"
+    },
+    readingTime: 10,
+    publishedAt: "2026-04-06",
+    updatedAt: "2026-04-06",
+    icon: "✂️",
+    keywords: ["friseur case study", "multi location", "stadtteil seo", "salon marketing"],
+    featured: false
+  },
+
+  // TOOLS, CHECKLISTEN & RESSOURCEN
+  {
+    slug: "local-seo-tools-2026",
+    de: {
+      title: "Die 25 besten Local SEO Tools 2026: Kostenlos bis Premium",
+      metaTitle: "Local SEO Tools 2026 | 25 beste Tools",
+      metaDescription: "Die besten Local SEO Tools im Vergleich. Von kostenlosen Google-Tools bis Premium-Suites - für jedes Budget.",
+      excerpt: "Der ultimative Tool-Guide für Local SEO: Alle Tools die Sie brauchen.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "The 25 Best Local SEO Tools 2026: Free to Premium",
+      metaTitle: "Local SEO Tools 2026 | 25 Best Tools",
+      metaDescription: "The best Local SEO tools compared. From free Google tools to premium suites - for every budget.",
+      excerpt: "The ultimate tool guide for Local SEO: All the tools you need.",
+      category: "Tools & Resources"
+    },
+    readingTime: 22,
+    publishedAt: "2026-04-08",
+    updatedAt: "2026-04-08",
+    icon: "🧰",
+    keywords: ["local seo tools", "seo software", "kostenlose seo tools", "seo suite"],
+    featured: true
+  },
+  {
+    slug: "google-business-api-agenturen",
+    de: {
+      title: "Google Business API: Automatisierung für Agenturen",
+      metaTitle: "Google Business API | Agentur-Automatisierung",
+      metaDescription: "Wie Agenturen die Google Business API für Skalierung nutzen. Technische Einrichtung, Use Cases und Best Practices.",
+      excerpt: "Der technische Guide zur GBP-Automatisierung für SEO-Agenturen.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Google Business API: Automation for Agencies",
+      metaTitle: "Google Business API | Agency Automation",
+      metaDescription: "How agencies use the Google Business API for scaling. Technical setup, use cases and best practices.",
+      excerpt: "The technical guide to GBP automation for SEO agencies.",
+      category: "Tools & Resources"
+    },
+    readingTime: 18,
+    publishedAt: "2026-04-10",
+    updatedAt: "2026-04-10",
+    icon: "🔌",
+    keywords: ["google business api", "gbp api", "seo automatisierung", "agentur tools"],
+    featured: false
+  },
+  {
+    slug: "local-seo-checkliste-pdf",
+    de: {
+      title: "Local SEO Checkliste zum Ausdrucken (PDF Download)",
+      metaTitle: "Local SEO Checkliste PDF | Download",
+      metaDescription: "Kostenlose Local SEO Checkliste als PDF Download. Alle wichtigen Punkte zum Abhaken für Ihr Unternehmen.",
+      excerpt: "Die praktische Checkliste für Ihren Schreibtisch: Jetzt herunterladen!",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Local SEO Checklist for Printing (PDF Download)",
+      metaTitle: "Local SEO Checklist PDF | Download",
+      metaDescription: "Free Local SEO checklist as PDF download. All important points to check off for your business.",
+      excerpt: "The practical checklist for your desk: Download now!",
+      category: "Tools & Resources"
+    },
+    readingTime: 5,
+    publishedAt: "2026-04-12",
+    updatedAt: "2026-04-12",
+    icon: "✅",
+    keywords: ["local seo checkliste", "seo pdf", "checkliste download", "kostenlose ressourcen"],
+    featured: false
+  },
+  {
+    slug: "kostenlose-local-seo-audit-tools",
+    de: {
+      title: "Kostenlose Local SEO Audit-Tools im Vergleich",
+      metaTitle: "Kostenlose Local SEO Audit Tools | Vergleich",
+      metaDescription: "Die besten kostenlosen Tools für Ihren Local SEO Audit. Detaillierter Vergleich mit Stärken und Schwächen.",
+      excerpt: "SEO-Audit ohne Budget: Diese kostenlosen Tools helfen wirklich.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Free Local SEO Audit Tools Compared",
+      metaTitle: "Free Local SEO Audit Tools | Comparison",
+      metaDescription: "The best free tools for your Local SEO audit. Detailed comparison with strengths and weaknesses.",
+      excerpt: "SEO audit without budget: These free tools really help.",
+      category: "Tools & Resources"
+    },
+    readingTime: 14,
+    publishedAt: "2026-04-14",
+    updatedAt: "2026-04-14",
+    icon: "🔍",
+    keywords: ["kostenlose audit tools", "free seo tools", "local seo check", "seo analyse kostenlos"],
+    featured: false
+  },
+  {
+    slug: "bewertungs-qr-codes",
+    de: {
+      title: "Bewertungs-QR-Codes erstellen: Anleitung & Best Practices",
+      metaTitle: "Bewertungs-QR-Codes | Anleitung 2026",
+      metaDescription: "Wie Sie QR-Codes für Google-Bewertungen erstellen. Schritt-für-Schritt Anleitung mit Design-Tipps und Platzierungsideen.",
+      excerpt: "Der einfachste Weg zu mehr Bewertungen: QR-Codes richtig einsetzen.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Creating Review QR Codes: Guide & Best Practices",
+      metaTitle: "Review QR Codes | Guide 2026",
+      metaDescription: "How to create QR codes for Google reviews. Step-by-step guide with design tips and placement ideas.",
+      excerpt: "The easiest way to more reviews: Using QR codes correctly.",
+      category: "Tools & Resources"
+    },
+    readingTime: 10,
+    publishedAt: "2026-04-16",
+    updatedAt: "2026-04-16",
+    icon: "📱",
+    keywords: ["qr code bewertung", "google review qr", "bewertung link", "rezension qr code"],
+    featured: false
+  },
+
+  // ZUKUNFT & TRENDS
+  {
+    slug: "local-seo-trends-2027",
+    de: {
+      title: "Local SEO Trends 2027: Was kommt als Nächstes?",
+      metaTitle: "Local SEO Trends 2027 | Zukunft Prognose",
+      metaDescription: "Die Local SEO Trends für 2027 und darüber hinaus. AI, AR, Voice und was Sie jetzt schon vorbereiten sollten.",
+      excerpt: "Ein Blick in die Zukunft: Worauf Sie sich jetzt vorbereiten sollten.",
+      category: "Trends"
+    },
+    en: {
+      title: "Local SEO Trends 2027: What's Coming Next?",
+      metaTitle: "Local SEO Trends 2027 | Future Forecast",
+      metaDescription: "The Local SEO trends for 2027 and beyond. AI, AR, Voice and what you should prepare for now.",
+      excerpt: "A look into the future: What you should prepare for now.",
+      category: "Trends"
+    },
+    readingTime: 16,
+    publishedAt: "2026-04-18",
+    updatedAt: "2026-04-18",
+    icon: "🔮",
+    keywords: ["local seo trends", "seo zukunft", "2027 trends", "seo prognose"],
+    featured: true
+  },
+  {
+    slug: "zero-click-searches-local-pack",
+    de: {
+      title: "Zero-Click-Searches & Local Pack: Die neue Realität",
+      metaTitle: "Zero-Click-Searches | Local SEO Realität",
+      metaDescription: "Wie Zero-Click-Searches Local SEO verändern. Strategien für die neue SERP-Realität und wie Sie trotzdem gewinnen.",
+      excerpt: "Wenn niemand mehr klickt: Wie Sie dennoch erfolgreich sein können.",
+      category: "Trends"
+    },
+    en: {
+      title: "Zero-Click Searches & Local Pack: The New Reality",
+      metaTitle: "Zero-Click Searches | Local SEO Reality",
+      metaDescription: "How zero-click searches are changing Local SEO. Strategies for the new SERP reality and how you still win.",
+      excerpt: "When no one clicks anymore: How you can still succeed.",
+      category: "Trends"
+    },
+    readingTime: 14,
+    publishedAt: "2026-04-20",
+    updatedAt: "2026-04-20",
+    icon: "0️⃣",
+    keywords: ["zero click", "no click searches", "local pack", "serp features"],
+    featured: false
+  },
+  {
+    slug: "google-sge-lokale-suche",
+    de: {
+      title: "Google SGE & lokale Suche: Wie AI die SERPs verändert",
+      metaTitle: "Google SGE Local SEO | AI-Suche 2026",
+      metaDescription: "Wie Googles Search Generative Experience die lokale Suche revolutioniert. Vorbereitung auf die AI-Ära der Suche.",
+      excerpt: "Die AI-Revolution in der Suche: Was lokale Unternehmen wissen müssen.",
+      category: "Trends"
+    },
+    en: {
+      title: "Google SGE & Local Search: How AI is Changing SERPs",
+      metaTitle: "Google SGE Local SEO | AI Search 2026",
+      metaDescription: "How Google's Search Generative Experience is revolutionizing local search. Preparing for the AI era of search.",
+      excerpt: "The AI revolution in search: What local businesses need to know.",
+      category: "Trends"
+    },
+    readingTime: 15,
+    publishedAt: "2026-04-22",
+    updatedAt: "2026-04-22",
+    icon: "🧠",
+    keywords: ["google sge", "ai suche", "generative search", "local seo ai"],
+    featured: true
+  },
+
+  // Zusätzliche Local SEO Grundlagen Berlin (für SEO-Abdeckung)
+  {
+    slug: "local-seo-berlin",
+    de: {
+      title: "Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen",
+      metaTitle: "Local SEO Berlin | Hauptstadt-Guide 2026",
+      metaDescription: "Local SEO speziell für Berlin. Kiez-Keywords, Bezirks-Strategien und lokale Sichtbarkeit in Deutschlands größter Stadt.",
+      excerpt: "Von Mitte bis Neukölln: So werden Sie in ganz Berlin gefunden.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Berlin: The Capital City Guide for Businesses",
+      metaTitle: "Local SEO Berlin | Capital City Guide 2026",
+      metaDescription: "Local SEO specifically for Berlin. Neighborhood keywords, district strategies and local visibility in Germany's largest city.",
+      excerpt: "From Mitte to Neukölln: How to be found throughout Berlin.",
+      category: "Regions"
+    },
+    readingTime: 17,
+    publishedAt: "2026-01-09",
+    updatedAt: "2026-01-09",
+    icon: "🐻",
+    keywords: ["local seo berlin", "seo berlin", "marketing berlin", "berliner unternehmen"],
+    featured: true
   }
 ];
 
