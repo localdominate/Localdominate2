@@ -4,6 +4,7 @@ import ArticleLayout from '@/components/blog/ArticleLayout';
 import TableOfContents from '@/components/blog/TableOfContents';
 import BlogCTAABTest from '@/components/blog/BlogCTAABTest';
 import BlogImage from '@/components/blog/BlogImage';
+import LexikonLink from '@/components/blog/LexikonLink';
 import localSeoAuditImg from '@/assets/blog/local-seo-audit.jpg';
 import { useAuditChecklist } from '@/hooks/useAuditChecklist';
 import { AuditProgressBar } from '@/components/audit/AuditProgressBar';
@@ -90,8 +91,9 @@ const LocalSeoAuditCheckliste = () => {
 
       {/* Intro */}
       <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-        Du investierst in Local SEO, aber weißt nicht, wo du stehst? Diese <strong>interaktive 
-        50-Punkte Checkliste</strong> hilft dir, systematisch alle wichtigen Bereiche zu analysieren. 
+        Du investierst in <LexikonLink term="Local SEO" />, aber weißt nicht, wo du stehst? Diese <strong>interaktive 
+        50-Punkte Checkliste</strong> hilft dir, systematisch alle wichtigen Bereiche zu analysieren – 
+        von <LexikonLink term="NAP" /> bis <LexikonLink term="Schema Markup" />.
         <strong> Klicke auf jeden Punkt</strong>, um ihn als erledigt zu markieren – dein Fortschritt 
         wird automatisch gespeichert!
       </p>
@@ -110,8 +112,9 @@ const LocalSeoAuditCheckliste = () => {
         </h2>
 
         <p className="text-muted-foreground mb-6">
-          Local SEO ist kein "Set and Forget". Google ändert regelmäßig Algorithmen, Wettbewerber 
-          optimieren ihre Präsenz, und deine eigenen Daten können veralten. Ein Audit hilft dir:
+          <LexikonLink term="Local SEO" /> ist kein "Set and Forget". Google ändert regelmäßig Algorithmen, Wettbewerber 
+          optimieren ihre Präsenz, und deine eigenen Daten können veralten. Ein Audit hilft dir beim <LexikonLink term="Crawling" /> 
+          und der <LexikonLink term="Indexierung" /> deiner lokalen Inhalte:
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -137,9 +140,9 @@ const LocalSeoAuditCheckliste = () => {
             <div>
               <p className="font-semibold text-amber-800 dark:text-amber-200 mb-1">Ohne regelmäßige Audits riskierst du:</p>
               <ul className="text-sm text-amber-700 dark:text-amber-300 space-y-1">
-                <li>• Veraltete NAP-Daten in Verzeichnissen</li>
-                <li>• Unbeantwortete negative Bewertungen</li>
-                <li>• Technische Probleme auf der Website</li>
+                <li>• Veraltete <LexikonLink term="NAP">NAP-Daten</LexikonLink> in Verzeichnissen</li>
+                <li>• Unbeantwortete negative <LexikonLink term="Reviews (Bewertungen)">Bewertungen</LexikonLink></li>
+                <li>• Technische Probleme auf der Website (<LexikonLink term="Core Web Vitals" />)</li>
                 <li>• Verlust von Rankings an Wettbewerber</li>
               </ul>
             </div>
@@ -188,7 +191,7 @@ const LocalSeoAuditCheckliste = () => {
 
       {/* GBP Audit Section */}
       <section id="gbp-audit" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-6">Google Business Profil Audit</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-6"><LexikonLink term="Google Business Profile" /> Audit</h2>
         
         {auditCategories.slice(0, 3).map((category) => {
           const progress = categoryProgress.find((p) => p.id === category.id);
@@ -245,7 +248,7 @@ const LocalSeoAuditCheckliste = () => {
 
       {/* Citation Audit Section */}
       <section id="citation-audit" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-6">Citation Audit</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-6"><LexikonLink term="Citations" /> Audit</h2>
         
         {auditCategories.slice(6, 8).map((category) => {
           const progress = categoryProgress.find((p) => p.id === category.id);

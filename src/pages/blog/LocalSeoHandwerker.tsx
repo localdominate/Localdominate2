@@ -3,6 +3,7 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import LexikonLink from "@/components/blog/LexikonLink";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
 import { 
@@ -132,8 +133,8 @@ const LocalSeoHandwerker = () => {
       <p className="text-lg text-muted-foreground leading-relaxed mb-8">
         Als Handwerker verlässt du dich auf Mundpropaganda? Das war gestern. Heute suchen <strong>85% 
         aller Kunden</strong> online nach Handwerkern – und wer bei Google nicht sichtbar ist, verliert 
-        Aufträge an die Konkurrenz. Dieser Guide zeigt dir, wie du mit Local SEO mehr qualifizierte 
-        Anfragen bekommst.
+        Aufträge an die Konkurrenz. Dieser Guide zeigt dir, wie du mit <LexikonLink term="Local SEO" /> mehr qualifizierte 
+        Anfragen bekommst und im <LexikonLink term="Local Pack" /> erscheinst.
       </p>
 
       <BlogImage 
@@ -193,7 +194,7 @@ const LocalSeoHandwerker = () => {
               <p className="font-semibold text-amber-800 dark:text-amber-200 mb-1">Das bedeutet für dich</p>
               <p className="text-amber-700 dark:text-amber-300 text-sm">
                 Jeden Tag suchen tausende Menschen in deiner Region nach genau deiner Dienstleistung. 
-                Wer im Local Pack (Top 3 bei Google Maps) steht, bekommt den Großteil dieser Anfragen.
+                Wer im <LexikonLink term="Local Pack" /> (Top 3 bei Google Maps) steht, bekommt den Großteil dieser Anfragen.
               </p>
             </div>
           </div>
@@ -266,11 +267,11 @@ const LocalSeoHandwerker = () => {
       <section id="google-business" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
           <MapPin className="h-6 w-6 text-primary" />
-          Google Business Profil für Handwerker optimieren
+          <LexikonLink term="Google Business Profile">Google Business Profil</LexikonLink> für Handwerker optimieren
         </h2>
 
         <p className="text-muted-foreground mb-6">
-          Dein Google Business Profil ist dein wichtigstes Marketing-Tool. So optimierst du es:
+          Dein <LexikonLink term="Google Business Profile" /> ist dein wichtigstes Marketing-Tool. So optimierst du es:
         </p>
 
         <h3 className="text-xl font-semibold text-foreground mb-4">1. Die richtige Kategorie wählen</h3>
@@ -361,12 +362,12 @@ const LocalSeoHandwerker = () => {
       <section id="bewertungen" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
           <Star className="h-6 w-6 text-primary" />
-          Bewertungen systematisch sammeln
+          <LexikonLink term="Reviews (Bewertungen)">Bewertungen</LexikonLink> systematisch sammeln
         </h2>
 
         <p className="text-muted-foreground mb-6">
-          Für Handwerker sind Bewertungen noch wichtiger als für andere Branchen. 
-          Kunden lassen fremde Menschen in ihr Zuhause – Vertrauen ist entscheidend.
+          Für Handwerker sind <LexikonLink term="Reviews (Bewertungen)">Bewertungen</LexikonLink> noch wichtiger als für andere Branchen. 
+          Kunden lassen fremde Menschen in ihr Zuhause – Vertrauen und <LexikonLink term="E-E-A-T" /> sind entscheidend.
         </p>
 
         <div className="space-y-4 mb-6">
