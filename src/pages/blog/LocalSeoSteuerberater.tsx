@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -192,6 +193,12 @@ const LocalSeoSteuerberater = () => {
       tocItems={tocItems}
       additionalSchema={[faqSchema, accountingServiceSchema]}
     >
+      <LastReviewedBadge 
+        reviewDate="2026-01-08" 
+        reviewerName="Steuerberater Fachredaktion" 
+        variant="detailed" 
+      />
+
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 not-prose">
         <Card className="text-center border-primary/20">
