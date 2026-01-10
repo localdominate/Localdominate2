@@ -3,6 +3,13 @@ export interface RelatedArticle {
   title: string;
 }
 
+export interface BestPracticeExample {
+  title: string;
+  description: string;
+  url: string;
+  source: string;
+}
+
 export interface SEOTerm {
   letter: string;
   term: string;
@@ -19,6 +26,7 @@ export interface SEOTerm {
   difficulty: "anfänger" | "fortgeschritten" | "experte";
   importance: 1 | 2 | 3 | 4 | 5;
   relatedArticles?: RelatedArticle[];
+  bestPracticeExample?: BestPracticeExample;
 }
 
 export const seoLexikonData: SEOTerm[] = [
@@ -51,7 +59,13 @@ export const seoLexikonData: SEOTerm[] = [
     relatedArticles: [
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO: Der ultimative Guide" },
       { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google: Bild-SEO Best Practices",
+      description: "Offizielle Google-Richtlinien für optimalen Alt-Text und Bilder-SEO mit praktischen Beispielen.",
+      url: "https://developers.google.com/search/docs/appearance/google-images",
+      source: "Google Search Central"
+    }
   },
   {
     letter: "A",
@@ -113,7 +127,13 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "local-link-building", title: "Local Link Building Strategien" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
       { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Moz: The Beginner's Guide to Link Building",
+      description: "Umfassender Guide zum strategischen Aufbau von Backlinks mit bewährten Methoden und Fallstudien.",
+      url: "https://moz.com/beginners-guide-to-link-building",
+      source: "Moz"
+    }
   },
   {
     letter: "B",
@@ -175,7 +195,13 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "nap-konsistenz", title: "NAP-Konsistenz Guide" },
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "BrightLocal: Citation Building Guide",
+      description: "Praxisnaher Guide zum Aufbau konsistenter Citations für lokale Unternehmen.",
+      url: "https://www.brightlocal.com/learn/local-citations/",
+      source: "BrightLocal"
+    }
   },
   {
     letter: "C",
@@ -236,7 +262,13 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
       { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "web.dev: Core Web Vitals Guide",
+      description: "Offizielle Google-Dokumentation mit detaillierten Anleitungen zur Optimierung aller Core Web Vitals.",
+      url: "https://web.dev/vitals/",
+      source: "Google web.dev"
+    }
   },
   {
     letter: "C",
@@ -360,7 +392,13 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "local-seo-anwaelte", title: "Local SEO für Anwälte" },
       { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" },
       { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google Quality Rater Guidelines",
+      description: "Die offiziellen Richtlinien, nach denen Google-Bewerter Websites auf E-E-A-T prüfen.",
+      url: "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf",
+      source: "Google"
+    }
   },
   // === F ===
   {
@@ -424,7 +462,13 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
       { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google: Business Profile Optimierung",
+      description: "Offizielle Google-Anleitung zur vollständigen Optimierung deines Unternehmensprofils.",
+      url: "https://support.google.com/business/answer/7091?hl=de",
+      source: "Google Support"
+    }
   },
   {
     letter: "G",
@@ -638,7 +682,13 @@ export const seoLexikonData: SEOTerm[] = [
     relatedArticles: [
       { slug: "local-seo-keywords", title: "Local SEO Keywords finden" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Ahrefs: Complete Keyword Research Guide",
+      description: "Umfassender Guide zur Keyword-Recherche mit kostenlosen und Premium-Tools.",
+      url: "https://ahrefs.com/blog/keyword-research/",
+      source: "Ahrefs"
+    }
   },
   {
     letter: "K",
@@ -725,7 +775,13 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
       { slug: "google-maps-ranking-faktoren", title: "Google Maps Ranking Faktoren" },
       { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "BrightLocal: Local Pack Research 2024",
+      description: "Aktuelle Studie zu Klickraten und Nutzerverhalten im Local Pack mit Optimierungstipps.",
+      url: "https://www.brightlocal.com/research/local-pack-click-through-study/",
+      source: "BrightLocal"
+    }
   },
   {
     letter: "L",
@@ -877,7 +933,13 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "nap-konsistenz", title: "NAP-Konsistenz Guide" },
       { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Moz: NAP Consistency Guide",
+      description: "Detaillierter Guide zur NAP-Konsistenz mit Checklisten und Audit-Anleitung.",
+      url: "https://moz.com/learn/seo/local-citations",
+      source: "Moz"
+    }
   },
   {
     letter: "N",
