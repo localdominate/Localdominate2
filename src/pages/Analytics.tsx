@@ -52,6 +52,7 @@ import KeywordPerformance from "@/components/admin/KeywordPerformance";
 import SEOHealthDashboard from "@/components/admin/SEOHealthDashboard";
 import ContentFreshnessAlerts from "@/components/admin/ContentFreshnessAlerts";
 import CoreWebVitalsPanel from "@/components/admin/CoreWebVitalsPanel";
+import CompetitiveAnalysis from "@/components/admin/CompetitiveAnalysis";
 
 const ADMIN_USERNAME = "admin";
 const ADMIN_PASSWORD = "localdominator240686";
@@ -405,7 +406,7 @@ const Analytics = () => {
 
       {/* Main Tabs */}
       <Tabs defaultValue="overview" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:inline-flex">
+        <TabsList className="grid w-full grid-cols-7 lg:w-auto lg:inline-flex">
           <TabsTrigger value="overview" className="gap-2">
             <BarChart3 className="h-4 w-4" />
             Übersicht
@@ -430,6 +431,10 @@ const Analytics = () => {
             <Zap className="h-4 w-4" />
             Web Vitals
           </TabsTrigger>
+          <TabsTrigger value="competitive" className="gap-2">
+            <Target className="h-4 w-4" />
+            Benchmarks
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="heatmap">
@@ -450,6 +455,10 @@ const Analytics = () => {
 
         <TabsContent value="vitals">
           <CoreWebVitalsPanel />
+        </TabsContent>
+
+        <TabsContent value="competitive">
+          <CompetitiveAnalysis />
         </TabsContent>
 
         <TabsContent value="overview">
