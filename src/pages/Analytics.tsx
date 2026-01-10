@@ -139,59 +139,6 @@ const Analytics = () => {
     return <AdminAccessDenied onSignOut={signOut} userEmail={user.email} />;
   }
 
-  // Login Screen
-  if (!isAuthenticated) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-background p-4">
-        <Card className="w-full max-w-md">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-              <Lock className="h-6 w-6 text-primary" />
-            </div>
-            <CardTitle>Analytics Dashboard</CardTitle>
-            <CardDescription>Bitte melde dich an, um fortzufahren</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="username">Benutzername</Label>
-                <Input
-                  id="username"
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Benutzername eingeben"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="password">Passwort</Label>
-                <Input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Passwort eingeben"
-                  required
-                />
-              </div>
-              {loginError && (
-                <p className="text-sm text-destructive">{loginError}</p>
-              )}
-              <Button type="submit" className="w-full">
-                Anmelden
-              </Button>
-            </form>
-            <div className="mt-4 text-center">
-              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
-                ← Zurück zur Website
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
   
   const metrics = useMemo(() => calculateMetrics(), [refreshKey]);
   const heatmapData = useMemo(() => getHeatmapData(), [refreshKey]);
@@ -404,7 +351,7 @@ const Analytics = () => {
             <Trash2 className="mr-2 h-4 w-4" />
             Löschen
           </Button>
-          <Button variant="ghost" size="sm" onClick={handleLogout}>
+          <Button variant="ghost" size="sm" onClick={signOut}>
             <LogOut className="mr-2 h-4 w-4" />
             Abmelden
           </Button>

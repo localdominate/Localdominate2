@@ -219,53 +219,6 @@ const ABTestDashboard = () => {
     };
   }, [dbSessions, dbConversions]);
 
-  // Login Screen
-  if (!isAuthenticated) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-background p-4">
-        <Card className="w-full max-w-md">
-          <CardHeader className="text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-              <Lock className="h-6 w-6 text-primary" />
-            </div>
-            <CardTitle>A/B Test Dashboard</CardTitle>
-            <CardDescription>Bitte melde dich an, um fortzufahren</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="username">Benutzername</Label>
-                <Input
-                  id="username"
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="password">Passwort</Label>
-                <Input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
-              {loginError && <p className="text-sm text-destructive">{loginError}</p>}
-              <Button type="submit" className="w-full">Anmelden</Button>
-            </form>
-            <div className="mt-4 text-center">
-              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
-                ← Zurück zur Website
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
 
   const formatDuration = (ms: number): string => {
     const seconds = Math.floor(ms / 1000);
@@ -344,7 +297,7 @@ const ABTestDashboard = () => {
                 Vollständige Analytics
               </Button>
             </Link>
-            <Button variant="ghost" size="sm" onClick={handleLogout}>
+            <Button variant="ghost" size="sm" onClick={signOut}>
               <LogOut className="mr-2 h-4 w-4" />
               Abmelden
             </Button>
