@@ -9,11 +9,15 @@ import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS, HEADLINE_VARIANTS, URGENCY_VARIANTS } from "@/lib/autoOptimizerConfig";
 import CountdownTimer from "@/components/CountdownTimer";
 import { useABTestConversion } from "@/hooks/useABTestConversion";
+import useCtaHoverTracking from "@/hooks/useCtaHoverTracking";
+import { useAdvancedTrackingContext } from "@/components/AdvancedTrackingProvider";
 
 const HeroSection = () => {
   const { language, t } = useLanguage();
   const { getEffectiveValue, isLoading } = useAutoOptimizerContext();
   const { trackCtaClick, trackCheckoutStart } = useABTestConversion();
+  const { trackClick } = useAdvancedTrackingContext();
+  const ctaHoverProps = useCtaHoverTracking("hero_cta");
   
   // Get optimized values
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
@@ -33,6 +37,9 @@ const HeroSection = () => {
   const handleCtaClick = async () => {
     // Track for dataLayer
     trackButtonClick("hero_cta", "hero_section", 299);
+    
+    // Track click for engagement
+    trackClick("hero_cta", true);
     
     // Track for A/B testing
     await trackCtaClick("hero_section", ctaText, 299);
@@ -96,13 +103,15 @@ const HeroSection = () => {
               {" "}{t.hero.subheadlineEnd}
             </p>
             
-            {/* CTA Button - Dynamic color and text */}
+            {/* CTA Button - Dynamic color and text with hover tracking */}
             <div className="flex flex-col items-center md:items-start gap-3 w-full max-w-md mx-auto md:mx-0">
               <Button 
                 variant={buttonVariant} 
                 size="ctaLarge" 
                 className="group w-full sm:w-auto" 
                 onClick={handleCtaClick}
+                onMouseEnter={ctaHoverProps.onMouseEnter}
+                onMouseLeave={ctaHoverProps.onMouseLeave}
               >
                 <span className="hidden sm:inline">{ctaText}</span>
                 <span className="sm:hidden">{t.hero.ctaShort}</span>

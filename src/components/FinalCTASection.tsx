@@ -7,11 +7,15 @@ import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
 import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS } from "@/lib/autoOptimizerConfig";
+import useCtaHoverTracking from "@/hooks/useCtaHoverTracking";
+import { useAdvancedTrackingContext } from "@/components/AdvancedTrackingProvider";
 
 const FinalCTASection = () => {
   const { t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
   const { getEffectiveValue } = useAutoOptimizerContext();
+  const { trackClick } = useAdvancedTrackingContext();
+  const ctaHoverProps = useCtaHoverTracking("final_cta");
   
   // Get optimized CTA color
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
@@ -19,6 +23,7 @@ const FinalCTASection = () => {
 
   const handleCtaClick = () => {
     trackButtonClick("final_cta", "final_cta_section", 299);
+    trackClick("final_cta", true);
     openStripeCheckout("standard", "final_cta_section", t.finalCta.ctaFull);
   };
 
@@ -39,6 +44,8 @@ const FinalCTASection = () => {
             size="ctaLarge" 
             className="group w-full sm:w-auto max-w-md cta-pulse" 
             onClick={handleCtaClick}
+            onMouseEnter={ctaHoverProps.onMouseEnter}
+            onMouseLeave={ctaHoverProps.onMouseLeave}
           >
             <span className="hidden sm:inline">{t.finalCta.ctaFull}</span>
             <span className="sm:hidden">{t.finalCta.ctaShort}</span>

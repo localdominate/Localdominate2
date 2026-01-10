@@ -23,7 +23,9 @@ import BackToTop from "@/components/BackToTop";
 import SocialProofToast from "@/components/SocialProofToast";
 import CookieBanner from "@/components/CookieBanner";
 import HeatmapTracker from "@/components/HeatmapTracker";
+import TrackedSection from "@/components/TrackedSection";
 import { AutoOptimizerProvider } from "@/components/AutoOptimizerProvider";
+import { AdvancedTrackingProvider } from "@/components/AdvancedTrackingProvider";
 import useScrollDepthTracking from "@/hooks/useScrollDepthTracking";
 import useAnalyticsSession from "@/hooks/useAnalyticsSession";
 import { useEffect } from "react";
@@ -41,39 +43,68 @@ const Index = () => {
 
   return (
     <AutoOptimizerProvider>
-      <main className="min-h-screen pb-20 md:pb-0">
-        {/* Global UI Components */}
-        <ScrollProgress />
-        <StickyHeader />
-        <ExitIntentPopup />
-        <SocialProofToast />
-        
-        {/* Page Content */}
-        <AnnouncementBar />
-        <LanguageSwitch />
-        <HeroSection />
-        <RankingComparison />
-        <PainSection />
-        <ComparisonTable />
-        <SolutionSection />
-        <ROICalculator />
-        <TestimonialsSection />
-        <ValueStackSection />
-        <OfferSection />
-        <GuaranteeSection />
-        <ExpertSection />
-        <FAQSection />
-        <FinalCTASection />
-        <Footer />
-        
-        {/* Mobile/Bottom Components */}
-        <MobileStickyBar />
-        <BackToTop />
-        <CookieBanner />
-        
-        {/* Analytics Tracking */}
-        <HeatmapTracker enabled={true} />
-      </main>
+      <AdvancedTrackingProvider>
+        <main className="min-h-screen pb-20 md:pb-0">
+          {/* Global UI Components */}
+          <ScrollProgress />
+          <StickyHeader />
+          <ExitIntentPopup />
+          <SocialProofToast />
+          
+          {/* Page Content */}
+          <AnnouncementBar />
+          <LanguageSwitch />
+          
+          <TrackedSection sectionName="hero">
+            <HeroSection />
+          </TrackedSection>
+          
+          <RankingComparison />
+          
+          <TrackedSection sectionName="pain">
+            <PainSection />
+          </TrackedSection>
+          
+          <ComparisonTable />
+          
+          <TrackedSection sectionName="solution">
+            <SolutionSection />
+          </TrackedSection>
+          
+          <ROICalculator />
+          
+          <TrackedSection sectionName="testimonials">
+            <TestimonialsSection />
+          </TrackedSection>
+          
+          <ValueStackSection />
+          
+          <TrackedSection sectionName="offer">
+            <OfferSection />
+          </TrackedSection>
+          
+          <GuaranteeSection />
+          <ExpertSection />
+          
+          <TrackedSection sectionName="faq">
+            <FAQSection />
+          </TrackedSection>
+          
+          <TrackedSection sectionName="cta">
+            <FinalCTASection />
+          </TrackedSection>
+          
+          <Footer />
+          
+          {/* Mobile/Bottom Components */}
+          <MobileStickyBar />
+          <BackToTop />
+          <CookieBanner />
+          
+          {/* Analytics Tracking */}
+          <HeatmapTracker enabled={true} />
+        </main>
+      </AdvancedTrackingProvider>
     </AutoOptimizerProvider>
   );
 };
