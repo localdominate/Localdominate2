@@ -52,6 +52,12 @@ import LocalSeoFrankfurt from "./pages/blog/LocalSeoFrankfurt";
 import CoreWebVitalsLocalSeo from "./pages/blog/CoreWebVitalsLocalSeo";
 import LocalSeoBerlin from "./pages/blog/LocalSeoBerlin";
 import KostenloseSeo from "./pages/blog/KostenloseSeo";
+import LocalSeoKoeln from "./pages/blog/LocalSeoKoeln";
+import LocalSeoWien from "./pages/blog/LocalSeoWien";
+import LocalSeoTierarzt from "./pages/blog/LocalSeoTierarzt";
+import KiToolsLocalSeo from "./pages/blog/KiToolsLocalSeo";
+import GoogleAiOverviews from "./pages/blog/GoogleAiOverviews";
+import SeoToolbox from "./pages/blog/SeoToolbox";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 import SeoLexikon from "./pages/SeoLexikon";
@@ -122,6 +128,12 @@ const App = () => (
               <Route path="/blog/core-web-vitals-local-seo" element={<CoreWebVitalsLocalSeo />} />
               <Route path="/blog/local-seo-berlin" element={<LocalSeoBerlin />} />
               <Route path="/blog/kostenloses-seo-guide" element={<KostenloseSeo />} />
+              <Route path="/blog/local-seo-koeln" element={<LocalSeoKoeln />} />
+              <Route path="/blog/local-seo-wien" element={<LocalSeoWien />} />
+              <Route path="/blog/local-seo-tierarzt" element={<LocalSeoTierarzt />} />
+              <Route path="/blog/ki-tools-local-seo" element={<KiToolsLocalSeo />} />
+              <Route path="/blog/google-ai-overviews-local-seo" element={<GoogleAiOverviews />} />
+              <Route path="/blog/seo-toolbox-kostenlose-ressourcen" element={<SeoToolbox />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

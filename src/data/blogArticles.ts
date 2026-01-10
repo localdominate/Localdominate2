@@ -1972,6 +1972,146 @@ export const blogArticles: BlogArticle[] = [
     icon: "🐻",
     keywords: ["local seo berlin", "seo berlin", "marketing berlin", "berliner unternehmen"],
     featured: true
+  },
+
+  // === NEUE ARTIKEL: JANUAR 2026 ===
+  {
+    slug: "local-seo-koeln",
+    de: {
+      title: "Local SEO Köln: Mehr Kunden in der Domstadt gewinnen",
+      metaTitle: "Local SEO Köln | Kölner Unternehmen Guide 2026",
+      metaDescription: "Local SEO für Kölner Unternehmen. Veedel-Keywords, lokale Verzeichnisse und Strategien für die Rheinmetropole. Jetzt mehr lokale Kunden!",
+      excerpt: "Von der Südstadt bis Ehrenfeld: So werden Sie in ganz Köln bei Google gefunden.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Cologne: Win More Customers in the Cathedral City",
+      metaTitle: "Local SEO Cologne | Cologne Business Guide 2026",
+      metaDescription: "Local SEO for Cologne businesses. Neighborhood keywords, local directories and strategies for the Rhine metropolis.",
+      excerpt: "From Südstadt to Ehrenfeld: How to be found throughout Cologne on Google.",
+      category: "Regions"
+    },
+    readingTime: 18,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🏛️",
+    keywords: ["local seo köln", "seo köln", "google ranking köln", "marketing köln", "kölner unternehmen"],
+    featured: true
+  },
+  {
+    slug: "local-seo-wien",
+    de: {
+      title: "Local SEO Wien: Der Guide für Wiener Unternehmen",
+      metaTitle: "Local SEO Wien | Österreich-Guide 2026",
+      metaDescription: "Local SEO speziell für Wien und Österreich. Bezirks-Keywords, österreichische Verzeichnisse und lokale Sichtbarkeit in der Bundeshauptstadt.",
+      excerpt: "Vom 1. bis zum 23. Bezirk: So werden Sie in ganz Wien bei Google gefunden.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Vienna: The Guide for Viennese Businesses",
+      metaTitle: "Local SEO Vienna | Austria Guide 2026",
+      metaDescription: "Local SEO specifically for Vienna and Austria. District keywords, Austrian directories and local visibility in the federal capital.",
+      excerpt: "From the 1st to the 23rd district: How to be found throughout Vienna on Google.",
+      category: "Regions"
+    },
+    readingTime: 20,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🎻",
+    keywords: ["local seo wien", "seo wien", "google ranking wien", "marketing wien", "österreich seo"],
+    featured: true
+  },
+  {
+    slug: "local-seo-tierarzt",
+    de: {
+      title: "Local SEO für Tierärzte: Mehr Patienten durch Google",
+      metaTitle: "Local SEO Tierarzt | Tierarztpraxis Marketing 2026",
+      metaDescription: "Local SEO speziell für Tierärzte und Tierkliniken. Notdienst-Keywords, Tier-Portale und Google Business für Veterinäre.",
+      excerpt: "So finden Tierbesitzer Ihre Praxis bei Google - von Routineuntersuchungen bis Notfälle.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Veterinarians: More Patients Through Google",
+      metaTitle: "Local SEO Veterinarian | Vet Practice Marketing 2026",
+      metaDescription: "Local SEO specifically for veterinarians and animal clinics. Emergency keywords, pet portals and Google Business for vets.",
+      excerpt: "How pet owners find your practice on Google - from routine checkups to emergencies.",
+      category: "Industries"
+    },
+    readingTime: 16,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🐾",
+    keywords: ["tierarzt seo", "veterinär marketing", "tierklinik google", "tierarzt local seo", "tierarztpraxis"],
+    featured: false
+  },
+  {
+    slug: "ki-tools-local-seo",
+    de: {
+      title: "KI-Tools für Local SEO: Die besten AI-Helfer 2026",
+      metaTitle: "KI-Tools Local SEO | AI-Helfer Guide 2026",
+      metaDescription: "Die besten KI-Tools für lokale Suchmaschinenoptimierung. Von ChatGPT bis Gemini - so nutzen Sie AI für Ihr Local SEO.",
+      excerpt: "Wie künstliche Intelligenz Ihr Local SEO auf das nächste Level hebt.",
+      category: "Tools"
+    },
+    en: {
+      title: "AI Tools for Local SEO: The Best AI Helpers 2026",
+      metaTitle: "AI Tools Local SEO | AI Helper Guide 2026",
+      metaDescription: "The best AI tools for local search engine optimization. From ChatGPT to Gemini - how to use AI for your Local SEO.",
+      excerpt: "How artificial intelligence takes your Local SEO to the next level.",
+      category: "Tools"
+    },
+    readingTime: 14,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🤖",
+    keywords: ["ki tools seo", "ai local seo", "chatgpt seo", "künstliche intelligenz seo", "ai marketing"],
+    featured: true
+  },
+  {
+    slug: "google-ai-overviews-local-seo",
+    de: {
+      title: "Google AI Overviews & Local SEO: Was sich ändert",
+      metaTitle: "Google AI Overviews | Local SEO Auswirkungen 2026",
+      metaDescription: "Wie Google AI Overviews die lokale Suche verändern. Strategien für Unternehmen, um in der neuen AI-Ära sichtbar zu bleiben.",
+      excerpt: "Die AI-Revolution bei Google: Was lokale Unternehmen jetzt wissen und tun müssen.",
+      category: "Trends"
+    },
+    en: {
+      title: "Google AI Overviews & Local SEO: What's Changing",
+      metaTitle: "Google AI Overviews | Local SEO Impact 2026",
+      metaDescription: "How Google AI Overviews are changing local search. Strategies for businesses to stay visible in the new AI era.",
+      excerpt: "The AI revolution at Google: What local businesses need to know and do now.",
+      category: "Trends"
+    },
+    readingTime: 12,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "✨",
+    keywords: ["google ai overviews", "ai suche", "sge local seo", "google ki", "generative search"],
+    featured: true
+  },
+  {
+    slug: "seo-toolbox-kostenlose-ressourcen",
+    de: {
+      title: "Die ultimative SEO-Toolbox: 50+ kostenlose Tools & Ressourcen",
+      metaTitle: "SEO Toolbox | 50+ Kostenlose Tools & Links 2026",
+      metaDescription: "Deine komplette SEO-Toolbox: Über 50 kostenlose Tools für Local SEO, GEO, Google Business & mehr. Mit direkten Links und Anleitungen.",
+      excerpt: "Alle Tools, die du für erfolgreiches SEO brauchst - komplett kostenlos und sofort einsetzbar.",
+      category: "Tools"
+    },
+    en: {
+      title: "The Ultimate SEO Toolbox: 50+ Free Tools & Resources",
+      metaTitle: "SEO Toolbox | 50+ Free Tools & Links 2026",
+      metaDescription: "Your complete SEO toolbox: Over 50 free tools for Local SEO, GEO, Google Business & more. With direct links and guides.",
+      excerpt: "All the tools you need for successful SEO - completely free and ready to use.",
+      category: "Tools"
+    },
+    readingTime: 22,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🧰",
+    keywords: ["seo tools", "kostenlose seo tools", "seo toolbox", "local seo tools", "geo tools", "google business tools"],
+    featured: true
   }
 ];
 
