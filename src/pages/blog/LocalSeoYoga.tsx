@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoYogaImg from "@/assets/blog/local-seo-yoga.jpg";
@@ -184,6 +185,7 @@ const LocalSeoYoga = () => {
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
+      <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />
       <SourcesSection sources={sources} />
     </ArticleLayout>
   );

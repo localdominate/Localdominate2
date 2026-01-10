@@ -6,6 +6,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoTierarztImg from "@/assets/blog/local-seo-tierarzt.jpg";
 import { 
@@ -589,6 +590,8 @@ const LocalSeoTierarzt = () => {
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-tierarzt" />
+
+      <RelatedIndustryGuides currentSlug="local-seo-tierarzt" />
 
       <SourcesSection sources={sources} />
 

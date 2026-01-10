@@ -8,6 +8,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
+import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
 import { 
@@ -600,6 +601,8 @@ const LocalSeoHandwerker = () => {
       />
 
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
+
+      <RelatedIndustryGuides currentSlug="local-seo-handwerker" />
 
       <ArticleCTA />
     </ArticleLayout>
