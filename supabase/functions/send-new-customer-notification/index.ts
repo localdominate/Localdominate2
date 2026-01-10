@@ -2,11 +2,10 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-const INTERNAL_API_SECRET = Deno.env.get("INTERNAL_API_SECRET");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-internal-secret",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
 interface NewCustomerRequest {
@@ -32,16 +31,6 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    // Validate internal API secret
-    const providedSecret = req.headers.get("x-internal-secret");
-    if (!INTERNAL_API_SECRET || providedSecret !== INTERNAL_API_SECRET) {
-      console.error("Unauthorized: Invalid or missing internal API secret");
-      return new Response(
-        JSON.stringify({ error: "Unauthorized" }),
-        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
     const { customerId, recipientEmail }: NewCustomerRequest = await req.json();
     
     console.log(`Processing new customer notification: ${customerId}`);
@@ -62,6 +51,7 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Invalid customerId format");
     }
 
+    // Use service role key for secure server-side operations
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
