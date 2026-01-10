@@ -56,6 +56,8 @@ import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 import SeoLexikon from "./pages/SeoLexikon";
 import ArticleFeedbackDashboard from "./pages/ArticleFeedbackDashboard";
+import ResetPassword from "./pages/admin/ResetPassword";
+import UpdatePassword from "./pages/admin/UpdatePassword";
 
 const queryClient = new QueryClient();
 
@@ -76,6 +78,8 @@ const App = () => (
               <Route path="/admin/content-plan" element={<ContentPlanDashboard />} />
               <Route path="/admin/kunden" element={<MeineKunden />} />
               <Route path="/admin/article-feedback" element={<ArticleFeedbackDashboard />} />
+              <Route path="/admin/reset-password" element={<ResetPassword />} />
+              <Route path="/admin/update-password" element={<UpdatePassword />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />

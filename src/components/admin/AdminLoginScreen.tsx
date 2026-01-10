@@ -100,7 +100,16 @@ export function AdminLoginScreen({
             </Button>
           </form>
 
-          <div className="mt-6 text-center">
+          <div className="mt-4 text-center">
+            <Link
+              to="/admin/reset-password"
+              className="text-sm text-primary hover:text-primary/80 transition-colors"
+            >
+              Passwort vergessen?
+            </Link>
+          </div>
+
+          <div className="mt-4 text-center">
             <Link
               to="/"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
