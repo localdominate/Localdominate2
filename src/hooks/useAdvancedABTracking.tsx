@@ -259,7 +259,7 @@ const useAdvancedABTracking = (testId: string, variant: string) => {
         completed_checkout: engagement.current.completedCheckout,
         engagement_score: engagement.current.engagementScore,
         intent_score: engagement.current.intentScore,
-      }, { onConflict: "session_id" });
+      }, { onConflict: "session_id,test_id" });
       
       if (error) {
         console.warn("[AdvancedABTracking] Failed to save engagement data:", error);
