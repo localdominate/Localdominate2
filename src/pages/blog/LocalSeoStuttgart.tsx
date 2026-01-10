@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoStuttgartImg from "@/assets/blog/local-seo-stuttgart.jpg";
@@ -182,6 +183,7 @@ const LocalSeoStuttgart = () => {
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-stuttgart" />
+      <RelatedCityGuides currentSlug="local-seo-stuttgart" />
       <SourcesSection sources={sources} />
     </ArticleLayout>
   );

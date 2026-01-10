@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoBaselImg from "@/assets/blog/local-seo-basel.jpg";
@@ -171,6 +172,7 @@ const LocalSeoBasel = () => {
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-basel" />
+      <RelatedCityGuides currentSlug="local-seo-basel" />
       <SourcesSection sources={sources} />
     </ArticleLayout>
   );
