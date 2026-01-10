@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
@@ -312,7 +313,7 @@ const GoogleMapsRanking = () => {
 
         <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section3.step4.title}</h3>
         <p>
-          {t.section3.step4.text} <a href="/blog/google-bewertungen-bekommen" className="text-primary hover:underline">{t.section3.step4.linkText}</a>.
+          {t.section3.step4.text} <Link to="/blog/google-bewertungen-bekommen" className="text-primary hover:underline">{t.section3.step4.linkText}</Link>.
         </p>
       </section>
 
