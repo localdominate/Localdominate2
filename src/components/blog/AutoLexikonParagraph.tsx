@@ -2,7 +2,7 @@ import React from 'react';
 import AutoLexikonText from './AutoLexikonText';
 
 interface AutoLexikonParagraphProps {
-  children: string;
+  children: React.ReactNode;
   maxLinks?: number;
   excludeTerms?: string[];
   className?: string;
@@ -11,6 +11,7 @@ interface AutoLexikonParagraphProps {
 /**
  * A paragraph component that automatically links SEO lexikon terms.
  * Wraps AutoLexikonText in a <p> tag for convenience.
+ * Supports both string children and mixed React nodes (including existing LexikonLinks).
  */
 const AutoLexikonParagraph = ({ 
   children, 
