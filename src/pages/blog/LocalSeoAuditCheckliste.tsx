@@ -7,6 +7,7 @@ import BlogImage from '@/components/blog/BlogImage';
 import LexikonLink from '@/components/blog/LexikonLink';
 import KeyTakeawaysBox from '@/components/blog/KeyTakeawaysBox';
 import SourcesSection from '@/components/blog/SourcesSection';
+import AutoLexikonParagraph from '@/components/blog/AutoLexikonParagraph';
 import localSeoAuditImg from '@/assets/blog/local-seo-audit.jpg';
 import { useAuditChecklist } from '@/hooks/useAuditChecklist';
 import { AuditProgressBar } from '@/components/audit/AuditProgressBar';

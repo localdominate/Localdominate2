@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
+import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import MobileSpeedCalculator from "@/components/blog/MobileSpeedCalculator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";

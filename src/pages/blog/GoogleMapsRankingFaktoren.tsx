@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, XCircle, MapPin, Star, TrendingUp, Building, Users, Globe, AlertTriangle, Award, Target, Zap, Shield } from "lucide-react";

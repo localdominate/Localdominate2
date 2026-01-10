@@ -6,6 +6,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { CheckCircle, AlertTriangle, Lightbulb } from "lucide-react";

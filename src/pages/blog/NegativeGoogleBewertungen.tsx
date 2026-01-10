@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewResponseGenerator from "@/components/blog/ReviewResponseGenerator";
+import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { 

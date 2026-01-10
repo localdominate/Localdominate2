@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, MapPin, Users, Building, TrendingUp, Globe, Star, Phone, Briefcase, Coffee, Stethoscope, Scissors, Wrench, Utensils } from "lucide-react";
