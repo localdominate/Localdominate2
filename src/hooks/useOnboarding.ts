@@ -44,15 +44,21 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
 
           if (error) throw error;
 
-          // Send notification about new customer
+          // Send notification about new customer (internal API call)
           try {
-            await supabase.functions.invoke('send-new-customer-notification', {
-              body: {
-                customerId: newCustomer.id,
-                recipientEmail: 'markuswimboeck@googlemail.com',
-              },
-            });
-            console.log('New customer notification sent (test mode)');
+            const internalSecret = import.meta.env.VITE_INTERNAL_API_SECRET;
+            if (internalSecret) {
+              await supabase.functions.invoke('send-new-customer-notification', {
+                body: {
+                  customerId: newCustomer.id,
+                  recipientEmail: 'markuswimboeck@googlemail.com',
+                },
+                headers: {
+                  'x-internal-secret': internalSecret,
+                },
+              });
+              console.log('New customer notification sent (test mode)');
+            }
           } catch (notifyErr) {
             console.error('Failed to send new customer notification:', notifyErr);
           }
@@ -102,15 +108,21 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
 
           if (error) throw error;
 
-          // Send notification about new customer
+          // Send notification about new customer (internal API call)
           try {
-            await supabase.functions.invoke('send-new-customer-notification', {
-              body: {
-                customerId: newCustomer.id,
-                recipientEmail: 'markuswimboeck@googlemail.com',
-              },
-            });
-            console.log('New customer notification sent');
+            const internalSecret = import.meta.env.VITE_INTERNAL_API_SECRET;
+            if (internalSecret) {
+              await supabase.functions.invoke('send-new-customer-notification', {
+                body: {
+                  customerId: newCustomer.id,
+                  recipientEmail: 'markuswimboeck@googlemail.com',
+                },
+                headers: {
+                  'x-internal-secret': internalSecret,
+                },
+              });
+              console.log('New customer notification sent');
+            }
           } catch (notifyErr) {
             console.error('Failed to send new customer notification:', notifyErr);
           }
@@ -249,11 +261,13 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
       const recipientEmail = 'markuswimboeck@googlemail.com';
       
       try {
+        const internalSecret = import.meta.env.VITE_INTERNAL_API_SECRET;
         const { error: emailError } = await supabase.functions.invoke('send-questionnaire-email', {
           body: {
             customerId: state.customerId,
             recipientEmail: recipientEmail,
           },
+          headers: internalSecret ? { 'x-internal-secret': internalSecret } : {},
         });
 
         if (emailError) {

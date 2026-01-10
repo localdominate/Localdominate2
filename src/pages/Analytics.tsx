@@ -54,9 +54,9 @@ import ContentFreshnessAlerts from "@/components/admin/ContentFreshnessAlerts";
 import CoreWebVitalsPanel from "@/components/admin/CoreWebVitalsPanel";
 import CompetitiveAnalysis from "@/components/admin/CompetitiveAnalysis";
 
-const ADMIN_USERNAME = "admin";
-const ADMIN_PASSWORD = "localdominator240686";
-const AUTH_KEY = "analytics_authenticated";
+import { useAdminAuth } from "@/hooks/useAdminAuth";
+import { AdminLoginScreen } from "@/components/admin/AdminLoginScreen";
+import { AdminAccessDenied } from "@/components/admin/AdminAccessDenied";
 
 interface DBSession {
   id: string;
@@ -77,12 +77,7 @@ interface DBConversion {
 }
 
 const Analytics = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    return sessionStorage.getItem(AUTH_KEY) === "true";
-  });
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [loginError, setLoginError] = useState("");
+  const { user, isAdmin, isLoading: authLoading, signIn, signOut, error: authError } = useAdminAuth();
   const [refreshKey, setRefreshKey] = useState(0);
   
   // Database state
@@ -92,7 +87,7 @@ const Analytics = () => {
 
   // Fetch data from Supabase
   useEffect(() => {
-    if (!isAuthenticated) return;
+    if (!isAdmin) return;
     
     const fetchData = async () => {
       setIsLoading(true);
@@ -112,25 +107,37 @@ const Analytics = () => {
     };
     
     fetchData();
-  }, [isAuthenticated, refreshKey]);
+  }, [isAdmin, refreshKey]);
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
-      sessionStorage.setItem(AUTH_KEY, "true");
-      setIsAuthenticated(true);
-      setLoginError("");
-    } else {
-      setLoginError("Falscher Benutzername oder Passwort");
-    }
-  };
+  // Loading state
+  if (authLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-center">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent mx-auto mb-4" />
+          <p className="text-muted-foreground">Lade...</p>
+        </div>
+      </div>
+    );
+  }
 
-  const handleLogout = () => {
-    sessionStorage.removeItem(AUTH_KEY);
-    setIsAuthenticated(false);
-    setUsername("");
-    setPassword("");
-  };
+  // Login Screen
+  if (!user) {
+    return (
+      <AdminLoginScreen
+        onLogin={signIn}
+        isLoading={authLoading}
+        error={authError}
+        title="Analytics Dashboard"
+        description="Bitte melde dich mit deinem Admin-Konto an"
+      />
+    );
+  }
+
+  // Access denied for non-admins
+  if (!isAdmin) {
+    return <AdminAccessDenied onSignOut={signOut} userEmail={user.email} />;
+  }
 
   // Login Screen
   if (!isAuthenticated) {
