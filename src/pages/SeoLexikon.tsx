@@ -235,6 +235,41 @@ const TermDetail = ({ term, onTermClick, readTerms, onToggleRead }: {
             </CardContent>
           </Card>
 
+          {/* Best Practice Example Section */}
+          {term.bestPracticeExample && (
+            <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Sparkles className="w-5 h-5 text-primary" />
+                  Best Practice Beispiel
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <a 
+                  href={term.bestPracticeExample.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 rounded-lg bg-card/80 border border-primary/20 hover:border-primary/40 transition-colors group"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {term.bestPracticeExample.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {term.bestPracticeExample.description}
+                      </p>
+                      <span className="inline-block mt-2 text-xs bg-primary/20 text-primary px-2 py-1 rounded">
+                        {term.bestPracticeExample.source}
+                      </span>
+                    </div>
+                    <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+                  </div>
+                </a>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Related Articles Section */}
           {term.relatedArticles && term.relatedArticles.length > 0 && (
             <Card className="bg-card/50 border-border/50">
