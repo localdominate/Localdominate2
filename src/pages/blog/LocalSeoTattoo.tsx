@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoTattooImg from "@/assets/blog/local-seo-tattoo.jpg";
@@ -183,6 +184,7 @@ const LocalSeoTattoo = () => {
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
+      <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />
     </ArticleLayout>
   );
