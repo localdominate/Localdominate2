@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { getSessionId, getSessionStartTime } from "@/lib/sessionManager";
 
 interface EngagementData {
   sessionDurationMs: number;
@@ -34,9 +35,22 @@ interface SectionVisibility {
   cta: boolean;
 }
 
+// Accept dynamic testId and variant that can be updated
 const useAdvancedABTracking = (testId: string, variant: string) => {
-  const startTime = useRef(Date.now());
-  const sessionId = useRef(`${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
+  // Use central session manager for consistent session ID
+  const sessionId = useRef(getSessionId());
+  const startTime = useRef(getSessionStartTime());
+  
+  // Store current testId and variant in refs so they can be updated
+  const currentTestId = useRef(testId);
+  const currentVariant = useRef(variant);
+  
+  // Update refs when props change
+  useEffect(() => {
+    currentTestId.current = testId;
+    currentVariant.current = variant;
+  }, [testId, variant]);
+  
   const firstClickTime = useRef<number | null>(null);
   const firstCtaTime = useRef<number | null>(null);
   const sectionTimes = useRef<Record<string, number>>({});
@@ -202,15 +216,29 @@ const useAdvancedABTracking = (testId: string, variant: string) => {
 
   // Save engagement data to Supabase
   const saveEngagement = useCallback(async () => {
+    // Skip if no valid test ID
+    if (!currentTestId.current || currentTestId.current === 'no_test') {
+      console.log('[AdvancedABTracking] Skipping save - no active test');
+      return;
+    }
+    
     engagement.current.sessionDurationMs = Date.now() - startTime.current;
     engagement.current.engagementScore = calculateEngagementScore();
     engagement.current.intentScore = calculateIntentScore();
     
+    console.log('[AdvancedABTracking] Saving engagement data:', {
+      sessionId: sessionId.current,
+      testId: currentTestId.current,
+      variant: currentVariant.current,
+      engagementScore: engagement.current.engagementScore,
+      intentScore: engagement.current.intentScore,
+    });
+    
     try {
-      await supabase.from("ab_test_engagement").upsert({
+      const { error } = await supabase.from("ab_test_engagement").upsert({
         session_id: sessionId.current,
-        test_id: testId,
-        variant: variant,
+        test_id: currentTestId.current,
+        variant: currentVariant.current,
         session_duration_ms: engagement.current.sessionDurationMs,
         time_to_first_cta_ms: engagement.current.timeToFirstCtaMs,
         time_on_offer_section_ms: engagement.current.timeOnOfferSectionMs,
@@ -232,10 +260,16 @@ const useAdvancedABTracking = (testId: string, variant: string) => {
         engagement_score: engagement.current.engagementScore,
         intent_score: engagement.current.intentScore,
       }, { onConflict: "session_id" });
+      
+      if (error) {
+        console.warn("[AdvancedABTracking] Failed to save engagement data:", error);
+      } else {
+        console.log('[AdvancedABTracking] Successfully saved engagement data');
+      }
     } catch (error) {
-      console.warn("Failed to save engagement data:", error);
+      console.warn("[AdvancedABTracking] Failed to save engagement data:", error);
     }
-  }, [testId, variant, calculateEngagementScore, calculateIntentScore]);
+  }, [calculateEngagementScore, calculateIntentScore]);
 
   // Track scroll depth and CTA visibility
   useEffect(() => {

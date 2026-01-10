@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { TEST_REQUIREMENTS } from '@/lib/autoOptimizerConfig';
 import { analyzeABTest, calculatePower } from '@/lib/statisticalSignificance';
+import { getSessionId, getVariant, setVariant, setTestId, markViewTracked, hasTrackedView } from '@/lib/sessionManager';
 
 interface OptimizedElement {
   element_type: string;
@@ -46,35 +47,26 @@ interface CurrentTest {
   currentPower: number;
 }
 
-// Generate or retrieve session ID
-const getSessionId = (): string => {
-  let sessionId = sessionStorage.getItem('analytics_session_id');
-  if (!sessionId) {
-    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    sessionStorage.setItem('analytics_session_id', sessionId);
-  }
-  return sessionId;
-};
-
 export function useAutoOptimizer() {
   const [optimizedElements, setOptimizedElements] = useState<OptimizedElement[]>([]);
   const [testQueue, setTestQueue] = useState<TestQueueItem[]>([]);
   const [currentTest, setCurrentTest] = useState<CurrentTest | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [userVariant, setUserVariant] = useState<'A' | 'B'>('A');
+  
+  // Use central session manager for consistent session ID
   const sessionId = useRef<string>(getSessionId());
 
-  // Determine user's variant based on 50/50 split (improved)
+  // Determine user's variant based on 50/50 split (using central session manager)
   useEffect(() => {
-    const storedVariant = sessionStorage.getItem('auto_optimizer_variant');
-    if (storedVariant === 'A' || storedVariant === 'B') {
-      setUserVariant(storedVariant);
-    } else {
-      const random = Math.random() * 100;
-      const variant = random < TEST_REQUIREMENTS.trafficSplitA ? 'A' : 'B';
-      sessionStorage.setItem('auto_optimizer_variant', variant);
-      setUserVariant(variant);
-    }
+    // Get or create variant from central session manager
+    const variant = getVariant();
+    setUserVariant(variant);
+    
+    // Also update the central session manager
+    setVariant(variant);
+    
+    console.log('[AutoOptimizer] Using session:', sessionId.current, 'variant:', variant);
   }, []);
 
   // Load optimized elements and test queue
@@ -112,7 +104,13 @@ export function useAutoOptimizer() {
         // Find current running test
         const runningTest = parsedQueue.find(t => t.status === 'testing');
         if (runningTest) {
+          const testId = `auto_${runningTest.element_type}_${runningTest.element_id}`;
+          // Update central session manager with current test ID
+          setTestId(testId);
           await loadCurrentTestStats(runningTest);
+        } else {
+          // No running test - clear test ID
+          setTestId(null);
         }
       }
     } catch (error) {
@@ -244,7 +242,7 @@ export function useAutoOptimizer() {
     return defaultValue;
   }, [getTestVariantValue, getOptimizedValue]);
 
-  // Track a view for the current test
+  // Track a view for the current test - uses central session manager
   const trackTestView = useCallback(async (elementType: string, elementId: string) => {
     const runningTest = testQueue.find(
       t => t.status === 'testing' && t.element_type === elementType && t.element_id === elementId
@@ -254,9 +252,8 @@ export function useAutoOptimizer() {
 
     const testId = `auto_${elementType}_${elementId}`;
 
-    // Check if we already tracked this view in this session
-    const viewKey = `tracked_view_${testId}`;
-    if (sessionStorage.getItem(viewKey)) {
+    // Use central session manager to check if already tracked
+    if (hasTrackedView(testId)) {
       return; // Already tracked
     }
 
@@ -268,9 +265,9 @@ export function useAutoOptimizer() {
         page_url: window.location.pathname
       });
       
-      // Mark as tracked
-      sessionStorage.setItem(viewKey, 'true');
-      console.log(`[AutoOptimizer] Tracked view for ${testId}, variant ${userVariant}`);
+      // Mark as tracked using central session manager
+      markViewTracked(testId);
+      console.log(`[AutoOptimizer] Tracked view for ${testId}, variant ${userVariant}, session ${sessionId.current}`);
     } catch (error) {
       console.error('[AutoOptimizer] Error tracking view:', error);
     }
@@ -394,6 +391,7 @@ export function useAutoOptimizer() {
     currentTest,
     isLoading,
     userVariant,
+    sessionId: sessionId.current,
     getOptimizedValue,
     getTestVariantValue,
     getEffectiveValue,

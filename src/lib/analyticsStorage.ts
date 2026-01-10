@@ -1,5 +1,6 @@
 // Analytics data storage and retrieval utilities
 import { supabase } from "@/integrations/supabase/client";
+import { getSessionId, getVariant } from "@/lib/sessionManager";
 
 export interface HeatmapPoint {
   x: number;
@@ -22,6 +23,7 @@ export interface SessionData {
   userAgent: string;
   abVariantColor?: string;
   abVariantRestaurant?: string;
+  abTestId?: string;
 }
 
 export interface AnalyticsEvent {
@@ -48,17 +50,20 @@ const getDeviceType = (): "mobile" | "tablet" | "desktop" => {
   return "desktop";
 };
 
-// Generate session ID
-const generateSessionId = (): string => {
-  return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-};
-
-// Get A/B variants from localStorage
+// Get A/B variants from session manager and localStorage
 const getABVariants = () => {
+  // Get the central variant from session manager
+  const centralVariant = getVariant();
+  
   return {
-    color: localStorage.getItem(STORAGE_KEYS.AB_VARIANT_COLOR) || undefined,
+    color: centralVariant,
     restaurant: localStorage.getItem(STORAGE_KEYS.AB_VARIANT_RESTAURANT) || undefined,
   };
+};
+
+// Get current A/B test ID from sessionStorage
+const getCurrentTestId = (): string | null => {
+  return sessionStorage.getItem('current_ab_test_id');
 };
 
 // Track to Supabase (non-blocking)
@@ -75,21 +80,22 @@ const trackToSupabase = async (type: string, data: Record<string, any>) => {
   }
 };
 
-// Get or create current session
+// Get or create current session - uses central session manager
 export const getCurrentSession = (): SessionData => {
-  const existingSessionId = sessionStorage.getItem(STORAGE_KEYS.CURRENT_SESSION);
+  // Use central session manager for consistent session ID
+  const centralSessionId = getSessionId();
   const sessions = getSessions();
   
-  if (existingSessionId) {
-    const existing = sessions.find(s => s.id === existingSessionId);
-    if (existing) return existing;
-  }
+  // Check if we have this session already
+  const existing = sessions.find(s => s.id === centralSessionId);
+  if (existing) return existing;
   
   const variants = getABVariants();
+  const testId = getCurrentTestId();
   
-  // Create new session
+  // Create new session with central session ID
   const newSession: SessionData = {
-    id: generateSessionId(),
+    id: centralSessionId,
     startTime: Date.now(),
     pageViews: [window.location.pathname],
     scrollDepths: [],
@@ -98,9 +104,11 @@ export const getCurrentSession = (): SessionData => {
     userAgent: navigator.userAgent,
     abVariantColor: variants.color,
     abVariantRestaurant: variants.restaurant,
+    abTestId: testId || undefined,
   };
   
-  sessionStorage.setItem(STORAGE_KEYS.CURRENT_SESSION, newSession.id);
+  // Store the session ID reference
+  sessionStorage.setItem(STORAGE_KEYS.CURRENT_SESSION, centralSessionId);
   saveSession(newSession);
   
   // Track session start to Supabase
@@ -112,7 +120,10 @@ export const getCurrentSession = (): SessionData => {
     user_agent: newSession.userAgent,
     ab_variant_color: variants.color,
     ab_variant_restaurant: variants.restaurant,
+    ab_test_id: testId,
   });
+  
+  console.log('[AnalyticsStorage] Created session:', centralSessionId, 'variant:', variants.color);
   
   return newSession;
 };
@@ -121,6 +132,18 @@ export const getCurrentSession = (): SessionData => {
 export const updateSession = (updates: Partial<SessionData>): void => {
   const session = getCurrentSession();
   const updatedSession = { ...session, ...updates, endTime: Date.now() };
+  
+  // Get current A/B variant if not set
+  if (!updatedSession.abVariantColor) {
+    const variants = getABVariants();
+    updatedSession.abVariantColor = variants.color;
+  }
+  
+  // Get current test ID if not set
+  if (!updatedSession.abTestId) {
+    updatedSession.abTestId = getCurrentTestId() || undefined;
+  }
+  
   saveSession(updatedSession);
   
   // Track session update to Supabase
@@ -130,7 +153,20 @@ export const updateSession = (updates: Partial<SessionData>): void => {
     page_views: updatedSession.pageViews.length,
     scroll_depths: updatedSession.scrollDepths,
     end_time: new Date().toISOString(),
+    ab_variant_color: updatedSession.abVariantColor,
+    ab_test_id: updatedSession.abTestId,
   });
+};
+
+// Update session with A/B test info
+export const updateSessionWithABTest = (testId: string, variant: 'A' | 'B'): void => {
+  const session = getCurrentSession();
+  session.abVariantColor = variant;
+  session.abTestId = testId;
+  saveSession(session);
+  
+  // Also store in sessionStorage for quick access
+  sessionStorage.setItem('current_ab_test_id', testId);
 };
 
 // Save session
@@ -183,10 +219,10 @@ export const saveEvent = (event: Omit<AnalyticsEvent, "timestamp">): void => {
     const trimmedEvents = events.slice(-500);
     localStorage.setItem(STORAGE_KEYS.EVENTS, JSON.stringify(trimmedEvents));
     
-    // Track event to Supabase
-    const session = getCurrentSession();
+    // Track event to Supabase - use central session ID
+    const sessionId = getSessionId();
     trackToSupabase("event", {
-      session_id: session.id,
+      session_id: sessionId,
       event_type: event.type,
       event_name: event.name,
       event_data: event.data,
@@ -205,13 +241,15 @@ export const trackConversion = (
   amount?: number
 ): void => {
   try {
-    const session = getCurrentSession();
+    const sessionId = getSessionId();
     const variants = getABVariants();
+    const testId = getCurrentTestId();
     
     trackToSupabase("conversion", {
-      session_id: session.id,
+      session_id: sessionId,
       ab_variant_color: variants.color,
       ab_variant_restaurant: variants.restaurant,
+      ab_test_id: testId,
       conversion_type: conversionType,
       cta_location: ctaLocation,
       cta_text: ctaText,
@@ -223,7 +261,7 @@ export const trackConversion = (
     saveEvent({
       type: "conversion",
       name: conversionType,
-      data: { ctaLocation, ctaText, amount },
+      data: { ctaLocation, ctaText, amount, abTestId: testId },
     });
   } catch (e) {
     console.warn("Failed to track conversion:", e);
@@ -237,7 +275,8 @@ export const trackHeatmapClick = (
   elementPath?: string
 ): void => {
   try {
-    const session = getCurrentSession();
+    const sessionId = getSessionId();
+    const variants = getABVariants();
     
     // Save locally
     const heatmapData = getHeatmapData();
@@ -254,14 +293,15 @@ export const trackHeatmapClick = (
     const trimmed = heatmapData.slice(-1000);
     localStorage.setItem(STORAGE_KEYS.HEATMAP, JSON.stringify(trimmed));
     
-    // Track to Supabase
+    // Track to Supabase with session and variant
     trackToSupabase("heatmap", {
-      session_id: session.id,
+      session_id: sessionId,
       x: x / window.innerWidth,
       y: y / document.documentElement.scrollHeight,
       interaction_type: "click",
       element_path: elementPath,
       page_path: window.location.pathname,
+      ab_variant: variants.color,
     });
   } catch (e) {
     console.warn("Failed to track heatmap click:", e);
@@ -337,8 +377,11 @@ export const calculateMetrics = () => {
     return acc;
   }, {} as Record<string, number>);
   
-  // A/B variant breakdown
+  // A/B variant breakdown - now includes the unified variant
   const variantBreakdown = {
+    A: sessions.filter(s => s.abVariantColor === 'A').length,
+    B: sessions.filter(s => s.abVariantColor === 'B').length,
+    // Legacy support
     blue: sessions.filter(s => s.abVariantColor === "blue").length,
     red: sessions.filter(s => s.abVariantColor === "red").length,
   };
