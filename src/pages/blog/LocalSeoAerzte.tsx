@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -255,8 +256,8 @@ const LocalSeoAerzte = () => {
         </h2>
 
         <p>
-          <strong>YMYL steht für "Your Money or Your Life"</strong> – Inhalte, die direkten Einfluss 
-          auf die Gesundheit, Finanzen oder Sicherheit von Menschen haben. Google prüft diese Inhalte 
+          <strong><LexikonLink term="YMYL">YMYL</LexikonLink> steht für "Your Money or Your Life"</strong> – Inhalte, die direkten Einfluss 
+          auf die Gesundheit, Finanzen oder Sicherheit von Menschen haben. Google prüft diese Inhalte
           besonders streng, denn falsche medizinische Informationen können Leben gefährden.
         </p>
 

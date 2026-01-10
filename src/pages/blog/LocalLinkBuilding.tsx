@@ -70,7 +70,7 @@ const LocalLinkBuilding = () => {
       {/* Einführung */}
       <section id="intro" className="mb-12">
         <p className="lead text-xl text-muted-foreground mb-6">
-          <strong>Lokale Backlinks sind der Turbo für dein Google Maps Ranking.</strong> Während nationale SEO oft auf Gastartikel und große Publisher setzt, funktioniert lokales Link Building anders. Es geht um Community-Engagement, lokale Partnerschaften und kreative Strategien. Dieser Guide zeigt dir, wie du hochwertige lokale Links aufbaust.
+          <strong>Lokale <LexikonLink term="Backlinks" /> sind der Turbo für dein Google Maps Ranking.</strong> Während nationale SEO oft auf Gastartikel und große Publisher setzt, funktioniert lokales Link Building anders. Es geht um Community-Engagement, lokale Partnerschaften und kreative Strategien. Dieser Guide zeigt dir, wie du hochwertige lokale Links aufbaust.
         </p>
 
         <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-8">
@@ -109,7 +109,7 @@ const LocalLinkBuilding = () => {
         </h2>
         
         <p className="mb-6">
-          Lokales Link Building unterscheidet sich grundlegend von nationalem SEO. Hier sind die <strong>wertvollsten Quellen</strong> für lokale Backlinks:
+          Lokales Link Building unterscheidet sich grundlegend von nationalem SEO. Hier sind die <strong>wertvollsten Quellen</strong> für lokale <LexikonLink term="Backlinks" /> die deine <LexikonLink term="Domain Authority" /> stärken:
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
