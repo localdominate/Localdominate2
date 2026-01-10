@@ -33,6 +33,42 @@ export const seoLexikonData: SEOTerm[] = [
   // === A ===
   {
     letter: "A",
+    term: "Algorithmus-Update",
+    shortDescription: "Änderungen am Google-Suchalgorithmus, die Rankings beeinflussen.",
+    fullDescription: "Algorithmus-Updates sind Änderungen, die Google an seinem Suchalgorithmus vornimmt. Große Updates wie Core Updates, Helpful Content Update oder Spam Updates können erhebliche Ranking-Veränderungen verursachen. Für lokale Unternehmen ist es wichtig, auf qualitativ hochwertige Inhalte und E-E-A-T zu setzen.",
+    features: [
+      "Core Updates (mehrmals jährlich)",
+      "Helpful Content Update",
+      "Spam Updates",
+      "Local Search Updates"
+    ],
+    statistics: [
+      { label: "Google Updates pro Jahr", value: "1000+", icon: "chart" },
+      { label: "Große Core Updates", value: "3-4x", icon: "trending" },
+      { label: "Ranking-Volatilität nach Update", value: "Hoch", icon: "percent" }
+    ],
+    benefits: [
+      "Verständnis für Ranking-Schwankungen",
+      "Proaktive SEO-Strategie entwickeln",
+      "Qualitätsfokus statt Tricks",
+      "Langfristige Stabilität erreichen"
+    ],
+    relatedTerms: ["E-E-A-T", "Quality Raters", "White Hat SEO", "Technical SEO"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ],
+    bestPracticeExample: {
+      title: "Google: Core Updates verstehen",
+      description: "Offizielle Google-Dokumentation über Core Updates und wie man sich darauf vorbereitet.",
+      url: "https://developers.google.com/search/updates/core-updates",
+      source: "Google Search Central"
+    }
+  },
+  {
+    letter: "A",
     term: "Alt-Text",
     shortDescription: "Alternativer Text für Bilder, der von Suchmaschinen gelesen wird.",
     fullDescription: "Alt-Text (Alternativtext) ist eine Beschreibung von Bildern, die im HTML-Code hinterlegt wird. Er hilft Suchmaschinen zu verstehen, was auf einem Bild zu sehen ist, und wird Nutzern mit Sehbehinderungen vorgelesen. Für Local SEO ist Alt-Text besonders wichtig, um lokale Relevanz durch Ortsnamen und Keywords zu signalisieren.",
@@ -53,7 +89,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Zusätzliche Keyword-Signale für Suchmaschinen",
       "Verbesserte User Experience"
     ],
-    relatedTerms: ["Bild-SEO", "On-Page SEO", "Barrierefreiheit"],
+    relatedTerms: ["Image SEO", "On-Page SEO", "Technical SEO", "Barrierefreiheit"],
     difficulty: "anfänger",
     importance: 3,
     relatedArticles: [
@@ -89,13 +125,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Nutzerführung verbessern",
       "Interne Verlinkungsstrategie optimieren"
     ],
-    relatedTerms: ["Backlinks", "Internal Linking", "Link Building"],
+    relatedTerms: ["Backlinks", "Internal Linking", "Link Building", "Off-Page SEO"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
       { slug: "local-link-building", title: "Local Link Building Strategien" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Moz: Anchor Text Best Practices",
+      description: "Umfassender Guide zur optimalen Verwendung von Anchor Texten für SEO.",
+      url: "https://moz.com/learn/seo/anchor-text",
+      source: "Moz"
+    }
   },
   // === B ===
   {
@@ -120,7 +162,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Mehr organischer Traffic",
       "Stärkere lokale Relevanz"
     ],
-    relatedTerms: ["Link Building", "Domain Authority", "Anchor Text"],
+    relatedTerms: ["Link Building", "Domain Authority", "Anchor Text", "Off-Page SEO", "Nofollow Link"],
     difficulty: "fortgeschritten",
     importance: 5,
     relatedArticles: [
@@ -134,6 +176,36 @@ export const seoLexikonData: SEOTerm[] = [
       url: "https://moz.com/beginners-guide-to-link-building",
       source: "Moz"
     }
+  },
+  {
+    letter: "B",
+    term: "Black Hat SEO",
+    shortDescription: "Manipulative SEO-Methoden, die gegen Google-Richtlinien verstoßen.",
+    fullDescription: "Black Hat SEO bezeichnet Optimierungstechniken, die gegen die Webmaster-Richtlinien von Google verstoßen. Dazu gehören Keyword Stuffing, versteckter Text, Linkkauf und Cloaking. Diese Methoden können kurzfristig funktionieren, führen aber oft zu Abstrafungen oder sogar zur Entfernung aus dem Google-Index.",
+    features: [
+      "Keyword Stuffing (Überoptimierung)",
+      "Linkkauf und Linkfarmen",
+      "Cloaking (versteckter Inhalt)",
+      "Private Blog Networks (PBN)"
+    ],
+    statistics: [
+      { label: "Abstrafungsrisiko", value: "Sehr hoch", icon: "trending" },
+      { label: "Recovery-Zeit nach Penalty", value: "6-24 Monate", icon: "clock" },
+      { label: "Google-Erkennung", value: "99%+", icon: "percent" }
+    ],
+    benefits: [
+      "Wissen was man vermeiden sollte",
+      "Konkurrenz-Analyse möglich",
+      "Risikobewertung für Strategien",
+      "Langfristigen Erfolg sichern durch Vermeidung"
+    ],
+    relatedTerms: ["White Hat SEO", "Algorithmus-Update", "Keyword Stuffing", "Link Building"],
+    difficulty: "fortgeschritten",
+    importance: 3,
+    relatedArticles: [
+      { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
   },
   {
     letter: "B",
@@ -157,13 +229,50 @@ export const seoLexikonData: SEOTerm[] = [
       "Conversion-Optimierung ermöglichen",
       "Engagement messen"
     ],
-    relatedTerms: ["User Experience", "Dwell Time", "Engagement Signals"],
+    relatedTerms: ["User Experience", "Dwell Time", "CTR", "Conversion Rate"],
     difficulty: "anfänger",
     importance: 3,
     relatedArticles: [
       { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
     ]
+  },
+  {
+    letter: "B",
+    term: "Branchenverzeichnis",
+    shortDescription: "Online-Verzeichnis zur Eintragung von Unternehmensdaten.",
+    fullDescription: "Branchenverzeichnisse sind Online-Plattformen, auf denen Unternehmen ihre Kontaktdaten und Informationen eintragen können. Sie sind eine wichtige Quelle für Citations und stärken die lokale SEO. In Deutschland sind Das Örtliche, Gelbe Seiten, Yelp und branchenspezifische Portale besonders relevant.",
+    features: [
+      "Strukturierte Unternehmenseinträge",
+      "NAP-Daten konsistent halten",
+      "Branchenspezifische Verzeichnisse",
+      "Regionale Verzeichnisse"
+    ],
+    statistics: [
+      { label: "Wichtige Verzeichnisse DE", value: "50+", icon: "search" },
+      { label: "Citation-Einfluss auf Ranking", value: "13%", icon: "percent" },
+      { label: "Unternehmen mit Einträgen", value: "68%", icon: "users" }
+    ],
+    benefits: [
+      "Stärkere lokale Präsenz",
+      "Mehr Citations aufbauen",
+      "Bessere lokale Rankings",
+      "Zusätzliche Traffic-Quellen"
+    ],
+    relatedTerms: ["Citations", "NAP", "Local SEO", "Google Business Profile"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "nap-konsistenz-local-seo", title: "NAP-Konsistenz für Local SEO" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
+      { slug: "local-seo-schweiz", title: "Local SEO Schweiz" }
+    ],
+    bestPracticeExample: {
+      title: "BrightLocal: Top Business Directories",
+      description: "Übersicht der wichtigsten Branchenverzeichnisse für lokale Unternehmen nach Land.",
+      url: "https://www.brightlocal.com/learn/local-citations/",
+      source: "BrightLocal"
+    }
   },
   // === C ===
   {
@@ -188,11 +297,11 @@ export const seoLexikonData: SEOTerm[] = [
       "Mehr Sichtbarkeit in lokalen Suchergebnissen",
       "Konsistente Unternehmensdaten im Web"
     ],
-    relatedTerms: ["NAP", "Branchenverzeichnis", "Google Business Profile"],
+    relatedTerms: ["NAP", "Branchenverzeichnis", "Google Business Profile", "Local SEO"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
-      { slug: "nap-konsistenz", title: "NAP-Konsistenz Guide" },
+      { slug: "nap-konsistenz-local-seo", title: "NAP-Konsistenz Guide" },
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
     ],
@@ -225,12 +334,85 @@ export const seoLexikonData: SEOTerm[] = [
       "Crawl-Budget optimieren",
       "Klare Signale an Suchmaschinen"
     ],
-    relatedTerms: ["Duplicate Content", "URL-Struktur", "Technical SEO"],
+    relatedTerms: ["Duplicate Content", "URL-Struktur", "Technical SEO", "Crawling"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
       { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" },
       { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" }
+    ],
+    bestPracticeExample: {
+      title: "Google: Canonical URLs",
+      description: "Offizielle Google-Dokumentation zur korrekten Verwendung von Canonical Tags.",
+      url: "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      source: "Google Search Central"
+    }
+  },
+  {
+    letter: "C",
+    term: "Content-Strategie",
+    shortDescription: "Planung und Erstellung von Inhalten zur Erreichung von SEO-Zielen.",
+    fullDescription: "Eine Content-Strategie definiert, welche Inhalte für welche Zielgruppen erstellt werden, um bestimmte Geschäfts- und SEO-Ziele zu erreichen. Für lokale Unternehmen bedeutet dies die Erstellung von lokalem Content wie Stadtteil-Seiten, lokalen Guides und Branchenwissen.",
+    features: [
+      "Content-Audit und Gap-Analyse",
+      "Keyword-gesteuerte Themenplanung",
+      "Content-Formate definieren",
+      "Redaktionskalender erstellen"
+    ],
+    statistics: [
+      { label: "Unternehmen mit Strategie", value: "40%", icon: "percent" },
+      { label: "ROI mit Content-Marketing", value: "3x", icon: "trending" },
+      { label: "Traffic-Steigerung", value: "+55%", icon: "chart" }
+    ],
+    benefits: [
+      "Zielgerichtete Content-Erstellung",
+      "Bessere Keyword-Abdeckung",
+      "Konsistente Veröffentlichung",
+      "Höherer ROI für Content"
+    ],
+    relatedTerms: ["Keywords", "Search Intent", "On-Page SEO", "Local SEO"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-content-marketing", title: "Local Content Marketing" },
+      { slug: "local-seo-keywords-finden", title: "Local SEO Keywords finden" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ],
+    bestPracticeExample: {
+      title: "Content Marketing Institute: Strategy Guide",
+      description: "Umfassender Leitfaden zur Entwicklung einer erfolgreichen Content-Strategie.",
+      url: "https://contentmarketinginstitute.com/developing-a-strategy/",
+      source: "Content Marketing Institute"
+    }
+  },
+  {
+    letter: "C",
+    term: "Conversion Rate",
+    shortDescription: "Prozentsatz der Besucher, die eine gewünschte Aktion ausführen.",
+    fullDescription: "Die Conversion Rate gibt an, wie viel Prozent der Website-Besucher eine bestimmte Aktion durchführen - z.B. ein Formular ausfüllen, anrufen oder kaufen. Für lokale Unternehmen ist die Optimierung der Conversion Rate entscheidend, um aus Website-Besuchern zahlende Kunden zu machen.",
+    features: [
+      "Verschiedene Conversion-Typen",
+      "Micro- vs. Macro-Conversions",
+      "A/B-Testing zur Optimierung",
+      "Tracking in Analytics"
+    ],
+    statistics: [
+      { label: "Durchschnittliche CR", value: "2-5%", icon: "percent" },
+      { label: "Lokale Landing Pages", value: "5-10%", icon: "trending" },
+      { label: "Mobile vs. Desktop", value: "-30%", icon: "chart" }
+    ],
+    benefits: [
+      "Mehr Kunden bei gleichem Traffic",
+      "Besserer ROI für Marketing",
+      "Datenbasierte Optimierung",
+      "Höhere Profitabilität"
+    ],
+    relatedTerms: ["CTR", "User Experience", "Bounce Rate", "Local SEO"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
     ]
   },
   {
@@ -255,7 +437,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Höhere Conversion-Rates",
       "Professioneller Website-Auftritt"
     ],
-    relatedTerms: ["PageSpeed", "User Experience", "Technical SEO"],
+    relatedTerms: ["PageSpeed", "User Experience", "Technical SEO", "Mobile First Index"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
@@ -292,13 +474,49 @@ export const seoLexikonData: SEOTerm[] = [
       "Strukturprobleme aufdecken",
       "SEO-Grundlagen verstehen"
     ],
-    relatedTerms: ["Indexierung", "Robots.txt", "Sitemap"],
+    relatedTerms: ["Indexierung", "Robots.txt", "XML-Sitemap", "Technical SEO"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
     ]
+  },
+  {
+    letter: "C",
+    term: "CTR",
+    shortDescription: "Click-Through-Rate - Verhältnis von Klicks zu Impressionen.",
+    fullDescription: "Die Click-Through-Rate (CTR) zeigt, wie oft Nutzer auf ein Suchergebnis klicken im Verhältnis zu den Impressionen. Eine hohe CTR signalisiert Google, dass dein Ergebnis relevant ist. Title Tags und Meta Descriptions sind entscheidend für eine gute CTR.",
+    features: [
+      "Gemessen in Google Search Console",
+      "Abhängig von Position und SERP-Features",
+      "Beeinflusst durch Title und Description",
+      "Branchenspezifische Benchmarks"
+    ],
+    statistics: [
+      { label: "Position 1 CTR", value: "27.6%", icon: "percent" },
+      { label: "Position 2 CTR", value: "15.8%", icon: "chart" },
+      { label: "Position 10 CTR", value: "2.4%", icon: "trending" }
+    ],
+    benefits: [
+      "Ranking-Signal für Google",
+      "Mehr Traffic bei gleichem Ranking",
+      "Content-Qualität messen",
+      "Optimierungspotenzial erkennen"
+    ],
+    relatedTerms: ["Title Tag", "Meta-Tags", "SERP", "Conversion Rate"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ],
+    bestPracticeExample: {
+      title: "Backlinko: CTR Study 2024",
+      description: "Aktuelle Studie zu organischen CTRs nach Position mit Optimierungstipps.",
+      url: "https://backlinko.com/google-ctr-stats",
+      source: "Backlinko"
+    }
   },
   // === D ===
   {
@@ -323,7 +541,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Tracking des SEO-Fortschritts",
       "Bewertung potenzieller Backlink-Quellen"
     ],
-    relatedTerms: ["Backlinks", "Page Authority", "Trust Flow"],
+    relatedTerms: ["Backlinks", "Link Building", "Off-Page SEO"],
     difficulty: "fortgeschritten",
     importance: 3,
     relatedArticles: [
@@ -353,12 +571,41 @@ export const seoLexikonData: SEOTerm[] = [
       "Crawl-Budget optimieren",
       "Klare Signale an Google senden"
     ],
-    relatedTerms: ["Canonical URL", "Robots.txt", "Technical SEO"],
+    relatedTerms: ["Canonical URL", "Robots.txt", "Technical SEO", "Indexierung"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
       { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
+  },
+  {
+    letter: "D",
+    term: "Dwell Time",
+    shortDescription: "Verweildauer eines Nutzers auf einer Seite nach dem Klick.",
+    fullDescription: "Dwell Time ist die Zeit, die ein Nutzer auf einer Website verbringt, nachdem er von den Suchergebnissen geklickt hat, bis er wieder zu Google zurückkehrt. Eine längere Dwell Time signalisiert Google, dass der Inhalt relevant und wertvoll ist. Sie unterscheidet sich von der allgemeinen Verweildauer.",
+    features: [
+      "Zeit zwischen Klick und Zurück zu SERP",
+      "Qualitätssignal für Google",
+      "Korreliert mit Content-Qualität",
+      "Nicht direkt messbar für Websitebetreiber"
+    ],
+    statistics: [
+      { label: "Gute Dwell Time", value: ">3 Minuten", icon: "clock" },
+      { label: "Korrelation mit Rankings", value: "Stark", icon: "trending" },
+      { label: "Video-Content Dwell Time", value: "+80%", icon: "chart" }
+    ],
+    benefits: [
+      "Indikator für Content-Qualität",
+      "Indirektes Ranking-Signal",
+      "Nutzer-Engagement verstehen",
+      "Content-Optimierung priorisieren"
+    ],
+    relatedTerms: ["Bounce Rate", "User Experience", "Search Intent", "CTR"],
+    difficulty: "fortgeschritten",
+    importance: 3,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" }
     ]
   },
   // === E ===
@@ -384,12 +631,12 @@ export const seoLexikonData: SEOTerm[] = [
       "Bessere Conversion-Rates",
       "Nachhaltige SEO-Strategie"
     ],
-    relatedTerms: ["YMYL", "Quality Raters", "Content Quality"],
+    relatedTerms: ["YMYL", "Quality Raters", "Reviews (Bewertungen)", "White Hat SEO", "Algorithmus-Update"],
     difficulty: "fortgeschritten",
     importance: 5,
     relatedArticles: [
-      { slug: "local-seo-aerzte", title: "Local SEO für Ärzte" },
-      { slug: "local-seo-anwaelte", title: "Local SEO für Anwälte" },
+      { slug: "local-seo-aerzte-praxen", title: "Local SEO für Ärzte" },
+      { slug: "local-seo-anwaelte-kanzleien", title: "Local SEO für Anwälte" },
       { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" },
       { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" }
     ],
@@ -423,13 +670,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Autorität und Expertise demonstrieren",
       "Voice Search Optimierung"
     ],
-    relatedTerms: ["SERP", "Voice Search", "Zero-Click Search"],
+    relatedTerms: ["SERP", "Voice Search", "Zero-Click Search", "Rich Snippets"],
     difficulty: "fortgeschritten",
     importance: 3,
     relatedArticles: [
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
       { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Ahrefs: How to Earn Featured Snippets",
+      description: "Strategien zur Optimierung für Featured Snippets mit Praxisbeispielen.",
+      url: "https://ahrefs.com/blog/find-featured-snippets/",
+      source: "Ahrefs"
+    }
   },
   // === G ===
   {
@@ -454,7 +707,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Bewertungsmanagement",
       "Insights und Analytics"
     ],
-    relatedTerms: ["Local Pack", "NAP", "Google Maps"],
+    relatedTerms: ["Local Pack", "NAP", "Google Maps", "Reviews (Bewertungen)", "Local SEO"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
@@ -466,6 +719,43 @@ export const seoLexikonData: SEOTerm[] = [
     bestPracticeExample: {
       title: "Google: Business Profile Optimierung",
       description: "Offizielle Google-Anleitung zur vollständigen Optimierung deines Unternehmensprofils.",
+      url: "https://support.google.com/business/answer/7091?hl=de",
+      source: "Google Support"
+    }
+  },
+  {
+    letter: "G",
+    term: "Google Maps",
+    shortDescription: "Googles Kartendienst mit lokalen Unternehmensergebnissen.",
+    fullDescription: "Google Maps ist der meistgenutzte Kartendienst weltweit und eine Hauptquelle für lokale Suchanfragen. Unternehmen mit einem Google Business Profile erscheinen auf Google Maps mit Standort, Bewertungen und Kontaktdaten. Die Optimierung für Google Maps ist ein Kernbestandteil des Local SEO.",
+    features: [
+      "Karteneinbettung in Websites",
+      "Wegbeschreibungen für Kunden",
+      "Unternehmensfotos und Street View",
+      "Öffnungszeiten in Echtzeit"
+    ],
+    statistics: [
+      { label: "Google Maps Nutzer monatlich", value: "1+ Mrd", icon: "users" },
+      { label: "Lokale Suchen auf Maps", value: "46%", icon: "percent" },
+      { label: "Maps-Nutzer besuchen Geschäft", value: "76%", icon: "trending" }
+    ],
+    benefits: [
+      "Maximale lokale Sichtbarkeit",
+      "Wegführung direkt zum Geschäft",
+      "Kundenbewertungen sichtbar",
+      "Fotos und Eindrücke zeigen"
+    ],
+    relatedTerms: ["Google Business Profile", "Local Pack", "NAP", "Proximity (Entfernung)"],
+    difficulty: "anfänger",
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
+      { slug: "google-maps-ranking-faktoren", title: "Google Maps Ranking Faktoren" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ],
+    bestPracticeExample: {
+      title: "Google: Präsenz in Google Maps verbessern",
+      description: "Offizielle Tipps von Google zur Verbesserung der Sichtbarkeit in Google Maps.",
       url: "https://support.google.com/business/answer/7091?hl=de",
       source: "Google Support"
     }
@@ -492,7 +782,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Weniger Wettbewerb pro Region",
       "Gezielte lokale Präsenz aufbauen"
     ],
-    relatedTerms: ["Local SEO", "Local Pack", "Proximity"],
+    relatedTerms: ["Local SEO", "Local Pack", "Proximity (Entfernung)", "Hreflang"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
@@ -503,35 +793,6 @@ export const seoLexikonData: SEOTerm[] = [
     ]
   },
   // === H ===
-  {
-    letter: "H",
-    term: "HTTPS",
-    shortDescription: "Sichere Verschlüsselung der Website-Verbindung.",
-    fullDescription: "HTTPS (Hypertext Transfer Protocol Secure) verschlüsselt die Datenübertragung zwischen Browser und Server. Google hat HTTPS als Ranking-Faktor bestätigt und zeigt Warnungen bei unsicheren Seiten an. Für lokale Unternehmen ist HTTPS unerlässlich, um Vertrauen zu schaffen.",
-    features: [
-      "SSL/TLS-Zertifikat erforderlich",
-      "Schloss-Symbol im Browser",
-      "Schutz sensibler Daten",
-      "Ranking-Signal für Google"
-    ],
-    statistics: [
-      { label: "Top 100 mit HTTPS", value: "95%", icon: "percent" },
-      { label: "Nutzervertrauen steigt", value: "+84%", icon: "users" },
-      { label: "Ranking-Boost", value: "Gering", icon: "trending" }
-    ],
-    benefits: [
-      "Pflichtvoraussetzung für seriöse Websites",
-      "Erhöhtes Nutzervertrauen",
-      "Schutz von Kundendaten",
-      "Positives Ranking-Signal"
-    ],
-    relatedTerms: ["SSL-Zertifikat", "Website-Sicherheit", "Core Web Vitals"],
-    difficulty: "anfänger",
-    importance: 4,
-    relatedArticles: [
-      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
-  },
   {
     letter: "H",
     term: "Heading Tags (H1-H6)",
@@ -554,7 +815,72 @@ export const seoLexikonData: SEOTerm[] = [
       "Verbesserte Lesbarkeit",
       "Featured Snippet-Optimierung"
     ],
-    relatedTerms: ["On-Page SEO", "Content-Struktur", "Title Tag"],
+    relatedTerms: ["On-Page SEO", "Title Tag", "Technical SEO"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
+  },
+  {
+    letter: "H",
+    term: "Hreflang",
+    shortDescription: "HTML-Attribut für mehrsprachige und regionale Website-Versionen.",
+    fullDescription: "Das Hreflang-Attribut signalisiert Google, welche Sprach- und Regionalversionen einer Seite existieren. Es verhindert Duplicate Content-Probleme bei mehrsprachigen Websites und sorgt dafür, dass Nutzer die richtige Version für ihre Sprache und Region sehen.",
+    features: [
+      "Sprach- und Regionalcodes (de, de-CH, de-AT)",
+      "Im HTML-Head oder Sitemap",
+      "x-default für Fallback-Seite",
+      "Bidirektionale Verknüpfung nötig"
+    ],
+    statistics: [
+      { label: "Mehrsprachige Sites mit Hreflang", value: "35%", icon: "percent" },
+      { label: "Falsche Implementierung", value: "65%", icon: "chart" },
+      { label: "Internationale SEO-Einfluss", value: "Hoch", icon: "trending" }
+    ],
+    benefits: [
+      "Richtige Sprache für Nutzer",
+      "Duplicate Content vermeiden",
+      "Bessere internationale Rankings",
+      "Klare Signale an Google"
+    ],
+    relatedTerms: ["Geo-Targeting", "Canonical URL", "Technical SEO", "Duplicate Content"],
+    difficulty: "experte",
+    importance: 3,
+    relatedArticles: [
+      { slug: "local-seo-schweiz", title: "Local SEO Schweiz" },
+      { slug: "local-seo-zuerich", title: "Local SEO Zürich" }
+    ],
+    bestPracticeExample: {
+      title: "Google: Hreflang Implementierung",
+      description: "Offizielle Dokumentation zur korrekten Verwendung von Hreflang-Tags.",
+      url: "https://developers.google.com/search/docs/specialty/international/localized-versions",
+      source: "Google Search Central"
+    }
+  },
+  {
+    letter: "H",
+    term: "HTTPS",
+    shortDescription: "Sichere Verschlüsselung der Website-Verbindung.",
+    fullDescription: "HTTPS (Hypertext Transfer Protocol Secure) verschlüsselt die Datenübertragung zwischen Browser und Server. Google hat HTTPS als Ranking-Faktor bestätigt und zeigt Warnungen bei unsicheren Seiten an. Für lokale Unternehmen ist HTTPS unerlässlich, um Vertrauen zu schaffen.",
+    features: [
+      "SSL/TLS-Zertifikat erforderlich",
+      "Schloss-Symbol im Browser",
+      "Schutz sensibler Daten",
+      "Ranking-Signal für Google"
+    ],
+    statistics: [
+      { label: "Top 100 mit HTTPS", value: "95%", icon: "percent" },
+      { label: "Nutzervertrauen steigt", value: "+84%", icon: "users" },
+      { label: "Ranking-Boost", value: "Gering", icon: "trending" }
+    ],
+    benefits: [
+      "Pflichtvoraussetzung für seriöse Websites",
+      "Erhöhtes Nutzervertrauen",
+      "Schutz von Kundendaten",
+      "Positives Ranking-Signal"
+    ],
+    relatedTerms: ["SSL-Zertifikat", "Technical SEO", "Core Web Vitals"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
@@ -562,6 +888,42 @@ export const seoLexikonData: SEOTerm[] = [
     ]
   },
   // === I ===
+  {
+    letter: "I",
+    term: "Image SEO",
+    shortDescription: "Optimierung von Bildern für bessere Rankings in der Bildersuche.",
+    fullDescription: "Image SEO umfasst alle Maßnahmen zur Optimierung von Bildern für Suchmaschinen. Dazu gehören beschreibende Dateinamen, Alt-Texte, Bildkomprimierung und strukturierte Daten. Für lokale Unternehmen sind optimierte Fotos in Google Business Profile und auf der Website besonders wichtig.",
+    features: [
+      "Beschreibende Dateinamen",
+      "Optimierte Alt-Texte",
+      "Bildkomprimierung für PageSpeed",
+      "Lazy Loading implementieren"
+    ],
+    statistics: [
+      { label: "Google Images Traffic-Anteil", value: "20%+", icon: "percent" },
+      { label: "Bilder ohne Alt-Text", value: "42%", icon: "chart" },
+      { label: "Komprimierung spart", value: "60-80%", icon: "trending" }
+    ],
+    benefits: [
+      "Traffic aus Google Bildersuche",
+      "Bessere User Experience",
+      "Schnellere Ladezeiten",
+      "Lokale Relevanz signalisieren"
+    ],
+    relatedTerms: ["Alt-Text", "PageSpeed", "Core Web Vitals", "On-Page SEO"],
+    difficulty: "anfänger",
+    importance: 3,
+    relatedArticles: [
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
+    ],
+    bestPracticeExample: {
+      title: "Google: Image SEO Best Practices",
+      description: "Offizielle Richtlinien zur Bildoptimierung für die Google-Suche.",
+      url: "https://developers.google.com/search/docs/appearance/google-images",
+      source: "Google Search Central"
+    }
+  },
   {
     letter: "I",
     term: "Indexierung",
@@ -584,7 +946,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Schnellere Aufnahme neuer Seiten",
       "Vermeidung von Duplicate Content"
     ],
-    relatedTerms: ["Crawling", "Sitemap", "Robots.txt"],
+    relatedTerms: ["Crawling", "XML-Sitemap", "Robots.txt", "Webmaster Tools / Search Console"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
@@ -614,13 +976,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Themenautorität aufbauen",
       "Crawl-Budget effizient nutzen"
     ],
-    relatedTerms: ["Anchor Text", "Site Architecture", "PageRank"],
+    relatedTerms: ["Anchor Text", "On-Page SEO", "Crawling", "Link Building"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
       { slug: "local-content-marketing", title: "Local Content Marketing" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Ahrefs: Internal Linking for SEO",
+      description: "Detaillierter Guide zur Optimierung der internen Verlinkung für bessere Rankings.",
+      url: "https://ahrefs.com/blog/internal-links-for-seo/",
+      source: "Ahrefs"
+    }
   },
   // === J ===
   {
@@ -645,13 +1013,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Höhere Klickraten",
       "Voice Search Optimierung"
     ],
-    relatedTerms: ["Schema Markup", "Rich Snippets", "Strukturierte Daten"],
+    relatedTerms: ["Schema Markup", "Rich Snippets", "Technical SEO", "Local SEO"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
       { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google: Strukturierte Daten einführen",
+      description: "Offizielle Dokumentation zur Implementierung von JSON-LD strukturierten Daten.",
+      url: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+      source: "Google Search Central"
+    }
   },
   // === K ===
   {
@@ -676,11 +1050,11 @@ export const seoLexikonData: SEOTerm[] = [
       "Wettbewerbsanalyse durchführen",
       "Content-Strategie entwickeln"
     ],
-    relatedTerms: ["Keyword-Recherche", "Suchintention", "Long-Tail Keywords"],
+    relatedTerms: ["Long-Tail Keywords", "Search Intent", "Keyword Density", "Content-Strategie"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
-      { slug: "local-seo-keywords", title: "Local SEO Keywords finden" },
+      { slug: "local-seo-keywords-finden", title: "Local SEO Keywords finden" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
     ],
     bestPracticeExample: {
@@ -712,11 +1086,40 @@ export const seoLexikonData: SEOTerm[] = [
       "Semantische SEO verstehen",
       "Content-Qualität priorisieren"
     ],
-    relatedTerms: ["Keyword Stuffing", "On-Page SEO", "Content SEO"],
+    relatedTerms: ["Keyword Stuffing", "On-Page SEO", "Keywords", "Search Intent"],
     difficulty: "anfänger",
     importance: 2,
     relatedArticles: [
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
+  },
+  {
+    letter: "K",
+    term: "Keyword Stuffing",
+    shortDescription: "Übermäßige Verwendung von Keywords als Spam-Technik.",
+    fullDescription: "Keyword Stuffing bezeichnet die übermäßige und unnatürliche Verwendung von Keywords in Texten, Meta-Tags oder verstecktem Text. Diese Black-Hat-Technik wurde früher genutzt, um Rankings zu manipulieren, führt heute aber zu Abstrafungen durch Google.",
+    features: [
+      "Unnatürliche Keyword-Wiederholung",
+      "Versteckte Keywords (weiß auf weiß)",
+      "Keyword-Spam in Meta-Tags",
+      "Wird von Google erkannt und bestraft"
+    ],
+    statistics: [
+      { label: "Google-Erkennung", value: "99%+", icon: "percent" },
+      { label: "Abstrafungsrisiko", value: "Sehr hoch", icon: "trending" },
+      { label: "Recovery-Zeit", value: "3-12 Monate", icon: "clock" }
+    ],
+    benefits: [
+      "Wissen was man vermeiden sollte",
+      "Natürlichen Content schreiben lernen",
+      "Langfristige Rankings sichern",
+      "Google-Richtlinien verstehen"
+    ],
+    relatedTerms: ["Black Hat SEO", "Keyword Density", "Algorithmus-Update", "White Hat SEO"],
+    difficulty: "anfänger",
+    importance: 2,
+    relatedArticles: [
+      { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" }
     ]
   },
   {
@@ -741,11 +1144,83 @@ export const seoLexikonData: SEOTerm[] = [
       "Vertrauenswürdigkeit signalisieren",
       "Zero-Click-Präsenz sichern"
     ],
-    relatedTerms: ["Knowledge Panel", "Schema Markup", "Entity SEO"],
+    relatedTerms: ["Knowledge Panel", "Schema Markup", "Google Business Profile", "Zero-Click Search"],
     difficulty: "experte",
-    importance: 3
+    importance: 3,
+    relatedArticles: [
+      { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" }
+    ]
+  },
+  {
+    letter: "K",
+    term: "Knowledge Panel",
+    shortDescription: "Infobox rechts neben den Suchergebnissen für Unternehmen/Personen.",
+    fullDescription: "Ein Knowledge Panel ist die Infobox, die Google rechts neben den Suchergebnissen anzeigt, wenn nach Unternehmen, Personen oder Marken gesucht wird. Für lokale Unternehmen zeigt es Informationen aus dem Google Business Profile wie Adresse, Öffnungszeiten, Fotos und Bewertungen.",
+    features: [
+      "Basiert auf Google Business Profile",
+      "Zeigt Bewertungen und Fotos",
+      "Direkte Interaktionsmöglichkeiten",
+      "Claim-Funktion für Unternehmen"
+    ],
+    statistics: [
+      { label: "Klicks auf Knowledge Panel", value: "25%+", icon: "percent" },
+      { label: "Conversions über Panel", value: "+35%", icon: "trending" },
+      { label: "Mobile Prominenz", value: "Sehr hoch", icon: "chart" }
+    ],
+    benefits: [
+      "Maximale Markenpräsenz",
+      "Direkte Kundeninteraktion",
+      "Vertrauensaufbau",
+      "Kostenlose Premium-Platzierung"
+    ],
+    relatedTerms: ["Knowledge Graph", "Google Business Profile", "SERP", "Zero-Click Search"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" },
+      { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" }
+    ]
   },
   // === L ===
+  {
+    letter: "L",
+    term: "Local SEO",
+    shortDescription: "Suchmaschinenoptimierung für lokale Unternehmen und Suchanfragen.",
+    fullDescription: "Local SEO ist die Optimierung einer Online-Präsenz, um bei lokalen Suchanfragen besser gefunden zu werden. Es umfasst Google Business Profile, lokale Keywords, Citations, Bewertungen und lokale Backlinks. Ziel ist es, im Local Pack und auf Google Maps prominent zu erscheinen.",
+    features: [
+      "Google Business Profile optimieren",
+      "Lokale Keywords einsetzen",
+      "Citations aufbauen und pflegen",
+      "Bewertungen aktiv managen"
+    ],
+    statistics: [
+      { label: "Lokale Suchen täglich", value: "8.5 Mrd", icon: "search" },
+      { label: "Lokale Suchen zu Kauf", value: "28%", icon: "percent" },
+      { label: "Mobile lokale Suchen", value: "76%", icon: "trending" }
+    ],
+    benefits: [
+      "Mehr lokale Kunden gewinnen",
+      "Höhere Sichtbarkeit in der Region",
+      "Kosteneffizientes Marketing",
+      "Direkte Kundenanfragen"
+    ],
+    relatedTerms: ["Google Business Profile", "Local Pack", "NAP", "Citations", "Reviews (Bewertungen)"],
+    difficulty: "anfänger",
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" }
+    ],
+    bestPracticeExample: {
+      title: "Moz: Local SEO Learning Center",
+      description: "Umfassende Ressource zum Lernen und Anwenden von Local SEO Strategien.",
+      url: "https://moz.com/learn/seo/local",
+      source: "Moz"
+    }
+  },
   {
     letter: "L",
     term: "Local Pack",
@@ -768,7 +1243,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Höchste Klickraten bei lokalen Suchen",
       "Kostenlose Premium-Platzierung"
     ],
-    relatedTerms: ["Google Business Profile", "Local SEO", "Google Maps"],
+    relatedTerms: ["Google Business Profile", "Local SEO", "Google Maps", "Proximity (Entfernung)"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
@@ -805,11 +1280,11 @@ export const seoLexikonData: SEOTerm[] = [
       "Gezielterer Traffic",
       "Besserer ROI"
     ],
-    relatedTerms: ["Keywords", "Keyword-Recherche", "Search Intent"],
+    relatedTerms: ["Keywords", "Search Intent", "Content-Strategie", "Voice Search"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
-      { slug: "local-seo-keywords", title: "Local SEO Keywords finden" },
+      { slug: "local-seo-keywords-finden", title: "Local SEO Keywords finden" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
     ]
   },
@@ -835,15 +1310,56 @@ export const seoLexikonData: SEOTerm[] = [
       "Mehr organischer Traffic",
       "Markenbekanntheit steigern"
     ],
-    relatedTerms: ["Backlinks", "Domain Authority", "Anchor Text"],
+    relatedTerms: ["Backlinks", "Domain Authority", "Anchor Text", "Off-Page SEO"],
     difficulty: "fortgeschritten",
     importance: 5,
     relatedArticles: [
       { slug: "local-link-building", title: "Local Link Building Strategien" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Backlinko: Link Building Guide",
+      description: "Umfassender Guide mit 17 bewährten Link Building Strategien.",
+      url: "https://backlinko.com/link-building",
+      source: "Backlinko"
+    }
   },
   // === M ===
+  {
+    letter: "M",
+    term: "Meta Description",
+    shortDescription: "Beschreibungstext unter dem Title in Suchergebnissen.",
+    fullDescription: "Die Meta Description ist ein HTML-Tag, das den Beschreibungstext unter dem Seitentitel in Suchergebnissen definiert. Obwohl kein direkter Ranking-Faktor, beeinflusst sie die Klickrate erheblich. Eine gute Meta Description enthält einen Call-to-Action und wichtige Keywords.",
+    features: [
+      "Max. 155-160 Zeichen optimal",
+      "Kein direkter Ranking-Faktor",
+      "Beeinflusst CTR stark",
+      "Google überschreibt oft automatisch"
+    ],
+    statistics: [
+      { label: "Google überschreibt", value: "70%", icon: "percent" },
+      { label: "CTR-Steigerung möglich", value: "+30%", icon: "trending" },
+      { label: "Seiten ohne Description", value: "25%", icon: "chart" }
+    ],
+    benefits: [
+      "Höhere Klickraten erzielen",
+      "Nutzer zum Klicken animieren",
+      "Relevanz kommunizieren",
+      "Call-to-Action einbauen"
+    ],
+    relatedTerms: ["Title Tag", "Meta-Tags", "CTR", "SERP"],
+    difficulty: "anfänger",
+    importance: 3,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ],
+    bestPracticeExample: {
+      title: "Yoast: Meta Description Guide",
+      description: "Best Practices für überzeugende Meta Descriptions mit Beispielen.",
+      url: "https://yoast.com/meta-descriptions/",
+      source: "Yoast"
+    }
+  },
   {
     letter: "M",
     term: "Meta-Tags",
@@ -866,7 +1382,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Lokale Keywords prominent platzieren",
       "Nutzer zum Klicken animieren"
     ],
-    relatedTerms: ["Title-Tag", "On-Page SEO", "SERP"],
+    relatedTerms: ["Title Tag", "Meta Description", "On-Page SEO", "SERP"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
@@ -895,13 +1411,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Zukunftssichere Website",
       "Bessere User Experience"
     ],
-    relatedTerms: ["Responsive Design", "Core Web Vitals", "Mobile SEO"],
+    relatedTerms: ["Responsive Design", "Core Web Vitals", "PageSpeed", "User Experience"],
     difficulty: "fortgeschritten",
     importance: 5,
     relatedArticles: [
       { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" },
       { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google: Mobile First Indexing",
+      description: "Offizielle Dokumentation zu Mobile First Indexing Best Practices.",
+      url: "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing",
+      source: "Google Search Central"
+    }
   },
   // === N ===
   {
@@ -926,11 +1448,11 @@ export const seoLexikonData: SEOTerm[] = [
       "Vermeidung von Verwirrung",
       "Stärkere lokale Signale"
     ],
-    relatedTerms: ["Citations", "Branchenverzeichnis", "Local SEO"],
+    relatedTerms: ["Citations", "Branchenverzeichnis", "Local SEO", "Google Business Profile"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
-      { slug: "nap-konsistenz", title: "NAP-Konsistenz Guide" },
+      { slug: "nap-konsistenz-local-seo", title: "NAP-Konsistenz Guide" },
       { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
     ],
@@ -963,41 +1485,11 @@ export const seoLexikonData: SEOTerm[] = [
       "Markenerwähnungen nutzen",
       "Linkbuilding-Strategie diversifizieren"
     ],
-    relatedTerms: ["Backlinks", "PageRank", "Link Building"],
+    relatedTerms: ["Backlinks", "Link Building", "Off-Page SEO"],
     difficulty: "fortgeschritten",
     importance: 3
   },
   // === O ===
-  {
-    letter: "O",
-    term: "On-Page SEO",
-    shortDescription: "Optimierungen direkt auf der eigenen Website.",
-    fullDescription: "On-Page SEO umfasst alle Optimierungsmaßnahmen, die direkt auf der Website durchgeführt werden. Dazu gehören Inhaltsoptimierung, technische SEO-Aspekte, interne Verlinkung und User Experience. Für lokale Unternehmen sind lokale Landing Pages und strukturierte Daten besonders wichtig.",
-    features: [
-      "Content-Optimierung",
-      "Technisches SEO",
-      "Interne Verlinkung",
-      "URL-Struktur optimieren"
-    ],
-    statistics: [
-      { label: "Ranking-Einfluss", value: "~25%", icon: "percent" },
-      { label: "Core Web Vitals wichtig", value: "Ja", icon: "trending" },
-      { label: "Seiten pro Website", value: "Alle", icon: "chart" }
-    ],
-    benefits: [
-      "Volle Kontrolle über Optimierung",
-      "Schnelle Umsetzung möglich",
-      "Solide SEO-Grundlage schaffen",
-      "Bessere User Experience"
-    ],
-    relatedTerms: ["Off-Page SEO", "Technical SEO", "Content SEO"],
-    difficulty: "anfänger",
-    importance: 5,
-    relatedArticles: [
-      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
-      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
-    ]
-  },
   {
     letter: "O",
     term: "Off-Page SEO",
@@ -1020,11 +1512,82 @@ export const seoLexikonData: SEOTerm[] = [
       "Mehr Referral-Traffic",
       "Markenbekanntheit steigern"
     ],
-    relatedTerms: ["On-Page SEO", "Link Building", "Backlinks"],
+    relatedTerms: ["On-Page SEO", "Link Building", "Backlinks", "Citations", "Technical SEO"],
     difficulty: "fortgeschritten",
     importance: 5,
     relatedArticles: [
       { slug: "local-link-building", title: "Local Link Building Strategien" }
+    ],
+    bestPracticeExample: {
+      title: "Ahrefs: Off-Page SEO Guide",
+      description: "Umfassender Guide zu allen Off-Page SEO Faktoren und Strategien.",
+      url: "https://ahrefs.com/blog/off-page-seo/",
+      source: "Ahrefs"
+    }
+  },
+  {
+    letter: "O",
+    term: "On-Page SEO",
+    shortDescription: "Optimierungen direkt auf der eigenen Website.",
+    fullDescription: "On-Page SEO umfasst alle Optimierungsmaßnahmen, die direkt auf der Website durchgeführt werden. Dazu gehören Inhaltsoptimierung, technische SEO-Aspekte, interne Verlinkung und User Experience. Für lokale Unternehmen sind lokale Landing Pages und strukturierte Daten besonders wichtig.",
+    features: [
+      "Content-Optimierung",
+      "Technisches SEO",
+      "Interne Verlinkung",
+      "URL-Struktur optimieren"
+    ],
+    statistics: [
+      { label: "Ranking-Einfluss", value: "~25%", icon: "percent" },
+      { label: "Core Web Vitals wichtig", value: "Ja", icon: "trending" },
+      { label: "Seiten pro Website", value: "Alle", icon: "chart" }
+    ],
+    benefits: [
+      "Volle Kontrolle über Optimierung",
+      "Schnelle Umsetzung möglich",
+      "Solide SEO-Grundlage schaffen",
+      "Bessere User Experience"
+    ],
+    relatedTerms: ["Off-Page SEO", "Technical SEO", "Keywords", "Internal Linking", "Title Tag"],
+    difficulty: "anfänger",
+    importance: 5,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
+    ],
+    bestPracticeExample: {
+      title: "Backlinko: On-Page SEO Guide",
+      description: "Detaillierter Guide zu allen On-Page SEO Faktoren mit Praxisbeispielen.",
+      url: "https://backlinko.com/on-page-seo",
+      source: "Backlinko"
+    }
+  },
+  {
+    letter: "O",
+    term: "Organic Traffic",
+    shortDescription: "Unbezahlter Traffic aus organischen Suchergebnissen.",
+    fullDescription: "Organic Traffic bezeichnet Besucher, die über unbezahlte Suchergebnisse auf eine Website gelangen - im Gegensatz zu bezahltem Traffic aus Anzeigen. Die Steigerung des organischen Traffics ist das primäre Ziel der Suchmaschinenoptimierung.",
+    features: [
+      "Kostenlos (keine Klickkosten)",
+      "Nachhaltig bei guten Rankings",
+      "Messbar in Analytics",
+      "Abhängig von SEO-Maßnahmen"
+    ],
+    statistics: [
+      { label: "Durchschnittliche CTR Pos. 1", value: "27.6%", icon: "percent" },
+      { label: "Organic vs. Paid Traffic", value: "53% vs 15%", icon: "chart" },
+      { label: "Conversion bei Organic", value: "Höher", icon: "trending" }
+    ],
+    benefits: [
+      "Keine laufenden Werbekosten",
+      "Nachhaltige Traffic-Quelle",
+      "Höheres Nutzervertrauen",
+      "Skalierbar durch SEO"
+    ],
+    relatedTerms: ["SERP", "Keywords", "On-Page SEO", "Off-Page SEO"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
     ]
   },
   // === P ===
@@ -1050,13 +1613,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Reduzierte Absprungraten",
       "Bessere mobile Erfahrung"
     ],
-    relatedTerms: ["Core Web Vitals", "Mobile First", "Technical SEO"],
+    relatedTerms: ["Core Web Vitals", "Mobile First Index", "Technical SEO", "User Experience"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
       { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
       { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google PageSpeed Insights",
+      description: "Offizielles Tool zur Analyse und Optimierung der Seitengeschwindigkeit.",
+      url: "https://pagespeed.web.dev/",
+      source: "Google"
+    }
   },
   {
     letter: "P",
@@ -1080,7 +1649,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Service Areas definieren",
       "Standortvorteile nutzen"
     ],
-    relatedTerms: ["Local Pack", "Local SEO", "Geo-Targeting"],
+    relatedTerms: ["Local Pack", "Local SEO", "Geo-Targeting", "Google Maps"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
@@ -1111,11 +1680,40 @@ export const seoLexikonData: SEOTerm[] = [
       "Best Practices lernen",
       "Zukünftige Updates antizipieren"
     ],
-    relatedTerms: ["E-E-A-T", "YMYL", "Algorithmus-Update"],
+    relatedTerms: ["E-E-A-T", "YMYL", "Algorithmus-Update", "White Hat SEO"],
     difficulty: "experte",
     importance: 2
   },
   // === R ===
+  {
+    letter: "R",
+    term: "Responsive Design",
+    shortDescription: "Website-Design, das sich an alle Bildschirmgrößen anpasst.",
+    fullDescription: "Responsive Design ist ein Webdesign-Ansatz, bei dem sich die Website automatisch an verschiedene Bildschirmgrößen und Geräte anpasst. Google empfiehlt Responsive Design als bevorzugte Methode für mobile Websites und es ist Voraussetzung für gute Mobile-Rankings.",
+    features: [
+      "Automatische Anpassung an Bildschirmgröße",
+      "Eine URL für alle Geräte",
+      "Fluid Grids und flexible Bilder",
+      "CSS Media Queries"
+    ],
+    statistics: [
+      { label: "Mobile Traffic Anteil", value: "60%+", icon: "percent" },
+      { label: "Google-Empfehlung", value: "Ja", icon: "trending" },
+      { label: "Websites mit Responsive Design", value: "75%", icon: "chart" }
+    ],
+    benefits: [
+      "Beste Mobile-Erfahrung",
+      "Von Google empfohlen",
+      "Einfachere Wartung (eine Version)",
+      "Bessere Rankings auf Mobile"
+    ],
+    relatedTerms: ["Mobile First Index", "Core Web Vitals", "User Experience", "PageSpeed"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
+    ]
+  },
   {
     letter: "R",
     term: "Reviews (Bewertungen)",
@@ -1138,13 +1736,48 @@ export const seoLexikonData: SEOTerm[] = [
       "Wertvolles Kundenfeedback",
       "Höhere Conversion-Rates"
     ],
-    relatedTerms: ["Reputation Management", "Google Business Profile", "Social Proof"],
+    relatedTerms: ["Google Business Profile", "E-E-A-T", "Local SEO", "Local Pack"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
       { slug: "google-bewertungen-bekommen", title: "Google Bewertungen bekommen" },
       { slug: "negative-google-bewertungen", title: "Negative Google Bewertungen managen" },
       { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ],
+    bestPracticeExample: {
+      title: "Google: Auf Bewertungen antworten",
+      description: "Offizielle Anleitung zum professionellen Umgang mit Google-Bewertungen.",
+      url: "https://support.google.com/business/answer/3474050?hl=de",
+      source: "Google Support"
+    }
+  },
+  {
+    letter: "R",
+    term: "Rich Snippets",
+    shortDescription: "Erweiterte Suchergebnisse mit zusätzlichen Informationen.",
+    fullDescription: "Rich Snippets sind erweiterte Suchergebnisse, die zusätzliche Informationen wie Bewertungssterne, Preise, Verfügbarkeit oder Rezeptzeiten anzeigen. Sie entstehen durch strukturierte Daten (Schema Markup) und erhöhen die Klickrate deutlich.",
+    features: [
+      "Bewertungssterne",
+      "Produktpreise und Verfügbarkeit",
+      "FAQ-Antworten",
+      "Event-Informationen"
+    ],
+    statistics: [
+      { label: "CTR-Steigerung", value: "+30%", icon: "trending" },
+      { label: "Websites mit Rich Snippets", value: "33%", icon: "percent" },
+      { label: "Klickratenerhöhung bei Reviews", value: "+87%", icon: "chart" }
+    ],
+    benefits: [
+      "Höhere Klickraten",
+      "Mehr Aufmerksamkeit in SERP",
+      "Mehr Informationen vorab zeigen",
+      "Vertrauenswürdigkeit steigern"
+    ],
+    relatedTerms: ["Schema Markup", "JSON-LD", "SERP", "Featured Snippet"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" }
     ]
   },
   {
@@ -1169,7 +1802,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Admin-Bereiche verstecken",
       "Duplicate Content vermeiden"
     ],
-    relatedTerms: ["Crawling", "Indexierung", "Technical SEO"],
+    relatedTerms: ["Crawling", "Indexierung", "Technical SEO", "XML-Sitemap"],
     difficulty: "fortgeschritten",
     importance: 3,
     relatedArticles: [
@@ -1177,66 +1810,7 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
     ]
   },
-  {
-    letter: "R",
-    term: "Rich Snippets",
-    shortDescription: "Erweiterte Suchergebnisse mit zusätzlichen Informationen.",
-    fullDescription: "Rich Snippets sind erweiterte Suchergebnisse, die zusätzliche Informationen wie Bewertungssterne, Preise, Verfügbarkeit oder Rezeptzeiten anzeigen. Sie entstehen durch strukturierte Daten (Schema Markup) und erhöhen die Klickrate deutlich.",
-    features: [
-      "Bewertungssterne",
-      "Produktpreise und Verfügbarkeit",
-      "FAQ-Antworten",
-      "Event-Informationen"
-    ],
-    statistics: [
-      { label: "CTR-Steigerung", value: "+30%", icon: "trending" },
-      { label: "Websites mit Rich Snippets", value: "33%", icon: "percent" },
-      { label: "Klickratenerhöhung bei Reviews", value: "+87%", icon: "chart" }
-    ],
-    benefits: [
-      "Höhere Klickraten",
-      "Mehr Aufmerksamkeit in SERP",
-      "Mehr Informationen vorab zeigen",
-      "Vertrauenswürdigkeit steigern"
-    ],
-    relatedTerms: ["Schema Markup", "JSON-LD", "SERP"],
-    difficulty: "fortgeschritten",
-    importance: 4,
-    relatedArticles: [
-      { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" }
-    ]
-  },
   // === S ===
-  {
-    letter: "S",
-    term: "SERP",
-    shortDescription: "Search Engine Results Page - Die Suchergebnisseite.",
-    fullDescription: "SERP (Search Engine Results Page) ist die Seite, die Google nach einer Suchanfrage anzeigt. Sie enthält organische Ergebnisse, Anzeigen, das Local Pack, Featured Snippets und weitere Elemente. Das Verständnis der SERP-Features ist entscheidend für eine erfolgreiche SEO-Strategie.",
-    features: [
-      "Organische Ergebnisse (10 Blue Links)",
-      "Google Ads (bezahlte Anzeigen)",
-      "Local Pack / Map Pack",
-      "Knowledge Panel & Rich Snippets"
-    ],
-    statistics: [
-      { label: "Klicks auf Position 1", value: "27.6%", icon: "percent" },
-      { label: "Klicks auf Page 2", value: "0.63%", icon: "chart" },
-      { label: "Zero-Click Searches", value: "65%", icon: "search" }
-    ],
-    benefits: [
-      "Strategische Keyword-Auswahl",
-      "SERP-Features gezielt ansteuern",
-      "Wettbewerbsanalyse durchführen",
-      "Content-Strategie optimieren"
-    ],
-    relatedTerms: ["Organische Suche", "Featured Snippet", "Local Pack"],
-    difficulty: "anfänger",
-    importance: 4,
-    relatedArticles: [
-      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
-      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
-  },
   {
     letter: "S",
     term: "Schema Markup",
@@ -1259,13 +1833,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Lokale Präsenz stärken",
       "Voice Search optimieren"
     ],
-    relatedTerms: ["JSON-LD", "Rich Snippets", "Strukturierte Daten"],
+    relatedTerms: ["JSON-LD", "Rich Snippets", "Technical SEO", "Local SEO"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
       { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google: Strukturierte Daten einführen",
+      description: "Offizielle Dokumentation zu allen Schema-Typen und deren Implementierung.",
+      url: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+      source: "Google Search Central"
+    }
   },
   {
     letter: "S",
@@ -1289,11 +1869,76 @@ export const seoLexikonData: SEOTerm[] = [
       "Höhere Conversion-Rates",
       "Nutzer zufriedenstellen"
     ],
-    relatedTerms: ["Keywords", "Content-Strategie", "User Experience"],
+    relatedTerms: ["Keywords", "Content-Strategie", "Long-Tail Keywords", "User Experience"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
-      { slug: "local-seo-keywords", title: "Local SEO Keywords finden" },
+      { slug: "local-seo-keywords-finden", title: "Local SEO Keywords finden" },
+      { slug: "local-content-marketing", title: "Local Content Marketing" }
+    ],
+    bestPracticeExample: {
+      title: "Backlinko: Search Intent Guide",
+      description: "Umfassender Guide zum Verstehen und Nutzen von Suchintentionen.",
+      url: "https://backlinko.com/hub/seo/search-intent",
+      source: "Backlinko"
+    }
+  },
+  {
+    letter: "S",
+    term: "SERP",
+    shortDescription: "Search Engine Results Page - Die Suchergebnisseite.",
+    fullDescription: "SERP (Search Engine Results Page) ist die Seite, die Google nach einer Suchanfrage anzeigt. Sie enthält organische Ergebnisse, Anzeigen, das Local Pack, Featured Snippets und weitere Elemente. Das Verständnis der SERP-Features ist entscheidend für eine erfolgreiche SEO-Strategie.",
+    features: [
+      "Organische Ergebnisse (10 Blue Links)",
+      "Google Ads (bezahlte Anzeigen)",
+      "Local Pack / Map Pack",
+      "Knowledge Panel & Rich Snippets"
+    ],
+    statistics: [
+      { label: "Klicks auf Position 1", value: "27.6%", icon: "percent" },
+      { label: "Klicks auf Page 2", value: "0.63%", icon: "chart" },
+      { label: "Zero-Click Searches", value: "65%", icon: "search" }
+    ],
+    benefits: [
+      "Strategische Keyword-Auswahl",
+      "SERP-Features gezielt ansteuern",
+      "Wettbewerbsanalyse durchführen",
+      "Content-Strategie optimieren"
+    ],
+    relatedTerms: ["Organic Traffic", "Featured Snippet", "Local Pack", "Rich Snippets", "Zero-Click Search"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" },
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
+  },
+  {
+    letter: "S",
+    term: "Social Signals",
+    shortDescription: "Interaktionen auf Social Media als SEO-Faktor.",
+    fullDescription: "Social Signals sind Likes, Shares, Kommentare und andere Interaktionen auf Social-Media-Plattformen. Obwohl sie kein direkter Ranking-Faktor sind, können sie indirekt das SEO verbessern durch mehr Traffic, Backlinks und Markenbekanntheit.",
+    features: [
+      "Likes und Shares",
+      "Kommentare und Erwähnungen",
+      "Follower-Zahlen",
+      "Engagement-Rate"
+    ],
+    statistics: [
+      { label: "Direkter Ranking-Einfluss", value: "Gering", icon: "trending" },
+      { label: "Indirekter Einfluss", value: "Hoch", icon: "chart" },
+      { label: "Traffic-Potenzial", value: "Signifikant", icon: "users" }
+    ],
+    benefits: [
+      "Mehr Website-Traffic",
+      "Backlink-Potenzial erhöhen",
+      "Markenbekanntheit steigern",
+      "Content-Distribution"
+    ],
+    relatedTerms: ["Off-Page SEO", "Link Building", "E-E-A-T"],
+    difficulty: "anfänger",
+    importance: 2,
+    relatedArticles: [
       { slug: "local-content-marketing", title: "Local Content Marketing" }
     ]
   },
@@ -1319,7 +1964,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Ranking-Signal",
       "Datenschutz gewährleisten"
     ],
-    relatedTerms: ["HTTPS", "Website-Sicherheit", "Technical SEO"],
+    relatedTerms: ["HTTPS", "Technical SEO", "E-E-A-T"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
@@ -1327,35 +1972,6 @@ export const seoLexikonData: SEOTerm[] = [
     ]
   },
   // === T ===
-  {
-    letter: "T",
-    term: "Title Tag",
-    shortDescription: "Der klickbare Seitentitel in den Suchergebnissen.",
-    fullDescription: "Der Title Tag ist das HTML-Element, das den Seitentitel definiert und als klickbare Überschrift in den Suchergebnissen erscheint. Er ist einer der wichtigsten On-Page Ranking-Faktoren. Für Local SEO sollten Ortsnamen und primäre Keywords enthalten sein.",
-    features: [
-      "Max. 60 Zeichen optimal",
-      "Primäres Keyword am Anfang",
-      "Einzigartigkeit pro Seite",
-      "Markenname am Ende"
-    ],
-    statistics: [
-      { label: "Ranking-Einfluss", value: "Sehr hoch", icon: "trending" },
-      { label: "Google überschreibt Title", value: "61%", icon: "percent" },
-      { label: "CTR-Steigerung möglich", value: "+20%", icon: "chart" }
-    ],
-    benefits: [
-      "Direkter Ranking-Faktor",
-      "Kontrolle über Suchergebnis-Darstellung",
-      "Höhere Klickraten erzielen",
-      "Keywords prominent platzieren"
-    ],
-    relatedTerms: ["Meta-Tags", "On-Page SEO", "CTR"],
-    difficulty: "anfänger",
-    importance: 5,
-    relatedArticles: [
-      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
-  },
   {
     letter: "T",
     term: "Technical SEO",
@@ -1378,46 +1994,57 @@ export const seoLexikonData: SEOTerm[] = [
       "Höhere Rankings",
       "Professioneller Auftritt"
     ],
-    relatedTerms: ["Core Web Vitals", "Crawling", "Indexierung"],
+    relatedTerms: ["Core Web Vitals", "Crawling", "Indexierung", "Schema Markup", "PageSpeed"],
     difficulty: "experte",
     importance: 5,
     relatedArticles: [
       { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
       { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" },
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google: Technical SEO Guidelines",
+      description: "Offizielle Dokumentation zu allen technischen SEO-Aspekten.",
+      url: "https://developers.google.com/search/docs/crawling-indexing",
+      source: "Google Search Central"
+    }
   },
-  // === U ===
   {
-    letter: "U",
-    term: "User Experience (UX)",
-    shortDescription: "Das Gesamterlebnis eines Nutzers auf der Website.",
-    fullDescription: "User Experience beschreibt, wie Nutzer eine Website erleben - von der Ladezeit über Navigation bis zum Content. Google misst UX-Signale wie Verweildauer, Absprungrate und Core Web Vitals. Eine gute UX ist entscheidend für Rankings und Conversions.",
+    letter: "T",
+    term: "Title Tag",
+    shortDescription: "Der klickbare Seitentitel in den Suchergebnissen.",
+    fullDescription: "Der Title Tag ist das HTML-Element, das den Seitentitel definiert und als klickbare Überschrift in den Suchergebnissen erscheint. Er ist einer der wichtigsten On-Page Ranking-Faktoren. Für Local SEO sollten Ortsnamen und primäre Keywords enthalten sein.",
     features: [
-      "Core Web Vitals (LCP, FID, CLS)",
-      "Mobile Usability",
-      "Intuitive Navigation",
-      "Klare Call-to-Actions"
+      "Max. 60 Zeichen optimal",
+      "Primäres Keyword am Anfang",
+      "Einzigartigkeit pro Seite",
+      "Markenname am Ende"
     ],
     statistics: [
-      { label: "Page Experience Signal", value: "Bestätigt", icon: "trending" },
-      { label: "Mobile Traffic Anteil", value: "60%+", icon: "percent" },
-      { label: "Conversion bei guter UX", value: "+400%", icon: "chart" }
+      { label: "Ranking-Einfluss", value: "Sehr hoch", icon: "trending" },
+      { label: "Google überschreibt Title", value: "61%", icon: "percent" },
+      { label: "CTR-Steigerung möglich", value: "+20%", icon: "chart" }
     ],
     benefits: [
-      "Bessere Rankings erzielen",
-      "Höhere Conversion-Rates",
-      "Längere Verweildauer",
-      "Mehr wiederkehrende Besucher"
+      "Direkter Ranking-Faktor",
+      "Kontrolle über Suchergebnis-Darstellung",
+      "Höhere Klickraten erzielen",
+      "Keywords prominent platzieren"
     ],
-    relatedTerms: ["Core Web Vitals", "Mobile First", "PageSpeed"],
-    difficulty: "fortgeschritten",
-    importance: 4,
+    relatedTerms: ["Meta-Tags", "Meta Description", "On-Page SEO", "CTR"],
+    difficulty: "anfänger",
+    importance: 5,
     relatedArticles: [
-      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
-      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
-    ]
+      { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ],
+    bestPracticeExample: {
+      title: "Moz: Title Tag Guide",
+      description: "Umfassender Guide zur Optimierung von Title Tags für bessere Rankings.",
+      url: "https://moz.com/learn/seo/title-tag",
+      source: "Moz"
+    }
   },
+  // === U ===
   {
     letter: "U",
     term: "URL-Struktur",
@@ -1440,12 +2067,42 @@ export const seoLexikonData: SEOTerm[] = [
       "Keyword-Relevanz zeigen",
       "Klare Seitenstruktur"
     ],
-    relatedTerms: ["On-Page SEO", "Seitenstruktur", "Technical SEO"],
+    relatedTerms: ["On-Page SEO", "Technical SEO", "Canonical URL"],
     difficulty: "anfänger",
     importance: 3,
     relatedArticles: [
       { slug: "local-seo-fehler", title: "Die häufigsten Local SEO Fehler" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
+    ]
+  },
+  {
+    letter: "U",
+    term: "User Experience (UX)",
+    shortDescription: "Das Gesamterlebnis eines Nutzers auf der Website.",
+    fullDescription: "User Experience beschreibt, wie Nutzer eine Website erleben - von der Ladezeit über Navigation bis zum Content. Google misst UX-Signale wie Verweildauer, Absprungrate und Core Web Vitals. Eine gute UX ist entscheidend für Rankings und Conversions.",
+    features: [
+      "Core Web Vitals (LCP, FID, CLS)",
+      "Mobile Usability",
+      "Intuitive Navigation",
+      "Klare Call-to-Actions"
+    ],
+    statistics: [
+      { label: "Page Experience Signal", value: "Bestätigt", icon: "trending" },
+      { label: "Mobile Traffic Anteil", value: "60%+", icon: "percent" },
+      { label: "Conversion bei guter UX", value: "+400%", icon: "chart" }
+    ],
+    benefits: [
+      "Bessere Rankings erzielen",
+      "Höhere Conversion-Rates",
+      "Längere Verweildauer",
+      "Mehr wiederkehrende Besucher"
+    ],
+    relatedTerms: ["Core Web Vitals", "Mobile First Index", "PageSpeed", "Bounce Rate", "Dwell Time"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO" },
+      { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung" }
     ]
   },
   // === V ===
@@ -1471,41 +2128,21 @@ export const seoLexikonData: SEOTerm[] = [
       "Featured Snippets gewinnen",
       "Natürlichen Content erstellen"
     ],
-    relatedTerms: ["Featured Snippet", "Long-Tail Keywords", "Local SEO"],
+    relatedTerms: ["Featured Snippet", "Long-Tail Keywords", "Local SEO", "Search Intent"],
     difficulty: "fortgeschritten",
     importance: 3,
     relatedArticles: [
       { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" },
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Think with Google: Voice Search",
+      description: "Googles Insights zu Voice Search Trends und Optimierungsstrategien.",
+      url: "https://www.thinkwithgoogle.com/marketing-strategies/search/voice-search-mobile-use-statistics/",
+      source: "Think with Google"
+    }
   },
   // === W ===
-  {
-    letter: "W",
-    term: "White Hat SEO",
-    shortDescription: "Ethische SEO-Methoden gemäß Google-Richtlinien.",
-    fullDescription: "White Hat SEO bezeichnet Optimierungsstrategien, die Googles Richtlinien entsprechen und auf langfristigen, nachhaltigen Erfolg ausgerichtet sind. Im Gegensatz zu Black Hat SEO (manipulative Taktiken) setzt White Hat auf Qualitätsinhalte, natürlichen Linkaufbau und technische Exzellenz.",
-    features: [
-      "Qualitätscontent erstellen",
-      "Natürlicher Linkaufbau",
-      "Technische Optimierung",
-      "User Experience priorisieren"
-    ],
-    statistics: [
-      { label: "Abstrafungsrisiko", value: "0%", icon: "percent" },
-      { label: "Langfristiger ROI", value: "Hoch", icon: "trending" },
-      { label: "Google-Empfehlung", value: "Ja", icon: "chart" }
-    ],
-    benefits: [
-      "Nachhaltige Rankings",
-      "Kein Abstrafungsrisiko",
-      "Langfristiger ROI",
-      "Vertrauensaufbau"
-    ],
-    relatedTerms: ["Black Hat SEO", "Google-Richtlinien", "Algorithmus-Update"],
-    difficulty: "anfänger",
-    importance: 5
-  },
   {
     letter: "W",
     term: "Webmaster Tools / Search Console",
@@ -1528,13 +2165,45 @@ export const seoLexikonData: SEOTerm[] = [
       "Technische Probleme erkennen",
       "Performance überwachen"
     ],
-    relatedTerms: ["Indexierung", "Core Web Vitals", "Technical SEO"],
+    relatedTerms: ["Indexierung", "Core Web Vitals", "Technical SEO", "Crawling"],
     difficulty: "anfänger",
     importance: 5,
     relatedArticles: [
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google Search Console Hilfe",
+      description: "Offizielle Dokumentation und Tutorials zur Google Search Console.",
+      url: "https://support.google.com/webmasters/answer/9128668?hl=de",
+      source: "Google Support"
+    }
+  },
+  {
+    letter: "W",
+    term: "White Hat SEO",
+    shortDescription: "Ethische SEO-Methoden gemäß Google-Richtlinien.",
+    fullDescription: "White Hat SEO bezeichnet Optimierungsstrategien, die Googles Richtlinien entsprechen und auf langfristigen, nachhaltigen Erfolg ausgerichtet sind. Im Gegensatz zu Black Hat SEO (manipulative Taktiken) setzt White Hat auf Qualitätsinhalte, natürlichen Linkaufbau und technische Exzellenz.",
+    features: [
+      "Qualitätscontent erstellen",
+      "Natürlicher Linkaufbau",
+      "Technische Optimierung",
+      "User Experience priorisieren"
+    ],
+    statistics: [
+      { label: "Abstrafungsrisiko", value: "0%", icon: "percent" },
+      { label: "Langfristiger ROI", value: "Hoch", icon: "trending" },
+      { label: "Google-Empfehlung", value: "Ja", icon: "chart" }
+    ],
+    benefits: [
+      "Nachhaltige Rankings",
+      "Kein Abstrafungsrisiko",
+      "Langfristiger ROI",
+      "Vertrauensaufbau"
+    ],
+    relatedTerms: ["Black Hat SEO", "Algorithmus-Update", "E-E-A-T", "Quality Raters"],
+    difficulty: "anfänger",
+    importance: 5
   },
   // === X ===
   {
@@ -1559,13 +2228,19 @@ export const seoLexikonData: SEOTerm[] = [
       "Kontrolle über Crawling-Priorität",
       "Technische SEO-Grundlage"
     ],
-    relatedTerms: ["Indexierung", "Crawling", "Google Search Console"],
+    relatedTerms: ["Indexierung", "Crawling", "Webmaster Tools / Search Console", "Technical SEO"],
     difficulty: "anfänger",
     importance: 4,
     relatedArticles: [
       { slug: "kostenloses-seo-guide", title: "Kostenloses SEO Guide" },
       { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
-    ]
+    ],
+    bestPracticeExample: {
+      title: "Google: Sitemap erstellen",
+      description: "Offizielle Anleitung zur Erstellung und Einreichung von Sitemaps.",
+      url: "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+      source: "Google Search Central"
+    }
   },
   // === Y ===
   {
@@ -1590,12 +2265,12 @@ export const seoLexikonData: SEOTerm[] = [
       "Schutz vor Algorithmus-Updates",
       "Wettbewerbsvorteil durch Qualität"
     ],
-    relatedTerms: ["E-E-A-T", "Quality Raters", "Content Quality"],
+    relatedTerms: ["E-E-A-T", "Quality Raters", "Algorithmus-Update", "White Hat SEO"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
-      { slug: "local-seo-aerzte", title: "Local SEO für Ärzte" },
-      { slug: "local-seo-anwaelte", title: "Local SEO für Anwälte" },
+      { slug: "local-seo-aerzte-praxen", title: "Local SEO für Ärzte" },
+      { slug: "local-seo-anwaelte-kanzleien", title: "Local SEO für Anwälte" },
       { slug: "local-seo-steuerberater", title: "Local SEO für Steuerberater" }
     ]
   },
@@ -1622,7 +2297,7 @@ export const seoLexikonData: SEOTerm[] = [
       "Direkte Kundeninteraktion",
       "Anpassung der SEO-Strategie"
     ],
-    relatedTerms: ["SERP", "Featured Snippet", "Google Business Profile"],
+    relatedTerms: ["SERP", "Featured Snippet", "Google Business Profile", "Knowledge Panel"],
     difficulty: "fortgeschritten",
     importance: 4,
     relatedArticles: [
@@ -1644,6 +2319,10 @@ export const getTermsByLetter = (letter: string): SEOTerm[] => {
 
 export const getTermByLetter = (letter: string): SEOTerm | undefined => {
   return seoLexikonData.find(term => term.letter.toLowerCase() === letter.toLowerCase());
+};
+
+export const getTermByName = (termName: string): SEOTerm | undefined => {
+  return seoLexikonData.find(term => term.term.toLowerCase() === termName.toLowerCase());
 };
 
 export const searchTerms = (query: string): SEOTerm[] => {
@@ -1674,4 +2353,11 @@ export const getTermSlug = (term: string): string => {
     .replace(/ü/g, 'ue')
     .replace(/ß/g, 'ss')
     .replace(/[^a-z0-9-]/g, '');
+};
+
+// Get all terms that reference a specific term
+export const getBacklinksToTerm = (termName: string): SEOTerm[] => {
+  return seoLexikonData.filter(term => 
+    term.relatedTerms.some(related => related.toLowerCase() === termName.toLowerCase())
+  );
 };
