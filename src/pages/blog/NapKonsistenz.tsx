@@ -122,10 +122,10 @@ const NapKonsistenz = () => {
 
       {/* Einleitung */}
       <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-        Du investierst Zeit und Geld in dein Google Business Profil, aber die Rankings bleiben aus? 
-        Ein häufig übersehener Grund: <strong>Inkonsistente NAP-Daten</strong>. Wenn dein Unternehmensname, 
-        deine Adresse oder Telefonnummer in verschiedenen Verzeichnissen unterschiedlich sind, verliert 
-        Google das Vertrauen in deine Daten – und dein Ranking leidet.
+        Du investierst Zeit und Geld in dein <LexikonLink term="Google Business Profile" />, aber die Rankings bleiben aus? 
+        Ein häufig übersehener Grund: <strong>Inkonsistente <LexikonLink term="NAP">NAP-Daten</LexikonLink></strong>. Wenn dein Unternehmensname, 
+        deine Adresse oder Telefonnummer in verschiedenen <LexikonLink term="Citations">Verzeichnissen</LexikonLink> unterschiedlich sind, verliert 
+        Google das Vertrauen in deine Daten – und dein Ranking im <LexikonLink term="Local Pack" /> leidet.
       </p>
 
       <KeyTakeawaysBox 

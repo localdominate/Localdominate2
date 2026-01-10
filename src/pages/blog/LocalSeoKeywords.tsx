@@ -3,6 +3,7 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
+import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
@@ -262,7 +263,7 @@ const LocalSeoKeywords = () => {
         <p>
           Die <strong>Kaufabsicht bei lokalen Suchen</strong> ist deutlich höher als bei generischen Suchen. 
           Wer "Zahnarzt Notdienst Berlin" sucht, braucht jetzt einen Zahnarzt – nicht morgen, nicht in einer Woche. 
-          Diese hohe Dringlichkeit macht lokale Keywords so wertvoll für dein Geschäft.
+          Diese hohe Dringlichkeit macht lokale <LexikonLink term="Keywords" /> so wertvoll für dein Geschäft.
         </p>
       </section>
 
@@ -335,7 +336,7 @@ const LocalSeoKeywords = () => {
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mt-4">
             <p className="text-sm flex items-start gap-2">
               <Lightbulb className="h-5 w-5 text-yellow-500 shrink-0 mt-0.5" />
-              <span><strong>Wichtig:</strong> Google erkennt diese Suchen als lokal und zeigt das Local Pack. 
+              <span><strong>Wichtig:</strong> Google erkennt diese Suchen als lokal und zeigt das <LexikonLink term="Local Pack" />. 
               Du konkurrierst hier automatisch mit lokalen Anbietern.</span>
             </p>
           </div>

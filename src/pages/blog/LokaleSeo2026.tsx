@@ -253,9 +253,9 @@ const LokaleSeo2026 = () => {
         <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section2.sub1}</h3>
         <p className="mb-4">{t.section2.sub1Text}</p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          {t.section2.sub1List.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
+          <li><LexikonLink term="Schema Markup">Strukturierte Daten (Schema.org)</LexikonLink> sind entscheidend für die KI-Erkennung</li>
+          <li>Klare, gut strukturierte Inhalte werden bevorzugt</li>
+          <li>FAQ-Bereiche auf der Website können von der KI zitiert werden (<LexikonLink term="Featured Snippet" />)</li>
         </ul>
 
         <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section2.sub2}</h3>
@@ -303,7 +303,10 @@ const LokaleSeo2026 = () => {
 
       <section id="zero-click" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section4.title}</h2>
-        <p className="mb-4">{t.section4.text}</p>
+        <p className="mb-4">
+          Über 50% aller Google-Suchen enden ohne Klick auf eine Website. Nutzer finden alle Informationen direkt in den <LexikonLink term="SERP">Suchergebnissen</LexikonLink>. 
+          Das ist keine Bedrohung – es ist eine Chance.
+        </p>
 
         <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section4.sub1}</h3>
         <p className="mb-4">{t.section4.sub1Text}</p>
@@ -311,9 +314,10 @@ const LokaleSeo2026 = () => {
         <div className="bg-muted/50 rounded-xl p-6 mb-6">
           <h3 className="font-semibold text-foreground mb-3">{t.section4.optTitle}</h3>
           <ul className="list-disc pl-6 space-y-2">
-            {t.section4.optList.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
+            <li><LexikonLink term="Google Business Profile" /> vollständig ausfüllen – jede Information zählt</li>
+            <li>Produkte und Dienstleistungen mit Preisen – Kunden können direkt entscheiden</li>
+            <li>Reservierungs- und Buchungslinks – direkter Weg zur <LexikonLink term="Conversion" /></li>
+            <li>FAQs bei Google beantworten – beantworte Fragen selbst</li>
           </ul>
         </div>
 

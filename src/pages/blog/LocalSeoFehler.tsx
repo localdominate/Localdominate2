@@ -1,6 +1,7 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import FehlerDiagnoseQuiz from "@/components/blog/FehlerDiagnoseQuiz";
@@ -34,8 +35,9 @@ const LocalSeoFehler = () => {
     <ArticleLayout article={article} tocItems={tocItems}>
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         <strong>90% aller lokalen Unternehmen machen mindestens 5 dieser Fehler</strong> – 
-        oft ohne es zu wissen. Jeder einzelne kostet Sie Sichtbarkeit, Rankings und letztlich 
-        Kunden. In diesem Guide decken wir die 15 häufigsten Local SEO Fehler auf und zeigen 
+        oft ohne es zu wissen. Jeder einzelne kostet Sie Sichtbarkeit in den <LexikonLink term="SERP">Suchergebnissen</LexikonLink>, 
+        Rankings im <LexikonLink term="Local Pack" /> und letztlich 
+        Kunden. In diesem Guide decken wir die 15 häufigsten <LexikonLink term="Local SEO" /> Fehler auf und zeigen 
         Ihnen, wie Sie sie sofort beheben können.
       </p>
 
