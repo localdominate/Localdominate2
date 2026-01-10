@@ -58,6 +58,12 @@ import LocalSeoTierarzt from "./pages/blog/LocalSeoTierarzt";
 import KiToolsLocalSeo from "./pages/blog/KiToolsLocalSeo";
 import GoogleAiOverviews from "./pages/blog/GoogleAiOverviews";
 import SeoToolbox from "./pages/blog/SeoToolbox";
+import LocalSeoStuttgart from "./pages/blog/LocalSeoStuttgart";
+import LocalSeoDuesseldorf from "./pages/blog/LocalSeoDuesseldorf";
+import LocalSeoBasel from "./pages/blog/LocalSeoBasel";
+import LocalSeoYoga from "./pages/blog/LocalSeoYoga";
+import LocalSeoTattoo from "./pages/blog/LocalSeoTattoo";
+import LocalSeoApotheke from "./pages/blog/LocalSeoApotheke";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 import SeoLexikon from "./pages/SeoLexikon";
@@ -134,6 +140,12 @@ const App = () => (
               <Route path="/blog/ki-tools-local-seo" element={<KiToolsLocalSeo />} />
               <Route path="/blog/google-ai-overviews-local-seo" element={<GoogleAiOverviews />} />
               <Route path="/blog/seo-toolbox-kostenlose-ressourcen" element={<SeoToolbox />} />
+              <Route path="/blog/local-seo-stuttgart" element={<LocalSeoStuttgart />} />
+              <Route path="/blog/local-seo-duesseldorf" element={<LocalSeoDuesseldorf />} />
+              <Route path="/blog/local-seo-basel" element={<LocalSeoBasel />} />
+              <Route path="/blog/local-seo-yoga-studios" element={<LocalSeoYoga />} />
+              <Route path="/blog/local-seo-tattoo-studios" element={<LocalSeoTattoo />} />
+              <Route path="/blog/local-seo-apotheken" element={<LocalSeoApotheke />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

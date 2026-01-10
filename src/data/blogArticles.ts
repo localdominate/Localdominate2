@@ -2112,6 +2112,148 @@ export const blogArticles: BlogArticle[] = [
     icon: "🧰",
     keywords: ["seo tools", "kostenlose seo tools", "seo toolbox", "local seo tools", "geo tools", "google business tools"],
     featured: true
+  },
+
+  // === NEUE ARTIKEL: STÄDTE-GUIDES (Januar 2026) ===
+  {
+    slug: "local-seo-stuttgart",
+    de: {
+      title: "Local SEO Stuttgart: Der Guide für schwäbische Unternehmen",
+      metaTitle: "Local SEO Stuttgart | Baden-Württemberg Guide 2026",
+      metaDescription: "Local SEO speziell für Stuttgart und Region. Von Bad Cannstatt bis Vaihingen - so wirst du in der Landeshauptstadt gefunden.",
+      excerpt: "Wie Stuttgarter Unternehmen durch lokale SEO mehr Kunden in der Schwabenmetropole gewinnen.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Stuttgart: The Guide for Swabian Businesses",
+      metaTitle: "Local SEO Stuttgart | Baden-Württemberg Guide 2026",
+      metaDescription: "Local SEO specifically for Stuttgart and region. From Bad Cannstatt to Vaihingen - get found in the state capital.",
+      excerpt: "How Stuttgart businesses can win more customers through local SEO.",
+      category: "Regions"
+    },
+    readingTime: 16,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🚗",
+    keywords: ["local seo stuttgart", "seo stuttgart", "google ranking stuttgart", "marketing stuttgart", "schwaben seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-duesseldorf",
+    de: {
+      title: "Local SEO Düsseldorf: Der Guide für rheinische Unternehmen",
+      metaTitle: "Local SEO Düsseldorf | NRW Guide 2026",
+      metaDescription: "Local SEO speziell für Düsseldorf und das Rheinland. Von der Altstadt bis Oberkassel - so dominierst du den Düsseldorfer Markt.",
+      excerpt: "Wie Düsseldorfer Unternehmen durch lokale SEO mehr Kunden in der Landeshauptstadt NRW gewinnen.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Düsseldorf: The Guide for Rhenish Businesses",
+      metaTitle: "Local SEO Düsseldorf | NRW Guide 2026",
+      metaDescription: "Local SEO specifically for Düsseldorf and the Rhineland. From Altstadt to Oberkassel - dominate the Düsseldorf market.",
+      excerpt: "How Düsseldorf businesses can win more customers through local SEO.",
+      category: "Regions"
+    },
+    readingTime: 17,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🌉",
+    keywords: ["local seo düsseldorf", "seo düsseldorf", "google ranking düsseldorf", "marketing düsseldorf", "nrw seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-basel",
+    de: {
+      title: "Local SEO Basel: Der Guide für Basler Unternehmen",
+      metaTitle: "Local SEO Basel | Nordschweiz Guide 2026",
+      metaDescription: "Local SEO speziell für Basel und die Nordschweiz. Dreiländereck-Marketing, Basler Verzeichnisse und regionale Strategien.",
+      excerpt: "Wie Basler Unternehmen durch lokale SEO mehr Kunden im Dreiländereck gewinnen.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Basel: The Guide for Basel Businesses",
+      metaTitle: "Local SEO Basel | Northern Switzerland Guide 2026",
+      metaDescription: "Local SEO specifically for Basel and Northern Switzerland. Tri-border marketing, Basel directories and regional strategies.",
+      excerpt: "How Basel businesses can win more customers through local SEO in the tri-border area.",
+      category: "Regions"
+    },
+    readingTime: 15,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🎭",
+    keywords: ["local seo basel", "seo basel", "google ranking basel", "marketing basel", "schweiz seo", "dreiländereck"],
+    featured: false
+  },
+
+  // === NEUE ARTIKEL: BRANCHEN-GUIDES (Januar 2026) ===
+  {
+    slug: "local-seo-yoga-studios",
+    de: {
+      title: "Local SEO für Yoga-Studios: Mehr Teilnehmer durch Google",
+      metaTitle: "Local SEO für Yoga-Studios | Wellness-Marketing 2026",
+      metaDescription: "Local SEO speziell für Yoga-Studios und Wellness-Anbieter. Kurse vermarkten, Google Business optimieren und mehr Buchungen erhalten.",
+      excerpt: "Der komplette Guide für Yoga-Studios zur lokalen Kundengewinnung durch Suchmaschinenoptimierung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Yoga Studios: More Participants Through Google",
+      metaTitle: "Local SEO for Yoga Studios | Wellness Marketing 2026",
+      metaDescription: "Local SEO specifically for yoga studios and wellness providers. Market classes, optimize Google Business and get more bookings.",
+      excerpt: "The complete guide for yoga studios to win local customers through search engine optimization.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🧘",
+    keywords: ["yoga studio seo", "local seo yoga", "wellness marketing", "yoga google business", "yoga studio marketing"],
+    featured: false
+  },
+  {
+    slug: "local-seo-tattoo-studios",
+    de: {
+      title: "Local SEO für Tattoo-Studios: Mehr Kunden durch Google",
+      metaTitle: "Local SEO für Tattoo-Studios | Tattoo-Marketing 2026",
+      metaDescription: "Local SEO speziell für Tattoo-Studios und Piercing-Shops. Portfolio-Optimierung, Stilrichtungs-Keywords und Instagram-Integration.",
+      excerpt: "Der komplette Guide für Tattoo-Studios zur lokalen Kundengewinnung durch Suchmaschinenoptimierung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Tattoo Studios: More Clients Through Google",
+      metaTitle: "Local SEO for Tattoo Studios | Tattoo Marketing 2026",
+      metaDescription: "Local SEO specifically for tattoo studios and piercing shops. Portfolio optimization, style keywords and Instagram integration.",
+      excerpt: "The complete guide for tattoo studios to win local clients through search engine optimization.",
+      category: "Industries"
+    },
+    readingTime: 15,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "🎨",
+    keywords: ["tattoo studio seo", "local seo tattoo", "tattoo marketing", "tattoo google business", "piercing studio marketing"],
+    featured: false
+  },
+  {
+    slug: "local-seo-apotheken",
+    de: {
+      title: "Local SEO für Apotheken: Mehr Kunden durch Google",
+      metaTitle: "Local SEO für Apotheken | Pharma-Marketing 2026",
+      metaDescription: "Local SEO speziell für Apotheken. Notdienst-SEO, Gesundheitsportal-Strategie und lokale Vertrauensbildung für maximale Sichtbarkeit.",
+      excerpt: "Der komplette Guide für Apotheken zur lokalen Kundengewinnung durch Suchmaschinenoptimierung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Pharmacies: More Customers Through Google",
+      metaTitle: "Local SEO for Pharmacies | Pharma Marketing 2026",
+      metaDescription: "Local SEO specifically for pharmacies. Emergency service SEO, health portal strategy and local trust building.",
+      excerpt: "The complete guide for pharmacies to win local customers through search engine optimization.",
+      category: "Industries"
+    },
+    readingTime: 13,
+    publishedAt: "2026-01-10",
+    updatedAt: "2026-01-10",
+    icon: "💊",
+    keywords: ["apotheke seo", "local seo apotheke", "pharma marketing", "apotheke google business", "notdienst seo"],
+    featured: false
   }
 ];
 
