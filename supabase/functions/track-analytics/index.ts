@@ -20,9 +20,9 @@ const SessionDataSchema = z.object({
   device: z.string().max(50).optional(),
   referrer: z.string().max(2048).optional(),
   user_agent: z.string().max(512).optional(),
-  ab_variant_color: z.string().max(50).optional(),
-  ab_variant_restaurant: z.string().max(50).optional(),
-  ab_test_id: z.string().max(100).optional(), // NEW: A/B Test ID
+  ab_variant_color: z.string().max(50).nullable().optional(),
+  ab_variant_restaurant: z.string().max(50).nullable().optional(),
+  ab_test_id: z.string().max(100).nullable().optional(), // A/B Test ID - nullable for sessions without active test
   end_time: z.string().max(50).optional(),
 });
 
@@ -32,34 +32,34 @@ const EventDataSchema = z.object({
   event_name: z.string().max(255).optional(),
   event_data: z.record(z.unknown()).optional(),
   page_path: z.string().max(2048).optional(),
-  ab_test_id: z.string().max(100).optional(), // NEW: A/B Test ID
-  ab_variant: z.string().max(50).optional(), // NEW: Variant for this event
+  ab_test_id: z.string().max(100).nullable().optional(),
+  ab_variant: z.string().max(50).nullable().optional(),
 });
 
 const ConversionDataSchema = z.object({
-  session_id: z.string().max(255).optional(),
-  ab_variant_color: z.string().max(50).optional(),
-  ab_variant_restaurant: z.string().max(50).optional(),
-  ab_test_id: z.string().max(100).optional(), // NEW: A/B Test ID
+  session_id: z.string().max(255).nullable().optional(),
+  ab_variant_color: z.string().max(50).nullable().optional(),
+  ab_variant_restaurant: z.string().max(50).nullable().optional(),
+  ab_test_id: z.string().max(100).nullable().optional(),
   conversion_type: z.string().min(1).max(100),
-  cta_location: z.string().max(255).optional(),
-  cta_text: z.string().max(255).optional(),
-  amount: z.number().min(0).max(1000000).optional(),
-  page_path: z.string().max(2048).optional(),
-  blog_article_slug: z.string().max(255).optional(),
-  blog_cta_position: z.string().max(100).optional(),
-  blog_cta_variant: z.string().max(50).optional(),
+  cta_location: z.string().max(255).nullable().optional(),
+  cta_text: z.string().max(255).nullable().optional(),
+  amount: z.number().min(0).max(1000000).nullable().optional(),
+  page_path: z.string().max(2048).nullable().optional(),
+  blog_article_slug: z.string().max(255).nullable().optional(),
+  blog_cta_position: z.string().max(100).nullable().optional(),
+  blog_cta_variant: z.string().max(50).nullable().optional(),
 });
 
 const HeatmapDataSchema = z.object({
-  session_id: z.string().max(255).optional(),
+  session_id: z.string().max(255).nullable().optional(),
   x: z.number().min(0).max(10000),
   y: z.number().min(0).max(100000),
-  interaction_type: z.string().max(50).optional(),
-  element_path: z.string().max(1024).optional(),
-  page_path: z.string().max(2048).optional(),
-  ab_test_id: z.string().max(100).optional(), // NEW: A/B Test ID
-  ab_variant: z.string().max(50).optional(), // NEW: Variant
+  interaction_type: z.string().max(50).nullable().optional(),
+  element_path: z.string().max(1024).nullable().optional(),
+  page_path: z.string().max(2048).nullable().optional(),
+  ab_test_id: z.string().max(100).nullable().optional(),
+  ab_variant: z.string().max(50).nullable().optional(),
 });
 
 const EngagementDataSchema = z.object({

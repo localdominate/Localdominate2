@@ -53,6 +53,7 @@ import SEOHealthDashboard from "@/components/admin/SEOHealthDashboard";
 import ContentFreshnessAlerts from "@/components/admin/ContentFreshnessAlerts";
 import CoreWebVitalsPanel from "@/components/admin/CoreWebVitalsPanel";
 import CompetitiveAnalysis from "@/components/admin/CompetitiveAnalysis";
+import { CombinedAnalyticsDashboard } from "@/components/admin/CombinedAnalyticsDashboard";
 
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { AdminLoginScreen } from "@/components/admin/AdminLoginScreen";
@@ -360,10 +361,14 @@ const Analytics = () => {
 
       {/* Main Tabs */}
       <Tabs defaultValue="overview" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-7 lg:w-auto lg:inline-flex">
+        <TabsList className="grid w-full grid-cols-8 lg:w-auto lg:inline-flex">
           <TabsTrigger value="overview" className="gap-2">
             <BarChart3 className="h-4 w-4" />
             Übersicht
+          </TabsTrigger>
+          <TabsTrigger value="ab-insights" className="gap-2">
+            <Palette className="h-4 w-4" />
+            A/B Insights
           </TabsTrigger>
           <TabsTrigger value="heatmap" className="gap-2">
             <Flame className="h-4 w-4" />
@@ -390,6 +395,10 @@ const Analytics = () => {
             Benchmarks
           </TabsTrigger>
         </TabsList>
+
+        <TabsContent value="ab-insights">
+          <CombinedAnalyticsDashboard />
+        </TabsContent>
 
         <TabsContent value="heatmap">
           <HeatmapAnalyzer />
