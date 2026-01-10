@@ -2,10 +2,11 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const INTERNAL_API_SECRET = Deno.env.get("INTERNAL_API_SECRET");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-internal-secret",
 };
 
 interface NewCustomerRequest {
@@ -31,12 +32,34 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    // Validate internal API secret
+    const providedSecret = req.headers.get("x-internal-secret");
+    if (!INTERNAL_API_SECRET || providedSecret !== INTERNAL_API_SECRET) {
+      console.error("Unauthorized: Invalid or missing internal API secret");
+      return new Response(
+        JSON.stringify({ error: "Unauthorized" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const { customerId, recipientEmail }: NewCustomerRequest = await req.json();
     
     console.log(`Processing new customer notification: ${customerId}`);
 
     if (!customerId || !recipientEmail) {
       throw new Error("customerId and recipientEmail are required");
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(recipientEmail)) {
+      throw new Error("Invalid email format");
+    }
+
+    // Validate customerId format (UUID)
+    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    if (!uuidRegex.test(customerId)) {
+      throw new Error("Invalid customerId format");
     }
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
