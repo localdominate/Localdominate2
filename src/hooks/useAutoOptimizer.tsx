@@ -1,6 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { TEST_REQUIREMENTS } from '@/lib/autoOptimizerConfig';
+import { analyzeABTest, calculatePower } from '@/lib/statisticalSignificance';
 
 interface OptimizedElement {
   element_type: string;
@@ -35,7 +36,25 @@ interface CurrentTest {
   conversionRateB: number;
   confidence: number;
   progress: number;
+  pValue: number;
+  zScore: number;
+  isSignificant: boolean;
+  winner: 'A' | 'B' | 'none';
+  relativeImprovement: number;
+  recommendedAction: string;
+  requiredSampleSize: number;
+  currentPower: number;
 }
+
+// Generate or retrieve session ID
+const getSessionId = (): string => {
+  let sessionId = sessionStorage.getItem('analytics_session_id');
+  if (!sessionId) {
+    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    sessionStorage.setItem('analytics_session_id', sessionId);
+  }
+  return sessionId;
+};
 
 export function useAutoOptimizer() {
   const [optimizedElements, setOptimizedElements] = useState<OptimizedElement[]>([]);
@@ -43,8 +62,9 @@ export function useAutoOptimizer() {
   const [currentTest, setCurrentTest] = useState<CurrentTest | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [userVariant, setUserVariant] = useState<'A' | 'B'>('A');
+  const sessionId = useRef<string>(getSessionId());
 
-  // Determine user's variant based on 75/25 split
+  // Determine user's variant based on 50/50 split (improved)
   useEffect(() => {
     const storedVariant = sessionStorage.getItem('auto_optimizer_variant');
     if (storedVariant === 'A' || storedVariant === 'B') {
@@ -102,7 +122,7 @@ export function useAutoOptimizer() {
     }
   }, []);
 
-  // Load stats for current running test
+  // Load stats for current running test with proper statistical analysis
   const loadCurrentTestStats = async (test: TestQueueItem) => {
     if (!test.current_variant_a || !test.current_variant_b) return;
 
@@ -144,10 +164,24 @@ export function useAutoOptimizer() {
     const crA = vA > 0 ? (cA / vA) * 100 : 0;
     const crB = vB > 0 ? (cB / vB) * 100 : 0;
 
-    // Calculate confidence (simplified)
+    // Use proper statistical analysis
+    const analysis = analyzeABTest(
+      cA, vA, cB, vB,
+      TEST_REQUIREMENTS.minDetectableEffect,
+      0.05 // 5% significance level
+    );
+
+    // Calculate current power
+    const baselineRate = Math.max(crA / 100, crB / 100, 0.01);
+    const currentPower = calculatePower(
+      Math.min(vA, vB),
+      baselineRate,
+      TEST_REQUIREMENTS.minDetectableEffect
+    );
+
+    // Progress based on sample size requirement
     const totalViews = vA + vB;
-    const confidence = Math.min(95, (totalViews / TEST_REQUIREMENTS.minViews) * 95);
-    const progress = Math.min(100, (totalViews / TEST_REQUIREMENTS.minViews) * 100);
+    const progress = Math.min(100, (totalViews / (TEST_REQUIREMENTS.minViews * 2)) * 100);
 
     setCurrentTest({
       testId,
@@ -161,8 +195,16 @@ export function useAutoOptimizer() {
       conversionsB: cB,
       conversionRateA: crA,
       conversionRateB: crB,
-      confidence,
-      progress
+      confidence: analysis.confidence,
+      progress,
+      pValue: analysis.pValue,
+      zScore: analysis.zScore,
+      isSignificant: analysis.isSignificant,
+      winner: analysis.winner,
+      relativeImprovement: analysis.relativeImprovement,
+      recommendedAction: analysis.recommendedAction,
+      requiredSampleSize: analysis.requiredSampleSize,
+      currentPower
     });
   };
 
@@ -211,14 +253,27 @@ export function useAutoOptimizer() {
     if (!runningTest) return;
 
     const testId = `auto_${elementType}_${elementId}`;
-    const sessionId = sessionStorage.getItem('analytics_session_id') || 'unknown';
 
-    await supabase.from('ab_test_views').insert({
-      test_id: testId,
-      variant: userVariant,
-      session_id: sessionId,
-      page_url: window.location.pathname
-    });
+    // Check if we already tracked this view in this session
+    const viewKey = `tracked_view_${testId}`;
+    if (sessionStorage.getItem(viewKey)) {
+      return; // Already tracked
+    }
+
+    try {
+      await supabase.from('ab_test_views').insert({
+        test_id: testId,
+        variant: userVariant,
+        session_id: sessionId.current,
+        page_url: window.location.pathname
+      });
+      
+      // Mark as tracked
+      sessionStorage.setItem(viewKey, 'true');
+      console.log(`[AutoOptimizer] Tracked view for ${testId}, variant ${userVariant}`);
+    } catch (error) {
+      console.error('[AutoOptimizer] Error tracking view:', error);
+    }
   }, [testQueue, userVariant]);
 
   // Start the next test in queue

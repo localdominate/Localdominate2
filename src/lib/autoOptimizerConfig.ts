@@ -146,9 +146,12 @@ export type TrustPosition = 'hero' | 'after_pain' | 'before_cta' | 'floating' | 
 
 // Minimum requirements for test completion
 export const TEST_REQUIREMENTS = {
-  minViews: 1000,
+  minViews: 200, // Reduced from 1000 for faster results
   minConfidence: 95,
-  trafficSplitA: 75,
-  trafficSplitB: 25,
-  cooldownDays: 30
+  trafficSplitA: 50, // Changed to 50/50 for balanced testing
+  trafficSplitB: 50,
+  cooldownDays: 14, // Reduced cooldown
+  minConversions: 5, // Minimum conversions per variant
+  minDetectableEffect: 0.2, // 20% minimum effect to detect
+  power: 0.8 // Statistical power target
 };
