@@ -128,7 +128,7 @@ const AutoOptimizerPanel = () => {
               {/* Variant A */}
               <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg border border-green-200">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-bold text-lg">SEITE A (75%)</span>
+                  <span className="font-bold text-lg">SEITE A ({TEST_REQUIREMENTS.trafficSplitA}%)</span>
                   <Badge className="bg-green-500">Optimiert</Badge>
                 </div>
                 <p className="text-xl font-mono mb-2">{currentTest.variantA}</p>
@@ -147,7 +147,7 @@ const AutoOptimizerPanel = () => {
               {/* Variant B */}
               <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg border border-blue-200">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-bold text-lg">SEITE B (25%)</span>
+                  <span className="font-bold text-lg">SEITE B ({TEST_REQUIREMENTS.trafficSplitB}%)</span>
                   <Badge className="bg-blue-500">Test</Badge>
                 </div>
                 <p className="text-xl font-mono mb-2">{currentTest.variantB}</p>

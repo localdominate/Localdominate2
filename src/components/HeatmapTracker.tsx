@@ -1,4 +1,6 @@
 import { useEffect, useRef, useCallback, useState } from "react";
+import { getSessionId, getVariant } from "@/lib/sessionManager";
+import { supabase } from "@/integrations/supabase/client";
 
 interface HeatmapPoint {
   x: number;
@@ -27,6 +29,10 @@ const HeatmapTracker = ({
   const [isOverlayVisible, setIsOverlayVisible] = useState(showOverlay);
   const lastMoveTime = useRef(0);
   const moveThrottle = 100; // ms
+  
+  // Use central session manager
+  const sessionId = useRef(getSessionId());
+  const variant = useRef(getVariant());
 
   // Check URL parameter for admin overlay
   useEffect(() => {
@@ -50,9 +56,9 @@ const HeatmapTracker = ({
     }
   }, [enabled, storageKey]);
 
-  // Save data
+  // Save data locally and optionally to Supabase
   const savePoint = useCallback(
-    (point: HeatmapPoint) => {
+    async (point: HeatmapPoint) => {
       setPoints((prev) => {
         const newPoints = [...prev, point].slice(-maxPoints);
         try {
@@ -62,6 +68,26 @@ const HeatmapTracker = ({
         }
         return newPoints;
       });
+      
+      // Track clicks to Supabase with session and variant
+      if (point.type === "click") {
+        try {
+          await supabase.from("analytics_heatmap_enhanced").insert({
+            session_id: sessionId.current,
+            x_percent: (point.x / window.innerWidth) * 100,
+            y_percent: (point.y / document.documentElement.scrollHeight) * 100,
+            interaction_type: point.type,
+            element_selector: point.path,
+            page_path: window.location.pathname,
+            ab_variant: variant.current,
+            viewport_width: window.innerWidth,
+            viewport_height: window.innerHeight,
+            device: window.innerWidth < 768 ? "mobile" : window.innerWidth < 1024 ? "tablet" : "desktop",
+          });
+        } catch (e) {
+          console.warn("Failed to track heatmap to Supabase:", e);
+        }
+      }
     },
     [maxPoints, storageKey]
   );
@@ -230,6 +256,12 @@ const HeatmapTracker = ({
                 <span className="text-red-400">● Klicks</span>
                 <span className="text-blue-400">● Bewegung</span>
                 <span className="text-green-400">● Scroll</span>
+              </div>
+              <div className="mt-1 text-xs text-gray-400">
+                Session: {sessionId.current.substring(0, 15)}...
+              </div>
+              <div className="text-xs text-gray-400">
+                Variante: {variant.current}
               </div>
             </div>
             <button

@@ -1,6 +1,8 @@
-import { useCallback, useRef, useEffect } from 'react';
+import { useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAutoOptimizerContext } from '@/components/AutoOptimizerProvider';
+import { getSessionId, getTestId } from '@/lib/sessionManager';
+import { useAdvancedTrackingContext } from '@/components/AdvancedTrackingProvider';
 
 interface ConversionData {
   testId: string;
@@ -14,20 +16,11 @@ interface ConversionData {
 }
 
 export function useABTestConversion() {
-  const { testQueue, userVariant } = useAutoOptimizerContext();
-  const sessionId = useRef<string>('');
-
-  // Initialize session ID
-  useEffect(() => {
-    const existingId = sessionStorage.getItem('analytics_session_id');
-    if (existingId) {
-      sessionId.current = existingId;
-    } else {
-      const newId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('analytics_session_id', newId);
-      sessionId.current = newId;
-    }
-  }, []);
+  const { testQueue, userVariant, currentTest } = useAutoOptimizerContext();
+  const advancedTracking = useAdvancedTrackingContext();
+  
+  // Use central session manager for consistent session ID
+  const sessionId = getSessionId();
 
   // Get current running test info
   const getRunningTest = useCallback((elementType?: string, elementId?: string) => {
@@ -40,26 +33,32 @@ export function useABTestConversion() {
     return testQueue.find(t => t.status === 'testing');
   }, [testQueue]);
 
+  // Get the current test ID from context or session manager
+  const getCurrentTestId = useCallback(() => {
+    if (currentTest?.testId) {
+      return currentTest.testId;
+    }
+    const runningTest = getRunningTest();
+    if (runningTest) {
+      return `auto_${runningTest.element_type}_${runningTest.element_id}`;
+    }
+    return getTestId();
+  }, [currentTest, getRunningTest]);
+
   // Track CTA click conversion
   const trackCtaClick = useCallback(async (
     ctaLocation: string,
     ctaText: string,
     amount?: number
   ) => {
-    const runningTest = getRunningTest();
-    if (!runningTest) {
-      console.log('[Conversion] No running test to track');
-      return;
-    }
-
-    const testId = `auto_${runningTest.element_type}_${runningTest.element_id}`;
+    const testId = getCurrentTestId();
     
-    console.log(`[Conversion] Tracking CTA click for ${testId}, variant ${userVariant}`);
+    console.log(`[Conversion] Tracking CTA click for ${testId || 'no test'}, variant ${userVariant}`);
 
     try {
       await supabase.from('analytics_conversions').insert({
         conversion_type: 'cta_click',
-        session_id: sessionId.current,
+        session_id: sessionId,
         page_path: window.location.pathname,
         cta_location: ctaLocation,
         cta_text: ctaText,
@@ -67,50 +66,50 @@ export function useABTestConversion() {
         ab_test_id: testId,
         ab_variant_color: userVariant
       });
+      
+      // Also track click in advanced tracking
+      advancedTracking.trackClick(ctaLocation, true);
     } catch (error) {
       console.error('[Conversion] Error tracking CTA click:', error);
     }
-  }, [getRunningTest, userVariant]);
+  }, [getCurrentTestId, userVariant, sessionId, advancedTracking]);
 
   // Track checkout start
   const trackCheckoutStart = useCallback(async (amount: number) => {
-    const runningTest = getRunningTest();
-    const testId = runningTest 
-      ? `auto_${runningTest.element_type}_${runningTest.element_id}` 
-      : null;
+    const testId = getCurrentTestId();
 
     console.log(`[Conversion] Tracking checkout start${testId ? ` for ${testId}` : ''}`);
 
     try {
       await supabase.from('analytics_conversions').insert({
         conversion_type: 'checkout_start',
-        session_id: sessionId.current,
+        session_id: sessionId,
         page_path: window.location.pathname,
         amount: amount,
         ab_test_id: testId,
         ab_variant_color: testId ? userVariant : null
       });
+      
+      // Sync with advanced tracking
+      advancedTracking.trackCheckoutStart();
     } catch (error) {
       console.error('[Conversion] Error tracking checkout start:', error);
     }
-  }, [getRunningTest, userVariant]);
+  }, [getCurrentTestId, userVariant, sessionId, advancedTracking]);
 
   // Track checkout complete
   const trackCheckoutComplete = useCallback(async (
     stripeSessionId: string, 
     amount: number
   ) => {
-    const runningTest = getRunningTest();
-    const testId = runningTest 
-      ? `auto_${runningTest.element_type}_${runningTest.element_id}` 
-      : null;
+    const testId = getCurrentTestId();
 
     console.log(`[Conversion] Tracking checkout complete${testId ? ` for ${testId}` : ''}`);
 
     try {
       await supabase.from('analytics_conversions').insert({
         conversion_type: 'checkout_complete',
-        session_id: sessionId.current,
+        session_id: sessionId,
         page_path: window.location.pathname,
         amount: amount,
         stripe_session_id: stripeSessionId,
@@ -118,10 +117,13 @@ export function useABTestConversion() {
         ab_test_id: testId,
         ab_variant_color: testId ? userVariant : null
       });
+      
+      // Sync with advanced tracking
+      advancedTracking.trackCheckoutComplete();
     } catch (error) {
       console.error('[Conversion] Error tracking checkout complete:', error);
     }
-  }, [getRunningTest, userVariant]);
+  }, [getCurrentTestId, userVariant, sessionId, advancedTracking]);
 
   // Track any custom conversion
   const trackConversion = useCallback(async (data: Partial<ConversionData>) => {
@@ -131,12 +133,12 @@ export function useABTestConversion() {
     
     const testId = runningTest 
       ? `auto_${runningTest.element_type}_${runningTest.element_id}` 
-      : data.testId || null;
+      : data.testId || getCurrentTestId();
 
     try {
       await supabase.from('analytics_conversions').insert({
         conversion_type: data.conversionType || 'custom',
-        session_id: sessionId.current,
+        session_id: sessionId,
         page_path: window.location.pathname,
         cta_location: data.ctaLocation,
         cta_text: data.ctaText,
@@ -147,14 +149,14 @@ export function useABTestConversion() {
     } catch (error) {
       console.error('[Conversion] Error tracking conversion:', error);
     }
-  }, [getRunningTest, userVariant]);
+  }, [getRunningTest, getCurrentTestId, userVariant, sessionId]);
 
   return {
     trackCtaClick,
     trackCheckoutStart,
     trackCheckoutComplete,
     trackConversion,
-    sessionId: sessionId.current,
+    sessionId,
     userVariant,
     currentTest: getRunningTest()
   };
