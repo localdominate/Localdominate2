@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
@@ -1034,7 +1035,7 @@ const KostenloseSeo = () => {
             </li>
           </ul>
           <p className="text-muted-foreground">
-            Nutze unser <a href="/seo-lexikon" className="text-primary underline">SEO-Lexikon</a> mit 
+            Nutze unser <Link to="/seo-lexikon" className="text-primary underline">SEO-Lexikon</Link> mit 
             50+ Begriffen, um dein Wissen zu vertiefen. Und wenn du professionelle Unterstützung 
             möchtest, sind wir von Local Dominator für dich da!
           </p>
