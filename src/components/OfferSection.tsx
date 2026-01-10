@@ -10,12 +10,18 @@ import { openStripeCheckout } from "@/lib/stripe";
 import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS, PRICE_DISPLAY_VARIANTS } from "@/lib/autoOptimizerConfig";
 import { useABTestConversion } from "@/hooks/useABTestConversion";
+import useCtaHoverTracking from "@/hooks/useCtaHoverTracking";
+import usePriceHoverTracking from "@/hooks/usePriceHoverTracking";
+import { useAdvancedTrackingContext } from "@/components/AdvancedTrackingProvider";
 
 const OfferSection = () => {
   const { language, t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
   const { getEffectiveValue } = useAutoOptimizerContext();
   const { trackCtaClick, trackCheckoutStart } = useABTestConversion();
+  const { trackClick } = useAdvancedTrackingContext();
+  const ctaHoverProps = useCtaHoverTracking("offer_cta");
+  const priceHoverProps = usePriceHoverTracking();
   
   // Get optimized values
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
@@ -32,6 +38,9 @@ const OfferSection = () => {
     // Track for dataLayer
     trackButtonClick("offer_cta", "offer_section", 299);
     
+    // Track click for engagement
+    trackClick("offer_cta", true);
+    
     // Track for A/B testing
     await trackCtaClick("offer_section", ctaText, 299);
     await trackCheckoutStart(299);
@@ -45,7 +54,10 @@ const OfferSection = () => {
     switch (priceDisplay) {
       case 'daily':
         return (
-          <>
+          <div 
+            onMouseEnter={priceHoverProps.onMouseEnter}
+            onMouseLeave={priceHoverProps.onMouseLeave}
+          >
             <p className="text-muted-foreground text-sm mb-2">
               {t.offer.agencyPrice}
             </p>
@@ -61,11 +73,14 @@ const OfferSection = () => {
             <p className="text-muted-foreground mb-6">
               {language === 'de' ? 'pro Tag für ein Jahr' : 'per day for a year'}
             </p>
-          </>
+          </div>
         );
       case 'savings':
         return (
-          <>
+          <div 
+            onMouseEnter={priceHoverProps.onMouseEnter}
+            onMouseLeave={priceHoverProps.onMouseLeave}
+          >
             <p className="text-muted-foreground text-sm mb-2">
               {t.offer.agencyPrice}
             </p>
@@ -81,11 +96,14 @@ const OfferSection = () => {
             <p className="text-muted-foreground mb-6">
               {t.offer.oneTime}
             </p>
-          </>
+          </div>
         );
       case 'comparison':
         return (
-          <>
+          <div 
+            onMouseEnter={priceHoverProps.onMouseEnter}
+            onMouseLeave={priceHoverProps.onMouseLeave}
+          >
             <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
               {priceDisplayText}
             </p>
@@ -103,11 +121,14 @@ const OfferSection = () => {
             <p className="text-muted-foreground mb-6">
               {t.offer.oneTime}
             </p>
-          </>
+          </div>
         );
       case 'roi':
         return (
-          <>
+          <div 
+            onMouseEnter={priceHoverProps.onMouseEnter}
+            onMouseLeave={priceHoverProps.onMouseLeave}
+          >
             <p className="text-muted-foreground text-sm mb-2">
               {t.offer.agencyPrice}
             </p>
@@ -120,11 +141,14 @@ const OfferSection = () => {
             <p className="text-sm font-semibold text-success uppercase tracking-widest mb-6">
               {priceDisplayText}
             </p>
-          </>
+          </div>
         );
       default: // 'standard'
         return (
-          <>
+          <div 
+            onMouseEnter={priceHoverProps.onMouseEnter}
+            onMouseLeave={priceHoverProps.onMouseLeave}
+          >
             <p className="text-muted-foreground text-sm mb-2">
               {t.offer.agencyPrice}
             </p>
@@ -140,7 +164,7 @@ const OfferSection = () => {
             <p className="text-muted-foreground mb-6">
               {t.offer.oneTime}
             </p>
-          </>
+          </div>
         );
     }
   };
@@ -187,6 +211,8 @@ const OfferSection = () => {
                 size="cta" 
                 className="w-full group cta-pulse" 
                 onClick={handleCtaClick}
+                onMouseEnter={ctaHoverProps.onMouseEnter}
+                onMouseLeave={ctaHoverProps.onMouseLeave}
               >
                 {ctaText}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
