@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   Trophy, 
   TrendingUp, 
@@ -17,7 +18,8 @@ import {
   Star,
   AlertTriangle,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  Lightbulb
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { getCoreWebVitalsHistory } from "@/hooks/useCoreWebVitals";
@@ -28,6 +30,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import AIRecommendations from "./AIRecommendations";
 
 // Industry benchmarks based on 2024/2025 studies
 const BENCHMARKS = {
@@ -320,7 +323,20 @@ const CompetitiveAnalysis = () => {
           </Button>
         </div>
 
-        {/* Overall Score */}
+        {/* Tabs for Benchmarks vs Recommendations */}
+        <Tabs defaultValue="benchmarks" className="w-full">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="benchmarks" className="flex items-center gap-2">
+              <BarChart3 className="h-4 w-4" />
+              Benchmarks
+            </TabsTrigger>
+            <TabsTrigger value="recommendations" className="flex items-center gap-2">
+              <Lightbulb className="h-4 w-4" />
+              Empfehlungen
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="benchmarks" className="space-y-6 mt-6">
         {overallScore !== null && (
           <Card className="border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-transparent">
             <CardHeader className="pb-2">
@@ -474,6 +490,15 @@ const CompetitiveAnalysis = () => {
             </p>
           </CardContent>
         </Card>
+          </TabsContent>
+
+          <TabsContent value="recommendations" className="mt-6">
+            <AIRecommendations 
+              sessionData={sessionData} 
+              conversionData={conversionData} 
+            />
+          </TabsContent>
+        </Tabs>
       </div>
     </TooltipProvider>
   );
