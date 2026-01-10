@@ -9,11 +9,13 @@ import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
 import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS, PRICE_DISPLAY_VARIANTS } from "@/lib/autoOptimizerConfig";
+import { useABTestConversion } from "@/hooks/useABTestConversion";
 
 const OfferSection = () => {
   const { language, t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
   const { getEffectiveValue } = useAutoOptimizerContext();
+  const { trackCtaClick, trackCheckoutStart } = useABTestConversion();
   
   // Get optimized values
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
@@ -26,8 +28,15 @@ const OfferSection = () => {
   // Get price display badge
   const priceDisplayText = PRICE_DISPLAY_VARIANTS[priceDisplay]?.[language] || t.offer.oneTime;
   
-  const handleCtaClick = () => {
+  const handleCtaClick = async () => {
+    // Track for dataLayer
     trackButtonClick("offer_cta", "offer_section", 299);
+    
+    // Track for A/B testing
+    await trackCtaClick("offer_section", ctaText, 299);
+    await trackCheckoutStart(299);
+    
+    // Open checkout
     openStripeCheckout("standard", "offer_section", ctaText);
   };
 

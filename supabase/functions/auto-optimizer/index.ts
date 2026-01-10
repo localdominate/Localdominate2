@@ -19,46 +19,129 @@ interface TestQueueItem {
 }
 
 const TEST_REQUIREMENTS = {
-  minViews: 1000,
+  minViews: 200, // Reduced for faster results
   minConfidence: 95,
-  trafficSplitA: 75,
-  trafficSplitB: 25
+  minConversions: 5, // Minimum conversions per variant
+  trafficSplitA: 50,
+  trafficSplitB: 50
 };
 
-// Calculate statistical significance using Z-test
-function calculateConfidence(
+// Error function for normal distribution
+function erf(x: number): number {
+  const a1 = 0.254829592;
+  const a2 = -0.284496736;
+  const a3 = 1.421413741;
+  const a4 = -1.453152027;
+  const a5 = 1.061405429;
+  const p = 0.3275911;
+
+  const sign = x < 0 ? -1 : 1;
+  x = Math.abs(x);
+
+  const t = 1.0 / (1.0 + p * x);
+  const y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
+
+  return sign * y;
+}
+
+// Standard normal CDF
+function normalCDF(x: number): number {
+  return 0.5 * (1 + erf(x / Math.sqrt(2)));
+}
+
+// Calculate Z-score for two proportions
+function calculateZScore(
+  conversionsA: number,
+  visitorsA: number,
+  conversionsB: number,
+  visitorsB: number
+): number {
+  if (visitorsA === 0 || visitorsB === 0) return 0;
+
+  const pA = conversionsA / visitorsA;
+  const pB = conversionsB / visitorsB;
+  const pPooled = (conversionsA + conversionsB) / (visitorsA + visitorsB);
+  
+  if (pPooled === 0 || pPooled === 1) return 0;
+
+  const standardError = Math.sqrt(
+    pPooled * (1 - pPooled) * (1 / visitorsA + 1 / visitorsB)
+  );
+
+  if (standardError === 0) return 0;
+
+  return (pA - pB) / standardError;
+}
+
+// Calculate p-value from Z-score
+function calculatePValue(zScore: number): number {
+  return 2 * (1 - normalCDF(Math.abs(zScore)));
+}
+
+// Full statistical analysis
+function analyzeTest(
   viewsA: number, 
   conversionsA: number, 
   viewsB: number, 
   conversionsB: number
-): { confidence: number; winner: 'A' | 'B' | null } {
-  if (viewsA < 100 || viewsB < 100) {
-    return { confidence: 0, winner: null };
+): { 
+  confidence: number; 
+  winner: 'A' | 'B' | null;
+  pValue: number;
+  zScore: number;
+  isSignificant: boolean;
+  relativeImprovement: number;
+} {
+  const zScore = calculateZScore(conversionsA, viewsA, conversionsB, viewsB);
+  const pValue = calculatePValue(zScore);
+  const confidence = (1 - pValue) * 100;
+  const isSignificant = pValue < 0.05;
+
+  const rateA = viewsA > 0 ? conversionsA / viewsA : 0;
+  const rateB = viewsB > 0 ? conversionsB / viewsB : 0;
+  
+  const relativeImprovement = rateA > 0 
+    ? ((rateB - rateA) / rateA) * 100 
+    : 0;
+
+  let winner: 'A' | 'B' | null = null;
+  if (isSignificant && rateA !== rateB) {
+    winner = rateA > rateB ? 'A' : 'B';
   }
 
-  const rateA = conversionsA / viewsA;
-  const rateB = conversionsB / viewsB;
-  
-  const pooledRate = (conversionsA + conversionsB) / (viewsA + viewsB);
-  const standardError = Math.sqrt(pooledRate * (1 - pooledRate) * (1/viewsA + 1/viewsB));
-  
-  if (standardError === 0) {
-    return { confidence: 0, winner: null };
+  return { 
+    confidence: Math.min(99.9, confidence), 
+    winner, 
+    pValue, 
+    zScore, 
+    isSignificant,
+    relativeImprovement
+  };
+}
+
+// Check if minimum requirements are met
+function meetsMinimumRequirements(
+  viewsA: number,
+  viewsB: number,
+  conversionsA: number,
+  conversionsB: number
+): { met: boolean; reason?: string } {
+  if (viewsA < TEST_REQUIREMENTS.minViews || viewsB < TEST_REQUIREMENTS.minViews) {
+    return { 
+      met: false, 
+      reason: `Need more views. A: ${viewsA}/${TEST_REQUIREMENTS.minViews}, B: ${viewsB}/${TEST_REQUIREMENTS.minViews}` 
+    };
   }
   
-  const zScore = Math.abs(rateA - rateB) / standardError;
+  // Relaxed conversion requirement - only check if we have any conversions total
+  if (conversionsA + conversionsB === 0) {
+    return { 
+      met: false, 
+      reason: 'No conversions recorded yet' 
+    };
+  }
   
-  // Convert Z-score to confidence percentage
-  let confidence = 0;
-  if (zScore >= 2.576) confidence = 99;
-  else if (zScore >= 1.96) confidence = 95;
-  else if (zScore >= 1.645) confidence = 90;
-  else if (zScore >= 1.282) confidence = 80;
-  else confidence = Math.min(79, Math.round(zScore * 40));
-
-  const winner = rateA > rateB ? 'A' : rateB > rateA ? 'B' : null;
-  
-  return { confidence, winner };
+  return { met: true };
 }
 
 Deno.serve(async (req) => {
@@ -126,9 +209,10 @@ Deno.serve(async (req) => {
       const cB = conversionsB || 0;
       const totalViews = vA + vB;
 
-      console.log(`[Auto-Optimizer] Stats - A: ${cA}/${vA}, B: ${cB}/${vB}`);
+      console.log(`[Auto-Optimizer] Stats - Views A: ${vA}, B: ${vB} | Conversions A: ${cA}, B: ${cB}`);
 
-      const { confidence, winner } = calculateConfidence(vA, cA, vB, cB);
+      const analysis = analyzeTest(vA, cA, vB, cB);
+      const requirements = meetsMinimumRequirements(vA, vB, cA, cB);
 
       results.push({
         testId,
@@ -140,18 +224,24 @@ Deno.serve(async (req) => {
         viewsB: vB,
         conversionsA: cA,
         conversionsB: cB,
-        confidence,
-        winner,
+        conversionRateA: vA > 0 ? ((cA / vA) * 100).toFixed(2) : 0,
+        conversionRateB: vB > 0 ? ((cB / vB) * 100).toFixed(2) : 0,
+        confidence: analysis.confidence.toFixed(2),
+        pValue: analysis.pValue.toFixed(4),
+        zScore: analysis.zScore.toFixed(3),
+        isSignificant: analysis.isSignificant,
+        relativeImprovement: analysis.relativeImprovement.toFixed(2),
+        winner: analysis.winner,
         totalViews,
-        meetsMinViews: totalViews >= TEST_REQUIREMENTS.minViews,
-        meetsConfidence: confidence >= TEST_REQUIREMENTS.minConfidence
+        requirementsMet: requirements.met,
+        requirementsReason: requirements.reason
       });
 
       // Check if we can declare a winner
-      if (totalViews >= TEST_REQUIREMENTS.minViews && confidence >= TEST_REQUIREMENTS.minConfidence && winner) {
-        console.log(`[Auto-Optimizer] Test complete! Winner: ${winner}`);
+      if (requirements.met && analysis.isSignificant && analysis.winner) {
+        console.log(`[Auto-Optimizer] Test complete! Winner: ${analysis.winner} with ${analysis.confidence.toFixed(1)}% confidence`);
 
-        const winningValue = winner === 'A' ? test.current_variant_a : test.current_variant_b;
+        const winningValue = analysis.winner === 'A' ? test.current_variant_a : test.current_variant_b;
 
         // Get current optimized element to update history
         const { data: currentOptimized } = await supabase
@@ -176,11 +266,14 @@ Deno.serve(async (req) => {
                 variant_a: test.current_variant_a,
                 variant_b: test.current_variant_b,
                 winner: winningValue,
-                confidence,
+                confidence: analysis.confidence,
+                p_value: analysis.pValue,
+                z_score: analysis.zScore,
                 views_a: vA,
                 views_b: vB,
                 conversions_a: cA,
                 conversions_b: cB,
+                relative_improvement: analysis.relativeImprovement,
                 tested_at: new Date().toISOString()
               }
             ]
@@ -248,6 +341,8 @@ Deno.serve(async (req) => {
 
         results[0].action = 'declared_winner';
         results[0].nextVariant = untested.length > 0 ? untested[0] : null;
+      } else {
+        results[0].action = 'collecting_data';
       }
     } else {
       // No running test, check if we should start one

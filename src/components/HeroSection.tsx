@@ -8,10 +8,12 @@ import { openStripeCheckout } from "@/lib/stripe";
 import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS, HEADLINE_VARIANTS, URGENCY_VARIANTS } from "@/lib/autoOptimizerConfig";
 import CountdownTimer from "@/components/CountdownTimer";
+import { useABTestConversion } from "@/hooks/useABTestConversion";
 
 const HeroSection = () => {
   const { language, t } = useLanguage();
   const { getEffectiveValue, isLoading } = useAutoOptimizerContext();
+  const { trackCtaClick, trackCheckoutStart } = useABTestConversion();
   
   // Get optimized values
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
@@ -28,8 +30,15 @@ const HeroSection = () => {
   // Get urgency content
   const urgencyContent = URGENCY_VARIANTS[urgencyType]?.[language] || '';
   
-  const handleCtaClick = () => {
+  const handleCtaClick = async () => {
+    // Track for dataLayer
     trackButtonClick("hero_cta", "hero_section", 299);
+    
+    // Track for A/B testing
+    await trackCtaClick("hero_section", ctaText, 299);
+    await trackCheckoutStart(299);
+    
+    // Open checkout
     openStripeCheckout("standard", "hero_section", ctaText);
   };
 
