@@ -53,9 +53,9 @@ const StickyHeader = () => {
       <div className="bg-background border-b border-border shadow-lg">
         <div className="container max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo/Brand */}
+            {/* Logo/Brand - Explicit dimensions to prevent CLS */}
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <img src="/favicon.png" alt="Local Dominator" className="w-8 h-8" />
+              <img src="/favicon.png" alt="Local Dominator" className="w-8 h-8" width={32} height={32} />
               <span className="font-bold text-foreground text-lg hidden sm:block">
                 {t.brand}
               </span>
