@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,92 +6,107 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./i18n/LanguageContext";  
 import { ABTestProvider } from "@/hooks/useABTest";
-import CoreWebVitalsTracker from "@/components/CoreWebVitalsTracker";
+
+// Critical pages loaded immediately
 import Index from "./pages/Index";
-import RestaurantMarketing from "./pages/RestaurantMarketing";
-import HandwerkerMarketing from "./pages/HandwerkerMarketing";
-import ArztpraxisMarketing from "./pages/ArztpraxisMarketing";
-import AnwaltMarketing from "./pages/AnwaltMarketing";
-import DIYToolkit from "./pages/DIYToolkit";
-import Danke from "./pages/Danke";
-import Onboarding from "./pages/Onboarding";
-import Impressum from "./pages/Impressum";
-import Datenschutz from "./pages/Datenschutz";
-import AGB from "./pages/AGB";
-import Blog from "./pages/Blog";
-import GoogleMapsRanking from "./pages/blog/GoogleMapsRanking";
-import GoogleBewertungen from "./pages/blog/GoogleBewertungen";
-import LocalSeoRestaurant from "./pages/blog/LocalSeoRestaurant";
-import GoogleMyBusiness from "./pages/blog/GoogleMyBusiness";
-import LokaleSeo2026 from "./pages/blog/LokaleSeo2026";
-import NapKonsistenz from "./pages/blog/NapKonsistenz";
-import LocalSeoHandwerker from "./pages/blog/LocalSeoHandwerker";
-import LocalSeoAuditCheckliste from "./pages/blog/LocalSeoAuditCheckliste";
-import LocalSeoKeywords from "./pages/blog/LocalSeoKeywords";
-import Analytics from "./pages/Analytics";
-import ABTestDashboard from "./pages/ABTestDashboard";
-import ABTestZentrale from "./pages/ABTestZentrale";
-import NotFound from "./pages/NotFound";
-import LocalSeoSchweiz from "./pages/blog/LocalSeoSchweiz";
-import LocalSeoZuerich from "./pages/blog/LocalSeoZuerich";
-import LocalSeoMuenchen from "./pages/blog/LocalSeoMuenchen";
-import LocalSeoAerzte from "./pages/blog/LocalSeoAerzte";
-import LocalSeoAnwaelte from "./pages/blog/LocalSeoAnwaelte";
-import LocalSeoHotels from "./pages/blog/LocalSeoHotels";
-import LocalSeoFitness from "./pages/blog/LocalSeoFitness";
-import SchemaMarkupLocalSeo from "./pages/blog/SchemaMarkupLocalSeo";
-import MobileLocalSeo from "./pages/blog/MobileLocalSeo";
-import GoogleMapsRankingFaktoren from "./pages/blog/GoogleMapsRankingFaktoren";
-import LocalLinkBuilding from "./pages/blog/LocalLinkBuilding";
-import NegativeGoogleBewertungen from "./pages/blog/NegativeGoogleBewertungen";
-import LocalContentMarketing from "./pages/blog/LocalContentMarketing";
-import LocalSeoCaseStudy from "./pages/blog/LocalSeoCaseStudy";
-import LocalSeoFehler from "./pages/blog/LocalSeoFehler";
-import LocalSeoDoenerladen from "./pages/blog/LocalSeoDoenerladen";
-import LocalSeoFriseur from "./pages/blog/LocalSeoFriseur";
-import LocalSeoImmobilienmakler from "./pages/blog/LocalSeoImmobilienmakler";
-import LocalSeoHamburg from "./pages/blog/LocalSeoHamburg";
-import LocalSeoSteuerberater from "./pages/blog/LocalSeoSteuerberater";
-import LocalSeoAutowerkstatt from "./pages/blog/LocalSeoAutowerkstatt";
-import LocalSeoFrankfurt from "./pages/blog/LocalSeoFrankfurt";
-import CoreWebVitalsLocalSeo from "./pages/blog/CoreWebVitalsLocalSeo";
-import LocalSeoBerlin from "./pages/blog/LocalSeoBerlin";
-import KostenloseSeo from "./pages/blog/KostenloseSeo";
-import LocalSeoKoeln from "./pages/blog/LocalSeoKoeln";
-import LocalSeoWien from "./pages/blog/LocalSeoWien";
-import LocalSeoTierarzt from "./pages/blog/LocalSeoTierarzt";
-import KiToolsLocalSeo from "./pages/blog/KiToolsLocalSeo";
-import GoogleAiOverviews from "./pages/blog/GoogleAiOverviews";
-import SeoToolbox from "./pages/blog/SeoToolbox";
-import LocalSeoStuttgart from "./pages/blog/LocalSeoStuttgart";
-import LocalSeoDuesseldorf from "./pages/blog/LocalSeoDuesseldorf";
-import LocalSeoBasel from "./pages/blog/LocalSeoBasel";
-import LocalSeoYoga from "./pages/blog/LocalSeoYoga";
-import LocalSeoTattoo from "./pages/blog/LocalSeoTattoo";
-import LocalSeoApotheke from "./pages/blog/LocalSeoApotheke";
-import GbpFotosOptimieren from "./pages/blog/GbpFotosOptimieren";
-import LocalSeoMehrstufigUnternehmen from "./pages/blog/LocalSeoMehrstufigUnternehmen";
-import EEATLokaleUnternehmen from "./pages/blog/EEATLokaleUnternehmen";
-import LocalSeoNeugruender from "./pages/blog/LocalSeoNeugruender";
-import GoogleBusinessMessaging from "./pages/blog/GoogleBusinessMessaging";
-import LocalSeoPhysiotherapie from "./pages/blog/LocalSeoPhysiotherapie";
-import LocalSeoNotdienstKeywords from "./pages/blog/LocalSeoNotdienstKeywords";
-import GoogleBusinessKategorienGuide from "./pages/blog/GoogleBusinessKategorienGuide";
-import LocalSeoZahnarzt from "./pages/blog/LocalSeoZahnarzt";
-import LokaleEventsMarketing from "./pages/blog/LokaleEventsMarketing";
-import GoogleBusinessProdukteServices from "./pages/blog/GoogleBusinessProdukteServices";
-import LocalSeoOptiker from "./pages/blog/LocalSeoOptiker";
-import BewertungsAntwortenVorlagen from "./pages/blog/BewertungsAntwortenVorlagen";
-import LocalSeoElektrotechnik from "./pages/blog/LocalSeoElektrotechnik";
-import GoogleBusinessInsightsVerstehen from "./pages/blog/GoogleBusinessInsightsVerstehen";
-import ContentPlanDashboard from "./pages/ContentPlanDashboard";
-import MeineKunden from "./pages/MeineKunden";
-import SeoLexikon from "./pages/SeoLexikon";
-import ArticleFeedbackDashboard from "./pages/ArticleFeedbackDashboard";
-import ResetPassword from "./pages/admin/ResetPassword";
-import UpdatePassword from "./pages/admin/UpdatePassword";
+
+// Lazy load non-critical pages
+const RestaurantMarketing = lazy(() => import("./pages/RestaurantMarketing"));
+const HandwerkerMarketing = lazy(() => import("./pages/HandwerkerMarketing"));
+const ArztpraxisMarketing = lazy(() => import("./pages/ArztpraxisMarketing"));
+const AnwaltMarketing = lazy(() => import("./pages/AnwaltMarketing"));
+const DIYToolkit = lazy(() => import("./pages/DIYToolkit"));
+const Danke = lazy(() => import("./pages/Danke"));
+const Onboarding = lazy(() => import("./pages/Onboarding"));
+const Impressum = lazy(() => import("./pages/Impressum"));
+const Datenschutz = lazy(() => import("./pages/Datenschutz"));
+const AGB = lazy(() => import("./pages/AGB"));
+const Blog = lazy(() => import("./pages/Blog"));
+const Analytics = lazy(() => import("./pages/Analytics"));
+const ABTestDashboard = lazy(() => import("./pages/ABTestDashboard"));
+const ABTestZentrale = lazy(() => import("./pages/ABTestZentrale"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const ContentPlanDashboard = lazy(() => import("./pages/ContentPlanDashboard"));
+const MeineKunden = lazy(() => import("./pages/MeineKunden"));
+const SeoLexikon = lazy(() => import("./pages/SeoLexikon"));
+const ArticleFeedbackDashboard = lazy(() => import("./pages/ArticleFeedbackDashboard"));
+const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
+const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
+
+// Lazy load all blog articles
+const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
+const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
+const LocalSeoRestaurant = lazy(() => import("./pages/blog/LocalSeoRestaurant"));
+const GoogleMyBusiness = lazy(() => import("./pages/blog/GoogleMyBusiness"));
+const LokaleSeo2026 = lazy(() => import("./pages/blog/LokaleSeo2026"));
+const NapKonsistenz = lazy(() => import("./pages/blog/NapKonsistenz"));
+const LocalSeoHandwerker = lazy(() => import("./pages/blog/LocalSeoHandwerker"));
+const LocalSeoAuditCheckliste = lazy(() => import("./pages/blog/LocalSeoAuditCheckliste"));
+const LocalSeoKeywords = lazy(() => import("./pages/blog/LocalSeoKeywords"));
+const LocalSeoSchweiz = lazy(() => import("./pages/blog/LocalSeoSchweiz"));
+const LocalSeoZuerich = lazy(() => import("./pages/blog/LocalSeoZuerich"));
+const LocalSeoMuenchen = lazy(() => import("./pages/blog/LocalSeoMuenchen"));
+const LocalSeoAerzte = lazy(() => import("./pages/blog/LocalSeoAerzte"));
+const LocalSeoAnwaelte = lazy(() => import("./pages/blog/LocalSeoAnwaelte"));
+const LocalSeoHotels = lazy(() => import("./pages/blog/LocalSeoHotels"));
+const LocalSeoFitness = lazy(() => import("./pages/blog/LocalSeoFitness"));
+const SchemaMarkupLocalSeo = lazy(() => import("./pages/blog/SchemaMarkupLocalSeo"));
+const MobileLocalSeo = lazy(() => import("./pages/blog/MobileLocalSeo"));
+const GoogleMapsRankingFaktoren = lazy(() => import("./pages/blog/GoogleMapsRankingFaktoren"));
+const LocalLinkBuilding = lazy(() => import("./pages/blog/LocalLinkBuilding"));
+const NegativeGoogleBewertungen = lazy(() => import("./pages/blog/NegativeGoogleBewertungen"));
+const LocalContentMarketing = lazy(() => import("./pages/blog/LocalContentMarketing"));
+const LocalSeoCaseStudy = lazy(() => import("./pages/blog/LocalSeoCaseStudy"));
+const LocalSeoFehler = lazy(() => import("./pages/blog/LocalSeoFehler"));
+const LocalSeoDoenerladen = lazy(() => import("./pages/blog/LocalSeoDoenerladen"));
+const LocalSeoFriseur = lazy(() => import("./pages/blog/LocalSeoFriseur"));
+const LocalSeoImmobilienmakler = lazy(() => import("./pages/blog/LocalSeoImmobilienmakler"));
+const LocalSeoHamburg = lazy(() => import("./pages/blog/LocalSeoHamburg"));
+const LocalSeoSteuerberater = lazy(() => import("./pages/blog/LocalSeoSteuerberater"));
+const LocalSeoAutowerkstatt = lazy(() => import("./pages/blog/LocalSeoAutowerkstatt"));
+const LocalSeoFrankfurt = lazy(() => import("./pages/blog/LocalSeoFrankfurt"));
+const CoreWebVitalsLocalSeo = lazy(() => import("./pages/blog/CoreWebVitalsLocalSeo"));
+const LocalSeoBerlin = lazy(() => import("./pages/blog/LocalSeoBerlin"));
+const KostenloseSeo = lazy(() => import("./pages/blog/KostenloseSeo"));
+const LocalSeoKoeln = lazy(() => import("./pages/blog/LocalSeoKoeln"));
+const LocalSeoWien = lazy(() => import("./pages/blog/LocalSeoWien"));
+const LocalSeoTierarzt = lazy(() => import("./pages/blog/LocalSeoTierarzt"));
+const KiToolsLocalSeo = lazy(() => import("./pages/blog/KiToolsLocalSeo"));
+const GoogleAiOverviews = lazy(() => import("./pages/blog/GoogleAiOverviews"));
+const SeoToolbox = lazy(() => import("./pages/blog/SeoToolbox"));
+const LocalSeoStuttgart = lazy(() => import("./pages/blog/LocalSeoStuttgart"));
+const LocalSeoDuesseldorf = lazy(() => import("./pages/blog/LocalSeoDuesseldorf"));
+const LocalSeoBasel = lazy(() => import("./pages/blog/LocalSeoBasel"));
+const LocalSeoYoga = lazy(() => import("./pages/blog/LocalSeoYoga"));
+const LocalSeoTattoo = lazy(() => import("./pages/blog/LocalSeoTattoo"));
+const LocalSeoApotheke = lazy(() => import("./pages/blog/LocalSeoApotheke"));
+const GbpFotosOptimieren = lazy(() => import("./pages/blog/GbpFotosOptimieren"));
+const LocalSeoMehrstufigUnternehmen = lazy(() => import("./pages/blog/LocalSeoMehrstufigUnternehmen"));
+const EEATLokaleUnternehmen = lazy(() => import("./pages/blog/EEATLokaleUnternehmen"));
+const LocalSeoNeugruender = lazy(() => import("./pages/blog/LocalSeoNeugruender"));
+const GoogleBusinessMessaging = lazy(() => import("./pages/blog/GoogleBusinessMessaging"));
+const LocalSeoPhysiotherapie = lazy(() => import("./pages/blog/LocalSeoPhysiotherapie"));
+const LocalSeoNotdienstKeywords = lazy(() => import("./pages/blog/LocalSeoNotdienstKeywords"));
+const GoogleBusinessKategorienGuide = lazy(() => import("./pages/blog/GoogleBusinessKategorienGuide"));
+const LocalSeoZahnarzt = lazy(() => import("./pages/blog/LocalSeoZahnarzt"));
+const LokaleEventsMarketing = lazy(() => import("./pages/blog/LokaleEventsMarketing"));
+const GoogleBusinessProdukteServices = lazy(() => import("./pages/blog/GoogleBusinessProdukteServices"));
+const LocalSeoOptiker = lazy(() => import("./pages/blog/LocalSeoOptiker"));
+const BewertungsAntwortenVorlagen = lazy(() => import("./pages/blog/BewertungsAntwortenVorlagen"));
+const LocalSeoElektrotechnik = lazy(() => import("./pages/blog/LocalSeoElektrotechnik"));
+const GoogleBusinessInsightsVerstehen = lazy(() => import("./pages/blog/GoogleBusinessInsightsVerstehen"));
+
+// Lazy load CoreWebVitalsTracker - not needed for initial render
+const CoreWebVitalsTracker = lazy(() => import("@/components/CoreWebVitalsTracker"));
 
 const queryClient = new QueryClient();
+
+// Minimal loading fallback
+const PageFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -99,94 +115,98 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <CoreWebVitalsTracker trackToDatabase={false} />
+          <Suspense fallback={null}>
+            <CoreWebVitalsTracker trackToDatabase={false} />
+          </Suspense>
           <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/analytics" element={<Analytics />} />
-              <Route path="/ab-test" element={<ABTestDashboard />} />
-              <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
-              <Route path="/admin/content-plan" element={<ContentPlanDashboard />} />
-              <Route path="/admin/kunden" element={<MeineKunden />} />
-              <Route path="/admin/article-feedback" element={<ArticleFeedbackDashboard />} />
-              <Route path="/admin/reset-password" element={<ResetPassword />} />
-              <Route path="/admin/update-password" element={<UpdatePassword />} />
-              <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
-              <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
-              <Route path="/arztpraxis-marketing" element={<ArztpraxisMarketing />} />
-              <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
-              <Route path="/diy-toolkit" element={<DIYToolkit />} />
-              <Route path="/danke" element={<Danke />} />
-              <Route path="/onboarding" element={<Onboarding />} />
-              <Route path="/impressum" element={<Impressum />} />
-              <Route path="/datenschutz" element={<Datenschutz />} />
-              <Route path="/agb" element={<AGB />} />
-              <Route path="/seo-lexikon" element={<SeoLexikon />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/google-maps-ranking-verbessern" element={<GoogleMapsRanking />} />
-              <Route path="/blog/google-bewertungen-bekommen" element={<GoogleBewertungen />} />
-              <Route path="/blog/local-seo-fuer-restaurants" element={<LocalSeoRestaurant />} />
-              <Route path="/blog/google-my-business-optimieren" element={<GoogleMyBusiness />} />
-              <Route path="/blog/lokale-suchmaschinenoptimierung-2026" element={<LokaleSeo2026 />} />
-              <Route path="/blog/nap-konsistenz-local-seo" element={<NapKonsistenz />} />
-              <Route path="/blog/local-seo-handwerker" element={<LocalSeoHandwerker />} />
-              <Route path="/blog/local-seo-audit-checkliste" element={<LocalSeoAuditCheckliste />} />
-              <Route path="/blog/local-seo-keywords-finden" element={<LocalSeoKeywords />} />
-              <Route path="/blog/local-seo-schweiz" element={<LocalSeoSchweiz />} />
-              <Route path="/blog/local-seo-zuerich" element={<LocalSeoZuerich />} />
-              <Route path="/blog/local-seo-muenchen" element={<LocalSeoMuenchen />} />
-              <Route path="/blog/local-seo-aerzte-praxen" element={<LocalSeoAerzte />} />
-              <Route path="/blog/local-seo-anwaelte-kanzleien" element={<LocalSeoAnwaelte />} />
-              <Route path="/blog/local-seo-hotels" element={<LocalSeoHotels />} />
-              <Route path="/blog/local-seo-fitness" element={<LocalSeoFitness />} />
-              <Route path="/blog/schema-markup-local-seo" element={<SchemaMarkupLocalSeo />} />
-              <Route path="/blog/mobile-local-seo" element={<MobileLocalSeo />} />
-              <Route path="/blog/google-maps-seo-ranking-faktoren" element={<GoogleMapsRankingFaktoren />} />
-              <Route path="/blog/local-link-building" element={<LocalLinkBuilding />} />
-              <Route path="/blog/negative-google-bewertungen" element={<NegativeGoogleBewertungen />} />
-              <Route path="/blog/local-content-marketing" element={<LocalContentMarketing />} />
-              <Route path="/blog/local-seo-case-study-baecker" element={<LocalSeoCaseStudy />} />
-              <Route path="/blog/local-seo-fehler" element={<LocalSeoFehler />} />
-              <Route path="/blog/local-seo-doener-kebab-imbiss" element={<LocalSeoDoenerladen />} />
-              <Route path="/blog/local-seo-friseursalon-beauty" element={<LocalSeoFriseur />} />
-              <Route path="/blog/local-seo-immobilienmakler" element={<LocalSeoImmobilienmakler />} />
-              <Route path="/blog/local-seo-hamburg" element={<LocalSeoHamburg />} />
-              <Route path="/blog/local-seo-steuerberater" element={<LocalSeoSteuerberater />} />
-              <Route path="/blog/local-seo-autowerkstatt" element={<LocalSeoAutowerkstatt />} />
-              <Route path="/blog/local-seo-frankfurt" element={<LocalSeoFrankfurt />} />
-              <Route path="/blog/core-web-vitals-local-seo" element={<CoreWebVitalsLocalSeo />} />
-              <Route path="/blog/local-seo-berlin" element={<LocalSeoBerlin />} />
-              <Route path="/blog/kostenloses-seo-guide" element={<KostenloseSeo />} />
-              <Route path="/blog/local-seo-koeln" element={<LocalSeoKoeln />} />
-              <Route path="/blog/local-seo-wien" element={<LocalSeoWien />} />
-              <Route path="/blog/local-seo-tierarzt" element={<LocalSeoTierarzt />} />
-              <Route path="/blog/ki-tools-local-seo" element={<KiToolsLocalSeo />} />
-              <Route path="/blog/google-ai-overviews-local-seo" element={<GoogleAiOverviews />} />
-              <Route path="/blog/seo-toolbox-kostenlose-ressourcen" element={<SeoToolbox />} />
-              <Route path="/blog/local-seo-stuttgart" element={<LocalSeoStuttgart />} />
-              <Route path="/blog/local-seo-duesseldorf" element={<LocalSeoDuesseldorf />} />
-              <Route path="/blog/local-seo-basel" element={<LocalSeoBasel />} />
-              <Route path="/blog/local-seo-yoga-studios" element={<LocalSeoYoga />} />
-              <Route path="/blog/local-seo-tattoo-studios" element={<LocalSeoTattoo />} />
-              <Route path="/blog/local-seo-apotheken" element={<LocalSeoApotheke />} />
-              <Route path="/blog/gbp-fotos-optimieren" element={<GbpFotosOptimieren />} />
-              <Route path="/blog/local-seo-mehrstufig-unternehmen" element={<LocalSeoMehrstufigUnternehmen />} />
-              <Route path="/blog/e-e-a-t-lokale-unternehmen" element={<EEATLokaleUnternehmen />} />
-              <Route path="/blog/lokale-seo-fuer-neugruender" element={<LocalSeoNeugruender />} />
-              <Route path="/blog/google-business-messaging" element={<GoogleBusinessMessaging />} />
-              <Route path="/blog/local-seo-physiotherapie" element={<LocalSeoPhysiotherapie />} />
-              <Route path="/blog/local-seo-notdienst-keywords" element={<LocalSeoNotdienstKeywords />} />
-              <Route path="/blog/google-business-kategorien-guide" element={<GoogleBusinessKategorienGuide />} />
-              <Route path="/blog/local-seo-zahnarzt" element={<LocalSeoZahnarzt />} />
-              <Route path="/blog/lokale-events-marketing" element={<LokaleEventsMarketing />} />
-              <Route path="/blog/google-business-produkte-services" element={<GoogleBusinessProdukteServices />} />
-              <Route path="/blog/local-seo-optiker" element={<LocalSeoOptiker />} />
-              <Route path="/blog/bewertungs-antworten-vorlagen" element={<BewertungsAntwortenVorlagen />} />
-              <Route path="/blog/local-seo-elektrotechnik" element={<LocalSeoElektrotechnik />} />
-              <Route path="/blog/google-business-insights-verstehen" element={<GoogleBusinessInsightsVerstehen />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<PageFallback />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/analytics" element={<Analytics />} />
+                <Route path="/ab-test" element={<ABTestDashboard />} />
+                <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
+                <Route path="/admin/content-plan" element={<ContentPlanDashboard />} />
+                <Route path="/admin/kunden" element={<MeineKunden />} />
+                <Route path="/admin/article-feedback" element={<ArticleFeedbackDashboard />} />
+                <Route path="/admin/reset-password" element={<ResetPassword />} />
+                <Route path="/admin/update-password" element={<UpdatePassword />} />
+                <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
+                <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
+                <Route path="/arztpraxis-marketing" element={<ArztpraxisMarketing />} />
+                <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
+                <Route path="/diy-toolkit" element={<DIYToolkit />} />
+                <Route path="/danke" element={<Danke />} />
+                <Route path="/onboarding" element={<Onboarding />} />
+                <Route path="/impressum" element={<Impressum />} />
+                <Route path="/datenschutz" element={<Datenschutz />} />
+                <Route path="/agb" element={<AGB />} />
+                <Route path="/seo-lexikon" element={<SeoLexikon />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/google-maps-ranking-verbessern" element={<GoogleMapsRanking />} />
+                <Route path="/blog/google-bewertungen-bekommen" element={<GoogleBewertungen />} />
+                <Route path="/blog/local-seo-fuer-restaurants" element={<LocalSeoRestaurant />} />
+                <Route path="/blog/google-my-business-optimieren" element={<GoogleMyBusiness />} />
+                <Route path="/blog/lokale-suchmaschinenoptimierung-2026" element={<LokaleSeo2026 />} />
+                <Route path="/blog/nap-konsistenz-local-seo" element={<NapKonsistenz />} />
+                <Route path="/blog/local-seo-handwerker" element={<LocalSeoHandwerker />} />
+                <Route path="/blog/local-seo-audit-checkliste" element={<LocalSeoAuditCheckliste />} />
+                <Route path="/blog/local-seo-keywords-finden" element={<LocalSeoKeywords />} />
+                <Route path="/blog/local-seo-schweiz" element={<LocalSeoSchweiz />} />
+                <Route path="/blog/local-seo-zuerich" element={<LocalSeoZuerich />} />
+                <Route path="/blog/local-seo-muenchen" element={<LocalSeoMuenchen />} />
+                <Route path="/blog/local-seo-aerzte-praxen" element={<LocalSeoAerzte />} />
+                <Route path="/blog/local-seo-anwaelte-kanzleien" element={<LocalSeoAnwaelte />} />
+                <Route path="/blog/local-seo-hotels" element={<LocalSeoHotels />} />
+                <Route path="/blog/local-seo-fitness" element={<LocalSeoFitness />} />
+                <Route path="/blog/schema-markup-local-seo" element={<SchemaMarkupLocalSeo />} />
+                <Route path="/blog/mobile-local-seo" element={<MobileLocalSeo />} />
+                <Route path="/blog/google-maps-seo-ranking-faktoren" element={<GoogleMapsRankingFaktoren />} />
+                <Route path="/blog/local-link-building" element={<LocalLinkBuilding />} />
+                <Route path="/blog/negative-google-bewertungen" element={<NegativeGoogleBewertungen />} />
+                <Route path="/blog/local-content-marketing" element={<LocalContentMarketing />} />
+                <Route path="/blog/local-seo-case-study-baecker" element={<LocalSeoCaseStudy />} />
+                <Route path="/blog/local-seo-fehler" element={<LocalSeoFehler />} />
+                <Route path="/blog/local-seo-doener-kebab-imbiss" element={<LocalSeoDoenerladen />} />
+                <Route path="/blog/local-seo-friseursalon-beauty" element={<LocalSeoFriseur />} />
+                <Route path="/blog/local-seo-immobilienmakler" element={<LocalSeoImmobilienmakler />} />
+                <Route path="/blog/local-seo-hamburg" element={<LocalSeoHamburg />} />
+                <Route path="/blog/local-seo-steuerberater" element={<LocalSeoSteuerberater />} />
+                <Route path="/blog/local-seo-autowerkstatt" element={<LocalSeoAutowerkstatt />} />
+                <Route path="/blog/local-seo-frankfurt" element={<LocalSeoFrankfurt />} />
+                <Route path="/blog/core-web-vitals-local-seo" element={<CoreWebVitalsLocalSeo />} />
+                <Route path="/blog/local-seo-berlin" element={<LocalSeoBerlin />} />
+                <Route path="/blog/kostenloses-seo-guide" element={<KostenloseSeo />} />
+                <Route path="/blog/local-seo-koeln" element={<LocalSeoKoeln />} />
+                <Route path="/blog/local-seo-wien" element={<LocalSeoWien />} />
+                <Route path="/blog/local-seo-tierarzt" element={<LocalSeoTierarzt />} />
+                <Route path="/blog/ki-tools-local-seo" element={<KiToolsLocalSeo />} />
+                <Route path="/blog/google-ai-overviews-local-seo" element={<GoogleAiOverviews />} />
+                <Route path="/blog/seo-toolbox-kostenlose-ressourcen" element={<SeoToolbox />} />
+                <Route path="/blog/local-seo-stuttgart" element={<LocalSeoStuttgart />} />
+                <Route path="/blog/local-seo-duesseldorf" element={<LocalSeoDuesseldorf />} />
+                <Route path="/blog/local-seo-basel" element={<LocalSeoBasel />} />
+                <Route path="/blog/local-seo-yoga-studios" element={<LocalSeoYoga />} />
+                <Route path="/blog/local-seo-tattoo-studios" element={<LocalSeoTattoo />} />
+                <Route path="/blog/local-seo-apotheken" element={<LocalSeoApotheke />} />
+                <Route path="/blog/gbp-fotos-optimieren" element={<GbpFotosOptimieren />} />
+                <Route path="/blog/local-seo-mehrstufig-unternehmen" element={<LocalSeoMehrstufigUnternehmen />} />
+                <Route path="/blog/e-e-a-t-lokale-unternehmen" element={<EEATLokaleUnternehmen />} />
+                <Route path="/blog/lokale-seo-fuer-neugruender" element={<LocalSeoNeugruender />} />
+                <Route path="/blog/google-business-messaging" element={<GoogleBusinessMessaging />} />
+                <Route path="/blog/local-seo-physiotherapie" element={<LocalSeoPhysiotherapie />} />
+                <Route path="/blog/local-seo-notdienst-keywords" element={<LocalSeoNotdienstKeywords />} />
+                <Route path="/blog/google-business-kategorien-guide" element={<GoogleBusinessKategorienGuide />} />
+                <Route path="/blog/local-seo-zahnarzt" element={<LocalSeoZahnarzt />} />
+                <Route path="/blog/lokale-events-marketing" element={<LokaleEventsMarketing />} />
+                <Route path="/blog/google-business-produkte-services" element={<GoogleBusinessProdukteServices />} />
+                <Route path="/blog/local-seo-optiker" element={<LocalSeoOptiker />} />
+                <Route path="/blog/bewertungs-antworten-vorlagen" element={<BewertungsAntwortenVorlagen />} />
+                <Route path="/blog/local-seo-elektrotechnik" element={<LocalSeoElektrotechnik />} />
+                <Route path="/blog/google-business-insights-verstehen" element={<GoogleBusinessInsightsVerstehen />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </BrowserRouter>
         </TooltipProvider>
       </LanguageProvider>
