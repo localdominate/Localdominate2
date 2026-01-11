@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import RestaurantMarketing from "./pages/RestaurantMarketing";
 import HandwerkerMarketing from "./pages/HandwerkerMarketing";
 import ArztpraxisMarketing from "./pages/ArztpraxisMarketing";
+import AnwaltMarketing from "./pages/AnwaltMarketing";
 import DIYToolkit from "./pages/DIYToolkit";
 import Danke from "./pages/Danke";
 import Onboarding from "./pages/Onboarding";
@@ -98,6 +99,7 @@ const App = () => (
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
               <Route path="/arztpraxis-marketing" element={<ArztpraxisMarketing />} />
+              <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
               <Route path="/diy-toolkit" element={<DIYToolkit />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />
