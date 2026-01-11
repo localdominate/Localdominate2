@@ -11,6 +11,16 @@ export const STRIPE_PRICE_IDS = {
   discount: "price_1SmVYZGtUtkmXAhpGjnkvTRG"
 };
 
+// Digital Products
+export const DIGITAL_PRODUCTS = {
+  diy_toolkit: {
+    name: "Local SEO DIY-Toolkit",
+    price: 49,
+    url: "https://buy.stripe.com/diy_toolkit_49",
+    priceId: "price_diy_toolkit_49",
+  },
+};
+
 // Add-On Products
 export const ADD_ON_PRODUCTS = {
   express: {

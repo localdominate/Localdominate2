@@ -9,6 +9,7 @@ import CoreWebVitalsTracker from "@/components/CoreWebVitalsTracker";
 import Index from "./pages/Index";
 import RestaurantMarketing from "./pages/RestaurantMarketing";
 import HandwerkerMarketing from "./pages/HandwerkerMarketing";
+import DIYToolkit from "./pages/DIYToolkit";
 import Danke from "./pages/Danke";
 import Onboarding from "./pages/Onboarding";
 import Impressum from "./pages/Impressum";
@@ -95,6 +96,7 @@ const App = () => (
               <Route path="/admin/update-password" element={<UpdatePassword />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
               <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
+              <Route path="/diy-toolkit" element={<DIYToolkit />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />
               <Route path="/impressum" element={<Impressum />} />
