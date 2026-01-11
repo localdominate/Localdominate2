@@ -2254,6 +2254,445 @@ export const blogArticles: BlogArticle[] = [
     icon: "💊",
     keywords: ["apotheke seo", "local seo apotheke", "pharma marketing", "apotheke google business", "notdienst seo"],
     featured: false
+  },
+
+  // === NEUE ARTIKEL: JANUAR-FEBRUAR 2026 CONTENT-PLAN ===
+  {
+    slug: "gbp-fotos-optimieren",
+    de: {
+      title: "Google Business Fotos optimieren: Der komplette Bilder-Guide",
+      metaTitle: "Google Business Fotos optimieren | Bilder-Guide 2026",
+      metaDescription: "So optimierst du Fotos für dein Google Business Profil. Bildgrößen, Kategorien, Alt-Texte und Best Practices für mehr Klicks.",
+      excerpt: "Der ultimative Guide zur Foto-Optimierung für Google Business Profile.",
+      category: "Google Business"
+    },
+    en: {
+      title: "Optimize Google Business Photos: The Complete Image Guide",
+      metaTitle: "Optimize Google Business Photos | Image Guide 2026",
+      metaDescription: "How to optimize photos for your Google Business Profile. Image sizes, categories, alt texts and best practices.",
+      excerpt: "The ultimate guide to photo optimization for Google Business Profiles.",
+      category: "Google Business"
+    },
+    readingTime: 14,
+    publishedAt: "2026-01-12",
+    updatedAt: "2026-01-12",
+    icon: "📸",
+    keywords: ["google business fotos", "gbp bilder", "google maps bilder", "unternehmensfotos", "foto optimierung"],
+    featured: false
+  },
+  {
+    slug: "local-seo-mehrstufig-unternehmen",
+    de: {
+      title: "Local SEO für Franchise & Filialunternehmen: Multi-Location Guide",
+      metaTitle: "Local SEO Multi-Location | Franchise & Filialen 2026",
+      metaDescription: "Wie Franchise-Unternehmen und Filialisten Local SEO skalieren. Multi-Location-Strategie, Konsistenz und zentrale Steuerung.",
+      excerpt: "Der Guide für Unternehmen mit mehreren Standorten zur lokalen Suchmaschinenoptimierung.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO for Franchise & Multi-Location Businesses: Complete Guide",
+      metaTitle: "Local SEO Multi-Location | Franchise Guide 2026",
+      metaDescription: "How franchise and multi-location businesses scale Local SEO. Multi-location strategy, consistency and central management.",
+      excerpt: "The guide for multi-location businesses on local search engine optimization.",
+      category: "Strategy"
+    },
+    readingTime: 16,
+    publishedAt: "2026-01-14",
+    updatedAt: "2026-01-14",
+    icon: "🏢",
+    keywords: ["franchise seo", "multi location seo", "filialunternehmen", "mehrere standorte", "skalierung local seo"],
+    featured: false
+  },
+  {
+    slug: "e-e-a-t-lokale-unternehmen",
+    de: {
+      title: "E-E-A-T für lokale Unternehmen: Expertise beweisen & Vertrauen aufbauen",
+      metaTitle: "E-E-A-T für lokale Unternehmen | Trust-Guide 2026",
+      metaDescription: "Wie lokale Unternehmen E-E-A-T (Experience, Expertise, Authority, Trust) für bessere Google Rankings nutzen.",
+      excerpt: "So baust du als lokales Unternehmen Glaubwürdigkeit und Autorität für bessere Rankings auf.",
+      category: "Strategie"
+    },
+    en: {
+      title: "E-E-A-T for Local Businesses: Prove Expertise & Build Trust",
+      metaTitle: "E-E-A-T for Local Businesses | Trust Guide 2026",
+      metaDescription: "How local businesses use E-E-A-T (Experience, Expertise, Authority, Trust) for better Google rankings.",
+      excerpt: "How to build credibility and authority as a local business for better rankings.",
+      category: "Strategy"
+    },
+    readingTime: 15,
+    publishedAt: "2026-01-18",
+    updatedAt: "2026-01-18",
+    icon: "🏆",
+    keywords: ["e-e-a-t", "expertise", "authority", "trust", "lokale autorität", "vertrauen aufbauen"],
+    featured: false
+  },
+  {
+    slug: "lokale-seo-fuer-neugruender",
+    de: {
+      title: "Local SEO für Neugründer: Von Null zur lokalen Sichtbarkeit",
+      metaTitle: "Local SEO für Neugründer | Startup Guide 2026",
+      metaDescription: "Der komplette Local SEO Guide für Gründer und neue Unternehmen. Von der ersten Minute an lokal sichtbar werden.",
+      excerpt: "So startest du als Neugründer mit Local SEO durch - Schritt für Schritt von Null an.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO for Startups: From Zero to Local Visibility",
+      metaTitle: "Local SEO for Startups | Beginner Guide 2026",
+      metaDescription: "The complete Local SEO guide for founders and new businesses. Become locally visible from day one.",
+      excerpt: "How to succeed with Local SEO as a startup - step by step from zero.",
+      category: "Strategy"
+    },
+    readingTime: 18,
+    publishedAt: "2026-01-20",
+    updatedAt: "2026-01-20",
+    icon: "🚀",
+    keywords: ["neugründer seo", "startup local seo", "existenzgründung", "neue firma", "lokales marketing startup"],
+    featured: false
+  },
+  {
+    slug: "google-business-messaging",
+    de: {
+      title: "Google Business Messaging: Kundenkommunikation optimal nutzen",
+      metaTitle: "Google Business Messaging | Chat-Guide 2026",
+      metaDescription: "So nutzt du Google Business Messaging für bessere Kundenkommunikation. Einrichtung, Best Practices und Automatisierung.",
+      excerpt: "Der komplette Guide zur Nutzung von Google Business Messaging für mehr Kundeninteraktion.",
+      category: "Google Business"
+    },
+    en: {
+      title: "Google Business Messaging: Optimize Customer Communication",
+      metaTitle: "Google Business Messaging | Chat Guide 2026",
+      metaDescription: "How to use Google Business Messaging for better customer communication. Setup, best practices and automation.",
+      excerpt: "The complete guide to using Google Business Messaging for more customer interaction.",
+      category: "Google Business"
+    },
+    readingTime: 12,
+    publishedAt: "2026-01-30",
+    updatedAt: "2026-01-30",
+    icon: "💬",
+    keywords: ["google business messaging", "gbp chat", "kundenkommunikation", "google chat", "messaging einrichten"],
+    featured: false
+  },
+  {
+    slug: "local-seo-physiotherapie",
+    de: {
+      title: "Local SEO für Physiotherapie & Heilpraktiker: Patienten gewinnen",
+      metaTitle: "Local SEO Physiotherapie | Heilpraktiker Marketing 2026",
+      metaDescription: "Local SEO speziell für Physiotherapeuten und Heilpraktiker. Von Behandlungs-Keywords bis zu Gesundheitsportalen.",
+      excerpt: "Der branchenspezifische Guide für Physiotherapeuten zur lokalen Patientengewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Physical Therapy & Holistic Practitioners: Win Patients",
+      metaTitle: "Local SEO Physical Therapy | Practitioner Marketing 2026",
+      metaDescription: "Local SEO specifically for physical therapists and holistic practitioners. From treatment keywords to health portals.",
+      excerpt: "The industry-specific guide for physical therapists on local patient acquisition.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-01",
+    updatedAt: "2026-02-01",
+    icon: "🏃",
+    keywords: ["physiotherapie seo", "heilpraktiker marketing", "local seo therapie", "patientengewinnung", "wellness marketing"],
+    featured: false
+  },
+  {
+    slug: "local-seo-notdienst-keywords",
+    de: {
+      title: "Notdienst-Keywords: Wenn Kunden dringend suchen",
+      metaTitle: "Notdienst-Keywords optimieren | Emergency SEO 2026",
+      metaDescription: "So optimierst du für Notdienst-Suchanfragen. Keywords, Google Ads und lokale Sichtbarkeit für dringende Kundenanfragen.",
+      excerpt: "Der Guide zur Optimierung für Notdienst- und Sofortbedarf-Suchanfragen.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Emergency Service Keywords: When Customers Search Urgently",
+      metaTitle: "Emergency Service Keywords | SEO Guide 2026",
+      metaDescription: "How to optimize for emergency search queries. Keywords, Google Ads and local visibility for urgent customer needs.",
+      excerpt: "The guide to optimizing for emergency and immediate need search queries.",
+      category: "Strategy"
+    },
+    readingTime: 13,
+    publishedAt: "2026-02-03",
+    updatedAt: "2026-02-03",
+    icon: "🚨",
+    keywords: ["notdienst seo", "emergency keywords", "sofort hilfe", "24 stunden service", "dringende suche"],
+    featured: false
+  },
+  {
+    slug: "google-business-kategorien-guide",
+    de: {
+      title: "Google Business Kategorien: Welche passt zu deinem Unternehmen?",
+      metaTitle: "Google Business Kategorien | Vollständiger Guide 2026",
+      metaDescription: "Die richtige Google Business Kategorie wählen. Haupt- und Nebenkategorien, Branchenübersicht und Optimierungstipps.",
+      excerpt: "Der komplette Guide zur Auswahl der richtigen Google Business Kategorien.",
+      category: "Google Business"
+    },
+    en: {
+      title: "Google Business Categories: Which Fits Your Business?",
+      metaTitle: "Google Business Categories | Complete Guide 2026",
+      metaDescription: "Choosing the right Google Business category. Primary and secondary categories, industry overview and optimization tips.",
+      excerpt: "The complete guide to choosing the right Google Business categories.",
+      category: "Google Business"
+    },
+    readingTime: 15,
+    publishedAt: "2026-02-05",
+    updatedAt: "2026-02-05",
+    icon: "📁",
+    keywords: ["google business kategorien", "gbp category", "branchenkategorie", "kategorie wählen", "unternehmenskategorie"],
+    featured: false
+  },
+  {
+    slug: "local-seo-zahnarzt",
+    de: {
+      title: "Local SEO für Zahnärzte: Mehr Patienten durch Google",
+      metaTitle: "Local SEO Zahnarzt | Zahnarzt Marketing 2026",
+      metaDescription: "Local SEO speziell für Zahnarztpraxen. Von Behandlungs-Keywords über Arztbewertungsportale bis zur Website-Optimierung.",
+      excerpt: "Der branchenspezifische Guide für Zahnärzte zur lokalen Patientengewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Dentists: More Patients Through Google",
+      metaTitle: "Local SEO Dentist | Dental Marketing 2026",
+      metaDescription: "Local SEO specifically for dental practices. From treatment keywords to doctor review portals to website optimization.",
+      excerpt: "The industry-specific guide for dentists on local patient acquisition.",
+      category: "Industries"
+    },
+    readingTime: 15,
+    publishedAt: "2026-02-08",
+    updatedAt: "2026-02-08",
+    icon: "🦷",
+    keywords: ["zahnarzt seo", "dental marketing", "local seo zahnarzt", "patientengewinnung zahnarzt", "zahnarztpraxis marketing"],
+    featured: false
+  },
+  {
+    slug: "lokale-events-marketing",
+    de: {
+      title: "Lokale Events für SEO nutzen: Sponsoring & Veranstaltungen",
+      metaTitle: "Lokale Events für SEO | Event-Marketing 2026",
+      metaDescription: "Wie du lokale Events und Sponsoring für bessere Local SEO nutzt. Backlinks, Markenbekanntheit und lokale Autorität aufbauen.",
+      excerpt: "Der Guide zur Nutzung lokaler Events für mehr Sichtbarkeit und bessere Rankings.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Using Local Events for SEO: Sponsorship & Events",
+      metaTitle: "Local Events for SEO | Event Marketing 2026",
+      metaDescription: "How to use local events and sponsorship for better Local SEO. Build backlinks, brand awareness and local authority.",
+      excerpt: "The guide to using local events for more visibility and better rankings.",
+      category: "Strategy"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-10",
+    updatedAt: "2026-02-10",
+    icon: "🎉",
+    keywords: ["lokale events seo", "sponsoring marketing", "veranstaltungen", "lokale autorität", "event backlinks"],
+    featured: false
+  },
+  {
+    slug: "google-business-produkte-services",
+    de: {
+      title: "Google Business Produkte & Services optimal präsentieren",
+      metaTitle: "Google Business Produkte & Services | Guide 2026",
+      metaDescription: "So nutzt du Produkte und Services in deinem Google Business Profil. Katalog erstellen, Preise, Beschreibungen und mehr.",
+      excerpt: "Der komplette Guide zur optimalen Nutzung von Produkten und Services im GBP.",
+      category: "Google Business"
+    },
+    en: {
+      title: "Present Google Business Products & Services Optimally",
+      metaTitle: "Google Business Products & Services | Guide 2026",
+      metaDescription: "How to use products and services in your Google Business Profile. Create catalogs, prices, descriptions and more.",
+      excerpt: "The complete guide to optimal use of products and services in GBP.",
+      category: "Google Business"
+    },
+    readingTime: 13,
+    publishedAt: "2026-02-12",
+    updatedAt: "2026-02-12",
+    icon: "🛍️",
+    keywords: ["google business produkte", "gbp services", "produktkatalog", "dienstleistungen präsentieren", "preise google"],
+    featured: false
+  },
+  {
+    slug: "local-seo-optiker",
+    de: {
+      title: "Local SEO für Optiker & Hörakustiker: Kunden gewinnen",
+      metaTitle: "Local SEO Optiker & Hörakustiker | Marketing 2026",
+      metaDescription: "Local SEO speziell für Optiker und Hörakustiker. Von Produktkatalog bis Terminbuchung - alles für mehr lokale Kunden.",
+      excerpt: "Der branchenspezifische Guide für Optiker und Hörakustiker zur lokalen Kundengewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Opticians & Hearing Aid Specialists: Win Customers",
+      metaTitle: "Local SEO Opticians | Marketing Guide 2026",
+      metaDescription: "Local SEO specifically for opticians and hearing aid specialists. From product catalog to appointment booking.",
+      excerpt: "The industry-specific guide for opticians on local customer acquisition.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-14",
+    updatedAt: "2026-02-14",
+    icon: "👓",
+    keywords: ["optiker seo", "hörakustiker marketing", "local seo optiker", "brillen marketing", "augenoptik seo"],
+    featured: false
+  },
+  {
+    slug: "bewertungs-antworten-vorlagen",
+    de: {
+      title: "Bewertungs-Antworten: 50 Vorlagen für jede Situation",
+      metaTitle: "Bewertungs-Antworten Vorlagen | 50 Templates 2026",
+      metaDescription: "50 Vorlagen für professionelle Antworten auf Google Bewertungen. Positive, negative und neutrale Rezensionen richtig beantworten.",
+      excerpt: "Die ultimative Sammlung von Antwort-Vorlagen für alle Arten von Google Bewertungen.",
+      category: "Bewertungen"
+    },
+    en: {
+      title: "Review Response Templates: 50 Templates for Every Situation",
+      metaTitle: "Review Response Templates | 50 Templates 2026",
+      metaDescription: "50 templates for professional responses to Google reviews. How to respond to positive, negative and neutral reviews.",
+      excerpt: "The ultimate collection of response templates for all types of Google reviews.",
+      category: "Reviews"
+    },
+    readingTime: 18,
+    publishedAt: "2026-02-16",
+    updatedAt: "2026-02-16",
+    icon: "📝",
+    keywords: ["bewertungen antworten", "review response", "antwort vorlagen", "google rezensionen", "kundenfeedback"],
+    featured: true
+  },
+  {
+    slug: "local-seo-elektrotechnik",
+    de: {
+      title: "Local SEO für Elektriker & Elektrotechniker: Mehr Aufträge",
+      metaTitle: "Local SEO Elektriker | Elektrotechnik Marketing 2026",
+      metaDescription: "Local SEO speziell für Elektriker und Elektrotechnik-Betriebe. Notdienst-SEO, Projektbilder und lokale Sichtbarkeit.",
+      excerpt: "Der branchenspezifische Guide für Elektriker zur lokalen Auftragsgewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Electricians: More Jobs Through Google",
+      metaTitle: "Local SEO Electricians | Marketing Guide 2026",
+      metaDescription: "Local SEO specifically for electricians and electrical businesses. Emergency service SEO, project images and local visibility.",
+      excerpt: "The industry-specific guide for electricians on local job acquisition.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-18",
+    updatedAt: "2026-02-18",
+    icon: "⚡",
+    keywords: ["elektriker seo", "elektrotechnik marketing", "local seo elektriker", "elektro notdienst", "elektrofirma marketing"],
+    featured: false
+  },
+  {
+    slug: "google-business-insights-verstehen",
+    de: {
+      title: "Google Business Insights richtig verstehen & nutzen",
+      metaTitle: "Google Business Insights | Analytics Guide 2026",
+      metaDescription: "So interpretierst du Google Business Insights richtig. Alle Metriken erklärt, Benchmarks und Optimierungstipps.",
+      excerpt: "Der komplette Guide zum Verstehen und Nutzen von Google Business Insights.",
+      category: "Google Business"
+    },
+    en: {
+      title: "Understanding & Using Google Business Insights Correctly",
+      metaTitle: "Google Business Insights | Analytics Guide 2026",
+      metaDescription: "How to interpret Google Business Insights correctly. All metrics explained, benchmarks and optimization tips.",
+      excerpt: "The complete guide to understanding and using Google Business Insights.",
+      category: "Google Business"
+    },
+    readingTime: 15,
+    publishedAt: "2026-02-20",
+    updatedAt: "2026-02-20",
+    icon: "📊",
+    keywords: ["google business insights", "gbp analytics", "statistiken verstehen", "performance messen", "google metriken"],
+    featured: false
+  },
+  {
+    slug: "local-seo-maler-lackierer",
+    de: {
+      title: "Local SEO für Maler & Lackierer: Mehr Aufträge gewinnen",
+      metaTitle: "Local SEO Maler & Lackierer | Marketing 2026",
+      metaDescription: "Local SEO speziell für Malerbetriebe und Lackierer. Vorher-Nachher-Galerie, Farbberatungs-Keywords und lokale Sichtbarkeit.",
+      excerpt: "Der branchenspezifische Guide für Maler zur lokalen Auftragsgewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Painters: Win More Jobs Through Google",
+      metaTitle: "Local SEO Painters | Marketing Guide 2026",
+      metaDescription: "Local SEO specifically for painting businesses. Before-after gallery, color consultation keywords and local visibility.",
+      excerpt: "The industry-specific guide for painters on local job acquisition.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-22",
+    updatedAt: "2026-02-22",
+    icon: "🎨",
+    keywords: ["maler seo", "lackierer marketing", "local seo maler", "malerbetrieb marketing", "renovierung seo"],
+    featured: false
+  },
+  {
+    slug: "lokale-influencer-kooperationen",
+    de: {
+      title: "Lokale Influencer-Marketing: Kooperationen aufbauen",
+      metaTitle: "Lokale Influencer Marketing | Kooperations-Guide 2026",
+      metaDescription: "Wie lokale Unternehmen mit Mikro-Influencern kooperieren. Von der Suche bis zur erfolgreichen Kampagne.",
+      excerpt: "Der Guide für lokale Unternehmen zum Aufbau von Influencer-Kooperationen.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local Influencer Marketing: Building Partnerships",
+      metaTitle: "Local Influencer Marketing | Partnership Guide 2026",
+      metaDescription: "How local businesses partner with micro-influencers. From finding to successful campaigns.",
+      excerpt: "The guide for local businesses to build influencer partnerships.",
+      category: "Strategy"
+    },
+    readingTime: 15,
+    publishedAt: "2026-02-24",
+    updatedAt: "2026-02-24",
+    icon: "🤳",
+    keywords: ["lokale influencer", "micro influencer", "influencer marketing", "kooperationen", "lokale reichweite"],
+    featured: false
+  },
+  {
+    slug: "local-seo-sanitaer-heizung",
+    de: {
+      title: "Local SEO für SHK-Betriebe: Sanitär, Heizung, Klima",
+      metaTitle: "Local SEO SHK | Sanitär Heizung Klima 2026",
+      metaDescription: "Local SEO speziell für SHK-Betriebe. Von Notdienst-SEO über Markenpartnerschaften bis zur saisonalen Optimierung.",
+      excerpt: "Der branchenspezifische Guide für SHK-Betriebe zur lokalen Auftragsgewinnung.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for HVAC Businesses: Plumbing, Heating, Cooling",
+      metaTitle: "Local SEO HVAC | Plumbing Heating Cooling 2026",
+      metaDescription: "Local SEO specifically for HVAC businesses. From emergency service SEO to brand partnerships to seasonal optimization.",
+      excerpt: "The industry-specific guide for HVAC businesses on local job acquisition.",
+      category: "Industries"
+    },
+    readingTime: 15,
+    publishedAt: "2026-02-26",
+    updatedAt: "2026-02-26",
+    icon: "🔧",
+    keywords: ["shk seo", "sanitär marketing", "heizung seo", "klima marketing", "installateur seo"],
+    featured: false
+  },
+  {
+    slug: "local-seo-jahresplanung",
+    de: {
+      title: "Local SEO Jahresplanung: 12-Monats-Kalender für lokale Unternehmen",
+      metaTitle: "Local SEO Jahresplanung | 12-Monats-Kalender 2026",
+      metaDescription: "Der komplette Jahresplan für Local SEO. Monatliche Aufgaben, saisonale Optimierung und strategische Meilensteine.",
+      excerpt: "Der strukturierte 12-Monats-Plan für nachhaltige Local SEO Erfolge.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO Annual Planning: 12-Month Calendar for Local Businesses",
+      metaTitle: "Local SEO Annual Planning | 12-Month Calendar 2026",
+      metaDescription: "The complete annual plan for Local SEO. Monthly tasks, seasonal optimization and strategic milestones.",
+      excerpt: "The structured 12-month plan for sustainable Local SEO success.",
+      category: "Strategy"
+    },
+    readingTime: 20,
+    publishedAt: "2026-02-28",
+    updatedAt: "2026-02-28",
+    icon: "📅",
+    keywords: ["local seo jahresplan", "seo kalender", "monatliche aufgaben", "seo planung", "marketing kalender"],
+    featured: true
   }
 ];
 
