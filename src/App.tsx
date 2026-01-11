@@ -73,6 +73,16 @@ import LocalSeoMehrstufigUnternehmen from "./pages/blog/LocalSeoMehrstufigUntern
 import EEATLokaleUnternehmen from "./pages/blog/EEATLokaleUnternehmen";
 import LocalSeoNeugruender from "./pages/blog/LocalSeoNeugruender";
 import GoogleBusinessMessaging from "./pages/blog/GoogleBusinessMessaging";
+import LocalSeoPhysiotherapie from "./pages/blog/LocalSeoPhysiotherapie";
+import LocalSeoNotdienstKeywords from "./pages/blog/LocalSeoNotdienstKeywords";
+import GoogleBusinessKategorienGuide from "./pages/blog/GoogleBusinessKategorienGuide";
+import LocalSeoZahnarzt from "./pages/blog/LocalSeoZahnarzt";
+import LokaleEventsMarketing from "./pages/blog/LokaleEventsMarketing";
+import GoogleBusinessProdukteServices from "./pages/blog/GoogleBusinessProdukteServices";
+import LocalSeoOptiker from "./pages/blog/LocalSeoOptiker";
+import BewertungsAntwortenVorlagen from "./pages/blog/BewertungsAntwortenVorlagen";
+import LocalSeoElektrotechnik from "./pages/blog/LocalSeoElektrotechnik";
+import GoogleBusinessInsightsVerstehen from "./pages/blog/GoogleBusinessInsightsVerstehen";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 import SeoLexikon from "./pages/SeoLexikon";
@@ -164,6 +174,16 @@ const App = () => (
               <Route path="/blog/e-e-a-t-lokale-unternehmen" element={<EEATLokaleUnternehmen />} />
               <Route path="/blog/lokale-seo-fuer-neugruender" element={<LocalSeoNeugruender />} />
               <Route path="/blog/google-business-messaging" element={<GoogleBusinessMessaging />} />
+              <Route path="/blog/local-seo-physiotherapie" element={<LocalSeoPhysiotherapie />} />
+              <Route path="/blog/local-seo-notdienst-keywords" element={<LocalSeoNotdienstKeywords />} />
+              <Route path="/blog/google-business-kategorien-guide" element={<GoogleBusinessKategorienGuide />} />
+              <Route path="/blog/local-seo-zahnarzt" element={<LocalSeoZahnarzt />} />
+              <Route path="/blog/lokale-events-marketing" element={<LokaleEventsMarketing />} />
+              <Route path="/blog/google-business-produkte-services" element={<GoogleBusinessProdukteServices />} />
+              <Route path="/blog/local-seo-optiker" element={<LocalSeoOptiker />} />
+              <Route path="/blog/bewertungs-antworten-vorlagen" element={<BewertungsAntwortenVorlagen />} />
+              <Route path="/blog/local-seo-elektrotechnik" element={<LocalSeoElektrotechnik />} />
+              <Route path="/blog/google-business-insights-verstehen" element={<GoogleBusinessInsightsVerstehen />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
