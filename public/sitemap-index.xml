@@ -3,24 +3,24 @@
   <!-- Haupt-Sitemap mit allen Seiten -->
   <sitemap>
     <loc>https://localdominator.de/sitemap.xml</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </sitemap>
   
   <!-- Image Sitemap für bessere Bildindexierung -->
   <sitemap>
     <loc>https://localdominator.de/sitemap-images.xml</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </sitemap>
   
   <!-- Blog Sitemap (höhere Crawl-Priorität) -->
   <sitemap>
     <loc>https://localdominator.de/sitemap-blog.xml</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </sitemap>
   
   <!-- SEO Lexikon Sitemap -->
   <sitemap>
     <loc>https://localdominator.de/sitemap-lexikon.xml</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </sitemap>
 </sitemapindex>

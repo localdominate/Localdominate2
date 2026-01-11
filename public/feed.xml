@@ -9,7 +9,7 @@
     <description>Expertenwissen zu Local SEO, Google Maps Optimierung und lokaler Suchmaschinenoptimierung für Unternehmen in Deutschland, Österreich und der Schweiz.</description>
     <language>de-DE</language>
     <copyright>© 2026 Local Dominator. Alle Rechte vorbehalten.</copyright>
-    <lastBuildDate>Thu, 09 Jan 2026 12:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2026 12:00:00 +0100</lastBuildDate>
     <managingEditor>kontakt@localdominator.de (Local Dominator)</managingEditor>
     <webMaster>kontakt@localdominator.de (Local Dominator)</webMaster>
     <ttl>60</ttl>
@@ -21,6 +21,108 @@
       <height>144</height>
     </image>
     <atom:link href="https://localdominator.de/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <!-- NEUE ARTIKEL Januar 2026 -->
+    
+    <item>
+      <title>Local SEO für Physiotherapeuten: Der komplette Praxis-Guide 2026</title>
+      <link>https://localdominator.de/blog/local-seo-physiotherapie</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-physiotherapie</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Branchen</category>
+      <description><![CDATA[Der komplette Local SEO Guide für Physiotherapie-Praxen. Von Google Business Optimierung bis Bewertungsmanagement - so gewinnst du mehr Patienten durch lokale Suche.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO für Zahnärzte: Mehr Patienten durch lokale Sichtbarkeit</title>
+      <link>https://localdominator.de/blog/local-seo-zahnarzt</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-zahnarzt</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Branchen</category>
+      <description><![CDATA[Local SEO speziell für Zahnarztpraxen. So optimierst du deine Praxis für "Zahnarzt in der Nähe" und gewinnst mehr Neupatienten.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO für Optiker: Der Guide für mehr Laufkundschaft</title>
+      <link>https://localdominator.de/blog/local-seo-optiker</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-optiker</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Branchen</category>
+      <description><![CDATA[Wie Optiker ihre lokale Online-Sichtbarkeit verbessern. Von Brillen-Keywords bis Google Business Optimierung für Augenoptiker.]]></description>
+    </item>
+    
+    <item>
+      <title>Local SEO für Elektrotechniker: Mehr Aufträge durch Google</title>
+      <link>https://localdominator.de/blog/local-seo-elektrotechnik</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-elektrotechnik</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Branchen</category>
+      <description><![CDATA[Local SEO für Elektriker und Elektrotechnik-Betriebe. So wirst du bei "Elektriker in der Nähe" gefunden und gewinnst mehr Aufträge.]]></description>
+    </item>
+    
+    <item>
+      <title>Notdienst Keywords für Local SEO: Notfall-Suchanfragen dominieren</title>
+      <link>https://localdominator.de/blog/local-seo-notdienst-keywords</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/local-seo-notdienst-keywords</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Strategie</category>
+      <description><![CDATA[Wie du für Notdienst- und Notfall-Keywords optimierst. Schlüsselnotdienst, Sanitär-Notdienst, Tierarzt-Notfall - der komplette Guide für dringende Suchanfragen.]]></description>
+    </item>
+    
+    <item>
+      <title>Lokale Events für Marketing nutzen: Der Event-SEO Guide</title>
+      <link>https://localdominator.de/blog/lokale-events-marketing</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/lokale-events-marketing</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Strategie</category>
+      <description><![CDATA[So nutzt du lokale Veranstaltungen, Feste und Events für dein Local SEO. Von Stadtfesten bis Weihnachtsmärkten - lokale Sichtbarkeit durch Event-Marketing.]]></description>
+    </item>
+    
+    <item>
+      <title>Google Business Kategorien Guide: Die perfekte Kategorie wählen</title>
+      <link>https://localdominator.de/blog/google-business-kategorien-guide</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/google-business-kategorien-guide</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Google Business</category>
+      <description><![CDATA[Der komplette Guide zur Auswahl der richtigen Google Business Kategorien. Primär- und Sekundärkategorien optimal nutzen für maximale lokale Sichtbarkeit.]]></description>
+    </item>
+    
+    <item>
+      <title>Google Business Produkte &amp; Services: Angebote optimal präsentieren</title>
+      <link>https://localdominator.de/blog/google-business-produkte-services</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/google-business-produkte-services</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Google Business</category>
+      <description><![CDATA[So nutzt du Produkte und Services in deinem Google Business Profil optimal. Der komplette Guide zur Präsentation deiner Angebote für mehr Klicks.]]></description>
+    </item>
+    
+    <item>
+      <title>Bewertungs-Antworten Vorlagen: Professionell auf Reviews reagieren</title>
+      <link>https://localdominator.de/blog/bewertungs-antworten-vorlagen</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/bewertungs-antworten-vorlagen</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Bewertungen</category>
+      <description><![CDATA[50+ Vorlagen für professionelle Antworten auf Google Bewertungen. Positive, negative und neutrale Reviews richtig beantworten - mit Copy-Paste Templates.]]></description>
+    </item>
+    
+    <item>
+      <title>Google Business Insights verstehen: Deine Statistiken richtig lesen</title>
+      <link>https://localdominator.de/blog/google-business-insights-verstehen</link>
+      <guid isPermaLink="true">https://localdominator.de/blog/google-business-insights-verstehen</guid>
+      <pubDate>Sat, 11 Jan 2026 08:00:00 +0100</pubDate>
+      <dc:creator>Local Dominator</dc:creator>
+      <category>Google Business</category>
+      <description><![CDATA[Wie du die Google Business Insights und Performance-Daten richtig analysierst. Impressionen, Klicks, Anrufe - alle Metriken erklärt und optimiert.]]></description>
+    </item>
     
     <!-- Featured Articles -->
     <item>
