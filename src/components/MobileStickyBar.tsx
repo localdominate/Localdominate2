@@ -3,16 +3,17 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { ArrowRight } from "lucide-react";
 import { trackButtonClick } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
-import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
+import { AutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS } from "@/lib/autoOptimizerConfig";
+import { useContext } from "react";
 
 const MobileStickyBar = () => {
   const { language, t } = useLanguage();
-  const { getEffectiveValue } = useAutoOptimizerContext();
+  const autoOptimizer = useContext(AutoOptimizerContext);
   const currentMonth = new Date().toLocaleString(language === "de" ? "de-DE" : "en-US", { month: "long" });
 
-  // Get optimized CTA color
-  const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
+  // Get optimized CTA color - fallback to 'primary' if context not available
+  const ctaColor = autoOptimizer?.getEffectiveValue?.('cta_color', 'all_ctas', 'primary') ?? 'primary';
   const buttonVariant = CTA_COLOR_VARIANTS[ctaColor] || 'cta';
 
   const handleClick = () => {
