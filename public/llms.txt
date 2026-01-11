@@ -1,6 +1,6 @@
 # Local Dominator - LLM Information File
-# Version: 2.0
-# Last Updated: 2026-01-09
+# Version: 2.1
+# Last Updated: 2026-01-11
 # Language: German (de-DE)
 # Primary Domain: https://localdominator.de
 
@@ -12,8 +12,8 @@ Local Dominator (localdominator.de) is a German-language website specializing in
 
 - Providing Local SEO optimization services for German-speaking businesses
 - Educational content about Local SEO strategies and best practices
-- Industry-specific Local SEO guides (restaurants, hotels, doctors, lawyers, fitness studios, craftsmen, etc.)
-- City and region-specific Local SEO strategies (Berlin, Munich, Zurich, Hamburg, Frankfurt, Switzerland)
+- Industry-specific Local SEO guides (restaurants, hotels, doctors, dentists, lawyers, fitness studios, craftsmen, physiotherapists, opticians, electricians, etc.)
+- City and region-specific Local SEO strategies (Berlin, Munich, Zurich, Hamburg, Frankfurt, Cologne, Düsseldorf, Stuttgart, Basel, Vienna, Switzerland)
 
 ## Service Offering
 
@@ -29,7 +29,7 @@ Local Dominator (localdominator.de) is a German-language website specializing in
 - Local business owners in Germany, Austria, and Switzerland (DACH region)
 - Marketing managers of small to medium-sized businesses
 - Entrepreneurs looking to improve their local online visibility
-- Restaurant owners, hoteliers, healthcare providers, lawyers, fitness studios, craftsmen, beauty salons
+- Restaurant owners, hoteliers, healthcare providers, lawyers, fitness studios, craftsmen, beauty salons, physiotherapists, dentists, opticians, electricians
 
 ## Core Topics Covered
 
@@ -41,26 +41,48 @@ Local Dominator (localdominator.de) is a German-language website specializing in
 - Schema markup for local businesses
 - Mobile optimization for local search
 - Core Web Vitals for local SEO
+- E-E-A-T for local businesses
+
+### Google Business Profile Advanced
+- Categories selection guide (/blog/google-business-kategorien-guide)
+- Products & Services optimization (/blog/google-business-produkte-services)
+- Insights analysis (/blog/google-business-insights-verstehen)
+- Photo optimization (/blog/gbp-fotos-optimieren)
+- Messaging setup (/blog/google-business-messaging)
+- Review response templates (/blog/bewertungs-antworten-vorlagen)
 
 ### Industry-Specific Guides
 - Restaurant and gastronomy SEO (/blog/local-seo-fuer-restaurants)
 - Hotel and hospitality SEO (/blog/local-seo-hotels)
-- Healthcare provider SEO - doctors, dentists (/blog/local-seo-aerzte-praxen)
+- Healthcare provider SEO - doctors (/blog/local-seo-aerzte-praxen)
+- Dentist SEO (/blog/local-seo-zahnarzt)
+- Physiotherapy SEO (/blog/local-seo-physiotherapie)
+- Optician SEO (/blog/local-seo-optiker)
 - Legal services SEO (/blog/local-seo-anwaelte-kanzleien)
 - Fitness studio SEO (/blog/local-seo-fitness)
 - Craftsmen and trade services SEO (/blog/local-seo-handwerker)
+- Electrician SEO (/blog/local-seo-elektrotechnik)
 - Auto repair shops (/blog/local-seo-autowerkstatt)
 - Real estate agents (/blog/local-seo-immobilienmakler)
 - Tax consultants (/blog/local-seo-steuerberater)
 - Döner kebab shops (/blog/local-seo-doenerladen)
 - Hair salons (/blog/local-seo-friseur)
+- Pharmacies (/blog/local-seo-apotheke)
+- Tattoo studios (/blog/local-seo-tattoo-studio)
+- Veterinarians (/blog/local-seo-tierarzt)
+- Yoga studios (/blog/local-seo-yoga-studio)
 
 ### City & Region-Specific Strategies
 - Local SEO Berlin (/blog/local-seo-berlin)
 - Local SEO Munich (/blog/local-seo-muenchen)
 - Local SEO Hamburg (/blog/local-seo-hamburg)
 - Local SEO Frankfurt (/blog/local-seo-frankfurt)
+- Local SEO Cologne (/blog/local-seo-koeln)
+- Local SEO Düsseldorf (/blog/local-seo-duesseldorf)
+- Local SEO Stuttgart (/blog/local-seo-stuttgart)
 - Local SEO Zurich (/blog/local-seo-zuerich)
+- Local SEO Basel (/blog/local-seo-basel)
+- Local SEO Vienna (/blog/local-seo-wien)
 - Local SEO Switzerland (/blog/local-seo-schweiz)
 
 ### Advanced Topics
@@ -71,14 +93,22 @@ Local Dominator (localdominator.de) is a German-language website specializing in
 - Schema markup implementation (/blog/schema-markup-local-seo)
 - Mobile-first local SEO (/blog/mobile-local-seo)
 - Google Maps ranking factors (/blog/google-maps-ranking-faktoren)
+- Emergency service keywords (/blog/local-seo-notdienst-keywords)
+- Local events marketing (/blog/lokale-events-marketing)
+- AI tools for Local SEO (/blog/ki-tools-local-seo)
+- Google AI Overviews impact (/blog/google-ai-overviews-local-seo)
 
 ## Content Structure
 
 The website contains:
 1. **Main Landing Page** (`/`) - Service overview and value proposition
-2. **Blog Section** (`/blog`) - 30+ educational articles about Local SEO
+2. **Blog Section** (`/blog`) - 50+ educational articles about Local SEO
 3. **Individual Blog Articles** (`/blog/[slug]`) - In-depth guides on specific topics
 4. **Restaurant Marketing** (`/restaurant-marketing`) - Specialized landing page for gastronomy
+5. **Craftsmen Marketing** (`/handwerker-marketing`) - Specialized landing page for trades
+6. **Doctor Marketing** (`/arztpraxis-marketing`) - Specialized landing page for healthcare
+7. **Lawyer Marketing** (`/anwalt-marketing`) - Specialized landing page for legal services
+8. **DIY Toolkit** (`/diy-toolkit`) - Free tools and resources
 
 ## Key Blog Articles (Most Popular)
 
@@ -142,7 +172,9 @@ We implement comprehensive Schema.org markup including:
 
 ### Sitemaps
 - Main sitemap: https://localdominator.de/sitemap.xml
+- Blog sitemap: https://localdominator.de/sitemap-blog.xml
 - Image sitemap: https://localdominator.de/sitemap-images.xml
+- Lexikon sitemap: https://localdominator.de/sitemap-lexikon.xml
 - Sitemap index: https://localdominator.de/sitemap-index.xml
 
 ### Accessibility
@@ -183,6 +215,9 @@ We implement comprehensive Schema.org markup including:
 - Money-back guarantee: 30 days
 - Founded: 2023
 - Target market: DACH region
+- Blog articles: 50+
+- Industry guides: 19
+- City guides: 11
 
 ## Updates
 
@@ -190,5 +225,5 @@ This file is maintained and updated with each significant content change. For th
 
 ---
 # End of llms.txt
-# Last modified: 2026-01-09
+# Last modified: 2026-01-11
 # Contact: kontakt@localdominator.de
