@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,7 +21,8 @@ import {
   Briefcase,
   Gavel,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  BookOpen
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -87,12 +89,13 @@ const AnwaltMarketing = () => {
         "90 Tage Premium E-Mail Support",
         "E-A-T Checkliste für Ihre Kanzlei-Website"
       ],
-      priceAnchor: "899",
-      price: "449",
+      priceAnchor: "599",
+      price: "299",
       priceSuffix: "€",
       priceNote: "Einmalzahlung · Keine versteckten Kosten",
-      savings: "450€ sparen",
-      badge: "Premium-Paket",
+      savings: "300€ Rabatt",
+      badge: "🎉 Einmaliges Einführungsangebot",
+      discountNote: "Regulär 599€ – nur für kurze Zeit",
       cta: "Jetzt Kanzlei Pro sichern",
       spotsText: "Nur noch {spots} Plätze für Kanzleien diesen Monat",
       testimonials: [
@@ -186,12 +189,13 @@ const AnwaltMarketing = () => {
         "90 days premium email support",
         "E-A-T checklist for your firm website"
       ],
-      priceAnchor: "899",
-      price: "449",
+      priceAnchor: "599",
+      price: "299",
       priceSuffix: "€",
       priceNote: "One-time payment · No hidden costs",
-      savings: "Save 450€",
-      badge: "Premium Package",
+      savings: "Save 300€",
+      badge: "🎉 Limited Launch Offer",
+      discountNote: "Regular 599€ – limited time only",
       cta: "Get Law Firm Pro Now",
       spotsText: "Only {spots} spots left for law firms this month",
       testimonials: [
@@ -554,6 +558,56 @@ const AnwaltMarketing = () => {
           </div>
         </section>
 
+        {/* Related Content Section */}
+        <section className="py-16 bg-slate-900/50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl font-bold text-center mb-8">
+              {language === 'de' ? 'Kostenlose Ressourcen für Anwälte' : 'Free Resources for Lawyers'}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <Link to="/blog/local-seo-anwaelte-kanzleien" className="group">
+                <Card className="bg-slate-800/50 border-slate-700 hover:border-amber-500/50 transition-colors h-full">
+                  <CardContent className="p-6">
+                    <BookOpen className="w-8 h-8 text-amber-400 mb-4" />
+                    <h3 className="text-white font-semibold mb-2 group-hover:text-amber-400 transition-colors">
+                      {language === 'de' ? 'Local SEO für Anwälte Guide' : 'Local SEO for Lawyers Guide'}
+                    </h3>
+                    <p className="text-slate-400 text-sm">
+                      {language === 'de' ? 'BRAO-konform mehr Mandanten gewinnen' : 'Bar-compliant client acquisition'}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link to="/blog/google-bewertungen-bekommen" className="group">
+                <Card className="bg-slate-800/50 border-slate-700 hover:border-amber-500/50 transition-colors h-full">
+                  <CardContent className="p-6">
+                    <Star className="w-8 h-8 text-amber-400 mb-4" />
+                    <h3 className="text-white font-semibold mb-2 group-hover:text-amber-400 transition-colors">
+                      {language === 'de' ? 'Mehr Mandanten-Bewertungen' : 'Get More Client Reviews'}
+                    </h3>
+                    <p className="text-slate-400 text-sm">
+                      {language === 'de' ? 'Berufsrechtskonform & effektiv' : 'Professional & effective'}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link to="/blog/e-e-a-t-local-seo" className="group">
+                <Card className="bg-slate-800/50 border-slate-700 hover:border-amber-500/50 transition-colors h-full">
+                  <CardContent className="p-6">
+                    <Award className="w-8 h-8 text-amber-400 mb-4" />
+                    <h3 className="text-white font-semibold mb-2 group-hover:text-amber-400 transition-colors">
+                      {language === 'de' ? 'E-E-A-T für Juristen' : 'E-E-A-T for Lawyers'}
+                    </h3>
+                    <p className="text-slate-400 text-sm">
+                      {language === 'de' ? 'Expertise & Autorität zeigen' : 'Showcase expertise & authority'}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-16 lg:py-24 bg-gradient-to-t from-slate-950 to-slate-900">
           <div className="container mx-auto px-4">
@@ -570,7 +624,7 @@ const AnwaltMarketing = () => {
               <Button
                 size="lg"
                 onClick={() => {
-                  trackButtonClick("final_cta", "anwalt_footer", 449);
+                  trackButtonClick("final_cta", "anwalt_footer", 299);
                   handleCtaClick();
                 }}
                 className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-bold text-lg px-10 py-6 rounded-xl shadow-2xl shadow-amber-500/25 transition-all duration-300 hover:scale-105"

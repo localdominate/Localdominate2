@@ -5,7 +5,8 @@ export type BusinessCategory =
   | 'health' 
   | 'retail' 
   | 'fitness' 
-  | 'services';
+  | 'services'
+  | 'legal';
 
 export interface CategoryInfo {
   id: BusinessCategory;
@@ -23,6 +24,7 @@ export const businessCategories: CategoryInfo[] = [
   { id: 'retail', name: 'Einzelhandel', icon: '🛒', customerTerm: 'Kunde', customerTermPlural: 'Kunden' },
   { id: 'fitness', name: 'Fitness & Sport', icon: '🏋️', customerTerm: 'Mitglied', customerTermPlural: 'Mitglieder' },
   { id: 'services', name: 'Dienstleistungen', icon: '📚', customerTerm: 'Kunde', customerTermPlural: 'Kunden' },
+  { id: 'legal', name: 'Recht & Kanzlei', icon: '⚖️', customerTerm: 'Mandant', customerTermPlural: 'Mandanten' },
 ];
 
 export interface QuestionOption {
@@ -971,6 +973,79 @@ export const categorySpecificSteps: Record<BusinessCategory, QuestionnaireStep[]
           placeholder: 'z.B. Steuerberatung, Buchhaltung, Lohnabrechnung, Gründungsberatung',
           helpText: 'Kommasepariert auflisten',
           gmbField: 'Services'
+        },
+      ]
+    },
+  ],
+  legal: [
+    {
+      key: 'legal_attributes',
+      title: 'Kanzlei-Attribute',
+      subtitle: 'Wichtige Infos für Mandanten',
+      motivationMessage: 'Recht so! ⚖️',
+      questions: [
+        { 
+          id: 'legal_areas', 
+          type: 'multiselect', 
+          question: 'Rechtsgebiete', 
+          options: [
+            { value: 'arbeitsrecht', label: 'Arbeitsrecht' },
+            { value: 'familienrecht', label: 'Familienrecht' },
+            { value: 'verkehrsrecht', label: 'Verkehrsrecht' },
+            { value: 'strafrecht', label: 'Strafrecht' },
+            { value: 'mietrecht', label: 'Mietrecht' },
+            { value: 'erbrecht', label: 'Erbrecht' },
+            { value: 'wirtschaftsrecht', label: 'Wirtschaftsrecht' },
+            { value: 'it_recht', label: 'IT-Recht / Datenschutz' },
+          ],
+          gmbField: 'Rechtsgebiete'
+        },
+        { 
+          id: 'free_initial_consultation', 
+          type: 'select', 
+          question: 'Kostenlose Erstberatung?', 
+          options: [
+            { value: 'yes', label: 'Ja' },
+            { value: 'limited', label: 'Ja, bis 15 Minuten' },
+            { value: 'no', label: 'Nein' },
+          ],
+          gmbField: 'Attribut - Erstberatung'
+        },
+        { 
+          id: 'legal_aid', 
+          type: 'select', 
+          question: 'Prozesskostenhilfe / Beratungshilfe?', 
+          options: [
+            { value: 'yes', label: 'Ja' },
+            { value: 'no', label: 'Nein' },
+          ],
+          gmbField: 'Attribut - Prozesskostenhilfe'
+        },
+        { 
+          id: 'online_consultation', 
+          type: 'select', 
+          question: 'Online-Beratung möglich?', 
+          options: [
+            { value: 'yes', label: 'Ja' },
+            { value: 'video', label: 'Ja, per Video' },
+            { value: 'no', label: 'Nein' },
+          ],
+          gmbField: 'Attribut - Online-Beratung'
+        },
+        { 
+          id: 'languages', 
+          type: 'textarea', 
+          question: 'Sprachen (neben Deutsch)', 
+          placeholder: 'z.B. Englisch, Türkisch, Russisch',
+          gmbField: 'Sprachen'
+        },
+        { 
+          id: 'fachanwalt_titles', 
+          type: 'textarea', 
+          question: 'Fachanwalt-Titel', 
+          placeholder: 'z.B. Fachanwalt für Arbeitsrecht, Fachanwalt für Familienrecht',
+          helpText: 'Kommasepariert auflisten',
+          gmbField: 'Fachanwalt-Titel'
         },
       ]
     },

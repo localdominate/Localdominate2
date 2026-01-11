@@ -149,7 +149,57 @@ export const testIdeas: ABTestRecommendation[] = [
     title: 'Mobile Sticky CTA',
     description: 'Sticky Footer vs. Floating Button vs. nur im Content.',
     action: 'Mobile Conversion optimieren'
-  }
+  },
+  // Branchen-spezifische Test-Ideen
+  {
+    id: 'idea_handwerker_price_anchor',
+    priority: 'high',
+    title: 'Handwerker Preis-Anker',
+    description: 'Teste ob 699€ vs 599€ Ankerpreis die Conversion beeinflusst.',
+    action: 'A/B-Test für /handwerker-marketing starten'
+  },
+  {
+    id: 'idea_handwerker_headline',
+    priority: 'medium',
+    title: 'Handwerker Headline',
+    description: '"Mehr Aufträge" vs. "Weniger Kaltakquise" vs. "Volle Auftragsbücher".',
+    action: 'Headline-Varianten für Handwerker testen'
+  },
+  {
+    id: 'idea_arztpraxis_headline',
+    priority: 'medium',
+    title: 'Arztpraxis Headline',
+    description: '"Mehr Patienten" vs. "Volle Terminbücher" vs. "Top-Bewertungen".',
+    action: 'Headline-Varianten für Arztpraxen testen'
+  },
+  {
+    id: 'idea_arztpraxis_trust',
+    priority: 'high',
+    title: 'Arztpraxis Trust-Elemente',
+    description: 'DSGVO-Badge prominent vs. dezent vs. im CTA-Bereich.',
+    action: 'Trust-Element Position für Praxen optimieren'
+  },
+  {
+    id: 'idea_anwalt_cta',
+    priority: 'high',
+    title: 'Anwalt CTA-Text',
+    description: '"Jetzt Kanzlei Pro sichern" vs. "Mehr Mandanten gewinnen" vs. "Kostenlos beraten lassen".',
+    action: 'CTA-Text für Kanzlei-Seite optimieren'
+  },
+  {
+    id: 'idea_anwalt_social_proof',
+    priority: 'medium',
+    title: 'Anwalt Testimonials',
+    description: 'Mit Kanzlei-Fotos vs. nur Text vs. mit Ergebnis-Zahlen.',
+    action: 'Testimonial-Format für Anwälte testen'
+  },
+  {
+    id: 'idea_branchen_countdown',
+    priority: 'low',
+    title: 'Branchen-Seiten Countdown',
+    description: 'Mit Countdown vs. ohne Countdown auf allen Branchen-Seiten.',
+    action: 'Urgency-Element für Branchen-Seiten testen'
+  },
 ];
 
 export function getBlogCTAAnalysis(conversions: Array<{

@@ -208,6 +208,31 @@ export const roiBranchConfigs: Record<BusinessCategory, ROIBranchConfig> = {
     monthlyMarketingAlternative: 1100,
     daysMultiplier: 1,
   },
+  legal: {
+    id: 'legal',
+    name: { de: 'Recht & Kanzlei', en: 'Law & Legal' },
+    icon: '⚖️',
+    customerTerm: { de: 'Mandate', en: 'Cases' },
+    metric1: {
+      label: { de: 'Neue Mandate pro Monat', en: 'New cases per month' },
+      unit: 'month',
+      min: 5,
+      max: 50,
+      step: 1,
+      default: 12,
+    },
+    metric2: {
+      label: { de: 'Durchschnittlicher Mandatswert', en: 'Average case value' },
+      min: 500,
+      max: 5000,
+      step: 100,
+      default: 1500,
+    },
+    visibilityBoost: { conservative: 0.08, realistic: 0.15, optimistic: 0.25 },
+    profitMargin: 0.55,
+    monthlyMarketingAlternative: 1500,
+    daysMultiplier: 1,
+  },
 };
 
 export const branchOrder: BusinessCategory[] = [
@@ -218,6 +243,7 @@ export const branchOrder: BusinessCategory[] = [
   'retail',
   'fitness',
   'services',
+  'legal',
 ];
 
 export type ScenarioType = 'conservative' | 'realistic' | 'optimistic';

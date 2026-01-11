@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Check, Shield, Star, Stethoscope, Clock, MapPin, Users, Heart, Calendar, FileCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Shield, Star, Stethoscope, Clock, MapPin, Users, Heart, Calendar, FileCheck, BookOpen } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { openStripeCheckout } from "@/lib/stripe";
 import { trackButtonClick } from "@/lib/dataLayer";
 
@@ -44,7 +45,7 @@ const ArztpraxisMarketing = () => {
   }, []);
 
   const handleCtaClick = () => {
-    trackButtonClick("arztpraxis_cta", "arztpraxis_page", 399);
+    trackButtonClick("arztpraxis_cta", "arztpraxis_page", 299);
     openStripeCheckout("standard", "arztpraxis_page", "Praxis Pro kaufen");
   };
 
@@ -92,14 +93,15 @@ const ArztpraxisMarketing = () => {
         ],
       },
       pricing: {
-        anchor: "699",
-        price: "399",
-        badge: "Einführungspreis",
-        savings: "300€ sparen",
+        anchor: "599",
+        price: "299",
+        badge: "🎉 Einmaliges Einführungsangebot",
+        savings: "300€ Rabatt",
         oneTime: "Einmalig • Keine versteckten Kosten",
         cta: "Jetzt Praxis Pro sichern",
         scarcity: "Nur noch 3 Plätze für Praxen diesen Monat",
         offerEnds: "Angebot endet in",
+        discountNote: "Regulär 599€ – nur für kurze Zeit",
       },
       guarantee: {
         headline: "100% Zufriedenheitsgarantie",
@@ -169,14 +171,15 @@ const ArztpraxisMarketing = () => {
         ],
       },
       pricing: {
-        anchor: "699",
-        price: "399",
-        badge: "Launch Price",
-        savings: "Save $300",
+        anchor: "599",
+        price: "299",
+        badge: "🎉 Limited Launch Offer",
+        savings: "Save 300€",
         oneTime: "One-time • No hidden fees",
         cta: "Get Practice Pro Now",
         scarcity: "Only 3 spots left for practices this month",
         offerEnds: "Offer ends in",
+        discountNote: "Regular 599€ – limited time only",
       },
       guarantee: {
         headline: "100% Satisfaction Guarantee",
@@ -460,6 +463,56 @@ const ArztpraxisMarketing = () => {
                 <p className="text-slate-400 text-sm">{item.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Content Section */}
+      <section className="py-16 px-4 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-8">
+            {language === 'de' ? 'Kostenlose Ressourcen für Ärzte' : 'Free Resources for Doctors'}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link to="/blog/local-seo-aerzte-praxen" className="group">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-colors h-full">
+                <CardContent className="p-6">
+                  <BookOpen className="w-8 h-8 text-cyan-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
+                    {language === 'de' ? 'Local SEO für Arztpraxen' : 'Local SEO for Medical Practices'}
+                  </h3>
+                  <p className="text-slate-400 text-sm">
+                    {language === 'de' ? 'YMYL & DSGVO-konform mehr Patienten gewinnen' : 'YMYL & GDPR-compliant patient acquisition'}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/blog/google-bewertungen-bekommen" className="group">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-colors h-full">
+                <CardContent className="p-6">
+                  <Star className="w-8 h-8 text-cyan-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
+                    {language === 'de' ? 'Mehr Patientenbewertungen' : 'Get More Patient Reviews'}
+                  </h3>
+                  <p className="text-slate-400 text-sm">
+                    {language === 'de' ? 'DSGVO-konforme Strategien' : 'GDPR-compliant strategies'}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/blog/core-web-vitals-local-seo" className="group">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-colors h-full">
+                <CardContent className="p-6">
+                  <Shield className="w-8 h-8 text-cyan-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
+                    {language === 'de' ? 'Core Web Vitals optimieren' : 'Optimize Core Web Vitals'}
+                  </h3>
+                  <p className="text-slate-400 text-sm">
+                    {language === 'de' ? 'Website-Performance für Praxen' : 'Website performance for practices'}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
