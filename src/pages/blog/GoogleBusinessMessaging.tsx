@@ -257,8 +257,8 @@ const GoogleBusinessMessaging = () => {
       <HelpfulnessWidget articleSlug="google-business-messaging" />
 
       <SourcesSection sources={[
-        { name: "Google: Business Messages", url: "https://support.google.com/business/answer/9114771" },
-        { name: "Google: Nachrichten verwalten", url: "https://support.google.com/business/answer/7506578" }
+        { title: "Google: Business Messages", url: "https://support.google.com/business/answer/9114771" },
+        { title: "Google: Nachrichten verwalten", url: "https://support.google.com/business/answer/7506578" }
       ]} />
     </ArticleLayout>
   );

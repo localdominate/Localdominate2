@@ -288,8 +288,8 @@ const LocalSeoMehrstufigUnternehmen = () => {
       <HelpfulnessWidget articleSlug="local-seo-mehrstufig-unternehmen" />
 
       <SourcesSection sources={[
-        { name: "Google: Mehrere Standorte verwalten", url: "https://support.google.com/business/answer/3038063" },
-        { name: "Moz: Multi-Location SEO Guide", url: "https://moz.com/learn/seo/multi-location" }
+        { title: "Google: Mehrere Standorte verwalten", url: "https://support.google.com/business/answer/3038063" },
+        { title: "Moz: Multi-Location SEO Guide", url: "https://moz.com/learn/seo/multi-location" }
       ]} />
     </ArticleLayout>
   );
