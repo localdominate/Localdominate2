@@ -308,8 +308,8 @@ const LocalSeoNeugruender = () => {
       <HelpfulnessWidget articleSlug="lokale-seo-fuer-neugruender" />
 
       <SourcesSection sources={[
-        { name: "Google: Unternehmen bei Google anmelden", url: "https://support.google.com/business/answer/2911778" },
-        { name: "Google: Erste Schritte mit Google Business", url: "https://www.google.com/intl/de_de/business/" }
+        { title: "Google: Unternehmen bei Google anmelden", url: "https://support.google.com/business/answer/2911778" },
+        { title: "Google: Erste Schritte mit Google Business", url: "https://www.google.com/intl/de_de/business/" }
       ]} />
     </ArticleLayout>
   );

@@ -310,8 +310,8 @@ const GbpFotosOptimieren = () => {
       <HelpfulnessWidget articleSlug="gbp-fotos-optimieren" />
 
       <SourcesSection sources={[
-        { name: "Google Business Profile Hilfe", url: "https://support.google.com/business/answer/6123536" },
-        { name: "Google: Photo Guidelines", url: "https://support.google.com/business/answer/6103862" }
+        { title: "Google Business Profile Hilfe", url: "https://support.google.com/business/answer/6123536" },
+        { title: "Google: Photo Guidelines", url: "https://support.google.com/business/answer/6103862" }
       ]} />
     </ArticleLayout>
   );

@@ -285,8 +285,8 @@ const EEATLokaleUnternehmen = () => {
       <HelpfulnessWidget articleSlug="e-e-a-t-lokale-unternehmen" />
 
       <SourcesSection sources={[
-        { name: "Google: Search Quality Rater Guidelines", url: "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" },
-        { name: "Google: Was ist E-E-A-T", url: "https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t" }
+        { title: "Google: Search Quality Rater Guidelines", url: "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" },
+        { title: "Google: Was ist E-E-A-T", url: "https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t" }
       ]} />
     </ArticleLayout>
   );
