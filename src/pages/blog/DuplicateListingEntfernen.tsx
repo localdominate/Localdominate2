@@ -12,14 +12,17 @@ import { motion } from 'framer-motion';
 
 const DuplicateListingEntfernen: React.FC = () => {
   const articleData = {
+    slug: "duplicate-listing-entfernen",
     title: "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2025)",
-    description: "Hast du mehrere Google Business Einträge für denselben Standort? Lerne wie du Duplicates findest, richtig entfernst und zukünftige Dopplungen verhinderst. Mit interaktiver Checkliste.",
-    date: "2025-01-10",
-    author: "Max Weber",
+    metaTitle: "Duplicate Listing entfernen: Doppelte Google-Einträge löschen | 2025",
+    metaDescription: "Hast du mehrere Google Business Einträge für denselben Standort? Lerne wie du Duplicates findest, richtig entfernst und zukünftige Dopplungen verhinderst.",
+    excerpt: "Der komplette Guide zum Finden und Entfernen von doppelten Google Business Einträgen mit interaktiver Checkliste.",
     category: "Troubleshooting",
-    imageUrl: "/images/blog/duplicate-listing.jpg",
-    readTime: "11 Min. Lesezeit",
-    slug: "duplicate-listing-entfernen"
+    readingTime: 11,
+    publishedAt: "2025-01-10",
+    updatedAt: "2025-01-10",
+    icon: "📋",
+    keywords: ["duplicate listing", "doppelte einträge", "google business duplicate", "duplicate entfernen", "mehrere google einträge"]
   };
 
   const tocItems = [
@@ -126,7 +129,7 @@ const DuplicateListingEntfernen: React.FC = () => {
           Duplicate Listings sind einer der häufigsten und gleichzeitig am meisten unterschätzten Fehler im Local SEO. Sie verwirren nicht nur Kunden, sondern signalisieren Google auch mangelnde Datenqualität – was dein Ranking direkt beeinflusst. In diesem Guide zeigen wir dir, wie du Duplicates findest und professionell entfernst.
         </p>
 
-        <KeyTakeawaysBox takeaways={keyTakeaways} />
+        <KeyTakeawaysBox items={keyTakeaways} />
 
         {/* Section 1 */}
         <section id="was-sind-duplicates" className="scroll-mt-20 mt-12">

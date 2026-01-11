@@ -12,14 +12,17 @@ import { motion } from 'framer-motion';
 
 const GbpVerifizierungFehlgeschlagen: React.FC = () => {
   const articleData = {
+    slug: "gbp-verifizierung-fehlgeschlagen",
     title: "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2025)",
-    description: "Deine Google Business Verifizierung klappt nicht? Postkarte nicht erhalten, Code ungültig oder Video abgelehnt? Unser Problemlöser-Wizard zeigt dir die passende Lösung.",
-    date: "2025-01-10",
-    author: "Max Weber",
+    metaTitle: "GBP Verifizierung fehlgeschlagen? 8 Lösungen | Guide 2025",
+    metaDescription: "Deine Google Business Verifizierung klappt nicht? Postkarte nicht erhalten, Code ungültig oder Video abgelehnt? Unser Problemlöser-Wizard zeigt dir die passende Lösung.",
+    excerpt: "Der komplette Troubleshooting-Guide für alle Google Business Verifizierungsprobleme mit interaktivem Problemlöser.",
     category: "Troubleshooting",
-    imageUrl: "/images/blog/gbp-verifizierung.jpg",
-    readTime: "12 Min. Lesezeit",
-    slug: "gbp-verifizierung-fehlgeschlagen"
+    readingTime: 12,
+    publishedAt: "2025-01-10",
+    updatedAt: "2025-01-10",
+    icon: "✅",
+    keywords: ["gbp verifizierung", "google verifizierung fehlgeschlagen", "postkarte nicht erhalten", "verifizierungscode", "video verifizierung"]
   };
 
   const tocItems = [
@@ -133,7 +136,7 @@ const GbpVerifizierungFehlgeschlagen: React.FC = () => {
           Du hast dein Google Business Profil erstellt, aber die Verifizierung will einfach nicht klappen? Du bist nicht allein – die Verifizierung ist einer der häufigsten Stolpersteine für lokale Unternehmen. In diesem Guide zeigen wir dir, wie du jedes Verifizierungsproblem lösen kannst.
         </p>
 
-        <KeyTakeawaysBox takeaways={keyTakeaways} />
+        <KeyTakeawaysBox items={keyTakeaways} />
 
         {/* Section 1 */}
         <section id="warum-wichtig" className="scroll-mt-20 mt-12">
