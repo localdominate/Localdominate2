@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Check, Phone, Shield, Star, Wrench, Clock, MapPin, Users, TrendingUp, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Phone, Shield, Star, Wrench, Clock, MapPin, Users, TrendingUp, Zap, BookOpen } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { openStripeCheckout } from "@/lib/stripe";
 import { trackButtonClick } from "@/lib/dataLayer";
 
@@ -44,7 +45,7 @@ const HandwerkerMarketing = () => {
   }, []);
 
   const handleCtaClick = () => {
-    trackButtonClick("handwerker_cta", "handwerker_page", 349);
+    trackButtonClick("handwerker_cta", "handwerker_page", 299);
     openStripeCheckout("standard", "handwerker_page", "Handwerker Pro kaufen");
   };
 
@@ -93,13 +94,14 @@ const HandwerkerMarketing = () => {
       },
       pricing: {
         anchor: "599",
-        price: "349",
-        badge: "Einführungspreis",
-        savings: "250€ sparen",
+        price: "299",
+        badge: "🎉 Einmaliges Einführungsangebot",
+        savings: "300€ Rabatt",
         oneTime: "Einmalig • Keine versteckten Kosten",
         cta: "Jetzt Handwerker Pro sichern",
         scarcity: "Nur noch 5 Plätze diesen Monat",
         offerEnds: "Angebot endet in",
+        discountNote: "Regulär 599€ – nur für kurze Zeit",
       },
       guarantee: {
         headline: "100% Zufriedenheitsgarantie",
@@ -170,13 +172,14 @@ const HandwerkerMarketing = () => {
       },
       pricing: {
         anchor: "599",
-        price: "349",
-        badge: "Launch Price",
-        savings: "Save $250",
+        price: "299",
+        badge: "🎉 Limited Launch Offer",
+        savings: "Save 300€",
         oneTime: "One-time • No hidden fees",
         cta: "Get Craftsman Pro Now",
         scarcity: "Only 5 spots left this month",
         offerEnds: "Offer ends in",
+        discountNote: "Regular 599€ – limited time only",
       },
       guarantee: {
         headline: "100% Satisfaction Guarantee",
@@ -459,6 +462,56 @@ const HandwerkerMarketing = () => {
                 <p className="text-slate-400 text-sm">{item.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Content Section */}
+      <section className="py-16 px-4 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-8">
+            {language === 'de' ? 'Kostenlose Ressourcen für Handwerker' : 'Free Resources for Craftsmen'}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link to="/blog/local-seo-handwerker" className="group">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-amber-500/50 transition-colors h-full">
+                <CardContent className="p-6">
+                  <BookOpen className="w-8 h-8 text-amber-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 group-hover:text-amber-400 transition-colors">
+                    {language === 'de' ? 'Local SEO für Handwerker Guide' : 'Local SEO for Craftsmen Guide'}
+                  </h3>
+                  <p className="text-slate-400 text-sm">
+                    {language === 'de' ? 'Der komplette Leitfaden für mehr Aufträge' : 'The complete guide for more jobs'}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/blog/google-bewertungen-bekommen" className="group">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-amber-500/50 transition-colors h-full">
+                <CardContent className="p-6">
+                  <Star className="w-8 h-8 text-amber-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 group-hover:text-amber-400 transition-colors">
+                    {language === 'de' ? 'Mehr Google Bewertungen bekommen' : 'Get More Google Reviews'}
+                  </h3>
+                  <p className="text-slate-400 text-sm">
+                    {language === 'de' ? '7 bewährte Strategien' : '7 proven strategies'}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/blog/google-maps-ranking" className="group">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-amber-500/50 transition-colors h-full">
+                <CardContent className="p-6">
+                  <MapPin className="w-8 h-8 text-amber-400 mb-4" />
+                  <h3 className="text-white font-semibold mb-2 group-hover:text-amber-400 transition-colors">
+                    {language === 'de' ? 'Google Maps Ranking verbessern' : 'Improve Google Maps Ranking'}
+                  </h3>
+                  <p className="text-slate-400 text-sm">
+                    {language === 'de' ? 'Die wichtigsten Ranking-Faktoren' : 'The most important ranking factors'}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
