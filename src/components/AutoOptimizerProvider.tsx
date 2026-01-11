@@ -3,7 +3,7 @@ import { useAutoOptimizer } from '@/hooks/useAutoOptimizer';
 
 type AutoOptimizerContextType = ReturnType<typeof useAutoOptimizer>;
 
-const AutoOptimizerContext = createContext<AutoOptimizerContextType | null>(null);
+export const AutoOptimizerContext = createContext<AutoOptimizerContextType | null>(null);
 
 export const useAutoOptimizerContext = () => {
   const context = useContext(AutoOptimizerContext);
