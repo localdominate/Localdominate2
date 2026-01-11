@@ -134,12 +134,14 @@ const HeroSection = () => {
             {renderUrgencyElement()}
           </div>
           
-          {/* Phone Mockup Image - LCP Element */}
+          {/* Phone Mockup Image - LCP Element with explicit dimensions to prevent CLS */}
           <div className="order-1 md:order-2 flex justify-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <img 
               src={heroPhoneMockup} 
               alt="Google Maps Top 3 Ranking Vorher-Nachher Vergleich - Local SEO Optimierung für lokale Unternehmen" 
               className="w-48 sm:w-56 md:w-80 lg:w-96 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+              width={384}
+              height={768}
               loading="eager"
               fetchPriority="high"
               decoding="async"
