@@ -5,6 +5,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
+import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
@@ -1006,6 +1007,8 @@ const LocalSeoAerzte = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <IndustryLandingCTA industry="arztpraxis" />
 
       {/* Final CTA */}
       <section className="mb-12">

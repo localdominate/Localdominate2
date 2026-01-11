@@ -9,6 +9,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
+import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
 import { 
@@ -574,6 +575,8 @@ const LocalSeoHandwerker = () => {
           ))}
         </ul>
       </section>
+
+      <IndustryLandingCTA industry="handwerker" />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
