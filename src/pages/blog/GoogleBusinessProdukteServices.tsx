@@ -1,13 +1,18 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const GoogleBusinessProdukteServices = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("google-business-produkte-services", language)!;
+
   const tocItems = [
     { id: "ueberblick", title: "Produkte & Services im Überblick" },
     { id: "produkte-anlegen", title: "Produkte richtig anlegen" },
@@ -26,13 +31,7 @@ const GoogleBusinessProdukteServices = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Google Business Produkte & Services: Der komplette Optimierungs-Guide"
-      description="So nutzen Sie die Produkt- und Service-Funktionen in Google Business optimal. Mehr Sichtbarkeit, bessere Klickraten und höhere Conversions."
-      canonicalUrl="/blog/google-business-produkte-services"
-      publishDate="2026-02-12"
-      readingTime={13}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -41,7 +40,7 @@ const GoogleBusinessProdukteServices = () => {
         caption="Produkte und Services machen Ihr Google Business Profil informativer und attraktiver"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="ueberblick">
         <h2>Produkte & Services im Überblick</h2>

@@ -1,13 +1,18 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const GoogleBusinessKategorienGuide = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("google-business-kategorien-guide", language)!;
+
   const tocItems = [
     { id: "bedeutung", title: "Warum Kategorien so wichtig sind" },
     { id: "hauptkategorie", title: "Die richtige Hauptkategorie wählen" },
@@ -26,13 +31,7 @@ const GoogleBusinessKategorienGuide = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Google Business Kategorien: Der komplette Guide zur richtigen Wahl"
-      description="Welche Google Business Kategorie passt zu Ihrem Unternehmen? Lernen Sie, wie Haupt- und Zusatzkategorien Ihr lokales Ranking beeinflussen."
-      canonicalUrl="/blog/google-business-kategorien-guide"
-      publishDate="2026-02-05"
-      readingTime={15}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -41,7 +40,7 @@ const GoogleBusinessKategorienGuide = () => {
         caption="Die richtige Kategorie-Wahl ist entscheidend für Ihre lokale Sichtbarkeit"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="bedeutung">
         <h2>Warum Kategorien so wichtig sind</h2>

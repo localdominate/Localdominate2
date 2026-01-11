@@ -1,14 +1,19 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoOptiker = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("local-seo-optiker", language)!;
+
   const tocItems = [
     { id: "kundensuche", title: "Wie Kunden Optiker suchen" },
     { id: "google-business", title: "Google Business optimieren" },
@@ -27,13 +32,7 @@ const LocalSeoOptiker = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Local SEO für Optiker & Hörakustiker: Mehr Kunden gewinnen"
-      description="Der komplette Local-SEO-Guide für Optiker und Hörakustiker. So werden Sie bei Google gefunden und gewinnen mehr Kunden in Ihrer Region."
-      canonicalUrl="/blog/local-seo-optiker"
-      publishDate="2026-02-14"
-      readingTime={15}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -42,7 +41,7 @@ const LocalSeoOptiker = () => {
         caption="Lokale Sichtbarkeit ist entscheidend für Optiker und Hörakustiker"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="kundensuche">
         <h2>Wie Kunden Optiker und Hörakustiker suchen</h2>
