@@ -157,13 +157,17 @@ const Index = () => {
             <Suspense fallback={<SectionFallback />}>
               <Footer />
             </Suspense>
+            
+            {/* Mobile/Bottom Components inside provider - MobileStickyBar needs AutoOptimizerContext */}
+            <Suspense fallback={<NullFallback />}>
+              <MobileStickyBar />
+            </Suspense>
           </AdvancedTrackingProvider>
         </AutoOptimizerProvider>
       </Suspense>
       
-      {/* Mobile/Bottom Components - Very low priority */}
+      {/* Components that don't need AutoOptimizerContext */}
       <Suspense fallback={<NullFallback />}>
-        <MobileStickyBar />
         <BackToTop />
         <CookieBanner />
         <HeatmapTracker enabled={true} />
