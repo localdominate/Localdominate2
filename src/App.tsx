@@ -95,6 +95,9 @@ const LocalSeoOptiker = lazy(() => import("./pages/blog/LocalSeoOptiker"));
 const BewertungsAntwortenVorlagen = lazy(() => import("./pages/blog/BewertungsAntwortenVorlagen"));
 const LocalSeoElektrotechnik = lazy(() => import("./pages/blog/LocalSeoElektrotechnik"));
 const GoogleBusinessInsightsVerstehen = lazy(() => import("./pages/blog/GoogleBusinessInsightsVerstehen"));
+const LocalSeoFotograf = lazy(() => import("./pages/blog/LocalSeoFotograf"));
+const LocalSeoVoiceSearch = lazy(() => import("./pages/blog/LocalSeoVoiceSearch"));
+const GooglePostsRankingFaktor = lazy(() => import("./pages/blog/GooglePostsRankingFaktor"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
 const CoreWebVitalsTracker = lazy(() => import("@/components/CoreWebVitalsTracker"));
@@ -203,6 +206,9 @@ const App = () => (
                 <Route path="/blog/bewertungs-antworten-vorlagen" element={<BewertungsAntwortenVorlagen />} />
                 <Route path="/blog/local-seo-elektrotechnik" element={<LocalSeoElektrotechnik />} />
                 <Route path="/blog/google-business-insights-verstehen" element={<GoogleBusinessInsightsVerstehen />} />
+                <Route path="/blog/local-seo-fotograf" element={<LocalSeoFotograf />} />
+                <Route path="/blog/local-seo-voice-search" element={<LocalSeoVoiceSearch />} />
+                <Route path="/blog/google-posts-ranking-faktor" element={<GooglePostsRankingFaktor />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
