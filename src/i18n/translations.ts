@@ -444,6 +444,30 @@ export const translations = {
         backButton: "Zurück zur Startseite",
       },
     },
+    // Add-Ons Section
+    addOns: {
+      eyebrow: "Maximiere deine Ergebnisse",
+      headline: "Optionale Upgrades",
+      selected: "ausgewählt",
+      items: {
+        express: {
+          title: "Express-Setup",
+          description: "24h statt 48h Lieferzeit",
+        },
+        competitor: {
+          title: "Konkurrenzanalyse",
+          description: "Detaillierter Wettbewerbsreport",
+        },
+        premium_texts: {
+          title: "Premium Texte",
+          description: "SEO-optimierte Langbeschreibung",
+        },
+        photo_pack: {
+          title: "Foto-Optimierung Pro",
+          description: "15 zusätzliche optimierte Bilder",
+        },
+      },
+    },
   },
   en: {
     // AnnouncementBar
@@ -886,6 +910,30 @@ export const translations = {
         headline: "Restaurant Marketing",
         description: "We're working on something special. Coming soon – exclusive marketing solutions for restaurateurs.",
         backButton: "Back to Homepage",
+      },
+    },
+    // Add-Ons Section
+    addOns: {
+      eyebrow: "Maximize your results",
+      headline: "Optional Upgrades",
+      selected: "selected",
+      items: {
+        express: {
+          title: "Express Setup",
+          description: "24h instead of 48h delivery",
+        },
+        competitor: {
+          title: "Competitor Analysis",
+          description: "Detailed competitor report",
+        },
+        premium_texts: {
+          title: "Premium Copy",
+          description: "SEO-optimized long description",
+        },
+        photo_pack: {
+          title: "Photo Optimization Pro",
+          description: "15 additional optimized images",
+        },
       },
     },
   },

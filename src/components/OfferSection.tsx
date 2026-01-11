@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
 import TrustBadges from "@/components/TrustBadges";
 import CountdownTimer from "@/components/CountdownTimer";
 import AnimatedPriceCounter from "@/components/AnimatedPriceCounter";
+import AddOnsSection from "@/components/AddOnsSection";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { trackButtonClick } from "@/lib/dataLayer";
-import { openStripeCheckout } from "@/lib/stripe";
+import { openStripeCheckout, calculateTotalPrice, type AddOnId } from "@/lib/stripe";
 import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS, PRICE_DISPLAY_VARIANTS } from "@/lib/autoOptimizerConfig";
 import { useABTestConversion } from "@/hooks/useABTestConversion";
@@ -23,6 +25,21 @@ const OfferSection = () => {
   const ctaHoverProps = useCtaHoverTracking("offer_cta");
   const priceHoverProps = usePriceHoverTracking();
   
+  // Add-ons state
+  const [selectedAddOns, setSelectedAddOns] = useState<AddOnId[]>([]);
+  
+  const handleToggleAddOn = (id: string) => {
+    setSelectedAddOns(prev => 
+      prev.includes(id as AddOnId) 
+        ? prev.filter(a => a !== id) 
+        : [...prev, id as AddOnId]
+    );
+  };
+  
+  // Calculate total price
+  const basePrice = 299;
+  const totalPrice = calculateTotalPrice("standard", selectedAddOns);
+  
   // Get optimized values
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
   const ctaText = getEffectiveValue('cta_text', 'offer_cta', t.offer.ctaButton);
@@ -36,17 +53,17 @@ const OfferSection = () => {
   
   const handleCtaClick = async () => {
     // Track for dataLayer
-    trackButtonClick("offer_cta", "offer_section", 299);
+    trackButtonClick("offer_cta", "offer_section", totalPrice);
     
     // Track click for engagement
     trackClick("offer_cta", true);
     
     // Track for A/B testing
-    await trackCtaClick("offer_section", ctaText, 299);
-    await trackCheckoutStart(299);
+    await trackCtaClick("offer_section", ctaText, totalPrice);
+    await trackCheckoutStart(totalPrice);
     
-    // Open checkout
-    openStripeCheckout("standard", "offer_section", ctaText);
+    // Open checkout with add-ons
+    openStripeCheckout("standard", "offer_section", ctaText, selectedAddOns);
   };
 
   // Render price section based on variant
@@ -206,6 +223,30 @@ const OfferSection = () => {
             <div className="flex flex-col justify-center items-center text-center bg-gradient-to-br from-primary/5 to-primary/10 p-6 md:p-8 rounded-2xl border border-primary/20">
               {renderPriceSection()}
               
+              {/* Dynamic total if add-ons selected */}
+              {selectedAddOns.length > 0 && (
+                <div className="w-full mb-4 p-3 bg-success/10 border border-success/30 rounded-lg">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-muted-foreground">
+                      {language === 'de' ? 'Basispaket' : 'Base package'}
+                    </span>
+                    <span className="font-medium">{basePrice}€</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm mt-1">
+                    <span className="text-muted-foreground">
+                      {selectedAddOns.length} Add-On{selectedAddOns.length > 1 ? 's' : ''}
+                    </span>
+                    <span className="font-medium text-success">+{totalPrice - basePrice}€</span>
+                  </div>
+                  <div className="border-t border-success/30 mt-2 pt-2 flex justify-between items-center">
+                    <span className="font-semibold text-foreground">
+                      {language === 'de' ? 'Gesamt' : 'Total'}
+                    </span>
+                    <span className="font-bold text-lg text-primary">{totalPrice}€</span>
+                  </div>
+                </div>
+              )}
+              
               <Button 
                 variant={buttonVariant} 
                 size="cta" 
@@ -214,7 +255,10 @@ const OfferSection = () => {
                 onMouseEnter={ctaHoverProps.onMouseEnter}
                 onMouseLeave={ctaHoverProps.onMouseLeave}
               >
-                {ctaText}
+                {selectedAddOns.length > 0 
+                  ? `${language === 'de' ? 'Jetzt kaufen' : 'Buy now'} (${totalPrice}€)`
+                  : ctaText
+                }
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -225,6 +269,15 @@ const OfferSection = () => {
                 <CountdownTimer />
               </div>
             </div>
+          </div>
+          
+          {/* Add-Ons Section */}
+          <div className="mt-10 pt-10 border-t border-border">
+            <AddOnsSection 
+              selectedAddOns={selectedAddOns} 
+              onToggleAddOn={handleToggleAddOn}
+              showHeader={true}
+            />
           </div>
           
           {/* Bonus strip */}
