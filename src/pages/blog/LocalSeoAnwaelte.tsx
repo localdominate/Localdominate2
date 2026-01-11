@@ -5,6 +5,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
+import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LegalSpecialtySelector from "@/components/blog/LegalSpecialtySelector";
 import LawyerPortalsTable from "@/components/blog/LawyerPortalsTable";
@@ -680,6 +681,8 @@ const LocalSeoAnwaelte = () => {
           ))}
         </Accordion>
       </section>
+
+      <IndustryLandingCTA industry="anwalt" />
 
       {/* Fazit */}
       <section className="mb-12 p-6 bg-muted rounded-lg">
