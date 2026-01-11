@@ -1,13 +1,18 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const LokaleEventsMarketing = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("lokale-events-marketing", language)!;
+
   const tocItems = [
     { id: "warum-events", title: "Warum lokale Events für SEO?" },
     { id: "sponsoring", title: "Event-Sponsoring strategisch nutzen" },
@@ -26,13 +31,7 @@ const LokaleEventsMarketing = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Lokale Events für SEO nutzen: Sponsoring, Partnerschaften & Community-Building"
-      description="So nutzen Sie lokale Veranstaltungen, Sponsoring und Community-Events für bessere lokale Rankings und mehr Sichtbarkeit in Ihrer Region."
-      canonicalUrl="/blog/lokale-events-marketing"
-      publishDate="2026-02-10"
-      readingTime={14}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -41,7 +40,7 @@ const LokaleEventsMarketing = () => {
         caption="Lokale Events schaffen echte Verbindungen und wertvolle SEO-Signale"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="warum-events">
         <h2>Warum lokale Events für SEO wichtig sind</h2>

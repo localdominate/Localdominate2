@@ -1,14 +1,19 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoPhysiotherapie = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("local-seo-physiotherapie", language)!;
+
   const tocItems = [
     { id: "warum-local-seo", title: "Warum Local SEO für Therapeuten?" },
     { id: "google-business", title: "Google Business Profil optimieren" },
@@ -27,13 +32,7 @@ const LocalSeoPhysiotherapie = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Local SEO für Physiotherapie & Heilpraktiker: Mehr Patienten gewinnen"
-      description="Der komplette Guide für Physiotherapeuten und Heilpraktiker: So werden Sie bei Google Maps gefunden und gewinnen mehr lokale Patienten."
-      canonicalUrl="/blog/local-seo-physiotherapie"
-      publishDate="2026-02-01"
-      readingTime={16}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -42,7 +41,7 @@ const LocalSeoPhysiotherapie = () => {
         caption="Lokale Sichtbarkeit ist entscheidend für Therapeuten und Heilpraktiker"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="warum-local-seo">
         <h2>Warum Local SEO für Physiotherapeuten unverzichtbar ist</h2>

@@ -1,14 +1,19 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoZahnarzt = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("local-seo-zahnarzt", language)!;
+
   const tocItems = [
     { id: "patientensuche", title: "Wie Patienten Zahnärzte suchen" },
     { id: "google-business", title: "Google Business für Zahnarztpraxen" },
@@ -27,13 +32,7 @@ const LocalSeoZahnarzt = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Local SEO für Zahnärzte: Mehr Patienten für Ihre Praxis"
-      description="Der komplette Local-SEO-Guide für Zahnarztpraxen. So werden Sie bei Google gefunden und gewinnen mehr Neupatienten in Ihrer Region."
-      canonicalUrl="/blog/local-seo-zahnarzt"
-      publishDate="2026-02-08"
-      readingTime={17}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -42,7 +41,7 @@ const LocalSeoZahnarzt = () => {
         caption="Lokale Sichtbarkeit entscheidet über den Erfolg einer Zahnarztpraxis"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="patientensuche">
         <h2>Wie Patienten Zahnärzte suchen</h2>

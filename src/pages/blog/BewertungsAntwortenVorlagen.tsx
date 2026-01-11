@@ -1,14 +1,19 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const BewertungsAntwortenVorlagen = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("bewertungs-antworten-vorlagen", language)!;
+
   const tocItems = [
     { id: "warum-antworten", title: "Warum auf Bewertungen antworten?" },
     { id: "positive-bewertungen", title: "Antworten auf positive Bewertungen" },
@@ -27,13 +32,7 @@ const BewertungsAntwortenVorlagen = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Bewertungs-Antworten: 50 Vorlagen für jede Situation"
-      description="Professionelle Antwort-Vorlagen für Google-Bewertungen. Positive, negative und neutrale Reviews souverän beantworten – mit Beispielen für jede Branche."
-      canonicalUrl="/blog/bewertungs-antworten-vorlagen"
-      publishDate="2026-02-16"
-      readingTime={18}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -42,7 +41,7 @@ const BewertungsAntwortenVorlagen = () => {
         caption="Professionelle Antworten auf Bewertungen stärken Ihr lokales Image"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="warum-antworten">
         <h2>Warum auf Bewertungen antworten?</h2>

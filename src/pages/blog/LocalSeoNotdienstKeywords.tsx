@@ -1,13 +1,18 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const LocalSeoNotdienstKeywords = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("local-seo-notdienst-keywords", language)!;
+
   const tocItems = [
     { id: "notdienst-suchen", title: "So suchen Menschen im Notfall" },
     { id: "keyword-typen", title: "Notdienst-Keyword-Typen" },
@@ -26,13 +31,7 @@ const LocalSeoNotdienstKeywords = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Notdienst-Keywords: Wenn Kunden dringend suchen"
-      description="So optimieren Sie für Notfall-Suchanfragen und werden gefunden, wenn Kunden Sie am dringendsten brauchen. Strategien für Handwerker, Ärzte und Dienstleister."
-      canonicalUrl="/blog/local-seo-notdienst-keywords"
-      publishDate="2026-02-03"
-      readingTime={14}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -41,7 +40,7 @@ const LocalSeoNotdienstKeywords = () => {
         caption="Notfall-Suchen passieren oft nachts oder am Wochenende – seien Sie sichtbar"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="notdienst-suchen">
         <h2>So suchen Menschen im Notfall</h2>

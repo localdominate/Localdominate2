@@ -1,13 +1,18 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
-import { TableOfContents } from "@/components/blog/TableOfContents";
+import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
-import { AutoLexikonText } from "@/components/blog/AutoLexikonText";
+import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import { getArticleBySlug } from "@/data/blogArticles";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const GoogleBusinessInsightsVerstehen = () => {
+  const { language } = useLanguage();
+  const article = getArticleBySlug("google-business-insights-verstehen", language)!;
+
   const tocItems = [
     { id: "ueberblick", title: "Insights-Übersicht" },
     { id: "suchanfragen", title: "Suchanfragen verstehen" },
@@ -26,13 +31,7 @@ const GoogleBusinessInsightsVerstehen = () => {
   ];
 
   return (
-    <ArticleLayout
-      title="Google Business Insights richtig verstehen und nutzen"
-      description="So interpretieren Sie die Statistiken in Google Business Profile. Lernen Sie, welche Metriken wichtig sind und wie Sie Insights für bessere Ergebnisse nutzen."
-      canonicalUrl="/blog/google-business-insights-verstehen"
-      publishDate="2026-02-20"
-      readingTime={14}
-    >
+    <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
@@ -41,7 +40,7 @@ const GoogleBusinessInsightsVerstehen = () => {
         caption="Insights liefern wertvolle Daten über Ihre lokale Performance"
       />
 
-      <KeyTakeawaysBox takeaways={keyTakeaways} />
+      <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="ueberblick">
         <h2>Google Business Insights: Der Überblick</h2>
