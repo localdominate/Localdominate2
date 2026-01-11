@@ -1,13 +1,23 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Utensils, ArrowRight, Hotel, BookOpen } from "lucide-react";
+import { Utensils, ArrowRight, Hotel, BookOpen, Wrench, Stethoscope, Scale } from "lucide-react";
 import { CookieSettingsButton } from "@/components/CookieBanner";
 
 const Footer = () => {
   const { t } = useLanguage();
   const location = useLocation();
   const currentPath = location.pathname;
+
+  const footerLinks = [
+    { path: '/blog', label: '📚 Blog', icon: null, isExternal: false },
+    { path: '/seo-lexikon', label: 'SEO Lexikon A-Z', icon: BookOpen, isExternal: false },
+    { path: '/restaurant-marketing', label: 'Restaurant-Marketing', icon: Utensils, isExternal: false },
+    { path: '/handwerker-marketing', label: 'Handwerker-Marketing', icon: Wrench, isExternal: false },
+    { path: '/arztpraxis-marketing', label: 'Arztpraxis-Marketing', icon: Stethoscope, isExternal: false },
+    { path: '/anwalt-marketing', label: 'Anwalt-Marketing', icon: Scale, isExternal: false },
+    { path: 'https://www.aureliangrand.com', label: 'Hotel-Website Inspiration', icon: Hotel, isExternal: true },
+  ];
 
   return (
     <footer className="bg-pain py-12 px-4">
@@ -19,65 +29,47 @@ const Footer = () => {
           </Link>
         </div>
         {/* Links */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          <Link to="/blog">
-            <Button
-              variant="outline"
-              size="lg"
-              className={`border-primary/50 transition-all ${
-                currentPath.startsWith('/blog') 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'text-primary hover:bg-primary hover:text-primary-foreground'
-              }`}
-            >
-              📚 Blog
-            </Button>
-          </Link>
-          <Link to="/seo-lexikon">
-            <Button
-              variant="outline"
-              size="lg"
-              className={`border-primary/50 transition-all group ${
-                currentPath === '/seo-lexikon'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-primary hover:bg-primary hover:text-primary-foreground'
-              }`}
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              SEO Lexikon A-Z
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-          <Link to="/restaurant-marketing">
-            <Button
-              variant="outline"
-              size="lg"
-              className={`border-primary/50 transition-all group ${
-                currentPath === '/restaurant-marketing'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-primary hover:bg-primary hover:text-primary-foreground'
-              }`}
-            >
-              <Utensils className="w-5 h-5 mr-2" />
-              Restaurant-Marketing
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-          <a 
-            href="https://www.aureliangrand.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary/50 transition-all group text-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <Hotel className="w-5 h-5 mr-2" />
-              Hotel-Website Inspiration
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </a>
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {footerLinks.map((link) => {
+            const isActive = link.path === currentPath || 
+              (link.path === '/blog' && currentPath.startsWith('/blog'));
+            const Icon = link.icon;
+            
+            const buttonContent = (
+              <Button
+                variant="outline"
+                size="lg"
+                className={`border-primary/50 transition-all group ${
+                  isActive
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-primary hover:bg-primary hover:text-primary-foreground'
+                }`}
+              >
+                {Icon && <Icon className="w-5 h-5 mr-2" />}
+                {link.label}
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            );
+
+            if (link.isExternal) {
+              return (
+                <a
+                  key={link.path}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {buttonContent}
+                </a>
+              );
+            }
+
+            return (
+              <Link key={link.path} to={link.path}>
+                {buttonContent}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Legal Links - touch-friendly spacing */}
