@@ -68,6 +68,11 @@ import LocalSeoBasel from "./pages/blog/LocalSeoBasel";
 import LocalSeoYoga from "./pages/blog/LocalSeoYoga";
 import LocalSeoTattoo from "./pages/blog/LocalSeoTattoo";
 import LocalSeoApotheke from "./pages/blog/LocalSeoApotheke";
+import GbpFotosOptimieren from "./pages/blog/GbpFotosOptimieren";
+import LocalSeoMehrstufigUnternehmen from "./pages/blog/LocalSeoMehrstufigUnternehmen";
+import EEATLokaleUnternehmen from "./pages/blog/EEATLokaleUnternehmen";
+import LocalSeoNeugruender from "./pages/blog/LocalSeoNeugruender";
+import GoogleBusinessMessaging from "./pages/blog/GoogleBusinessMessaging";
 import ContentPlanDashboard from "./pages/ContentPlanDashboard";
 import MeineKunden from "./pages/MeineKunden";
 import SeoLexikon from "./pages/SeoLexikon";
@@ -154,6 +159,11 @@ const App = () => (
               <Route path="/blog/local-seo-yoga-studios" element={<LocalSeoYoga />} />
               <Route path="/blog/local-seo-tattoo-studios" element={<LocalSeoTattoo />} />
               <Route path="/blog/local-seo-apotheken" element={<LocalSeoApotheke />} />
+              <Route path="/blog/gbp-fotos-optimieren" element={<GbpFotosOptimieren />} />
+              <Route path="/blog/local-seo-mehrstufig-unternehmen" element={<LocalSeoMehrstufigUnternehmen />} />
+              <Route path="/blog/e-e-a-t-lokale-unternehmen" element={<EEATLokaleUnternehmen />} />
+              <Route path="/blog/lokale-seo-fuer-neugruender" element={<LocalSeoNeugruender />} />
+              <Route path="/blog/google-business-messaging" element={<GoogleBusinessMessaging />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
