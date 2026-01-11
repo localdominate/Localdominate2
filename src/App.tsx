@@ -8,6 +8,7 @@ import { ABTestProvider } from "@/hooks/useABTest";
 import CoreWebVitalsTracker from "@/components/CoreWebVitalsTracker";
 import Index from "./pages/Index";
 import RestaurantMarketing from "./pages/RestaurantMarketing";
+import HandwerkerMarketing from "./pages/HandwerkerMarketing";
 import Danke from "./pages/Danke";
 import Onboarding from "./pages/Onboarding";
 import Impressum from "./pages/Impressum";
@@ -93,6 +94,7 @@ const App = () => (
               <Route path="/admin/reset-password" element={<ResetPassword />} />
               <Route path="/admin/update-password" element={<UpdatePassword />} />
               <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
+              <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
               <Route path="/danke" element={<Danke />} />
               <Route path="/onboarding" element={<Onboarding />} />
               <Route path="/impressum" element={<Impressum />} />
