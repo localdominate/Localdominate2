@@ -106,7 +106,7 @@ const Impressum = () => {
         description={seo.description}
         noindex={true}
         lang={language}
-        canonicalUrl={`https://localdominator.de/impressum`}
+        canonicalUrl={`https://localdominate.org/impressum`}
       />
       <main className="min-h-screen bg-background py-12 px-4">
         <div className="container max-w-3xl">
@@ -129,8 +129,8 @@ const Impressum = () => {
               <div className="mb-4">
                 <h3 className="font-semibold mb-2">{t.contact}</h3>
                 <p className="text-muted-foreground">
-                  E-Mail: <a href="mailto:info@localdominator.de" className="text-primary hover:underline">info@localdominator.de</a><br />
-                  Website: <a href="https://localdominator.de" className="text-primary hover:underline">https://localdominator.de</a>
+                E-Mail: <a href="mailto:info@localdominate.org" className="text-primary hover:underline">info@localdominate.org</a><br />
+                Website: <a href="https://localdominate.org" className="text-primary hover:underline">https://localdominate.org</a>
                 </p>
               </div>
 
@@ -217,7 +217,7 @@ const Impressum = () => {
               <h2 className="text-xl font-semibold text-foreground mb-3">{t.legalContact}</h2>
               <p className="text-muted-foreground mb-2">{t.legalContactText}</p>
               <p className="text-muted-foreground">
-                <a href="mailto:legal@localdominator.de" className="text-primary hover:underline">legal@localdominator.de</a>
+                <a href="mailto:legal@localdominate.org" className="text-primary hover:underline">legal@localdominate.org</a>
               </p>
             </div>
           </div>

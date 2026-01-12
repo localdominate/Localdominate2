@@ -126,7 +126,7 @@ const RestaurantMarketing = () => {
       <SEOHead
         title="Restaurant Marketing Pro – Mehr Gäste durch digitale Präsenz"
         description="Professionelles Online-Marketing für Restaurants. Website, Google Maps Optimierung und digitale Präsenz zum Festpreis ab 49€/Monat."
-        canonicalUrl="https://localdominator.de/restaurant-marketing"
+        canonicalUrl="https://localdominate.org/restaurant-marketing"
         keywords="Restaurant Marketing, Gastronomie Marketing, Restaurant Website, Google Maps Restaurant, Online Reservierung, Restaurant SEO"
         lang={language}
         jsonLd={restaurantJsonLd}

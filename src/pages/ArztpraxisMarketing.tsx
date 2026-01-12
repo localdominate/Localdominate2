@@ -233,7 +233,7 @@ const ArztpraxisMarketing = () => {
       <SEOHead
         title="Praxis Pro – Mehr Patienten durch Google Maps & Jameda"
         description="Professionelles Local SEO für Arztpraxen. DSGVO-konform, YMYL-optimiert. Von Jameda Seite 3 auf Platz 1 – in nur 4 Wochen."
-        canonicalUrl="https://localdominator.de/arztpraxis-marketing"
+        canonicalUrl="https://localdominate.org/arztpraxis-marketing"
         keywords="Arzt Marketing, Praxis SEO, Jameda Optimierung, Patientengewinnung, Arztpraxis Google, Arzt Bewertungen"
         lang={language}
         jsonLd={arztpraxisJsonLd}
