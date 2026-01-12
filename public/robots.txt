@@ -50,6 +50,9 @@ Crawl-delay: 10
 User-agent: GPTBot
 Allow: /blog/
 Allow: /seo-lexikon/
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /.well-known/ai.txt
 Disallow: /admin/
 
 User-agent: ChatGPT-User
@@ -63,6 +66,13 @@ Allow: /
 
 User-agent: Google-Extended
 Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /blog/
+Allow: /seo-lexikon/
 
 # Alle anderen Crawler
 User-agent: *

@@ -190,10 +190,25 @@ const ArticleLayout = ({
       "name": article.category
     },
     "keywords": article.keywords.join(", "),
+    // Enhanced Speakable Schema for Voice Search and AI extraction
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", "h2", ".article-intro", "meta[name='description']"]
+      "cssSelector": [
+        "h1", 
+        ".key-takeaways",
+        ".article-intro",
+        "[data-speakable='true']"
+      ],
+      "xpath": [
+        "/html/head/meta[@name='description']/@content"
+      ]
     },
+    // AI/LLM Citation Properties
+    "usageInfo": "https://localdominator.de/llms.txt",
+    "creditText": "Quelle: Local Dominator (localdominator.de)",
+    "copyrightNotice": "© Local Dominator - Zitieren mit Quellenangabe erlaubt",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "acquireLicensePage": "https://localdominator.de/llms.txt",
     "citation": article.keywords.slice(0, 3).map(keyword => ({
       "@type": "CreativeWork",
       "name": keyword

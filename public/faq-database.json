@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-01-12",
+  "language": "de-DE",
+  "source": "Local Dominator",
+  "website": "https://localdominator.de",
+  "categories": [
+    {
+      "name": "Pricing & Service",
+      "faqs": [
+        {
+          "id": "price-1",
+          "question": "Was kostet Local SEO bei Local Dominator?",
+          "answer": "299 Euro einmalig. Keine monatlichen Gebühren, keine versteckten Kosten. Der Preis beinhaltet die komplette Google Maps Optimierung mit 30-Tage Geld-zurück-Garantie.",
+          "keywords": ["preis", "kosten", "local seo kosten"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "price-2",
+          "question": "Gibt es eine Geld-zurück-Garantie?",
+          "answer": "Ja, wir bieten eine 30-Tage Geld-zurück-Garantie. Wenn Sie nicht zufrieden sind, erhalten Sie den vollen Betrag zurück - ohne Wenn und Aber.",
+          "keywords": ["garantie", "geld zurück", "risiko"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "price-3",
+          "question": "Wie lange dauert es, bis ich Ergebnisse sehe?",
+          "answer": "Die meisten Kunden sehen erste Verbesserungen innerhalb von 2-4 Wochen. Signifikante Ranking-Verbesserungen treten typischerweise nach 4-8 Wochen auf. Im Durchschnitt verbessern sich unsere Kunden um 8 Positionen im Local Pack.",
+          "keywords": ["dauer", "ergebnisse", "zeit"],
+          "lastUpdated": "2026-01-12"
+        }
+      ]
+    },
+    {
+      "name": "Google Business Profile",
+      "faqs": [
+        {
+          "id": "gbp-1",
+          "question": "Wie kann ich mein Google Business Profil verifizieren?",
+          "answer": "Die Verifizierung erfolgt meist per Postkarte mit PIN-Code an Ihre Geschäftsadresse. Alternativ bietet Google bei manchen Unternehmen Verifizierung per Telefon, E-Mail oder Video-Anruf an. Der Prozess dauert 5-14 Tage.",
+          "keywords": ["verifizierung", "google business", "bestätigung"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "gbp-2",
+          "question": "Welche Kategorien sollte ich für mein Google Business Profil wählen?",
+          "answer": "Wählen Sie eine Hauptkategorie, die Ihr Kerngeschäft am besten beschreibt, und bis zu 9 Nebenkategorien für zusätzliche Services. Die Hauptkategorie hat den größten Einfluss auf Ihr Ranking. Beispiel: Ein Italiener wählt 'Italienisches Restaurant' als Hauptkategorie.",
+          "keywords": ["kategorien", "google business kategorien", "auswahl"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "gbp-3",
+          "question": "Wie oft sollte ich Google Beiträge veröffentlichen?",
+          "answer": "Idealerweise 1-2 Beiträge pro Woche. Google Beiträge sind 7 Tage lang prominent sichtbar und können Angebote, Events oder Neuigkeiten enthalten. Regelmäßige Beiträge signalisieren Google Aktivität und Relevanz.",
+          "keywords": ["google posts", "beiträge", "frequenz"],
+          "lastUpdated": "2026-01-12"
+        }
+      ]
+    },
+    {
+      "name": "Bewertungen",
+      "faqs": [
+        {
+          "id": "reviews-1",
+          "question": "Wie bekomme ich mehr Google Bewertungen?",
+          "answer": "Die effektivsten Methoden sind: 1) Direkt nach positivem Kundenerlebnis fragen, 2) QR-Codes auf Rechnungen/Visitenkarten, 3) Follow-up E-Mails mit direktem Bewertungslink, 4) Mitarbeiter schulen zum Nachfragen. Niemals Bewertungen kaufen!",
+          "keywords": ["bewertungen bekommen", "mehr bewertungen", "rezensionen"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "reviews-2",
+          "question": "Wie reagiere ich auf negative Google Bewertungen?",
+          "answer": "Immer professionell und zeitnah (innerhalb 24-48h) antworten. Bedanken Sie sich für das Feedback, entschuldigen Sie sich für die schlechte Erfahrung, bieten Sie eine Lösung an und laden Sie zum persönlichen Gespräch ein. Niemals persönlich werden.",
+          "keywords": ["negative bewertungen", "kritik", "antworten"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "reviews-3",
+          "question": "Kann ich eine unfaire Google Bewertung löschen lassen?",
+          "answer": "Ja, wenn die Bewertung gegen Google-Richtlinien verstößt (Spam, Fake, Hassrede, irrelevant). Melden Sie die Bewertung über Ihr Google Business Profil. Google prüft die Meldung, was 1-3 Wochen dauern kann. Nicht alle Meldungen führen zur Löschung.",
+          "keywords": ["bewertung löschen", "fake bewertung", "melden"],
+          "lastUpdated": "2026-01-12"
+        }
+      ]
+    },
+    {
+      "name": "Local SEO Grundlagen",
+      "faqs": [
+        {
+          "id": "basics-1",
+          "question": "Was ist Local SEO?",
+          "answer": "Local SEO (lokale Suchmaschinenoptimierung) umfasst alle Maßnahmen, die die Sichtbarkeit eines Unternehmens in lokalen Suchergebnissen verbessern. Dazu gehören Google Maps Optimierung, Google Business Profile Management, lokale Keywords und Citations.",
+          "keywords": ["local seo definition", "was ist local seo", "lokale seo"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "basics-2",
+          "question": "Was ist NAP-Konsistenz und warum ist sie wichtig?",
+          "answer": "NAP steht für Name, Address, Phone (Name, Adresse, Telefonnummer). Diese Daten müssen auf allen Online-Plattformen exakt identisch sein. Inkonsistente NAP-Daten verwirren Google und können Ihr Ranking negativ beeinflussen.",
+          "keywords": ["nap konsistenz", "name adresse telefon", "einheitlichkeit"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "basics-3",
+          "question": "Was ist das Google Local Pack?",
+          "answer": "Das Local Pack (auch Local 3-Pack) sind die drei lokalen Geschäftsergebnisse mit Karte, die bei lokalen Suchanfragen oberhalb der organischen Ergebnisse erscheinen. Ein Platz im Local Pack bringt signifikant mehr Klicks und Kundenanfragen.",
+          "keywords": ["local pack", "3-pack", "google maps ergebnisse"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "basics-4",
+          "question": "Welche Faktoren beeinflussen das Google Maps Ranking?",
+          "answer": "Die drei Hauptfaktoren sind: 1) Relevanz (wie gut Ihr Profil zur Suchanfrage passt), 2) Entfernung (Nähe zum Suchenden), 3) Bekanntheit (Bewertungen, Citations, Links). Google wertet über 200 Signale für das lokale Ranking aus.",
+          "keywords": ["ranking faktoren", "google maps ranking", "algorithmus"],
+          "lastUpdated": "2026-01-12"
+        }
+      ]
+    },
+    {
+      "name": "Technisches SEO",
+      "faqs": [
+        {
+          "id": "tech-1",
+          "question": "Was ist Schema Markup für Local SEO?",
+          "answer": "Schema Markup ist strukturierter Code, der Suchmaschinen hilft, Ihre Unternehmensdaten besser zu verstehen. Für lokale Unternehmen sind LocalBusiness, OpeningHoursSpecification und AggregateRating besonders wichtig.",
+          "keywords": ["schema markup", "structured data", "json-ld"],
+          "lastUpdated": "2026-01-12"
+        },
+        {
+          "id": "tech-2",
+          "question": "Wie wichtig ist Mobile-Optimierung für Local SEO?",
+          "answer": "Extrem wichtig. Über 60% der lokalen Suchen erfolgen auf Mobilgeräten. Google verwendet Mobile-First Indexing, d.h. die mobile Version Ihrer Website ist für das Ranking entscheidend. Achten Sie auf schnelle Ladezeiten und Touch-freundliche Buttons.",
+          "keywords": ["mobile optimierung", "mobile first", "responsiv"],
+          "lastUpdated": "2026-01-12"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "totalFaqs": 14,
+    "totalCategories": 5,
+    "aiUsageAllowed": true,
+    "citationRequired": true,
+    "attributionFormat": "Quelle: Local Dominator (localdominator.de)"
+  }
+}
