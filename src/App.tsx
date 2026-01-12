@@ -99,6 +99,19 @@ const LocalSeoFotograf = lazy(() => import("./pages/blog/LocalSeoFotograf"));
 const LocalSeoVoiceSearch = lazy(() => import("./pages/blog/LocalSeoVoiceSearch"));
 const GooglePostsRankingFaktor = lazy(() => import("./pages/blog/GooglePostsRankingFaktor"));
 
+// Troubleshooting & neue Artikel
+const GbpSuspendiertReaktivieren = lazy(() => import("./pages/blog/GbpSuspendiertReaktivieren"));
+const GbpVerifizierungFehlgeschlagen = lazy(() => import("./pages/blog/GbpVerifizierungFehlgeschlagen"));
+const DuplicateListingEntfernen = lazy(() => import("./pages/blog/DuplicateListingEntfernen"));
+const GbpBewertungLoeschenAnleitung = lazy(() => import("./pages/blog/GbpBewertungLoeschenAnleitung"));
+const RankingPloetzlichVerschwunden = lazy(() => import("./pages/blog/RankingPloetzlichVerschwunden"));
+const GbpNichtInSucheSichtbar = lazy(() => import("./pages/blog/GbpNichtInSucheSichtbar"));
+const GbpMehrereStandorte = lazy(() => import("./pages/blog/GbpMehrereStandorte"));
+const GbpOeffnungszeitenSondertage = lazy(() => import("./pages/blog/GbpOeffnungszeitenSondertage"));
+const GbpAttributeRichtigNutzen = lazy(() => import("./pages/blog/GbpAttributeRichtigNutzen"));
+const LocalSeoVsMaps = lazy(() => import("./pages/blog/LocalSeoVsMaps"));
+const LocalCitations2025 = lazy(() => import("./pages/blog/LocalCitations2025"));
+
 // Lazy load CoreWebVitalsTracker - not needed for initial render
 const CoreWebVitalsTracker = lazy(() => import("@/components/CoreWebVitalsTracker"));
 
@@ -209,6 +222,17 @@ const App = () => (
                 <Route path="/blog/local-seo-fotograf" element={<LocalSeoFotograf />} />
                 <Route path="/blog/local-seo-voice-search" element={<LocalSeoVoiceSearch />} />
                 <Route path="/blog/google-posts-ranking-faktor" element={<GooglePostsRankingFaktor />} />
+                <Route path="/blog/gbp-suspendiert-reaktivieren" element={<GbpSuspendiertReaktivieren />} />
+                <Route path="/blog/gbp-verifizierung-fehlgeschlagen" element={<GbpVerifizierungFehlgeschlagen />} />
+                <Route path="/blog/duplicate-listing-entfernen" element={<DuplicateListingEntfernen />} />
+                <Route path="/blog/gbp-bewertung-loeschen-anleitung" element={<GbpBewertungLoeschenAnleitung />} />
+                <Route path="/blog/ranking-ploetzlich-verschwunden" element={<RankingPloetzlichVerschwunden />} />
+                <Route path="/blog/gbp-nicht-in-suche-sichtbar" element={<GbpNichtInSucheSichtbar />} />
+                <Route path="/blog/gbp-mehrere-standorte" element={<GbpMehrereStandorte />} />
+                <Route path="/blog/gbp-oeffnungszeiten-sondertage" element={<GbpOeffnungszeitenSondertage />} />
+                <Route path="/blog/gbp-attribute-richtig-nutzen" element={<GbpAttributeRichtigNutzen />} />
+                <Route path="/blog/local-seo-vs-maps-seo" element={<LocalSeoVsMaps />} />
+                <Route path="/blog/local-citations-2025" element={<LocalCitations2025 />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
