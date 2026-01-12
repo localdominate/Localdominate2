@@ -30,6 +30,7 @@ const ContentPlanDashboard = lazy(() => import("./pages/ContentPlanDashboard"));
 const MeineKunden = lazy(() => import("./pages/MeineKunden"));
 const SeoLexikon = lazy(() => import("./pages/SeoLexikon"));
 const ArticleFeedbackDashboard = lazy(() => import("./pages/ArticleFeedbackDashboard"));
+const BlogAnalytics = lazy(() => import("./pages/BlogAnalytics"));
 const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
 
@@ -144,6 +145,8 @@ const App = () => (
                 <Route path="/admin/content-plan" element={<ContentPlanDashboard />} />
                 <Route path="/admin/kunden" element={<MeineKunden />} />
                 <Route path="/admin/article-feedback" element={<ArticleFeedbackDashboard />} />
+                <Route path="/admin/blog-analytics" element={<BlogAnalytics />} />
+                <Route path="/admin/ab-test-zentrale" element={<ABTestZentrale />} />
                 <Route path="/admin/reset-password" element={<ResetPassword />} />
                 <Route path="/admin/update-password" element={<UpdatePassword />} />
                 <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />

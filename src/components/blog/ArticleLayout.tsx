@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Clock, Calendar } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -11,6 +11,8 @@ import ReadingProgress from "./ReadingProgress";
 import StickyTableOfContents from "./StickyTableOfContents";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
+import { getSessionId } from "@/lib/sessionManager";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -51,6 +53,31 @@ const ArticleLayout = ({
 }: ArticleLayoutProps) => {
   const { language } = useLanguage();
   const relatedArticles = getRelatedArticles(article.slug, 3, language);
+  const hasTrackedView = useRef(false);
+  
+  // Track article view
+  useEffect(() => {
+    if (hasTrackedView.current) return;
+    hasTrackedView.current = true;
+    
+    const sessionId = getSessionId();
+    const device = window.innerWidth < 768 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop';
+    
+    supabase.from('blog_article_views').insert({
+      article_slug: article.slug,
+      article_title: article.title,
+      session_id: sessionId,
+      page_path: window.location.pathname,
+      referrer: document.referrer || null,
+      device
+    }).then(({ error }) => {
+      if (error) {
+        console.error('[ArticleView] Error tracking view:', error);
+      } else {
+        console.log(`[ArticleView] Tracked view for: ${article.slug}`);
+      }
+    });
+  }, [article.slug, article.title]);
   
   // Dynamic OG Image based on article slug
   const getOgImage = (slug: string): string => {

@@ -476,6 +476,39 @@ export type Database = {
         }
         Relationships: []
       }
+      blog_article_views: {
+        Row: {
+          article_slug: string
+          article_title: string | null
+          created_at: string
+          device: string | null
+          id: string
+          page_path: string | null
+          referrer: string | null
+          session_id: string | null
+        }
+        Insert: {
+          article_slug: string
+          article_title?: string | null
+          created_at?: string
+          device?: string | null
+          id?: string
+          page_path?: string | null
+          referrer?: string | null
+          session_id?: string | null
+        }
+        Update: {
+          article_slug?: string
+          article_title?: string | null
+          created_at?: string
+          device?: string | null
+          id?: string
+          page_path?: string | null
+          referrer?: string | null
+          session_id?: string | null
+        }
+        Relationships: []
+      }
       customers: {
         Row: {
           address: string | null
@@ -851,7 +884,20 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      blog_article_stats: {
+        Row: {
+          article_slug: string | null
+          article_title: string | null
+          first_view: string | null
+          last_view: string | null
+          total_views: number | null
+          unique_visitors: number | null
+          views_month: number | null
+          views_today: number | null
+          views_week: number | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       has_role: {
