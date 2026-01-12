@@ -6,6 +6,8 @@ import AutoLexikonText from '../../components/blog/AutoLexikonText';
 import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
+import BlogImage from '../../components/blog/BlogImage';
+import gbpBewertungLoeschenImage from '../../assets/blog/gbp-bewertung-loeschen.jpg';
 
 const GbpBewertungLoeschenAnleitung: React.FC = () => {
   const articleData = {
