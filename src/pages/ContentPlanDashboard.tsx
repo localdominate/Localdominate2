@@ -28,6 +28,7 @@ import { CustomerTable } from "@/components/admin/CustomerTable";
 import { AnalyticsOverview } from "@/components/admin/AnalyticsOverview";
 import { EmailTestPanel } from "@/components/admin/EmailTestPanel";
 import { ScheduledPostsPanel } from "@/components/admin/ScheduledPostsPanel";
+import { useScheduledPosts } from "@/hooks/useScheduledPosts";
 import { format, parseISO, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths, isAfter, isBefore, isToday } from "date-fns";
 import { de } from "date-fns/locale";
 
@@ -88,6 +89,9 @@ const ContentPlanDashboard = () => {
   const { language } = useLanguage();
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  
+  // Fetch actual scheduled posts from database
+  const { data: scheduledPosts } = useScheduledPosts();
 
   const articles: ArticleWithStatus[] = useMemo(() => {
     return blogArticles.map(article => {
@@ -106,13 +110,22 @@ const ContentPlanDashboard = () => {
     });
   }, [language]);
 
+  // Calculate stats using actual database data for scheduled posts
   const stats = useMemo(() => {
     const total = articles.length;
     const published = articles.filter(a => a.status === "published").length;
-    const scheduled = articles.filter(a => a.status === "scheduled").length;
+    // Use actual scheduled posts count from database
+    const scheduledFromDb = scheduledPosts?.filter(p => p.status === 'scheduled').length || 0;
+    const publishedFromDb = scheduledPosts?.filter(p => p.status === 'published').length || 0;
     const draft = articles.filter(a => a.status === "draft").length;
-    return { total, published, scheduled, draft };
-  }, [articles]);
+    
+    return { 
+      total, 
+      published: published + publishedFromDb,
+      scheduled: scheduledFromDb,
+      draft 
+    };
+  }, [articles, scheduledPosts]);
 
   const calendarDays = useMemo(() => {
     const start = startOfMonth(currentMonth);

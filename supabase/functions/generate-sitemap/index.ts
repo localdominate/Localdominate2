@@ -14,8 +14,15 @@ interface BlogArticle {
   hasImage: boolean;
 }
 
+interface ScheduledPost {
+  slug: string;
+  title: string;
+  scheduled_at: string;
+  status: string;
+}
+
 // Complete blog articles list - synchronized with src/data/blogArticles.ts
-const blogArticles: BlogArticle[] = [
+const staticBlogArticles: BlogArticle[] = [
   // Featured Articles
   { slug: "kostenloses-seo-guide", title: "Kostenloses SEO: Der ultimative Guide für Einsteiger 2026", updatedAt: "2026-01-09", featured: true, category: "Strategie", hasImage: true },
   { slug: "local-seo-keywords-finden", title: "Local SEO Keywords finden: Der komplette Keyword-Recherche Guide", updatedAt: "2026-01-07", featured: true, category: "Strategie", hasImage: true },
@@ -41,20 +48,35 @@ const blogArticles: BlogArticle[] = [
   { slug: "google-business-messaging", title: "Google Business Messaging einrichten", updatedAt: "2026-01-11", featured: false, category: "Google Business", hasImage: false },
   { slug: "gbp-fotos-optimieren", title: "Google Business Fotos optimieren", updatedAt: "2026-01-11", featured: false, category: "Google Business", hasImage: false },
   { slug: "e-e-a-t-lokale-unternehmen", title: "E-E-A-T für lokale Unternehmen", updatedAt: "2026-01-11", featured: false, category: "Strategie", hasImage: false },
-  { slug: "local-seo-mehrstufig-unternehmen", title: "Local SEO für mehrstufige Unternehmen", updatedAt: "2026-01-11", featured: false, category: "Strategie", hasImage: false },
-  { slug: "local-seo-neugruender", title: "Local SEO für Neugründer", updatedAt: "2026-01-11", featured: false, category: "Strategie", hasImage: false },
+  { slug: "local-seo-mehrstufig-unternehmen", title: "Local SEO für mehrstufige Unternehmen", updatedAt: "2026-01-11", featured: false, category: "Strategie", hasImage: true },
+  { slug: "local-seo-neugruender", title: "Local SEO für Neugründer", updatedAt: "2026-01-11", featured: false, category: "Strategie", hasImage: true },
   
   // Regular Articles - NAP & Technical
   { slug: "nap-konsistenz-local-seo", title: "NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten", updatedAt: "2026-01-07", featured: false, category: "Local SEO", hasImage: true },
-  { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO", updatedAt: "2026-01-09", featured: false, category: "Technical SEO", hasImage: false },
+  { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO", updatedAt: "2026-01-09", featured: false, category: "Technical SEO", hasImage: true },
   { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO", updatedAt: "2026-01-09", featured: false, category: "Technical SEO", hasImage: false },
   { slug: "mobile-local-seo", title: "Mobile Local SEO Optimierung", updatedAt: "2026-01-09", featured: false, category: "Technical SEO", hasImage: false },
-  { slug: "local-content-marketing", title: "Local Content Marketing Strategien", updatedAt: "2026-01-09", featured: false, category: "Strategie", hasImage: false },
-  { slug: "local-link-building", title: "Local Link Building Strategien", updatedAt: "2026-01-09", featured: false, category: "Strategie", hasImage: false },
+  { slug: "local-content-marketing", title: "Local Content Marketing Strategien", updatedAt: "2026-01-09", featured: false, category: "Strategie", hasImage: true },
+  { slug: "local-link-building", title: "Local Link Building Strategien", updatedAt: "2026-01-09", featured: false, category: "Strategie", hasImage: true },
   { slug: "local-seo-case-study", title: "Local SEO Case Study", updatedAt: "2026-01-09", featured: false, category: "Strategie", hasImage: false },
   { slug: "local-seo-fehler", title: "Die 10 häufigsten Local SEO Fehler", updatedAt: "2026-01-09", featured: false, category: "Strategie", hasImage: false },
   { slug: "local-seo-notdienst-keywords", title: "Notdienst-Keywords für Local SEO", updatedAt: "2026-01-11", featured: false, category: "Strategie", hasImage: true },
   { slug: "lokale-events-marketing", title: "Lokale Events für SEO nutzen", updatedAt: "2026-01-11", featured: false, category: "Strategie", hasImage: true },
+  { slug: "local-citations-2025", title: "Local Citations 2025: Der komplette Guide", updatedAt: "2026-01-12", featured: false, category: "Local SEO", hasImage: true },
+  
+  // GBP Troubleshooting Articles
+  { slug: "gbp-suspendiert-reaktivieren", title: "GBP suspendiert: Reaktivierung Schritt für Schritt", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: true },
+  { slug: "gbp-verifizierung-fehlgeschlagen", title: "GBP Verifizierung fehlgeschlagen: Lösungen", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: true },
+  { slug: "duplicate-listing-entfernen", title: "Duplicate Listings entfernen: Anleitung", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: true },
+  { slug: "ranking-ploetzlich-verschwunden", title: "Ranking plötzlich verschwunden: Soforthilfe", updatedAt: "2026-01-12", featured: false, category: "Local SEO", hasImage: true },
+  { slug: "gbp-nicht-in-suche-sichtbar", title: "GBP nicht in Suche sichtbar: Diagnose", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: true },
+  { slug: "local-seo-vs-maps-seo", title: "Local SEO vs Maps SEO: Die Unterschiede", updatedAt: "2026-01-12", featured: false, category: "Strategie", hasImage: true },
+  { slug: "gbp-bewertung-loeschen-anleitung", title: "GBP Bewertung löschen: Anleitung", updatedAt: "2026-01-12", featured: false, category: "Bewertungen", hasImage: true },
+  { slug: "gbp-mehrere-standorte", title: "GBP mehrere Standorte verwalten", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: true },
+  { slug: "gbp-oeffnungszeiten-sondertage", title: "GBP Öffnungszeiten & Sondertage", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: true },
+  { slug: "gbp-attribute-richtig-nutzen", title: "GBP Attribute richtig nutzen", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: true },
+  { slug: "google-posts-ranking-faktor", title: "Google Posts als Ranking-Faktor", updatedAt: "2026-01-12", featured: false, category: "Google Business", hasImage: false },
+  { slug: "local-seo-voice-search", title: "Local SEO für Voice Search", updatedAt: "2026-01-12", featured: false, category: "Trends", hasImage: false },
   
   // Regular Articles - Industries
   { slug: "local-seo-fuer-restaurants", title: "Local SEO für Restaurants: Mehr Gäste durch Google", updatedAt: "2026-01-07", featured: false, category: "Gastronomie", hasImage: true },
@@ -76,6 +98,7 @@ const blogArticles: BlogArticle[] = [
   { slug: "local-seo-tierarzt", title: "Local SEO für Tierärzte", updatedAt: "2026-01-11", featured: false, category: "Branchen", hasImage: true },
   { slug: "local-seo-yoga", title: "Local SEO für Yoga-Studios", updatedAt: "2026-01-11", featured: false, category: "Branchen", hasImage: true },
   { slug: "local-seo-apotheke", title: "Local SEO für Apotheken", updatedAt: "2026-01-11", featured: false, category: "Branchen", hasImage: true },
+  { slug: "local-seo-fotograf", title: "Local SEO für Fotografen", updatedAt: "2026-01-12", featured: false, category: "Branchen", hasImage: false },
   
   // Regular Articles - Regions
   { slug: "local-seo-hamburg", title: "Local SEO Hamburg", updatedAt: "2026-01-09", featured: false, category: "Regionen", hasImage: false },
@@ -101,7 +124,7 @@ const imageMap: Record<string, string> = {
   'kostenloses-seo-guide': 'seo-toolbox.jpg',
   'google-ai-overviews-local-seo': 'google-ai-overviews.jpg',
   'ki-tools-local-seo': 'ki-tools-local-seo.jpg',
-  // New articles
+  // Industry guides
   'local-seo-physiotherapie': 'local-seo-physiotherapie.jpg',
   'local-seo-zahnarzt': 'local-seo-zahnarzt.jpg',
   'local-seo-optiker': 'local-seo-optiker.jpg',
@@ -112,7 +135,7 @@ const imageMap: Record<string, string> = {
   'google-business-produkte-services': 'google-business-produkte.jpg',
   'bewertungs-antworten-vorlagen': 'bewertungs-antworten-vorlagen.jpg',
   'google-business-insights-verstehen': 'google-business-insights.jpg',
-  // City guides with images
+  // City guides
   'local-seo-koeln': 'local-seo-koeln.jpg',
   'local-seo-duesseldorf': 'local-seo-duesseldorf.jpg',
   'local-seo-stuttgart': 'local-seo-stuttgart.jpg',
@@ -123,6 +146,23 @@ const imageMap: Record<string, string> = {
   'local-seo-tierarzt': 'local-seo-tierarzt.jpg',
   'local-seo-yoga': 'local-seo-yoga.jpg',
   'local-seo-apotheke': 'local-seo-apotheke.jpg',
+  // Troubleshooting articles
+  'gbp-suspendiert-reaktivieren': 'gbp-suspendiert.jpg',
+  'gbp-verifizierung-fehlgeschlagen': 'gbp-verifizierung.jpg',
+  'duplicate-listing-entfernen': 'duplicate-listing.jpg',
+  'ranking-ploetzlich-verschwunden': 'ranking-verschwunden.jpg',
+  'gbp-nicht-in-suche-sichtbar': 'gbp-nicht-sichtbar.jpg',
+  'local-seo-vs-maps-seo': 'local-vs-maps-seo.jpg',
+  'gbp-bewertung-loeschen-anleitung': 'gbp-bewertung-loeschen.jpg',
+  'gbp-mehrere-standorte': 'gbp-mehrere-standorte.jpg',
+  'gbp-oeffnungszeiten-sondertage': 'gbp-oeffnungszeiten.jpg',
+  'gbp-attribute-richtig-nutzen': 'gbp-attribute.jpg',
+  'local-citations-2025': 'local-citations.jpg',
+  'schema-markup-local-seo': 'schema-markup-local.jpg',
+  'local-content-marketing': 'local-content-marketing.jpg',
+  'local-link-building': 'local-link-building.jpg',
+  'local-seo-mehrstufig-unternehmen': 'local-seo-mehrstufig.jpg',
+  'local-seo-neugruender': 'local-seo-neugruender.jpg',
 };
 
 // SEO Lexikon entries for sitemap
@@ -134,7 +174,44 @@ const lexikonEntries = [
   'local-search-ranking-factors'
 ];
 
-function generateBlogSitemap(): string {
+// Merge static articles with scheduled posts from database
+async function getAllBlogArticles(supabaseUrl: string, supabaseKey: string): Promise<BlogArticle[]> {
+  const allArticles = [...staticBlogArticles];
+  const existingSlugs = new Set(allArticles.map(a => a.slug));
+  
+  try {
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    // Fetch published posts from database
+    const { data: scheduledPosts, error } = await supabase
+      .from('scheduled_posts')
+      .select('slug, title, scheduled_at, status')
+      .eq('status', 'published');
+    
+    if (!error && scheduledPosts) {
+      for (const post of scheduledPosts as ScheduledPost[]) {
+        if (!existingSlugs.has(post.slug)) {
+          allArticles.push({
+            slug: post.slug,
+            title: post.title,
+            updatedAt: post.scheduled_at.split('T')[0],
+            featured: false,
+            category: 'Strategie',
+            hasImage: !!imageMap[post.slug]
+          });
+          existingSlugs.add(post.slug);
+        }
+      }
+    }
+    
+    console.log(`📚 [generate-sitemap] Merged ${allArticles.length} articles (${scheduledPosts?.length || 0} from DB)`);
+  } catch (e) {
+    console.error('[generate-sitemap] Error fetching scheduled posts:', e);
+  }
+  
+  return allArticles;
+}
+
+function generateBlogSitemap(blogArticles: BlogArticle[]): string {
   const baseUrl = 'https://localdominator.de';
   const today = new Date().toISOString().split('T')[0];
   
@@ -188,7 +265,7 @@ function generateBlogSitemap(): string {
   return xml;
 }
 
-function generateMainSitemap(): string {
+function generateMainSitemap(blogArticles: BlogArticle[]): string {
   const baseUrl = 'https://localdominator.de';
   const today = new Date().toISOString().split('T')[0];
 
@@ -315,7 +392,7 @@ function generateLexikonSitemap(): string {
   return xml;
 }
 
-function generateImageSitemap(): string {
+function generateImageSitemap(blogArticles: BlogArticle[]): string {
   const baseUrl = 'https://localdominator.de';
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -339,22 +416,7 @@ function generateImageSitemap(): string {
     }
   }
 
-  // Add other site images
-  xml += `  
-  <!-- Sonstige Bilder -->
-  <url>
-    <loc>${baseUrl}/</loc>
-    <image:image>
-      <image:loc>${baseUrl}/og-image.png</image:loc>
-      <image:title>LocalDominator - Local SEO Agentur</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>${baseUrl}/logo.png</image:loc>
-      <image:title>LocalDominator Logo</image:title>
-    </image:image>
-  </url>
-</urlset>`;
-
+  xml += `</urlset>`;
   return xml;
 }
 
@@ -383,11 +445,10 @@ function generateSitemapIndex(): string {
 </sitemapindex>`;
 }
 
-function generateRssFeed(): string {
+function generateRssFeed(blogArticles: BlogArticle[]): string {
   const baseUrl = 'https://localdominator.de';
   const now = new Date().toUTCString();
   
-  // Sort by date, newest first
   const sortedArticles = [...blogArticles].sort((a, b) => 
     new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
   );
@@ -395,7 +456,7 @@ function generateRssFeed(): string {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>LocalDominator Blog - Local SEO Wissen</title>
+    <title>LocalDominator - Local SEO Blog</title>
     <link>${baseUrl}/blog</link>
     <description>Die neuesten Artikel über Local SEO, Google Business Optimierung und lokales Online-Marketing.</description>
     <language>de-DE</language>
@@ -437,7 +498,7 @@ function generateRssFeed(): string {
   return xml;
 }
 
-function generateLlmsTxt(): string {
+function generateLlmsTxt(blogArticles: BlogArticle[]): string {
   const today = new Date().toISOString().split('T')[0];
   const categories = [...new Set(blogArticles.map(a => a.category))];
   
@@ -473,7 +534,7 @@ ${blogArticles.filter(a => a.category === 'Regionen').map(a => `- https://locald
 
 ---
 Last Updated: ${today}
-Version: 2.2
+Version: 2.3
 Total Articles: ${blogArticles.length}
 `;
 
@@ -501,40 +562,49 @@ Deno.serve(async (req) => {
 
     console.log(`🗺️ [generate-sitemap] Generating: ${type}, format: ${format}`);
 
+    // Initialize Supabase client
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+
+    // Get all articles including from database
+    const blogArticles = await getAllBlogArticles(supabaseUrl, supabaseKey);
+    
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
     let response: Record<string, string> = {};
 
     switch (type) {
       case 'blog':
-        response = { 'sitemap-blog.xml': generateBlogSitemap() };
+        response = { 'sitemap-blog.xml': generateBlogSitemap(blogArticles) };
         break;
       case 'main':
-        response = { 'sitemap.xml': generateMainSitemap() };
+        response = { 'sitemap.xml': generateMainSitemap(blogArticles) };
         break;
       case 'lexikon':
         response = { 'sitemap-lexikon.xml': generateLexikonSitemap() };
         break;
       case 'images':
-        response = { 'sitemap-images.xml': generateImageSitemap() };
+        response = { 'sitemap-images.xml': generateImageSitemap(blogArticles) };
         break;
       case 'index':
         response = { 'sitemap-index.xml': generateSitemapIndex() };
         break;
       case 'rss':
-        response = { 'feed.xml': generateRssFeed() };
+        response = { 'feed.xml': generateRssFeed(blogArticles) };
         break;
       case 'llms':
-        response = { 'llms.txt': generateLlmsTxt() };
+        response = { 'llms.txt': generateLlmsTxt(blogArticles) };
         break;
       case 'all':
       default:
         response = {
-          'sitemap.xml': generateMainSitemap(),
-          'sitemap-blog.xml': generateBlogSitemap(),
+          'sitemap.xml': generateMainSitemap(blogArticles),
+          'sitemap-blog.xml': generateBlogSitemap(blogArticles),
           'sitemap-lexikon.xml': generateLexikonSitemap(),
-          'sitemap-images.xml': generateImageSitemap(),
+          'sitemap-images.xml': generateImageSitemap(blogArticles),
           'sitemap-index.xml': generateSitemapIndex(),
-          'feed.xml': generateRssFeed(),
-          'llms.txt': generateLlmsTxt(),
+          'feed.xml': generateRssFeed(blogArticles),
+          'llms.txt': generateLlmsTxt(blogArticles),
         };
     }
 
@@ -551,10 +621,6 @@ Deno.serve(async (req) => {
     }
 
     // Log generation
-    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
-
     await supabase.from('analytics_events').insert({
       session_id: `sitemap-gen-${Date.now()}`,
       event_type: 'sitemap_generated',
