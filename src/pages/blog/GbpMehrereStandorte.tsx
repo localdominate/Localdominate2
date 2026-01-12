@@ -6,6 +6,8 @@ import AutoLexikonText from '../../components/blog/AutoLexikonText';
 import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
+import BlogImage from '../../components/blog/BlogImage';
+import gbpMehrereStandorteImage from '../../assets/blog/gbp-mehrere-standorte.jpg';
 
 const GbpMehrereStandorte: React.FC = () => {
   const articleData = {

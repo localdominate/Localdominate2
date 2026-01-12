@@ -6,6 +6,8 @@ import AutoLexikonText from '../../components/blog/AutoLexikonText';
 import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
+import BlogImage from '../../components/blog/BlogImage';
+import rankingVerschwundenImage from '../../assets/blog/ranking-verschwunden.jpg';
 
 const RankingPloetzlichVerschwunden: React.FC = () => {
   const articleData = {

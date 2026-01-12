@@ -6,7 +6,7 @@
   <!-- Blog Übersicht -->
   <url>
     <loc>https://localdominator.de/blog</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -14,7 +14,7 @@
   <!-- TOP PRIORITY: Höchste Traffic-Artikel -->
   <url>
     <loc>https://localdominator.de/blog/kostenlose-seo-optimierung</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -25,7 +25,7 @@
 
   <url>
     <loc>https://localdominator.de/blog/google-maps-ranking-verbessern</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -36,7 +36,7 @@
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-keywords</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -47,7 +47,7 @@
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-audit-checkliste</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -58,7 +58,7 @@
 
   <url>
     <loc>https://localdominator.de/blog/google-bewertungen-bekommen</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -70,7 +70,7 @@
   <!-- Google & Maps Artikel -->
   <url>
     <loc>https://localdominator.de/blog/google-my-business-optimieren</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -81,22 +81,122 @@
 
   <url>
     <loc>https://localdominator.de/blog/google-maps-ranking-faktoren</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/negative-google-bewertungen</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- NEUE TROUBLESHOOTING ARTIKEL Januar 2026 -->
+  <url>
+    <loc>https://localdominator.de/blog/gbp-suspendiert-reaktivieren</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/gbp-suspendiert.jpg</image:loc>
+      <image:title>Google Business Profil suspendiert reaktivieren</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/gbp-verifizierung-fehlgeschlagen</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/gbp-verifizierung.jpg</image:loc>
+      <image:title>GBP Verifizierung fehlgeschlagen Lösungen</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/duplicate-listing-entfernen</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/duplicate-listing.jpg</image:loc>
+      <image:title>Doppelte Google Einträge löschen</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/gbp-bewertung-loeschen-anleitung</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/gbp-bewertung-loeschen.jpg</image:loc>
+      <image:title>Google Bewertung löschen lassen Anleitung</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/ranking-ploetzlich-verschwunden</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/ranking-verschwunden.jpg</image:loc>
+      <image:title>Google Ranking plötzlich verschwunden Ursachen</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/gbp-nicht-in-suche-sichtbar</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/gbp-nicht-sichtbar.jpg</image:loc>
+      <image:title>GBP nicht in Google Suche sichtbar</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/gbp-mehrere-standorte</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/gbp-mehrere-standorte.jpg</image:loc>
+      <image:title>Google Business mehrere Standorte verwalten</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/gbp-oeffnungszeiten-sondertage</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/gbp-oeffnungszeiten.jpg</image:loc>
+      <image:title>GBP Öffnungszeiten und Sondertage</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/gbp-attribute-richtig-nutzen</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/gbp-attribute.jpg</image:loc>
+      <image:title>Google Business Attribute richtig nutzen</image:title>
+    </image:image>
   </url>
 
   <!-- Local SEO Grundlagen -->
   <url>
     <loc>https://localdominator.de/blog/nap-konsistenz</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -107,7 +207,7 @@
 
   <url>
     <loc>https://localdominator.de/blog/lokale-seo-2026</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -118,28 +218,32 @@
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-fehler</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/schema-markup-local-seo</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/schema-markup-local.jpg</image:loc>
+      <image:title>Schema Markup für Local SEO</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/core-web-vitals-local-seo</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/mobile-local-seo</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -147,21 +251,51 @@
   <!-- Strategie Artikel -->
   <url>
     <loc>https://localdominator.de/blog/local-content-marketing</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-content-marketing.jpg</image:loc>
+      <image:title>Local Content Marketing Strategien</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-link-building</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-link-building.jpg</image:loc>
+      <image:title>Lokales Link Building Guide</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-vs-maps-unterschied</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-vs-maps-seo.jpg</image:loc>
+      <image:title>Local SEO vs Maps SEO Unterschied</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/local-citations-2025</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-citations.jpg</image:loc>
+      <image:title>Local Citations 2025 Verzeichnisse</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-case-study</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -169,7 +303,7 @@
   <!-- Branchen-Artikel -->
   <url>
     <loc>https://localdominator.de/blog/local-seo-restaurant</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -180,7 +314,7 @@
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-handwerker</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -191,42 +325,42 @@
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-doenerladen</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-friseur</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-autowerkstatt</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-fitness</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-hotels</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-immobilienmakler</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -234,21 +368,21 @@
   <!-- YMYL Branchen (Ärzte, Anwälte, Steuerberater) -->
   <url>
     <loc>https://localdominator.de/blog/local-seo-aerzte</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-anwaelte</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-steuerberater</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -256,238 +390,325 @@
   <!-- Regionale Artikel -->
   <url>
     <loc>https://localdominator.de/blog/local-seo-berlin</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-muenchen</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-hamburg</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-frankfurt</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-schweiz</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-zuerich</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Weitere Branchen-Artikel (Januar 2026) -->
+  <!-- Weitere Branchen-Artikel -->
   <url>
     <loc>https://localdominator.de/blog/local-seo-apotheke</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-apotheke.jpg</image:loc>
+      <image:title>Local SEO für Apotheken</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-tattoo</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-tattoo.jpg</image:loc>
+      <image:title>Local SEO für Tattoo Studios</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-tierarzt</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-tierarzt.jpg</image:loc>
+      <image:title>Local SEO für Tierärzte</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-yoga</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-yoga.jpg</image:loc>
+      <image:title>Local SEO für Yoga Studios</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-physiotherapie</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-physiotherapie.jpg</image:loc>
+      <image:title>Local SEO für Physiotherapie</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-optiker</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-optiker.jpg</image:loc>
+      <image:title>Local SEO für Optiker</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-elektrotechnik</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-elektrotechnik.jpg</image:loc>
+      <image:title>Local SEO für Elektriker</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-zahnarzt</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-zahnarzt.jpg</image:loc>
+      <image:title>Local SEO für Zahnärzte</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominator.de/blog/local-seo-notdienst-keywords</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-notdienst-keywords.jpg</image:loc>
+      <image:title>Notdienst Keywords für Local SEO</image:title>
+    </image:image>
   </url>
 
   <!-- Weitere Städte-Guides -->
   <url>
     <loc>https://localdominator.de/blog/local-seo-koeln</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-koeln.jpg</image:loc>
+      <image:title>Local SEO für Köln</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-duesseldorf</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-duesseldorf.jpg</image:loc>
+      <image:title>Local SEO für Düsseldorf</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-stuttgart</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-stuttgart.jpg</image:loc>
+      <image:title>Local SEO für Stuttgart</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-wien</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-wien.jpg</image:loc>
+      <image:title>Local SEO für Wien</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-basel</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/local-seo-basel.jpg</image:loc>
+      <image:title>Local SEO für Basel</image:title>
+    </image:image>
   </url>
 
   <!-- KI & Tools Artikel -->
   <url>
     <loc>https://localdominator.de/blog/ki-tools-local-seo</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/ki-tools-local-seo.jpg</image:loc>
+      <image:title>KI Tools für Local SEO</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/google-ai-overviews</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/google-ai-overviews.jpg</image:loc>
+      <image:title>Google AI Overviews</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/seo-toolbox</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/seo-toolbox.jpg</image:loc>
+      <image:title>SEO Toolbox</image:title>
+    </image:image>
   </url>
 
-  <!-- GBP-Optimierung -->
+  <!-- GBP-Optimierung & Weitere -->
   <url>
     <loc>https://localdominator.de/blog/gbp-fotos-optimieren</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/local-seo-mehrstufig-unternehmen</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/e-e-a-t-lokale-unternehmen</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/lokale-seo-fuer-neugruender</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/google-business-messaging</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- NEUE ARTIKEL Januar/Februar 2026 -->
-  <url>
-    <loc>https://localdominator.de/blog/local-seo-physiotherapie</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://localdominator.de/blog/local-seo-notdienst-keywords</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/google-business-kategorien-guide</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://localdominator.de/blog/local-seo-zahnarzt</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/google-business-kategorien.jpg</image:loc>
+      <image:title>Google Business Kategorien Guide</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/lokale-events-marketing</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/lokale-events-marketing.jpg</image:loc>
+      <image:title>Lokale Events Marketing</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/google-business-produkte-services</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://localdominator.de/blog/local-seo-optiker</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/google-business-produkte.jpg</image:loc>
+      <image:title>Google Business Produkte und Services</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/bewertungs-antworten-vorlagen</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://localdominator.de/blog/local-seo-elektrotechnik</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/bewertungs-antworten-vorlagen.jpg</image:loc>
+      <image:title>Bewertungs Antworten Vorlagen</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://localdominator.de/blog/google-business-insights-verstehen</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominator.de/src/assets/blog/google-business-insights.jpg</image:loc>
+      <image:title>Google Business Insights verstehen</image:title>
+    </image:image>
   </url>
 
 </urlset>

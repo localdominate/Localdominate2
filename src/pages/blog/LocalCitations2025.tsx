@@ -6,6 +6,8 @@ import AutoLexikonText from '../../components/blog/AutoLexikonText';
 import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
+import BlogImage from '../../components/blog/BlogImage';
+import localCitationsImage from '../../assets/blog/local-citations.jpg';
 
 const LocalCitations2025: React.FC = () => {
   const articleData = {
