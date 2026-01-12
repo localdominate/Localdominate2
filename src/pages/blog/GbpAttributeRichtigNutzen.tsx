@@ -3,8 +3,7 @@ import ArticleLayout from '../../components/blog/ArticleLayout';
 import TableOfContents from '../../components/blog/TableOfContents';
 import KeyTakeawaysBox from '../../components/blog/KeyTakeawaysBox';
 import AutoLexikonText from '../../components/blog/AutoLexikonText';
-import RelatedArticles from '../../components/blog/RelatedArticles';
-import FAQSection from '../../components/FAQSection';
+import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
 
@@ -311,11 +310,9 @@ const GbpAttributeRichtigNutzen: React.FC = () => {
         </div>
 
         <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen</h2>
-        <FAQSection faqs={faqs} />
+        <BlogFAQSection faqs={faqs} />
 
         <SourcesSection sources={sources} />
-
-        <RelatedArticles articles={relatedArticles} />
 
         <HelpfulnessWidget articleSlug={articleData.slug} />
       </div>
