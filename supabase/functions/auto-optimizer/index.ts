@@ -19,14 +19,17 @@ interface TestQueueItem {
 }
 
 const TEST_REQUIREMENTS = {
-  minViews: 200, // Reduced for faster results
+  minViews: 100, // Reduced for faster testing cycles
   minConfidence: 95,
-  minConversions: 5, // Minimum conversions per variant
+  minConversions: 3, // Minimum conversions per variant
   trafficSplitA: 50,
   trafficSplitB: 50
 };
 
-// Error function for normal distribution
+// =====================
+// Statistical Functions
+// =====================
+
 function erf(x: number): number {
   const a1 = 0.254829592;
   const a2 = -0.284496736;
@@ -44,12 +47,10 @@ function erf(x: number): number {
   return sign * y;
 }
 
-// Standard normal CDF
 function normalCDF(x: number): number {
   return 0.5 * (1 + erf(x / Math.sqrt(2)));
 }
 
-// Calculate Z-score for two proportions
 function calculateZScore(
   conversionsA: number,
   visitorsA: number,
@@ -73,25 +74,119 @@ function calculateZScore(
   return (pA - pB) / standardError;
 }
 
-// Calculate p-value from Z-score
 function calculatePValue(zScore: number): number {
   return 2 * (1 - normalCDF(Math.abs(zScore)));
 }
 
-// Full statistical analysis
-function analyzeTest(
-  viewsA: number, 
-  conversionsA: number, 
-  viewsB: number, 
-  conversionsB: number
-): { 
-  confidence: number; 
+// =====================
+// Bayesian Analysis
+// =====================
+
+function gammaLn(z: number): number {
+  const c = [
+    0.99999999999980993, 676.5203681218851, -1259.1392167224028,
+    771.32342877765313, -176.61502916214059, 12.507343278686905,
+    -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7
+  ];
+
+  if (z < 0.5) {
+    return Math.log(Math.PI / Math.sin(Math.PI * z)) - gammaLn(1 - z);
+  }
+
+  z -= 1;
+  let x = c[0];
+  for (let i = 1; i < 9; i++) {
+    x += c[i] / (z + i);
+  }
+
+  const t = z + 7.5;
+  return 0.5 * Math.log(2 * Math.PI) + (z + 0.5) * Math.log(t) - t + Math.log(x);
+}
+
+function sampleGamma(shape: number): number {
+  if (shape < 1) {
+    return sampleGamma(shape + 1) * Math.pow(Math.random(), 1 / shape);
+  }
+
+  const d = shape - 1 / 3;
+  const c = 1 / Math.sqrt(9 * d);
+
+  while (true) {
+    let x, v;
+    do {
+      const u1 = Math.random();
+      const u2 = Math.random();
+      x = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+      v = 1 + c * x;
+    } while (v <= 0);
+
+    v = v * v * v;
+    const u = Math.random();
+
+    if (u < 1 - 0.0331 * (x * x) * (x * x)) {
+      return d * v;
+    }
+
+    if (Math.log(u) < 0.5 * x * x + d * (1 - v + Math.log(v))) {
+      return d * v;
+    }
+  }
+}
+
+function sampleBeta(alpha: number, beta: number): number {
+  const gammaA = sampleGamma(alpha);
+  const gammaB = sampleGamma(beta);
+  return gammaA / (gammaA + gammaB);
+}
+
+function calculateBayesianProbability(
+  conversionsA: number,
+  visitorsA: number,
+  conversionsB: number,
+  visitorsB: number,
+  simulations: number = 10000
+): { probabilityBBeatsA: number; probabilityABeatsB: number } {
+  const alphaA = 1 + conversionsA;
+  const betaA = 1 + (visitorsA - conversionsA);
+  const alphaB = 1 + conversionsB;
+  const betaB = 1 + (visitorsB - conversionsB);
+
+  let bWins = 0;
+
+  for (let i = 0; i < simulations; i++) {
+    const sampleA = sampleBeta(alphaA, betaA);
+    const sampleB = sampleBeta(alphaB, betaB);
+    if (sampleB > sampleA) bWins++;
+  }
+
+  return {
+    probabilityBBeatsA: bWins / simulations,
+    probabilityABeatsB: 1 - (bWins / simulations)
+  };
+}
+
+// =====================
+// Analysis Functions
+// =====================
+
+interface AnalysisResult {
+  confidence: number;
   winner: 'A' | 'B' | null;
   pValue: number;
   zScore: number;
   isSignificant: boolean;
   relativeImprovement: number;
-} {
+  bayesianProbA: number;
+  bayesianProbB: number;
+  recommendedAction: string;
+}
+
+function analyzeTest(
+  viewsA: number, 
+  conversionsA: number, 
+  viewsB: number, 
+  conversionsB: number
+): AnalysisResult {
   const zScore = calculateZScore(conversionsA, viewsA, conversionsB, viewsB);
   const pValue = calculatePValue(zScore);
   const confidence = (1 - pValue) * 100;
@@ -104,9 +199,23 @@ function analyzeTest(
     ? ((rateB - rateA) / rateA) * 100 
     : 0;
 
+  // Bayesian analysis
+  const bayesian = calculateBayesianProbability(conversionsA, viewsA, conversionsB, viewsB);
+
   let winner: 'A' | 'B' | null = null;
+  let recommendedAction = 'Weiter Daten sammeln';
+
+  // Use both frequentist and Bayesian for decision
   if (isSignificant && rateA !== rateB) {
     winner = rateA > rateB ? 'A' : 'B';
+    recommendedAction = `Variante ${winner} implementieren (${confidence.toFixed(1)}% Konfidenz)`;
+  } else if (Math.max(bayesian.probabilityABeatsB, bayesian.probabilityBBeatsA) >= 0.95) {
+    winner = bayesian.probabilityABeatsB > bayesian.probabilityBBeatsA ? 'A' : 'B';
+    const prob = Math.max(bayesian.probabilityABeatsB, bayesian.probabilityBBeatsA) * 100;
+    recommendedAction = `Variante ${winner} implementieren (${prob.toFixed(1)}% Bayesian Wahrscheinlichkeit)`;
+  } else if (Math.max(bayesian.probabilityABeatsB, bayesian.probabilityBBeatsA) >= 0.9) {
+    const tendencyWinner = bayesian.probabilityABeatsB > bayesian.probabilityBBeatsA ? 'A' : 'B';
+    recommendedAction = `Tendenz zu Variante ${tendencyWinner}, aber mehr Daten nötig`;
   }
 
   return { 
@@ -115,11 +224,13 @@ function analyzeTest(
     pValue, 
     zScore, 
     isSignificant,
-    relativeImprovement
+    relativeImprovement,
+    bayesianProbA: bayesian.probabilityABeatsB,
+    bayesianProbB: bayesian.probabilityBBeatsA,
+    recommendedAction
   };
 }
 
-// Check if minimum requirements are met
 function meetsMinimumRequirements(
   viewsA: number,
   viewsB: number,
@@ -129,33 +240,45 @@ function meetsMinimumRequirements(
   if (viewsA < TEST_REQUIREMENTS.minViews || viewsB < TEST_REQUIREMENTS.minViews) {
     return { 
       met: false, 
-      reason: `Need more views. A: ${viewsA}/${TEST_REQUIREMENTS.minViews}, B: ${viewsB}/${TEST_REQUIREMENTS.minViews}` 
+      reason: `Mehr Views nötig. A: ${viewsA}/${TEST_REQUIREMENTS.minViews}, B: ${viewsB}/${TEST_REQUIREMENTS.minViews}` 
     };
   }
   
-  // Relaxed conversion requirement - only check if we have any conversions total
   if (conversionsA + conversionsB === 0) {
     return { 
       met: false, 
-      reason: 'No conversions recorded yet' 
+      reason: 'Noch keine Conversions erfasst' 
     };
   }
   
   return { met: true };
 }
 
+// =====================
+// Main Handler
+// =====================
+
 Deno.serve(async (req) => {
+  console.log('[Auto-Optimizer] ========== START ==========');
+  console.log('[Auto-Optimizer] Request method:', req.method);
+  console.log('[Auto-Optimizer] Timestamp:', new Date().toISOString());
+
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const supabase = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
-    );
+    const supabaseUrl = Deno.env.get('SUPABASE_URL');
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+    
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('[Auto-Optimizer] Missing environment variables');
+      throw new Error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY');
+    }
 
-    console.log('[Auto-Optimizer] Starting optimization check...');
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    console.log('[Auto-Optimizer] Fetching running tests...');
 
     // Get current running test
     const { data: runningTests, error: testError } = await supabase
@@ -165,54 +288,59 @@ Deno.serve(async (req) => {
       .limit(1);
 
     if (testError) {
-      console.error('[Auto-Optimizer] Error fetching running tests:', testError);
+      console.error('[Auto-Optimizer] Error fetching tests:', testError);
       throw testError;
     }
+
+    console.log('[Auto-Optimizer] Running tests found:', runningTests?.length || 0);
 
     const results: any[] = [];
 
     if (runningTests && runningTests.length > 0) {
       const test = runningTests[0] as TestQueueItem;
-      console.log(`[Auto-Optimizer] Checking test: ${test.element_type}/${test.element_id}`);
-
       const testId = `auto_${test.element_type}_${test.element_id}`;
+      
+      console.log('[Auto-Optimizer] Analyzing test:', testId);
+      console.log('[Auto-Optimizer] Variant A:', test.current_variant_a);
+      console.log('[Auto-Optimizer] Variant B:', test.current_variant_b);
 
       // Get views for both variants
-      const { count: viewsA } = await supabase
-        .from('ab_test_views')
-        .select('*', { count: 'exact', head: true })
-        .eq('test_id', testId)
-        .eq('variant', 'A');
+      const [viewsAResult, viewsBResult, conversionsAResult, conversionsBResult] = await Promise.all([
+        supabase.from('ab_test_views').select('*', { count: 'exact', head: true })
+          .eq('test_id', testId).eq('variant', 'A'),
+        supabase.from('ab_test_views').select('*', { count: 'exact', head: true })
+          .eq('test_id', testId).eq('variant', 'B'),
+        supabase.from('analytics_conversions').select('*', { count: 'exact', head: true })
+          .eq('ab_test_id', testId).eq('ab_variant_color', 'A'),
+        supabase.from('analytics_conversions').select('*', { count: 'exact', head: true })
+          .eq('ab_test_id', testId).eq('ab_variant_color', 'B')
+      ]);
 
-      const { count: viewsB } = await supabase
-        .from('ab_test_views')
-        .select('*', { count: 'exact', head: true })
-        .eq('test_id', testId)
-        .eq('variant', 'B');
-
-      // Get conversions for both variants
-      const { count: conversionsA } = await supabase
-        .from('analytics_conversions')
-        .select('*', { count: 'exact', head: true })
-        .eq('ab_test_id', testId)
-        .eq('ab_variant_color', 'A');
-
-      const { count: conversionsB } = await supabase
-        .from('analytics_conversions')
-        .select('*', { count: 'exact', head: true })
-        .eq('ab_test_id', testId)
-        .eq('ab_variant_color', 'B');
-
-      const vA = viewsA || 0;
-      const vB = viewsB || 0;
-      const cA = conversionsA || 0;
-      const cB = conversionsB || 0;
+      const vA = viewsAResult.count || 0;
+      const vB = viewsBResult.count || 0;
+      const cA = conversionsAResult.count || 0;
+      const cB = conversionsBResult.count || 0;
       const totalViews = vA + vB;
 
-      console.log(`[Auto-Optimizer] Stats - Views A: ${vA}, B: ${vB} | Conversions A: ${cA}, B: ${cB}`);
+      console.log('[Auto-Optimizer] ========== STATS ==========');
+      console.log(`[Auto-Optimizer] Views     - A: ${vA}, B: ${vB} (Total: ${totalViews})`);
+      console.log(`[Auto-Optimizer] Conversions - A: ${cA}, B: ${cB}`);
+      console.log(`[Auto-Optimizer] Conv Rate - A: ${vA > 0 ? ((cA / vA) * 100).toFixed(2) : 0}%, B: ${vB > 0 ? ((cB / vB) * 100).toFixed(2) : 0}%`);
 
       const analysis = analyzeTest(vA, cA, vB, cB);
       const requirements = meetsMinimumRequirements(vA, vB, cA, cB);
+
+      console.log('[Auto-Optimizer] ========== ANALYSIS ==========');
+      console.log(`[Auto-Optimizer] Confidence: ${analysis.confidence.toFixed(2)}%`);
+      console.log(`[Auto-Optimizer] P-Value: ${analysis.pValue.toFixed(4)}`);
+      console.log(`[Auto-Optimizer] Z-Score: ${analysis.zScore.toFixed(3)}`);
+      console.log(`[Auto-Optimizer] Significant: ${analysis.isSignificant}`);
+      console.log(`[Auto-Optimizer] Bayesian A: ${(analysis.bayesianProbA * 100).toFixed(1)}%, B: ${(analysis.bayesianProbB * 100).toFixed(1)}%`);
+      console.log(`[Auto-Optimizer] Relative Improvement: ${analysis.relativeImprovement.toFixed(2)}%`);
+      console.log(`[Auto-Optimizer] Winner: ${analysis.winner || 'none'}`);
+      console.log(`[Auto-Optimizer] Requirements Met: ${requirements.met}`);
+      if (!requirements.met) console.log(`[Auto-Optimizer] Reason: ${requirements.reason}`);
+      console.log(`[Auto-Optimizer] Recommendation: ${analysis.recommendedAction}`);
 
       results.push({
         testId,
@@ -230,16 +358,20 @@ Deno.serve(async (req) => {
         pValue: analysis.pValue.toFixed(4),
         zScore: analysis.zScore.toFixed(3),
         isSignificant: analysis.isSignificant,
+        bayesianProbA: (analysis.bayesianProbA * 100).toFixed(1),
+        bayesianProbB: (analysis.bayesianProbB * 100).toFixed(1),
         relativeImprovement: analysis.relativeImprovement.toFixed(2),
         winner: analysis.winner,
         totalViews,
         requirementsMet: requirements.met,
-        requirementsReason: requirements.reason
+        requirementsReason: requirements.reason,
+        recommendedAction: analysis.recommendedAction
       });
 
       // Check if we can declare a winner
-      if (requirements.met && analysis.isSignificant && analysis.winner) {
-        console.log(`[Auto-Optimizer] Test complete! Winner: ${analysis.winner} with ${analysis.confidence.toFixed(1)}% confidence`);
+      if (requirements.met && analysis.winner) {
+        console.log('[Auto-Optimizer] ========== DECLARING WINNER ==========');
+        console.log(`[Auto-Optimizer] Winner: ${analysis.winner} (${analysis.winner === 'A' ? test.current_variant_a : test.current_variant_b})`);
 
         const winningValue = analysis.winner === 'A' ? test.current_variant_a : test.current_variant_b;
 
@@ -254,7 +386,7 @@ Deno.serve(async (req) => {
         const existingHistory = (currentOptimized?.test_history as any[]) || [];
 
         // Update optimized_elements with winner
-        await supabase
+        const { error: upsertError } = await supabase
           .from('optimized_elements')
           .upsert({
             element_type: test.element_type,
@@ -269,6 +401,8 @@ Deno.serve(async (req) => {
                 confidence: analysis.confidence,
                 p_value: analysis.pValue,
                 z_score: analysis.zScore,
+                bayesian_prob_a: analysis.bayesianProbA,
+                bayesian_prob_b: analysis.bayesianProbB,
                 views_a: vA,
                 views_b: vB,
                 conversions_a: cA,
@@ -279,14 +413,22 @@ Deno.serve(async (req) => {
             ]
           }, { onConflict: 'element_type,element_id' });
 
+        if (upsertError) {
+          console.error('[Auto-Optimizer] Error upserting optimized element:', upsertError);
+        } else {
+          console.log('[Auto-Optimizer] Optimized element updated successfully');
+        }
+
         // Update test queue
         const newTested = [...(test.tested_variants || []), test.current_variant_b];
         const allVariants = test.variants_to_test || [];
         const untested = allVariants.filter((v: string) => !newTested.includes(v) && v !== winningValue);
 
+        console.log(`[Auto-Optimizer] Tested variants: ${newTested.join(', ')}`);
+        console.log(`[Auto-Optimizer] Untested variants: ${untested.length > 0 ? untested.join(', ') : 'none'}`);
+
         if (untested.length === 0) {
-          // All variants tested, mark as completed and start next test
-          console.log(`[Auto-Optimizer] All variants tested for ${test.element_type}/${test.element_id}`);
+          console.log('[Auto-Optimizer] All variants tested - marking as completed');
           
           await supabase
             .from('auto_test_queue')
@@ -322,11 +464,18 @@ Deno.serve(async (req) => {
                   current_variant_b: variantB
                 })
                 .eq('id', next.id);
+
+              results.push({
+                action: 'started_next_test',
+                elementType: next.element_type,
+                elementId: next.element_id,
+                variantA,
+                variantB
+              });
             }
           }
         } else {
-          // Continue with next variant
-          console.log(`[Auto-Optimizer] Continuing test with next variant: ${untested[0]}`);
+          console.log(`[Auto-Optimizer] Continuing with next variant: ${untested[0]}`);
           
           await supabase
             .from('auto_test_queue')
@@ -345,6 +494,8 @@ Deno.serve(async (req) => {
         results[0].action = 'collecting_data';
       }
     } else {
+      console.log('[Auto-Optimizer] No running test found, checking for waiting tests...');
+      
       // No running test, check if we should start one
       const { data: waitingTests } = await supabase
         .from('auto_test_queue')
@@ -361,6 +512,7 @@ Deno.serve(async (req) => {
 
         if (variantB) {
           console.log(`[Auto-Optimizer] Auto-starting test: ${next.element_type}/${next.element_id}`);
+          console.log(`[Auto-Optimizer] Variant A: ${variantA}, Variant B: ${variantB}`);
           
           await supabase
             .from('auto_test_queue')
@@ -380,21 +532,33 @@ Deno.serve(async (req) => {
           });
         }
       } else {
-        console.log('[Auto-Optimizer] No tests to run');
+        console.log('[Auto-Optimizer] No waiting tests available');
         results.push({ status: 'no_tests_available' });
       }
     }
 
-    console.log('[Auto-Optimizer] Optimization check complete');
+    console.log('[Auto-Optimizer] ========== END ==========');
+    console.log('[Auto-Optimizer] Results count:', results.length);
 
-    return new Response(JSON.stringify({ success: true, results }), {
+    return new Response(JSON.stringify({ 
+      success: true, 
+      results,
+      timestamp: new Date().toISOString()
+    }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     });
 
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[Auto-Optimizer] ========== ERROR ==========');
     console.error('[Auto-Optimizer] Error:', errorMessage);
-    return new Response(JSON.stringify({ success: false, error: errorMessage }), {
+    console.error('[Auto-Optimizer] Stack:', error instanceof Error ? error.stack : 'N/A');
+    
+    return new Response(JSON.stringify({ 
+      success: false, 
+      error: errorMessage,
+      timestamp: new Date().toISOString()
+    }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     });
