@@ -1,8 +1,10 @@
 # Local Dominator - LLM Information File
-# Version: 2.1
-# Last Updated: 2026-01-11
+# Version: 2.2
+# Last Updated: 2026-01-12
 # Language: German (de-DE)
 # Primary Domain: https://localdominator.de
+# Full Version: https://localdominator.de/llms-full.txt
+# AI Policy: https://localdominator.de/.well-known/ai.txt
 
 ## About This Website
 
@@ -219,11 +221,17 @@ We implement comprehensive Schema.org markup including:
 - Industry guides: 19
 - City guides: 11
 
+## Additional AI Resources
+
+- Full LLM Information: https://localdominator.de/llms-full.txt
+- AI Policy File: https://localdominator.de/.well-known/ai.txt
+- FAQ Database (JSON): https://localdominator.de/faq-database.json
+
 ## Updates
 
 This file is maintained and updated with each significant content change. For the most current information about our content and services, please visit https://localdominator.de directly.
 
 ---
 # End of llms.txt
-# Last modified: 2026-01-11
+# Last modified: 2026-01-12
 # Contact: kontakt@localdominator.de
