@@ -482,9 +482,15 @@ export type Database = {
           article_title: string | null
           created_at: string
           device: string | null
+          engagement_score: number | null
+          exit_time: string | null
+          finished_reading: boolean | null
           id: string
+          max_scroll_depth: number | null
           page_path: string | null
+          reading_time_seconds: number | null
           referrer: string | null
+          scroll_milestones: number[] | null
           session_id: string | null
         }
         Insert: {
@@ -492,9 +498,15 @@ export type Database = {
           article_title?: string | null
           created_at?: string
           device?: string | null
+          engagement_score?: number | null
+          exit_time?: string | null
+          finished_reading?: boolean | null
           id?: string
+          max_scroll_depth?: number | null
           page_path?: string | null
+          reading_time_seconds?: number | null
           referrer?: string | null
+          scroll_milestones?: number[] | null
           session_id?: string | null
         }
         Update: {
@@ -502,9 +514,15 @@ export type Database = {
           article_title?: string | null
           created_at?: string
           device?: string | null
+          engagement_score?: number | null
+          exit_time?: string | null
+          finished_reading?: boolean | null
           id?: string
+          max_scroll_depth?: number | null
           page_path?: string | null
+          reading_time_seconds?: number | null
           referrer?: string | null
+          scroll_milestones?: number[] | null
           session_id?: string | null
         }
         Relationships: []
@@ -888,6 +906,11 @@ export type Database = {
         Row: {
           article_slug: string | null
           article_title: string | null
+          avg_engagement_score: number | null
+          avg_reading_time: number | null
+          avg_scroll_depth: number | null
+          completion_rate: number | null
+          finished_count: number | null
           first_view: string | null
           last_view: string | null
           total_views: number | null

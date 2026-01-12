@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Eye, Users, TrendingUp, Clock, ExternalLink, BarChart3 } from "lucide-react";
+import { ArrowLeft, Eye, Users, TrendingUp, Clock, ExternalLink, BarChart3, Timer, Scroll, CheckCircle2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
@@ -24,6 +24,11 @@ interface ArticleStats {
   views_today: number;
   views_week: number;
   views_month: number;
+  avg_scroll_depth?: number;
+  avg_reading_time?: number;
+  avg_engagement_score?: number;
+  completion_rate?: number;
+  finished_count?: number;
 }
 
 interface OverallStats {
@@ -32,6 +37,10 @@ interface OverallStats {
   viewsToday: number;
   viewsWeek: number;
   articlesTracked: number;
+  avgScrollDepth: number;
+  avgReadingTime: number;
+  avgEngagementScore: number;
+  completionRate: number;
 }
 
 const BlogAnalytics = () => {
@@ -41,7 +50,11 @@ const BlogAnalytics = () => {
     uniqueVisitors: 0,
     viewsToday: 0,
     viewsWeek: 0,
-    articlesTracked: 0
+    articlesTracked: 0,
+    avgScrollDepth: 0,
+    avgReadingTime: 0,
+    avgEngagementScore: 0,
+    completionRate: 0
   });
   const [isLoading, setIsLoading] = useState(true);
   const [timeRange, setTimeRange] = useState<'today' | 'week' | 'month' | 'all'>('week');
@@ -147,12 +160,36 @@ const BlogAnalytics = () => {
 
       const uniqueArticles = new Set(articlesData?.map(d => d.article_slug) || []);
 
+      // Calculate engagement averages
+      const { data: engagementData } = await supabase
+        .from('blog_article_views')
+        .select('max_scroll_depth, reading_time_seconds, engagement_score, finished_reading')
+        .not('max_scroll_depth', 'is', null);
+
+      let avgScrollDepth = 0;
+      let avgReadingTime = 0;
+      let avgEngagementScore = 0;
+      let completionRate = 0;
+
+      if (engagementData && engagementData.length > 0) {
+        const validData = engagementData.filter(d => d.max_scroll_depth !== null);
+        avgScrollDepth = validData.reduce((sum, d) => sum + (d.max_scroll_depth || 0), 0) / validData.length;
+        avgReadingTime = validData.reduce((sum, d) => sum + (d.reading_time_seconds || 0), 0) / validData.length;
+        avgEngagementScore = validData.reduce((sum, d) => sum + (d.engagement_score || 0), 0) / validData.length;
+        const finishedCount = validData.filter(d => d.finished_reading).length;
+        completionRate = (finishedCount / validData.length) * 100;
+      }
+
       setOverallStats({
         totalViews: totalViews || 0,
         uniqueVisitors: uniqueSessions.size,
         viewsToday: viewsToday || 0,
         viewsWeek: viewsWeek || 0,
-        articlesTracked: uniqueArticles.size
+        articlesTracked: uniqueArticles.size,
+        avgScrollDepth: Math.round(avgScrollDepth),
+        avgReadingTime: Math.round(avgReadingTime),
+        avgEngagementScore: Math.round(avgEngagementScore),
+        completionRate: Math.round(completionRate)
       });
 
     } catch (error) {
@@ -205,7 +242,7 @@ const BlogAnalytics = () => {
 
       <main className="container py-8">
         {/* Overview Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
@@ -267,6 +304,61 @@ const BlogAnalytics = () => {
           </Card>
         </div>
 
+        {/* Engagement Metrics Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <Card className="border-primary/20 bg-primary/5">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <Scroll className="h-4 w-4" />
+                Ø Scroll-Tiefe
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-2xl font-bold">{overallStats.avgScrollDepth}%</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-primary/20 bg-primary/5">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <Timer className="h-4 w-4" />
+                Ø Lesezeit
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-2xl font-bold">
+                {Math.floor(overallStats.avgReadingTime / 60)}:{String(overallStats.avgReadingTime % 60).padStart(2, '0')}
+              </p>
+              <p className="text-xs text-muted-foreground">Minuten</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-primary/20 bg-primary/5">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <BarChart3 className="h-4 w-4" />
+                Ø Engagement
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-2xl font-bold">{overallStats.avgEngagementScore}</p>
+              <p className="text-xs text-muted-foreground">Score (0-100)</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-primary/20 bg-primary/5">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4" />
+                Fertig gelesen
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-2xl font-bold">{overallStats.completionRate}%</p>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Time Range Filter */}
         <div className="flex gap-2 mb-6">
           {(['today', 'week', 'month', 'all'] as const).map((range) => (
@@ -306,9 +398,10 @@ const BlogAnalytics = () => {
                     <TableHead className="w-12">#</TableHead>
                     <TableHead>Artikel</TableHead>
                     <TableHead className="text-right">Views</TableHead>
-                    <TableHead className="text-right">Unique</TableHead>
-                    <TableHead className="text-right hidden md:table-cell">Gesamt</TableHead>
-                    <TableHead className="hidden lg:table-cell">Letzter Besuch</TableHead>
+                    <TableHead className="text-right hidden sm:table-cell">Ø Scroll</TableHead>
+                    <TableHead className="text-right hidden md:table-cell">Ø Lesezeit</TableHead>
+                    <TableHead className="text-right hidden lg:table-cell">Engagement</TableHead>
+                    <TableHead className="text-right hidden xl:table-cell">Fertig %</TableHead>
                     <TableHead className="w-12"></TableHead>
                   </TableRow>
                 </TableHeader>
@@ -337,14 +430,21 @@ const BlogAnalytics = () => {
                       <TableCell className="text-right font-bold">
                         {getViewCount(stat).toLocaleString()}
                       </TableCell>
-                      <TableCell className="text-right">
-                        {stat.unique_visitors.toLocaleString()}
+                      <TableCell className="text-right hidden sm:table-cell">
+                        <span className={`font-medium ${(stat.avg_scroll_depth || 0) >= 75 ? 'text-green-600' : (stat.avg_scroll_depth || 0) >= 50 ? 'text-yellow-600' : 'text-red-500'}`}>
+                          {Math.round(stat.avg_scroll_depth || 0)}%
+                        </span>
                       </TableCell>
                       <TableCell className="text-right hidden md:table-cell text-muted-foreground">
-                        {stat.total_views.toLocaleString()}
+                        {Math.floor((stat.avg_reading_time || 0) / 60)}:{String(Math.round((stat.avg_reading_time || 0) % 60)).padStart(2, '0')}
                       </TableCell>
-                      <TableCell className="hidden lg:table-cell text-sm text-muted-foreground">
-                        {formatDate(stat.last_view)}
+                      <TableCell className="text-right hidden lg:table-cell">
+                        <Badge variant={(stat.avg_engagement_score || 0) >= 60 ? 'default' : 'secondary'}>
+                          {Math.round(stat.avg_engagement_score || 0)}
+                        </Badge>
+                      </TableCell>
+                      <TableCell className="text-right hidden xl:table-cell text-muted-foreground">
+                        {Math.round(stat.completion_rate || 0)}%
                       </TableCell>
                       <TableCell>
                         <Link to={`/blog/${stat.article_slug}`} target="_blank">
