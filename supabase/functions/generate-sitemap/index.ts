@@ -639,6 +639,49 @@ Deno.serve(async (req) => {
 
     console.log(`✅ [generate-sitemap] Generated ${Object.keys(response).length} files, ${blogArticles.length} articles`);
 
+    // Check if Google ping was requested
+    const pingGoogle = url.searchParams.get('ping') === 'true';
+    let googlePingResult = null;
+    
+    if (pingGoogle) {
+      try {
+        const sitemapUrl = 'https://localdominator.de/sitemap-index.xml';
+        const googlePingUrl = `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`;
+        
+        console.log(`🔔 [generate-sitemap] Pinging Google: ${googlePingUrl}`);
+        
+        const pingResponse = await fetch(googlePingUrl, {
+          method: 'GET',
+          headers: { 'User-Agent': 'LocalDominator-Sitemap-Bot/1.0' }
+        });
+        
+        googlePingResult = {
+          success: pingResponse.ok,
+          status: pingResponse.status,
+          pinged_at: new Date().toISOString(),
+          sitemap_url: sitemapUrl
+        };
+        
+        console.log(`✅ [generate-sitemap] Google ping ${pingResponse.ok ? 'successful' : 'failed'}: ${pingResponse.status}`);
+        
+        // Log the ping event
+        await supabase.from('analytics_events').insert({
+          session_id: `sitemap-ping-${Date.now()}`,
+          event_type: 'sitemap_ping',
+          event_name: 'google_sitemap_ping',
+          page_path: '/sitemap',
+          event_data: googlePingResult
+        });
+      } catch (pingError) {
+        console.error('❌ [generate-sitemap] Google ping error:', pingError);
+        googlePingResult = {
+          success: false,
+          error: pingError instanceof Error ? pingError.message : 'Unknown error',
+          pinged_at: new Date().toISOString()
+        };
+      }
+    }
+
     return new Response(
       JSON.stringify({
         success: true,
@@ -651,6 +694,7 @@ Deno.serve(async (req) => {
           categories: [...new Set(blogArticles.map(a => a.category))].length,
           lexikon_entries: lexikonEntries.length
         },
+        google_ping: googlePingResult,
         sitemaps: response
       }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
