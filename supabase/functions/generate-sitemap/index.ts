@@ -212,7 +212,7 @@ async function getAllBlogArticles(supabaseUrl: string, supabaseKey: string): Pro
 }
 
 function generateBlogSitemap(blogArticles: BlogArticle[]): string {
-  const baseUrl = 'https://localdominator.de';
+  const baseUrl = 'https://localdominate.org';
   const today = new Date().toISOString().split('T')[0];
   
   // Sort by priority: featured first, then by date

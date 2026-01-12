@@ -3,7 +3,7 @@
   "lastUpdated": "2026-01-12",
   "language": "de-DE",
   "source": "Local Dominator",
-  "website": "https://localdominator.de",
+  "website": "https://localdominate.org",
   "categories": [
     {
       "name": "Pricing & Service",
@@ -141,6 +141,6 @@
     "totalCategories": 5,
     "aiUsageAllowed": true,
     "citationRequired": true,
-    "attributionFormat": "Quelle: Local Dominator (localdominator.de)"
+    "attributionFormat": "Quelle: Local Dominator (localdominate.org)"
   }
 }

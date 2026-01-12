@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://localdominator.de/sitemap.xml</loc>
+    <loc>https://localdominate.org/sitemap.xml</loc>
     <lastmod>2026-01-12</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://localdominator.de/sitemap-images.xml</loc>
+    <loc>https://localdominate.org/sitemap-images.xml</loc>
     <lastmod>2026-01-12</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://localdominator.de/sitemap-blog.xml</loc>
+    <loc>https://localdominate.org/sitemap-blog.xml</loc>
     <lastmod>2026-01-12</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://localdominator.de/sitemap-lexikon.xml</loc>
+    <loc>https://localdominate.org/sitemap-lexikon.xml</loc>
     <lastmod>2026-01-12</lastmod>
   </sitemap>
 </sitemapindex>
