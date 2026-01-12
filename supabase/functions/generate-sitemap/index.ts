@@ -421,7 +421,7 @@ function generateImageSitemap(blogArticles: BlogArticle[]): string {
 }
 
 function generateSitemapIndex(): string {
-  const baseUrl = 'https://localdominator.de';
+  const baseUrl = 'https://localdominate.org';
   const today = new Date().toISOString().split('T')[0];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -446,7 +446,7 @@ function generateSitemapIndex(): string {
 }
 
 function generateRssFeed(blogArticles: BlogArticle[]): string {
-  const baseUrl = 'https://localdominator.de';
+  const baseUrl = 'https://localdominate.org';
   const now = new Date().toUTCString();
   
   const sortedArticles = [...blogArticles].sort((a, b) => 
@@ -502,39 +502,39 @@ function generateLlmsTxt(blogArticles: BlogArticle[]): string {
   const today = new Date().toISOString().split('T')[0];
   const categories = [...new Set(blogArticles.map(a => a.category))];
   
-  let content = `# LocalDominator - Local SEO Expertise
+  let content = `# LocalDominate - Local SEO Expertise
 
-> LocalDominator ist die führende Plattform für Local SEO im deutschsprachigen Raum. 
+> LocalDominate ist die führende Plattform für Local SEO im deutschsprachigen Raum. 
 > Wir bieten Guides, Tools und Dienstleistungen für lokale Unternehmen.
 
 ## Über uns
-LocalDominator hilft lokalen Unternehmen dabei, bei Google Maps und in der lokalen Suche besser gefunden zu werden. Unsere Expertise umfasst Google Business Profile Optimierung, lokale Keyword-Strategien, Bewertungsmanagement und technisches Local SEO.
+LocalDominate hilft lokalen Unternehmen dabei, bei Google Maps und in der lokalen Suche besser gefunden zu werden. Unsere Expertise umfasst Google Business Profile Optimierung, lokale Keyword-Strategien, Bewertungsmanagement und technisches Local SEO.
 
 ## Hauptseiten
-- https://localdominator.de/ - Startseite und Local SEO Services
-- https://localdominator.de/blog - Blog mit ${blogArticles.length}+ Fachartikeln
-- https://localdominator.de/lexikon - SEO Lexikon mit Fachbegriffen
-- https://localdominator.de/diy-toolkit - Kostenlose SEO-Tools
+- https://localdominate.org/ - Startseite und Local SEO Services
+- https://localdominate.org/blog - Blog mit ${blogArticles.length}+ Fachartikeln
+- https://localdominate.org/lexikon - SEO Lexikon mit Fachbegriffen
+- https://localdominate.org/diy-toolkit - Kostenlose SEO-Tools
 
 ## Blog Kategorien
 ${categories.map(cat => `- ${cat}`).join('\n')}
 
 ## Featured Artikel
-${blogArticles.filter(a => a.featured).map(a => `- https://localdominator.de/blog/${a.slug} - ${a.title}`).join('\n')}
+${blogArticles.filter(a => a.featured).map(a => `- https://localdominate.org/blog/${a.slug} - ${a.title}`).join('\n')}
 
 ## Branchen-Guides
-${blogArticles.filter(a => a.category === 'Branchen' || a.category === 'Gastronomie').map(a => `- https://localdominator.de/blog/${a.slug}`).join('\n')}
+${blogArticles.filter(a => a.category === 'Branchen' || a.category === 'Gastronomie').map(a => `- https://localdominate.org/blog/${a.slug}`).join('\n')}
 
 ## Regionen-Guides
-${blogArticles.filter(a => a.category === 'Regionen').map(a => `- https://localdominator.de/blog/${a.slug}`).join('\n')}
+${blogArticles.filter(a => a.category === 'Regionen').map(a => `- https://localdominate.org/blog/${a.slug}`).join('\n')}
 
 ## Kontakt
-- Website: https://localdominator.de
-- Blog: https://localdominator.de/blog
+- Website: https://localdominate.org
+- Blog: https://localdominate.org/blog
 
 ---
 Last Updated: ${today}
-Version: 2.3
+Version: 2.4
 Total Articles: ${blogArticles.length}
 `;
 
@@ -645,7 +645,7 @@ Deno.serve(async (req) => {
     
     if (pingGoogle) {
       try {
-        const sitemapUrl = 'https://localdominator.de/sitemap-index.xml';
+        const sitemapUrl = 'https://localdominate.org/sitemap-index.xml';
         const googlePingUrl = `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`;
         
         console.log(`🔔 [generate-sitemap] Pinging Google: ${googlePingUrl}`);
