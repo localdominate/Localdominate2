@@ -137,6 +137,10 @@ const TermDetail = ({ term, onTermClick, readTerms, onToggleRead }: {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -20 }}
       className="space-y-6"
+      data-term-definition="true"
+      data-term-name={term.term}
+      itemScope
+      itemType="https://schema.org/DefinedTerm"
     >
       {/* Header */}
       <div className="flex items-start gap-4">
@@ -145,7 +149,7 @@ const TermDetail = ({ term, onTermClick, readTerms, onToggleRead }: {
         </div>
         <div className="flex-1">
           <div className="flex items-start justify-between gap-2">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{term.term}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2" itemProp="name" data-speakable="true">{term.term}</h2>
             <div className="flex gap-2 flex-shrink-0">
               <Button 
                 variant="ghost" 
@@ -166,7 +170,7 @@ const TermDetail = ({ term, onTermClick, readTerms, onToggleRead }: {
               </Button>
             </div>
           </div>
-          <p className="text-muted-foreground">{term.shortDescription}</p>
+          <p className="text-muted-foreground" itemProp="description" data-ai-summary="true">{term.shortDescription}</p>
           <div className="flex flex-wrap items-center gap-2 mt-3">
             <Badge variant="outline" className={difficultyColors[term.difficulty]}>
               {term.difficulty === "anfänger" ? "👶 Anfänger" : term.difficulty === "fortgeschritten" ? "🎯 Fortgeschritten" : "🏆 Experte"}
@@ -204,7 +208,7 @@ const TermDetail = ({ term, onTermClick, readTerms, onToggleRead }: {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground leading-relaxed">{term.fullDescription}</p>
+              <p className="text-muted-foreground leading-relaxed" data-speakable="true" data-ai-extractable="true">{term.fullDescription}</p>
             </CardContent>
           </Card>
 
@@ -472,18 +476,115 @@ const SeoLexikon = () => {
     setSelectedTerm(term);
   };
 
-  const seoSchema = {
+  // DefinedTermSet Schema für AI/LLM Optimierung
+  const definedTermSetSchema = {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
-    "name": "SEO Lexikon - Alle wichtigen SEO-Begriffe von A-Z",
-    "description": "Umfassendes SEO-Lexikon mit allen wichtigen Begriffen der Suchmaschinenoptimierung. Von Alt-Text bis Zero-Click Search - verständlich erklärt mit Statistiken und praktischen Tipps.",
-    "url": "https://local-dominator.de/seo-lexikon",
+    "@id": "https://localdominator.de/seo-lexikon#term-set",
+    "name": "Local Dominator SEO Lexikon",
+    "alternateName": "SEO Glossar A-Z",
+    "description": "Umfassendes SEO-Lexikon mit allen wichtigen Begriffen der Suchmaschinenoptimierung für lokale Unternehmen. Von Alt-Text bis Zero-Click Search - verständlich erklärt mit Statistiken und praktischen Tipps.",
+    "url": "https://localdominator.de/seo-lexikon",
+    "inLanguage": "de-DE",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Local Dominator",
+      "url": "https://localdominator.de"
+    },
+    "datePublished": "2025-01-01",
+    "dateModified": new Date().toISOString().split('T')[0],
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "usageInfo": "Zitieren mit Quellenangabe erlaubt",
+    "numberOfItems": seoLexikonData.length,
     "hasDefinedTerm": seoLexikonData.map(term => ({
       "@type": "DefinedTerm",
+      "@id": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`,
       "name": term.term,
-      "description": term.shortDescription
+      "description": term.fullDescription,
+      "termCode": getTermSlug(term.term),
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "@id": "https://localdominator.de/seo-lexikon#term-set",
+        "name": "Local Dominator SEO Lexikon"
+      },
+      "url": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`
     }))
   };
+
+  // Separate DefinedTerm Schemas für jeden Begriff (verbessert AI-Extraktion)
+  const individualTermSchemas = seoLexikonData.map(term => ({
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`,
+    "name": term.term,
+    "description": term.fullDescription,
+    "termCode": getTermSlug(term.term),
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "@id": "https://localdominator.de/seo-lexikon#term-set",
+      "name": "Local Dominator SEO Lexikon",
+      "url": "https://localdominator.de/seo-lexikon"
+    },
+    "url": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`,
+    ...(term.relatedTerms.length > 0 && {
+      "sameAs": term.relatedTerms.slice(0, 3).map(related => {
+        const relatedTerm = seoLexikonData.find(t => t.term.toLowerCase() === related.toLowerCase());
+        return relatedTerm ? `https://localdominator.de/seo-lexikon#${getTermSlug(relatedTerm.term)}` : null;
+      }).filter(Boolean)
+    }),
+    ...(term.relatedArticles && term.relatedArticles.length > 0 && {
+      "mainEntityOfPage": term.relatedArticles.map(article => ({
+        "@type": "WebPage",
+        "url": `https://localdominator.de/blog/${article.slug}`
+      }))
+    }),
+    "audience": {
+      "@type": "Audience",
+      "audienceType": term.difficulty === "anfänger" ? "Anfänger" : term.difficulty === "fortgeschritten" ? "Fortgeschrittene" : "Experten"
+    }
+  }));
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://localdominator.de"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SEO Lexikon",
+        "item": "https://localdominator.de/seo-lexikon"
+      }
+    ]
+  };
+
+  // FAQPage Schema für die häufigsten Begriffe
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": seoLexikonData.slice(0, 10).map(term => ({
+      "@type": "Question",
+      "name": `Was ist ${term.term}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": term.fullDescription
+      }
+    }))
+  };
+
+  // Kombiniertes Schema Array
+  const seoSchema = [
+    definedTermSetSchema,
+    breadcrumbSchema,
+    faqSchema,
+    ...individualTermSchemas.slice(0, 20) // Top 20 Begriffe als separate Schemas
+  ];
 
   return (
     <>
@@ -491,7 +592,7 @@ const SeoLexikon = () => {
         title="SEO Lexikon A-Z | Alle wichtigen SEO-Begriffe erklärt | Local Dominator"
         description="Das umfassende SEO-Lexikon mit allen wichtigen Begriffen von A-Z. Alt-Text, Backlinks, Citations, Keywords, Local Pack und mehr - verständlich erklärt mit Statistiken und Tipps."
         keywords="SEO Lexikon, SEO Glossar, SEO Begriffe, SEO Wörterbuch, Local SEO Begriffe, SEO Definition, Backlinks erklärt, Keywords erklärt"
-        canonicalUrl="https://local-dominator.de/seo-lexikon"
+        canonicalUrl="https://localdominator.de/seo-lexikon"
         jsonLd={seoSchema}
       />
 
