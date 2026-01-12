@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Clock, Calendar } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
@@ -13,6 +13,7 @@ import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 import { getSessionId } from "@/lib/sessionManager";
+import { useArticleEngagement } from "@/hooks/useArticleEngagement";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -54,8 +55,12 @@ const ArticleLayout = ({
   const { language } = useLanguage();
   const relatedArticles = getRelatedArticles(article.slug, 3, language);
   const hasTrackedView = useRef(false);
+  const [viewId, setViewId] = useState<string | null>(null);
   
-  // Track article view
+  // Use engagement tracking hook
+  useArticleEngagement(viewId, article.readingTime);
+  
+  // Track article view and get view ID for engagement tracking
   useEffect(() => {
     if (hasTrackedView.current) return;
     hasTrackedView.current = true;
@@ -70,11 +75,17 @@ const ArticleLayout = ({
       page_path: window.location.pathname,
       referrer: document.referrer || null,
       device
-    }).then(({ error }) => {
+    })
+    .select('id')
+    .single()
+    .then(({ data, error }) => {
       if (error) {
         console.error('[ArticleView] Error tracking view:', error);
       } else {
-        console.log(`[ArticleView] Tracked view for: ${article.slug}`);
+        console.log(`[ArticleView] Tracked view for: ${article.slug}, ID: ${data?.id}`);
+        if (data?.id) {
+          setViewId(data.id);
+        }
       }
     });
   }, [article.slug, article.title]);
