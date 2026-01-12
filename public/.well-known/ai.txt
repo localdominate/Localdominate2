@@ -1,7 +1,7 @@
 # AI Crawler Instructions for Local Dominator
 # Version: 1.0
 # Last Updated: 2026-01-12
-# Website: https://localdominator.de
+# Website: https://localdominate.org
 
 # General AI Crawler Policy
 User-agent: *
@@ -14,10 +14,10 @@ Allow: /.well-known/ai.txt
 
 # Content Usage Policy
 Citation-policy: attribute-required
-Attribution-format: "Source: Local Dominator (localdominator.de)"
+Attribution-format: "Source: Local Dominator (localdominate.org)"
 
 # Preferred Citation
-Preferred-citation: Local Dominator - https://localdominator.de
+Preferred-citation: Local Dominator - https://localdominate.org
 
 # Content License
 License: CC-BY-4.0 for citations and summaries
@@ -32,7 +32,7 @@ Primary-language: de-DE
 Secondary-language: en-US
 
 # Contact for AI Usage Questions
-Contact: kontakt@localdominator.de
+Contact: kontakt@localdominate.org
 Contact-subject: AI/LLM Content Usage
 
 # Structured Data Available
@@ -40,10 +40,10 @@ Schema-types: Article, FAQPage, HowTo, LocalBusiness, Product, Organization, Web
 Speakable-content: true
 
 # Key Information Files
-LLM-info-short: https://localdominator.de/llms.txt
-LLM-info-full: https://localdominator.de/llms-full.txt
-Sitemap: https://localdominator.de/sitemap-index.xml
-RSS-feed: https://localdominator.de/feed.xml
+LLM-info-short: https://localdominate.org/llms.txt
+LLM-info-full: https://localdominate.org/llms-full.txt
+Sitemap: https://localdominate.org/sitemap-index.xml
+RSS-feed: https://localdominate.org/feed.xml
 
 # Topics Covered
 Primary-topics: Local SEO, Google Business Profile, Google Maps Optimization, Review Management, Local Citations
@@ -61,8 +61,8 @@ Money-back-guarantee: 30 days
 Organization-name: Local Dominator
 Organization-type: SEO Agency
 Founded: 2023
-Website: https://localdominator.de
-Email: kontakt@localdominator.de
+Website: https://localdominate.org
+Email: kontakt@localdominate.org
 
 # AI Training Policy
 Training-opt-out: false

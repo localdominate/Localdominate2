@@ -93,17 +93,17 @@ const ArticleLayout = ({
   // Dynamic OG Image based on article slug
   const getOgImage = (slug: string): string => {
     const imageMap: Record<string, string> = {
-      'google-maps-ranking-verbessern': 'https://localdominator.de/assets/blog/google-maps-ranking.jpg',
-      'google-bewertungen-bekommen': 'https://localdominator.de/assets/blog/google-bewertungen.jpg',
-      'google-my-business-optimieren': 'https://localdominator.de/assets/blog/google-my-business.jpg',
-      'local-seo-audit-checkliste': 'https://localdominator.de/assets/blog/local-seo-audit.jpg',
-      'local-seo-handwerker': 'https://localdominator.de/assets/blog/local-seo-handwerker.jpg',
-      'local-seo-keywords-finden': 'https://localdominator.de/assets/blog/local-seo-keywords.jpg',
-      'local-seo-fuer-restaurants': 'https://localdominator.de/assets/blog/local-seo-restaurant.jpg',
-      'lokale-suchmaschinenoptimierung-2026': 'https://localdominator.de/assets/blog/lokale-seo-2026.jpg',
-      'nap-konsistenz-local-seo': 'https://localdominator.de/assets/blog/nap-konsistenz.jpg',
+      'google-maps-ranking-verbessern': 'https://localdominate.org/assets/blog/google-maps-ranking.jpg',
+      'google-bewertungen-bekommen': 'https://localdominate.org/assets/blog/google-bewertungen.jpg',
+      'google-my-business-optimieren': 'https://localdominate.org/assets/blog/google-my-business.jpg',
+      'local-seo-audit-checkliste': 'https://localdominate.org/assets/blog/local-seo-audit.jpg',
+      'local-seo-handwerker': 'https://localdominate.org/assets/blog/local-seo-handwerker.jpg',
+      'local-seo-keywords-finden': 'https://localdominate.org/assets/blog/local-seo-keywords.jpg',
+      'local-seo-fuer-restaurants': 'https://localdominate.org/assets/blog/local-seo-restaurant.jpg',
+      'lokale-suchmaschinenoptimierung-2026': 'https://localdominate.org/assets/blog/lokale-seo-2026.jpg',
+      'nap-konsistenz-local-seo': 'https://localdominate.org/assets/blog/nap-konsistenz.jpg',
     };
-    return imageMap[slug] || 'https://localdominator.de/og-image.png';
+    return imageMap[slug] || 'https://localdominate.org/og-image.png';
   };
 
   const articleOgImage = getOgImage(article.slug);
@@ -111,12 +111,12 @@ const ArticleLayout = ({
   // Author/Organization Schema
   const authorSchema = {
     "@type": "Organization",
-    "@id": "https://localdominator.de/#organization",
+    "@id": "https://localdominate.org/#organization",
     "name": "Local Dominator",
-    "url": "https://localdominator.de",
+    "url": "https://localdominate.org",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://localdominator.de/logo.png",
+      "url": "https://localdominate.org/logo.png",
       "width": 512,
       "height": 512
     },
@@ -148,7 +148,7 @@ const ArticleLayout = ({
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": articleType === 'medical' ? 'MedicalWebPage' : 'Article',
-    "@id": `https://localdominator.de/blog/${article.slug}#article`,
+    "@id": `https://localdominate.org/blog/${article.slug}#article`,
     "headline": article.title,
     "name": article.title,
     "description": article.metaDescription,
@@ -157,12 +157,12 @@ const ArticleLayout = ({
     "author": authorSchema,
     "publisher": {
       "@type": "Organization",
-      "@id": "https://localdominator.de/#organization",
+      "@id": "https://localdominate.org/#organization",
       "name": "Local Dominator",
-      "url": "https://localdominator.de",
+      "url": "https://localdominate.org",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://localdominator.de/logo.png"
+        "url": "https://localdominate.org/logo.png"
       }
     },
     ...(reviewerSchema && {
@@ -173,7 +173,7 @@ const ArticleLayout = ({
     "dateModified": article.updatedAt,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://localdominator.de/blog/${article.slug}`
+      "@id": `https://localdominate.org/blog/${article.slug}`
     },
     "image": {
       "@type": "ImageObject",
@@ -183,14 +183,13 @@ const ArticleLayout = ({
     },
     "inLanguage": language === "de" ? "de-DE" : "en-US",
     "isPartOf": {
-      "@id": "https://localdominator.de/#website"
+      "@id": "https://localdominate.org/#website"
     },
     "about": {
       "@type": "Thing",
       "name": article.category
     },
     "keywords": article.keywords.join(", "),
-    // Enhanced Speakable Schema for Voice Search and AI extraction
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": [
@@ -203,12 +202,11 @@ const ArticleLayout = ({
         "/html/head/meta[@name='description']/@content"
       ]
     },
-    // AI/LLM Citation Properties
-    "usageInfo": "https://localdominator.de/llms.txt",
-    "creditText": "Quelle: Local Dominator (localdominator.de)",
+    "usageInfo": "https://localdominate.org/llms.txt",
+    "creditText": "Quelle: Local Dominator (localdominate.org)",
     "copyrightNotice": "© Local Dominator - Zitieren mit Quellenangabe erlaubt",
     "license": "https://creativecommons.org/licenses/by/4.0/",
-    "acquireLicensePage": "https://localdominator.de/llms.txt",
+    "acquireLicensePage": "https://localdominate.org/llms.txt",
     "citation": article.keywords.slice(0, 3).map(keyword => ({
       "@type": "CreativeWork",
       "name": keyword

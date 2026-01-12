@@ -1,4 +1,4 @@
-# robots.txt für localdominator.de
+# robots.txt für localdominate.org
 # Optimiert für Local SEO Crawling - Aktualisiert Januar 2026
 
 # Google Crawler - Höchste Priorität
@@ -94,9 +94,9 @@ Disallow: /danke
 Disallow: /onboarding
 
 # Sitemaps - Alle relevanten Sitemaps
-Sitemap: https://localdominator.de/sitemap-index.xml
-Sitemap: https://localdominator.de/sitemap.xml
-Sitemap: https://localdominator.de/sitemap-images.xml
+Sitemap: https://localdominate.org/sitemap-index.xml
+Sitemap: https://localdominate.org/sitemap.xml
+Sitemap: https://localdominate.org/sitemap-images.xml
 
 # Host-Direktive für Yandex
-Host: https://localdominator.de
+Host: https://localdominate.org

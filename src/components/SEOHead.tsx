@@ -24,7 +24,7 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
   title,
   description,
   canonicalUrl,
-  ogImage = "https://localdominator.de/og-image.png",
+  ogImage = "https://localdominate.org/og-image.png",
   ogType = "website",
   keywords,
   noindex = false,
