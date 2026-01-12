@@ -212,8 +212,8 @@ Deno.serve(async (req) => {
             Authorization: `Bearer ${resendApiKey}`,
           },
           body: JSON.stringify({
-            from: "Local Dominator <noreply@localdominator.de>",
-            to: ["team@localdominator.de"],
+            from: "Local Dominator <noreply@localdominate.org>",
+            to: ["team@localdominate.org"],
             subject: `🚨 Content Freshness: ${criticalIssues.length} Artikel brauchen Aufmerksamkeit`,
             html: emailHtml,
           }),
