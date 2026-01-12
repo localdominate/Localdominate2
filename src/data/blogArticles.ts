@@ -2937,6 +2937,182 @@ export const blogArticles: BlogArticle[] = [
     icon: "📚",
     keywords: ["local citations", "branchenbücher", "verzeichnisse", "citations aufbauen", "nap einträge"]
   },
+  {
+    slug: "local-link-building",
+    de: {
+      title: "Local Link Building: Backlinks für lokale Unternehmen aufbauen (2025)",
+      metaTitle: "Local Link Building: Backlinks für lokale Unternehmen | Guide 2025",
+      metaDescription: "Wie du als lokales Unternehmen hochwertige Backlinks aufbaust. Lokale Strategien, Sponsorings und Community-Links für bessere Rankings.",
+      excerpt: "Der komplette Guide zum Aufbau lokaler Backlinks mit praktischen Strategien für kleine und mittlere Unternehmen.",
+      category: "Local SEO"
+    },
+    en: {
+      title: "Local Link Building: Building Backlinks for Local Businesses (2025)",
+      metaTitle: "Local Link Building: Backlinks for Local Businesses | 2025 Guide",
+      metaDescription: "How to build quality backlinks as a local business. Local strategies, sponsorships and community links for better rankings.",
+      excerpt: "The complete guide to building local backlinks with practical strategies for small and medium businesses.",
+      category: "Local SEO"
+    },
+    readingTime: 16,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "🔗",
+    keywords: ["local link building", "lokale backlinks", "backlinks aufbauen", "community links", "lokale seo links"]
+  },
+  {
+    slug: "schema-markup-local-seo",
+    de: {
+      title: "Schema Markup für Local SEO: Strukturierte Daten für lokale Unternehmen (2025)",
+      metaTitle: "Schema Markup Local SEO: Strukturierte Daten | Guide 2025",
+      metaDescription: "Wie du Schema Markup für dein lokales Unternehmen implementierst. LocalBusiness Schema, FAQPage und mehr für Rich Snippets.",
+      excerpt: "Der technische Guide zu strukturierten Daten für lokale Unternehmen mit Code-Beispielen und Generator.",
+      category: "Technical SEO"
+    },
+    en: {
+      title: "Schema Markup for Local SEO: Structured Data for Local Businesses (2025)",
+      metaTitle: "Schema Markup Local SEO: Structured Data | 2025 Guide",
+      metaDescription: "How to implement Schema Markup for your local business. LocalBusiness Schema, FAQPage and more for Rich Snippets.",
+      excerpt: "The technical guide to structured data for local businesses with code examples and generator.",
+      category: "Technical SEO"
+    },
+    readingTime: 18,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "📝",
+    keywords: ["schema markup", "strukturierte daten", "local business schema", "rich snippets", "json-ld"]
+  },
+  {
+    slug: "local-content-marketing",
+    de: {
+      title: "Local Content Marketing: Inhalte für lokale Zielgruppen erstellen (2025)",
+      metaTitle: "Local Content Marketing: Lokale Inhalte erstellen | Guide 2025",
+      metaDescription: "Wie du Inhalte erstellst, die deine lokale Zielgruppe ansprechen. Lokale Stories, Events und Community-Content für mehr Reichweite.",
+      excerpt: "Der Strategie-Guide für lokales Content Marketing mit Ideen und Best Practices für lokale Unternehmen.",
+      category: "Content"
+    },
+    en: {
+      title: "Local Content Marketing: Creating Content for Local Audiences (2025)",
+      metaTitle: "Local Content Marketing: Creating Local Content | 2025 Guide",
+      metaDescription: "How to create content that appeals to your local audience. Local stories, events and community content for more reach.",
+      excerpt: "The strategy guide for local content marketing with ideas and best practices for local businesses.",
+      category: "Content"
+    },
+    readingTime: 14,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "✍️",
+    keywords: ["local content marketing", "lokaler content", "lokale inhalte", "community content", "lokale stories"]
+  },
+  {
+    slug: "local-seo-mehrstufig-unternehmen",
+    de: {
+      title: "Local SEO für mehrstufige Unternehmen: Multi-Location Strategien (2025)",
+      metaTitle: "Local SEO Multi-Location: Strategien für Filialisten | Guide 2025",
+      metaDescription: "Wie Unternehmen mit mehreren Standorten ihre lokale SEO skalieren. Zentrale Verwaltung, lokale Anpassung und einheitliches Branding.",
+      excerpt: "Der Enterprise-Guide für Multi-Location Local SEO mit Skalierungsstrategien und Best Practices.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO for Multi-Location Businesses: Scaling Strategies (2025)",
+      metaTitle: "Local SEO Multi-Location: Strategies for Franchises | 2025 Guide",
+      metaDescription: "How multi-location businesses scale their local SEO. Central management, local adaptation and consistent branding.",
+      excerpt: "The enterprise guide for multi-location Local SEO with scaling strategies and best practices.",
+      category: "Strategy"
+    },
+    readingTime: 17,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "🏬",
+    keywords: ["multi location seo", "mehrstufige unternehmen", "filialisten seo", "franchise seo", "standort seo"]
+  },
+  {
+    slug: "local-seo-neugruender",
+    de: {
+      title: "Local SEO für Neugründer: Der Starter-Guide (2025)",
+      metaTitle: "Local SEO für Neugründer: Starter-Guide | 2025",
+      metaDescription: "Du hast gerade gegründet? So baust du von Anfang an deine lokale Online-Präsenz auf. Mit 90-Tage-Plan und Prioritäten-Guide.",
+      excerpt: "Der perfekte Einstieg in Local SEO für Neugründer mit konkretem Zeitplan und Prioritäten.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO for Startups: The Starter Guide (2025)",
+      metaTitle: "Local SEO for Startups: Starter Guide | 2025",
+      metaDescription: "Just started your business? How to build your local online presence from the beginning. With 90-day plan and priority guide.",
+      excerpt: "The perfect introduction to Local SEO for startups with concrete timeline and priorities.",
+      category: "Strategy"
+    },
+    readingTime: 12,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "🚀",
+    keywords: ["local seo neugründer", "startup seo", "gründer marketing", "neue firma seo", "existenzgründung seo"]
+  },
+  {
+    slug: "local-seo-optiker",
+    de: {
+      title: "Local SEO für Optiker & Hörakustiker: Mehr Kunden durch Google (2025)",
+      metaTitle: "Local SEO für Optiker & Hörakustiker | Branchenguide 2025",
+      metaDescription: "Wie Optiker und Hörakustiker durch lokale SEO mehr Kunden gewinnen. Branchenspezifische Keywords, Portale und Google Business Tipps.",
+      excerpt: "Der Branchenguide für Optiker und Hörakustiker mit spezifischen SEO-Strategien und Portallisten.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Opticians & Hearing Aid Specialists: More Customers Through Google (2025)",
+      metaTitle: "Local SEO for Opticians & Hearing Aid Specialists | Industry Guide 2025",
+      metaDescription: "How opticians and hearing aid specialists win more customers through local SEO. Industry-specific keywords, portals and Google Business tips.",
+      excerpt: "The industry guide for opticians and hearing aid specialists with specific SEO strategies and portal lists.",
+      category: "Industries"
+    },
+    readingTime: 13,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "👓",
+    keywords: ["optiker seo", "hörakustiker marketing", "brillen local seo", "optiker google", "hörakustiker seo"]
+  },
+  {
+    slug: "local-seo-notdienst-keywords",
+    de: {
+      title: "Notdienst Keywords: So wirst du bei Notfällen gefunden (2025)",
+      metaTitle: "Notdienst Keywords: Bei Notfällen gefunden werden | Guide 2025",
+      metaDescription: "Wie du für Notfall-Suchen rankst. Schlüsseldienst, Notarzt, Klempner Notdienst - die richtigen Keywords und Strategien.",
+      excerpt: "Der Spezial-Guide für Notdienst-Keywords und die Optimierung für dringende Suchanfragen.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Emergency Service Keywords: How to Be Found in Emergencies (2025)",
+      metaTitle: "Emergency Service Keywords: Being Found in Emergencies | 2025 Guide",
+      metaDescription: "How to rank for emergency searches. Locksmith, emergency doctor, emergency plumber - the right keywords and strategies.",
+      excerpt: "The special guide for emergency service keywords and optimization for urgent search queries.",
+      category: "Strategy"
+    },
+    readingTime: 11,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "🚨",
+    keywords: ["notdienst keywords", "notfall seo", "schlüsseldienst seo", "24h service ranking", "emergency keywords"]
+  },
+  {
+    slug: "local-seo-physiotherapie",
+    de: {
+      title: "Local SEO für Physiotherapeuten: Mehr Patienten durch Google (2025)",
+      metaTitle: "Local SEO für Physiotherapeuten | Branchenguide 2025",
+      metaDescription: "Wie Physiotherapie-Praxen durch lokale SEO mehr Patienten gewinnen. Spezialisierungen, Kassenzulassung und lokale Keywords.",
+      excerpt: "Der Branchenguide für Physiotherapeuten mit spezifischen SEO-Strategien und Keyword-Listen.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Physical Therapists: More Patients Through Google (2025)",
+      metaTitle: "Local SEO for Physical Therapists | Industry Guide 2025",
+      metaDescription: "How physical therapy practices win more patients through local SEO. Specializations, insurance approval and local keywords.",
+      excerpt: "The industry guide for physical therapists with specific SEO strategies and keyword lists.",
+      category: "Industries"
+    },
+    readingTime: 12,
+    publishedAt: "2025-01-11",
+    updatedAt: "2025-01-11",
+    icon: "💪",
+    keywords: ["physiotherapie seo", "physio marketing", "krankengymnastik local seo", "physiotherapeut google", "praxis marketing physio"]
+  },
 ];
 
 export const resolveArticle = (article: BlogArticle, language: Language): ResolvedBlogArticle => {
