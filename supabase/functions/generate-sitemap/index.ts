@@ -5,6 +5,34 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Rate limiting configuration
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_MAX = 10; // 10 calls per hour (sitemap is requested more often)
+const RATE_LIMIT_WINDOW_MS = 3600000; // 1 hour
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(ip);
+  
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return true;
+  }
+  
+  if (record.count >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  record.count++;
+  return true;
+}
+
+function getClientIP(req: Request): string {
+  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+         req.headers.get('x-real-ip') || 
+         'unknown';
+}
+
 interface BlogArticle {
   slug: string;
   title: string;
@@ -124,7 +152,6 @@ const imageMap: Record<string, string> = {
   'kostenloses-seo-guide': 'seo-toolbox.jpg',
   'google-ai-overviews-local-seo': 'google-ai-overviews.jpg',
   'ki-tools-local-seo': 'ki-tools-local-seo.jpg',
-  // Industry guides
   'local-seo-physiotherapie': 'local-seo-physiotherapie.jpg',
   'local-seo-zahnarzt': 'local-seo-zahnarzt.jpg',
   'local-seo-optiker': 'local-seo-optiker.jpg',
@@ -135,18 +162,15 @@ const imageMap: Record<string, string> = {
   'google-business-produkte-services': 'google-business-produkte.jpg',
   'bewertungs-antworten-vorlagen': 'bewertungs-antworten-vorlagen.jpg',
   'google-business-insights-verstehen': 'google-business-insights.jpg',
-  // City guides
   'local-seo-koeln': 'local-seo-koeln.jpg',
   'local-seo-duesseldorf': 'local-seo-duesseldorf.jpg',
   'local-seo-stuttgart': 'local-seo-stuttgart.jpg',
   'local-seo-wien': 'local-seo-wien.jpg',
   'local-seo-basel': 'local-seo-basel.jpg',
-  // More industry guides
   'local-seo-tattoo': 'local-seo-tattoo.jpg',
   'local-seo-tierarzt': 'local-seo-tierarzt.jpg',
   'local-seo-yoga': 'local-seo-yoga.jpg',
   'local-seo-apotheke': 'local-seo-apotheke.jpg',
-  // Troubleshooting articles
   'gbp-suspendiert-reaktivieren': 'gbp-suspendiert.jpg',
   'gbp-verifizierung-fehlgeschlagen': 'gbp-verifizierung.jpg',
   'duplicate-listing-entfernen': 'duplicate-listing.jpg',
@@ -211,11 +235,19 @@ async function getAllBlogArticles(supabaseUrl: string, supabaseKey: string): Pro
   return allArticles;
 }
 
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function generateBlogSitemap(blogArticles: BlogArticle[]): string {
   const baseUrl = 'https://localdominate.org';
   const today = new Date().toISOString().split('T')[0];
   
-  // Sort by priority: featured first, then by date
   const sortedArticles = [...blogArticles].sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
@@ -226,7 +258,6 @@ function generateBlogSitemap(blogArticles: BlogArticle[]): string {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Blog Übersicht -->
   <url>
     <loc>${baseUrl}/blog</loc>
     <lastmod>${today}</lastmod>
@@ -250,7 +281,7 @@ function generateBlogSitemap(blogArticles: BlogArticle[]): string {
     if (imageName) {
       xml += `
     <image:image>
-      <image:loc>${baseUrl}/assets/blog/${imageName}</image:loc>
+      <image:loc>${baseUrl}/images/blog/${imageName}</image:loc>
       <image:title>${escapeXml(article.title)}</image:title>
     </image:image>`;
     }
@@ -266,109 +297,66 @@ function generateBlogSitemap(blogArticles: BlogArticle[]): string {
 }
 
 function generateMainSitemap(blogArticles: BlogArticle[]): string {
-  const baseUrl = 'https://localdominator.de';
+  const baseUrl = 'https://localdominate.org';
   const today = new Date().toISOString().split('T')[0];
-
+  
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Hauptseiten -->
+  
   <url>
     <loc>${baseUrl}/</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  
   <url>
     <loc>${baseUrl}/blog</loc>
     <lastmod>${today}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  
   <url>
     <loc>${baseUrl}/lexikon</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>${baseUrl}/diy-toolkit</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
   
-  <!-- Branchen-Landingpages -->
-  <url>
-    <loc>${baseUrl}/restaurant-marketing</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>${baseUrl}/handwerker-marketing</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>${baseUrl}/arztpraxis-marketing</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>${baseUrl}/anwalt-marketing</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Blog-Artikel -->
-`;
-
-  // Add all blog article URLs
-  for (const article of blogArticles) {
-    xml += `  <url>
-    <loc>${baseUrl}/blog/${article.slug}</loc>
-    <lastmod>${article.updatedAt}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${article.featured ? '0.8' : '0.7'}</priority>
-  </url>
-`;
-  }
-
-  xml += `
-  <!-- Rechtliche Seiten -->
   <url>
     <loc>${baseUrl}/impressum</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+  
   <url>
     <loc>${baseUrl}/datenschutz</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+  
   <url>
     <loc>${baseUrl}/agb</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
-</urlset>`;
 
+</urlset>`;
+  
   return xml;
 }
 
 function generateLexikonSitemap(): string {
-  const baseUrl = 'https://localdominator.de';
+  const baseUrl = 'https://localdominate.org';
   const today = new Date().toISOString().split('T')[0];
-
+  
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- SEO Lexikon Übersicht -->
+  
   <url>
     <loc>${baseUrl}/lexikon</loc>
     <lastmod>${today}</lastmod>
@@ -385,35 +373,8 @@ function generateLexikonSitemap(): string {
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
 `;
-  }
-
-  xml += `</urlset>`;
-  return xml;
-}
-
-function generateImageSitemap(blogArticles: BlogArticle[]): string {
-  const baseUrl = 'https://localdominator.de';
-
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-`;
-
-  // Group images by their page
-  for (const article of blogArticles) {
-    const imageName = imageMap[article.slug];
-    if (imageName) {
-      xml += `  <url>
-    <loc>${baseUrl}/blog/${article.slug}</loc>
-    <image:image>
-      <image:loc>${baseUrl}/assets/blog/${imageName}</image:loc>
-      <image:title>${escapeXml(article.title)}</image:title>
-      <image:caption>${escapeXml(article.title)} - Local SEO Guide</image:caption>
-    </image:image>
-  </url>
-`;
-    }
   }
 
   xml += `</urlset>`;
@@ -423,7 +384,7 @@ function generateImageSitemap(blogArticles: BlogArticle[]): string {
 function generateSitemapIndex(): string {
   const baseUrl = 'https://localdominate.org';
   const today = new Date().toISOString().split('T')[0];
-
+  
   return `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
@@ -445,109 +406,114 @@ function generateSitemapIndex(): string {
 </sitemapindex>`;
 }
 
+function generateImageSitemap(blogArticles: BlogArticle[]): string {
+  const baseUrl = 'https://localdominate.org';
+  
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+`;
+
+  for (const article of blogArticles) {
+    const imageName = imageMap[article.slug];
+    if (imageName) {
+      xml += `  <url>
+    <loc>${baseUrl}/blog/${article.slug}</loc>
+    <image:image>
+      <image:loc>${baseUrl}/images/blog/${imageName}</image:loc>
+      <image:title>${escapeXml(article.title)}</image:title>
+      <image:caption>Illustration für ${escapeXml(article.title)}</image:caption>
+    </image:image>
+  </url>
+
+`;
+    }
+  }
+
+  xml += `</urlset>`;
+  return xml;
+}
+
 function generateRssFeed(blogArticles: BlogArticle[]): string {
   const baseUrl = 'https://localdominate.org';
   const now = new Date().toUTCString();
   
-  const sortedArticles = [...blogArticles].sort((a, b) => 
-    new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
-  );
+  const sortedArticles = [...blogArticles]
+    .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
+    .slice(0, 20);
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LocalDominator - Local SEO Blog</title>
+    <title>Local Dominator Blog</title>
+    <description>Aktuelle Tipps und Strategien für Local SEO und Google Business Profile Optimierung</description>
     <link>${baseUrl}/blog</link>
-    <description>Die neuesten Artikel über Local SEO, Google Business Optimierung und lokales Online-Marketing.</description>
+    <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml"/>
     <language>de-DE</language>
     <lastBuildDate>${now}</lastBuildDate>
-    <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml"/>
-    <image>
-      <url>${baseUrl}/logo.png</url>
-      <title>LocalDominator</title>
-      <link>${baseUrl}</link>
-    </image>
-    
+    <pubDate>${now}</pubDate>
+
 `;
 
-  // Include latest 20 articles
-  for (const article of sortedArticles.slice(0, 20)) {
-    const imageName = imageMap[article.slug];
+  for (const article of sortedArticles) {
     const pubDate = new Date(article.updatedAt).toUTCString();
-    
     xml += `    <item>
       <title>${escapeXml(article.title)}</title>
       <link>${baseUrl}/blog/${article.slug}</link>
       <guid isPermaLink="true">${baseUrl}/blog/${article.slug}</guid>
       <pubDate>${pubDate}</pubDate>
-      <category>${escapeXml(article.category)}</category>`;
-    
-    if (imageName) {
-      xml += `
-      <media:content url="${baseUrl}/assets/blog/${imageName}" medium="image" />`;
-    }
-    
-    xml += `
+      <category>${escapeXml(article.category)}</category>
     </item>
+
 `;
   }
 
   xml += `  </channel>
 </rss>`;
-
+  
   return xml;
 }
 
 function generateLlmsTxt(blogArticles: BlogArticle[]): string {
-  const today = new Date().toISOString().split('T')[0];
-  const categories = [...new Set(blogArticles.map(a => a.category))];
+  const baseUrl = 'https://localdominate.org';
   
-  let content = `# LocalDominate - Local SEO Expertise
+  let content = `# Local Dominator - Local SEO Expertise
 
-> LocalDominate ist die führende Plattform für Local SEO im deutschsprachigen Raum. 
-> Wir bieten Guides, Tools und Dienstleistungen für lokale Unternehmen.
-
-## Über uns
-LocalDominate hilft lokalen Unternehmen dabei, bei Google Maps und in der lokalen Suche besser gefunden zu werden. Unsere Expertise umfasst Google Business Profile Optimierung, lokale Keyword-Strategien, Bewertungsmanagement und technisches Local SEO.
+> Local Dominator ist die führende Ressource für Local SEO im deutschsprachigen Raum.
 
 ## Hauptseiten
-- https://localdominate.org/ - Startseite und Local SEO Services
-- https://localdominate.org/blog - Blog mit ${blogArticles.length}+ Fachartikeln
-- https://localdominate.org/lexikon - SEO Lexikon mit Fachbegriffen
-- https://localdominate.org/diy-toolkit - Kostenlose SEO-Tools
 
-## Blog Kategorien
-${categories.map(cat => `- ${cat}`).join('\n')}
+- [Homepage](${baseUrl}/) - Local SEO Agentur für mehr lokale Sichtbarkeit
+- [Blog](${baseUrl}/blog) - Aktuelle Tipps und Strategien
+- [SEO Lexikon](${baseUrl}/lexikon) - Fachbegriffe einfach erklärt
 
-## Featured Artikel
-${blogArticles.filter(a => a.featured).map(a => `- https://localdominate.org/blog/${a.slug} - ${a.title}`).join('\n')}
+## Featured Guides
 
-## Branchen-Guides
-${blogArticles.filter(a => a.category === 'Branchen' || a.category === 'Gastronomie').map(a => `- https://localdominate.org/blog/${a.slug}`).join('\n')}
-
-## Regionen-Guides
-${blogArticles.filter(a => a.category === 'Regionen').map(a => `- https://localdominate.org/blog/${a.slug}`).join('\n')}
-
-## Kontakt
-- Website: https://localdominate.org
-- Blog: https://localdominate.org/blog
-
----
-Last Updated: ${today}
-Version: 2.4
-Total Articles: ${blogArticles.length}
 `;
 
-  return content;
-}
+  const featuredArticles = blogArticles.filter(a => a.featured);
+  for (const article of featuredArticles) {
+    content += `- [${article.title}](${baseUrl}/blog/${article.slug})\n`;
+  }
 
-function escapeXml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
+  content += `\n## Branchen-Guides\n\n`;
+
+  const industryArticles = blogArticles.filter(a => 
+    a.category === 'Branchen' || a.category === 'Gastronomie'
+  );
+  for (const article of industryArticles) {
+    content += `- [${article.title}](${baseUrl}/blog/${article.slug})\n`;
+  }
+
+  content += `\n## Stadt-Guides\n\n`;
+
+  const cityArticles = blogArticles.filter(a => a.category === 'Regionen');
+  for (const article of cityArticles) {
+    content += `- [${article.title}](${baseUrl}/blog/${article.slug})\n`;
+  }
+
+  return content;
 }
 
 Deno.serve(async (req) => {
@@ -555,156 +521,122 @@ Deno.serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  // Apply rate limiting
+  const clientIP = getClientIP(req);
+  if (!checkRateLimit(clientIP)) {
+    console.log(`[generate-sitemap] Rate limit exceeded for IP: ${clientIP}`);
+    return new Response(
+      JSON.stringify({ error: "Rate limit exceeded. Try again later." }),
+      { 
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 429 
+      }
+    );
+  }
+
   try {
     const url = new URL(req.url);
     const type = url.searchParams.get('type') || 'all';
     const format = url.searchParams.get('format') || 'json';
-
-    console.log(`🗺️ [generate-sitemap] Generating: ${type}, format: ${format}`);
-
-    // Initialize Supabase client
+    const ping = url.searchParams.get('ping') === 'true';
+    
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-
-    // Get all articles including from database
+    
+    console.log(`[generate-sitemap] Generating sitemap type: ${type}, format: ${format}`);
+    
     const blogArticles = await getAllBlogArticles(supabaseUrl, supabaseKey);
     
-    const supabase = createClient(supabaseUrl, supabaseKey);
-
-    let response: Record<string, string> = {};
-
+    let result: Record<string, string> = {};
+    
     switch (type) {
       case 'blog':
-        response = { 'sitemap-blog.xml': generateBlogSitemap(blogArticles) };
+        result.blogSitemap = generateBlogSitemap(blogArticles);
         break;
       case 'main':
-        response = { 'sitemap.xml': generateMainSitemap(blogArticles) };
+        result.mainSitemap = generateMainSitemap(blogArticles);
         break;
       case 'lexikon':
-        response = { 'sitemap-lexikon.xml': generateLexikonSitemap() };
+        result.lexikonSitemap = generateLexikonSitemap();
         break;
       case 'images':
-        response = { 'sitemap-images.xml': generateImageSitemap(blogArticles) };
+        result.imageSitemap = generateImageSitemap(blogArticles);
         break;
       case 'index':
-        response = { 'sitemap-index.xml': generateSitemapIndex() };
+        result.sitemapIndex = generateSitemapIndex();
         break;
       case 'rss':
-        response = { 'feed.xml': generateRssFeed(blogArticles) };
+        result.rssFeed = generateRssFeed(blogArticles);
         break;
       case 'llms':
-        response = { 'llms.txt': generateLlmsTxt(blogArticles) };
+        result.llmsTxt = generateLlmsTxt(blogArticles);
         break;
       case 'all':
       default:
-        response = {
-          'sitemap.xml': generateMainSitemap(blogArticles),
-          'sitemap-blog.xml': generateBlogSitemap(blogArticles),
-          'sitemap-lexikon.xml': generateLexikonSitemap(),
-          'sitemap-images.xml': generateImageSitemap(blogArticles),
-          'sitemap-index.xml': generateSitemapIndex(),
-          'feed.xml': generateRssFeed(blogArticles),
-          'llms.txt': generateLlmsTxt(blogArticles),
+        result = {
+          mainSitemap: generateMainSitemap(blogArticles),
+          blogSitemap: generateBlogSitemap(blogArticles),
+          lexikonSitemap: generateLexikonSitemap(),
+          imageSitemap: generateImageSitemap(blogArticles),
+          sitemapIndex: generateSitemapIndex(),
+          rssFeed: generateRssFeed(blogArticles),
+          llmsTxt: generateLlmsTxt(blogArticles),
         };
     }
-
-    // If single XML requested and format=xml, return raw XML
-    if (format === 'xml' && Object.keys(response).length === 1) {
-      const content = Object.values(response)[0];
-      const contentType = Object.keys(response)[0].endsWith('.txt') 
-        ? 'text/plain' 
-        : 'application/xml';
-      
-      return new Response(content, {
-        headers: { ...corsHeaders, 'Content-Type': `${contentType}; charset=utf-8` }
-      });
-    }
-
-    // Log generation
+    
+    // Log generation event
+    const supabase = createClient(supabaseUrl, supabaseKey);
     await supabase.from('analytics_events').insert({
-      session_id: `sitemap-gen-${Date.now()}`,
+      session_id: 'system-sitemap-generator',
       event_type: 'sitemap_generated',
-      event_name: 'generate_sitemap',
+      event_name: type,
       page_path: '/sitemap',
       event_data: {
         type,
         format,
-        files_generated: Object.keys(response),
-        total_blog_articles: blogArticles.length,
-        featured_articles: blogArticles.filter(a => a.featured).length,
-        articles_with_images: Object.keys(imageMap).length,
-        generated_at: new Date().toISOString()
+        articlesCount: blogArticles.length,
+        generatedAt: new Date().toISOString()
       }
     });
-
-    console.log(`✅ [generate-sitemap] Generated ${Object.keys(response).length} files, ${blogArticles.length} articles`);
-
-    // Check if Google ping was requested
-    const pingGoogle = url.searchParams.get('ping') === 'true';
-    let googlePingResult = null;
     
-    if (pingGoogle) {
+    // If raw format requested, return single sitemap as XML/text
+    if (format === 'raw' && Object.keys(result).length === 1) {
+      const content = Object.values(result)[0];
+      const contentType = type === 'rss' ? 'application/rss+xml' : 
+                         type === 'llms' ? 'text/plain' : 
+                         'application/xml';
+      return new Response(content, {
+        headers: { ...corsHeaders, 'Content-Type': `${contentType}; charset=utf-8` }
+      });
+    }
+    
+    // Ping Google if requested
+    if (ping) {
+      const sitemapUrl = 'https://localdominate.org/sitemap-index.xml';
       try {
-        const sitemapUrl = 'https://localdominate.org/sitemap-index.xml';
-        const googlePingUrl = `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`;
-        
-        console.log(`🔔 [generate-sitemap] Pinging Google: ${googlePingUrl}`);
-        
-        const pingResponse = await fetch(googlePingUrl, {
-          method: 'GET',
-          headers: { 'User-Agent': 'LocalDominator-Sitemap-Bot/1.0' }
-        });
-        
-        googlePingResult = {
-          success: pingResponse.ok,
-          status: pingResponse.status,
-          pinged_at: new Date().toISOString(),
-          sitemap_url: sitemapUrl
-        };
-        
-        console.log(`✅ [generate-sitemap] Google ping ${pingResponse.ok ? 'successful' : 'failed'}: ${pingResponse.status}`);
-        
-        // Log the ping event
-        await supabase.from('analytics_events').insert({
-          session_id: `sitemap-ping-${Date.now()}`,
-          event_type: 'sitemap_ping',
-          event_name: 'google_sitemap_ping',
-          page_path: '/sitemap',
-          event_data: googlePingResult
-        });
-      } catch (pingError) {
-        console.error('❌ [generate-sitemap] Google ping error:', pingError);
-        googlePingResult = {
-          success: false,
-          error: pingError instanceof Error ? pingError.message : 'Unknown error',
-          pinged_at: new Date().toISOString()
-        };
+        await fetch(`https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`);
+        console.log('[generate-sitemap] Pinged Google with sitemap');
+      } catch (e) {
+        console.error('[generate-sitemap] Failed to ping Google:', e);
       }
     }
-
+    
     return new Response(
       JSON.stringify({
         success: true,
-        message: `Generated ${Object.keys(response).length} sitemap files`,
-        files: Object.keys(response),
-        stats: {
-          total_articles: blogArticles.length,
-          featured: blogArticles.filter(a => a.featured).length,
-          with_images: Object.keys(imageMap).length,
-          categories: [...new Set(blogArticles.map(a => a.category))].length,
-          lexikon_entries: lexikonEntries.length
-        },
-        google_ping: googlePingResult,
-        sitemaps: response
+        type,
+        articlesCount: blogArticles.length,
+        generatedAt: new Date().toISOString(),
+        sitemaps: result
       }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
-
-  } catch (error: unknown) {
+    
+  } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    console.error('❌ [generate-sitemap] Error:', error);
+    console.error('[generate-sitemap] Error:', errorMessage);
     return new Response(
-      JSON.stringify({ error: errorMessage }),
+      JSON.stringify({ success: false, error: errorMessage }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
