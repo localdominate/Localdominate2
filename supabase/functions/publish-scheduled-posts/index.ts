@@ -5,6 +5,61 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Rate limiting for security
+const rateLimits = new Map<string, number[]>();
+const RATE_LIMIT_MAX = 10; // 10 calls per hour
+const RATE_LIMIT_WINDOW_MS = 3600000; // 1 hour
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = rateLimits.get(ip) || [];
+  const recentTimestamps = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW_MS);
+  
+  if (recentTimestamps.length >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  recentTimestamps.push(now);
+  rateLimits.set(ip, recentTimestamps);
+  return true;
+}
+
+// Helper function to verify admin role
+async function verifyAdminAccess(req: Request, supabase: any): Promise<{ authorized: boolean; error?: string }> {
+  const authHeader = req.headers.get('Authorization');
+  
+  // If no auth header, check rate limit instead (for scheduled/cron calls)
+  if (!authHeader) {
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+    if (!checkRateLimit(ip)) {
+      return { authorized: false, error: 'Rate limit exceeded' };
+    }
+    return { authorized: true }; // Allow scheduled calls with rate limiting
+  }
+
+  // Verify JWT token
+  const token = authHeader.replace('Bearer ', '');
+  const { data: claims, error: claimsError } = await supabase.auth.getClaims(token);
+  
+  if (claimsError || !claims?.claims?.sub) {
+    return { authorized: false, error: 'Invalid token' };
+  }
+
+  // Check admin role
+  const { data: role } = await supabase
+    .from('user_roles')
+    .select('role')
+    .eq('user_id', claims.claims.sub)
+    .eq('role', 'admin')
+    .single();
+
+  if (!role) {
+    return { authorized: false, error: 'Admin access required' };
+  }
+
+  return { authorized: true };
+}
+
 Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -16,6 +71,16 @@ Deno.serve(async (req) => {
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Verify admin access or rate limit for scheduled calls
+    const authCheck = await verifyAdminAccess(req, supabase);
+    if (!authCheck.authorized) {
+      console.log('[publish-scheduled-posts] Authorization failed:', authCheck.error);
+      return new Response(
+        JSON.stringify({ error: authCheck.error }),
+        { status: authCheck.error === 'Rate limit exceeded' ? 429 : 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
     
     console.log('[publish-scheduled-posts] Starting scheduled posts check...');
     

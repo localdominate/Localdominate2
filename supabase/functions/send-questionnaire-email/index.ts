@@ -72,11 +72,40 @@ const gmbFieldLabels: Record<string, string> = {
   competitor_name: "Konkurrent",
 };
 
+// Rate limiting for security
+const rateLimits = new Map<string, number[]>();
+const RATE_LIMIT_MAX = 10; // 10 emails per hour per IP
+const RATE_LIMIT_WINDOW_MS = 3600000; // 1 hour
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = rateLimits.get(ip) || [];
+  const recentTimestamps = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW_MS);
+  
+  if (recentTimestamps.length >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  recentTimestamps.push(now);
+  rateLimits.set(ip, recentTimestamps);
+  return true;
+}
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("send-questionnaire-email function called");
   
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Rate limit check
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+  if (!checkRateLimit(ip)) {
+    console.log(`[send-questionnaire-email] Rate limit exceeded for IP: ${ip}`);
+    return new Response(
+      JSON.stringify({ error: "Rate limit exceeded. Try again later." }),
+      { status: 429, headers: { "Content-Type": "application/json", ...corsHeaders } }
+    );
   }
 
   try {
