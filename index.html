@@ -1,13 +1,62 @@
 <!doctype html>
 <html lang="de" prefix="og: https://ogp.me/ns#">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM"></script>
+    <!-- Google Consent Mode V2 - Default Settings (BEFORE gtag loads) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Set default consent to DENIED for EU/EEA regions (GDPR compliant)
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'security_storage': 'granted',
+        'wait_for_update': 500,
+        'region': ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 
+                   'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 
+                   'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'CH', 'GB', 'NO', 'IS', 'LI']
+      });
+      
+      // Allow all for non-EU regions (no consent required)
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted',
+        'security_storage': 'granted'
+      });
+      
+      // Restore consent from localStorage if user already gave consent
+      (function() {
+        var consent = localStorage.getItem('cookieConsent');
+        if (consent === 'all') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted'
+          });
+        }
+      })();
+    </script>
+    
+    <!-- Google tag (gtag.js) - loads AFTER consent defaults are set -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM"></script>
+    <script>
       gtag('js', new Date());
-      gtag('config', 'G-BS2B48THVM');
+      gtag('config', 'G-BS2B48THVM', {
+        'anonymize_ip': true,
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+      });
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -491,37 +540,6 @@
     }
     </script>
     
-    <!-- Google Analytics 4 (GA4) - Loaded only after consent -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      
-      // Check if user has given consent
-      function loadGA4() {
-        if (document.querySelector('script[src*="googletagmanager.com/gtag"]')) return;
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM';
-        document.head.appendChild(script);
-        gtag('js', new Date());
-        gtag('config', 'G-BS2B48THVM', { 'anonymize_ip': true });
-      }
-      
-      // Check consent on page load
-      (function() {
-        var consent = localStorage.getItem('cookieConsent');
-        if (consent === 'all') {
-          loadGA4();
-        }
-      })();
-      
-      // Listen for consent changes
-      window.addEventListener('storage', function(e) {
-        if (e.key === 'cookieConsent' && e.newValue === 'all') {
-          loadGA4();
-        }
-      });
-    </script>
   </head>
 
   <body>
