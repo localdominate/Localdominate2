@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 declare global {
   interface Window {
     dataLayer: any[];
-    loadGA4?: () => void;
+    gtag: (...args: any[]) => void;
   }
 }
 
@@ -26,32 +26,29 @@ const CookieBanner = () => {
     }
   }, []);
 
-  const loadGA4 = () => {
-    // Trigger GA4 loading via the global function defined in index.html
-    if (typeof window !== "undefined" && window.loadGA4) {
-      window.loadGA4();
-    } else if (typeof window !== "undefined") {
-      // Fallback: manually trigger if the function exists
-      const event = new StorageEvent('storage', {
-        key: 'cookieConsent',
-        newValue: 'all'
-      });
-      window.dispatchEvent(event);
-    }
-  };
-
   const handleAcceptAll = () => {
     localStorage.setItem("cookieConsent", "all");
+    localStorage.setItem("cookieConsentTimestamp", new Date().toISOString());
     
-    // Load GA4
-    loadGA4();
+    // Update Google Consent Mode V2
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted'
+      });
+    }
     
     // Push consent event to dataLayer
     if (typeof window !== "undefined") {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: "cookie_consent",
-        consent_type: "all"
+        event: "consent_update",
+        consent_analytics: true,
+        consent_marketing: true
       });
     }
     setIsVisible(false);
@@ -59,13 +56,27 @@ const CookieBanner = () => {
 
   const handleAcceptEssential = () => {
     localStorage.setItem("cookieConsent", "essential");
+    localStorage.setItem("cookieConsentTimestamp", new Date().toISOString());
     
-    // Push consent event to dataLayer (no GA4 loading)
+    // Keep consent denied for tracking, only allow functionality
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'denied'
+      });
+    }
+    
+    // Push consent event to dataLayer
     if (typeof window !== "undefined") {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: "cookie_consent",
-        consent_type: "essential"
+        event: "consent_update",
+        consent_analytics: false,
+        consent_marketing: false
       });
     }
     setIsVisible(false);
