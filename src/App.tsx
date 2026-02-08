@@ -26,6 +26,7 @@ const Analytics = lazy(() => import("./pages/Analytics"));
 const ABTestDashboard = lazy(() => import("./pages/ABTestDashboard"));
 const ABTestZentrale = lazy(() => import("./pages/ABTestZentrale"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const TestB = lazy(() => import("./pages/TestB"));
 const ContentPlanDashboard = lazy(() => import("./pages/ContentPlanDashboard"));
 const MeineKunden = lazy(() => import("./pages/MeineKunden"));
 const SeoLexikon = lazy(() => import("./pages/SeoLexikon"));
@@ -238,6 +239,7 @@ const App = () => (
                 <Route path="/blog/gbp-attribute-richtig-nutzen" element={<GbpAttributeRichtigNutzen />} />
                 <Route path="/blog/local-seo-vs-maps-seo" element={<LocalSeoVsMaps />} />
                 <Route path="/blog/local-citations-2025" element={<LocalCitations2025 />} />
+                <Route path="/test-b" element={<TestB />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
