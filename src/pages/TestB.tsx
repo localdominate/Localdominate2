@@ -1,20 +1,15 @@
-import { useEffect, useRef, useCallback } from "react";
-import { ArrowDown, Check, Shield, ChevronDown, ChevronUp } from "lucide-react";
+import { useEffect, useRef, useCallback, useState } from "react";
+import { Check, Shield, ChevronDown, ChevronUp, ArrowRight, Clock, Zap, Eye, Phone, Search, TrendingUp, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openStripeCheckout } from "@/lib/stripe";
 import { trackButtonClick } from "@/lib/dataLayer";
 import SEOHead from "@/components/SEOHead";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-// ─── Tracking helper ───
-const trackSectionView = (sectionName: string) => {
+// ─── Tracking ───
+const trackGA = (event: string, params: Record<string, string | number>) => {
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("event", "section_view", {
-      section_name: sectionName,
-      test_variant: "B",
-      page_location: "/test-b",
-    });
+    window.gtag("event", event, { ...params, test_variant: "B" });
   }
 };
 
@@ -26,7 +21,7 @@ const useInViewTracker = (sectionName: string) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          trackSectionView(sectionName);
+          trackGA("section_view", { section_name: sectionName, page_location: "/test-b" });
           observer.disconnect();
         }
       },
@@ -38,89 +33,287 @@ const useInViewTracker = (sectionName: string) => {
   return ref;
 };
 
+const handleCtaClick = (location: string) => {
+  trackButtonClick("test_b_cta", location, 299);
+  trackGA("cta_click", { cta_location: location });
+  openStripeCheckout("standard", `test_b_${location}`, "Kostenloses Audit anfordern");
+};
+
 // ─── Section 1: Hero ───
 const HeroSection = () => {
   const ref = useInViewTracker("hero");
   return (
-    <section ref={ref} className="relative min-h-[80vh] flex items-center justify-center px-4 py-20 md:py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/30" />
+    <section ref={ref} className="relative min-h-[85vh] flex items-center justify-center px-4 py-24 md:py-36 overflow-hidden">
+      {/* Subtle grid background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/20" />
+      
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+        {/* Trust chip */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-bold text-foreground leading-tight tracking-tight"
+          transition={{ duration: 0.4 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/8 border border-primary/15 text-primary text-sm font-medium mb-8"
         >
-          Dein Google-Profil arbeitet gegen dich – und du merkst es nicht.
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+          </span>
+          127+ lokale Unternehmen vertrauen uns
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-4xl md:text-6xl font-extrabold text-foreground leading-[1.1] tracking-tight"
+        >
+          Deine Kunden suchen lokal.
+          <br />
+          <span className="text-primary">Finden sie dich?</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
         >
-          Jeden Monat gehen 15–30 Kundenanfragen an Wettbewerber, die nicht besser sind – nur sichtbarer. Wir ändern das. Einmalig. In unter 14 Tagen.
+          Wir prüfen dein Google-Profil, zeigen dir genau wo Sichtbarkeit verloren geht – und beheben es. Einmalig. Messbar. In unter 14 Tagen.
         </motion.p>
+
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-12 flex justify-center"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <ArrowDown className="w-5 h-5 text-muted-foreground animate-bounce" />
+          <Button
+            size="lg"
+            className="text-base px-8 py-6 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
+            onClick={() => handleCtaClick("hero")}
+          >
+            Kostenloses Audit anfordern
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+          <span className="text-sm text-muted-foreground">
+            Kein Vertrag · Keine Kosten · Ergebnis in 48h
+          </span>
         </motion.div>
       </div>
     </section>
   );
 };
 
-// ─── Section 2: Proof Bar ───
+// ─── Proof Bar ───
 const ProofBar = () => {
   const ref = useInViewTracker("proof_bar");
+  const stats = [
+    { value: "127+", label: "Optimierte Profile" },
+    { value: "3,2×", label: "Mehr Anrufe (Ø 30 Tage)" },
+    { value: "100%", label: "Geld-zurück-Garantie" },
+  ];
   return (
-    <section ref={ref} className="border-y border-border bg-muted/40 py-4">
-      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 px-4 text-sm text-muted-foreground">
-        <span className="font-medium">127+ optimierte Profile</span>
-        <span className="hidden sm:inline text-border">·</span>
-        <span className="font-medium">Ø 3,2× mehr Anrufe nach 30 Tagen</span>
-        <span className="hidden sm:inline text-border">·</span>
-        <span className="font-medium">100% Geld-zurück-Garantie</span>
+    <section ref={ref} className="border-y border-border bg-muted/30 py-6">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 px-4">
+        {stats.map((s, i) => (
+          <div key={i} className="flex flex-col items-center text-center sm:border-r sm:last:border-r-0 border-border">
+            <span className="text-2xl font-bold text-foreground">{s.value}</span>
+            <span className="text-sm text-muted-foreground mt-0.5">{s.label}</span>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-// ─── Section 3: Problem Timeline ───
+// ─── Section 2: Problem Clarification ───
 const ProblemSection = () => {
   const ref = useInViewTracker("problem");
-  const steps = [
-    { num: "1", text: 'Kunde sucht "Branche + Stadt" bei Google' },
-    { num: "2", text: "Findet 3 Ergebnisse im Local Pack – du bist nicht dabei" },
-    { num: "3", text: "Ruft bei der Konkurrenz an und bucht dort" },
+  const problems = [
+    {
+      icon: Search,
+      text: "Dein Profil erscheint nicht im Local Pack – deine Konkurrenz schon.",
+    },
+    {
+      icon: Phone,
+      text: "Potenzielle Kunden rufen bei dem Unternehmen an, das sie zuerst finden. Nicht beim besten.",
+    },
+    {
+      icon: Eye,
+      text: "Du investierst in dein Geschäft, aber nicht in deine Sichtbarkeit. Das kostet dich jeden Tag Umsatz.",
+    },
   ];
+
   return (
-    <section ref={ref} className="py-16 md:py-24 px-4">
+    <section ref={ref} className="py-20 md:py-28 px-4">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
-          Was gerade passiert – ohne dass du es siehst
-        </h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl font-bold text-foreground text-center mb-4"
+        >
+          Das Problem ist nicht dein Angebot.
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-muted-foreground text-center text-lg mb-14 max-w-xl mx-auto"
+        >
+          Es ist, dass Google dich nicht zeigt.
+        </motion.p>
+
+        <div className="space-y-5">
+          {problems.map((p, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="flex items-start gap-4 p-5 rounded-xl bg-muted/40 border border-border"
+            >
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-destructive/10 text-destructive flex items-center justify-center">
+                <p.icon className="w-5 h-5" />
+              </div>
+              <p className="text-foreground leading-relaxed pt-1.5">{p.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ─── Section 3: Why This Works ───
+const WhyItWorksSection = () => {
+  const ref = useInViewTracker("solution");
+  const reasons = [
+    {
+      title: "Keyword-Injektion",
+      desc: "Wir platzieren exakt die Suchbegriffe in deinem Profil, nach denen deine Kunden tatsächlich suchen – nicht allgemeine Keywords.",
+      icon: Zap,
+    },
+    {
+      title: "Psycho-Visuelle Anker",
+      desc: "Deine Galerie wird nach verkaufspsychologischen Prinzipien strukturiert. Vertrauen entsteht, bevor ein Wort gelesen wird.",
+      icon: Eye,
+    },
+    {
+      title: "5-Sterne-Automatismus",
+      desc: "Ein System, das zufriedene Kunden im richtigen Moment zur Bewertung führt – ohne Betteln, ohne Tricks.",
+      icon: TrendingUp,
+    },
+  ];
+
+  return (
+    <section ref={ref} className="py-20 md:py-28 px-4 bg-muted/20">
+      <div className="max-w-4xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl font-bold text-foreground text-center mb-4"
+        >
+          Warum es funktioniert
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-muted-foreground text-center text-lg mb-14 max-w-xl mx-auto"
+        >
+          Drei gezielte Eingriffe. Kein laufender Aufwand.
+        </motion.p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {reasons.map((r, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="group bg-card border border-border rounded-2xl p-7 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
+                <r.icon className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-foreground mb-2">{r.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ─── Section 4: How It Works ───
+const HowItWorksSection = () => {
+  const ref = useInViewTracker("process");
+  const steps = [
+    {
+      num: "01",
+      title: "Analyse",
+      desc: "Wir prüfen dein Profil, deine Konkurrenz und die relevanten Suchbegriffe in deiner Stadt. Ergebnis in 48 Stunden.",
+      time: "Tag 1–2",
+    },
+    {
+      num: "02",
+      title: "Umsetzung",
+      desc: "Keywords, Kategorien, Fotos, Bewertungslogik – wir optimieren alles. Du musst nichts tun.",
+      time: "Tag 3–7",
+    },
+    {
+      num: "03",
+      title: "Ergebnisse",
+      desc: "Du siehst die Veränderungen in deinem Google Dashboard. Messbar. Nachvollziehbar.",
+      time: "Tag 14–30",
+    },
+  ];
+
+  return (
+    <section ref={ref} className="py-20 md:py-28 px-4">
+      <div className="max-w-3xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl font-bold text-foreground text-center mb-14"
+        >
+          So läuft es ab
+        </motion.h2>
+
         <div className="relative">
           {/* Connecting line */}
-          <div className="absolute left-6 top-8 bottom-8 w-px bg-border hidden md:block" />
+          <div className="absolute left-[27px] top-12 bottom-12 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent hidden md:block" />
+
           <div className="space-y-8">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="flex items-start gap-4"
+                transition={{ delay: i * 0.12 }}
+                className="flex items-start gap-5"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center text-lg font-bold">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-sm font-bold border border-primary/20">
                   {step.num}
                 </div>
-                <p className="text-lg text-foreground pt-2.5">{step.text}</p>
+                <div className="pt-1">
+                  <div className="flex items-center gap-3 mb-1.5">
+                    <h3 className="text-lg font-bold text-foreground">{step.title}</h3>
+                    <span className="text-xs font-medium text-primary bg-primary/8 px-2.5 py-0.5 rounded-full">{step.time}</span>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -130,57 +323,42 @@ const ProblemSection = () => {
   );
 };
 
-// ─── Section 4: Solution (Before/After) ───
-const SolutionSection = () => {
-  const ref = useInViewTracker("solution");
+// ─── Section 5: Trust & Reassurance ───
+const TrustSection = () => {
+  const ref = useInViewTracker("trust");
   const items = [
-    {
-      title: "Keyword-Injektion",
-      before: "Generisches Profil ohne Suchrelevanz",
-      after: "Suchmaschinen-dominantes Profil mit den richtigen Begriffen",
-    },
-    {
-      title: "Psycho-Visuelle Anker",
-      before: "Zufällige Fotos ohne Wirkung",
-      after: "Verkaufspsychologisch strukturierte Galerie",
-    },
-    {
-      title: "5-Sterne-Automatismus",
-      before: "Gelegentliche Bewertungen",
-      after: "Systematischer Bewertungsstrom von zufriedenen Kunden",
-    },
+    { icon: FileCheck, text: "127+ Profile optimiert – branchenübergreifend" },
+    { icon: Clock, text: "Ergebnisse in 14–30 Tagen messbar" },
+    { icon: Shield, text: "30 Tage Geld-zurück-Garantie – ohne Bedingungen" },
+    { icon: Zap, text: "Einmalzahlung. Kein Abo. Keine laufenden Kosten." },
   ];
+
   return (
-    <section ref={ref} className="py-16 md:py-24 px-4 bg-muted/20">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-4">
-          Was nach der Optimierung anders ist
-        </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-          Drei gezielte Eingriffe, die dein Profil von unsichtbar zu dominant verwandeln.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6">
+    <section ref={ref} className="py-20 md:py-28 px-4 bg-muted/20">
+      <div className="max-w-3xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl font-bold text-foreground text-center mb-14"
+        >
+          Warum Unternehmer uns vertrauen
+        </motion.h2>
+
+        <div className="grid sm:grid-cols-2 gap-4">
           {items.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card border border-border rounded-xl p-6"
+              transition={{ delay: i * 0.08 }}
+              className="flex items-center gap-4 p-5 bg-card border border-border rounded-xl"
             >
-              <h3 className="text-lg font-bold text-foreground mb-4">{item.title}</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <span className="text-muted-foreground text-sm mt-0.5">Vorher:</span>
-                  <span className="text-sm text-muted-foreground">{item.before}</span>
-                </div>
-                <div className="h-px bg-border" />
-                <div className="flex items-start gap-2">
-                  <span className="text-primary text-sm font-medium mt-0.5">Nachher:</span>
-                  <span className="text-sm text-foreground font-medium">{item.after}</span>
-                </div>
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <item.icon className="w-5 h-5" />
               </div>
+              <span className="text-foreground font-medium">{item.text}</span>
             </motion.div>
           ))}
         </div>
@@ -189,196 +367,167 @@ const SolutionSection = () => {
   );
 };
 
-// ─── Section 5: Case Metrics ───
-const TestimonialsSection = () => {
-  const ref = useInViewTracker("testimonials");
-  const cases = [
-    { metric: "+312% Profilaufrufe", context: "Zahnarztpraxis · München · nach 21 Tagen" },
-    { metric: "4× mehr Anrufe", context: "Restaurant · Berlin · nach 18 Tagen" },
-    { metric: "Von Seite 3 auf Platz 2", context: "Handwerksbetrieb · Hamburg · nach 28 Tagen" },
+// ─── Section 6: Risk Reversal ───
+const RiskReversalSection = () => {
+  const ref = useInViewTracker("guarantee");
+  const points = [
+    "Nicht zufrieden? Volle Erstattung innerhalb von 30 Tagen. Eine E-Mail genügt.",
+    "Kein Abo, kein Vertrag, keine versteckten Folgekosten.",
+    "Dein einziges Risiko ist, nichts zu ändern.",
   ];
+
   return (
-    <section ref={ref} className="py-16 md:py-24 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
-          Messbare Ergebnisse
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {cases.map((c, i) => (
+    <section ref={ref} className="py-20 md:py-28 px-4">
+      <div className="max-w-2xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-8"
+        >
+          <Shield className="w-8 h-8 text-primary" />
+        </motion.div>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl font-bold text-foreground mb-10"
+        >
+          Null Risiko. Garantiert.
+        </motion.h2>
+
+        <div className="space-y-4 mb-10">
+          {points.map((point, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-card border border-border rounded-xl p-6 text-center"
+              className="flex items-start gap-3 text-left max-w-lg mx-auto"
             >
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{c.metric}</div>
-              <div className="text-sm text-muted-foreground">{c.context}</div>
+              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-foreground leading-relaxed">{point}</span>
             </motion.div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-};
 
-// ─── Section 6: Offer + Value Stack ───
-const OfferSection = () => {
-  const ref = useInViewTracker("offer");
-  const handleCta = useCallback(() => {
-    trackButtonClick("test_b_cta", "offer_section", 299);
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("event", "cta_click", { cta_location: "offer", test_variant: "B" });
-    }
-    openStripeCheckout("standard", "test_b_offer", "Jetzt Profil optimieren lassen");
-  }, []);
-
-  const stack = [
-    { name: "Core-Optimierung", value: "299" },
-    { name: "Bewertungs-Magnet System", value: "149" },
-    { name: "Mitarbeiter-Skript", value: "99" },
-    { name: "Ranking-Versicherung", value: "79" },
-  ];
-
-  return (
-    <section ref={ref} className="py-16 md:py-24 px-4 bg-muted/20">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-          Alles in einem Paket
-        </h2>
-        <div className="bg-card border border-border rounded-2xl p-6 md:p-8">
-          <div className="space-y-3 mb-6">
-            {stack.map((item, i) => (
-              <div key={i} className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span className="text-foreground">{item.name}</span>
-                </div>
-                <span className="text-muted-foreground line-through text-sm">{item.value}€</span>
-              </div>
-            ))}
-          </div>
-          <div className="border-t border-border pt-6 mb-6">
-            <div className="flex items-baseline justify-between">
-              <span className="text-muted-foreground">Gesamtwert</span>
-              <span className="text-muted-foreground line-through">626€</span>
-            </div>
-            <div className="flex items-baseline justify-between mt-1">
-              <span className="text-lg font-bold text-foreground">Dein Preis</span>
-              <span className="text-3xl font-bold text-primary">299€</span>
-            </div>
-            <p className="text-sm text-muted-foreground mt-1">Einmalzahlung · Keine versteckten Kosten</p>
-          </div>
-          <Button
-            size="lg"
-            className="w-full text-base py-6"
-            onClick={handleCta}
-          >
-            Jetzt Profil optimieren lassen – 299€ einmalig
-          </Button>
-          <p className="text-xs text-muted-foreground text-center mt-3">
-            Einmalzahlung · Keine versteckten Kosten · 30 Tage Geld-zurück-Garantie
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ─── Section 7: Guarantee ───
-const GuaranteeSection = () => {
-  const ref = useInViewTracker("guarantee");
-  const handleCta = useCallback(() => {
-    trackButtonClick("test_b_cta_guarantee", "guarantee_section", 299);
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("event", "cta_click", { cta_location: "guarantee", test_variant: "B" });
-    }
-    openStripeCheckout("standard", "test_b_guarantee", "Jetzt Profil optimieren lassen");
-  }, []);
-
-  return (
-    <section ref={ref} className="py-16 md:py-24 px-4">
-      <div className="max-w-2xl mx-auto text-center">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-          <Shield className="w-8 h-8 text-primary" />
-        </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-          30 Tage testen. Kein Risiko.
-        </h2>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-2">
-          Wenn du innerhalb von 30 Tagen nach der Optimierung nicht messbar mehr Profilaufrufe oder Kundenanfragen bekommst, erstatten wir den vollen Betrag.
-        </p>
-        <p className="text-muted-foreground mb-2">
-          Kein Formular. Keine Begründung. Eine E-Mail genügt.
-        </p>
-        <p className="text-xs text-muted-foreground mb-8">
+        <p className="text-xs text-muted-foreground max-w-md mx-auto">
           Es gelten unsere AGB. Die Erstattung erfolgt innerhalb von 7 Werktagen auf das ursprüngliche Zahlungsmittel.
         </p>
-        <Button
-          size="lg"
-          className="text-base px-8 py-6"
-          onClick={handleCta}
-        >
-          Jetzt Profil optimieren lassen – 299€ einmalig
-        </Button>
-        <p className="text-xs text-muted-foreground mt-3">
-          Einmalzahlung · Keine versteckten Kosten · 30 Tage Geld-zurück-Garantie
-        </p>
       </div>
     </section>
   );
 };
 
-// ─── Section 8: FAQ ───
+// ─── Section 7: Final CTA ───
+const FinalCTASection = () => {
+  const ref = useInViewTracker("final_cta");
+
+  return (
+    <section ref={ref} className="py-20 md:py-28 px-4">
+      <div className="max-w-2xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center bg-gradient-to-br from-primary/5 via-card to-primary/5 border border-primary/15 rounded-3xl p-10 md:p-14"
+        >
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+            Bereit, sichtbar zu werden?
+          </h2>
+          <p className="text-muted-foreground text-lg mb-8 max-w-md mx-auto">
+            Finde heraus, was dein Profil aktuell kostet – und was es bringen könnte.
+          </p>
+          <Button
+            size="lg"
+            className="text-base px-10 py-6 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all"
+            onClick={() => handleCtaClick("final_cta")}
+          >
+            Kostenloses Audit anfordern
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+          <p className="text-sm text-muted-foreground mt-4">
+            Kein Vertrag · Kein Risiko · Ergebnis in 48h
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+// ─── FAQ ───
 const FAQSection = () => {
   const ref = useInViewTracker("faq");
   const [open, setOpen] = useState<number | null>(null);
   const faqs = [
     {
-      q: "Muss ich selbst etwas tun?",
-      a: "Nein. Wir übernehmen die komplette Optimierung. Du gibst uns Zugang zu deinem Google-Profil, den Rest erledigen wir.",
+      q: "Was genau passiert nach der Bestellung?",
+      a: "Du erhältst innerhalb von 48 Stunden eine Analyse deines Profils mit konkreten Handlungsempfehlungen. Danach setzen wir alles für dich um – du musst nichts tun.",
+    },
+    {
+      q: "Muss ich Zugangsdaten teilen?",
+      a: "Nur den Zugang zu deinem Google Unternehmensprofil. Keine Passwörter zu anderen Systemen. Du behältst die volle Kontrolle.",
     },
     {
       q: "Wie schnell sehe ich Ergebnisse?",
-      a: "Erste messbare Verbesserungen bei Profilaufrufen und Suchanfragen siehst du in der Regel innerhalb von 7–14 Tagen.",
+      a: "Erste messbare Verbesserungen bei Profilaufrufen und Suchanfragen innerhalb von 7–14 Tagen. Volle Wirkung nach 30 Tagen.",
     },
     {
-      q: "Was wenn ich schon ein Google-Profil habe?",
-      a: "Perfekt. Wir optimieren dein bestehendes Profil. Du verlierst keine bestehenden Bewertungen oder Daten.",
+      q: "Was wenn es nicht funktioniert?",
+      a: "Dann bekommst du dein Geld zurück. Vollständig. Innerhalb von 30 Tagen. Eine E-Mail genügt – keine Begründung nötig.",
     },
     {
-      q: "Ist das wirklich eine einmalige Zahlung?",
-      a: "Ja. 299€ einmalig. Kein Abo, keine monatlichen Gebühren, keine versteckten Kosten. Was du zahlst, ist was du zahlst.",
+      q: "Ist das ein Abo?",
+      a: "Nein. Einmalige Zahlung. Keine Folgekosten, kein Vertrag, keine automatische Verlängerung.",
     },
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 px-4 bg-muted/20">
+    <section ref={ref} className="py-20 md:py-28 px-4 bg-muted/20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl font-bold text-foreground text-center mb-12"
+        >
           Häufige Fragen
-        </h2>
+        </motion.h2>
         <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-card border border-border rounded-xl overflow-hidden">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="bg-card border border-border rounded-xl overflow-hidden"
+            >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/30 transition-colors"
               >
                 <span className="text-foreground font-medium pr-4">{faq.q}</span>
-                {open === i ? (
-                  <ChevronUp className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                )}
+                <ChevronDown className={`w-4 h-4 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`} />
               </button>
-              {open === i && (
-                <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed">
-                  {faq.a}
-                </div>
-              )}
-            </div>
+              <AnimatePresence>
+                {open === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed">
+                      {faq.a}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -392,43 +541,50 @@ const StickyFooterCTA = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-      setVisible(scrollPercent > 50);
+      setVisible(window.scrollY > 600);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleCta = () => {
-    trackButtonClick("test_b_sticky_cta", "sticky_footer", 299);
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("event", "cta_click", { cta_location: "sticky_footer", test_variant: "B" });
-    }
-    openStripeCheckout("standard", "test_b_sticky", "Jetzt Profil optimieren lassen");
-  };
-
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-t border-border p-3 md:hidden">
-      <Button size="sm" className="w-full text-sm" onClick={handleCta}>
-        Jetzt Profil optimieren – 299€
+    <motion.div
+      initial={{ y: 80 }}
+      animate={{ y: 0 }}
+      className="fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-t border-border p-3 md:hidden"
+    >
+      <Button
+        size="sm"
+        className="w-full text-sm shadow-sm"
+        onClick={() => handleCtaClick("sticky_footer")}
+      >
+        Kostenloses Audit anfordern
+        <ArrowRight className="ml-2 h-3.5 w-3.5" />
       </Button>
-    </div>
+    </motion.div>
   );
 };
 
+// ─── Minimal Footer ───
+const MinimalFooter = () => (
+  <footer className="border-t border-border py-8 px-4">
+    <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+      <span>© {new Date().getFullYear()} Local Dominator</span>
+      <div className="flex gap-6">
+        <a href="/impressum" className="hover:text-foreground transition-colors">Impressum</a>
+        <a href="/datenschutz" className="hover:text-foreground transition-colors">Datenschutz</a>
+        <a href="/agb" className="hover:text-foreground transition-colors">AGB</a>
+      </div>
+    </div>
+  </footer>
+);
+
 // ─── Page ───
 export default function TestB() {
-  // Track page view with test variant
   useEffect(() => {
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("event", "page_view", {
-        page_location: "/test-b",
-        page_title: "Test B – Local Dominator",
-        test_variant: "B",
-      });
-    }
+    trackGA("page_view", { page_location: "/test-b", page_title: "Test B – Local Dominator" });
   }, []);
 
   // Scroll depth tracking
@@ -441,12 +597,7 @@ export default function TestB() {
       [25, 50, 75, 100].forEach((m) => {
         if (percent >= m && !milestones.has(m)) {
           milestones.add(m);
-          if (typeof window.gtag === "function") {
-            window.gtag("event", "scroll_depth", {
-              percent_scrolled: m,
-              test_variant: "B",
-            });
-          }
+          trackGA("scroll_depth", { percent_scrolled: m });
         }
       });
     };
@@ -457,19 +608,21 @@ export default function TestB() {
   return (
     <>
       <SEOHead
-        title="Google-Profil Optimierung – Local Dominator"
-        description="Mehr Kundenanfragen über Google. Einmalig optimiert. 30 Tage Geld-zurück-Garantie."
+        title="Lokale Sichtbarkeit steigern – Local Dominator"
+        description="Wir optimieren dein Google-Profil für mehr Kundenanfragen. Einmalig. Messbar. Mit Geld-zurück-Garantie."
         noindex={true}
       />
       <div className="min-h-screen bg-background">
         <HeroSection />
         <ProofBar />
         <ProblemSection />
-        <SolutionSection />
-        <TestimonialsSection />
-        <OfferSection />
-        <GuaranteeSection />
+        <WhyItWorksSection />
+        <HowItWorksSection />
+        <TrustSection />
+        <RiskReversalSection />
+        <FinalCTASection />
         <FAQSection />
+        <MinimalFooter />
         <StickyFooterCTA />
       </div>
     </>
