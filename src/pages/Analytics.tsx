@@ -86,6 +86,12 @@ const Analytics = () => {
   const [dbConversions, setDbConversions] = useState<DBConversion[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // ALL hooks must be before early returns
+  const metrics = useMemo(() => calculateMetrics(), [refreshKey]);
+  const heatmapData = useMemo(() => getHeatmapData(), [refreshKey]);
+  const sessions = useMemo(() => getSessions(), [refreshKey]);
+  const events = useMemo(() => getEvents(), [refreshKey]);
+
   // Fetch data from Supabase
   useEffect(() => {
     if (!isAdmin) return;
@@ -109,42 +115,6 @@ const Analytics = () => {
     
     fetchData();
   }, [isAdmin, refreshKey]);
-
-  // Loading state
-  if (authLoading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="text-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent mx-auto mb-4" />
-          <p className="text-muted-foreground">Lade...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Login Screen
-  if (!user) {
-    return (
-      <AdminLoginScreen
-        onLogin={signIn}
-        isLoading={authLoading}
-        error={authError}
-        title="Analytics Dashboard"
-        description="Bitte melde dich mit deinem Admin-Konto an"
-      />
-    );
-  }
-
-  // Access denied for non-admins
-  if (!isAdmin) {
-    return <AdminAccessDenied onSignOut={signOut} userEmail={user.email} />;
-  }
-
-  
-  const metrics = useMemo(() => calculateMetrics(), [refreshKey]);
-  const heatmapData = useMemo(() => getHeatmapData(), [refreshKey]);
-  const sessions = useMemo(() => getSessions(), [refreshKey]);
-  const events = useMemo(() => getEvents(), [refreshKey]);
 
   // A/B Test Analysis from Database
   const abTestAnalysis = useMemo(() => {
@@ -293,6 +263,34 @@ const Analytics = () => {
     
     return Object.entries(days).map(([name, sessions]) => ({ name, sessions }));
   }, [dbSessions]);
+
+  // Early returns AFTER all hooks
+  if (authLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-center">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent mx-auto mb-4" />
+          <p className="text-muted-foreground">Lade...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <AdminLoginScreen
+        onLogin={signIn}
+        isLoading={authLoading}
+        error={authError}
+        title="Analytics Dashboard"
+        description="Bitte melde dich mit deinem Admin-Konto an"
+      />
+    );
+  }
+
+  if (!isAdmin) {
+    return <AdminAccessDenied onSignOut={signOut} userEmail={user.email} />;
+  }
 
   // A/B Variant chart data
   const variantData = [
