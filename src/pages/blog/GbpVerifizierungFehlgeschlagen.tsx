@@ -13,14 +13,14 @@ import { motion } from 'framer-motion';
 const GbpVerifizierungFehlgeschlagen: React.FC = () => {
   const articleData = {
     slug: "gbp-verifizierung-fehlgeschlagen",
-    title: "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2025)",
-    metaTitle: "GBP Verifizierung fehlgeschlagen? 8 Lösungen | Guide 2025",
+    title: "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026)",
+    metaTitle: "GBP Verifizierung fehlgeschlagen? 8 Lösungen | Guide 2026",
     metaDescription: "Deine Google Business Verifizierung klappt nicht? Postkarte nicht erhalten, Code ungültig oder Video abgelehnt? Unser Problemlöser-Wizard zeigt dir die passende Lösung.",
     excerpt: "Der komplette Troubleshooting-Guide für alle Google Business Verifizierungsprobleme mit interaktivem Problemlöser.",
     category: "Troubleshooting",
     readingTime: 12,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "✅",
     keywords: ["gbp verifizierung", "google verifizierung fehlgeschlagen", "postkarte nicht erhalten", "verifizierungscode", "video verifizierung"]
   };

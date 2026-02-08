@@ -13,14 +13,14 @@ import { motion } from 'framer-motion';
 const DuplicateListingEntfernen: React.FC = () => {
   const articleData = {
     slug: "duplicate-listing-entfernen",
-    title: "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2025)",
-    metaTitle: "Duplicate Listing entfernen: Doppelte Google-Einträge löschen | 2025",
+    title: "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026)",
+    metaTitle: "Duplicate Listing entfernen: Doppelte Google-Einträge löschen | 2026",
     metaDescription: "Hast du mehrere Google Business Einträge für denselben Standort? Lerne wie du Duplicates findest, richtig entfernst und zukünftige Dopplungen verhinderst.",
     excerpt: "Der komplette Guide zum Finden und Entfernen von doppelten Google Business Einträgen mit interaktiver Checkliste.",
     category: "Troubleshooting",
     readingTime: 11,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "📋",
     keywords: ["duplicate listing", "doppelte einträge", "google business duplicate", "duplicate entfernen", "mehrere google einträge"]
   };

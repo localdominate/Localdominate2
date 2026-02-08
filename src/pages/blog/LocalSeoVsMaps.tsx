@@ -13,13 +13,13 @@ const LocalSeoVsMaps: React.FC = () => {
   const articleData = {
     slug: "local-seo-vs-maps-unterschied",
     title: "Local SEO vs. Google Maps SEO – Was ist der Unterschied?",
-    metaTitle: "Local SEO vs. Google Maps SEO: Der komplette Vergleich 2025",
+    metaTitle: "Local SEO vs. Google Maps SEO: Der komplette Vergleich 2026",
     metaDescription: "Local SEO und Google Maps SEO werden oft verwechselt. Lerne die Unterschiede, Gemeinsamkeiten und welche Strategie du priorisieren solltest.",
     excerpt: "Die Unterschiede zwischen Local SEO und Google Maps SEO verstehen und die richtige Strategie wählen.",
     category: "Strategie",
     readingTime: 11,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🗺️",
     keywords: ["local seo", "google maps seo", "unterschied local seo", "maps ranking", "lokale suche"]
   };

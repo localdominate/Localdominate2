@@ -12,14 +12,14 @@ import localCitationsImage from '../../assets/blog/local-citations.jpg';
 const LocalCitations2025: React.FC = () => {
   const articleData = {
     slug: "local-citations-2025",
-    title: "Local Citations 2025: Welche Verzeichnisse sind noch wichtig?",
-    metaTitle: "Local Citations 2025: Die wichtigsten Verzeichnisse | Guide",
-    metaDescription: "Welche Branchenverzeichnisse sind 2025 noch relevant für Local SEO? Die aktualisierte Liste der wichtigsten Citations für DACH mit Priorisierung.",
-    excerpt: "Die aktualisierte Citation-Strategie für 2025 mit den wichtigsten Verzeichnissen für Deutschland, Österreich und Schweiz.",
+    title: "Local Citations 2026: Welche Verzeichnisse sind noch wichtig?",
+    metaTitle: "Local Citations 2026: Die wichtigsten Verzeichnisse | Guide",
+    metaDescription: "Welche Branchenverzeichnisse sind 2026 noch relevant für Local SEO? Die aktualisierte Liste der wichtigsten Citations für DACH mit Priorisierung.",
+    excerpt: "Die aktualisierte Citation-Strategie für 2026 mit den wichtigsten Verzeichnissen für Deutschland, Österreich und Schweiz.",
     category: "Strategie",
     readingTime: 13,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "📚",
     keywords: ["local citations", "branchenverzeichnisse", "citations 2025", "nap einträge", "lokale verzeichnisse"]
   };

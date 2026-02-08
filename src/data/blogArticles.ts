@@ -2698,345 +2698,345 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "gbp-suspendiert-reaktivieren",
     de: {
-      title: "Google Business Profil suspendiert – So stellst du es wieder her (2025 Anleitung)",
-      metaTitle: "GBP Suspendiert? So reaktivierst du dein Profil | Anleitung 2025",
+      title: "Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung)",
+      metaTitle: "GBP Suspendiert? So reaktivierst du dein Profil | Anleitung 2026",
       metaDescription: "Dein Google Business Profil wurde suspendiert? Erfahre Schritt für Schritt, wie du eine Soft oder Hard Suspension erkennst und dein Profil erfolgreich reaktivierst.",
       excerpt: "Der komplette Guide zur Reaktivierung eines suspendierten Google Business Profils mit Diagnose-Tool und Appeal-Vorlagen.",
       category: "Troubleshooting"
     },
     en: {
-      title: "Google Business Profile Suspended – How to Restore It (2025 Guide)",
-      metaTitle: "GBP Suspended? How to Reactivate Your Profile | 2025 Guide",
+      title: "Google Business Profile Suspended – How to Restore It (2026 Guide)",
+      metaTitle: "GBP Suspended? How to Reactivate Your Profile | 2026 Guide",
       metaDescription: "Your Google Business Profile was suspended? Learn step by step how to identify a soft or hard suspension and successfully reactivate your profile.",
       excerpt: "The complete guide to reactivating a suspended Google Business Profile with diagnostic tool and appeal templates.",
       category: "Troubleshooting"
     },
     readingTime: 14,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🚫",
     keywords: ["gbp suspendiert", "google business suspendiert", "profil reaktivieren", "suspension beheben", "google appeal"]
   },
   {
     slug: "gbp-verifizierung-fehlgeschlagen",
     de: {
-      title: "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2025)",
-      metaTitle: "GBP Verifizierung fehlgeschlagen? 8 Lösungen | Guide 2025",
+      title: "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026)",
+      metaTitle: "GBP Verifizierung fehlgeschlagen? 8 Lösungen | Guide 2026",
       metaDescription: "Deine Google Business Verifizierung klappt nicht? Postkarte nicht erhalten, Code ungültig oder Video abgelehnt? Unser Problemlöser-Wizard zeigt dir die passende Lösung.",
       excerpt: "Der komplette Troubleshooting-Guide für alle Google Business Verifizierungsprobleme mit interaktivem Problemlöser.",
       category: "Troubleshooting"
     },
     en: {
-      title: "Google Business Verification Fails – 8 Solutions for All Problems (2025)",
-      metaTitle: "GBP Verification Failed? 8 Solutions | 2025 Guide",
+      title: "Google Business Verification Fails – 8 Solutions for All Problems (2026)",
+      metaTitle: "GBP Verification Failed? 8 Solutions | 2026 Guide",
       metaDescription: "Your Google Business verification isn't working? Postcard not received, code invalid or video rejected? Our problem solver wizard shows you the right solution.",
       excerpt: "The complete troubleshooting guide for all Google Business verification problems with interactive problem solver.",
       category: "Troubleshooting"
     },
     readingTime: 12,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "✅",
     keywords: ["gbp verifizierung", "google verifizierung fehlgeschlagen", "postkarte nicht erhalten", "verifizierungscode", "video verifizierung"]
   },
   {
     slug: "duplicate-listing-entfernen",
     de: {
-      title: "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2025)",
-      metaTitle: "Duplicate Listing entfernen: Doppelte Google-Einträge löschen | 2025",
+      title: "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026)",
+      metaTitle: "Duplicate Listing entfernen: Doppelte Google-Einträge löschen | 2026",
       metaDescription: "Hast du mehrere Google Business Einträge für denselben Standort? Lerne wie du Duplicates findest, richtig entfernst und zukünftige Dopplungen verhinderst.",
       excerpt: "Der komplette Guide zum Finden und Entfernen von doppelten Google Business Einträgen mit interaktiver Checkliste.",
       category: "Troubleshooting"
     },
     en: {
-      title: "Delete Duplicate Google Listings – Duplicate Listing Guide (2025)",
-      metaTitle: "Remove Duplicate Listing: Delete Duplicate Google Listings | 2025",
+      title: "Delete Duplicate Google Listings – Duplicate Listing Guide (2026)",
+      metaTitle: "Remove Duplicate Listing: Delete Duplicate Google Listings | 2026",
       metaDescription: "Do you have multiple Google Business listings for the same location? Learn how to find duplicates, properly remove them and prevent future duplications.",
       excerpt: "The complete guide to finding and removing duplicate Google Business listings with interactive checklist.",
       category: "Troubleshooting"
     },
     readingTime: 11,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "📋",
     keywords: ["duplicate listing", "doppelte einträge", "google business duplicate", "duplicate entfernen", "mehrere google einträge"]
   },
   {
     slug: "gbp-bewertung-loeschen-anleitung",
     de: {
-      title: "Google Bewertung löschen lassen – Schritt-für-Schritt Anleitung (2025)",
-      metaTitle: "Google Bewertung löschen: Anleitung zum Melden & Entfernen | 2025",
+      title: "Google Bewertung löschen lassen – Schritt-für-Schritt Anleitung (2026)",
+      metaTitle: "Google Bewertung löschen: Anleitung zum Melden & Entfernen | 2026",
       metaDescription: "Fake-Bewertung oder Verleumdung auf Google? Lerne welche Bewertungen entfernt werden können und wie du erfolgreich gegen unfaire Reviews vorgehst.",
       excerpt: "Der komplette Guide zum Entfernen von unangemessenen Google Bewertungen mit Erfolgsstrategien und rechtlichen Optionen.",
       category: "Troubleshooting"
     },
     en: {
-      title: "Get Google Review Deleted – Step-by-Step Guide (2025)",
-      metaTitle: "Delete Google Review: Guide to Reporting & Removal | 2025",
+      title: "Get Google Review Deleted – Step-by-Step Guide (2026)",
+      metaTitle: "Delete Google Review: Guide to Reporting & Removal | 2026",
       metaDescription: "Fake review or defamation on Google? Learn which reviews can be removed and how to successfully take action against unfair reviews.",
       excerpt: "The complete guide to removing inappropriate Google reviews with success strategies and legal options.",
       category: "Troubleshooting"
     },
     readingTime: 13,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🗑️",
     keywords: ["google bewertung löschen", "fake bewertung melden", "bewertung entfernen", "negative bewertung löschen", "google review löschen"]
   },
   {
     slug: "ranking-ploetzlich-verschwunden",
     de: {
-      title: "Google Ranking plötzlich verschwunden – Ursachen & Soforthilfe (2025)",
-      metaTitle: "Ranking verschwunden? Diagnose & Soforthilfe | Guide 2025",
+      title: "Google Ranking plötzlich verschwunden – Ursachen & Soforthilfe (2026)",
+      metaTitle: "Ranking verschwunden? Diagnose & Soforthilfe | Guide 2026",
       metaDescription: "Dein Google Ranking ist plötzlich weg? Finde heraus ob es an einem Update, einer Penalty oder technischen Problemen liegt. Mit Diagnose-Flowchart.",
       excerpt: "Schnelle Diagnose und Lösungen wenn dein lokales Google Ranking plötzlich einbricht oder verschwindet.",
       category: "Troubleshooting"
     },
     en: {
-      title: "Google Ranking Suddenly Disappeared – Causes & Immediate Help (2025)",
-      metaTitle: "Ranking Disappeared? Diagnosis & Immediate Help | 2025 Guide",
+      title: "Google Ranking Suddenly Disappeared – Causes & Immediate Help (2026)",
+      metaTitle: "Ranking Disappeared? Diagnosis & Immediate Help | 2026 Guide",
       metaDescription: "Your Google ranking suddenly gone? Find out if it's due to an update, penalty or technical issues. With diagnostic flowchart.",
       excerpt: "Quick diagnosis and solutions when your local Google ranking suddenly drops or disappears.",
       category: "Troubleshooting"
     },
     readingTime: 10,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "📉",
     keywords: ["ranking verschwunden", "google ranking weg", "ranking einbruch", "google penalty", "ranking verloren"]
   },
   {
     slug: "gbp-nicht-in-suche-sichtbar",
     de: {
-      title: "Google Business Profil nicht in Suche sichtbar – 12 Lösungen (2025)",
-      metaTitle: "GBP nicht sichtbar in Google? 12 Lösungen | Guide 2025",
+      title: "Google Business Profil nicht in Suche sichtbar – 12 Lösungen (2026)",
+      metaTitle: "GBP nicht sichtbar in Google? 12 Lösungen | Guide 2026",
       metaDescription: "Dein Google Business Profil taucht nicht in der Suche auf? Finde heraus warum und wie du wieder sichtbar wirst. Mit Diagnose-Tool.",
       excerpt: "Alle Gründe warum dein GBP in Google nicht angezeigt wird und wie du das Problem behebst.",
       category: "Troubleshooting"
     },
     en: {
-      title: "Google Business Profile Not Visible in Search – 12 Solutions (2025)",
-      metaTitle: "GBP Not Visible in Google? 12 Solutions | 2025 Guide",
+      title: "Google Business Profile Not Visible in Search – 12 Solutions (2026)",
+      metaTitle: "GBP Not Visible in Google? 12 Solutions | 2026 Guide",
       metaDescription: "Your Google Business Profile doesn't appear in search? Find out why and how to become visible again. With diagnostic tool.",
       excerpt: "All reasons why your GBP isn't showing in Google and how to fix the problem.",
       category: "Troubleshooting"
     },
     readingTime: 11,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "👁️",
     keywords: ["gbp nicht sichtbar", "google business nicht gefunden", "profil nicht angezeigt", "maps eintrag fehlt", "gbp indexierung"]
   },
   {
     slug: "gbp-mehrere-standorte",
     de: {
-      title: "Google Business für mehrere Standorte verwalten – Der Multi-Location Guide (2025)",
-      metaTitle: "GBP mehrere Standorte verwalten | Multi-Location Guide 2025",
+      title: "Google Business für mehrere Standorte verwalten – Der Multi-Location Guide (2026)",
+      metaTitle: "GBP mehrere Standorte verwalten | Multi-Location Guide 2026",
       metaDescription: "Wie du mehrere Google Business Profile effizient verwaltest. Bulk-Uploads, Standortgruppen und Best Practices für Filialisten.",
       excerpt: "Der komplette Guide zur Verwaltung mehrerer Google Business Standorte mit Bulk-Tools und Organisationstipps.",
       category: "Google Business"
     },
     en: {
-      title: "Managing Google Business for Multiple Locations – The Multi-Location Guide (2025)",
-      metaTitle: "Manage GBP Multiple Locations | Multi-Location Guide 2025",
+      title: "Managing Google Business for Multiple Locations – The Multi-Location Guide (2026)",
+      metaTitle: "Manage GBP Multiple Locations | Multi-Location Guide 2026",
       metaDescription: "How to efficiently manage multiple Google Business Profiles. Bulk uploads, location groups and best practices for multi-location businesses.",
       excerpt: "The complete guide to managing multiple Google Business locations with bulk tools and organization tips.",
       category: "Google Business"
     },
     readingTime: 15,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🏢",
     keywords: ["gbp mehrere standorte", "multi location seo", "standortgruppen", "bulk upload", "filialisten google"]
   },
   {
     slug: "gbp-oeffnungszeiten-sondertage",
     de: {
-      title: "Google Business Öffnungszeiten & Sondertage richtig einstellen (2025)",
-      metaTitle: "GBP Öffnungszeiten & Feiertage einstellen | Guide 2025",
+      title: "Google Business Öffnungszeiten & Sondertage richtig einstellen (2026)",
+      metaTitle: "GBP Öffnungszeiten & Feiertage einstellen | Guide 2026",
       metaDescription: "Wie du Öffnungszeiten, Feiertage und Sonderöffnungszeiten in Google Business korrekt einstellst. Mit saisonalen Tipps.",
       excerpt: "Der komplette Guide zu Öffnungszeiten in Google Business inkl. Feiertage, Betriebsferien und Sonderöffnungen.",
       category: "Google Business"
     },
     en: {
-      title: "Setting Google Business Hours & Special Days Correctly (2025)",
-      metaTitle: "Setting GBP Hours & Holidays | 2025 Guide",
+      title: "Setting Google Business Hours & Special Days Correctly (2026)",
+      metaTitle: "Setting GBP Hours & Holidays | 2026 Guide",
       metaDescription: "How to correctly set opening hours, holidays and special hours in Google Business. With seasonal tips.",
       excerpt: "The complete guide to opening hours in Google Business incl. holidays, vacation periods and special hours.",
       category: "Google Business"
     },
     readingTime: 9,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🕐",
     keywords: ["gbp öffnungszeiten", "google business feiertage", "sonderöffnungszeiten", "betriebsferien eintragen", "öffnungszeiten ändern"]
   },
   {
     slug: "gbp-attribute-richtig-nutzen",
     de: {
-      title: "Google Business Attribute richtig nutzen – Alle Optionen erklärt (2025)",
-      metaTitle: "GBP Attribute richtig nutzen | Alle Optionen erklärt 2025",
+      title: "Google Business Attribute richtig nutzen – Alle Optionen erklärt (2026)",
+      metaTitle: "GBP Attribute richtig nutzen | Alle Optionen erklärt 2026",
       metaDescription: "Von LGBTQ+-freundlich bis Rollstuhlzugang: Welche Google Business Attribute es gibt und wie du sie für mehr Sichtbarkeit nutzt.",
       excerpt: "Der komplette Überblick über alle Google Business Attribute und wie sie dein Ranking und deine Kundenansprache verbessern.",
       category: "Google Business"
     },
     en: {
-      title: "Using Google Business Attributes Correctly – All Options Explained (2025)",
-      metaTitle: "Using GBP Attributes Correctly | All Options Explained 2025",
+      title: "Using Google Business Attributes Correctly – All Options Explained (2026)",
+      metaTitle: "Using GBP Attributes Correctly | All Options Explained 2026",
       metaDescription: "From LGBTQ+-friendly to wheelchair access: What Google Business attributes exist and how to use them for more visibility.",
       excerpt: "The complete overview of all Google Business attributes and how they improve your ranking and customer appeal.",
       category: "Google Business"
     },
     readingTime: 10,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🏷️",
     keywords: ["gbp attribute", "google business attribute", "barrierefreiheit", "lgbtq freundlich", "ausstattungsmerkmale"]
   },
   {
     slug: "local-seo-vs-maps-seo",
     de: {
-      title: "Local SEO vs Maps SEO – Was ist der Unterschied? (2025)",
-      metaTitle: "Local SEO vs Maps SEO: Der Unterschied erklärt | 2025",
+      title: "Local SEO vs Maps SEO – Was ist der Unterschied? (2026)",
+      metaTitle: "Local SEO vs Maps SEO: Der Unterschied erklärt | 2026",
       metaDescription: "Was ist der Unterschied zwischen Local SEO und Google Maps SEO? Wann brauchst du was und wie optimierst du für beides?",
       excerpt: "Die Unterschiede und Gemeinsamkeiten von Local SEO und Maps SEO verständlich erklärt mit konkreten Optimierungstipps.",
       category: "Local SEO"
     },
     en: {
-      title: "Local SEO vs Maps SEO – What's the Difference? (2025)",
-      metaTitle: "Local SEO vs Maps SEO: The Difference Explained | 2025",
+      title: "Local SEO vs Maps SEO – What's the Difference? (2026)",
+      metaTitle: "Local SEO vs Maps SEO: The Difference Explained | 2026",
       metaDescription: "What's the difference between Local SEO and Google Maps SEO? When do you need what and how do you optimize for both?",
       excerpt: "The differences and similarities of Local SEO and Maps SEO explained clearly with specific optimization tips.",
       category: "Local SEO"
     },
     readingTime: 8,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🗺️",
     keywords: ["local seo vs maps seo", "unterschied local seo", "google maps seo", "lokale seo", "maps optimierung"]
   },
   {
     slug: "local-citations-2025",
     de: {
-      title: "Local Citations 2025: Die wichtigsten Branchenbücher & Verzeichnisse",
-      metaTitle: "Local Citations 2025: Top Branchenbücher & Verzeichnisse | Guide",
-      metaDescription: "Welche Branchenbücher und Verzeichnisse sind 2025 noch relevant? Der komplette Guide zu Citations mit Priorisierung nach Branche.",
-      excerpt: "Die wichtigsten Local Citations für 2025 mit branchenspezifischen Empfehlungen und Priorisierung.",
+      title: "Local Citations 2026: Die wichtigsten Branchenbücher & Verzeichnisse",
+      metaTitle: "Local Citations 2026: Top Branchenbücher & Verzeichnisse | Guide",
+      metaDescription: "Welche Branchenbücher und Verzeichnisse sind 2026 noch relevant? Der komplette Guide zu Citations mit Priorisierung nach Branche.",
+      excerpt: "Die wichtigsten Local Citations für 2026 mit branchenspezifischen Empfehlungen und Priorisierung.",
       category: "Local SEO"
     },
     en: {
-      title: "Local Citations 2025: The Most Important Directories & Listings",
-      metaTitle: "Local Citations 2025: Top Directories & Listings | Guide",
-      metaDescription: "Which business directories and listings are still relevant in 2025? The complete guide to citations with prioritization by industry.",
-      excerpt: "The most important Local Citations for 2025 with industry-specific recommendations and prioritization.",
+      title: "Local Citations 2026: The Most Important Directories & Listings",
+      metaTitle: "Local Citations 2026: Top Directories & Listings | Guide",
+      metaDescription: "Which business directories and listings are still relevant in 2026? The complete guide to citations with prioritization by industry.",
+      excerpt: "The most important Local Citations for 2026 with industry-specific recommendations and prioritization.",
       category: "Local SEO"
     },
     readingTime: 14,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "📚",
     keywords: ["local citations", "branchenbücher", "verzeichnisse", "citations aufbauen", "nap einträge"]
   },
   {
     slug: "local-link-building",
     de: {
-      title: "Local Link Building: Backlinks für lokale Unternehmen aufbauen (2025)",
-      metaTitle: "Local Link Building: Backlinks für lokale Unternehmen | Guide 2025",
+      title: "Local Link Building: Backlinks für lokale Unternehmen aufbauen (2026)",
+      metaTitle: "Local Link Building: Backlinks für lokale Unternehmen | Guide 2026",
       metaDescription: "Wie du als lokales Unternehmen hochwertige Backlinks aufbaust. Lokale Strategien, Sponsorings und Community-Links für bessere Rankings.",
       excerpt: "Der komplette Guide zum Aufbau lokaler Backlinks mit praktischen Strategien für kleine und mittlere Unternehmen.",
       category: "Local SEO"
     },
     en: {
-      title: "Local Link Building: Building Backlinks for Local Businesses (2025)",
-      metaTitle: "Local Link Building: Backlinks for Local Businesses | 2025 Guide",
+      title: "Local Link Building: Building Backlinks for Local Businesses (2026)",
+      metaTitle: "Local Link Building: Backlinks for Local Businesses | 2026 Guide",
       metaDescription: "How to build quality backlinks as a local business. Local strategies, sponsorships and community links for better rankings.",
       excerpt: "The complete guide to building local backlinks with practical strategies for small and medium businesses.",
       category: "Local SEO"
     },
     readingTime: 16,
     publishedAt: "2025-01-11",
-    updatedAt: "2025-01-11",
+    updatedAt: "2026-02-08",
     icon: "🔗",
     keywords: ["local link building", "lokale backlinks", "backlinks aufbauen", "community links", "lokale seo links"]
   },
   {
     slug: "schema-markup-local-seo",
     de: {
-      title: "Schema Markup für Local SEO: Strukturierte Daten für lokale Unternehmen (2025)",
-      metaTitle: "Schema Markup Local SEO: Strukturierte Daten | Guide 2025",
+      title: "Schema Markup für Local SEO: Strukturierte Daten für lokale Unternehmen (2026)",
+      metaTitle: "Schema Markup Local SEO: Strukturierte Daten | Guide 2026",
       metaDescription: "Wie du Schema Markup für dein lokales Unternehmen implementierst. LocalBusiness Schema, FAQPage und mehr für Rich Snippets.",
       excerpt: "Der technische Guide zu strukturierten Daten für lokale Unternehmen mit Code-Beispielen und Generator.",
       category: "Technical SEO"
     },
     en: {
-      title: "Schema Markup for Local SEO: Structured Data for Local Businesses (2025)",
-      metaTitle: "Schema Markup Local SEO: Structured Data | 2025 Guide",
+      title: "Schema Markup for Local SEO: Structured Data for Local Businesses (2026)",
+      metaTitle: "Schema Markup Local SEO: Structured Data | 2026 Guide",
       metaDescription: "How to implement Schema Markup for your local business. LocalBusiness Schema, FAQPage and more for Rich Snippets.",
       excerpt: "The technical guide to structured data for local businesses with code examples and generator.",
       category: "Technical SEO"
     },
     readingTime: 18,
     publishedAt: "2025-01-11",
-    updatedAt: "2025-01-11",
+    updatedAt: "2026-02-08",
     icon: "📝",
     keywords: ["schema markup", "strukturierte daten", "local business schema", "rich snippets", "json-ld"]
   },
   {
     slug: "local-content-marketing",
     de: {
-      title: "Local Content Marketing: Inhalte für lokale Zielgruppen erstellen (2025)",
-      metaTitle: "Local Content Marketing: Lokale Inhalte erstellen | Guide 2025",
+      title: "Local Content Marketing: Inhalte für lokale Zielgruppen erstellen (2026)",
+      metaTitle: "Local Content Marketing: Lokale Inhalte erstellen | Guide 2026",
       metaDescription: "Wie du Inhalte erstellst, die deine lokale Zielgruppe ansprechen. Lokale Stories, Events und Community-Content für mehr Reichweite.",
       excerpt: "Der Strategie-Guide für lokales Content Marketing mit Ideen und Best Practices für lokale Unternehmen.",
       category: "Content"
     },
     en: {
-      title: "Local Content Marketing: Creating Content for Local Audiences (2025)",
-      metaTitle: "Local Content Marketing: Creating Local Content | 2025 Guide",
+      title: "Local Content Marketing: Creating Content for Local Audiences (2026)",
+      metaTitle: "Local Content Marketing: Creating Local Content | 2026 Guide",
       metaDescription: "How to create content that appeals to your local audience. Local stories, events and community content for more reach.",
       excerpt: "The strategy guide for local content marketing with ideas and best practices for local businesses.",
       category: "Content"
     },
     readingTime: 14,
     publishedAt: "2025-01-11",
-    updatedAt: "2025-01-11",
+    updatedAt: "2026-02-08",
     icon: "✍️",
     keywords: ["local content marketing", "lokaler content", "lokale inhalte", "community content", "lokale stories"]
   },
   {
     slug: "local-seo-mehrstufig-unternehmen",
     de: {
-      title: "Local SEO für mehrstufige Unternehmen: Multi-Location Strategien (2025)",
-      metaTitle: "Local SEO Multi-Location: Strategien für Filialisten | Guide 2025",
+      title: "Local SEO für mehrstufige Unternehmen: Multi-Location Strategien (2026)",
+      metaTitle: "Local SEO Multi-Location: Strategien für Filialisten | Guide 2026",
       metaDescription: "Wie Unternehmen mit mehreren Standorten ihre lokale SEO skalieren. Zentrale Verwaltung, lokale Anpassung und einheitliches Branding.",
       excerpt: "Der Enterprise-Guide für Multi-Location Local SEO mit Skalierungsstrategien und Best Practices.",
       category: "Strategie"
     },
     en: {
-      title: "Local SEO for Multi-Location Businesses: Scaling Strategies (2025)",
-      metaTitle: "Local SEO Multi-Location: Strategies for Franchises | 2025 Guide",
+      title: "Local SEO for Multi-Location Businesses: Scaling Strategies (2026)",
+      metaTitle: "Local SEO Multi-Location: Strategies for Franchises | 2026 Guide",
       metaDescription: "How multi-location businesses scale their local SEO. Central management, local adaptation and consistent branding.",
       excerpt: "The enterprise guide for multi-location Local SEO with scaling strategies and best practices.",
       category: "Strategy"
     },
     readingTime: 17,
     publishedAt: "2025-01-11",
-    updatedAt: "2025-01-11",
+    updatedAt: "2026-02-08",
     icon: "🏬",
     keywords: ["multi location seo", "mehrstufige unternehmen", "filialisten seo", "franchise seo", "standort seo"]
   },
   {
     slug: "local-seo-neugruender",
     de: {
-      title: "Local SEO für Neugründer: Der Starter-Guide (2025)",
-      metaTitle: "Local SEO für Neugründer: Starter-Guide | 2025",
+      title: "Local SEO für Neugründer: Der Starter-Guide (2026)",
+      metaTitle: "Local SEO für Neugründer: Starter-Guide | 2026",
       metaDescription: "Du hast gerade gegründet? So baust du von Anfang an deine lokale Online-Präsenz auf. Mit 90-Tage-Plan und Prioritäten-Guide.",
       excerpt: "Der perfekte Einstieg in Local SEO für Neugründer mit konkretem Zeitplan und Prioritäten.",
       category: "Strategie"
     },
     en: {
-      title: "Local SEO for Startups: The Starter Guide (2025)",
-      metaTitle: "Local SEO for Startups: Starter Guide | 2025",
+      title: "Local SEO for Startups: The Starter Guide (2026)",
+      metaTitle: "Local SEO for Startups: Starter Guide | 2026",
       metaDescription: "Just started your business? How to build your local online presence from the beginning. With 90-day plan and priority guide.",
       excerpt: "The perfect introduction to Local SEO for startups with concrete timeline and priorities.",
       category: "Strategy"
@@ -3050,66 +3050,66 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-optiker",
     de: {
-      title: "Local SEO für Optiker & Hörakustiker: Mehr Kunden durch Google (2025)",
-      metaTitle: "Local SEO für Optiker & Hörakustiker | Branchenguide 2025",
+      title: "Local SEO für Optiker & Hörakustiker: Mehr Kunden durch Google (2026)",
+      metaTitle: "Local SEO für Optiker & Hörakustiker | Branchenguide 2026",
       metaDescription: "Wie Optiker und Hörakustiker durch lokale SEO mehr Kunden gewinnen. Branchenspezifische Keywords, Portale und Google Business Tipps.",
       excerpt: "Der Branchenguide für Optiker und Hörakustiker mit spezifischen SEO-Strategien und Portallisten.",
       category: "Branchen"
     },
     en: {
-      title: "Local SEO for Opticians & Hearing Aid Specialists: More Customers Through Google (2025)",
-      metaTitle: "Local SEO for Opticians & Hearing Aid Specialists | Industry Guide 2025",
+      title: "Local SEO for Opticians & Hearing Aid Specialists: More Customers Through Google (2026)",
+      metaTitle: "Local SEO for Opticians & Hearing Aid Specialists | Industry Guide 2026",
       metaDescription: "How opticians and hearing aid specialists win more customers through local SEO. Industry-specific keywords, portals and Google Business tips.",
       excerpt: "The industry guide for opticians and hearing aid specialists with specific SEO strategies and portal lists.",
       category: "Industries"
     },
     readingTime: 13,
     publishedAt: "2025-01-11",
-    updatedAt: "2025-01-11",
+    updatedAt: "2026-02-08",
     icon: "👓",
     keywords: ["optiker seo", "hörakustiker marketing", "brillen local seo", "optiker google", "hörakustiker seo"]
   },
   {
     slug: "local-seo-notdienst-keywords",
     de: {
-      title: "Notdienst Keywords: So wirst du bei Notfällen gefunden (2025)",
-      metaTitle: "Notdienst Keywords: Bei Notfällen gefunden werden | Guide 2025",
+      title: "Notdienst Keywords: So wirst du bei Notfällen gefunden (2026)",
+      metaTitle: "Notdienst Keywords: Bei Notfällen gefunden werden | Guide 2026",
       metaDescription: "Wie du für Notfall-Suchen rankst. Schlüsseldienst, Notarzt, Klempner Notdienst - die richtigen Keywords und Strategien.",
       excerpt: "Der Spezial-Guide für Notdienst-Keywords und die Optimierung für dringende Suchanfragen.",
       category: "Strategie"
     },
     en: {
-      title: "Emergency Service Keywords: How to Be Found in Emergencies (2025)",
-      metaTitle: "Emergency Service Keywords: Being Found in Emergencies | 2025 Guide",
+      title: "Emergency Service Keywords: How to Be Found in Emergencies (2026)",
+      metaTitle: "Emergency Service Keywords: Being Found in Emergencies | 2026 Guide",
       metaDescription: "How to rank for emergency searches. Locksmith, emergency doctor, emergency plumber - the right keywords and strategies.",
       excerpt: "The special guide for emergency service keywords and optimization for urgent search queries.",
       category: "Strategy"
     },
     readingTime: 11,
     publishedAt: "2025-01-11",
-    updatedAt: "2025-01-11",
+    updatedAt: "2026-02-08",
     icon: "🚨",
     keywords: ["notdienst keywords", "notfall seo", "schlüsseldienst seo", "24h service ranking", "emergency keywords"]
   },
   {
     slug: "local-seo-physiotherapie",
     de: {
-      title: "Local SEO für Physiotherapeuten: Mehr Patienten durch Google (2025)",
-      metaTitle: "Local SEO für Physiotherapeuten | Branchenguide 2025",
+      title: "Local SEO für Physiotherapeuten: Mehr Patienten durch Google (2026)",
+      metaTitle: "Local SEO für Physiotherapeuten | Branchenguide 2026",
       metaDescription: "Wie Physiotherapie-Praxen durch lokale SEO mehr Patienten gewinnen. Spezialisierungen, Kassenzulassung und lokale Keywords.",
       excerpt: "Der Branchenguide für Physiotherapeuten mit spezifischen SEO-Strategien und Keyword-Listen.",
       category: "Branchen"
     },
     en: {
-      title: "Local SEO for Physical Therapists: More Patients Through Google (2025)",
-      metaTitle: "Local SEO for Physical Therapists | Industry Guide 2025",
+      title: "Local SEO for Physical Therapists: More Patients Through Google (2026)",
+      metaTitle: "Local SEO for Physical Therapists | Industry Guide 2026",
       metaDescription: "How physical therapy practices win more patients through local SEO. Specializations, insurance approval and local keywords.",
       excerpt: "The industry guide for physical therapists with specific SEO strategies and keyword lists.",
       category: "Industries"
     },
     readingTime: 12,
     publishedAt: "2025-01-11",
-    updatedAt: "2025-01-11",
+    updatedAt: "2026-02-08",
     icon: "💪",
     keywords: ["physiotherapie seo", "physio marketing", "krankengymnastik local seo", "physiotherapeut google", "praxis marketing physio"]
   },
