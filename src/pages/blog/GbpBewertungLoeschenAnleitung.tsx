@@ -12,14 +12,14 @@ import gbpBewertungLoeschenImage from '../../assets/blog/gbp-bewertung-loeschen.
 const GbpBewertungLoeschenAnleitung: React.FC = () => {
   const articleData = {
     slug: "gbp-bewertung-loeschen-anleitung",
-    title: "Google Bewertung löschen lassen – Komplette Anleitung 2025",
-    metaTitle: "Google Bewertung löschen lassen | Schritt-für-Schritt 2025",
+    title: "Google Bewertung löschen lassen – Komplette Anleitung 2026",
+    metaTitle: "Google Bewertung löschen lassen | Schritt-für-Schritt 2026",
     metaDescription: "Fake-Bewertung oder Verleumdung auf Google? Lerne wie du unfaire Bewertungen melden und löschen lassen kannst. Mit Erfolgsstrategien und rechtlichen Optionen.",
     excerpt: "Der komplette Guide zum Entfernen unfairer Google Bewertungen mit Meldestrategien und rechtlichen Optionen.",
     category: "Troubleshooting",
     readingTime: 13,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🗑️",
     keywords: ["google bewertung löschen", "fake bewertung melden", "negative bewertung entfernen", "google rezension löschen", "bewertung melden"]
   };

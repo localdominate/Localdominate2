@@ -13,13 +13,13 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
   const articleData = {
     slug: "ranking-ploetzlich-verschwunden",
     title: "Google Ranking plötzlich verschwunden – 12 Ursachen & Lösungen",
-    metaTitle: "Google Ranking verschwunden? 12 Ursachen & Soforthilfe 2025",
+    metaTitle: "Google Ranking verschwunden? 12 Ursachen & Soforthilfe 2026",
     metaDescription: "Dein Local Ranking ist über Nacht eingebrochen? Finde die Ursache mit unserem Diagnose-Guide. Von Algorithmus-Updates bis Penalty – alle Lösungen.",
     excerpt: "Schnelle Diagnose und Behebung von plötzlichen Ranking-Verlusten im Local Pack mit 12 häufigen Ursachen.",
     category: "Troubleshooting",
     readingTime: 15,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "📉",
     keywords: ["ranking verschwunden", "local pack verloren", "google ranking einbruch", "seo penalty", "ranking wiederherstellen"]
   };

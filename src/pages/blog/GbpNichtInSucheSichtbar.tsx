@@ -13,13 +13,13 @@ const GbpNichtInSucheSichtbar: React.FC = () => {
   const articleData = {
     slug: "gbp-nicht-in-suche-sichtbar",
     title: "Google Business Profil nicht sichtbar – 9 Gründe & Lösungen",
-    metaTitle: "GBP nicht sichtbar in Google? 9 Gründe & Soforthilfe 2025",
+    metaTitle: "GBP nicht sichtbar in Google? 9 Gründe & Soforthilfe 2026",
     metaDescription: "Dein Google Business Profil wird nicht in der Suche angezeigt? Finde heraus warum und wie du die Sichtbarkeit wiederherstellst. Mit Diagnose-Guide.",
     excerpt: "Warum dein Google Business Profil nicht in der Suche erscheint und wie du es sichtbar machst.",
     category: "Troubleshooting",
     readingTime: 11,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "👁️",
     keywords: ["gbp nicht sichtbar", "google business nicht gefunden", "profil nicht angezeigt", "local pack fehlt", "google maps nicht sichtbar"]
   };

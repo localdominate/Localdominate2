@@ -13,13 +13,13 @@ const GbpOeffnungszeitenSondertage: React.FC = () => {
   const articleData = {
     slug: "gbp-oeffnungszeiten-sondertage",
     title: "Google Business Öffnungszeiten & Sondertage richtig einstellen",
-    metaTitle: "GBP Öffnungszeiten & Feiertage einstellen | Guide 2025",
+    metaTitle: "GBP Öffnungszeiten & Feiertage einstellen | Guide 2026",
     metaDescription: "Öffnungszeiten, Feiertage und Sonderöffnungszeiten korrekt in Google Business eintragen. Vermeide die häufigsten Fehler die Kunden kosten.",
     excerpt: "Alles über Öffnungszeiten, Feiertage und Sonderzeiten im Google Business Profile.",
     category: "Grundlagen",
     readingTime: 9,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🕐",
     keywords: ["öffnungszeiten google", "gbp sondertage", "feiertage eintragen", "geschäftszeiten", "google business hours"]
   };

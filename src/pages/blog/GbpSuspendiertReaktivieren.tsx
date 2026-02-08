@@ -13,14 +13,14 @@ import { motion } from 'framer-motion';
 const GbpSuspendiertReaktivieren: React.FC = () => {
   const articleData = {
     slug: "gbp-suspendiert-reaktivieren",
-    title: "Google Business Profil suspendiert – So stellst du es wieder her (2025 Anleitung)",
-    metaTitle: "GBP Suspendiert? So reaktivierst du dein Profil | Anleitung 2025",
+    title: "Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung)",
+    metaTitle: "GBP Suspendiert? So reaktivierst du dein Profil | Anleitung 2026",
     metaDescription: "Dein Google Business Profil wurde suspendiert? Erfahre Schritt für Schritt, wie du eine Soft oder Hard Suspension erkennst und dein Profil erfolgreich reaktivierst.",
     excerpt: "Der komplette Guide zur Reaktivierung eines suspendierten Google Business Profils mit Diagnose-Tool und Appeal-Vorlagen.",
     category: "Troubleshooting",
     readingTime: 14,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🚫",
     keywords: ["gbp suspendiert", "google business suspendiert", "profil reaktivieren", "suspension beheben", "google appeal"]
   };

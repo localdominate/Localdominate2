@@ -12,14 +12,14 @@ import gbpAttributeImage from '../../assets/blog/gbp-attribute.jpg';
 const GbpAttributeRichtigNutzen: React.FC = () => {
   const articleData = {
     slug: "gbp-attribute-richtig-nutzen",
-    title: "Google Business Attribute – Alle Optionen optimal nutzen (2025)",
-    metaTitle: "GBP Attribute Guide: Alle Optionen für mehr Sichtbarkeit 2025",
+    title: "Google Business Attribute – Alle Optionen optimal nutzen (2026)",
+    metaTitle: "GBP Attribute Guide: Alle Optionen für mehr Sichtbarkeit 2026",
     metaDescription: "Welche Google Business Attribute gibt es und welche sind für dein Geschäft wichtig? Der komplette Guide mit allen Kategorien und Best Practices.",
     excerpt: "Der komplette Guide zu Google Business Attributen für jede Branche.",
     category: "Grundlagen",
     readingTime: 10,
     publishedAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-02-08",
     icon: "🏷️",
     keywords: ["gbp attribute", "google business attribute", "profil attribute", "business features", "google attribute setzen"]
   };
