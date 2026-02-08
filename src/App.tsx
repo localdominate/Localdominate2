@@ -9,6 +9,7 @@ import { ABTestProvider } from "@/hooks/useABTest";
 
 // Critical pages loaded immediately
 import Index from "./pages/Index";
+import TrafficSplitter from "./components/TrafficSplitter";
 
 // Lazy load non-critical pages
 const RestaurantMarketing = lazy(() => import("./pages/RestaurantMarketing"));
@@ -140,7 +141,7 @@ const App = () => (
           <BrowserRouter>
             <Suspense fallback={<PageFallback />}>
               <Routes>
-                <Route path="/" element={<Index />} />
+                <Route path="/" element={<TrafficSplitter><Index /></TrafficSplitter>} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/ab-test" element={<ABTestDashboard />} />
                 <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
