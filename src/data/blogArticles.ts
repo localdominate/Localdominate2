@@ -787,7 +787,7 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
   {
-    slug: "local-seo-yoga-pilates",
+    slug: "local-seo-yoga-studios",
     de: {
       title: "Local SEO für Yoga-Studios & Pilates",
       metaTitle: "Local SEO für Yoga-Studios | Mehr Teilnehmer 2026",
@@ -810,7 +810,7 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
   {
-    slug: "local-seo-tattoo-piercing",
+    slug: "local-seo-tattoo-studios",
     de: {
       title: "Local SEO für Tattoo-Studios & Piercing",
       metaTitle: "Local SEO für Tattoo-Studios | Mehr Kunden 2026",
@@ -833,7 +833,7 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
   {
-    slug: "local-seo-apotheke",
+    slug: "local-seo-apotheken",
     de: {
       title: "Local SEO für Apotheken: Lokale Gesundheitsversorgung",
       metaTitle: "Local SEO für Apotheken | Gesundheits-Marketing 2026",
@@ -3115,6 +3115,95 @@ export const blogArticles: BlogArticle[] = [
   },
 ];
 
+// Slugs that have actual page components and routes
+const PUBLISHED_SLUGS = new Set([
+  "kostenloses-seo-guide",
+  "local-seo-keywords-finden",
+  "google-maps-ranking-verbessern",
+  "google-bewertungen-bekommen",
+  "local-seo-fuer-restaurants",
+  "google-my-business-optimieren",
+  "lokale-suchmaschinenoptimierung-2026",
+  "nap-konsistenz-local-seo",
+  "local-seo-handwerker",
+  "local-seo-audit-checkliste",
+  "local-seo-schweiz",
+  "local-seo-zuerich",
+  "local-seo-muenchen",
+  "local-seo-aerzte-praxen",
+  "local-seo-anwaelte-kanzleien",
+  "local-seo-hotels",
+  "local-seo-fitness",
+  "schema-markup-local-seo",
+  "mobile-local-seo",
+  "google-maps-seo-ranking-faktoren",
+  "local-link-building",
+  "negative-google-bewertungen",
+  "local-content-marketing",
+  "local-seo-case-study-baecker",
+  "local-seo-fehler",
+  "local-seo-doener-kebab-imbiss",
+  "local-seo-friseursalon-beauty",
+  "local-seo-immobilienmakler",
+  "local-seo-hamburg",
+  "local-seo-steuerberater",
+  "local-seo-autowerkstatt",
+  "local-seo-frankfurt",
+  "core-web-vitals-local-seo",
+  "local-seo-berlin",
+  "local-seo-koeln",
+  "local-seo-wien",
+  "local-seo-tierarzt",
+  "ki-tools-local-seo",
+  "google-ai-overviews-local-seo",
+  "seo-toolbox-kostenlose-ressourcen",
+  "local-seo-stuttgart",
+  "local-seo-duesseldorf",
+  "local-seo-basel",
+  "local-seo-yoga-studios",
+  "local-seo-tattoo-studios",
+  "local-seo-apotheken",
+  "gbp-fotos-optimieren",
+  "local-seo-mehrstufig-unternehmen",
+  "e-e-a-t-lokale-unternehmen",
+  "lokale-seo-fuer-neugruender",
+  "google-business-messaging",
+  "local-seo-physiotherapie",
+  "local-seo-notdienst-keywords",
+  "google-business-kategorien-guide",
+  "local-seo-zahnarzt",
+  "lokale-events-marketing",
+  "google-business-produkte-services",
+  "local-seo-optiker",
+  "bewertungs-antworten-vorlagen",
+  "local-seo-elektrotechnik",
+  "google-business-insights-verstehen",
+  "local-seo-fotograf",
+  "local-seo-voice-search",
+  "google-posts-ranking-faktor",
+  "gbp-suspendiert-reaktivieren",
+  "gbp-verifizierung-fehlgeschlagen",
+  "duplicate-listing-entfernen",
+  "gbp-bewertung-loeschen-anleitung",
+  "ranking-ploetzlich-verschwunden",
+  "gbp-nicht-in-suche-sichtbar",
+  "gbp-mehrere-standorte",
+  "gbp-oeffnungszeiten-sondertage",
+  "gbp-attribute-richtig-nutzen",
+  "local-seo-vs-maps-seo",
+  "local-citations-2025",
+]);
+
+// Get only published articles (with pages), deduplicated
+const getPublishedArticles = (): BlogArticle[] => {
+  const seen = new Set<string>();
+  return blogArticles.filter(a => {
+    if (!PUBLISHED_SLUGS.has(a.slug) || seen.has(a.slug)) return false;
+    seen.add(a.slug);
+    return true;
+  });
+};
+
 export const resolveArticle = (article: BlogArticle, language: Language): ResolvedBlogArticle => {
   const content = article[language];
   return {
@@ -3140,22 +3229,22 @@ export const getArticleBySlug = (slug: string, language: Language = "de"): Resol
 };
 
 export const getAllArticles = (language: Language = "de"): ResolvedBlogArticle[] => {
-  return blogArticles.map(a => resolveArticle(a, language));
+  return getPublishedArticles().map(a => resolveArticle(a, language));
 };
 
 export const getRelatedArticles = (currentSlug: string, count: number = 3, language: Language = "de"): ResolvedBlogArticle[] => {
-  const current = blogArticles.find(a => a.slug === currentSlug);
+  const published = getPublishedArticles();
+  const current = published.find(a => a.slug === currentSlug);
   if (!current) {
-    return blogArticles.filter(a => a.slug !== currentSlug).slice(0, count).map(a => resolveArticle(a, language));
+    return published.filter(a => a.slug !== currentSlug).slice(0, count).map(a => resolveArticle(a, language));
   }
   
   const currentCategory = current[language].category;
   
-  // Prioritize same category, then different categories
-  const sameCategory = blogArticles.filter(
+  const sameCategory = published.filter(
     a => a.slug !== currentSlug && a[language].category === currentCategory
   );
-  const otherCategory = blogArticles.filter(
+  const otherCategory = published.filter(
     a => a.slug !== currentSlug && a[language].category !== currentCategory
   );
   
@@ -3163,12 +3252,12 @@ export const getRelatedArticles = (currentSlug: string, count: number = 3, langu
 };
 
 export const getCategories = (language: Language = "de"): string[] => {
-  const categories = new Set(blogArticles.map(a => a[language].category));
+  const categories = new Set(getPublishedArticles().map(a => a[language].category));
   return Array.from(categories);
 };
 
 export const getArticleCountByCategory = (language: Language = "de"): Record<string, number> => {
-  return blogArticles.reduce((acc, article) => {
+  return getPublishedArticles().reduce((acc, article) => {
     const category = article[language].category;
     acc[category] = (acc[category] || 0) + 1;
     return acc;
