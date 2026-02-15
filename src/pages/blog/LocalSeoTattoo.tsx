@@ -54,7 +54,7 @@ const LocalSeoTattoo = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <BlogImage src={localSeoTattooImg} alt="Local SEO für Tattoo und Piercing Studios" priority />
       <KeyTakeawaysBox items={keyTakeaways} />
 
