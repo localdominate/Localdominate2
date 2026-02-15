@@ -44,174 +44,24 @@ const LocalSeoDoenerladen = () => {
     { id: "faq", title: "FAQ" },
   ];
 
-  const faqSchema = {
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was kostet SEO für einen Döner-Laden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Kosten variieren stark: DIY mit kostenlosen Tools (0€), aber Zeitaufwand. Professionelle Local SEO Betreuung liegt bei 200-800€/Monat. Einmalige Optimierung: 500-1.500€. Der ROI ist bei korrekter Umsetzung meist innerhalb von 3-6 Monaten positiv."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie lange dauert es, bis mein Döner-Laden bei Google oben ist?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Erste Verbesserungen sind oft nach 2-4 Wochen sichtbar. Top-3-Positionen bei umkämpften Keywords dauern 3-6 Monate. Faktoren: Konkurrenz vor Ort, Anzahl und Qualität der Bewertungen, Alter des Google Business Profils."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Brauche ich eine Website für meinen Imbiss?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nicht unbedingt, aber empfohlen. Google Business Profil ist das Minimum. Eine einfache Website (auch nur eine Seite) verbessert das Ranking, ermöglicht Online-Bestellungen und zeigt Professionalität. Kostenlose Optionen: Google Sites, Wix."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Keywords sind für Döner-Läden wichtig?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wichtigste Keywords: 'Döner [Stadt]', 'Kebab [Stadtteil]', 'Döner in der Nähe', 'Bester Döner [Stadt]', 'Döner Lieferservice [Stadt]'. Nutze unseren Keyword-Generator im Artikel für personalisierte Vorschläge!"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Lohnt sich Lieferando für Döner-Läden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, für Neukunden-Akquise. Die 13-30% Provision sind hoch, aber die Reichweite unschlagbar. Strategie: Lieferando für Neukunden, dann über Flyer/Rabatte auf eigene Bestellwege umleiten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie bekomme ich mehr Google-Bewertungen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "1. QR-Code an der Kasse aufstellen, 2. Bei jeder Lieferung eine Karte beilegen, 3. Nach positiven Kommentaren direkt fragen, 4. WhatsApp-Link an Stammkunden senden, 5. Auf negative Bewertungen professionell antworten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist wichtiger: Instagram oder Google?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google ist wichtiger für direkte Kundengewinnung (80% der lokalen Suchen). Instagram ist ergänzend für Markenaufbau und jüngere Zielgruppen. Priorisierung: 1. Google Business, 2. Instagram/TikTok, 3. Facebook."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie reagiere ich auf unfaire Bewertungen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ruhig und professionell bleiben. Entschuldigung aussprechen (auch wenn unberechtigt), Lösung anbieten, zum persönlichen Kontakt einladen. Bei Fake-Bewertungen: Als unangemessen bei Google melden. Niemals beleidigend antworten!"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Soll ich meine Preise auf Google zeigen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, unbedingt! Preise erhöhen das Vertrauen, reduzieren Nachfragen und helfen bei der Kaufentscheidung. Kunden, die trotz Preiskenntnis kommen, sind kaufbereiter. Speisekarte mit Preisen als PDF oder Bild hochladen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie oft sollte ich neue Fotos hochladen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mindestens 1x pro Monat neue Fotos. Ideal: 2-4 Fotos pro Woche. Variation: Gerichte, Team, Innenraum, Events. Aktuelle Fotos signalisieren Google, dass der Laden aktiv ist und verbessern das Ranking."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Brauche ich einen professionellen Fotografen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nicht unbedingt. Smartphones machen heute gute Fotos. Wichtiger: gutes Licht (Tageslicht!), sauberer Hintergrund, appetitliche Anrichtung. Für Hero-Bilder und Website kann ein Profi-Shooting (200-500€) sich lohnen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist der Unterschied zwischen Google Maps und Google Business?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google Business ist dein Profil mit allen Infos (Öffnungszeiten, Fotos, Bewertungen). Google Maps zeigt dieses Profil auf der Karte. Du optimierst das Business Profil – Maps zeigt es dann automatisch richtig an."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Soll ich auf TikTok aktiv sein?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wenn deine Zielgruppe jung ist (16-30): Ja! Döner-Content geht oft viral. Einfache Videos: Döner schneiden, Behind the Scenes, Mitarbeiter-Challenges. Zeitaufwand: 3-5 kurze Videos pro Woche."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie wichtig ist die Speisekarte für SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sehr wichtig! Die Speisekarte sollte alle Gerichte mit Keywords beschreiben (z.B. 'Döner Kebab im Fladenbrot' statt nur 'Döner'). Als Text auf der Website, nicht nur als Bild-PDF. Preise immer angeben."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kann ich Local SEO selbst machen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja! Die Grundlagen (Google Business optimieren, Fotos, Bewertungen beantworten) kann jeder. Für fortgeschrittene Strategien (Website-SEO, Backlinks) ist mehr Wissen nötig. Dieser Artikel gibt dir alle Tools an die Hand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was bedeutet NAP-Konsistenz?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "NAP = Name, Address, Phone (Name, Adresse, Telefon). Diese Daten müssen überall identisch sein: Google, Facebook, Lieferando, Gelbe Seiten, etc. Unterschiede verwirren Google und schaden dem Ranking."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie oft sollte ich auf Bewertungen antworten?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Auf jede Bewertung antworten, idealerweise innerhalb von 24-48 Stunden. Bei negativen Bewertungen: sofort reagieren. Schnelle Antworten zeigen Kundenservice und verbessern die Wahrnehmung."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was sind die häufigsten Fehler bei Döner-SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Top 5 Fehler: 1. Google Business Profil nicht verifiziert, 2. Keine oder schlechte Fotos, 3. Falsche Öffnungszeiten, 4. Nicht auf Bewertungen antworten, 5. Speisekarte fehlt oder ist veraltet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Lohnt sich eine eigene Bestell-App?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Für einzelne Döner-Läden: Nein, zu teuer und aufwendig. Besser: WhatsApp Business für Bestellungen oder eine einfache Bestellseite auf der Website. Für Ketten mit 5+ Filialen kann eine App sinnvoll sein."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie unterscheide ich mich von der Konkurrenz?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "USPs herausarbeiten: Halal-Zertifizierung, vegetarische Optionen, besondere Soßen, längere Öffnungszeiten, schnellere Lieferung, besserer Service. Diese USPs in allen Kanälen kommunizieren."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Was kostet SEO für einen Döner-Laden?", answer: "Die Kosten variieren stark: DIY mit kostenlosen Tools (0€), aber Zeitaufwand. Professionelle Local SEO Betreuung liegt bei 200-800€/Monat. Einmalige Optimierung: 500-1.500€. Der ROI ist bei korrekter Umsetzung meist innerhalb von 3-6 Monaten positiv." },
+    { question: "Wie lange dauert es, bis mein Döner-Laden bei Google oben ist?", answer: "Erste Verbesserungen sind oft nach 2-4 Wochen sichtbar. Top-3-Positionen bei umkämpften Keywords dauern 3-6 Monate. Faktoren: Konkurrenz vor Ort, Anzahl und Qualität der Bewertungen, Alter des Google Business Profils." },
+    { question: "Brauche ich eine Website für meinen Imbiss?", answer: "Nicht unbedingt, aber empfohlen. Google Business Profil ist das Minimum. Eine einfache Website (auch nur eine Seite) verbessert das Ranking, ermöglicht Online-Bestellungen und zeigt Professionalität." },
+    { question: "Welche Keywords sind für Döner-Läden wichtig?", answer: "Wichtigste Keywords: 'Döner [Stadt]', 'Kebab [Stadtteil]', 'Döner in der Nähe', 'Bester Döner [Stadt]', 'Döner Lieferservice [Stadt]'." },
+    { question: "Lohnt sich Lieferando für Döner-Läden?", answer: "Ja, für Neukunden-Akquise. Die 13-30% Provision sind hoch, aber die Reichweite unschlagbar. Strategie: Lieferando für Neukunden, dann über Flyer/Rabatte auf eigene Bestellwege umleiten." },
+    { question: "Wie bekomme ich mehr Google-Bewertungen?", answer: "1. QR-Code an der Kasse aufstellen, 2. Bei jeder Lieferung eine Karte beilegen, 3. Nach positiven Kommentaren direkt fragen, 4. WhatsApp-Link an Stammkunden senden, 5. Auf negative Bewertungen professionell antworten." },
+    { question: "Was ist wichtiger: Instagram oder Google?", answer: "Google ist wichtiger für direkte Kundengewinnung (80% der lokalen Suchen). Instagram ist ergänzend für Markenaufbau und jüngere Zielgruppen." },
+    { question: "Wie reagiere ich auf unfaire Bewertungen?", answer: "Ruhig und professionell bleiben. Entschuldigung aussprechen, Lösung anbieten, zum persönlichen Kontakt einladen. Bei Fake-Bewertungen: Als unangemessen bei Google melden." },
+    { question: "Soll ich meine Preise auf Google zeigen?", answer: "Ja, unbedingt! Preise erhöhen das Vertrauen, reduzieren Nachfragen und helfen bei der Kaufentscheidung." },
+    { question: "Wie oft sollte ich neue Fotos hochladen?", answer: "Mindestens 1x pro Monat neue Fotos. Ideal: 2-4 Fotos pro Woche. Aktuelle Fotos signalisieren Google, dass der Laden aktiv ist." },
+    { question: "Was bedeutet NAP-Konsistenz?", answer: "NAP = Name, Address, Phone. Diese Daten müssen überall identisch sein: Google, Facebook, Lieferando, Gelbe Seiten, etc. Unterschiede verwirren Google und schaden dem Ranking." },
+    { question: "Was sind die häufigsten Fehler bei Döner-SEO?", answer: "Top 5 Fehler: 1. Google Business Profil nicht verifiziert, 2. Keine oder schlechte Fotos, 3. Falsche Öffnungszeiten, 4. Nicht auf Bewertungen antworten, 5. Speisekarte fehlt oder ist veraltet." },
+    { question: "Kann ich Local SEO selbst machen?", answer: "Ja! Die Grundlagen (Google Business optimieren, Fotos, Bewertungen beantworten) kann jeder. Für fortgeschrittene Strategien ist mehr Wissen nötig. Dieser Artikel gibt dir alle Tools an die Hand." }
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Hero Stats Section */}
       <section id="statistiken" className="mb-12">
         <h2 className="text-3xl font-bold mb-6">Die Döner-Branche in Zahlen: Warum SEO jetzt entscheidend ist</h2>

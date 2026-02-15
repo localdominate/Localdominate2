@@ -151,7 +151,7 @@ const LocalSeoAuditCheckliste = () => {
   const combinedSchema = [faqSchema, howToSchema];
 
   return (
-    <ArticleLayout article={article} additionalSchema={combinedSchema} tocItems={tocItems}>
+    <ArticleLayout article={article} additionalSchema={howToSchema} faqItems={faqItems} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       {/* Intro */}

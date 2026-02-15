@@ -60,9 +60,16 @@ const LocalSeoVoiceSearch = () => {
       optimization: "Aktiv Bewertungen sammeln"
     }
   ];
+  const faqItems = [
+    { question: "Wie messe ich Voice Search Traffic?", answer: "Direkt messen ist schwierig, da Google Voice-Suchen nicht separat ausweist. Indirekte Indikatoren: Mehr Long-Tail-Traffic, Zunahme von Fragen in der Search Console, mehr Anrufe über Google Business." },
+    { question: "Soll ich für alle Assistenten optimieren?", answer: "Fokussieren Sie auf Google Assistant, da er den größten Marktanteil hat. Siri nutzt Apple Maps und Yelp. Alexa hat für lokale Suchen weniger Relevanz." },
+    { question: "Wie wichtig ist Dialekt für Voice Search?", answer: "Google versteht zunehmend regionale Dialekte. Für Keywords ist Hochdeutsch besser, aber regionale Begriffe können Vorteile bringen." },
+    { question: "Gibt es Voice-Search-spezifische Ranking-Faktoren?", answer: "Studien zeigen, dass Voice-Ergebnisse tendenziell von Seiten mit schneller Ladezeit, hoher Domain Authority, HTTPS und Featured Snippets stammen." },
+    { question: "Werden Voice-Suchen weniger durch KI-Chatbots?", answer: "KI-Chatbots und Voice Search ergänzen sich. Für lokale, aktionsbasierte Suchen bleibt Voice relevant." }
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

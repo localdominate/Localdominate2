@@ -227,7 +227,7 @@ const SeoToolbox = () => {
   };
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <BlogImage
         src={seoToolboxImage}
         alt="SEO Toolbox - Alle wichtigen Tools für SEO, Local SEO und GEO"

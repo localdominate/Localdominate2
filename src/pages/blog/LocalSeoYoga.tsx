@@ -54,7 +54,7 @@ const LocalSeoYoga = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <BlogImage src={localSeoYogaImg} alt="Local SEO für Yoga und Pilates Studios" priority />
       <KeyTakeawaysBox items={keyTakeaways} />
 

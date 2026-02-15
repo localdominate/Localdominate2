@@ -55,7 +55,7 @@ const LocalSeoStuttgart = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <BlogImage src={localSeoStuttgartImg} alt="Local SEO Stuttgart - Mehr Kunden in der Schwabenmetropole" priority />
       <KeyTakeawaysBox items={keyTakeaways} />
 

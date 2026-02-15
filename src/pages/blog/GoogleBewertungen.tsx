@@ -163,18 +163,10 @@ const GoogleBewertungen = () => {
   const t = content[language];
   const icons = [MessageSquare, QrCode, Mail, Users, Star, Gift, ThumbsUp];
 
-  // FAQ Schema for structured data
-  const faqSchema = {
-    "@type": "FAQPage",
-    "mainEntity": t.faq.items.map(item => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a
-      }
-    }))
-  };
+  const faqItems = t.faq.items.map(item => ({
+    question: item.q,
+    answer: item.a
+  }));
 
   // HowTo Schema für Bewertungen bekommen
   const howToSchema = {
@@ -235,10 +227,8 @@ const GoogleBewertungen = () => {
     ]
   };
 
-  const combinedSchema = [faqSchema, howToSchema];
-
   return (
-    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={combinedSchema}>
+    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={howToSchema} faqItems={faqItems}>
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">

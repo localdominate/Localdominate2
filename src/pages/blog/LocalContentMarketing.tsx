@@ -25,36 +25,11 @@ const LocalContentMarketing = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was ist lokales Content Marketing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Lokales Content Marketing ist die Erstellung von Inhalten mit geografischem Bezug, um bei lokalen Suchanfragen gefunden zu werden. Es umfasst Stadtteil-Seiten, lokale Guides, Event-Content und Community-bezogene Inhalte."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie oft sollte ich lokalen Content veröffentlichen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Für lokale Unternehmen reicht 2-4x pro Monat qualitativ hochwertiger Content. Wichtiger als Häufigkeit ist Relevanz und lokaler Bezug. Ein guter Stadtteil-Guide bringt mehr als 10 generische Blogposts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Content-Formate funktionieren lokal am besten?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Am besten funktionieren: Stadtteil-Landingpages, lokale Best-Of-Listen, Event-Ankündigungen, Kundenerfolgsgeschichten und How-To-Content mit lokalem Bezug. Video-Content auf Google Maps und Social Media gewinnt zunehmend an Bedeutung."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Was ist lokales Content Marketing?", answer: "Lokales Content Marketing ist die Erstellung von Inhalten mit geografischem Bezug, um bei lokalen Suchanfragen gefunden zu werden. Es umfasst Stadtteil-Seiten, lokale Guides, Event-Content und Community-bezogene Inhalte." },
+    { question: "Wie oft sollte ich lokalen Content veröffentlichen?", answer: "Für lokale Unternehmen reicht 2-4x pro Monat qualitativ hochwertiger Content. Wichtiger als Häufigkeit ist Relevanz und lokaler Bezug. Ein guter Stadtteil-Guide bringt mehr als 10 generische Blogposts." },
+    { question: "Welche Content-Formate funktionieren lokal am besten?", answer: "Am besten funktionieren: Stadtteil-Landingpages, lokale Best-Of-Listen, Event-Ankündigungen, Kundenerfolgsgeschichten und How-To-Content mit lokalem Bezug. Video-Content auf Google Maps und Social Media gewinnt zunehmend an Bedeutung." }
+  ];
 
   const contentIdeas = [
     { category: "📍 Standort", ideas: ["Stadtteil-Vorstellung", "Parkplatztipps", "Anfahrtsbeschreibung", "Geschichte des Viertels", "Nachbarschaft-Spotlight"] },
@@ -66,7 +41,7 @@ const LocalContentMarketing = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Einführung */}
       <section id="intro" className="mb-12">
         <p className="lead text-xl text-muted-foreground mb-6">

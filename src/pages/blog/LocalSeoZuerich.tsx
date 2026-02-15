@@ -34,59 +34,14 @@ const LocalSeoZuerich = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was kostet Local SEO in Zürich?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Kosten für Local SEO in Zürich variieren je nach Branche und Wettbewerb. Rechnen Sie mit CHF 500-2'000 monatlich für professionelle Betreuung. Bei sehr wettbewerbsintensiven Branchen (Gastronomie Innenstadt, Finanzdienstleistungen) können die Kosten höher sein."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie lange dauert es, bei Google Maps in Zürich zu ranken?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Zürich müssen Sie mit 3-6 Monaten rechnen, bis erste signifikante Ergebnisse sichtbar werden. In weniger wettbewerbsintensiven Stadtteilen (Kreis 9, 10, 12) kann es schneller gehen. Bei der Innenstadt (Kreis 1, 8) kann es 6-12 Monate dauern."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Sollte meine Zürcher Website auch auf Englisch sein?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, unbedingt – zumindest in Expat-Quartieren wie Seefeld (Kreis 8), Zürich West (Kreis 5) oder der Innenstadt. Über 30% der Zürcher Bevölkerung sind internationale Einwohner, die oft auf Englisch suchen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Zürcher Stadtteile haben den geringsten SEO-Wettbewerb?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Stadtteile mit dem geringsten Wettbewerb sind Kreis 9 (Altstetten/Albisrieden), Kreis 10 (Höngg/Wipkingen) und Kreis 12 (Schwamendingen). Hier können Sie schneller gute Rankings erzielen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Brauche ich französische Keywords für Zürich?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nein, französische Keywords sind für Zürich nicht notwendig. Die Stadt liegt in der Deutschschweiz. Priorisieren Sie Deutsch und Englisch. Schweizerdeutsche Begriffe (Coiffeur, Velo, Natel) sollten Sie jedoch kennen und einsetzen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie wichtig sind Google Bewertungen in Zürich?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Extrem wichtig! Zürcher Kunden sind anspruchsvoll und lesen Bewertungen genau. Streben Sie mindestens 4.5 Sterne an. Antworten Sie auf alle Bewertungen – auf Deutsch UND Englisch, je nach Sprache des Rezensenten."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Was kostet Local SEO in Zürich?", answer: "Die Kosten für Local SEO in Zürich variieren je nach Branche und Wettbewerb. Rechnen Sie mit CHF 500-2'000 monatlich für professionelle Betreuung. Bei sehr wettbewerbsintensiven Branchen (Gastronomie Innenstadt, Finanzdienstleistungen) können die Kosten höher sein." },
+    { question: "Wie lange dauert es, bei Google Maps in Zürich zu ranken?", answer: "In Zürich müssen Sie mit 3-6 Monaten rechnen, bis erste signifikante Ergebnisse sichtbar werden. In weniger wettbewerbsintensiven Stadtteilen (Kreis 9, 10, 12) kann es schneller gehen. Bei der Innenstadt (Kreis 1, 8) kann es 6-12 Monate dauern." },
+    { question: "Sollte meine Zürcher Website auch auf Englisch sein?", answer: "Ja, unbedingt – zumindest in Expat-Quartieren wie Seefeld (Kreis 8), Zürich West (Kreis 5) oder der Innenstadt. Über 30% der Zürcher Bevölkerung sind internationale Einwohner, die oft auf Englisch suchen." },
+    { question: "Welche Zürcher Stadtteile haben den geringsten SEO-Wettbewerb?", answer: "Die Stadtteile mit dem geringsten Wettbewerb sind Kreis 9 (Altstetten/Albisrieden), Kreis 10 (Höngg/Wipkingen) und Kreis 12 (Schwamendingen). Hier können Sie schneller gute Rankings erzielen." },
+    { question: "Brauche ich französische Keywords für Zürich?", answer: "Nein, französische Keywords sind für Zürich nicht notwendig. Die Stadt liegt in der Deutschschweiz. Priorisieren Sie Deutsch und Englisch. Schweizerdeutsche Begriffe (Coiffeur, Velo, Natel) sollten Sie jedoch kennen und einsetzen." },
+    { question: "Wie wichtig sind Google Bewertungen in Zürich?", answer: "Extrem wichtig! Zürcher Kunden sind anspruchsvoll und lesen Bewertungen genau. Streben Sie mindestens 4.5 Sterne an. Antworten Sie auf alle Bewertungen – auf Deutsch UND Englisch, je nach Sprache des Rezensenten." }
+  ];
 
   const zurichKeywords = [
     { hochdeutsch: "Friseur", schweizerdeutsch: "Coiffeur", empfehlung: "Coiffeur verwenden", priority: "hoch" },
@@ -112,7 +67,7 @@ const LocalSeoZuerich = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <Card className="text-center">

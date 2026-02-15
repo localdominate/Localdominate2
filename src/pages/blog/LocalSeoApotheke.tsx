@@ -54,7 +54,7 @@ const LocalSeoApotheke = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <BlogImage src={localSeoApothekeImg} alt="Local SEO für Apotheken" priority />
       <KeyTakeawaysBox items={keyTakeaways} />
 

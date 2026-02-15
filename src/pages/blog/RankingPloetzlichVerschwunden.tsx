@@ -84,7 +84,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
   ];
 
   return (
-    <ArticleLayout article={articleData}>
+    <ArticleLayout article={articleData} faqItems={faqs}>
       <div className="max-w-4xl mx-auto">
         <TableOfContents items={toc} />
 

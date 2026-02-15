@@ -77,7 +77,7 @@ const EEATLokaleUnternehmen = () => {
   ];
 
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
+    <ArticleLayout article={article} faqItems={faqItems} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <p className="text-lg text-muted-foreground leading-relaxed mb-8">

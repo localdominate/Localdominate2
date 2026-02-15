@@ -73,9 +73,17 @@ const GbpSuspendiertReaktivieren: React.FC = () => {
     viewport: { once: true },
     transition: { duration: 0.5 }
   };
+  const faqItems = [
+    { question: "Wie lange dauert die Reaktivierung?", answer: "Bei Soft Suspensions oft 24-48 Stunden. Hard Suspensions benötigen einen formellen Appeal und dauern 3-7 Werktage. In komplexen Fällen bis zu 3 Wochen." },
+    { question: "Kann ich ein neues Profil erstellen statt zu reaktivieren?", answer: "Keine gute Idee. Google erkennt den Zusammenhang und suspendiert auch das neue Profil. Zudem verlierst du alle Bewertungen." },
+    { question: "Was passiert mit meinen Bewertungen?", answer: "Bei erfolgreicher Reaktivierung bleiben alle Bewertungen erhalten. Nur bei dauerhafter Löschung gehen sie verloren." },
+    { question: "Kann ich den Google Support anrufen?", answer: "Der Support ist bei Suspendierungsfällen oft nicht hilfreich. Der formelle Appeal-Prozess über das Reinstatement-Formular ist der offizielle Weg." },
+    { question: "Mein Appeal wurde abgelehnt – was nun?", answer: "Analysiere die Ablehnung genau. Korrigiere Probleme und reiche einen neuen Appeal ein – aber warte mindestens 7 Tage zwischen den Versuchen." },
+    { question: "Beeinträchtigt eine Suspendierung mein SEO-Ranking dauerhaft?", answer: "Nach erfolgreicher Reaktivierung erholt sich dein Ranking normalerweise innerhalb von 2-4 Wochen." }
+  ];
 
   return (
-    <ArticleLayout article={articleData} tocItems={tocItems}>
+    <ArticleLayout article={articleData} tocItems={tocItems} faqItems={faqItems}>
       <AutoLexikonText>
         {/* Hero Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

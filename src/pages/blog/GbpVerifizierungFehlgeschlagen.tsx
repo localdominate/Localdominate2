@@ -104,9 +104,19 @@ const GbpVerifizierungFehlgeschlagen: React.FC = () => {
       availability: "Für Search Console Nutzer"
     }
   ];
+  const faqItems = [
+    { question: "Wie oft kann ich eine neue Postkarte anfordern?", answer: "Du kannst maximal 5 Postkarten für dieselbe Adresse anfordern. Danach sperrt Google die Methode und du musst 30 Tage warten." },
+    { question: "Kann ich die Verifizierungsmethode wechseln?", answer: "Nur bedingt. Google entscheidet, welche Methoden angeboten werden. Nach mehreren Fehlversuchen werden oft alternative Methoden freigeschaltet." },
+    { question: "Was wenn mein Geschäft noch nicht eröffnet hat?", answer: "Du kannst das Profil erstellen und als 'bald eröffnend' markieren. Die Verifizierung sollte aber erst nach der Eröffnung erfolgen." },
+    { question: "Kann jemand anderes mein Profil verifizieren?", answer: "Ja, du kannst eine bevollmächtigte Person als Manager hinzufügen. Diese Person muss aber Zugang zur Geschäftsadresse haben." },
+    { question: "Wie lange ist die Verifizierung gültig?", answer: "Die Verifizierung ist unbegrenzt gültig, solange du die Richtlinien einhältst. Bei größeren Änderungen kann Google eine erneute Verifizierung verlangen." },
+    { question: "Was bedeutet 'Verifizierung ausstehend'?", answer: "Dieser Status bedeutet, dass Google deinen Verifizierungsversuch prüft. Bei Video-Verifizierung wird das Video manuell geprüft (1-5 Tage)." },
+    { question: "Kann ich mein Profil vor der Verifizierung bearbeiten?", answer: "Ja, aber ändere NICHT Name oder Adresse nach dem Anfordern eines Codes – das macht den Code ungültig!" },
+    { question: "Was wenn ich ein Service Area Business habe?", answer: "Bei SABs wird die Verifizierung an deine Privatadresse geschickt, die du dann verbergen kannst." }
+  ];
 
   return (
-    <ArticleLayout article={articleData} tocItems={tocItems}>
+    <ArticleLayout article={articleData} tocItems={tocItems} faqItems={faqItems}>
       <AutoLexikonText>
         {/* Hero Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

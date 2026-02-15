@@ -31,8 +31,15 @@ const LocalSeoZahnarzt = () => {
     "Notdienst-Sichtbarkeit bringt neue Stammpatienten"
   ];
 
+  const faqItems = [
+    { question: "Dürfen Zahnärzte aktiv um Bewertungen bitten?", answer: "Ja, Sie dürfen Patienten freundlich um eine Bewertung bitten. Wichtig ist, dass Sie keine Gegenleistung anbieten und die Entscheidung dem Patienten überlassen." },
+    { question: "Wie wichtig ist Jameda für Zahnärzte?", answer: "Jameda ist in Deutschland das wichtigste Arzt-Bewertungsportal und hat eine hohe Sichtbarkeit bei Google. Ein gepflegtes Jameda-Profil ist empfehlenswert." },
+    { question: "Welche Fotos sollte ich bei Google Business hochladen?", answer: "Zeigen Sie helle, moderne Praxisräume, Ihr freundliches Team und moderne Ausstattung. Vermeiden Sie Fotos von Behandlungen oder Patienten (Datenschutz!)." },
+    { question: "Wie kann ich Notfall-Patienten erreichen?", answer: "Optimieren Sie für Keywords wie 'Zahnarzt Notdienst [Stadt]'. Tragen Sie Ihre Notdienst-Zeiten bei Google Business ein. Notfall-Patienten werden oft zu Stammpatienten." }
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
