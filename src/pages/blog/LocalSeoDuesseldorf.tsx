@@ -54,7 +54,7 @@ const LocalSeoDuesseldorf = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <BlogImage src={localSeoDuesseldorfImg} alt="Local SEO Düsseldorf - Mehr Kunden in der Rheinmetropole" priority />
       <KeyTakeawaysBox items={keyTakeaways} />
 

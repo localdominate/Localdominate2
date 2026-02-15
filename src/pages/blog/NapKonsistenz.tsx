@@ -118,7 +118,7 @@ const NapKonsistenz = () => {
   };
 
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
+    <ArticleLayout article={article} faqItems={faqItems} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       {/* Einleitung */}

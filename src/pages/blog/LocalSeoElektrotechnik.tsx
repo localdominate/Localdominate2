@@ -31,8 +31,15 @@ const LocalSeoElektrotechnik = () => {
     "Positive Bewertungen sind entscheidend für Vertrauensaufbau"
   ];
 
+  const faqItems = [
+    { question: "Lohnt sich SEO für kleine Elektro-Betriebe?", answer: "Absolut! Gerade kleine Betriebe profitieren stark von lokaler Sichtbarkeit. Im Vergleich zu klassischer Werbung ist SEO kosteneffizient und bringt kontinuierlich neue Anfragen." },
+    { question: "Welche Kategorie bei Google Business wählen?", answer: "'Elektriker' oder 'Elektroinstallateur' als Hauptkategorie. Als Zusatzkategorien: 'Elektrikernotdienst', 'Smart-Home-Installateur', 'Solaranlageninstallateur' je nach Angebot." },
+    { question: "Wie wichtig sind Wallbox-Keywords?", answer: "Sehr wichtig! E-Mobilität wächst stark und Wallbox-Installationen werden immer gefragter. Diese Keywords haben oft weniger Konkurrenz als Standard-Elektro-Keywords." },
+    { question: "Sollte ich Preise auf der Website nennen?", answer: "Bei Standardleistungen können Sie Preisspannen oder 'ab'-Preise nennen. Für den Notdienst ist Preistransparenz wichtig (Anfahrt, Stundensatz)." }
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

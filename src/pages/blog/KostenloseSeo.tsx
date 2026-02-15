@@ -147,7 +147,7 @@ const KostenloseSeo = () => {
   };
 
   return (
-    <ArticleLayout article={article} additionalSchema={[faqSchema, howToSchema]} tocItems={tocItems}>
+    <ArticleLayout article={article} additionalSchema={howToSchema} faqItems={faqItems} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       {/* Einleitung */}

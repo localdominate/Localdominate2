@@ -71,9 +71,16 @@ const GooglePostsRankingFaktor = () => {
       example: "Alle Mitarbeiter geimpft – sichere Besuche garantiert"
     }
   ];
+  const faqItems = [
+    { question: "Wie lange bleiben Google Posts sichtbar?", answer: "Update-Posts bleiben 7 Tage prominent sichtbar, Event-Posts bis zum Event-Ende, Angebots-Posts bis zum Ablaufdatum. Alle Posts bleiben im Archiv." },
+    { question: "Kann ich Posts vorausplanen?", answer: "Native in Google Business gibt es keine Planungsfunktion. Drittanbieter-Tools wie Localo oder Semrush Local bieten Scheduling-Funktionen." },
+    { question: "Werden Posts für alle Standorte übernommen?", answer: "Nein, Posts sind standortspezifisch. Bei mehreren Standorten müssen Sie für jeden separat posten." },
+    { question: "Gibt es Einschränkungen beim Content?", answer: "Google hat Richtlinien: Keine irreführenden Inhalte, kein Spam, keine unangemessenen Bilder, keine Telefonnummern im Text." },
+    { question: "Posts vs. Social Media – was ist wichtiger?", answer: "Google Posts erreichen Nutzer genau dann, wenn sie aktiv suchen – hohe Kaufintention! Social Media ist für Community-Building. Für lokale Unternehmen sollten Google Posts Priorität haben." }
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

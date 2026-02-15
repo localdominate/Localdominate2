@@ -30,8 +30,15 @@ const GoogleBusinessKategorienGuide = () => {
     "Regelmäßig prüfen, ob neue passende Kategorien verfügbar sind"
   ];
 
+  const faqItems = [
+    { question: "Wie viele Kategorien kann ich maximal wählen?", answer: "Sie können eine Hauptkategorie und bis zu 9 Zusatzkategorien wählen. Nutzen Sie alle verfügbaren Slots, aber nur mit wirklich relevanten Kategorien für Ihr Geschäft." },
+    { question: "Kann ich eigene Kategorien erstellen?", answer: "Nein, Sie können nur aus der vorgegebenen Liste von Google wählen. Die Liste wird regelmäßig aktualisiert. Wenn Ihre gewünschte Kategorie nicht existiert, wählen Sie die nächstähnliche." },
+    { question: "Sehen Kunden meine Zusatzkategorien?", answer: "Nein, nur die Hauptkategorie ist öffentlich sichtbar. Zusatzkategorien arbeiten im Hintergrund und beeinflussen, für welche Suchen Sie erscheinen, ohne dass Kunden sie direkt sehen." },
+    { question: "Wie oft sollte ich meine Kategorien überprüfen?", answer: "Mindestens alle 3-6 Monate. Google fügt regelmäßig neue Kategorien hinzu. Außerdem sollten Sie prüfen, ob Ihr Angebot noch zu den gewählten Kategorien passt oder ob Änderungen nötig sind." }
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

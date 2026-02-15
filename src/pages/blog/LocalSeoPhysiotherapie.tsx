@@ -31,8 +31,15 @@ const LocalSeoPhysiotherapie = () => {
     "Spezialisierungen klar kommunizieren erhöht die Conversion"
   ];
 
+  const faqItems = [
+    { question: "Brauche ich als Physiotherapeut wirklich SEO?", answer: "Ja! 85% der Patienten suchen online nach Therapeuten in ihrer Nähe. Ohne SEO gehen diese Patienten zur Konkurrenz." },
+    { question: "Welche Google Business Kategorie ist richtig?", answer: "'Physiotherapeut' als Hauptkategorie. Als Zusatzkategorien eignen sich 'Sportphysiotherapie' oder 'Lymphdrainage-Therapeut'." },
+    { question: "Wie gehe ich mit negativen Bewertungen um?", answer: "Antworten Sie sachlich und professionell. Bedanken Sie sich für das Feedback, zeigen Sie Verständnis und bieten Sie ein persönliches Gespräch an. Erwähnen Sie niemals Patientendaten." },
+    { question: "Lohnt sich SEO auch ohne eigene Website?", answer: "Ein optimiertes Google Business Profil bringt auch ohne Website Patienten. Allerdings erhöht eine eigene Website Ihre Chancen erheblich." }
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

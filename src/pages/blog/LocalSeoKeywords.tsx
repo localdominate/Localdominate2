@@ -46,111 +46,20 @@ const LocalSeoKeywords = () => {
     { id: "faq", title: "FAQ" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was sind lokale Keywords?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Lokale Keywords sind Suchbegriffe mit lokalem Bezug, z.B. 'Zahnarzt München' oder 'Restaurant in meiner Nähe'. Sie zeigen Google, dass der Suchende ein lokales Ergebnis erwartet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie finde ich die besten lokalen Keywords?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nutze Google Autocomplete, Google Keyword Planner, analysiere Wettbewerber und frage deine Kunden, wonach sie gesucht haben. Kombiniere deine Dienstleistung mit Stadtteilen und 'in meiner Nähe'."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie viele Keywords sollte ich pro Seite verwenden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Fokussiere dich auf 1 Haupt-Keyword und 2-4 semantisch verwandte Nebenkeywords pro Seite. Qualität schlägt Quantität - Keyword-Stuffing schadet dem Ranking."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Sind 'in meiner Nähe'-Keywords wichtig?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, sehr! 'In meiner Nähe'-Suchen haben in den letzten Jahren um über 500% zugenommen. Sie signalisieren hohe Kaufabsicht und unmittelbaren Bedarf."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie oft sollte ich meine Keywords aktualisieren?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Überprüfe deine Keywords quartalsweise. Suchtrends ändern sich, neue Wettbewerber kommen hinzu, und saisonale Keywords werden relevant."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist der Unterschied zwischen Short-Tail und Long-Tail Keywords?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Short-Tail Keywords sind kurz (1-2 Wörter) mit hohem Suchvolumen aber hoher Konkurrenz. Long-Tail Keywords sind länger (3+ Wörter) mit weniger Suchen aber höherer Conversion-Rate und weniger Wettbewerb."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Soll ich für jeden Stadtteil eine eigene Seite erstellen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, wenn du dort tatsächlich Kunden bedienst. Erstelle für jeden relevanten Stadtteil eine eigene Landingpage mit einzigartigem Content über diesen Bereich."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie wichtig ist das Suchvolumen bei lokalen Keywords?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Weniger wichtig als bei nationalen Keywords. Ein lokales Keyword mit 50 monatlichen Suchen kann sehr wertvoll sein, wenn die Suchenden kaufbereit sind."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist Keyword-Kannibalisierung?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Keyword-Kannibalisierung passiert, wenn mehrere Seiten für dasselbe Keyword ranken wollen. Google weiß nicht, welche Seite relevant ist, und beide verlieren Rankings."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie finde ich Keywords mit geringem Wettbewerb?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nutze Long-Tail-Varianten, kombiniere mit spezifischen Stadtteilen statt nur der Stadt, und suche nach Fragen die deine Zielgruppe stellt. Tools wie AlsoAsked helfen dabei."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Sind Voice Search Keywords anders?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja! Voice Search verwendet natürliche Sprache und Fragen. Statt 'Friseur Berlin' sagen Menschen 'Wo ist der nächste Friseur?' Optimiere für Frage-Keywords."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie messe ich den Erfolg meiner Keywords?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nutze Google Search Console für Rankings und Klicks, Google Analytics für Traffic und Conversions, und Google Business Insights für lokale Suchanfragen."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Was sind lokale Keywords?", answer: "Lokale Keywords sind Suchbegriffe mit geografischem Bezug. Sie enthalten meist einen Ortsnamen oder Begriffe wie 'in der Nähe'. Beispiel: 'Zahnarzt München' oder 'beste Pizza Hamburg'." },
+    { question: "Wie viele Keywords brauche ich?", answer: "Pro Seite solltest du 1 Hauptkeyword und 3-5 verwandte Keywords anvisieren. Für ein lokales Unternehmen sind insgesamt 20-50 Keywords ein guter Start." },
+    { question: "Kostenlose vs. bezahlte Keyword-Tools – was lohnt sich?", answer: "Für den Start reichen kostenlose Tools (Google Keyword Planner, Ubersuggest Free). Ab 10+ Seiten und ernsthaftem SEO lohnen sich bezahlte Tools wie Ahrefs oder SEMrush." },
+    { question: "Soll ich für jeden Stadtteil eine eigene Seite erstellen?", answer: "Ja, wenn du dort tatsächlich Kunden bedienst. Erstelle für jeden relevanten Stadtteil eine eigene Landingpage mit einzigartigem Content über diesen Bereich." },
+    { question: "Wie wichtig ist das Suchvolumen bei lokalen Keywords?", answer: "Weniger wichtig als bei nationalen Keywords. Ein lokales Keyword mit 50 monatlichen Suchen kann sehr wertvoll sein, wenn die Suchenden kaufbereit sind." },
+    { question: "Was ist Keyword-Kannibalisierung?", answer: "Keyword-Kannibalisierung passiert, wenn mehrere Seiten für dasselbe Keyword ranken wollen. Google weiß nicht, welche Seite relevant ist, und beide verlieren Rankings." },
+    { question: "Wie finde ich Keywords mit geringem Wettbewerb?", answer: "Nutze Long-Tail-Varianten, kombiniere mit spezifischen Stadtteilen statt nur der Stadt, und suche nach Fragen die deine Zielgruppe stellt." },
+    { question: "Sind Voice Search Keywords anders?", answer: "Ja! Voice Search verwendet natürliche Sprache und Fragen. Statt 'Friseur Berlin' sagen Menschen 'Wo ist der nächste Friseur?' Optimiere für Frage-Keywords." },
+    { question: "Wie messe ich den Erfolg meiner Keywords?", answer: "Nutze Google Search Console für Rankings und Klicks, Google Analytics für Traffic und Conversions, und Google Business Insights für lokale Suchanfragen." }
+  ];
 
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
+    <ArticleLayout article={article} faqItems={faqItems} tocItems={tocItems}>
       {/* Intro */}
       <p className="text-xl leading-relaxed mb-8">
         <strong>Keywords sind das Fundament jeder erfolgreichen Local SEO Strategie.</strong> Wenn du die falschen Keywords wählst, 

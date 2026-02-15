@@ -54,7 +54,7 @@ const LocalSeoBasel = () => {
   ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <BlogImage src={localSeoBaselImg} alt="Local SEO Basel - Mehr Kunden in der Pharma-Metropole" priority />
       <KeyTakeawaysBox items={keyTakeaways} />
 

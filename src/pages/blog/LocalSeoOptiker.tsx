@@ -31,8 +31,15 @@ const LocalSeoOptiker = () => {
     "Kombinierte Angebote (Optik + Hörakustik) erweitern die Reichweite"
   ];
 
+  const faqItems = [
+    { question: "Sollte ich meine Brillenmarken bei Google zeigen?", answer: "Ja, definitiv! Viele Kunden suchen gezielt nach bestimmten Marken wie Ray-Ban, Oakley oder Rodenstock. Listen Sie Ihre Marken bei den Produkten in Google Business und auf Ihrer Website." },
+    { question: "Wie wichtig ist der Führerschein-Sehtest für SEO?", answer: "Sehr wichtig! 'Führerschein Sehtest [Stadt]' wird häufig gesucht und bringt neue Kunden, die später auch Brillen kaufen könnten." },
+    { question: "Sollte ich Preise auf der Website zeigen?", answer: "Bei Brillen ist das schwierig, da die Preise stark variieren. Sie können Preisspannen angeben. Bei Standard-Services wie Sehtests können Sie konkrete Preise nennen." },
+    { question: "Wie unterscheide ich mich von Ketten-Optikern?", answer: "Betonen Sie persönliche Beratung, lokale Präsenz und individuellen Service. Zeigen Sie Ihr Team und Ihre Expertise. Sammeln Sie ausführliche Bewertungen." }
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

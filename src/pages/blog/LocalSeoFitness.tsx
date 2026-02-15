@@ -31,63 +31,17 @@ const LocalSeoFitness = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Wie kann ich gegen große Ketten wie McFit ranken?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Fokussieren Sie auf Ihren Stadtteil/Kiez, betonen Sie persönliche Betreuung, sammeln Sie mehr und bessere Bewertungen, nutzen Sie lokale Backlinks und spezialisieren Sie sich auf eine Nische."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Soll ich für jede Filiale ein eigenes Google Business haben?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, unbedingt! Jeder Standort braucht ein eigenes Google Business Profil mit eigener Adresse, eigenen Fotos, eigenen Öffnungszeiten und standort-spezifischen Bewertungen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie wichtig ist Instagram für Fitnessstudios?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sehr wichtig! Instagram beeinflusst Google-Rankings nicht direkt, aber viele suchen direkt auf Instagram nach lokalen Studios und User-Generated Content von Mitgliedern ist Gold wert."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Sollte ich Google Ads für mein Studio schalten?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google Ads können sinnvoll sein, besonders im Januar (Peak-Saison) oder bei Neueröffnung. Investieren Sie zuerst in SEO, nutzen Sie Ads für kurzfristige Boosts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie bekomme ich Mitglieder dazu, Bewertungen zu schreiben?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die beste Methode: Persönlich fragen nach positivem Erlebnis. Weitere Taktiken: QR-Code-Aufsteller, E-Mail 4 Wochen nach Anmeldung, Trainer bitten nach PT-Sessions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Verzeichnisse sind für Fitnessstudios wichtig?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Priorität: 1) Google Business, 2) Yelp, 3) Gelbe Seiten, 4) FitnessStudio.de, CrossFit.com, 5) Lokale Stadtportale, 6) Krankenkassen-Verzeichnisse für Präventionskurse."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Wie kann ich gegen große Ketten wie McFit ranken?", answer: "Fokussieren Sie auf Ihren Stadtteil/Kiez, betonen Sie persönliche Betreuung, sammeln Sie mehr und bessere Bewertungen, nutzen Sie lokale Backlinks und spezialisieren Sie sich auf eine Nische." },
+    { question: "Soll ich für jede Filiale ein eigenes Google Business haben?", answer: "Ja, unbedingt! Jeder Standort braucht ein eigenes Google Business Profil mit eigener Adresse, eigenen Fotos, eigenen Öffnungszeiten und standort-spezifischen Bewertungen." },
+    { question: "Wie wichtig ist Instagram für Fitnessstudios?", answer: "Sehr wichtig! Instagram beeinflusst Google-Rankings nicht direkt, aber viele suchen direkt auf Instagram nach lokalen Studios und User-Generated Content von Mitgliedern ist Gold wert." },
+    { question: "Sollte ich Google Ads für mein Studio schalten?", answer: "Google Ads können sinnvoll sein, besonders im Januar (Peak-Saison) oder bei Neueröffnung. Investieren Sie zuerst in SEO, nutzen Sie Ads für kurzfristige Boosts." },
+    { question: "Wie bekomme ich Mitglieder dazu, Bewertungen zu schreiben?", answer: "Die beste Methode: Persönlich fragen nach positivem Erlebnis. Weitere Taktiken: QR-Code-Aufsteller, E-Mail 4 Wochen nach Anmeldung, Trainer bitten nach PT-Sessions." },
+    { question: "Welche Verzeichnisse sind für Fitnessstudios wichtig?", answer: "Priorität: 1) Google Business, 2) Yelp, 3) Gelbe Seiten, 4) FitnessStudio.de, CrossFit.com, 5) Lokale Stadtportale, 6) Krankenkassen-Verzeichnisse für Präventionskurse." }
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         Fitnessstudios und Personal Trainer kämpfen um dieselben Kunden – und das 
         Schlachtfeld ist Google. Mit der richtigen Local SEO Strategie können Sie 
