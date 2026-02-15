@@ -29,11 +29,18 @@ interface TOCItem {
   level?: number;
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface ArticleLayoutProps {
   article: ResolvedBlogArticle;
   children: ReactNode;
   additionalSchema?: object | object[];
   tocItems?: TOCItem[];
+  /** FAQ items for FAQPage schema generation */
+  faqItems?: FAQItem[];
   /** For YMYL articles - adds reviewedBy schema */
   reviewedBy?: {
     name: string;
@@ -49,6 +56,7 @@ const ArticleLayout = ({
   children, 
   additionalSchema, 
   tocItems,
+  faqItems,
   reviewedBy,
   articleType = 'standard'
 }: ArticleLayoutProps) => {
@@ -90,20 +98,11 @@ const ArticleLayout = ({
     });
   }, [article.slug, article.title]);
   
-  // Dynamic OG Image based on article slug
+  // Dynamic OG Image - auto-generate from slug, fallback to default
   const getOgImage = (slug: string): string => {
-    const imageMap: Record<string, string> = {
-      'google-maps-ranking-verbessern': 'https://localdominate.org/assets/blog/google-maps-ranking.jpg',
-      'google-bewertungen-bekommen': 'https://localdominate.org/assets/blog/google-bewertungen.jpg',
-      'google-my-business-optimieren': 'https://localdominate.org/assets/blog/google-my-business.jpg',
-      'local-seo-audit-checkliste': 'https://localdominate.org/assets/blog/local-seo-audit.jpg',
-      'local-seo-handwerker': 'https://localdominate.org/assets/blog/local-seo-handwerker.jpg',
-      'local-seo-keywords-finden': 'https://localdominate.org/assets/blog/local-seo-keywords.jpg',
-      'local-seo-fuer-restaurants': 'https://localdominate.org/assets/blog/local-seo-restaurant.jpg',
-      'lokale-suchmaschinenoptimierung-2026': 'https://localdominate.org/assets/blog/lokale-seo-2026.jpg',
-      'nap-konsistenz-local-seo': 'https://localdominate.org/assets/blog/nap-konsistenz.jpg',
-    };
-    return imageMap[slug] || 'https://localdominate.org/og-image.png';
+    // Try the slug directly as image filename
+    const possibleImage = `https://localdominate.org/images/blog/${slug}.jpg`;
+    return possibleImage;
   };
 
   const articleOgImage = getOgImage(article.slug);
@@ -217,12 +216,12 @@ const ArticleLayout = ({
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": getWebPageType(),
-    "@id": `https://localdominator.de/blog/${article.slug}#webpage`,
-    "url": `https://localdominator.de/blog/${article.slug}`,
+    "@id": `https://localdominate.org/blog/${article.slug}#webpage`,
+    "url": `https://localdominate.org/blog/${article.slug}`,
     "name": article.title,
     "description": article.metaDescription,
     "isPartOf": {
-      "@id": "https://localdominator.de/#website"
+      "@id": "https://localdominate.org/#website"
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
@@ -235,7 +234,7 @@ const ArticleLayout = ({
       "lastReviewed": reviewedBy?.reviewDate
     }),
     "breadcrumb": {
-      "@id": `https://localdominator.de/blog/${article.slug}#breadcrumb`
+      "@id": `https://localdominate.org/blog/${article.slug}#breadcrumb`
     },
     "speakable": {
       "@type": "SpeakableSpecification",
@@ -246,36 +245,51 @@ const ArticleLayout = ({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": `https://localdominator.de/blog/${article.slug}#breadcrumb`,
+    "@id": `https://localdominate.org/blog/${article.slug}#breadcrumb`,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://localdominator.de"
+        "item": "https://localdominate.org"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://localdominator.de/blog"
+        "item": "https://localdominate.org/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": article.title,
-        "item": `https://localdominator.de/blog/${article.slug}`
+        "item": `https://localdominate.org/blog/${article.slug}`
       }
     ]
   };
 
+  // FAQPage Schema - auto-generated when faqItems are provided
+  const faqSchema = faqItems && faqItems.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+
   // Combine all schemas, flatten arrays from additionalSchema
   const buildCombinedSchema = () => {
-    const baseSchemas = [articleSchema, webPageSchema, breadcrumbSchema];
+    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema];
+    
+    if (faqSchema) baseSchemas.push(faqSchema);
     
     if (!additionalSchema) return baseSchemas;
     
-    // If additionalSchema is an array, spread it; otherwise add as single item
     if (Array.isArray(additionalSchema)) {
       return [...baseSchemas, ...additionalSchema];
     }
@@ -300,7 +314,7 @@ const ArticleLayout = ({
       <SEOHead
         title={article.metaTitle}
         description={article.metaDescription}
-        canonicalUrl={`https://localdominator.de/blog/${article.slug}`}
+        canonicalUrl={`https://localdominate.org/blog/${article.slug}`}
         ogImage={articleOgImage}
         keywords={article.keywords.join(", ")}
         jsonLd={combinedSchema}
@@ -310,8 +324,8 @@ const ArticleLayout = ({
         articleSection={article.category}
         lang={language}
         alternateUrls={{
-          de: `https://localdominator.de/blog/${article.slug}`,
-          en: `https://localdominator.de/blog/${article.slug}?lang=en`
+          de: `https://localdominate.org/blog/${article.slug}`,
+          en: `https://localdominate.org/blog/${article.slug}?lang=en`
         }}
       />
       
@@ -387,7 +401,7 @@ const ArticleLayout = ({
         {/* Social Share */}
         <div className="my-8 py-6 border-t border-b border-border">
           <SocialShare 
-            url={`https://localdominator.de/blog/${article.slug}`}
+            url={`https://localdominate.org/blog/${article.slug}`}
             title={article.title}
             description={article.metaDescription}
           />
