@@ -26,47 +26,15 @@ const LocalLinkBuilding = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Warum sind lokale Backlinks wichtig?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Lokale Backlinks signalisieren Google geografische Relevanz. Sie zeigen, dass dein Unternehmen in der Community verankert ist und stärken dein Ranking für lokale Suchanfragen erheblich."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie viele lokale Backlinks brauche ich?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Qualität schlägt Quantität. 10-20 hochwertige lokale Backlinks von relevanten Quellen sind mehr wert als 100 minderwertige Links. Fokussiere dich auf Diversität: verschiedene Quellen wie Zeitungen, Vereine, Verbände."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was sind Unlinked Brand Mentions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Unlinked Brand Mentions sind Erwähnungen deines Unternehmens im Internet ohne Verlinkung. Diese bieten einfache Link-Möglichkeiten: Kontaktiere den Autor und bitte höflich um Verlinkung."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Funktioniert Vereinssponsoring für Local SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, Vereinssponsoring ist eine der effektivsten lokalen Link-Building-Strategien. Du bekommst einen Backlink von der Vereinswebsite, lokale Markenbekanntheit und Community-Engagement – alles positive SEO-Signale."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Warum sind lokale Backlinks wichtig?", answer: "Lokale Backlinks signalisieren Google geografische Relevanz. Sie zeigen, dass dein Unternehmen in der Community verankert ist und stärken dein Ranking für lokale Suchanfragen erheblich." },
+    { question: "Wie viele lokale Backlinks brauche ich?", answer: "Qualität schlägt Quantität. 10-20 hochwertige lokale Backlinks von relevanten Quellen sind mehr wert als 100 minderwertige Links. Fokussiere dich auf Diversität: verschiedene Quellen wie Zeitungen, Vereine, Verbände." },
+    { question: "Was sind Unlinked Brand Mentions?", answer: "Unlinked Brand Mentions sind Erwähnungen deines Unternehmens im Internet ohne Verlinkung. Diese bieten einfache Link-Möglichkeiten: Kontaktiere den Autor und bitte höflich um Verlinkung." },
+    { question: "Funktioniert Vereinssponsoring für Local SEO?", answer: "Ja, Vereinssponsoring ist eine der effektivsten lokalen Link-Building-Strategien. Du bekommst einen Backlink von der Vereinswebsite, lokale Markenbekanntheit und Community-Engagement – alles positive SEO-Signale." },
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Einführung */}
       <section id="intro" className="mb-12">
         <p className="lead text-xl text-muted-foreground mb-6">

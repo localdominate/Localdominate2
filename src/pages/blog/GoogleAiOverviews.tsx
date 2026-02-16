@@ -71,19 +71,6 @@ const GoogleAiOverviews = () => {
     }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
-
   const auswirkungenMatrix = [
     { 
       suchanfrageTyp: "Informationell", 
@@ -100,56 +87,36 @@ const GoogleAiOverviews = () => {
       empfehlung: "GMB aktuell halten"
     },
     { 
-      suchanfrageTyp: "Transaktional lokal", 
-      beispiel: "Friseur in der Nähe buchen",
+      suchanfrageTyp: "Transaktional", 
+      beispiel: "Friseur in der Nähe",
       aiOverviewWahrscheinlichkeit: "Niedrig",
-      localPackEinfluss: "Hoch",
+      localPackEinfluss: "Sehr hoch",
       empfehlung: "Local Pack optimieren"
     },
     { 
-      suchanfrageTyp: "Lokal + Frage", 
-      beispiel: "Bester Zahnarzt München warum?",
-      aiOverviewWahrscheinlichkeit: "Hoch",
-      localPackEinfluss: "Mittel",
-      empfehlung: "Content + Reviews"
+      suchanfrageTyp: "Lokal-Kommerziell", 
+      beispiel: "Bester Zahnarzt München",
+      aiOverviewWahrscheinlichkeit: "Mittel",
+      localPackEinfluss: "Hoch",
+      empfehlung: "E-E-A-T + Bewertungen"
     }
   ];
 
   const optimierungsStrategien = [
-    {
-      titel: "Klare FAQ-Struktur",
-      beschreibung: "Beantworte häufige Fragen zu deinem Service direkt auf deiner Website",
-      icon: Search,
-      tipps: ["Nutze FAQ-Schema Markup", "Kurze, präzise Antworten", "Lokale Bezüge integrieren"]
-    },
-    {
-      titel: "Einzigartiger lokaler Content",
-      beschreibung: "Content, den KI nicht einfach zusammenfassen kann",
-      icon: MapPin,
-      tipps: ["Lokale Erfahrungsberichte", "Stadtteil-spezifische Tipps", "Persönliche Expertise"]
-    },
-    {
-      titel: "E-E-A-T verstärken",
-      beschreibung: "Expertise, Erfahrung, Autorität und Vertrauenswürdigkeit zeigen",
-      icon: Target,
-      tipps: ["Qualifikationen nennen", "Kundenstimmen einbinden", "Lokale Medienerwähnungen"]
-    },
-    {
-      titel: "Google Business perfektionieren",
-      beschreibung: "Die Quelle für viele AI-Informationen über lokale Unternehmen",
-      icon: TrendingUp,
-      tipps: ["Alle Felder ausfüllen", "Regelmäßig posten", "Auf Bewertungen antworten"]
-    }
+    { icon: Search, titel: "FAQ-Content erstellen", beschreibung: "Beantworte häufige Fragen klar und strukturiert.", tipps: ["FAQ-Sektion auf jeder Landingpage", "Klare, direkte Antworten in 2-3 Sätzen", "Fragen verwenden, die Kunden wirklich stellen"] },
+    { icon: Target, titel: "E-E-A-T stärken", beschreibung: "Zeige Expertise, Erfahrung, Autorität und Vertrauen.", tipps: ["Autoren-Profile mit Qualifikationen", "Kundenbewertungen prominent zeigen", "Zertifikate und Auszeichnungen nennen"] },
+    { icon: MapPin, titel: "Local Pack priorisieren", beschreibung: "Das Local Pack bleibt für transaktionale Suchen dominant.", tipps: ["Google Business Profil optimieren", "Bewertungen aktiv sammeln", "NAP-Konsistenz sicherstellen"] },
+    { icon: Lightbulb, titel: "Einzigartige Inhalte", beschreibung: "Biete Informationen, die KI nicht leicht zusammenfassen kann.", tipps: ["Lokale Case Studies erstellen", "Eigene Daten und Statistiken nutzen", "Persönliche Erfahrungsberichte teilen"] },
   ];
 
-  const sources: { title: string; url: string; type: "article" | "documentation" | "study" | "tool" }[] = [
-    { title: "Google AI Overview Announcement", url: "https://blog.google/products/search/generative-ai-search/", type: "article" },
-    { title: "Search Engine Land - AI Overviews", url: "https://searchengineland.com/", type: "article" },
-    { title: "Google Search Central", url: "https://developers.google.com/search", type: "documentation" }
+  const sources = [
+    { title: "Google Blog: AI Overviews", url: "https://blog.google/products/search/generative-ai-search/", description: "Offizielle Google-Ankündigung zu AI Overviews" },
+    { title: "Search Engine Land: AI Overviews Impact", url: "https://searchengineland.com/", description: "Analyse der Auswirkungen auf SEO" },
+    { title: "BrightLocal: Local Search & AI", url: "https://www.brightlocal.com/", description: "Studie zu AI Overviews und Local Search" },
   ];
 
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
+    <ArticleLayout article={article} faqItems={faqItems} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <p className="text-lg text-muted-foreground leading-relaxed mb-8">

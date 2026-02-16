@@ -32,7 +32,19 @@ const LocalSeoHamburg = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
+  const faqItems = [
+    { question: "Warum ist Local SEO in Hamburg besonders wichtig?", answer: "Hamburg ist mit 1,9 Millionen Einwohnern Deutschlands zweitgrößte Stadt. Die hohe Bevölkerungsdichte und starke Kaufkraft machen lokale Sichtbarkeit extrem wertvoll. Gleichzeitig ist der Wettbewerb in vielen Branchen intensiv." },
+    { question: "Welche Hamburger Stadtteile haben das höchste Suchvolumen?", answer: "Die beliebtesten Stadtteile für lokale Suchen sind: Altona, Eimsbüttel, Winterhude, Eppendorf, St. Georg, Ottensen und die HafenCity." },
+    { question: "Welche lokalen Verzeichnisse sind in Hamburg wichtig?", answer: "Neben Google Business sind hamburg.de, Hamburger Abendblatt Branchenbuch, Hamburger Morgenpost Verzeichnis und Kiekmo wichtig." },
+    { question: "Wie nutze ich den Hafengeburtstag für Local SEO?", answer: "Der Hafengeburtstag ist das größte Hafenfest der Welt mit über 1 Million Besuchern. Erstellen Sie saisonalen Content und nutzen Sie lokale Keywords wie 'Hafengeburtstag [Ihr Service]'." },
+    { question: "Wie unterscheidet sich SEO für Hamburg Nord und Süd?", answer: "Hamburg Nord hat höhere Kaufkraft, Hamburg Süd wächst dynamisch. Passen Sie Keywords und Content an die jeweilige Zielgruppe an." },
+    { question: "Ist der Hamburger DOM relevant für Local SEO?", answer: "Ja, der DOM findet dreimal jährlich statt und zieht Millionen Besucher an. Besonders für Gastronomie und Einzelhandel in Feldstraßen-Nähe ist saisonaler Content sinnvoll." },
+    { question: "Welche Keywords funktionieren in Hamburg besonders gut?", answer: "Hamburger nutzen oft lokale Begriffe wie 'an der Elbe', 'am Hafen', 'Alster'. Auch Stadtteil-spezifische Keywords wie 'Schanze' statt 'Sternschanze' werden gesucht." },
+    { question: "Wie wichtig ist die Elbphilharmonie für lokales Marketing?", answer: "Die Elbphilharmonie generiert viel Suchverkehr. Unternehmen in der HafenCity können von Keywords wie 'Restaurant nähe Elbphilharmonie' profitieren." },
+    { question: "Welche Hamburger Medien sind für Local PR relevant?", answer: "Hamburger Abendblatt, MOPO, NDR Hamburg Journal, Hamburg 1, SZENE Hamburg und diverse Stadtteilblogs." },
+  ];
+
+  const faqSchema_unused = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [

@@ -159,9 +159,10 @@ const LocalSeoRestaurant = () => {
 
   const t = content[language];
   const factorIcons = [UtensilsCrossed, Clock, Camera, Star];
+  const faqItems = t.faq.items.map(item => ({ question: item.q, answer: item.a }));
 
   return (
-    <ArticleLayout article={article} tocItems={t.tocItems}>
+    <ArticleLayout article={article} tocItems={t.tocItems} faqItems={faqItems}>
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">

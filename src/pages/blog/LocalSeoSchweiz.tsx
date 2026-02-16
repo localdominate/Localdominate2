@@ -26,55 +26,16 @@ const LocalSeoSchweiz = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Ist Local SEO in der Schweiz anders als in Deutschland?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, es gibt wichtige Unterschiede: Mehrsprachigkeit (DE/FR/IT), andere Verzeichnisse (local.ch statt gelbeseiten.de), höhere Kaufkraft, andere Wettbewerbssituation und rechtliche Besonderheiten (DSG statt DSGVO)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Muss ich meine Website in allen Schweizer Sprachen anbieten?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Das hängt von deiner Zielregion ab. In Zürich reicht Deutsch (evtl. Englisch). In Genf brauchst du Französisch. Für die gesamte Schweiz empfehlen wir mindestens DE/FR, idealerweise auch IT."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Verzeichnisse sind in der Schweiz am wichtigsten?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Top 5 sind: Google Business Profile, local.ch, search.ch, Bing Places und Apple Maps. Diese solltest du unbedingt pflegen. Danach folgen branchenspezifische Verzeichnisse."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was kostet Local SEO in der Schweiz?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Das hängt vom Wettbewerb ab. In Zürich und Genf ist der Aufwand höher als in ländlichen Kantonen. Rechne mit 500-2000 CHF/Monat für professionelle Betreuung oder investiere Zeit in DIY-Optimierung."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie wichtig sind Google Bewertungen in der Schweiz?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sehr wichtig! Schweizer sind kritische Konsumenten und recherchieren gründlich. Bewertungen beeinflussen sowohl das Ranking als auch die Conversion Rate massgeblich."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Ist Local SEO in der Schweiz anders als in Deutschland?", answer: "Ja, es gibt wichtige Unterschiede: Mehrsprachigkeit (DE/FR/IT), andere Verzeichnisse (local.ch statt gelbeseiten.de), höhere Kaufkraft, andere Wettbewerbssituation und rechtliche Besonderheiten (DSG statt DSGVO)." },
+    { question: "Muss ich meine Website in allen Schweizer Sprachen anbieten?", answer: "Das hängt von deiner Zielregion ab. In Zürich reicht Deutsch (evtl. Englisch). In Genf brauchst du Französisch. Für die gesamte Schweiz empfehlen wir mindestens DE/FR, idealerweise auch IT." },
+    { question: "Welche Verzeichnisse sind in der Schweiz am wichtigsten?", answer: "Die Top 5 sind: Google Business Profile, local.ch, search.ch, Bing Places und Apple Maps. Diese solltest du unbedingt pflegen. Danach folgen branchenspezifische Verzeichnisse." },
+    { question: "Was kostet Local SEO in der Schweiz?", answer: "Das hängt vom Wettbewerb ab. In Zürich und Genf ist der Aufwand höher als in ländlichen Kantonen. Rechne mit 500-2000 CHF/Monat für professionelle Betreuung oder investiere Zeit in DIY-Optimierung." },
+    { question: "Wie wichtig sind Google Bewertungen in der Schweiz?", answer: "Sehr wichtig! Schweizer sind kritische Konsumenten und recherchieren gründlich. Bewertungen beeinflussen sowohl das Ranking als auch die Conversion Rate massgeblich." },
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Lead */}
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         <strong>Die Schweiz ist ein einzigartiger Markt.</strong> Vier Sprachen, 26 Kantone, 
