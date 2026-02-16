@@ -196,18 +196,7 @@ const GoogleMyBusiness = () => {
   const t = content[language];
   const postIcons = [Image, MessageSquare, CheckCircle, BarChart3];
 
-  // FAQ Schema for structured data
-  const faqSchema = {
-    "@type": "FAQPage",
-    "mainEntity": t.faq.items.map(item => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a
-      }
-    }))
-  };
+  const faqItems = t.faq.items.map(item => ({ question: item.q, answer: item.a }));
 
   // HowTo Schema für Google Business Profil Optimierung
   const howToSchema = {
@@ -268,10 +257,8 @@ const GoogleMyBusiness = () => {
     ]
   };
 
-  const combinedSchema = [faqSchema, howToSchema];
-
   return (
-    <ArticleLayout article={article} tocItems={t.tocItems} additionalSchema={combinedSchema}>
+    <ArticleLayout article={article} tocItems={t.tocItems} faqItems={faqItems} additionalSchema={howToSchema}>
       <TableOfContents items={t.tocItems} />
 
       <p className="text-xl leading-relaxed mb-8">

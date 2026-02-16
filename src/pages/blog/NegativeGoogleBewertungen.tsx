@@ -39,111 +39,23 @@ const NegativeGoogleBewertungen = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Sollte ich auf jede negative Bewertung antworten?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, Sie sollten auf jede negative Bewertung antworten. Studien zeigen, dass 45% der Kunden eher bei einem Unternehmen kaufen, das auf Kritik reagiert. Eine professionelle Antwort zeigt anderen potenziellen Kunden, dass Sie Feedback ernst nehmen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie schnell sollte ich auf negative Bewertungen reagieren?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Idealerweise innerhalb von 24-48 Stunden. 53% der Kunden erwarten eine Antwort innerhalb einer Woche. Schnelle Reaktionen zeigen Engagement und können die Situation oft noch retten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Darf ich den Kunden bitten, seine Bewertung zu ändern?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, aber nur nachdem Sie das Problem tatsächlich gelöst haben. Bitten Sie niemals um eine Änderung ohne vorherige Problemlösung. Ein freundlicher Hinweis wie 'Wir würden uns freuen, wenn Sie Ihre Erfahrung aktualisieren' ist akzeptabel."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kann ich rechtlich gegen negative Bewertungen vorgehen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nur bei falschen Tatsachenbehauptungen oder Beleidigungen. Meinungsäusserungen sind durch die Meinungsfreiheit geschützt. Rechtliche Schritte sind teuer und sollten nur als letztes Mittel in Betracht gezogen werden."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie gehe ich mit 1-Stern-Bewertungen ohne Text um?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Antworten Sie höflich und bitten Sie um mehr Informationen: 'Es tut uns leid, dass Sie unzufrieden waren. Damit wir uns verbessern können, würden wir gerne mehr erfahren. Bitte kontaktieren Sie uns unter [Kontakt].'"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wann lohnt sich ein Anwalt bei Fake-Bewertungen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Erst wenn Google die Bewertung nicht entfernt und ein erheblicher Geschäftsschaden nachweisbar ist. Anwaltskosten beginnen bei ca. 500-1.000€. Dokumentieren Sie alle Beweise vorher sorgfältig."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie verhindere ich emotionale Reaktionen auf Kritik?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Warten Sie mindestens 1-2 Stunden vor der Antwort. Lesen Sie die Bewertung mehrmals. Lassen Sie einen Kollegen gegenlesen. Nutzen Sie Vorlagen als Ausgangspunkt. Erinnern Sie sich: Die Antwort ist für alle sichtbar."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kann ich negative Bewertungen ausblenden lassen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nein, Google erlaubt kein Ausblenden von Bewertungen. Sie können nur gegen Richtlinienverstösse melden. Die beste Strategie ist, durch viele positive Bewertungen die negativen zu relativieren."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie lange bleiben Bewertungen sichtbar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google Bewertungen bleiben grundsätzlich unbegrenzt sichtbar. Sie können nur durch Löschung seitens des Verfassers, erfolgreiche Meldung bei Richtlinienverstoss oder rechtliche Anordnung entfernt werden."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Beeinflusst meine Antwort das Google-Ranking?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Indirekt ja. Google bewertet Engagement positiv. Antworten auf Bewertungen signalisieren Aktivität und Kundenorientierung. Dies kann sich positiv auf das lokale Ranking auswirken."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was tun bei offensichtlich falschen Behauptungen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dokumentieren Sie die Falschbehauptung, antworten Sie sachlich und korrigieren Sie höflich. Melden Sie die Bewertung bei Google. Bei nachweislich falschen Tatsachenbehauptungen können Sie rechtliche Schritte prüfen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Sollte ich negative Bewertungen öffentlich diskutieren?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nein, vermeiden Sie öffentliche Diskussionen. Antworten Sie einmal professionell und bieten Sie den direkten Kontakt an. Lange öffentliche Debatten schaden dem Image und wirken unprofessionell."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Sollte ich auf jede negative Bewertung antworten?", answer: "Ja, Sie sollten auf jede negative Bewertung antworten. Studien zeigen, dass 45% der Kunden eher bei einem Unternehmen kaufen, das auf Kritik reagiert. Eine professionelle Antwort zeigt anderen potenziellen Kunden, dass Sie Feedback ernst nehmen." },
+    { question: "Wie schnell sollte ich auf negative Bewertungen reagieren?", answer: "Idealerweise innerhalb von 24-48 Stunden. 53% der Kunden erwarten eine Antwort innerhalb einer Woche. Schnelle Reaktionen zeigen Engagement und können die Situation oft noch retten." },
+    { question: "Darf ich den Kunden bitten, seine Bewertung zu ändern?", answer: "Ja, aber nur nachdem Sie das Problem tatsächlich gelöst haben. Bitten Sie niemals um eine Änderung ohne vorherige Problemlösung. Ein freundlicher Hinweis wie 'Wir würden uns freuen, wenn Sie Ihre Erfahrung aktualisieren' ist akzeptabel." },
+    { question: "Kann ich rechtlich gegen negative Bewertungen vorgehen?", answer: "Nur bei falschen Tatsachenbehauptungen oder Beleidigungen. Meinungsäusserungen sind durch die Meinungsfreiheit geschützt. Rechtliche Schritte sind teuer und sollten nur als letztes Mittel in Betracht gezogen werden." },
+    { question: "Wie gehe ich mit 1-Stern-Bewertungen ohne Text um?", answer: "Antworten Sie höflich und bitten Sie um mehr Informationen: 'Es tut uns leid, dass Sie unzufrieden waren. Damit wir uns verbessern können, würden wir gerne mehr erfahren. Bitte kontaktieren Sie uns unter [Kontakt].'" },
+    { question: "Wann lohnt sich ein Anwalt bei Fake-Bewertungen?", answer: "Erst wenn Google die Bewertung nicht entfernt und ein erheblicher Geschäftsschaden nachweisbar ist. Anwaltskosten beginnen bei ca. 500-1.000€. Dokumentieren Sie alle Beweise vorher sorgfältig." },
+    { question: "Wie verhindere ich emotionale Reaktionen auf Kritik?", answer: "Warten Sie mindestens 1-2 Stunden vor der Antwort. Lesen Sie die Bewertung mehrmals. Lassen Sie einen Kollegen gegenlesen. Nutzen Sie Vorlagen als Ausgangspunkt. Erinnern Sie sich: Die Antwort ist für alle sichtbar." },
+    { question: "Kann ich negative Bewertungen ausblenden lassen?", answer: "Nein, Google erlaubt kein Ausblenden von Bewertungen. Sie können nur gegen Richtlinienverstösse melden. Die beste Strategie ist, durch viele positive Bewertungen die negativen zu relativieren." },
+    { question: "Wie lange bleiben Bewertungen sichtbar?", answer: "Google Bewertungen bleiben grundsätzlich unbegrenzt sichtbar. Sie können nur durch Löschung seitens des Verfassers, erfolgreiche Meldung bei Richtlinienverstoss oder rechtliche Anordnung entfernt werden." },
+    { question: "Beeinflusst meine Antwort das Google-Ranking?", answer: "Indirekt ja. Google bewertet Engagement positiv. Antworten auf Bewertungen signalisieren Aktivität und Kundenorientierung. Dies kann sich positiv auf das lokale Ranking auswirken." },
+    { question: "Was tun bei offensichtlich falschen Behauptungen?", answer: "Dokumentieren Sie die Falschbehauptung, antworten Sie sachlich und korrigieren Sie höflich. Melden Sie die Bewertung bei Google. Bei nachweislich falschen Tatsachenbehauptungen können Sie rechtliche Schritte prüfen." },
+    { question: "Sollte ich negative Bewertungen öffentlich diskutieren?", answer: "Nein, vermeiden Sie öffentliche Diskussionen. Antworten Sie einmal professionell und bieten Sie den direkten Kontakt an. Lange öffentliche Debatten schaden dem Image und wirken unprofessionell." },
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 not-prose">
         <Card className="text-center bg-gradient-to-br from-red-50 to-white border-red-100">

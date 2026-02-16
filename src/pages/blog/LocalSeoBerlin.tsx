@@ -42,63 +42,17 @@ const LocalSeoBerlin = () => {
     { name: "Wedding", einwohner: "90.000", charakter: "Multikulturell, Studentisch, Aufstrebend", konkurrenz: "Niedrig-Mittel" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Soll ich für alle 12 Bezirke optimieren?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nein! Konzentrieren Sie sich auf die Bezirke, in denen Ihre Zielgruppe tatsächlich ist oder die Sie realistisch erreichen können. Für die meisten Unternehmen sind 2-4 Bezirke sinnvoll."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie wichtig ist die Postleitzahl für Local SEO in Berlin?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Postleitzahlen werden in Berlin weniger gesucht als Bezirks- oder Kiez-Namen. Berliner denken in Bezirken, nicht in PLZ. Trotzdem sollte Ihre PLZ im Schema Markup und im NAP korrekt sein."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Mein Geschäft ist im Osten, aber meine Zielgruppe im Westen – was tun?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Fokussieren Sie Ihr SEO auf die Bezirke Ihrer Zielgruppe, nicht auf Ihren Standort. Für mobile Dienstleister: Betonen Sie Ihr Servicegebiet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie gehe ich mit der hohen Konkurrenz in Mitte um?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Strategien: 1) Nische finden, 2) Auf Nebenstraßen/Kieze ausweichen, 3) Längere Keywords targeting, 4) Stärkerer Fokus auf Bewertungen und Backlinks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Sollte ich einen englischen Google Business Eintrag haben?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sie können Ihren Google Business Eintrag nicht in mehreren Sprachen haben. Aber: Fügen Sie englische Keywords in die Beschreibung ein und erstellen Sie englische Google Posts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie wichtig sind Instagram und TikTok für Local SEO in Berlin?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Berlin wichtiger als in anderen deutschen Städten! Besonders für Gastronomie, Beauty, Einzelhandel und Kultur. Die Berliner Zielgruppe ist überdurchschnittlich social-media-affin."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Soll ich für alle 12 Bezirke optimieren?", answer: "Nein! Konzentrieren Sie sich auf die Bezirke, in denen Ihre Zielgruppe tatsächlich ist oder die Sie realistisch erreichen können. Für die meisten Unternehmen sind 2-4 Bezirke sinnvoll." },
+    { question: "Wie wichtig ist die Postleitzahl für Local SEO in Berlin?", answer: "Postleitzahlen werden in Berlin weniger gesucht als Bezirks- oder Kiez-Namen. Berliner denken in Bezirken, nicht in PLZ. Trotzdem sollte Ihre PLZ im Schema Markup und im NAP korrekt sein." },
+    { question: "Mein Geschäft ist im Osten, aber meine Zielgruppe im Westen – was tun?", answer: "Fokussieren Sie Ihr SEO auf die Bezirke Ihrer Zielgruppe, nicht auf Ihren Standort. Für mobile Dienstleister: Betonen Sie Ihr Servicegebiet." },
+    { question: "Wie gehe ich mit der hohen Konkurrenz in Mitte um?", answer: "Strategien: 1) Nische finden, 2) Auf Nebenstraßen/Kieze ausweichen, 3) Längere Keywords targeting, 4) Stärkerer Fokus auf Bewertungen und Backlinks." },
+    { question: "Sollte ich einen englischen Google Business Eintrag haben?", answer: "Sie können Ihren Google Business Eintrag nicht in mehreren Sprachen haben. Aber: Fügen Sie englische Keywords in die Beschreibung ein und erstellen Sie englische Google Posts." },
+    { question: "Wie wichtig sind Instagram und TikTok für Local SEO in Berlin?", answer: "In Berlin wichtiger als in anderen deutschen Städten! Besonders für Gastronomie, Beauty, Einzelhandel und Kultur. Die Berliner Zielgruppe ist überdurchschnittlich social-media-affin." },
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         <strong>3,7 Millionen Einwohner, 12 Bezirke, unzählige Kieze</strong> – Berlin ist 
         der komplizierteste und gleichzeitig spannendste Local SEO Markt Deutschlands. 

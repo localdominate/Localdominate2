@@ -28,55 +28,16 @@ const MobileLocalSeo = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Warum ist Mobile SEO für lokale Unternehmen wichtig?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Über 80% aller lokalen Suchanfragen erfolgen mobil. Mobile Nutzer haben eine hohe Kaufabsicht – 76% besuchen innerhalb von 24 Stunden ein Geschäft nach einer mobilen lokalen Suche."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist Mobile-First Indexing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mobile-First Indexing bedeutet, dass Google primär die mobile Version deiner Website für die Indexierung und das Ranking verwendet. Die Desktop-Version ist sekundär."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie schnell sollte eine mobile Seite laden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google empfiehlt eine Ladezeit unter 3 Sekunden. Jede Sekunde Verzögerung reduziert die Conversion-Rate um ca. 7%. Ideal sind unter 2 Sekunden."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist ein Click-to-Call Button?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ein Click-to-Call Button ermöglicht es mobilen Nutzern, mit einem Tippen anzurufen. Er wird mit dem tel:-Protokoll implementiert: <a href='tel:+491234567890'>Jetzt anrufen</a>"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Brauche ich noch AMP für Local SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AMP ist seit 2021 kein Ranking-Faktor mehr für lokale Unternehmen. Moderne, schnelle Websites mit guten Core Web Vitals sind wichtiger als AMP-Implementierung."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Warum ist Mobile SEO für lokale Unternehmen wichtig?", answer: "Über 80% aller lokalen Suchanfragen erfolgen mobil. Mobile Nutzer haben eine hohe Kaufabsicht – 76% besuchen innerhalb von 24 Stunden ein Geschäft nach einer mobilen lokalen Suche." },
+    { question: "Was ist Mobile-First Indexing?", answer: "Mobile-First Indexing bedeutet, dass Google primär die mobile Version deiner Website für die Indexierung und das Ranking verwendet. Die Desktop-Version ist sekundär." },
+    { question: "Wie schnell sollte eine mobile Seite laden?", answer: "Google empfiehlt eine Ladezeit unter 3 Sekunden. Jede Sekunde Verzögerung reduziert die Conversion-Rate um ca. 7%. Ideal sind unter 2 Sekunden." },
+    { question: "Was ist ein Click-to-Call Button?", answer: "Ein Click-to-Call Button ermöglicht es mobilen Nutzern, mit einem Tippen anzurufen. Er wird mit dem tel:-Protokoll implementiert: <a href='tel:+491234567890'>Jetzt anrufen</a>" },
+    { question: "Brauche ich noch AMP für Local SEO?", answer: "AMP ist seit 2021 kein Ranking-Faktor mehr für lokale Unternehmen. Moderne, schnelle Websites mit guten Core Web Vitals sind wichtiger als AMP-Implementierung." },
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Einführung */}
       <section id="intro" className="mb-12">
         <p className="lead text-xl text-muted-foreground mb-6">

@@ -66,63 +66,17 @@ const GoogleMapsRankingFaktoren = () => {
     { factor: "Keine Fotos", severity: "Mittel", description: "Weniger Klicks, schlechtere CTR" },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was sind die 3 wichtigsten Google Maps Ranking-Faktoren?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die drei Hauptfaktoren sind Proximity (Nähe zum Suchenden), Relevance (Übereinstimmung mit der Suchanfrage) und Prominence (Bekanntheit und Autorität des Unternehmens). Nur auf Prominence haben Sie direkten Einfluss."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie lange dauert es, bis Google Maps Rankings sich verbessern?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Erste Verbesserungen sind oft nach 4-8 Wochen sichtbar. Signifikante Ranking-Verbesserungen benötigen typischerweise 3-6 Monate kontinuierlicher Optimierung, abhängig vom Wettbewerb."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Sind Bewertungen wirklich so wichtig für Google Maps?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja! Bewertungen sind einer der stärksten Ranking-Faktoren. Nicht nur die Anzahl zählt, sondern auch die durchschnittliche Bewertung, die Aktualität und ob Sie auf Bewertungen antworten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kann ich die Proximity (Nähe) beeinflussen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nein, die physische Entfernung zum Suchenden kann nicht beeinflusst werden. Aber Sie können für ein größeres Servicegebiet ranken, indem Sie Ihre Relevance und Prominence stark verbessern."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was passiert, wenn ich Keywords in meinen Geschäftsnamen einfüge?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Keyword-Stuffing im Geschäftsnamen verstößt gegen Googles Richtlinien und kann zur Suspendierung Ihres Profils führen. Verwenden Sie nur Ihren echten Geschäftsnamen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie viele Bewertungen brauche ich, um gut zu ranken?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es gibt keine feste Zahl. In den meisten Märkten sind 20-50 Bewertungen ein guter Start. Wichtiger als eine bestimmte Anzahl ist ein kontinuierlicher Zufluss neuer Bewertungen."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Was sind die 3 wichtigsten Google Maps Ranking-Faktoren?", answer: "Die drei Hauptfaktoren sind Proximity (Nähe zum Suchenden), Relevance (Übereinstimmung mit der Suchanfrage) und Prominence (Bekanntheit und Autorität des Unternehmens). Nur auf Prominence haben Sie direkten Einfluss." },
+    { question: "Wie lange dauert es, bis Google Maps Rankings sich verbessern?", answer: "Erste Verbesserungen sind oft nach 4-8 Wochen sichtbar. Signifikante Ranking-Verbesserungen benötigen typischerweise 3-6 Monate kontinuierlicher Optimierung." },
+    { question: "Sind Bewertungen wirklich so wichtig für Google Maps?", answer: "Ja! Bewertungen sind einer der stärksten Ranking-Faktoren. Nicht nur die Anzahl zählt, sondern auch die durchschnittliche Bewertung, die Aktualität und ob Sie auf Bewertungen antworten." },
+    { question: "Kann ich die Proximity (Nähe) beeinflussen?", answer: "Nein, die physische Entfernung zum Suchenden kann nicht beeinflusst werden. Aber Sie können für ein größeres Servicegebiet ranken, indem Sie Ihre Relevance und Prominence stark verbessern." },
+    { question: "Was passiert, wenn ich Keywords in meinen Geschäftsnamen einfüge?", answer: "Keyword-Stuffing im Geschäftsnamen verstößt gegen Googles Richtlinien und kann zur Suspendierung Ihres Profils führen. Verwenden Sie nur Ihren echten Geschäftsnamen." },
+    { question: "Wie viele Bewertungen brauche ich, um gut zu ranken?", answer: "Es gibt keine feste Zahl. In den meisten Märkten sind 20-50 Bewertungen ein guter Start. Wichtiger als eine bestimmte Anzahl ist ein kontinuierlicher Zufluss neuer Bewertungen." },
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <Card className="text-center bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">

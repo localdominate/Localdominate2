@@ -153,47 +153,15 @@ const LocalSeoMuenchen = () => {
     { name: "11880.com", kategorie: "Branchenbuch", prioritaet: "Mittel", besonderheit: "Gute lokale Sichtbarkeit" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Wie wichtig ist der Dialekt für Local SEO in München?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bayerische Dialekt-Keywords können bis zu 30% mehr lokale Suchanfragen abdecken. Begriffe wie 'Wirtshaus' statt 'Gaststätte' oder 'Leberkäs' statt 'Fleischkäse' werden von echten Münchnern häufiger gesucht. Die beste Strategie ist, beide Varianten zu verwenden."
-        }
-      },
-      {
-        "@type": "Question", 
-        "name": "Wann sollte ich mit der Oktoberfest-SEO beginnen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Beginnen Sie spätestens im Juli mit der Optimierung für Oktoberfest-Keywords. Google benötigt Zeit zum Indexieren, und die Konkurrenz ist enorm. Erstellen Sie dedizierte Landing Pages und starten Sie ab August mit regelmäßigen Google Posts zur Wiesn."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche Münchner Stadtteile haben den höchsten SEO-Wettbewerb?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Schwabing, Maxvorstadt und die Innenstadt (Altstadt-Lehel) haben den höchsten Wettbewerb. In aufstrebenden Vierteln wie Giesing, Sendling oder dem Westend ist es einfacher, gute Rankings zu erzielen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie nutze ich lokale Münchner Events für SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Erstellen Sie für jedes große Event (Oktoberfest, Christkindlmarkt, Starkbierfest) eigene Inhalte. Nutzen Sie Google Posts vor und während der Events. Aktualisieren Sie Öffnungszeiten und erstellen Sie event-spezifische Angebote in Ihrem Google Business Profil."
-        }
-      }
-    ]
-  };
+  const faqItems = [
+    { question: "Wie wichtig ist der Dialekt für Local SEO in München?", answer: "Bayerische Dialekt-Keywords können bis zu 30% mehr lokale Suchanfragen abdecken. Begriffe wie 'Wirtshaus' statt 'Gaststätte' oder 'Leberkäs' statt 'Fleischkäse' werden von echten Münchnern häufiger gesucht. Die beste Strategie ist, beide Varianten zu verwenden." },
+    { question: "Wann sollte ich mit der Oktoberfest-SEO beginnen?", answer: "Beginnen Sie spätestens im Juli mit der Optimierung für Oktoberfest-Keywords. Google benötigt Zeit zum Indexieren, und die Konkurrenz ist enorm. Erstellen Sie dedizierte Landing Pages und starten Sie ab August mit regelmäßigen Google Posts zur Wiesn." },
+    { question: "Welche Münchner Stadtteile haben den höchsten SEO-Wettbewerb?", answer: "Schwabing, Maxvorstadt und die Innenstadt (Altstadt-Lehel) haben den höchsten Wettbewerb. In aufstrebenden Vierteln wie Giesing, Sendling oder dem Westend ist es einfacher, gute Rankings zu erzielen." },
+    { question: "Wie nutze ich lokale Münchner Events für SEO?", answer: "Erstellen Sie für jedes große Event (Oktoberfest, Christkindlmarkt, Starkbierfest) eigene Inhalte. Nutzen Sie Google Posts vor und während der Events. Aktualisieren Sie Öffnungszeiten und erstellen Sie event-spezifische Angebote in Ihrem Google Business Profil." },
+  ];
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={faqSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <Card className="text-center bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">

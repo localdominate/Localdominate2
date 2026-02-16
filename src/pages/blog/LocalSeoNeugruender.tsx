@@ -56,19 +56,6 @@ const LocalSeoNeugruender = () => {
     }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
-
   const zeitplan = [
     { phase: "Woche 1-2", titel: "Fundament legen", aufgaben: ["GBP anlegen & verifizieren", "Erste Fotos hochladen", "Basis-Website erstellen"] },
     { phase: "Woche 3-4", titel: "Sichtbarkeit aufbauen", aufgaben: ["Top 10 Citations anlegen", "Erste Bewertungen sammeln", "Social Media Profile"] },
@@ -77,7 +64,7 @@ const LocalSeoNeugruender = () => {
   ];
 
   return (
-    <ArticleLayout article={article} additionalSchema={faqSchema} tocItems={tocItems}>
+    <ArticleLayout article={article} faqItems={faqItems} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
 
       <p className="text-lg text-muted-foreground leading-relaxed mb-8">
