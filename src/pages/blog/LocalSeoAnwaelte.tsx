@@ -110,7 +110,7 @@ const LocalSeoAnwaelte = () => {
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
-      additionalSchema={faqSchema}
+      faqItems={faqItems}
       articleType="legal"
       reviewedBy={{
         name: "Rechtsanwalt Fachredaktion",

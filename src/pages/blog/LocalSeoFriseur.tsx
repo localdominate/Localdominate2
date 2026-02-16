@@ -68,9 +68,30 @@ const LocalSeoFriseur: React.FC = () => {
     { id: 'faq', title: 'FAQ' },
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+  const faqItems = [
+    { question: "Welches Buchungssystem ist am besten für kleine Friseursalons?", answer: "Für kleine Salons (1-2 Mitarbeiter) empfehlen wir Fresha, da es eine kostenlose Basisversion bietet und mit Google Reserve integriert ist. So können Kunden direkt aus Google Maps buchen." },
+    { question: "Wie verbinde ich mein Buchungssystem mit Google?", answer: "Gehe in dein Google Business Profil, wähle 'Bearbeiten' > 'Buchungen' und verbinde ein unterstütztes Buchungssystem wie Shore, Fresha oder Treatwell. Der 'Termin buchen' Button erscheint dann automatisch in deinem Profil." },
+    { question: "Brauche ich Instagram für meinen Friseursalon?", answer: "Ja, Instagram ist für Beauty-Businesses essentiell. 78% der Kunden recherchieren Salons auf Instagram, bevor sie einen Termin buchen. Vorher/Nachher-Bilder sind dabei besonders wirkungsvoll." },
+    { question: "Wie bekomme ich mehr Google-Bewertungen von zufriedenen Kunden?", answer: "Frage direkt nach dem Termin, wenn der Kunde noch begeistert ist. Nutze einen QR-Code am Spiegel, sende eine Follow-up SMS mit Bewertungslink, oder lege eine Karte mit dem Link bei der Rechnung bei." },
+    { question: "Soll ich meine Preise auf Google Business zeigen?", answer: "Ja! Transparente Preise erhöhen das Vertrauen und filtern unpassende Kunden vorab heraus. Salons mit Preisangaben haben 23% mehr Klicks auf den Buchungsbutton." },
+    { question: "Wie reagiere ich auf negative Bewertungen über Haarschnitte?", answer: "Antworte professionell innerhalb von 24 Stunden. Bedauere die Unzufriedenheit, biete eine kostenlose Nachbesserung an und bitte um direkten Kontakt. Zeige, dass dir Kundenzufriedenheit wichtig ist." },
+    { question: "Welche Fotos brauche ich für Google Business als Friseur?", answer: "Mindestens 12 Fotos: Außenansicht, Empfang, Waschplatz, Schneideplätze, Team, Produkte, 3-5 Vorher/Nachher-Bilder, Ambiente. Aktualisiere monatlich mit neuen Arbeiten." },
+    { question: "Wie oft sollte ich neue Bilder auf Google hochladen?", answer: "Mindestens einmal pro Woche ein neues Bild. Google belohnt aktive Profile mit besserer Sichtbarkeit. Vorher/Nachher-Bilder funktionieren besonders gut." },
+    { question: "Lohnt sich Treatwell für meinen Salon?", answer: "Treatwell lohnt sich für Neukunden-Akquise, hat aber 25-30% Provision. Nutze es zum Aufbau, aber lenke Stammkunden auf eigene Buchungskanäle um die Kosten zu reduzieren." },
+    { question: "Wie wichtig ist eine eigene Website für Friseure?", answer: "Eine eigene Website ist wichtig für Suchmaschinen-Ranking, Vertrauen und Markenaufbau. Sie muss nicht aufwendig sein – wichtig sind Kontakt, Services, Preise und Buchungsmöglichkeit." },
+    { question: "Welche Keywords sind für Friseure am wichtigsten?", answer: "Die wichtigsten Keywords sind 'Friseur [Stadt]', 'Friseursalon [Stadtteil]', 'Bester Friseur [Stadt]' sowie Service-Keywords wie 'Balayage [Stadt]' oder 'Herrenfriseur [Stadt]'." },
+    { question: "Wie kann ich Stammkunden zu Bewertungen motivieren?", answer: "Persönliche Ansprache nach dem Termin funktioniert am besten. Erkläre, wie wichtig Bewertungen für dein Geschäft sind. Ein kleines Dankeschön (z.B. Produktprobe) ist erlaubt, aber keine Bezahlung für Bewertungen." },
+    { question: "Soll ich TikTok oder Instagram nutzen als Friseur?", answer: "Beides hat Vorteile: Instagram für Portfolio und lokale Reichweite, TikTok für virale Transformation-Videos und jüngere Zielgruppe. Starte mit Instagram, erweitere auf TikTok wenn Zeit vorhanden." },
+    { question: "Wie zeige ich Vorher/Nachher-Bilder richtig?", answer: "Gleicher Winkel, gleiche Beleuchtung, gleicher Hintergrund. Hole immer schriftliche Einwilligung. Nutze eine Collage oder Slider-Format. Tagge Produkte und verwendete Techniken." },
+    { question: "Was kostet Local SEO für einen Friseursalon?", answer: "DIY-Optimierung kostet nur Zeit. Professionelle Local SEO Betreuung kostet zwischen 300-1.500€ monatlich, abhängig von Umfang und Wettbewerb in deiner Stadt." },
+    { question: "Wie schnell sehe ich Ergebnisse bei Local SEO?", answer: "Erste Verbesserungen nach 4-8 Wochen, signifikante Ergebnisse nach 3-6 Monaten. Google Business Optimierung wirkt am schnellsten, Website-SEO braucht länger." },
+    { question: "Brauche ich einen Blog auf meiner Friseur-Website?", answer: "Ein Blog ist hilfreich für SEO, aber nicht essentiell. Wenn du bloggst, schreibe über lokale Themen wie 'Hochzeitsfrisuren in [Stadt]' oder 'Balayage-Trends 2026'." },
+    { question: "Wie gehe ich mit Fake-Bewertungen um?", answer: "Melde sie bei Google über 'Als unangemessen melden'. Antworte sachlich und erkläre, dass die Person kein Kunde war. Sammle echte Bewertungen um das Verhältnis zu verbessern." },
+    { question: "Soll ich Rabatte für Bewertungen anbieten?", answer: "Nein! Das verstößt gegen Google-Richtlinien und kann zur Löschung führen. Du darfst um Bewertungen bitten und ein kleines Dankeschön geben, aber nicht für positive Bewertungen bezahlen." },
+    { question: "Wie optimiere ich meine Website für 'Friseur in der Nähe'?", answer: "Optimiere dein Google Business Profil (wichtiger als Website), verwende lokale Keywords auf der Website, baue lokale Backlinks auf und stelle sicher, dass NAP-Daten überall konsistent sind." }
+  ];
+
+  const faqSchema_unused = {
     "mainEntity": [
       {
         "@type": "Question",
@@ -273,7 +294,8 @@ const LocalSeoFriseur: React.FC = () => {
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
-      additionalSchema={[faqSchema, howToSchema]}
+      faqItems={faqItems}
+      additionalSchema={howToSchema}
     >
       {/* Hero Stats */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12" id="statistiken">

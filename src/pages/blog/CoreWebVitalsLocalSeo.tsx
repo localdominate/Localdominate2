@@ -35,9 +35,25 @@ const CoreWebVitalsLocalSeo = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+  const faqItems = [
+    { question: "Was sind Core Web Vitals?", answer: "Core Web Vitals sind von Google definierte Kennzahlen für die Nutzererfahrung auf Websites. Sie messen Ladegeschwindigkeit (LCP), Interaktivität (INP, früher FID) und visuelle Stabilität (CLS). Seit 2021 sind sie ein offizieller Ranking-Faktor." },
+    { question: "Wie wichtig sind Core Web Vitals für Local SEO?", answer: "Sehr wichtig, besonders für mobile Nutzer. 92% der lokalen Suchen kommen vom Smartphone. Langsame Websites verlieren 53% der mobilen Besucher nach 3 Sekunden. Gute Core Web Vitals verbessern Rankings und Conversion-Raten gleichermaßen." },
+    { question: "Was ist ein guter LCP-Wert?", answer: "Ein guter LCP-Wert liegt unter 2,5 Sekunden. Werte zwischen 2,5 und 4 Sekunden müssen verbessert werden, über 4 Sekunden gilt als schlecht. Für lokale Unternehmen mit vielen mobilen Besuchern ist LCP besonders kritisch." },
+    { question: "Was ist der Unterschied zwischen FID und INP?", answer: "FID (First Input Delay) maß nur die erste Interaktion. INP (Interaction to Next Paint) ersetzt FID seit März 2024 und misst alle Interaktionen während des gesamten Besuchs. INP ist aussagekräftiger für die tatsächliche Nutzererfahrung." },
+    { question: "Wie messe ich meine Core Web Vitals?", answer: "Die wichtigsten Tools sind: Google PageSpeed Insights (schnelle Analyse), Google Search Console (reale Nutzerdaten), Chrome DevTools (detaillierte Analyse), und Lighthouse (umfassende Audits). Nutzen Sie Field-Daten für reale Werte." },
+    { question: "Wie verbessere ich meinen LCP-Wert?", answer: "Die wichtigsten Maßnahmen: Bilder optimieren und lazy-loaden, Hero-Bild preloaden, Server-Response-Zeit verbessern, kritisches CSS inline einbinden, unnötiges JavaScript entfernen, CDN verwenden, Caching aktivieren." },
+    { question: "Was verursacht schlechte CLS-Werte?", answer: "Häufige Ursachen: Bilder ohne Größenangaben, dynamisch eingefügte Werbung, Webfonts ohne font-display, nachladende Inhalte über dem Viewport. Lösung: Platzhalter reservieren und Größen immer angeben." },
+    { question: "Wie wirken sich Core Web Vitals auf die Conversion aus?", answer: "Stark. Studien zeigen: 1 Sekunde schnellere Ladezeit = 7% mehr Conversions. Bei lokalen Suchen ist der Effekt noch stärker, weil Nutzer oft in Eile sind (Notfälle, 'in der Nähe'-Suchen)." },
+    { question: "Welche Plugins verlangsamen meine WordPress-Website?", answer: "Typische Bremsen: Social-Media-Plugins, komplexe Page-Builder, schlecht konfigurierte Slider, Chat-Widgets, Analytics mit vielen Tracking-Scripts. Deaktivieren Sie ungenutzte Plugins und ersetzen Sie schwere durch leichte Alternativen." },
+    { question: "Ist ein Hosting-Wechsel nötig für bessere Core Web Vitals?", answer: "Oft ja. Günstiges Shared-Hosting hat langsame Server-Response-Zeiten (TTFB). Für lokale Unternehmen empfehlen wir mindestens Managed WordPress Hosting oder einen deutschen Server für kurze Latenz." },
+    { question: "Wie wichtig ist HTTPS für Core Web Vitals?", answer: "Sehr wichtig. HTTPS ist Voraussetzung für HTTP/2, was paralleles Laden ermöglicht und die Geschwindigkeit verbessert. Außerdem ist HTTPS ein eigenständiger Ranking-Faktor und schafft Vertrauen bei Nutzern." },
+    { question: "Wie optimiere ich Bilder für bessere Core Web Vitals?", answer: "Verwenden Sie moderne Formate (WebP, AVIF), komprimieren Sie Bilder, geben Sie immer width/height an, nutzen Sie responsive Bilder mit srcset, und laden Sie Bilder below-the-fold mit lazy loading." },
+    { question: "Was ist der Unterschied zwischen Lab- und Field-Daten?", answer: "Lab-Daten werden in kontrollierten Testumgebungen gemessen (Lighthouse). Field-Daten stammen von echten Nutzern (Chrome User Experience Report). Google verwendet Field-Daten für Rankings. Beide sind wichtig: Lab für Debugging, Field für reale Performance." },
+    { question: "Wie lange dauert es, bis sich Verbesserungen auswirken?", answer: "Google sammelt Field-Daten über 28 Tage. Nach technischen Verbesserungen dauert es also mindestens einen Monat, bis sich die Werte in der Search Console aktualisieren. Lab-Daten verbessern sich sofort nach den Änderungen." },
+    { question: "Können schlechte Core Web Vitals meine Rankings zerstören?", answer: "Core Web Vitals sind ein Ranking-Faktor, aber nicht der einzige. Relevanter Content bleibt wichtiger. Allerdings: Bei gleichwertigen Seiten gewinnt die schnellere. Und schlechte Performance kostet definitiv Conversions und damit indirekt Rankings." }
+  ];
+
+  const faqSchema_unused = {
     "mainEntity": [
       {
         "@type": "Question",
@@ -166,7 +182,7 @@ const CoreWebVitalsLocalSeo = () => {
     <ArticleLayout
       article={article}
       tocItems={tocItems}
-      additionalSchema={faqSchema}
+      faqItems={faqItems}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">

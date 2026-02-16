@@ -34,9 +34,25 @@ const LocalSeoSteuerberater = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+  const faqItems = [
+    { question: "Wie finden potenzielle Mandanten einen Steuerberater?", answer: "76% aller Mandanten-Suchen starten online. Die häufigsten Suchanfragen sind 'Steuerberater [Stadt]', 'Steuerkanzlei in der Nähe' und 'Steuerberater für [Spezialisierung]'. Google ist dabei die mit Abstand wichtigste Suchmaschine." },
+    { question: "Welche Google Business Kategorie soll ich als Steuerberater wählen?", answer: "Die Hauptkategorie sollte 'Steuerberater' sein. Als Nebenkategorien eignen sich 'Buchhalter', 'Finanzberater' oder 'Unternehmensberater', je nach Ihrem Leistungsspektrum. Wählen Sie nur Kategorien, die Ihre Dienstleistungen tatsächlich abdecken." },
+    { question: "Wann ist die beste Zeit für Steuerberater-Marketing?", answer: "Die Hauptsaison ist Januar bis Mai (Steuererklärungszeit). Bereits ab November sollten Sie Content für die kommende Saison vorbereiten. Nach dem 31. Juli (Abgabefrist mit Berater) beginnt die Akquise für das Folgejahr." },
+    { question: "Welche Keywords sind für Steuerberater am wertvollsten?", answer: "Die wertvollsten Keywords kombinieren Leistung mit Ort: 'Steuerberater [Stadt]', 'Steuerkanzlei [Stadtteil]'. Spezialisierungs-Keywords wie 'Steuerberater für Freiberufler' oder 'Steuerberater Immobilien' haben geringeres Volumen, aber höhere Conversion-Raten." },
+    { question: "Dürfen Steuerberater aktiv um Bewertungen bitten?", answer: "Ja, das ist erlaubt und empfohlen. Anders als bei Ärzten gibt es für Steuerberater keine berufsrechtlichen Einschränkungen bei der Bewertungsakquise. Bitten Sie zufriedene Mandanten nach erfolgreichem Jahresabschluss um eine Google-Bewertung." },
+    { question: "Welche Content-Themen funktionieren für Steuerberater?", answer: "Steuer-Tipps, Fristenkalender, Änderungen im Steuerrecht, Checklisten für die Steuererklärung und Branchenspezifische Guides funktionieren besonders gut. Wichtig: Aktualität – veraltete Steuer-Infos schaden Ihrer Reputation." },
+    { question: "Wie wichtig ist die Spezialisierung für Local SEO?", answer: "Sehr wichtig. Generische Keywords wie 'Steuerberater Hamburg' sind hart umkämpft. Spezialisierungen wie 'Steuerberater für Ärzte Hamburg' oder 'E-Commerce Steuerberater' haben weniger Wettbewerb und höhere Conversion-Raten." },
+    { question: "Soll ich Preise auf meiner Website nennen?", answer: "Richtwerte können helfen. Viele potenzielle Mandanten suchen nach 'Steuerberater Kosten'. Eine transparente Darstellung wie 'Einkommensteuererklärung ab X €' schafft Vertrauen und filtert unpassende Anfragen. Die StBVV setzt Rahmen." },
+    { question: "Wie optimiere ich für 'Steuerberater in der Nähe'?", answer: "Diese Suchanfrage wird über den Local Pack (Google Maps) bedient. Optimieren Sie Ihr Google Business Profil: vollständige Daten, viele positive Bewertungen, regelmäßige Google Posts, und stellen Sie sicher, dass Ihre Adresse korrekt und konsistent ist." },
+    { question: "Braucht jeder Standort ein eigenes Google Business Profil?", answer: "Ja, wenn Sie mehrere Niederlassungen haben. Jeder physische Standort mit Mandanten-Empfang sollte ein eigenes Profil bekommen. Wichtig: Jedes Profil braucht eine eigene Telefonnummer und eindeutige Inhalte." },
+    { question: "Welche Verzeichnisse sind für Steuerberater wichtig?", answer: "Neben Google Business: Steuerberater-Suchdienst der Bundessteuerberaterkammer, DATEV-Partnerliste, lokale IHK-Verzeichnisse, gelbeseiten.de und das Telefonbuch. Auch spezialisierte Portale wie steuerberater.de können wertvoll sein." },
+    { question: "Wie gehe ich mit negativen Bewertungen um?", answer: "Antworten Sie professionell und sachlich. Vermeiden Sie Details zum Mandat (Schweigepflicht!). Bieten Sie ein persönliches Gespräch an. Bei falschen Tatsachenbehauptungen können Sie Löschung verlangen. Eine negative Bewertung unter vielen positiven schadet kaum." },
+    { question: "Wie lange dauert es, bis Local SEO wirkt?", answer: "Erste Verbesserungen im Google Business Ranking zeigen sich oft nach 4-8 Wochen. Für organische Rankings in umkämpften Städten rechnen Sie mit 6-12 Monaten. Content-Marketing für Steuer-Themen kann schneller ranken, da die Nachfrage saisonal stark steigt." },
+    { question: "Soll ich einen Blog mit Steuer-Tipps führen?", answer: "Ja, wenn Sie ihn regelmäßig pflegen können. Ein gut gepflegter Steuer-Blog positioniert Sie als Experten und generiert organischen Traffic. Wichtig: Inhalte müssen aktuell sein – veraltete Steuerinformationen schaden Ihrer Reputation erheblich." },
+    { question: "Was kostet Local SEO für Steuerberater?", answer: "DIY: Ihre Zeit + ca. 100-200€/Monat für Tools. Agentur: 500-1.500€/Monat je nach Umfang und Wettbewerb in Ihrer Stadt. Der ROI ist bei einem einzigen gewonnenen Dauermandat (Jahreshonorar oft 1.000-5.000€+) schnell positiv." }
+  ];
+
+  const faqSchema_unused = {
     "mainEntity": [
       {
         "@type": "Question",
@@ -192,7 +208,8 @@ const LocalSeoSteuerberater = () => {
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
-      additionalSchema={[faqSchema, accountingServiceSchema]}
+      faqItems={faqItems}
+      additionalSchema={accountingServiceSchema}
       articleType="financial"
       reviewedBy={{
         name: "Steuerberater Fachredaktion",
