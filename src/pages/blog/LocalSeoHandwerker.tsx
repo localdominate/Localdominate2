@@ -108,19 +108,6 @@ const LocalSeoHandwerker = () => {
     }
   ];
 
-  // Generate FAQ Schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
 
   const handwerkerBranchen = [
     { name: "Elektriker", icon: "⚡", searches: "12.000/Monat" },

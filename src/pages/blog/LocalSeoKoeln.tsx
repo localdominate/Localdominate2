@@ -72,18 +72,6 @@ const LocalSeoKoeln = () => {
     }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
 
   const koelnerStadtteile = [
     { name: "Innenstadt", population: "40.000", competition: "Sehr hoch", tip: "Nische finden" },
