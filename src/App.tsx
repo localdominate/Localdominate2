@@ -115,6 +115,9 @@ const GbpOeffnungszeitenSondertage = lazy(() => import("./pages/blog/GbpOeffnung
 const GbpAttributeRichtigNutzen = lazy(() => import("./pages/blog/GbpAttributeRichtigNutzen"));
 const LocalSeoVsMaps = lazy(() => import("./pages/blog/LocalSeoVsMaps"));
 const LocalCitations2025 = lazy(() => import("./pages/blog/LocalCitations2025"));
+const LocalSeoBackerei = lazy(() => import("./pages/blog/LocalSeoBackerei"));
+const LocalSeoHannover = lazy(() => import("./pages/blog/LocalSeoHannover"));
+const AiSearchOptimization2026 = lazy(() => import("./pages/blog/AiSearchOptimization2026"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
 const CoreWebVitalsTracker = lazy(() => import("@/components/CoreWebVitalsTracker"));
@@ -240,6 +243,9 @@ const App = () => (
                 <Route path="/blog/gbp-attribute-richtig-nutzen" element={<GbpAttributeRichtigNutzen />} />
                 <Route path="/blog/local-seo-vs-maps-seo" element={<LocalSeoVsMaps />} />
                 <Route path="/blog/local-citations-2025" element={<LocalCitations2025 />} />
+                <Route path="/blog/local-seo-baeckerei" element={<LocalSeoBackerei />} />
+                <Route path="/blog/local-seo-hannover" element={<LocalSeoHannover />} />
+                <Route path="/blog/ai-search-optimization-2026" element={<AiSearchOptimization2026 />} />
                 <Route path="/test-b" element={<TestB />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
