@@ -56,18 +56,6 @@ const EEATLokaleUnternehmen = () => {
     }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
 
   const eeatComponents = [
     { letter: "E", title: "Experience", deutsch: "Erfahrung", icon: "👤", color: "bg-blue-100 text-blue-800" },

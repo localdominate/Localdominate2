@@ -71,18 +71,6 @@ const LocalSeoWien = () => {
     }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  };
 
   const wienerBezirke = [
     { nummer: "1.", name: "Innere Stadt", population: "16.000", competition: "Sehr hoch" },

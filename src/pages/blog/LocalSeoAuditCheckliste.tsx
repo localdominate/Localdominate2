@@ -77,17 +77,6 @@ const LocalSeoAuditCheckliste = () => {
     },
   ];
 
-  const faqSchema = {
-    '@type': 'FAQPage',
-    mainEntity: faqItems.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
 
   // HowTo Schema für interaktive Checkliste
   const howToSchema = {
@@ -148,7 +137,6 @@ const LocalSeoAuditCheckliste = () => {
     ]
   };
 
-  const combinedSchema = [faqSchema, howToSchema];
 
   return (
     <ArticleLayout article={article} additionalSchema={howToSchema} faqItems={faqItems} tocItems={tocItems}>

@@ -96,7 +96,9 @@ Disallow: /onboarding
 # Sitemaps - Alle relevanten Sitemaps
 Sitemap: https://localdominate.org/sitemap-index.xml
 Sitemap: https://localdominate.org/sitemap.xml
+Sitemap: https://localdominate.org/sitemap-blog.xml
 Sitemap: https://localdominate.org/sitemap-images.xml
+Sitemap: https://localdominate.org/sitemap-lexikon.xml
 
 # Host-Direktive für Yandex
 Host: https://localdominate.org
