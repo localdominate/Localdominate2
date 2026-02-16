@@ -737,4 +737,38 @@
     </image:image>
   </url>
 
+  <!-- Neue Artikel Februar 2026 -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-baeckerei</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-baeckerei.jpg</image:loc>
+      <image:title>Local SEO für Bäckereien</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-hannover</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-hannover.jpg</image:loc>
+      <image:title>Local SEO Hannover Guide</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/ai-search-optimization-2026</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/ai-search-optimization-2026.jpg</image:loc>
+      <image:title>AI Search Optimization 2026</image:title>
+    </image:image>
+  </url>
+
 </urlset>
