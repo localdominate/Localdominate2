@@ -33,9 +33,25 @@ const LocalSeoFrankfurt = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+  const faqItems = [
+    { question: "Wie wichtig ist Local SEO in Frankfurt am Main?", answer: "Extrem wichtig. Frankfurt hat über 750.000 Einwohner, das Rhein-Main-Gebiet über 5,8 Millionen. Die Kaufkraft ist überdurchschnittlich, der Wettbewerb in vielen Branchen intensiv." },
+    { question: "Welche Frankfurter Stadtteile sind für Local SEO wichtig?", answer: "Für B2C sind Sachsenhausen, Nordend, Bornheim und Bockenheim wichtig (hohe Wohndichte). Für B2B dominieren Bankenviertel, Westend, Europaviertel und Niederrad (Bürostandorte). Der Flughafen-Bereich ist für Logistik und Businesshotels entscheidend." },
+    { question: "Wie wichtig ist mehrsprachiges SEO in Frankfurt?", answer: "Sehr wichtig. Frankfurt hat einen internationalen Bevölkerungsanteil von über 30%. Für viele Branchen lohnt sich neben Deutsch auch englisches SEO. Bei Finanzdienstleistungen sind teilweise weitere Sprachen relevant." },
+    { question: "Welche Rolle spielen Messen für Local SEO in Frankfurt?", answer: "Die Messe Frankfurt ist weltweit führend. Vor großen Messen steigt das Suchvolumen für 'Hotel Frankfurt Messe', 'Restaurant nähe Messe Frankfurt', 'Taxi Messe Frankfurt' stark an. Messe-optimierte Landingpages können saisonalen Traffic bringen." },
+    { question: "Wie optimiere ich für den Frankfurter Flughafen?", answer: "Für flughafennahe Unternehmen lohnen sich Keywords wie 'Flughafen Frankfurt [Service]', 'Airport Frankfurt Hotel', 'Parken Flughafen Frankfurt'. Diese haben hohes Suchvolumen und klare Kaufabsicht." },
+    { question: "Was sind typische B2B-Keywords für Frankfurt?", answer: "Wichtige B2B-Keywords sind: 'Unternehmensberatung Frankfurt', 'Steuerberater Frankfurt Unternehmen', 'Wirtschaftskanzlei Frankfurt', 'IT-Dienstleister Frankfurt', 'Personalvermittlung Frankfurt'. Oft mit Branchen-Zusatz wie 'Finanzsektor'." },
+    { question: "Welche lokalen Verzeichnisse sind in Frankfurt wichtig?", answer: "Neben Google Business sind wichtig: Frankfurt-Tipp.de, Journal Frankfurt, IHK Frankfurt Firmendatenbank, Frankfurt Business Community. Für B2B zusätzlich: WerLiefertWas, Europages, Kompass." },
+    { question: "Wie nutze ich Events für Local SEO?", answer: "Erstellen Sie Event-Landingpages für große Frankfurter Events: IAA, Buchmesse, Luminale, Museumsuferfest. Optimieren Sie für Keywords wie '[Event] Frankfurt 2026'. Diese Seiten können jährlich wiederkehrenden Traffic bringen." },
+    { question: "Wie wichtig ist das Bankenviertel für mein SEO?", answer: "Wenn Sie B2B-Kunden im Finanzsektor ansprechen, ist 'Bankenviertel Frankfurt' ein wichtiger Geo-Modifier. Keywords wie 'Mittagstisch Bankenviertel' oder 'Büroservice Bankenviertel' haben präzise lokale Relevanz." },
+    { question: "Soll ich für 'Rhein-Main' oder nur 'Frankfurt' optimieren?", answer: "Beides. 'Frankfurt' hat höheres Suchvolumen, aber 'Rhein-Main-Gebiet' spricht die gesamte Metropolregion an (Offenbach, Wiesbaden, Mainz, Darmstadt). Für regionale Dienstleister lohnt sich beides." },
+    { question: "Wie stehe ich in Frankfurt gegen große Konkurrenten?", answer: "Fokussieren Sie auf Nischen: Statt 'Steuerberater Frankfurt' optimieren Sie für 'Steuerberater Startups Frankfurt' oder 'Steuerberater Freiberufler Nordend'. Long-Tail-Keywords haben weniger Konkurrenz und höhere Relevanz." },
+    { question: "Welche Rolle spielt der Hauptbahnhof für Local SEO?", answer: "Der Frankfurter Hauptbahnhof ist der größte Deutschlands mit 500.000 Reisenden täglich. 'Nähe Hauptbahnhof Frankfurt' ist ein wertvoller Geo-Modifier für Hotels, Gastronomie und Geschäfte in Bahnhofsnähe." },
+    { question: "Wie optimiere ich für den EZB-Standort?", answer: "Die EZB im Ostend hat das Viertel aufgewertet. Keywords wie 'Restaurant Ostend Frankfurt', 'Café EZB-Nähe' oder 'Büro Ostend Frankfurt' sind durch die EZB-Präsenz wertvoller geworden." },
+    { question: "Gibt es Frankfurter Dialekt-Keywords?", answer: "Weniger als in anderen Städten. 'Äppelwoi' statt 'Apfelwein' oder 'Handkäs' sind bekannte Begriffe. Für traditionelle Lokale und Apfelweinwirtschaften können solche Keywords Authentizität signalisieren." },
+    { question: "Wie wichtig ist Sachsenhausen für Local SEO?", answer: "Sachsenhausen ist Frankfurts beliebtestes Ausgeh- und Wohnviertel. Für Gastronomie, Einzelhandel und lokale Dienstleister ist 'Sachsenhausen' ein sehr wichtiger Geo-Modifier mit hohem Suchvolumen." }
+  ];
+
+  const faqSchema_unused = {
     "mainEntity": [
       {
         "@type": "Question",
@@ -177,7 +193,7 @@ const LocalSeoFrankfurt = () => {
     <ArticleLayout
       article={article}
       tocItems={tocItems}
-      additionalSchema={faqSchema}
+      faqItems={faqItems}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">

@@ -34,9 +34,25 @@ const LocalSeoImmobilienmakler = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+  const faqItems = [
+    { question: "Wie wichtig ist Local SEO für Immobilienmakler?", answer: "Extrem wichtig. 97% aller Immobiliensuchen starten online, und die Mehrheit der Käufer und Verkäufer sucht nach einem lokalen Makler. Ohne starke lokale Sichtbarkeit verlieren Sie potenzielle Kunden an die Konkurrenz." },
+    { question: "Soll ich für jedes Objekt eine eigene Landingpage erstellen?", answer: "Für Premium-Objekte und exklusive Listings lohnt sich eine eigene Landingpage. Für Standard-Objekte reicht ein Eintrag auf Ihrer Objekt-Übersichtsseite. Wichtig: Entfernen Sie verkaufte Objekte nicht sofort, sondern nutzen Sie 301-Weiterleitungen." },
+    { question: "Welche Google Business Kategorie ist für Makler richtig?", answer: "Die Hauptkategorie sollte 'Immobilienmakler' sein. Als Nebenkategorien können Sie 'Immobilienverwaltung', 'Hausverwaltung' oder 'Immobilienbewertung' hinzufügen, je nach Ihrem Leistungsspektrum." },
+    { question: "Wie bekomme ich Bewertungen von Käufern und Verkäufern?", answer: "Bitten Sie nach erfolgreichem Notartermin um eine Bewertung. Senden Sie eine personalisierte E-Mail mit direktem Link zu Ihrem Google-Profil. Timing ist entscheidend: Die Euphorie nach dem erfolgreichen Abschluss ist der beste Moment." },
+    { question: "Sollte ich Stadtteil-Seiten für jedes Viertel erstellen?", answer: "Ja, wenn Sie in diesem Stadtteil aktiv sind. Erstellen Sie detaillierte Stadtteil-Guides mit Infos zu Preisen, Infrastruktur, Schulen und Verkehrsanbindung. Diese Seiten ranken oft für wertvolle Long-Tail-Keywords." },
+    { question: "Wie nutze ich Schema Markup als Immobilienmakler?", answer: "Verwenden Sie das RealEstateAgent-Schema für Ihr Unternehmen und das RealEstateListing-Schema für einzelne Objekte. Dies verbessert Ihre Darstellung in den Suchergebnissen und kann zu Rich Snippets führen." },
+    { question: "Was sollte mein Marktbericht enthalten?", answer: "Ein guter Marktbericht enthält: durchschnittliche Quadratmeterpreise, Preisentwicklung der letzten 12 Monate, Verweildauer auf dem Markt, Nachfrage-Trends und einen Ausblick. Aktualisieren Sie ihn monatlich oder quartalsweise." },
+    { question: "Brauche ich für jeden Standort ein eigenes Google Business Profil?", answer: "Ja, wenn Sie mehrere physische Büros haben, sollte jedes Büro ein eigenes Google Business Profil bekommen. Wichtig: Jedes Profil braucht eine eigene, lokale Telefonnummer und eindeutige Inhalte." },
+    { question: "Wie oft sollte ich Google Posts veröffentlichen?", answer: "Idealerweise 2-3 mal pro Woche. Teilen Sie neue Objekte, erfolgreiche Verkäufe (mit Erlaubnis), Marktupdate-Snippets und lokale Events. Posts verfallen nach 7 Tagen, daher ist Regelmäßigkeit wichtig." },
+    { question: "Welche Portale sind neben Google wichtig?", answer: "Für Immobilienmakler sind ImmobilienScout24, Immonet, Immowelt und Kleinanzeigen besonders wichtig. Pflegen Sie dort Ihr Maklerprofil sorgfältig – diese Seiten ranken oft für lokale Suchanfragen." },
+    { question: "Wie optimiere ich meine Website für 'Immobilienmakler + Stadt'?", answer: "Integrieren Sie den Stadtnamen in: Title-Tag, H1-Überschrift, Meta-Description, URL-Struktur und im Content natürlich. Erstellen Sie eine dedizierte Stadtseite mit lokalen Referenzen und Expertise-Nachweisen." },
+    { question: "Was ist der Unterschied zwischen Käufer- und Verkäufer-Keywords?", answer: "Käufer suchen: 'Wohnung kaufen [Stadt]', 'Haus mit Garten [Stadtteil]'. Verkäufer suchen: 'Immobilienmakler [Stadt]', 'Haus verkaufen Bewertung', 'Was ist meine Immobilie wert'. Verkäufer-Keywords sind meist lukrativer." },
+    { question: "Soll ich Preise auf meiner Website nennen?", answer: "Für Objekte: Ja, Preistransparenz ist wichtig. Für Ihre Maklerprovision: Sie können Richtwerte nennen, aber verweisen Sie auf individuelle Beratung. Verstecken Sie keine Kosten – das schadet dem Vertrauen." },
+    { question: "Wie lange dauert es, bis Local SEO Ergebnisse zeigt?", answer: "Erste Verbesserungen im Google Business Ranking sind oft nach 4-8 Wochen sichtbar. Für organische Rankings in umkämpften Märkten rechnen Sie mit 6-12 Monaten. Kontinuierliche Optimierung ist entscheidend." },
+    { question: "Was kostet Local SEO für Immobilienmakler?", answer: "DIY: Ihre Zeit + ca. 100-200€/Monat für Tools und Verzeichnisse. Agentur: 500-2.000€/Monat je nach Umfang. Der ROI ist bei einem einzigen gewonnenen Verkaufsauftrag bereits positiv." }
+  ];
+
+  const faqSchema_unused = {
     "mainEntity": [
       {
         "@type": "Question",
@@ -176,7 +192,8 @@ const LocalSeoImmobilienmakler = () => {
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
-      additionalSchema={[faqSchema, realEstateAgentSchema]}
+      faqItems={faqItems}
+      additionalSchema={realEstateAgentSchema}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 not-prose">

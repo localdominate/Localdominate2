@@ -34,9 +34,25 @@ const LocalSeoAutowerkstatt = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+  const faqItems = [
+    { question: "Wie wichtig ist Local SEO für Autowerkstätten?", answer: "Extrem wichtig. 78% der Autofahrer suchen online nach einer Werkstatt, bevor sie anrufen. Besonders bei Pannen suchen 92% über das Smartphone nach 'Autowerkstatt in der Nähe'. Ohne lokale Sichtbarkeit verlieren Sie diese Kunden." },
+    { question: "Welche Keywords sind für Autowerkstätten am wichtigsten?", answer: "Die wichtigsten Keywords sind Notfall-Suchen wie 'Autowerkstatt Notdienst', 'Reifenpanne Hilfe', 'Auto springt nicht an'. Dazu Service-Keywords wie 'Ölwechsel [Stadt]', 'TÜV [Stadt]', 'Bremsen wechseln [Stadt]' und Marken-Keywords wie 'BMW Werkstatt [Stadt]'." },
+    { question: "Wie bekomme ich mehr Google-Bewertungen für meine Werkstatt?", answer: "Bitten Sie nach jedem erfolgreichen Service um eine Bewertung. Drucken Sie QR-Codes auf Rechnungen und Visitenkarten. Das beste Timing: Wenn der Kunde sein repariertes Auto glücklich abholt. Vermeiden Sie Anreize, die gegen Google-Richtlinien verstoßen." },
+    { question: "Soll ich für jede Automarke eine eigene Seite erstellen?", answer: "Ja, wenn Sie sich auf bestimmte Marken spezialisiert haben. Marken-Landingpages ranken für wertvolle Keywords wie 'VW Spezialist [Stadt]' oder 'Mercedes Werkstatt [Stadt]'. Zeigen Sie Ihre Expertise mit Zertifikaten und Referenzen." },
+    { question: "Wie wichtig sind Fotos für meine Werkstatt?", answer: "Sehr wichtig. Google Business Profile mit vielen Fotos erhalten 42% mehr Wegbeschreibungen und 35% mehr Website-Klicks. Zeigen Sie Werkstatt-Innenansichten, moderne Geräte, Ihr Team und fertig reparierte Fahrzeuge." },
+    { question: "Welche Google Business Kategorie soll ich wählen?", answer: "Hauptkategorie 'Autowerkstatt'. Nebenkategorien je nach Leistung: 'Autolackiererei', 'Reifenservice', 'Autoelektriker', 'Karosseriebau', 'Ölwechselservice'. Maximal 10 Kategorien, nur was Sie wirklich anbieten." },
+    { question: "Wie nutze ich Schema Markup für meine Werkstatt?", answer: "Verwenden Sie AutoRepair-Schema für Ihr Unternehmen, Service-Schema für einzelne Leistungen und OpeningHoursSpecification für Ihre Öffnungszeiten. Besonders wichtig: Notdienst-Zeiten markieren." },
+    { question: "Wie kann ich bei Notfall-Suchen gefunden werden?", answer: "Optimieren Sie für Keywords wie 'Pannenhilfe [Stadt]', 'Auto Notdienst', 'Werkstatt Samstag geöffnet'. Zeigen Sie Notdienst-Zeiten prominent auf Google Business. Erstellen Sie eine eigene Notfall-Landingpage mit Telefonnummer und Sofort-Kontakt." },
+    { question: "Soll ich auch für Elektroautos optimieren?", answer: "Unbedingt. 'E-Auto Werkstatt [Stadt]' ist ein stark wachsendes Keyword mit wenig Konkurrenz. Wenn Sie E-Autos reparieren, erstellen Sie eine eigene Seite dafür. Zeigen Sie Zertifizierungen und Spezialkenntnisse." },
+    { question: "Wie wichtig ist mobile Optimierung für Werkstätten?", answer: "Kritisch. 92% der Notfall-Suchen kommen vom Smartphone. Ihre Website muss in 3 Sekunden laden, Click-to-Call prominent platzieren und die wichtigsten Infos above-the-fold zeigen." },
+    { question: "Wie nutze ich soziale Medien für meine Werkstatt?", answer: "Posten Sie Vorher/Nachher-Bilder von Reparaturen, Tipps zur Autopflege und Team-Vorstellungen. Facebook und Instagram sind ideal. Videos von komplexen Reparaturen performen besonders gut." },
+    { question: "Wie gehe ich mit negativen Bewertungen um?", answer: "Antworten Sie professionell und schnell (binnen 24 Stunden). Zeigen Sie Verständnis, bieten Sie eine Lösung an. Negative Bewertungen mit guten Antworten können Vertrauen aufbauen, wenn Sie souverän damit umgehen." },
+    { question: "Welche Rolle spielen Branchenverzeichnisse?", answer: "Einträge in relevanten Verzeichnissen stärken Ihre NAP-Konsistenz und lokale Autorität. Wichtige Portale: mobile.de, AutoScout24, KFZ-Betriebe.de, Gelbe Seiten. Achten Sie auf identische Daten überall." },
+    { question: "Wie bewerbe ich meine TÜV/Dekra-Services?", answer: "Erstellen Sie eine eigene TÜV-Landingpage mit Keywords wie 'TÜV [Stadt]', 'HU [Stadt]'. Zeigen Sie Preise, Online-Terminbuchung und was bei Nicht-Bestehen passiert. Viele suchen 'TÜV günstig [Stadt]' oder 'TÜV ohne Termin'." },
+    { question: "Soll ich Online-Terminbuchung anbieten?", answer: "Unbedingt. 67% der Kunden bevorzugen Online-Terminbuchung. Integrieren Sie ein Buchungssystem auf Ihrer Website und verlinken Sie es von Google Business. Einfache Termine wie Ölwechsel oder TÜV sind ideal." }
+  ];
+
+  const faqSchema_unused = {
     "mainEntity": [
       {
         "@type": "Question",
@@ -165,7 +181,7 @@ const LocalSeoAutowerkstatt = () => {
     <ArticleLayout
       article={article}
       tocItems={tocItems}
-      additionalSchema={faqSchema}
+      faqItems={faqItems}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">

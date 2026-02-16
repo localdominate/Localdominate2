@@ -37,9 +37,22 @@ const LocalSeoAerzte = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+  const faqItems = [
+    { question: "Darf ich als Arzt aktiv um Bewertungen bitten?", answer: "Ja, Sie dürfen Patienten höflich auf die Möglichkeit einer Bewertung hinweisen. Wichtig: Keine Belohnungen oder Rabatte im Gegenzug anbieten – das verstößt gegen das ärztliche Berufsrecht und die Richtlinien der Bewertungsportale." },
+    { question: "Wie antworte ich auf negative Bewertungen ohne Datenschutz zu verletzen?", answer: "Bestätigen Sie niemals das Arzt-Patienten-Verhältnis öffentlich. Antworten Sie allgemein: 'Wir nehmen Feedback ernst und laden Sie ein, uns direkt zu kontaktieren.' Nennen Sie keine Behandlungsdetails." },
+    { question: "Ist Jameda Premium die Investition wert?", answer: "Für die meisten Praxen ja. Jameda Premium (ab 59€/Monat) bietet bessere Sichtbarkeit, keine Werbung für Mitbewerber auf Ihrem Profil und erweiterte Profil-Funktionen. Der ROI ist meist positiv, wenn dadurch 1-2 Neupatienten pro Monat gewonnen werden." },
+    { question: "Welche Google Business Kategorie für Gemeinschaftspraxen?", answer: "Wählen Sie die Hauptkategorie nach dem Praxisschwerpunkt (z.B. 'Hausarztpraxis'). Für MVZs mit verschiedenen Fachrichtungen können Sie ein Hauptprofil plus separate Profile für jede Fachabteilung anlegen." },
+    { question: "Wie wichtig sind Arztportale vs. Google Bewertungen?", answer: "Beide sind wichtig, aber für unterschiedliche Zwecke. Google Bewertungen beeinflussen Ihr lokales Ranking direkt. Arztportale wie Jameda sind oft die erste Anlaufstelle für Patienten, die gezielt einen Spezialisten suchen. Idealerweise pflegen Sie beide aktiv." },
+    { question: "Darf ich Behandlungsergebnisse auf meiner Website zeigen?", answer: "Nur mit schriftlicher Einwilligung des Patienten und unter Beachtung des Heilmittelwerbegesetzes (HWG). Vorher-Nachher-Bilder sind bei vielen Behandlungen nicht erlaubt. Bei Zahnärzten und ästhetischen Eingriffen gelten besondere Regeln." },
+    { question: "Wie gehe ich mit Fake-Bewertungen um?", answer: "Melden Sie offensichtliche Fake-Bewertungen direkt beim Portal mit Begründung. Bei falschen Tatsachenbehauptungen haben Sie einen Löschungsanspruch. Dokumentieren Sie alles für eventuelle rechtliche Schritte." },
+    { question: "Braucht jeder Arzt in der Gemeinschaftspraxis ein eigenes Profil?", answer: "Auf Arztportalen: Ja, jeder Arzt sollte ein eigenes Profil haben. Bei Google Business: Die Praxis hat ein Profil, einzelne Ärzte können im 'Team'-Bereich vorgestellt werden. Bei MVZs mit verschiedenen Standorten: Jeder Standort braucht ein eigenes Google-Profil." },
+    { question: "Welche SEO-Maßnahmen sind für Ärzte erlaubt?", answer: "Alle seriösen SEO-Maßnahmen sind erlaubt: Website-Optimierung, Google Business Profil, Einträge in Arztportalen, informative Inhalte. Verboten sind: irreführende Werbung, Heilversprechen, unlautere Methoden wie gekaufte Bewertungen." },
+    { question: "Wie lange dauert es, bis Local SEO Ergebnisse zeigt?", answer: "Erste Verbesserungen sind oft nach 4-8 Wochen sichtbar. Signifikante Ranking-Verbesserungen dauern 3-6 Monate. Der Aufbau einer starken Online-Reputation (Bewertungen, Autorität) ist ein kontinuierlicher Prozess über 12+ Monate." },
+    { question: "Soll ich einen Blog mit Gesundheitstipps führen?", answer: "Ein Praxisblog kann sehr wertvoll sein – aber nur bei korrekter Umsetzung. Alle Inhalte müssen medizinisch korrekt, aktuell und mit Autor (Arzt) versehen sein. Halbherzige oder veraltete Inhalte schaden mehr als sie nützen." },
+    { question: "Wie wichtig ist die Praxis-Website für das Google Ranking?", answer: "Sehr wichtig. Die Website ist die Basis Ihrer Online-Präsenz. Sie muss mobilfreundlich, schnell, mit korrekten NAP-Daten und relevanten lokalen Inhalten ausgestattet sein. Google verknüpft Ihr Business Profil mit der Website-Autorität." }
+  ];
+
+  const faqSchema_unused = {
     "mainEntity": [
       {
         "@type": "Question",
@@ -152,7 +165,8 @@ const LocalSeoAerzte = () => {
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
-      additionalSchema={[faqSchema, medicalBusinessSchema]}
+      faqItems={faqItems}
+      additionalSchema={medicalBusinessSchema}
       articleType="medical"
       reviewedBy={{
         name: "Dr. Med. Fachredaktion",
