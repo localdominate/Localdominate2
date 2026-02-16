@@ -3113,6 +3113,75 @@ export const blogArticles: BlogArticle[] = [
     icon: "💪",
     keywords: ["physiotherapie seo", "physio marketing", "krankengymnastik local seo", "physiotherapeut google", "praxis marketing physio"]
   },
+  // === NEUE ARTIKEL: Februar 2026 ===
+  {
+    slug: "local-seo-baeckerei",
+    de: {
+      title: "Local SEO für Bäckereien: Mehr Kunden durch Google (2026)",
+      metaTitle: "Local SEO für Bäckereien | Branchenguide 2026",
+      metaDescription: "Wie Bäckereien durch Local SEO mehr Kunden gewinnen. Öffnungszeiten, Food-Fotos, Sonntagsbrötchen-Keywords und saisonales Marketing.",
+      excerpt: "Der Branchenguide für Bäckereien und Konditoreien mit spezifischen SEO-Strategien für mehr Laufkundschaft.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Bakeries: More Customers Through Google (2026)",
+      metaTitle: "Local SEO for Bakeries | Industry Guide 2026",
+      metaDescription: "How bakeries win more customers through Local SEO. Opening hours, food photos, keywords and seasonal marketing.",
+      excerpt: "The industry guide for bakeries and pastry shops with specific SEO strategies for more walk-in customers.",
+      category: "Industries"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-16",
+    updatedAt: "2026-02-16",
+    icon: "🥐",
+    keywords: ["bäckerei seo", "bäcker local seo", "bäckerei marketing", "konditorei google", "brot seo"]
+  },
+  {
+    slug: "local-seo-hannover",
+    de: {
+      title: "Local SEO Hannover: Der Guide für niedersächsische Unternehmen",
+      metaTitle: "Local SEO Hannover | Städte-Guide 2026",
+      metaDescription: "Local SEO speziell für Hannover und Region. Stadtteile, Messe-SEO, lokale Verzeichnisse und Strategien für die Landeshauptstadt.",
+      excerpt: "Von Linden bis Südstadt: So wirst du in ganz Hannover bei Google gefunden.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Hannover: The Guide for Lower Saxony Businesses",
+      metaTitle: "Local SEO Hannover | City Guide 2026",
+      metaDescription: "Local SEO specifically for Hannover and region. Districts, trade fair SEO, local directories and strategies for the state capital.",
+      excerpt: "From Linden to Südstadt: How to be found throughout Hannover on Google.",
+      category: "Regions"
+    },
+    readingTime: 16,
+    publishedAt: "2026-02-16",
+    updatedAt: "2026-02-16",
+    icon: "🏛️",
+    keywords: ["local seo hannover", "seo hannover", "marketing hannover", "google ranking hannover", "messe hannover seo"],
+    featured: true
+  },
+  {
+    slug: "ai-search-optimization-2026",
+    de: {
+      title: "AI Search Optimization 2026: So wirst du in der KI-Suche gefunden",
+      metaTitle: "AI Search Optimization 2026 | GEO Guide für Local SEO",
+      metaDescription: "Wie du dein Unternehmen für Google AI Overviews, ChatGPT und Perplexity optimierst. Der komplette GEO-Guide für lokale Unternehmen.",
+      excerpt: "Die Suche verändert sich: AI Overviews, ChatGPT Search und Zero-Click. So bleibst du als lokales Unternehmen sichtbar.",
+      category: "Trends"
+    },
+    en: {
+      title: "AI Search Optimization 2026: How to Be Found in AI Search",
+      metaTitle: "AI Search Optimization 2026 | GEO Guide for Local SEO",
+      metaDescription: "How to optimize your business for Google AI Overviews, ChatGPT and Perplexity. The complete GEO guide for local businesses.",
+      excerpt: "Search is changing: AI Overviews, ChatGPT Search and Zero-Click. How to stay visible as a local business.",
+      category: "Trends"
+    },
+    readingTime: 18,
+    publishedAt: "2026-02-16",
+    updatedAt: "2026-02-16",
+    icon: "🤖",
+    keywords: ["ai search optimization", "geo seo", "ai overviews optimierung", "chatgpt seo", "generative engine optimization"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3192,6 +3261,9 @@ const PUBLISHED_SLUGS = new Set([
   "gbp-attribute-richtig-nutzen",
   "local-seo-vs-maps-seo",
   "local-citations-2025",
+  "local-seo-baeckerei",
+  "local-seo-hannover",
+  "ai-search-optimization-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
