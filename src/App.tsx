@@ -144,7 +144,7 @@ const App = () => (
           <BrowserRouter>
             <Suspense fallback={<PageFallback />}>
               <Routes>
-                <Route path="/" element={<TrafficSplitter><Index /></TrafficSplitter>} />
+                <Route path="/" element={<Index />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/ab-test" element={<ABTestDashboard />} />
                 <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
