@@ -3182,6 +3182,28 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["ai search optimization", "geo seo", "ai overviews optimierung", "chatgpt seo", "generative engine optimization"],
     featured: true
   },
+  {
+    slug: "seo-ferienwohnungen",
+    de: {
+      title: "SEO für Ferienwohnungen: Schweiz, Bayern & Österreich – Raus aus der OTA-Falle",
+      metaTitle: "SEO Ferienwohnungen Schweiz, Bayern & Österreich | Direktbuchungen statt OTA",
+      metaDescription: "Wie Ferienwohnungen durch SEO bis zu 13.500 CHF OTA-Provisionen sparen. Google My Business, AI Search & regionale Strategien für St. Moritz, Zermatt, Bayern.",
+      excerpt: "15 % OTA-Provision bei jeder Buchung? SEO für Ferienwohnungen bringt Direktbuchungen, reduziert Abhängigkeit und steigert die Marge.",
+      category: "Branche"
+    },
+    en: {
+      title: "SEO for Vacation Rentals: Switzerland, Bavaria & Austria – Escape the OTA Trap",
+      metaTitle: "Vacation Rental SEO Switzerland, Bavaria & Austria | Direct Bookings",
+      metaDescription: "How vacation rentals save up to 13,500 CHF in OTA commissions through SEO. Google My Business, AI Search & regional strategies for St. Moritz, Zermatt, Bavaria.",
+      excerpt: "15% OTA commission per booking? SEO for vacation rentals drives direct bookings, reduces dependency and boosts margins.",
+      category: "Industry"
+    },
+    readingTime: 14,
+    publishedAt: "2026-02-25",
+    updatedAt: "2026-02-25",
+    icon: "🏔️",
+    keywords: ["seo ferienwohnungen", "ferienwohnung seo schweiz", "vacation rental seo", "direktbuchungen seo", "google my business ferienwohnung", "local seo tourismus"]
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3264,6 +3286,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-baeckerei",
   "local-seo-hannover",
   "ai-search-optimization-2026",
+  "seo-ferienwohnungen",
 ]);
 
 // Get only published articles (with pages), deduplicated
