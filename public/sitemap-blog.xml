@@ -771,4 +771,15 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://localdominate.org/blog/seo-ferienwohnungen</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/seo-ferienwohnungen.jpg</image:loc>
+      <image:title>SEO für Ferienwohnungen Schweiz Bayern Österreich</image:title>
+    </image:image>
+  </url>
+
 </urlset>
