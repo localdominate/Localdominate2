@@ -776,6 +776,42 @@ export type Database = {
         }
         Relationships: []
       }
+      partner_applications: {
+        Row: {
+          country: string | null
+          created_at: string | null
+          email: string
+          full_name: string
+          id: string
+          message: string | null
+          preferred_method: string | null
+          sales_experience: string | null
+          status: string | null
+        }
+        Insert: {
+          country?: string | null
+          created_at?: string | null
+          email: string
+          full_name: string
+          id?: string
+          message?: string | null
+          preferred_method?: string | null
+          sales_experience?: string | null
+          status?: string | null
+        }
+        Update: {
+          country?: string | null
+          created_at?: string | null
+          email?: string
+          full_name?: string
+          id?: string
+          message?: string | null
+          preferred_method?: string | null
+          sales_experience?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
       questionnaire_responses: {
         Row: {
           created_at: string
