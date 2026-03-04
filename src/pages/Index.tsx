@@ -86,7 +86,7 @@ const Index = () => {
       <Suspense fallback={<NullFallback />}>
         <ScrollProgress />
         <StickyHeader />
-        <ExitIntentPopup />
+        {/* <ExitIntentPopup /> */}
         <SocialProofToast />
       </Suspense>
       
