@@ -99,7 +99,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Partner Application <onboarding@resend.dev>",
-        to: ["markuswimboeck@gmail.com"],
+        to: ["markuswimboeck@googlemail.com"],
         reply_to: email,
         subject: `🤝 New Partner Application: ${full_name}`,
         html: emailHtml,
