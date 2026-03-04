@@ -51,22 +51,35 @@ const Partner = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const { error } = await supabase.from("partner_applications").insert({
+    const formData = {
       full_name: data.get("full_name") as string,
       email: data.get("email") as string,
       country: data.get("country") as string,
       sales_experience: data.get("sales_experience") as string,
       preferred_method: data.get("preferred_method") as string,
       message: data.get("message") as string,
-    });
+    };
+
+    const { error } = await supabase.from("partner_applications").insert(formData);
+
+    if (error) {
+      setIsSubmitting(false);
+      toast.error("Something went wrong. Please try again.");
+      return;
+    }
+
+    // Send email notification
+    try {
+      await supabase.functions.invoke("send-partner-notification", {
+        body: formData,
+      });
+    } catch (emailError) {
+      console.error("Email notification failed:", emailError);
+    }
 
     setIsSubmitting(false);
-    if (error) {
-      toast.error("Something went wrong. Please try again.");
-    } else {
-      setSubmitted(true);
-      toast.success("Application submitted! We'll be in touch soon.");
-    }
+    setSubmitted(true);
+    toast.success("Application submitted! We'll be in touch soon.");
   };
 
   return (
