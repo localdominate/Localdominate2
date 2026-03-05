@@ -123,6 +123,10 @@ const TechnischesLocalSeoGuide = lazy(() => import("./pages/blog/TechnischesLoca
 const LocalBusinessSchemaImplementierung = lazy(() => import("./pages/blog/LocalBusinessSchemaImplementierung"));
 const ReviewSchemaImplementierung = lazy(() => import("./pages/blog/ReviewSchemaImplementierung"));
 const LocalSeoReportingTemplate = lazy(() => import("./pages/blog/LocalSeoReportingTemplate"));
+const HubGoogleBusinessProfil = lazy(() => import("./pages/blog/HubGoogleBusinessProfil"));
+const HubBranchen = lazy(() => import("./pages/blog/HubBranchen"));
+const HubStaedte = lazy(() => import("./pages/blog/HubStaedte"));
+const HubBewertungen = lazy(() => import("./pages/blog/HubBewertungen"));
 const Partner = lazy(() => import("./pages/Partner"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -257,6 +261,10 @@ const App = () => (
                 <Route path="/blog/localbusiness-schema-implementierung" element={<LocalBusinessSchemaImplementierung />} />
                 <Route path="/blog/review-schema-implementierung" element={<ReviewSchemaImplementierung />} />
                 <Route path="/blog/local-seo-reporting-template" element={<LocalSeoReportingTemplate />} />
+                <Route path="/blog/google-business-profil-hub" element={<HubGoogleBusinessProfil />} />
+                <Route path="/blog/local-seo-branchen-hub" element={<HubBranchen />} />
+                <Route path="/blog/local-seo-staedte-hub" element={<HubStaedte />} />
+                <Route path="/blog/bewertungen-reputation-hub" element={<HubBewertungen />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
