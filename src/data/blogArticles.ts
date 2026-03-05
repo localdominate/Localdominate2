@@ -1228,6 +1228,30 @@ export const blogArticles: BlogArticle[] = [
     featured: true
   },
 
+  {
+    slug: "localbusiness-schema-implementierung",
+    de: {
+      title: "LocalBusiness Schema implementieren: Komplette Anleitung mit Code-Beispielen",
+      metaTitle: "LocalBusiness Schema Markup | Implementierung Guide 2026",
+      metaDescription: "LocalBusiness Schema Markup richtig implementieren: JSON-LD Code-Beispiele für jede Branche, Öffnungszeiten, Bewertungen & Multi-Location. Kopierfertig!",
+      excerpt: "Schritt-für-Schritt Anleitung zur LocalBusiness Schema Implementierung mit kopierfertigen JSON-LD Code-Beispielen für alle Branchen.",
+      category: "Technik"
+    },
+    en: {
+      title: "Implementing LocalBusiness Schema: Complete Guide with Code Examples",
+      metaTitle: "LocalBusiness Schema Markup | Implementation Guide 2026",
+      metaDescription: "Implement LocalBusiness Schema Markup correctly: JSON-LD code examples for every industry, opening hours, reviews & multi-location. Copy-ready!",
+      excerpt: "Step-by-step guide to LocalBusiness Schema implementation with copy-ready JSON-LD code examples for all industries.",
+      category: "Technical"
+    },
+    readingTime: 22,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "🏢",
+    keywords: ["localbusiness schema", "schema markup", "json-ld", "structured data", "local seo schema", "rich snippets"],
+    featured: false
+  },
+
   // TECHNISCHE DEEP-DIVES
   {
     slug: "core-web-vitals-local-seo",
@@ -3313,6 +3337,7 @@ const PUBLISHED_SLUGS = new Set([
   "ai-search-optimization-2026",
   "seo-ferienwohnungen",
   "technisches-local-seo-guide",
+  "localbusiness-schema-implementierung",
 ]);
 
 // Get only published articles (with pages), deduplicated
