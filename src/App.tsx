@@ -134,6 +134,9 @@ const HubAiZukunft = lazy(() => import("./pages/blog/HubAiZukunft"));
 const HubTroubleshooting = lazy(() => import("./pages/blog/HubTroubleshooting"));
 const WebsiteContentAiSuchmaschinen = lazy(() => import("./pages/blog/WebsiteContentAiSuchmaschinen"));
 const Partner = lazy(() => import("./pages/Partner"));
+const Redaktionsrichtlinien = lazy(() => import("./pages/Redaktionsrichtlinien"));
+const Forschungsmethodik = lazy(() => import("./pages/Forschungsmethodik"));
+const UeberUns = lazy(() => import("./pages/UeberUns"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
 const CoreWebVitalsTracker = lazy(() => import("@/components/CoreWebVitalsTracker"));
@@ -182,6 +185,9 @@ const App = () => (
                 <Route path="/impressum" element={<Impressum />} />
                 <Route path="/datenschutz" element={<Datenschutz />} />
                 <Route path="/agb" element={<AGB />} />
+                <Route path="/redaktionsrichtlinien" element={<Redaktionsrichtlinien />} />
+                <Route path="/forschungsmethodik" element={<Forschungsmethodik />} />
+                <Route path="/ueber-uns" element={<UeberUns />} />
                 <Route path="/seo-lexikon" element={<SeoLexikon />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/google-maps-ranking-verbessern" element={<GoogleMapsRanking />} />
