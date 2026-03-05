@@ -1252,6 +1252,30 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  {
+    slug: "review-schema-implementierung",
+    de: {
+      title: "Review Schema implementieren: Bewertungssterne in Google bekommen",
+      metaTitle: "Review Schema Markup | Sterne in Google Suche 2026",
+      metaDescription: "Review & AggregateRating Schema richtig implementieren: JSON-LD Code-Beispiele, Google-Richtlinien und Branchenbeispiele. Sterne in den SERPs!",
+      excerpt: "So implementieren Sie Review Schema korrekt und bekommen Bewertungssterne in den Google-Suchergebnissen – mit kopierfertigen Code-Beispielen.",
+      category: "Technik"
+    },
+    en: {
+      title: "Implementing Review Schema: Get Star Ratings in Google",
+      metaTitle: "Review Schema Markup | Stars in Google Search 2026",
+      metaDescription: "Implement Review & AggregateRating Schema correctly: JSON-LD code examples, Google guidelines and industry examples. Stars in SERPs!",
+      excerpt: "How to implement Review Schema correctly and get star ratings in Google search results – with copy-ready code examples.",
+      category: "Technical"
+    },
+    readingTime: 20,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "⭐",
+    keywords: ["review schema", "aggregaterating", "sterne google", "rich snippets bewertungen", "schema markup bewertungen", "json-ld review"],
+    featured: false
+  },
+
   // TECHNISCHE DEEP-DIVES
   {
     slug: "core-web-vitals-local-seo",
@@ -3338,6 +3362,7 @@ const PUBLISHED_SLUGS = new Set([
   "seo-ferienwohnungen",
   "technisches-local-seo-guide",
   "localbusiness-schema-implementierung",
+  "review-schema-implementierung",
 ]);
 
 // Get only published articles (with pages), deduplicated
