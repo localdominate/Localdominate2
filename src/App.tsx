@@ -127,6 +127,11 @@ const HubGoogleBusinessProfil = lazy(() => import("./pages/blog/HubGoogleBusines
 const HubBranchen = lazy(() => import("./pages/blog/HubBranchen"));
 const HubStaedte = lazy(() => import("./pages/blog/HubStaedte"));
 const HubBewertungen = lazy(() => import("./pages/blog/HubBewertungen"));
+const HubTechnischesSeo = lazy(() => import("./pages/blog/HubTechnischesSeo"));
+const HubContentMarketing = lazy(() => import("./pages/blog/HubContentMarketing"));
+const HubToolsRessourcen = lazy(() => import("./pages/blog/HubToolsRessourcen"));
+const HubAiZukunft = lazy(() => import("./pages/blog/HubAiZukunft"));
+const HubTroubleshooting = lazy(() => import("./pages/blog/HubTroubleshooting"));
 const WebsiteContentAiSuchmaschinen = lazy(() => import("./pages/blog/WebsiteContentAiSuchmaschinen"));
 const Partner = lazy(() => import("./pages/Partner"));
 
@@ -266,6 +271,11 @@ const App = () => (
                 <Route path="/blog/local-seo-branchen-hub" element={<HubBranchen />} />
                 <Route path="/blog/local-seo-staedte-hub" element={<HubStaedte />} />
                 <Route path="/blog/bewertungen-reputation-hub" element={<HubBewertungen />} />
+                <Route path="/blog/technisches-seo-hub" element={<HubTechnischesSeo />} />
+                <Route path="/blog/content-marketing-hub" element={<HubContentMarketing />} />
+                <Route path="/blog/tools-ressourcen-hub" element={<HubToolsRessourcen />} />
+                <Route path="/blog/ai-zukunft-hub" element={<HubAiZukunft />} />
+                <Route path="/blog/troubleshooting-hub" element={<HubTroubleshooting />} />
                 <Route path="/blog/website-content-ai-suchmaschinen" element={<WebsiteContentAiSuchmaschinen />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
