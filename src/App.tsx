@@ -119,6 +119,7 @@ const LocalSeoBackerei = lazy(() => import("./pages/blog/LocalSeoBackerei"));
 const LocalSeoHannover = lazy(() => import("./pages/blog/LocalSeoHannover"));
 const AiSearchOptimization2026 = lazy(() => import("./pages/blog/AiSearchOptimization2026"));
 const SeoFerienwohnungen = lazy(() => import("./pages/blog/SeoFerienwohnungen"));
+const TechnischesLocalSeoGuide = lazy(() => import("./pages/blog/TechnischesLocalSeoGuide"));
 const Partner = lazy(() => import("./pages/Partner"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -249,6 +250,7 @@ const App = () => (
                 <Route path="/blog/local-seo-hannover" element={<LocalSeoHannover />} />
                 <Route path="/blog/ai-search-optimization-2026" element={<AiSearchOptimization2026 />} />
                 <Route path="/blog/seo-ferienwohnungen" element={<SeoFerienwohnungen />} />
+                <Route path="/blog/technisches-local-seo-guide" element={<TechnischesLocalSeoGuide />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
