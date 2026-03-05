@@ -127,6 +127,7 @@ const HubGoogleBusinessProfil = lazy(() => import("./pages/blog/HubGoogleBusines
 const HubBranchen = lazy(() => import("./pages/blog/HubBranchen"));
 const HubStaedte = lazy(() => import("./pages/blog/HubStaedte"));
 const HubBewertungen = lazy(() => import("./pages/blog/HubBewertungen"));
+const WebsiteContentAiSuchmaschinen = lazy(() => import("./pages/blog/WebsiteContentAiSuchmaschinen"));
 const Partner = lazy(() => import("./pages/Partner"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -265,6 +266,7 @@ const App = () => (
                 <Route path="/blog/local-seo-branchen-hub" element={<HubBranchen />} />
                 <Route path="/blog/local-seo-staedte-hub" element={<HubStaedte />} />
                 <Route path="/blog/bewertungen-reputation-hub" element={<HubBewertungen />} />
+                <Route path="/blog/website-content-ai-suchmaschinen" element={<WebsiteContentAiSuchmaschinen />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
