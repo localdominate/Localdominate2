@@ -3299,6 +3299,95 @@ export const blogArticles: BlogArticle[] = [
     icon: "📊",
     keywords: ["local seo reporting", "local seo report vorlage", "local seo kpis", "seo reporting template", "google business report", "local seo metriken"]
   },
+  // === TOPIC HUB PAGES ===
+  {
+    slug: "google-business-profil-hub",
+    de: {
+      title: "Google Business Profil Hub – Alle Guides & Anleitungen",
+      metaTitle: "Google Business Profil Hub – Alle Guides & Anleitungen 2026",
+      metaDescription: "Komplette Sammlung aller Google Business Profil Guides: Profil-Optimierung, Bewertungen, Insights, erweiterte Funktionen und Fehlerbehebung.",
+      excerpt: "Dein zentrales Nachschlagewerk für alle Google Business Profil Themen. 24+ Artikel zu Optimierung, Bewertungen und Fehlerbehebung.",
+      category: "Google Business"
+    },
+    en: {
+      title: "Google Business Profile Hub – All Guides & Tutorials",
+      metaTitle: "Google Business Profile Hub – All Guides & Tutorials 2026",
+      metaDescription: "Complete collection of all Google Business Profile guides: profile optimization, reviews, insights, advanced features and troubleshooting.",
+      excerpt: "Your central reference for all Google Business Profile topics. 24+ articles on optimization, reviews and troubleshooting.",
+      category: "Google Business"
+    },
+    readingTime: 5,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "🏢",
+    keywords: ["google business profil", "gbp optimierung", "google my business guide", "google business hub"]
+  },
+  {
+    slug: "local-seo-branchen-hub",
+    de: {
+      title: "Local SEO Branchen-Guides – 22+ Branchen im Überblick",
+      metaTitle: "Local SEO Branchen-Guides – 22+ Branchen im Überblick 2026",
+      metaDescription: "Branchenspezifische Local SEO Anleitungen für Gastronomie, Gesundheit, Handwerk, Dienstleistungen und Lifestyle.",
+      excerpt: "Jede Branche hat eigene Local SEO Herausforderungen. Finde den passenden Guide für dein Business.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO Industry Guides – 22+ Industries Overview",
+      metaTitle: "Local SEO Industry Guides – 22+ Industries Overview 2026",
+      metaDescription: "Industry-specific Local SEO guides for gastronomy, health, crafts, services and lifestyle.",
+      excerpt: "Every industry has unique Local SEO challenges. Find the right guide for your business.",
+      category: "Industries"
+    },
+    readingTime: 5,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "🏭",
+    keywords: ["local seo branchen", "branchen seo guide", "local seo nach branche", "branchenspezifisches seo"]
+  },
+  {
+    slug: "local-seo-staedte-hub",
+    de: {
+      title: "Local SEO Städte-Guides – DACH-Region",
+      metaTitle: "Local SEO Städte-Guides – 12 Städte in DACH | 2026",
+      metaDescription: "Stadtspezifische Local SEO Guides für Berlin, Hamburg, München, Wien, Zürich und mehr. Lokale Besonderheiten für jede Stadt.",
+      excerpt: "Stadtspezifische Local SEO Guides mit lokalen Verzeichnissen, Wettbewerbsanalysen und regionalen Tipps.",
+      category: "Städte"
+    },
+    en: {
+      title: "Local SEO City Guides – DACH Region",
+      metaTitle: "Local SEO City Guides – 12 Cities in DACH | 2026",
+      metaDescription: "City-specific Local SEO guides for Berlin, Hamburg, Munich, Vienna, Zurich and more.",
+      excerpt: "City-specific Local SEO guides with local directories, competitor analysis and regional tips.",
+      category: "Cities"
+    },
+    readingTime: 5,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "🏙️",
+    keywords: ["local seo städte", "local seo berlin", "local seo münchen", "local seo wien", "städte seo guide"]
+  },
+  {
+    slug: "bewertungen-reputation-hub",
+    de: {
+      title: "Bewertungen & Reputation Hub – Alle Guides",
+      metaTitle: "Bewertungen & Reputation Hub – Alle Guides 2026",
+      metaDescription: "Alle Guides zu Google Bewertungen: Generierung, Antwort-Vorlagen, negative Bewertungen, Review-Schema und Ranking-Impact.",
+      excerpt: "Alle Strategien zu Bewertungen – von der Generierung über den Umgang mit Kritik bis zur technischen Implementierung.",
+      category: "Bewertungen"
+    },
+    en: {
+      title: "Reviews & Reputation Hub – All Guides",
+      metaTitle: "Reviews & Reputation Hub – All Guides 2026",
+      metaDescription: "All guides on Google reviews: generation, response templates, negative reviews, review schema and ranking impact.",
+      excerpt: "All review strategies – from generation to handling criticism to technical implementation.",
+      category: "Reviews"
+    },
+    readingTime: 5,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "⭐",
+    keywords: ["google bewertungen", "bewertungen management", "reputation management", "review strategie", "bewertungen hub"]
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3386,6 +3475,10 @@ const PUBLISHED_SLUGS = new Set([
   "localbusiness-schema-implementierung",
   "review-schema-implementierung",
   "local-seo-reporting-template",
+  "google-business-profil-hub",
+  "local-seo-branchen-hub",
+  "local-seo-staedte-hub",
+  "bewertungen-reputation-hub",
 ]);
 
 // Get only published articles (with pages), deduplicated
