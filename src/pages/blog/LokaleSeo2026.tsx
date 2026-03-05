@@ -2,6 +2,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LeadGenerationCTA from "@/components/blog/LeadGenerationCTA";
+import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -236,6 +237,12 @@ const LokaleSeo2026 = () => {
           })}
         </div>
       </section>
+
+      <InsightCalloutBox variant="stat" statValue="46%" statLabel={language === "de" ? "aller Google-Suchen haben lokale Absicht" : "of all Google searches have local intent"} source="Google Internal Data, 2025">
+        {language === "de"
+          ? "Fast die Hälfte aller Google-Suchen zielt auf lokale Ergebnisse ab. Wer hier nicht sichtbar ist, verliert jeden Tag potenzielle Kunden."
+          : "Nearly half of all Google searches target local results. If you're not visible here, you're losing potential customers every day."}
+      </InsightCalloutBox>
 
       <section id="ki" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section2.title}</h2>

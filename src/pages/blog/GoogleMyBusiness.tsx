@@ -2,6 +2,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LeadGenerationCTA from "@/components/blog/LeadGenerationCTA";
+import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -301,15 +302,9 @@ const GoogleMyBusiness = () => {
           </ol>
         </div>
 
-        <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
-          <div className="flex items-start gap-3">
-            <Lightbulb className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-            <div>
-              <strong className="text-foreground">{language === 'de' ? 'Tipp:' : 'Tip:'}</strong>
-              <p className="text-muted-foreground mt-1">{t.section1.tip}</p>
-            </div>
-          </div>
-        </div>
+        <InsightCalloutBox variant="pro-tip" title={language === "de" ? "Pro-Tipp: Schnellere Verifizierung" : "Pro Tip: Faster Verification"}>
+          {t.section1.tip}
+        </InsightCalloutBox>
       </section>
 
       <section id="vollstaendigkeit" className="mb-12">
