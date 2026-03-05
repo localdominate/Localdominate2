@@ -1,6 +1,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import LeadGenerationCTA from "@/components/blog/LeadGenerationCTA";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -433,7 +434,7 @@ const GoogleMyBusiness = () => {
 
       <HelpfulnessWidget articleSlug="google-my-business-optimieren" />
 
-      <BlogCTAABTest articleSlug="google-my-business-optimieren" position="end" />
+      <LeadGenerationCTA articleSlug="google-my-business-optimieren" position="end" variant="full" />
     </ArticleLayout>
   );
 };

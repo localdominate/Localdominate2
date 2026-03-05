@@ -2,6 +2,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import LeadGenerationCTA from "@/components/blog/LeadGenerationCTA";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -390,7 +391,7 @@ const GoogleBewertungen = () => {
 
       <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />
 
-      <BlogCTAABTest articleSlug="google-bewertungen-bekommen" position="end" />
+      <LeadGenerationCTA articleSlug="google-bewertungen-bekommen" position="end" variant="compact" />
     </ArticleLayout>
   );
 };

@@ -1,6 +1,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import LeadGenerationCTA from "@/components/blog/LeadGenerationCTA";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -262,7 +263,7 @@ const LokaleSeo2026 = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="lokale-suchmaschinenoptimierung-2026" position="middle" />
+      <LeadGenerationCTA articleSlug="lokale-suchmaschinenoptimierung-2026" position="middle" variant="inline" />
 
       <section id="voice" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">{t.section3.title}</h2>
