@@ -121,6 +121,7 @@ const AiSearchOptimization2026 = lazy(() => import("./pages/blog/AiSearchOptimiz
 const SeoFerienwohnungen = lazy(() => import("./pages/blog/SeoFerienwohnungen"));
 const TechnischesLocalSeoGuide = lazy(() => import("./pages/blog/TechnischesLocalSeoGuide"));
 const LocalBusinessSchemaImplementierung = lazy(() => import("./pages/blog/LocalBusinessSchemaImplementierung"));
+const ReviewSchemaImplementierung = lazy(() => import("./pages/blog/ReviewSchemaImplementierung"));
 const Partner = lazy(() => import("./pages/Partner"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -253,6 +254,7 @@ const App = () => (
                 <Route path="/blog/seo-ferienwohnungen" element={<SeoFerienwohnungen />} />
                 <Route path="/blog/technisches-local-seo-guide" element={<TechnischesLocalSeoGuide />} />
                 <Route path="/blog/localbusiness-schema-implementierung" element={<LocalBusinessSchemaImplementierung />} />
+                <Route path="/blog/review-schema-implementierung" element={<ReviewSchemaImplementierung />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
