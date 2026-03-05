@@ -3,6 +3,7 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LeadGenerationCTA from "@/components/blog/LeadGenerationCTA";
+import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -260,6 +261,12 @@ const GoogleBewertungen = () => {
         alt={language === "de" ? "Kunden hinterlassen Google Bewertungen" : "Customers leaving Google reviews"}
         caption={language === "de" ? "Zufriedene Kunden sind der Schlüssel zu mehr Bewertungen" : "Satisfied customers are the key to more reviews"}
       />
+
+      <InsightCalloutBox variant="warning" title={language === "de" ? "Vorsicht: Google-Richtlinien" : "Warning: Google Guidelines"}>
+        {language === "de"
+          ? "Kaufe niemals Bewertungen und biete keine Gegenleistung (Rabatte, Geschenke) für Reviews an. Google erkennt Muster und kann dein Profil bestrafen – bis hin zur Sperrung."
+          : "Never buy reviews and don't offer incentives (discounts, gifts) for reviews. Google detects patterns and can penalize your profile – up to suspension."}
+      </InsightCalloutBox>
 
       <section id="wichtigkeit" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4">
