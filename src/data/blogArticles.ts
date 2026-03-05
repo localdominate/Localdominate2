@@ -3277,6 +3277,28 @@ export const blogArticles: BlogArticle[] = [
     icon: "🏔️",
     keywords: ["seo ferienwohnungen", "ferienwohnung seo schweiz", "vacation rental seo", "direktbuchungen seo", "google my business ferienwohnung", "local seo tourismus"]
   },
+  {
+    slug: "local-seo-reporting-template",
+    de: {
+      title: "Local SEO Reporting Template: Monatlicher Report + KPI-Vorlage",
+      metaTitle: "Local SEO Reporting Template | Monatliche Vorlage + KPIs 2026",
+      metaDescription: "Kostenlose Local SEO Report-Vorlage mit 10 KPIs, wöchentlicher Checkliste und ROI-Berechnung. Monatlichen Report erstellen wie ein Profi.",
+      excerpt: "Die komplette Vorlage für professionelles Local SEO Reporting: 10 KPIs, monatlicher Report-Aufbau, Wettbewerber-Vergleich und ROI-Berechnung.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO Reporting Template: Monthly Report + KPI Template",
+      metaTitle: "Local SEO Reporting Template | Monthly Template + KPIs 2026",
+      metaDescription: "Free Local SEO report template with 10 KPIs, weekly checklist and ROI calculation. Create monthly reports like a pro.",
+      excerpt: "The complete template for professional Local SEO reporting: 10 KPIs, monthly report structure, competitor comparison and ROI calculation.",
+      category: "Strategy"
+    },
+    readingTime: 16,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "📊",
+    keywords: ["local seo reporting", "local seo report vorlage", "local seo kpis", "seo reporting template", "google business report", "local seo metriken"]
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3363,6 +3385,7 @@ const PUBLISHED_SLUGS = new Set([
   "technisches-local-seo-guide",
   "localbusiness-schema-implementierung",
   "review-schema-implementierung",
+  "local-seo-reporting-template",
 ]);
 
 // Get only published articles (with pages), deduplicated
