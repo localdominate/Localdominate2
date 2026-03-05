@@ -12,6 +12,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle } from "lucide-react";
 import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
@@ -23,6 +24,7 @@ const GoogleBewertungen = () => {
         { id: "wichtigkeit", title: "Warum Bewertungen Kunden-Magnete sind" },
         { id: "strategien", title: "7 ethische Strategien für mehr Reviews" },
         { id: "qr-code", title: "QR-Code und Smart-Link Taktiken" },
+        { id: "workflow-checklisten", title: "Workflow-Checklisten zur Review-Generierung" },
         { id: "negativ", title: "Negative Bewertungen managen" },
         { id: "faq", title: "Häufig gestellte Fragen" },
       ],
@@ -93,6 +95,7 @@ const GoogleBewertungen = () => {
         { id: "wichtigkeit", title: "Why Reviews Are Customer Magnets" },
         { id: "strategien", title: "7 Ethical Strategies for More Reviews" },
         { id: "qr-code", title: "QR Code and Smart Link Tactics" },
+        { id: "workflow-checklisten", title: "Review Generation Workflow Checklists" },
         { id: "negativ", title: "Managing Negative Reviews" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
@@ -316,6 +319,18 @@ const GoogleBewertungen = () => {
         <p>
           <strong>{language === 'de' ? 'Tipp:' : 'Tip:'}</strong> {t.section3.tip}
         </p>
+      </section>
+
+      <section id="workflow-checklisten" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-4">
+          {language === "de" ? "Workflow-Checklisten zur Review-Generierung" : "Review Generation Workflow Checklists"}
+        </h2>
+        <p className="mb-4 text-muted-foreground">
+          {language === "de"
+            ? "Nutze diese interaktiven Checklisten, um deine Bewertungsstrategie systematisch aufzubauen und täglich, wöchentlich und monatlich umzusetzen. Dein Fortschritt wird automatisch gespeichert."
+            : "Use these interactive checklists to systematically build and execute your review strategy daily, weekly, and monthly. Your progress is saved automatically."}
+        </p>
+        <ReviewWorkflowChecklist />
       </section>
 
       <section id="negativ" className="mb-12">
