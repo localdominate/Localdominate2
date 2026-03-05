@@ -1203,6 +1203,31 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  // TECHNISCHE HUB-SEITE
+  {
+    slug: "technisches-local-seo-guide",
+    de: {
+      title: "Technisches Local SEO: Der komplette Guide für lokale Unternehmen",
+      metaTitle: "Technisches Local SEO | Kompletter Guide 2026",
+      metaDescription: "Alles über Technical SEO für lokale Unternehmen: Core Web Vitals, Schema Markup, Mobile-Optimierung, E-E-A-T und AI Search. Mit 25-Punkte-Checkliste.",
+      excerpt: "Der zentrale Hub für alle technischen SEO-Themen: Performance, Schema, Mobile, E-E-A-T und AI-Optimierung für lokale Unternehmen.",
+      category: "Technik"
+    },
+    en: {
+      title: "Technical Local SEO: The Complete Guide for Local Businesses",
+      metaTitle: "Technical Local SEO | Complete Guide 2026",
+      metaDescription: "Everything about Technical SEO for local businesses: Core Web Vitals, Schema Markup, Mobile Optimization, E-E-A-T and AI Search. With 25-point checklist.",
+      excerpt: "The central hub for all technical SEO topics: Performance, Schema, Mobile, E-E-A-T and AI optimization for local businesses.",
+      category: "Technical"
+    },
+    readingTime: 20,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "⚙️",
+    keywords: ["technical seo", "technisches seo", "local seo technik", "schema markup", "core web vitals", "mobile seo", "eeat"],
+    featured: true
+  },
+
   // TECHNISCHE DEEP-DIVES
   {
     slug: "core-web-vitals-local-seo",
@@ -3287,6 +3312,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-hannover",
   "ai-search-optimization-2026",
   "seo-ferienwohnungen",
+  "technisches-local-seo-guide",
 ]);
 
 // Get only published articles (with pages), deduplicated
