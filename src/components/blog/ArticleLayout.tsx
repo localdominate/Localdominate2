@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import AuthorBox from "./AuthorBox";
 import RelatedArticles from "./RelatedArticles";
+import MobileArticleCTA from "./MobileArticleCTA";
 import SocialShare from "./SocialShare";
 import ReadingProgress from "./ReadingProgress";
 import StickyTableOfContents from "./StickyTableOfContents";
@@ -412,6 +413,9 @@ const ArticleLayout = ({
       </main>
 
       <Footer />
+      
+      {/* Mobile floating CTA - appears on scroll for all blog articles */}
+      <MobileArticleCTA articleSlug={article.slug} />
     </div>
   );
 };
