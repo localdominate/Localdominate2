@@ -3388,6 +3388,28 @@ export const blogArticles: BlogArticle[] = [
     icon: "⭐",
     keywords: ["google bewertungen", "bewertungen management", "reputation management", "review strategie", "bewertungen hub"]
   },
+  {
+    slug: "website-content-ai-suchmaschinen",
+    de: {
+      title: "Website-Content für AI-Suchmaschinen strukturieren: Der komplette Guide",
+      metaTitle: "Website-Content für AI-Suchmaschinen strukturieren | Guide 2026",
+      metaDescription: "Lerne wie du deinen Website-Content für ChatGPT, Perplexity und Google AI Overviews optimierst. Semantisches HTML, Schema Markup, llms.txt und AI-Attribute.",
+      excerpt: "Schritt-für-Schritt: So machst du deine Website-Inhalte maschinenlesbar und zitierfähig für AI-Suchmaschinen.",
+      category: "Technisches SEO"
+    },
+    en: {
+      title: "How to Structure Website Content for AI Search Engines: Complete Guide",
+      metaTitle: "Structure Website Content for AI Search Engines | Guide 2026",
+      metaDescription: "Learn how to optimize your website content for ChatGPT, Perplexity and Google AI Overviews. Semantic HTML, Schema Markup, llms.txt and AI attributes.",
+      excerpt: "Step by step: How to make your website content machine-readable and citable for AI search engines.",
+      category: "Technical SEO"
+    },
+    readingTime: 18,
+    publishedAt: "2026-03-05",
+    updatedAt: "2026-03-05",
+    icon: "🤖",
+    keywords: ["ai suchmaschinen", "content struktur ai", "geo optimierung", "schema markup ai", "llms.txt", "website ai optimierung", "chatgpt seo", "perplexity optimierung"]
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3479,6 +3501,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-branchen-hub",
   "local-seo-staedte-hub",
   "bewertungen-reputation-hub",
+  "website-content-ai-suchmaschinen",
 ]);
 
 // Get only published articles (with pages), deduplicated
