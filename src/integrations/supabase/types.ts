@@ -671,6 +671,51 @@ export type Database = {
         }
         Relationships: []
       }
+      leads: {
+        Row: {
+          ab_variant: string | null
+          business_name: string | null
+          created_at: string
+          email: string
+          id: string
+          lead_type: string | null
+          notes: string | null
+          phone: string | null
+          session_id: string | null
+          source_cta: string | null
+          source_page: string | null
+          status: string | null
+        }
+        Insert: {
+          ab_variant?: string | null
+          business_name?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          lead_type?: string | null
+          notes?: string | null
+          phone?: string | null
+          session_id?: string | null
+          source_cta?: string | null
+          source_page?: string | null
+          status?: string | null
+        }
+        Update: {
+          ab_variant?: string | null
+          business_name?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          lead_type?: string | null
+          notes?: string | null
+          phone?: string | null
+          session_id?: string | null
+          source_cta?: string | null
+          source_page?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
       lexikon_article_links: {
         Row: {
           article_slug: string
