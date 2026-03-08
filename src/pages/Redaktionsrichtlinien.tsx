@@ -188,6 +188,9 @@ const Redaktionsrichtlinien = () => {
               <Link to="/impressum" className="text-primary hover:underline text-sm">
                 {language === "de" ? "→ Impressum" : "→ Legal Notice"}
               </Link>
+              <Link to="/content-formatting-guidelines" className="text-primary hover:underline text-sm">
+                {language === "de" ? "→ KI-Content-Richtlinien" : "→ AI Content Guidelines"}
+              </Link>
             </div>
           </div>
         </main>

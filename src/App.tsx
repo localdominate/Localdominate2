@@ -229,6 +229,7 @@ const App = () => (
                 <Route path="/agb" element={<AGB />} />
                 <Route path="/redaktionsrichtlinien" element={<Redaktionsrichtlinien />} />
                 <Route path="/forschungsmethodik" element={<Forschungsmethodik />} />
+                <Route path="/content-formatting-guidelines" element={<ContentFormattingGuidelines />} />
                 <Route path="/ueber-uns" element={<UeberUns />} />
                 <Route path="/seo-lexikon" element={<SeoLexikon />} />
                 <Route path="/blog" element={<Blog />} />
