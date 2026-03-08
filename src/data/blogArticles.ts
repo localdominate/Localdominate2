@@ -784,6 +784,30 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  {
+    slug: "local-seo-roadmap-90-tage",
+    de: {
+      title: "Local SEO Roadmap: Dein 90-Tage-Plan für lokale Sichtbarkeit",
+      metaTitle: "Local SEO Roadmap | 90-Tage-Plan mit Gantt-Timeline 2026",
+      metaDescription: "Strukturierte 90-Tage-Roadmap für lokales SEO: 12 Wochen, 6 Phasen, 36+ Aufgaben. Visuelle Timeline, KPI-Meilensteine und kopierbares Template.",
+      excerpt: "Woche-für-Woche Roadmap für Local SEO: Von der Analyse über GBP-Optimierung bis zum messbaren Ergebnis in 90 Tagen.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Local SEO Roadmap: Your 90-Day Plan for Local Visibility",
+      metaTitle: "Local SEO Roadmap | 90-Day Plan with Gantt Timeline 2026",
+      metaDescription: "Structured 90-day roadmap for local SEO: 12 weeks, 6 phases, 36+ tasks. Visual timeline, KPI milestones and copyable template.",
+      excerpt: "Week-by-week roadmap for local SEO: From analysis to GBP optimization to measurable results in 90 days.",
+      category: "Tools & Resources"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🗺️",
+    keywords: ["local seo roadmap", "90 tage plan", "seo fahrplan", "local seo timeline", "seo wochenplan", "lokale seo roadmap"],
+    featured: false
+  },
+
   // === NEUE ARTIKEL: STRATEGIE ===
   {
     slug: "local-link-building",
@@ -3969,6 +3993,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-monthly-checklist",
   "google-maps-ranking-tracker",
   "local-seo-strategy-planner",
+  "local-seo-roadmap-90-tage",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
