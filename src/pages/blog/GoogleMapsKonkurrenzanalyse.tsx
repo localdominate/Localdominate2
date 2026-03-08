@@ -6,6 +6,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import CompetitorTrackingStrategy from "@/components/blog/CompetitorTrackingStrategy";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
