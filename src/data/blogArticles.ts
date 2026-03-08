@@ -3722,7 +3722,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-strategie-kleine-unternehmen",
     de: {
       title: "Local SEO Strategie für kleine Unternehmen: Der komplette Aktionsplan 2026",
-      metaTitle: "Local SEO Strategie für kleine Unternehmen | Aktionsplan 2026",
+      metaTitle: "Local SEO Strategie KMU | Aktionsplan 2026",
       metaDescription: "Die komplette Local-SEO-Strategie für KMU im DACH-Raum: 90-Tage-Plan, Checklisten, Tools & Branchenbeispiele. Kostenlos umsetzbar — ohne Agentur.",
       excerpt: "Schritt-für-Schritt Local-SEO-Strategie für kleine Unternehmen: Google Business Profil, Bewertungen, Citations, Content & Linkbuilding — mit 90-Tage-Aktionsplan für den DACH-Markt.",
       category: "Strategie"
