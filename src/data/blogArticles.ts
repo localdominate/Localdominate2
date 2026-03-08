@@ -1522,8 +1522,8 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Technical Local SEO: The Complete Guide for Local Businesses 2026",
-      metaTitle: "Technical Local SEO Guide | Schema, Speed, Mobile & Indexing 2026",
-      metaDescription: "The most comprehensive Technical Local SEO guide: LocalBusiness Schema, Geo Markup, Core Web Vitals, Mobile-First, internal linking & indexing strategies. With 40-point checklist.",
+      metaTitle: "Technical Local SEO | Complete Guide 2026",
+      metaDescription: "Technical Local SEO guide: LocalBusiness Schema, Core Web Vitals, Mobile-First, internal linking & indexing. With 40-point checklist.",
       excerpt: "Everything about technical Local SEO: From LocalBusiness Schema and Geo Markup to Core Web Vitals, mobile optimization, internal linking and indexing strategies.",
       category: "Technical"
     },
