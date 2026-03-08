@@ -142,6 +142,8 @@ const TopicHubLayout = ({
           </div>
         </section>
 
+        <HubNavigationBar />
+
         {/* Summary */}
         {summary && (
           <section className="border-b border-border bg-card">
