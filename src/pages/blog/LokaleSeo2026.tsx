@@ -54,7 +54,7 @@ const LokaleSeo2026 = () => {
         tip: "Stelle sicher, dass dein Google Business Profil alle Attribute enthält, die für deine Zielgruppe relevant sind (z.B. \"kinderfreundlich\", \"hundefreundlich\", \"vegane Optionen\")."
       },
       section3: {
-        title: "Voice Search Optimierung",
+        title: "Wie optimierst du für Voice Search?",
         text: "\"Hey Google, welcher Friseur in der Nähe hat die besten Bewertungen?\" – Voice Search verändert, wie Menschen suchen.",
         sub1: "Unterschiede zur Text-Suche",
         textSearch: "Text-Suche",
