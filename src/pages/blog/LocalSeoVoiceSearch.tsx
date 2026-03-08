@@ -113,7 +113,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="conversational-keywords">
-        <h2>Konversationelle Keywords</h2>
+        <h2>Wie findest du die richtigen Voice Search Keywords?</h2>
         <AutoLexikonText>
           <p>
             Der größte Unterschied zu klassischer Keyword-Optimierung: Bei 
