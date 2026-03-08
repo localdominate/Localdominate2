@@ -231,16 +231,7 @@ const ArticleLayout = ({
     "articleBody": article.excerpt,
     "wordCount": article.readingTime * 200,
     "author": authorSchema,
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://localdominate.org/#organization",
-      "name": "Local Dominator",
-      "url": "https://localdominate.org",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://localdominate.org/logo.png"
-      }
-    },
+    "publisher": publisherSchema,
     ...(reviewerSchema && {
       "reviewedBy": reviewerSchema,
       "lastReviewed": reviewedBy?.reviewDate
