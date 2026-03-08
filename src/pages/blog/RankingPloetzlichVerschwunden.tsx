@@ -192,7 +192,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </div>
         </div>
 
-        <h2 id="gbp-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Business Profile Ursachen</h2>
+        <h2 id="gbp-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Business Profil als Ursache für Ranking-Verlust</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Für lokale Rankings ist dein Google Business Profile entscheidend. Diese GBP-Probleme führen zu sofortigem Ranking-Verlust:
