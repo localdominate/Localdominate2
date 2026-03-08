@@ -3123,7 +3123,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "duplicate-listing-entfernen",
     de: {
       title: "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026)",
-      metaTitle: "Duplicate Listing entfernen: Doppelte Google-Einträge löschen | 2026",
+      metaTitle: "Duplicate Listing entfernen | Google-Einträge 2026",
       metaDescription: "Hast du mehrere Google Business Einträge für denselben Standort? Lerne wie du Duplicates findest, richtig entfernst und zukünftige Dopplungen verhinderst.",
       excerpt: "Der komplette Guide zum Finden und Entfernen von doppelten Google Business Einträgen mit interaktiver Checkliste.",
       category: "Troubleshooting"
