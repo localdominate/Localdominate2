@@ -43,7 +43,7 @@ export const blogArticles: BlogArticle[] = [
     de: {
       title: "Local SEO: Der ultimative Leitfaden für lokale Unternehmen 2026",
       metaTitle: "Local SEO Guide 2026: Komplett-Anleitung für Top-Rankings",
-      metaDescription: "Der umfassendste Local-SEO-Guide im DACH-Raum: Ranking-Faktoren, Google Business Profil, Bewertungen, NAP, Schema Markup & 10-Schritte-Strategie. Mit Beispielen aus DE, AT & CH.",
+      metaDescription: "Der umfassendste Local-SEO-Guide im DACH-Raum: Ranking-Faktoren, Google Business Profil, Bewertungen, NAP & Schema Markup. 10-Schritte-Strategie.",
       excerpt: "Alles über Local SEO in einem Guide: Von Google Business über Ranking-Faktoren bis zur 10-Schritte-Strategie — mit Praxisbeispielen aus Deutschland, Österreich und der Schweiz.",
       category: "Strategie"
     },
