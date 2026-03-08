@@ -7,6 +7,7 @@ import AutoLexikonText from '../../components/blog/AutoLexikonText';
 import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
+import ReviewResponseTemplates from '@/components/blog/ReviewResponseTemplates';
 import BlogImage from '../../components/blog/BlogImage';
 import gbpBewertungLoeschenImage from '../../assets/blog/gbp-bewertung-loeschen.jpg';
 
@@ -307,6 +308,12 @@ const GbpBewertungLoeschenAnleitung: React.FC = () => {
         <BlogFAQSection faqs={faqs} />
 
         <SourcesSection sources={sources} />
+
+        <ReviewResponseTemplates
+          title="Vorlagen: Auf unfaire Bewertungen reagieren"
+          description="Professionelle Antwortvorlagen fuer Fake-Bewertungen und Eskalationsfaelle."
+          categories={["fake", "escalation"]}
+        />
 
         <HelpfulnessWidget articleSlug={articleData.slug} />
       </div>

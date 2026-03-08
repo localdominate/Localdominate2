@@ -6,6 +6,7 @@ import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -360,6 +361,11 @@ const BewertungsAntwortenVorlagen = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <ReviewResponseTemplates
+        title="Alle Antwort-Vorlagen zum Kopieren"
+        description="14 professionelle Vorlagen fuer jedes Bewertungs-Szenario. Klicke auf eine Vorlage, passe die [Platzhalter] an und kopiere sie direkt."
+      />
 
       <HelpfulnessWidget articleSlug="bewertungs-antworten-vorlagen" />
 

@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewResponseGenerator from "@/components/blog/ReviewResponseGenerator";
+import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import StepByStepProcess from "@/components/blog/StepByStepProcess";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -863,6 +864,12 @@ const NegativeGoogleBewertungen = () => {
           </div>
         </div>
       </section>
+
+      <ReviewResponseTemplates
+        title="Antwort-Vorlagen fuer negative Bewertungen"
+        description="Kopierfertige Vorlagen fuer jede Art von Kritik. Passe die [Platzhalter] an dein Unternehmen an."
+        categories={["negative", "fake", "escalation"]}
+      />
 
       <HelpfulnessWidget articleSlug="negative-google-bewertungen" />
 
