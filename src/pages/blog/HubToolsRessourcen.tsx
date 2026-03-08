@@ -25,6 +25,7 @@ const groups: HubArticleGroup[] = [
       "local-keyword-research-template",
       "local-seo-monthly-checklist",
       "local-seo-strategy-planner",
+      "local-seo-roadmap-90-tage",
     ],
   },
   {

@@ -3993,6 +3993,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-monthly-checklist",
   "google-maps-ranking-tracker",
   "local-seo-strategy-planner",
+  "local-seo-roadmap-90-tage",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
