@@ -714,6 +714,8 @@ Herzliche Grüße,
         </p>
       </section>
 
+      <ImplementationRoadmap data={industryImplementationData.immobilienmakler} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2>Häufige Fragen: Local SEO für Immobilienmakler</h2>

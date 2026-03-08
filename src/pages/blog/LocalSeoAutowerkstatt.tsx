@@ -483,6 +483,8 @@ const LocalSeoAutowerkstatt = () => {
         </div>
       </section>
 
+      <ImplementationRoadmap data={industryImplementationData.autowerkstatt} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">Häufig gestellte Fragen</h2>
