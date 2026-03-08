@@ -136,7 +136,7 @@ const DirectoryTable = ({ directories, country }: { directories: Directory[]; co
             <TableCell>{getPriorityBadge(dir.priority)}</TableCell>
             <TableCell className="text-center font-mono text-sm">{dir.da}</TableCell>
             <TableCell className="text-center">
-              {dir.free && <Check className="w-4 h-4 text-green-600 mx-auto" />}
+              {dir.free && <Check className="w-4 h-4 text-primary mx-auto" />}
             </TableCell>
             <TableCell className="text-sm text-muted-foreground">{dir.notes}</TableCell>
           </TableRow>
