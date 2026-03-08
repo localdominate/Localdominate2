@@ -41,6 +41,7 @@ const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
 const LocalSeoRestaurant = lazy(() => import("./pages/blog/LocalSeoRestaurant"));
+const LocalSeoAnwaelteKanzleien = lazy(() => import("./pages/blog/LocalSeoAnwaelteKanzleien"));
 const GoogleMyBusiness = lazy(() => import("./pages/blog/GoogleMyBusiness"));
 const LokaleSeo2026 = lazy(() => import("./pages/blog/LokaleSeo2026"));
 const NapKonsistenz = lazy(() => import("./pages/blog/NapKonsistenz"));
