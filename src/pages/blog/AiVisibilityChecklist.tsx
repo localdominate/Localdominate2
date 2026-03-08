@@ -556,6 +556,7 @@ const AiVisibilityChecklist = () => {
       <BlogFAQSection faqs={faqItems} />
       <SourcesSection sources={sources} />
       <ArticleCTA />
+      <AiCitationStrategyBox articleSlug="ai-visibility-checklist" />
       <HelpfulnessWidget articleSlug="ai-visibility-checklist" />
     </ArticleLayout>
   );
