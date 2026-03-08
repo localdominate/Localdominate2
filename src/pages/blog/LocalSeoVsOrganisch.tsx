@@ -390,6 +390,7 @@ const LocalSeoVsOrganisch = () => {
           <li>→ <Link to="/blog/local-seo-vs-maps-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary">Local SEO vs. Google Maps SEO</Link></li>
           <li>→ <Link to="/blog/google-my-business-optimieren" className="text-primary underline decoration-primary/30 hover:decoration-primary">Google Business Profile optimieren</Link></li>
           <li>→ <Link to="/blog/local-seo-strategie-kleine-unternehmen" className="text-primary underline decoration-primary/30 hover:decoration-primary">Local SEO Strategie für kleine Unternehmen</Link></li>
+          <li>→ <Link to="/blog/ai-search-vs-traditional-search" className="text-primary underline decoration-primary/30 hover:decoration-primary">AI-Suche vs. Traditionelle Suche</Link></li>
         </ul>
       </section>
 
