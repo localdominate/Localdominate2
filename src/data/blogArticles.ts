@@ -2309,24 +2309,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "google-sge-lokale-suche",
     de: {
-      title: "Google SGE & lokale Suche: Wie AI die SERPs verändert",
-      metaTitle: "Google SGE Local SEO | AI-Suche 2026",
-      metaDescription: "Wie Googles Search Generative Experience die lokale Suche revolutioniert. Vorbereitung auf die AI-Ära der Suche.",
-      excerpt: "Die AI-Revolution in der Suche: Was lokale Unternehmen wissen müssen.",
+      title: "Googles Search Generative Experience: Prognose & Vorbereitung für lokale Unternehmen",
+      metaTitle: "Google SGE Prognose | Vorbereitung für lokale KMUs 2026",
+      metaDescription: "Was Googles Search Generative Experience für lokale KMUs bedeutet. Prognose, Zeitleiste und 5 Vorbereitungsschritte für die AI-SERP.",
+      excerpt: "SGE kommt — bist du vorbereitet? Prognose, Zeitleiste und 5 konkrete Schritte zur Vorbereitung.",
       category: "Trends"
     },
     en: {
-      title: "Google SGE & Local Search: How AI is Changing SERPs",
-      metaTitle: "Google SGE Local SEO | AI Search 2026",
-      metaDescription: "How Google's Search Generative Experience is revolutionizing local search. Preparing for the AI era of search.",
-      excerpt: "The AI revolution in search: What local businesses need to know.",
+      title: "Google's Search Generative Experience: Forecast & Preparation for Local Businesses",
+      metaTitle: "Google SGE Forecast | Preparation for Local SMBs 2026",
+      metaDescription: "What Google's Search Generative Experience means for local SMBs. Forecast, timeline and 5 preparation steps for the AI SERP.",
+      excerpt: "SGE is coming — are you prepared? Forecast, timeline and 5 concrete preparation steps.",
       category: "Trends"
     },
     readingTime: 15,
     publishedAt: "2026-04-22",
     updatedAt: "2026-04-22",
     icon: "🧠",
-    keywords: ["google sge", "ai suche", "generative search", "local seo ai"],
+    keywords: ["google sge vorbereitung", "sge prognose", "generative search lokal", "ai serp vorbereitung"],
     featured: true
   },
 
