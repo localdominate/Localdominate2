@@ -3746,8 +3746,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-ranking-faktoren-erklaert",
     de: {
       title: "Local SEO Ranking-Faktoren erklärt: Alle Signale im Detail 2026",
-      metaTitle: "Local SEO Ranking-Faktoren 2026: Vollständige Analyse & Vergleich",
-      metaDescription: "Alle Local SEO Ranking-Faktoren erklärt: GBP-Signale (36 %), On-Page (18 %), Bewertungen (17 %), Links (13 %), Citations (7 %). Mit Vergleichstabellen & Aktionsplan.",
+      metaTitle: "Local SEO Ranking-Faktoren 2026 | Alle Signale",
+      metaDescription: "Alle Local SEO Ranking-Faktoren: GBP (36 %), On-Page (18 %), Bewertungen (17 %), Links (13 %), Citations (7 %). Vergleichstabellen & Aktionsplan.",
       excerpt: "Die vollständige Analyse aller lokalen Ranking-Faktoren: Google Business Profil, On-Page, Bewertungen, Links, Citations und Verhaltens-Signale — mit Gewichtung und Vergleichstabellen.",
       category: "Strategie"
     },
