@@ -388,9 +388,14 @@ const ConversionOptimizationReport = () => {
               <p className="text-sm text-muted-foreground">CTA-Performance & Empfehlungen</p>
             </div>
           </div>
-          <Button variant="outline" size="sm" onClick={() => window.location.reload()}>
-            <RefreshCw className="h-4 w-4 mr-1" /> Aktualisieren
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" onClick={() => window.location.reload()}>
+              <RefreshCw className="h-4 w-4 mr-1" /> Aktualisieren
+            </Button>
+            <Button size="sm" onClick={saveReport} disabled={isSaving || isLoading}>
+              <Save className="h-4 w-4 mr-1" /> {isSaving ? "Speichert..." : "Report speichern"}
+            </Button>
+          </div>
         </div>
       </div>
 
