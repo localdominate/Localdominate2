@@ -91,6 +91,7 @@ export default function DIYToolkit() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
           
           <div className="container mx-auto max-w-6xl relative z-10">
+            <SiteBreadcrumbs includeSchema className="mb-8" />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
