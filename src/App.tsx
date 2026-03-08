@@ -307,6 +307,7 @@ const App = () => (
                 <Route path="/blog/local-seo-baeckerei" element={<LocalSeoBackerei />} />
                 <Route path="/blog/local-seo-hannover" element={<LocalSeoHannover />} />
                 <Route path="/blog/ai-search-optimization-2026" element={<AiSearchOptimization2026 />} />
+                <Route path="/blog/ai-search-vs-traditional-search" element={<AiSearchVsTraditionalSearch />} />
                 <Route path="/blog/seo-ferienwohnungen" element={<SeoFerienwohnungen />} />
                 <Route path="/blog/technisches-local-seo-guide" element={<TechnischesLocalSeoGuide />} />
                 <Route path="/blog/localbusiness-schema-implementierung" element={<LocalBusinessSchemaImplementierung />} />
