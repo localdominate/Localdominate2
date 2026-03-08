@@ -40,7 +40,7 @@ const LokaleSeo2026 = () => {
         ]
       },
       section2: {
-        title: "KI und lokale Suche",
+        title: "Wie verändert KI die lokale Suche?",
         text: "Künstliche Intelligenz verändert, wie Google lokale Ergebnisse generiert und anzeigt. Das bedeutet neue Chancen und Herausforderungen.",
         sub1: "Google AI Overviews",
         sub1Text: "Googles KI fasst Informationen aus verschiedenen Quellen zusammen und zeigt sie direkt in den Suchergebnissen. Für lokale Unternehmen bedeutet das:",
