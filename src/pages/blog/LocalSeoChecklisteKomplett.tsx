@@ -8,6 +8,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiSearchOptNote from "@/components/blog/AiSearchOptNote";
 import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
 import NinetyDayImplementationPlan from "@/components/blog/NinetyDayImplementationPlan";
 import { Link } from "react-router-dom";
