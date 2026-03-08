@@ -7,6 +7,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import GoogleMapsRankingExplainer from "@/components/blog/GoogleMapsRankingExplainer";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -487,6 +488,9 @@ const GoogleMapsRankingTracker = () => {
       </section>
 
       {/* Related */}
+      {/* Ranking Tracking Explainer */}
+      <GoogleMapsRankingExplainer />
+
       <Card className="mb-8 bg-muted/30">
         <CardContent className="pt-6">
           <h3 className="font-semibold text-foreground mb-3">📚 Weiterführende Ressourcen</h3>

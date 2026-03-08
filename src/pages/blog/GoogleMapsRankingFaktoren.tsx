@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import GoogleMapsRankingExplainer from "@/components/blog/GoogleMapsRankingExplainer";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import DefinitionBox from "@/components/blog/DefinitionBox";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -595,7 +596,10 @@ const GoogleMapsRankingFaktoren = () => {
         </div>
       </section>
 
-      <SourcesSection 
+      {/* Ranking Tracking Explainer */}
+      <GoogleMapsRankingExplainer compact />
+
+      <SourcesSection
         sources={[
           { title: "Google Business Profile Richtlinien", url: "https://support.google.com/business/answer/3038177", type: "documentation", description: "Offizielle Richtlinien von Google für Unternehmensprofile" },
           { title: "MOZ Local Search Ranking Factors", url: "https://moz.com/local-search-ranking-factors", type: "study", description: "Jährliche Studie zu lokalen Ranking-Faktoren" },
