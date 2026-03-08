@@ -23,11 +23,11 @@ const GoogleBewertungen = () => {
   const content = {
     de: {
       tocItems: [
-        { id: "wichtigkeit", title: "Warum Bewertungen Kunden-Magnete sind" },
-        { id: "strategien", title: "7 ethische Strategien für mehr Reviews" },
-        { id: "qr-code", title: "QR-Code und Smart-Link Taktiken" },
-        { id: "workflow-checklisten", title: "Workflow-Checklisten zur Review-Generierung" },
-        { id: "negativ", title: "Negative Bewertungen managen" },
+        { id: "wichtigkeit", title: "Warum sind Google Bewertungen so wichtig?" },
+        { id: "strategien", title: "Wie bekommst du mehr Google Bewertungen?" },
+        { id: "qr-code", title: "Wie nutzt du QR-Codes für mehr Bewertungen?" },
+        { id: "workflow-checklisten", title: "Welche Workflows steigern deine Review-Rate?" },
+        { id: "negativ", title: "Wie gehst du mit negativen Bewertungen um?" },
         { id: "faq", title: "Häufig gestellte Fragen" },
       ],
       intro: {
