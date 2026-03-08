@@ -699,7 +699,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local Keyword Research Template: Systematic Keyword Research for Local Businesses",
-      metaTitle: "Local Keyword Research Template | Workflow & Spreadsheet 2026",
+      metaTitle: "Local Keyword Research Template | Workflow 2026",
       metaDescription: "Free keyword research template for local SEO. 6 keyword types, 5-step workflow, copy-ready spreadsheet with keyword mapping and ranking tracker.",
       excerpt: "Systematic local keyword research with 6 keyword types, interactive 5-step workflow and copyable spreadsheet template for the DACH market.",
       category: "Tools & Resources"
