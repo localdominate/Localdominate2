@@ -3,6 +3,8 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
