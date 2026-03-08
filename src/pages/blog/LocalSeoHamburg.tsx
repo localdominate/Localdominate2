@@ -620,6 +620,32 @@ const LocalSeoHamburg = () => {
         </Accordion>
       </section>
 
+      <LocalBusinessEcosystem config={{
+        city: 'Hamburg',
+        population: '1,9 Mio.',
+        businesses: '~130.000',
+        avgSearchVolume: '38.000',
+        economicFacts: [
+          { label: 'Kaufkraftindex', value: '115%', trend: 'up', insight: 'Zweithöchste Kaufkraft nach München' },
+          { label: 'Hafen-Wirtschaft', value: '160.000 Jobs', trend: 'stable', insight: 'Logistik/Maritime Keywords haben hohes B2B-Potenzial' },
+          { label: 'Medienstandort', value: '#1 in DE', trend: 'stable', insight: 'Werbeagenturen, Verlage, TV — Kreativ-Keywords stark' },
+          { label: 'Touristen/Jahr', value: '7,5 Mio.', trend: 'up', insight: 'Elbphilharmonie-Effekt: Tourismus-Keywords boomen' },
+        ],
+        industryClusters: [
+          { name: 'Gastronomie', icon: '🐟', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '75 im Pack', avgRating: '4.3', avgReviews: '95', gap: 'Wenige nutzen Hamburger Spezialitäten-Keywords systematisch', strategy: 'Fisch/Franzbrötchen/Labskaus-Keywords + Stadtteil-Fokus + Food-Fotografie' },
+          { name: 'Maritime & Logistik', icon: '⚓', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '10 im Pack', avgRating: '4.0', avgReviews: '8', gap: 'B2B-Local SEO existiert in dieser Branche kaum', strategy: 'Hafen-Keywords + B2B-Landingpages + LinkedIn-Integration' },
+          { name: 'Medien & Kreativ', icon: '📺', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '30 im Pack', avgRating: '4.5', avgReviews: '20', gap: 'Portfolios ohne lokale Keyword-Optimierung', strategy: 'Stadtteil-Landingpages + Branchen-Spezialisierung + Case-Study-Content' },
+          { name: 'Handwerk', icon: '🔧', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '25 im Pack', avgRating: '4.0', avgReviews: '15', gap: 'Massive Nachfrage, fast keine Online-Präsenz', strategy: 'Stadtteil-Abdeckung + Notdienst-Keywords + Google Bewertungen' },
+          { name: 'Einzelhandel', icon: '🛍️', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '60 im Pack', avgRating: '4.1', avgReviews: '40', gap: 'Lokaler Einzelhandel verliert an Online-Shops — Local SEO ist die Chance', strategy: 'Click & Collect Keywords + Stadtteil-Einkaufsstraßen + Produkt-Posts' },
+        ],
+        underservedNiches: [
+          { niche: 'Hafencity-Services', reason: 'Neues Viertel mit zahlungskräftigen Bewohnern, kaum lokale SEO-Konkurrenz', potentialKeywords: ['Restaurant Hafencity', 'Arzt Hafencity Hamburg', 'Supermarkt Hafencity'] },
+          { niche: 'Skandinavische Nische', reason: 'Hamburg hat starke Skandinavien-Verbindung, keine lokale SEO dafür', potentialKeywords: ['schwedisches Restaurant Hamburg', 'dänisches Design Hamburg', 'Scandinavian bakery Hamburg'] },
+          { niche: 'Segeln & Wassersport', reason: 'Alster + Elbe = hohe Nachfrage, wenige optimierte Anbieter', potentialKeywords: ['Segelschule Hamburg Alster', 'SUP Verleih Hamburg', 'Bootsverleih Alster'] },
+        ],
+        strategicInsight: 'Hamburg ist ein Qualitätsmarkt mit hanseatischer Zurückhaltung. Seriöse, professionelle Auftritte werden belohnt. Die Medien-Kompetenz der Hamburger bedeutet: Schlechte Online-Präsenz fällt sofort auf. Stadtteil-Identität (Ottensen ≠ Blankenese) ist entscheidend.',
+      }} />
+
       <GeoTargetedKeywords config={{
         city: 'Hamburg',
         country: 'DE',
