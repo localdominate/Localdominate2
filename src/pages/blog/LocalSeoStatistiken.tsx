@@ -174,10 +174,10 @@ const LocalSeoStatistiken = () => {
           <Card className="p-5 border-border/60">
             <h4 className="font-semibold text-foreground mb-3">GBP-Optimierung: Schlüssel-Erkenntnisse</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex gap-2"><TrendingUp className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />Profile mit >100 Fotos erhalten 520% mehr Anrufe als Profile ohne Fotos</li>
+              <li className="flex gap-2"><TrendingUp className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />Profile mit über 100 Fotos erhalten 520% mehr Anrufe als Profile ohne Fotos</li>
               <li className="flex gap-2"><TrendingUp className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />Unternehmen mit wöchentlichen Google Posts sehen 42% mehr Profilaufrufe</li>
               <li className="flex gap-2"><TrendingUp className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />Antworten auf Bewertungen innerhalb von 24h steigern die Conversion um 33%</li>
-              <li className="flex gap-2"><TrendingUp className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />Vollständig ausgefüllte Profile sind 2.7x wahrscheinlicher als „vertrauenswürdig" eingestuft</li>
+              <li className="flex gap-2"><TrendingUp className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />Vollständig ausgefüllte Profile sind 2.7x wahrscheinlicher als vertrauenswürdig eingestuft</li>
             </ul>
           </Card>
         </div>
