@@ -45,6 +45,7 @@ const groups: HubArticleGroup[] = [
       "google-business-insights-verstehen",
       "local-seo-reporting-template",
       "local-seo-audit-checkliste",
+      "google-maps-audit-template",
     ],
   },
   {

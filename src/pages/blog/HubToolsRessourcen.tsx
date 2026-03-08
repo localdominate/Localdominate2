@@ -19,6 +19,7 @@ const groups: HubArticleGroup[] = [
       "local-seo-audit-checkliste",
       "local-seo-reporting-template",
       "bewertungs-antworten-vorlagen",
+      "google-maps-audit-template",
     ],
   },
   {
