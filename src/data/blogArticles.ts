@@ -3699,7 +3699,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "website-content-ai-suchmaschinen",
     de: {
       title: "Website-Content für AI-Suchmaschinen strukturieren: Der komplette Guide",
-      metaTitle: "Website-Content für AI-Suchmaschinen strukturieren | Guide 2026",
+      metaTitle: "Content für AI-Suchmaschinen | Struktur-Guide 2026",
       metaDescription: "Lerne wie du deinen Website-Content für ChatGPT, Perplexity und Google AI Overviews optimierst. Semantisches HTML, Schema Markup, llms.txt und AI-Attribute.",
       excerpt: "Schritt-für-Schritt: So machst du deine Website-Inhalte maschinenlesbar und zitierfähig für AI-Suchmaschinen.",
       category: "Technisches SEO"
