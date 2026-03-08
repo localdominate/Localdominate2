@@ -479,7 +479,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   baeckerei: {
     industry: "Bäckereien",
-    quickWin: "„Bäckerei Sonntag geöffnet [Stadt]" hat enormes Suchvolumen und kaum Wettbewerb.",
+    quickWin: "'Bäckerei Sonntag geöffnet [Stadt]' hat enormes Suchvolumen und kaum Wettbewerb.",
     clusters: [
       {
         name: "Bäckerei + Standort",
