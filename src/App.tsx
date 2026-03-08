@@ -39,6 +39,7 @@ const InternalLinkingDashboard = lazy(() => import("./pages/InternalLinkingDashb
 const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
 const ContentUpdateCalendar = lazy(() => import("./pages/ContentUpdateCalendar"));
+const ContentFormattingGuidelines = lazy(() => import("./pages/ContentFormattingGuidelines"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
