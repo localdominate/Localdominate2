@@ -19,13 +19,13 @@ const MobileLocalSeo = () => {
 
   const tocItems = [
     { id: "intro", title: "Einführung" },
-    { id: "mobile-first", title: "Mobile-First Indexing" },
-    { id: "click-to-call", title: "Click-to-Call & Maps" },
-    { id: "page-speed", title: "Page Speed Optimierung" },
-    { id: "mobile-ux", title: "Mobile UX Best Practices" },
-    { id: "amp", title: "AMP für Local" },
-    { id: "checkliste", title: "Mobile SEO Checkliste" },
-    { id: "faq", title: "FAQ" }
+    { id: "mobile-first", title: "Was bedeutet Mobile-First Indexing für dein Unternehmen?" },
+    { id: "click-to-call", title: "Wie implementierst du Click-to-Call und Maps?" },
+    { id: "page-speed", title: "Wie verbesserst du die mobile Ladezeit?" },
+    { id: "mobile-ux", title: "Welche Mobile UX Best Practices steigern Conversions?" },
+    { id: "amp", title: "Brauchst du noch AMP für Local SEO?" },
+    { id: "checkliste", title: "Ist dein Mobile Local SEO komplett?" },
+    { id: "faq", title: "Häufig gestellte Fragen" }
   ];
 
   const faqItems = [
@@ -84,7 +84,7 @@ const MobileLocalSeo = () => {
 
       {/* Mobile-First Indexing */}
       <section id="mobile-first" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Mobile-First Indexing verstehen</h2>
+        <h2 className="text-3xl font-bold mb-6">Was bedeutet Mobile-First Indexing für dein Unternehmen?</h2>
         
         <p className="mb-6">
           Seit März 2021 verwendet Google ausschließlich <strong>Mobile-First Indexing</strong> für alle Websites. Das bedeutet: Google betrachtet primär die mobile Version deiner Website, um Ranking und Indexierung zu bestimmen. Die Desktop-Version ist nur noch sekundär relevant.
@@ -163,7 +163,7 @@ const MobileLocalSeo = () => {
 
       {/* Click-to-Call & Maps */}
       <section id="click-to-call" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Click-to-Call & Maps Integration</h2>
+        <h2 className="text-3xl font-bold mb-6">Wie implementierst du Click-to-Call und Maps?</h2>
         
         <p className="mb-6">
           Mobile Nutzer erwarten <strong>sofortige Aktionsmöglichkeiten</strong>. Die wichtigsten sind: Direkt anrufen und Wegbeschreibung erhalten. Hier erfährst du, wie du beides optimal implementierst.
@@ -276,7 +276,7 @@ const MobileLocalSeo = () => {
       <section id="page-speed" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
           <Zap className="h-8 w-8 text-primary" />
-          Mobile Page Speed Optimierung
+          Wie verbesserst du die mobile Ladezeit?
         </h2>
         
         <p className="mb-6">
@@ -402,7 +402,7 @@ const MobileLocalSeo = () => {
       <section id="mobile-ux" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
           <Layout className="h-8 w-8 text-primary" />
-          Mobile UX Best Practices
+          Welche Mobile UX Best Practices steigern Conversions?
         </h2>
         
         <p className="mb-6">
@@ -543,7 +543,7 @@ const MobileLocalSeo = () => {
       <section id="amp" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
           <FileCode className="h-8 w-8 text-primary" />
-          AMP für lokale Websites: Noch relevant?
+          Brauchst du noch AMP für Local SEO?
         </h2>
         
         <p className="mb-6">
@@ -616,7 +616,7 @@ const MobileLocalSeo = () => {
 
       {/* Checkliste */}
       <section id="checkliste" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Mobile Local SEO Checkliste</h2>
+        <h2 className="text-3xl font-bold mb-6">Ist dein Mobile Local SEO komplett? Die Checkliste</h2>
         
         <p className="mb-6">
           Nutze diese Checkliste, um deine lokale Website auf Mobilfreundlichkeit zu prüfen:
@@ -699,7 +699,7 @@ const MobileLocalSeo = () => {
 
       {/* FAQ */}
       <section id="faq" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Häufig gestellte Fragen</h2>
+        <h2 className="text-3xl font-bold mb-6">Häufig gestellte Fragen zu Mobile Local SEO</h2>
         
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">

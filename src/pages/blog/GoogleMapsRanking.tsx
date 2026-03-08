@@ -19,10 +19,10 @@ const GoogleMapsRanking = () => {
   const content = {
     de: {
       tocItems: [
-        { id: "warum-wichtig", title: "Warum Google Maps wichtiger ist als deine Website" },
-        { id: "ranking-faktoren", title: "Die 7 entscheidenden Ranking-Faktoren" },
-        { id: "optimierung", title: "Schritt-für-Schritt Optimierung" },
-        { id: "fehler", title: "Häufige Fehler vermeiden" },
+        { id: "warum-wichtig", title: "Warum ist Google Maps wichtiger als deine Website?" },
+        { id: "ranking-faktoren", title: "Welche 7 Faktoren bestimmen dein Google Maps Ranking?" },
+        { id: "optimierung", title: "Wie optimierst du dein Google Maps Ranking Schritt für Schritt?" },
+        { id: "fehler", title: "Welche Fehler solltest du beim Google Maps Ranking vermeiden?" },
         { id: "faq", title: "Häufig gestellte Fragen" },
       ],
       intro: {
@@ -30,7 +30,7 @@ const GoogleMapsRanking = () => {
         text: "haben eine lokale Absicht. Wenn dein Unternehmen nicht in den Top 3 der Google Maps Ergebnisse erscheint, verlierst du täglich potenzielle Kunden an deine Konkurrenz. In diesem Guide zeige ich dir, wie du dein Google Maps Ranking nachhaltig verbesserst."
       },
       section1: {
-        title: "Warum Google Maps wichtiger ist als deine Website",
+        title: "Warum ist Google Maps wichtiger als deine Website?",
         p1: "Die meisten Kunden entscheiden sich für ein lokales Unternehmen, bevor sie jemals dessen Website besuchen. Der Google Maps Eintrag ist oft der erste und einzige Kontaktpunkt.",
         tip: "Wusstest du?",
         tipText: "76% der Nutzer, die nach einem lokalen Unternehmen suchen, besuchen innerhalb von 24 Stunden ein Geschäft.",
@@ -38,7 +38,7 @@ const GoogleMapsRanking = () => {
         p2WithLinks: true
       },
       section2: {
-        title: "Die 7 entscheidenden Ranking-Faktoren",
+        title: "Welche 7 Faktoren bestimmen dein Google Maps Ranking?",
         intro: "Google bewertet lokale Unternehmen nach drei Hauptkriterien:",
         criteria: ["Relevanz", "Entfernung", "Bekanntheit"],
         criteriaEnd: "Diese setzen sich aus verschiedenen Faktoren zusammen:",
@@ -53,7 +53,7 @@ const GoogleMapsRanking = () => {
         ]
       },
       section3: {
-        title: "Schritt-für-Schritt Optimierung",
+        title: "Wie optimierst du dein Google Maps Ranking Schritt für Schritt?",
         step1: {
           title: "1. Profil vollständig ausfüllen",
           intro: "Gehe jeden Bereich deines Google Business Profils durch und fülle alle Felder aus. Besonders wichtig:",
@@ -85,7 +85,7 @@ const GoogleMapsRanking = () => {
         }
       },
       section4: {
-        title: "Häufige Fehler vermeiden",
+        title: "Welche Fehler solltest du beim Google Maps Ranking vermeiden?",
         mistakes: [
           { title: "Keyword-Stuffing im Namen", desc: "Füge keine Keywords in deinen Unternehmensnamen ein – das verstößt gegen Googles Richtlinien." },
           { title: "Inkonsistente NAP-Daten", desc: "Unterschiedliche Adressen auf verschiedenen Plattformen verwirren Google." },
@@ -117,10 +117,10 @@ const GoogleMapsRanking = () => {
     },
     en: {
       tocItems: [
-        { id: "warum-wichtig", title: "Why Google Maps Matters More Than Your Website" },
-        { id: "ranking-faktoren", title: "The 7 Decisive Ranking Factors" },
-        { id: "optimierung", title: "Step-by-Step Optimization" },
-        { id: "fehler", title: "Common Mistakes to Avoid" },
+        { id: "warum-wichtig", title: "Why Does Google Maps Matter More Than Your Website?" },
+        { id: "ranking-faktoren", title: "What Are the 7 Key Google Maps Ranking Factors?" },
+        { id: "optimierung", title: "How Do You Optimize Your Google Maps Ranking Step by Step?" },
+        { id: "fehler", title: "What Mistakes Should You Avoid in Google Maps Ranking?" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
       intro: {
@@ -128,14 +128,14 @@ const GoogleMapsRanking = () => {
         text: "have local intent. If your business doesn't appear in the top 3 Google Maps results, you're losing potential customers to your competition every day. In this guide, I'll show you how to sustainably improve your Google Maps ranking."
       },
       section1: {
-        title: "Why Google Maps Matters More Than Your Website",
+        title: "Why Does Google Maps Matter More Than Your Website?",
         p1: "Most customers decide on a local business before ever visiting its website. The Google Maps listing is often the first and only point of contact.",
         tip: "Did you know?",
         tipText: "76% of users who search for a local business visit a store within 24 hours.",
         p2: "Your Google Business Profile shows opening hours, reviews, photos, and direct directions – everything a customer needs for a quick decision."
       },
       section2: {
-        title: "The 7 Decisive Ranking Factors",
+        title: "What Are the 7 Key Google Maps Ranking Factors?",
         intro: "Google evaluates local businesses based on three main criteria:",
         criteria: ["Relevance", "Distance", "Prominence"],
         criteriaEnd: "These are composed of various factors:",
@@ -150,7 +150,7 @@ const GoogleMapsRanking = () => {
         ]
       },
       section3: {
-        title: "Step-by-Step Optimization",
+        title: "How Do You Optimize Your Google Maps Ranking Step by Step?",
         step1: {
           title: "1. Complete Your Profile Fully",
           intro: "Go through every section of your Google Business Profile and fill out all fields. Especially important:",
@@ -182,7 +182,7 @@ const GoogleMapsRanking = () => {
         }
       },
       section4: {
-        title: "Common Mistakes to Avoid",
+        title: "What Mistakes Should You Avoid in Google Maps Ranking?",
         mistakes: [
           { title: "Keyword Stuffing in Name", desc: "Don't add keywords to your business name – this violates Google's guidelines." },
           { title: "Inconsistent NAP Data", desc: "Different addresses on different platforms confuse Google." },

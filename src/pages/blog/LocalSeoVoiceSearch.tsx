@@ -16,13 +16,13 @@ const LocalSeoVoiceSearch = () => {
   const article = getArticleBySlug("local-seo-voice-search", language)!;
 
   const tocItems = [
-    { id: "voice-search-verstehen", title: "Voice Search verstehen" },
-    { id: "conversational-keywords", title: "Konversationelle Keywords" },
-    { id: "featured-snippets", title: "Featured Snippets erobern" },
-    { id: "google-business", title: "Google Business optimieren" },
-    { id: "technische-optimierung", title: "Technische Optimierung" },
-    { id: "lokale-fragen", title: "Lokale Fragen beantworten" },
-    { id: "zukunft", title: "Die Zukunft der Sprachsuche" },
+    { id: "voice-search-verstehen", title: "Was ist Voice Search und warum ist es wichtig?" },
+    { id: "conversational-keywords", title: "Wie findest du die richtigen Voice Search Keywords?" },
+    { id: "featured-snippets", title: "Wie eroberst du Featured Snippets für Voice Search?" },
+    { id: "google-business", title: "Wie optimierst du Google Business für Sprachsuche?" },
+    { id: "technische-optimierung", title: "Welche technischen Faktoren beeinflussen Voice Search?" },
+    { id: "lokale-fragen", title: "Wie beantwortest du lokale Fragen für Voice Search?" },
+    { id: "zukunft", title: "Wie entwickelt sich Voice Search in Zukunft?" },
     { id: "faq", title: "Häufige Fragen" }
   ];
 
@@ -81,7 +81,7 @@ const LocalSeoVoiceSearch = () => {
       <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="voice-search-verstehen">
-        <h2>Voice Search verstehen</h2>
+        <h2>Was ist Voice Search und warum ist es wichtig?</h2>
         <AutoLexikonText>
           <p>
             "Hey Google, wo ist der nächste Zahnarzt?" – Sprachsuchen sind 
@@ -113,7 +113,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="conversational-keywords">
-        <h2>Konversationelle Keywords</h2>
+        <h2>Wie findest du die richtigen Voice Search Keywords?</h2>
         <AutoLexikonText>
           <p>
             Der größte Unterschied zu klassischer Keyword-Optimierung: Bei 
@@ -164,7 +164,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="featured-snippets">
-        <h2>Featured Snippets erobern</h2>
+        <h2>Wie eroberst du Featured Snippets für Voice Search?</h2>
         <AutoLexikonText>
           <p>
             Bei Sprachsuchen liest der Assistent oft nur ein Ergebnis vor – 
@@ -202,7 +202,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="google-business">
-        <h2>Google Business für Voice Search optimieren</h2>
+        <h2>Wie optimierst du Google Business für Sprachsuche?</h2>
         <AutoLexikonText>
           <p>
             Google Assistant bezieht lokale Informationen primär aus 
@@ -237,7 +237,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="technische-optimierung">
-        <h2>Technische Optimierung für Voice Search</h2>
+        <h2>Welche technischen Faktoren beeinflussen Voice Search?</h2>
         <AutoLexikonText>
           <h3>Speed ist entscheidend</h3>
           <p>
@@ -272,7 +272,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="lokale-fragen">
-        <h2>Lokale Fragen beantworten</h2>
+        <h2>Wie beantwortest du lokale Fragen für Voice Search?</h2>
         <AutoLexikonText>
           <h3>FAQ-Seite für Voice Search</h3>
           <p>
@@ -303,7 +303,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="zukunft">
-        <h2>Die Zukunft der Sprachsuche</h2>
+        <h2>Wie entwickelt sich Voice Search in Zukunft?</h2>
         <AutoLexikonText>
           <h3>Trends 2026 und darüber hinaus</h3>
           <ul>

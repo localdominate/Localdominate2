@@ -21,16 +21,16 @@ const GoogleMyBusiness = () => {
   const content = {
     de: {
       tocItems: [
-        { id: "grundlagen", title: "Grundlagen: Profil einrichten und verifizieren" },
-        { id: "vollstaendigkeit", title: "Profil-Vollständigkeit maximieren" },
-        { id: "kategorien", title: "Kategorien richtig wählen" },
-        { id: "posts", title: "Google Posts strategisch nutzen" },
-        { id: "insights", title: "Insights verstehen und nutzen" },
+        { id: "grundlagen", title: "Wie richtest du dein Google Business Profil ein?" },
+        { id: "vollstaendigkeit", title: "Wie maximierst du die Profil-Vollständigkeit?" },
+        { id: "kategorien", title: "Wie wählst du die richtigen Kategorien?" },
+        { id: "posts", title: "Wie nutzt du Google Posts strategisch?" },
+        { id: "insights", title: "Was verraten dir die Google Business Insights?" },
         { id: "faq", title: "Häufig gestellte Fragen" },
       ],
       intro: "Dein <strong>Google Business Profil</strong> (früher Google My Business) ist das Schaufenster deines Unternehmens in der Google-Suche. Ein vollständig optimiertes Profil kann deine lokale Sichtbarkeit um bis zu 70% steigern. Diese Anleitung zeigt dir jeden Schritt.",
       section1: {
-        title: "Grundlagen: Profil einrichten und verifizieren",
+        title: "Wie richtest du dein Google Business Profil ein?",
         text: "Falls du noch kein Google Business Profil hast, ist der erste Schritt die Erstellung und Verifizierung.",
         stepsTitle: "Schritt-für-Schritt Erstellung:",
         steps: [
@@ -45,7 +45,7 @@ const GoogleMyBusiness = () => {
         tip: "Bei einigen Unternehmen ist auch eine Video-Verifizierung möglich. Das geht schneller als der Postweg."
       },
       section2: {
-        title: "Profil-Vollständigkeit maximieren",
+        title: "Wie maximierst du die Profil-Vollständigkeit?",
         text: "Google bevorzugt vollständige Profile. Je mehr Informationen du bereitstellst, desto besser dein Ranking.",
         items: [
           { title: "Unternehmensbeschreibung", desc: "750 Zeichen nutzen. Keywords natürlich einbauen. Beschreibe was dich einzigartig macht.", status: "Pflicht" },
@@ -57,7 +57,7 @@ const GoogleMyBusiness = () => {
         ]
       },
       section3: {
-        title: "Kategorien richtig wählen",
+        title: "Wie wählst du die richtigen Kategorien?",
         text: "Die Kategorie-Auswahl bestimmt, für welche Suchanfragen du erscheinst. Wähle sorgfältig!",
         main: "Hauptkategorie",
         mainText: "Wähle die Kategorie, die dein Kerngeschäft am besten beschreibt. Beispiel: \"Zahnarzt\" statt \"Gesundheitswesen\".",
@@ -70,7 +70,7 @@ const GoogleMyBusiness = () => {
         exampleSecVal: "Café, Konditorei, Frühstücksrestaurant"
       },
       section4: {
-        title: "Google Posts strategisch nutzen",
+        title: "Wie nutzt du Google Posts strategisch?",
         text: "Google Posts sind wie Social Media Posts, die direkt in deinem Google Profil erscheinen. Sie zeigen Aktivität und können Klicks generieren.",
         types: [
           { title: "Updates", desc: "Neuigkeiten, Änderungen, allgemeine Infos" },
@@ -88,7 +88,7 @@ const GoogleMyBusiness = () => {
         ]
       },
       section5: {
-        title: "Insights verstehen und nutzen",
+        title: "Was verraten dir die Google Business Insights?",
         text: "Google liefert wertvolle Daten darüber, wie Kunden mit deinem Profil interagieren. Nutze diese für Optimierungen.",
         items: [
           { title: "Suchanfragen", desc: "Zeigt, mit welchen Keywords Kunden dich finden. Nutze beliebte Begriffe in deiner Beschreibung und Posts." },
@@ -108,16 +108,16 @@ const GoogleMyBusiness = () => {
     },
     en: {
       tocItems: [
-        { id: "grundlagen", title: "Basics: Setting Up and Verifying Your Profile" },
-        { id: "vollstaendigkeit", title: "Maximizing Profile Completeness" },
-        { id: "kategorien", title: "Choosing the Right Categories" },
-        { id: "posts", title: "Using Google Posts Strategically" },
-        { id: "insights", title: "Understanding and Using Insights" },
+        { id: "grundlagen", title: "How Do You Set Up Your Google Business Profile?" },
+        { id: "vollstaendigkeit", title: "How Do You Maximize Profile Completeness?" },
+        { id: "kategorien", title: "How Do You Choose the Right Categories?" },
+        { id: "posts", title: "How Do You Use Google Posts Strategically?" },
+        { id: "insights", title: "What Do Google Business Insights Reveal?" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
       intro: "Your <strong>Google Business Profile</strong> (formerly Google My Business) is your business's storefront in Google Search. A fully optimized profile can increase your local visibility by up to 70%. This guide shows you every step.",
       section1: {
-        title: "Basics: Setting Up and Verifying Your Profile",
+        title: "How Do You Set Up Your Google Business Profile?",
         text: "If you don't have a Google Business Profile yet, the first step is creation and verification.",
         stepsTitle: "Step-by-Step Creation:",
         steps: [

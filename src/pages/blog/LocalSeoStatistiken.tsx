@@ -26,14 +26,14 @@ const LocalSeoStatistiken = () => {
   if (!article) return null;
 
   const tocItems = [
-    { id: "ueberblick", title: "Local SEO in Zahlen" },
-    { id: "google-business", title: "Google Business Profil Statistiken" },
-    { id: "bewertungen", title: "Die Macht der Bewertungen" },
-    { id: "mobile", title: "Mobile lokale Suche" },
-    { id: "branchen", title: "Branchenspezifische Daten" },
-    { id: "ranking-faktoren", title: "Ranking-Faktoren 2026" },
-    { id: "trends", title: "Trends & Prognosen" },
-    { id: "methodik", title: "Methodik & Quellen" },
+    { id: "ueberblick", title: "Wie viele Suchen haben lokale Absicht?" },
+    { id: "google-business", title: "Welche Kennzahlen hat das Google Business Profil?" },
+    { id: "bewertungen", title: "Wie stark beeinflussen Bewertungen das Ranking?" },
+    { id: "mobile", title: "Wie wichtig ist Mobile für lokale Suche?" },
+    { id: "branchen", title: "Welche Branchen profitieren am meisten von Local SEO?" },
+    { id: "ranking-faktoren", title: "Welche Faktoren bestimmen das lokale Ranking 2026?" },
+    { id: "trends", title: "Welche Local SEO Trends prägen 2026?" },
+    { id: "methodik", title: "Woher stammen diese Daten?" },
   ];
 
   const faqItems = [
@@ -150,7 +150,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 1: General Local SEO Stats */}
       <section id="ueberblick">
-        <h2>Local SEO in Zahlen: Die wichtigsten Kennzahlen</h2>
+        <h2>Wie viele Suchen haben lokale Absicht?</h2>
         <p>
           Fast die Hälfte aller Google-Suchen hat eine lokale Kaufabsicht. Wer als lokales Unternehmen 
           nicht in den Top 3 der lokalen Ergebnisse erscheint, verliert den Großteil potenzieller Kunden. 
@@ -166,7 +166,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 2: Google Business Profile */}
       <section id="google-business">
-        <h2>Google Business Profil: Daten & Benchmarks</h2>
+        <h2>Welche Kennzahlen hat das Google Business Profil?</h2>
         <p>
           Das Google Business Profil ist der wichtigste Einzelfaktor für lokale Sichtbarkeit. 
           Diese Statistiken zeigen den messbaren Impact einer professionellen GBP-Optimierung.
@@ -187,7 +187,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 3: Reviews */}
       <section id="bewertungen">
-        <h2>Die Macht der Bewertungen: Statistiken 2026</h2>
+        <h2>Wie stark beeinflussen Bewertungen das Ranking?</h2>
         <p>
           Online-Bewertungen sind der zweitwichtigste Ranking-Faktor und der wichtigste Vertrauens-Builder 
           für lokale Unternehmen. Diese Zahlen belegen den direkten Zusammenhang zwischen Bewertungen und Umsatz.
@@ -202,7 +202,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 4: Mobile */}
       <section id="mobile">
-        <h2>Mobile lokale Suche: Trends & Zahlen</h2>
+        <h2>Wie wichtig ist Mobile für lokale Suche?</h2>
         <p>
           Über 60% aller lokalen Suchen erfolgen mobil. „In der Nähe"-Suchen sind in den letzten 5 Jahren 
           um 400% gestiegen. Mobiloptimierung ist damit Pflicht für jedes lokale Unternehmen.
@@ -212,7 +212,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 5: Industry Stats */}
       <section id="branchen">
-        <h2>Branchenspezifische Local SEO Statistiken</h2>
+        <h2>Welche Branchen profitieren am meisten von Local SEO?</h2>
         <p>
           Jede Branche hat eigene Suchgewohnheiten, Conversion-Muster und Wettbewerbsdynamiken. 
           Hier findest du die wichtigsten Datenpunkte für 22 Branchen — von Gastronomie über Gesundheit 
@@ -253,7 +253,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 6: Ranking Factors */}
       <section id="ranking-faktoren">
-        <h2>Local SEO Ranking-Faktoren 2026: Gewichtung</h2>
+        <h2>Welche Faktoren bestimmen das lokale Ranking 2026?</h2>
         <p>
           Basierend auf der jährlichen Whitespark/Moz Local Search Ranking Factors Studie und eigenen Analysen 
           zeigt diese Aufstellung die relative Gewichtung der wichtigsten Ranking-Faktoren für das Local Pack.
@@ -347,7 +347,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 7: Trends */}
       <section id="trends">
-        <h2>Local SEO Trends & Prognosen 2026</h2>
+        <h2>Welche Local SEO Trends prägen 2026?</h2>
         <p>
           Diese Entwicklungen werden die lokale Suche in den kommenden 12–24 Monaten am stärksten 
           beeinflussen. Frühzeitige Anpassung sichert Wettbewerbsvorteile.
@@ -379,7 +379,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 8: Methodology */}
       <section id="methodik">
-        <h2>Methodik & Quellenverzeichnis</h2>
+        <h2>Woher stammen diese Daten?</h2>
         <p>
           Alle Statistiken auf dieser Seite stammen aus öffentlich zugänglichen Studien, offiziellen 
           Branchenberichten und eigenen Datenanalysen. Wir priorisieren primäre Datenquellen und 

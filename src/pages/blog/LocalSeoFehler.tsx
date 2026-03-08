@@ -22,13 +22,13 @@ const LocalSeoFehler = () => {
 
   const tocItems = [
     { id: "intro", title: "Einführung" },
-    { id: "technische-fehler", title: "Technische Fehler (1-5)" },
-    { id: "google-business", title: "Google Business Fehler (6-10)" },
-    { id: "content-fehler", title: "Content-Fehler (11-13)" },
-    { id: "bewertungs-fehler", title: "Bewertungs-Fehler (14-15)" },
+    { id: "technische-fehler", title: "Welche technischen SEO-Fehler kosten dich Rankings?" },
+    { id: "google-business", title: "Welche Google Business Fehler schaden deiner Sichtbarkeit?" },
+    { id: "content-fehler", title: "Welche Content-Fehler schwächen dein Local SEO?" },
+    { id: "bewertungs-fehler", title: "Wie vermeidest du kritische Bewertungs-Fehler?" },
     { id: "quiz", title: "Fehler-Diagnose Quiz" },
-    { id: "checkliste", title: "Schnell-Checkliste" },
-    { id: "faq", title: "FAQ" }
+    { id: "checkliste", title: "Ist dein Local SEO fehlerfrei?" },
+    { id: "faq", title: "Häufig gestellte Fragen" }
   ];
 
   const faqItems = [
@@ -88,7 +88,7 @@ const LocalSeoFehler = () => {
       <section id="technische-fehler" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <Globe className="h-8 w-8 text-primary" />
-          Technische Fehler (1-5)
+          Welche technischen SEO-Fehler kosten dich Rankings?
         </h2>
 
         <p className="mb-6">
@@ -346,7 +346,7 @@ const LocalSeoFehler = () => {
       <section id="google-business" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <MapPin className="h-8 w-8 text-primary" />
-          Google Business Fehler (6-10)
+          Welche Google Business Fehler schaden deiner Sichtbarkeit?
         </h2>
 
         <p className="mb-6">
@@ -551,7 +551,7 @@ const LocalSeoFehler = () => {
       <section id="content-fehler" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <FileText className="h-8 w-8 text-primary" />
-          Content-Fehler (11-13)
+          Welche Content-Fehler schwächen dein Local SEO?
         </h2>
 
         {/* Fehler 11 */}
@@ -672,7 +672,7 @@ const LocalSeoFehler = () => {
       <section id="bewertungs-fehler" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <Star className="h-8 w-8 text-primary" />
-          Bewertungs-Fehler (14-15)
+          Wie vermeidest du kritische Bewertungs-Fehler?
         </h2>
 
         {/* Fehler 14 */}
@@ -807,7 +807,7 @@ const LocalSeoFehler = () => {
 
       {/* Schnell-Checkliste */}
       <section id="checkliste" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Schnell-Checkliste: Alle 15 Fehler</h2>
+        <h2 className="text-3xl font-bold mb-6">Ist dein Local SEO fehlerfrei? Die Schnell-Checkliste</h2>
 
         <div className="bg-muted/30 rounded-lg p-6">
           <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">

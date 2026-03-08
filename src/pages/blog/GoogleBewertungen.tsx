@@ -23,11 +23,11 @@ const GoogleBewertungen = () => {
   const content = {
     de: {
       tocItems: [
-        { id: "wichtigkeit", title: "Warum Bewertungen Kunden-Magnete sind" },
-        { id: "strategien", title: "7 ethische Strategien für mehr Reviews" },
-        { id: "qr-code", title: "QR-Code und Smart-Link Taktiken" },
-        { id: "workflow-checklisten", title: "Workflow-Checklisten zur Review-Generierung" },
-        { id: "negativ", title: "Negative Bewertungen managen" },
+        { id: "wichtigkeit", title: "Warum sind Google Bewertungen so wichtig?" },
+        { id: "strategien", title: "Wie bekommst du mehr Google Bewertungen?" },
+        { id: "qr-code", title: "Wie nutzt du QR-Codes für mehr Bewertungen?" },
+        { id: "workflow-checklisten", title: "Welche Workflows steigern deine Review-Rate?" },
+        { id: "negativ", title: "Wie gehst du mit negativen Bewertungen um?" },
         { id: "faq", title: "Häufig gestellte Fragen" },
       ],
       intro: {
@@ -35,7 +35,7 @@ const GoogleBewertungen = () => {
         text: "lesen Online-Bewertungen, bevor sie ein lokales Unternehmen besuchen. Google Bewertungen sind der wichtigste Vertrauensfaktor für potenzielle Kunden. Hier erfährst du, wie du mehr authentische Bewertungen bekommst – ohne gegen Googles Richtlinien zu verstoßen."
       },
       section1: {
-        title: "Warum Bewertungen Kunden-Magnete sind",
+        title: "Warum sind Google Bewertungen so wichtig?",
         text1: "Google Bewertungen beeinflussen nicht nur das Vertrauen potenzieller Kunden, sondern auch dein Ranking in den lokalen Suchergebnissen.",
         stats: [
           { stat: "88%", desc: "vertrauen Online-Bewertungen wie persönlichen Empfehlungen" },
@@ -45,7 +45,7 @@ const GoogleBewertungen = () => {
         text2: "Mehr Bewertungen bedeuten mehr Sichtbarkeit, mehr Vertrauen und letztendlich mehr Umsatz."
       },
       section2: {
-        title: "7 ethische Strategien für mehr Reviews",
+        title: "Wie bekommst du mehr Google Bewertungen?",
         strategies: [
           { title: "1. Direkt nach dem Kauf fragen", desc: "Der beste Zeitpunkt ist direkt nach einer positiven Erfahrung. Sage einfach: \"Es freut mich, dass Sie zufrieden sind. Würden Sie uns mit einer Google Bewertung unterstützen?\"" },
           { title: "2. QR-Code auf Rechnungen", desc: "Platziere einen QR-Code auf deiner Rechnung, der direkt zur Bewertungsseite führt. So reduzierst du die Hürde auf ein Minimum." },
@@ -57,7 +57,7 @@ const GoogleBewertungen = () => {
         ]
       },
       section3: {
-        title: "QR-Code und Smart-Link Taktiken",
+        title: "Wie nutzt du QR-Codes für mehr Bewertungen?",
         text1: "Der Schlüssel zu mehr Bewertungen ist die Reduzierung von Hindernissen. Mit einem direkten Link oder QR-Code muss der Kunde nicht erst nach deinem Unternehmen suchen.",
         stepsTitle: "So erstellst du deinen Bewertungslink:",
         steps: [
@@ -69,7 +69,7 @@ const GoogleBewertungen = () => {
         tip: "Drucke den QR-Code auf Visitenkarten, Rechnungen, Kassenzettel und Aufsteller. Je sichtbarer, desto mehr Bewertungen."
       },
       section4: {
-        title: "Negative Bewertungen managen",
+        title: "Wie gehst du mit negativen Bewertungen um?",
         text1: "Negative Bewertungen gehören dazu – wichtig ist, wie du damit umgehst. Eine professionelle Antwort kann sogar Vertrauen aufbauen.",
         tips: [
           { title: "Schnell antworten:", desc: "Idealerweise innerhalb von 24 Stunden." },
@@ -94,11 +94,11 @@ const GoogleBewertungen = () => {
     },
     en: {
       tocItems: [
-        { id: "wichtigkeit", title: "Why Reviews Are Customer Magnets" },
-        { id: "strategien", title: "7 Ethical Strategies for More Reviews" },
-        { id: "qr-code", title: "QR Code and Smart Link Tactics" },
-        { id: "workflow-checklisten", title: "Review Generation Workflow Checklists" },
-        { id: "negativ", title: "Managing Negative Reviews" },
+        { id: "wichtigkeit", title: "Why Are Google Reviews So Important?" },
+        { id: "strategien", title: "How Do You Get More Google Reviews?" },
+        { id: "qr-code", title: "How Do You Use QR Codes for More Reviews?" },
+        { id: "workflow-checklisten", title: "Which Workflows Boost Your Review Rate?" },
+        { id: "negativ", title: "How Do You Handle Negative Reviews?" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
       intro: {
@@ -106,7 +106,7 @@ const GoogleBewertungen = () => {
         text: "read online reviews before visiting a local business. Google reviews are the most important trust factor for potential customers. Here you'll learn how to get more authentic reviews – without violating Google's guidelines."
       },
       section1: {
-        title: "Why Reviews Are Customer Magnets",
+        title: "Why Are Google Reviews So Important?",
         text1: "Google reviews not only influence the trust of potential customers but also your ranking in local search results.",
         stats: [
           { stat: "88%", desc: "trust online reviews as much as personal recommendations" },
@@ -116,7 +116,7 @@ const GoogleBewertungen = () => {
         text2: "More reviews mean more visibility, more trust, and ultimately more revenue."
       },
       section2: {
-        title: "7 Ethical Strategies for More Reviews",
+        title: "How Do You Get More Google Reviews?",
         strategies: [
           { title: "1. Ask Right After Purchase", desc: "The best time is right after a positive experience. Simply say: \"I'm glad you're satisfied. Would you support us with a Google review?\"" },
           { title: "2. QR Code on Invoices", desc: "Place a QR code on your invoice that leads directly to the review page. This reduces the barrier to a minimum." },

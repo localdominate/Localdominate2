@@ -21,15 +21,15 @@ const LokaleSeo2026 = () => {
   const content = {
     de: {
       tocItems: [
-        { id: "trends", title: "Die wichtigsten Trends 2026" },
-        { id: "ki", title: "KI und lokale Suche" },
-        { id: "voice", title: "Voice Search Optimierung" },
-        { id: "zero-click", title: "Zero-Click-Searches nutzen" },
+        { id: "trends", title: "Welche Local SEO Trends dominieren 2026?" },
+        { id: "ki", title: "Wie verändert KI die lokale Suche?" },
+        { id: "voice", title: "Wie optimierst du für Voice Search?" },
+        { id: "zero-click", title: "Was sind Zero-Click-Searches und wie nutzt du sie?" },
         { id: "faq", title: "Häufig gestellte Fragen" },
       ],
       intro: "Lokale Suchmaschinenoptimierung entwickelt sich rasant weiter. Was 2024 funktioniert hat, ist 2026 vielleicht schon veraltet. Dieser Artikel zeigt dir die neuesten Trends und wie du dein lokales Unternehmen zukunftssicher aufstellst.",
       section1: {
-        title: "Die wichtigsten Trends 2026",
+        title: "Welche Local SEO Trends dominieren 2026?",
         text: "Die lokale Suche verändert sich grundlegend. Diese fünf Trends werden 2026 dominieren:",
         trends: [
           { title: "KI-gestützte Suchergebnisse", desc: "Google AI Overviews beeinflussen, wie lokale Ergebnisse angezeigt werden. Strukturierte Daten werden wichtiger denn je." },
@@ -40,7 +40,7 @@ const LokaleSeo2026 = () => {
         ]
       },
       section2: {
-        title: "KI und lokale Suche",
+        title: "Wie verändert KI die lokale Suche?",
         text: "Künstliche Intelligenz verändert, wie Google lokale Ergebnisse generiert und anzeigt. Das bedeutet neue Chancen und Herausforderungen.",
         sub1: "Google AI Overviews",
         sub1Text: "Googles KI fasst Informationen aus verschiedenen Quellen zusammen und zeigt sie direkt in den Suchergebnissen. Für lokale Unternehmen bedeutet das:",
@@ -54,7 +54,7 @@ const LokaleSeo2026 = () => {
         tip: "Stelle sicher, dass dein Google Business Profil alle Attribute enthält, die für deine Zielgruppe relevant sind (z.B. \"kinderfreundlich\", \"hundefreundlich\", \"vegane Optionen\")."
       },
       section3: {
-        title: "Voice Search Optimierung",
+        title: "Wie optimierst du für Voice Search?",
         text: "\"Hey Google, welcher Friseur in der Nähe hat die besten Bewertungen?\" – Voice Search verändert, wie Menschen suchen.",
         sub1: "Unterschiede zur Text-Suche",
         textSearch: "Text-Suche",
@@ -71,7 +71,7 @@ const LokaleSeo2026 = () => {
         ]
       },
       section4: {
-        title: "Zero-Click-Searches nutzen",
+        title: "Was sind Zero-Click-Searches und wie nutzt du sie?",
         text: "Über 50% aller Google-Suchen enden ohne Klick auf eine Website. Die Nutzer finden alle Infos direkt in den Suchergebnissen. Das ist keine Bedrohung – es ist eine Chance.",
         sub1: "Warum Zero-Click gut für dich ist",
         sub1Text: "Wenn ein Kunde deine Öffnungszeiten, Telefonnummer oder Adresse direkt in Google sieht, ist das ein Erfolg. Er braucht nicht auf deine Website zu klicken, um zu handeln.",
@@ -105,10 +105,10 @@ const LokaleSeo2026 = () => {
     },
     en: {
       tocItems: [
-        { id: "trends", title: "The Most Important Trends for 2026" },
-        { id: "ki", title: "AI and Local Search" },
-        { id: "voice", title: "Voice Search Optimization" },
-        { id: "zero-click", title: "Using Zero-Click Searches" },
+        { id: "trends", title: "Which Local SEO Trends Dominate 2026?" },
+        { id: "ki", title: "How Is AI Changing Local Search?" },
+        { id: "voice", title: "How Do You Optimize for Voice Search?" },
+        { id: "zero-click", title: "What Are Zero-Click Searches and How Do You Use Them?" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
       intro: "Local search engine optimization is evolving rapidly. What worked in 2024 may already be outdated in 2026. This article shows you the latest trends and how to future-proof your local business.",

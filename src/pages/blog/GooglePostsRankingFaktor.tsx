@@ -17,12 +17,12 @@ const GooglePostsRankingFaktor = () => {
 
   const tocItems = [
     { id: "was-sind-google-posts", title: "Was sind Google Posts?" },
-    { id: "ranking-einfluss", title: "Einfluss auf Rankings" },
-    { id: "post-typen", title: "Die 5 Post-Typen" },
-    { id: "content-strategie", title: "Content-Strategie" },
-    { id: "optimierung", title: "Posts optimieren" },
-    { id: "frequenz", title: "Posting-Frequenz" },
-    { id: "erfolg-messen", title: "Erfolg messen" },
+    { id: "ranking-einfluss", title: "Wie beeinflussen Google Posts dein lokales Ranking?" },
+    { id: "post-typen", title: "Welche 5 Google Post-Typen gibt es?" },
+    { id: "content-strategie", title: "Wie entwickelst du eine Content-Strategie für Posts?" },
+    { id: "optimierung", title: "Wie optimierst du Posts für maximale Wirkung?" },
+    { id: "frequenz", title: "Wie oft solltest du Google Posts veröffentlichen?" },
+    { id: "erfolg-messen", title: "Wie misst du den Erfolg deiner Google Posts?" },
     { id: "faq", title: "Häufige Fragen" }
   ];
 
@@ -119,7 +119,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="ranking-einfluss">
-        <h2>Einfluss auf lokale Rankings</h2>
+        <h2>Wie beeinflussen Google Posts dein lokales Ranking?</h2>
         <AutoLexikonText>
           <p>
             Die direkte Wirkung von Google Posts auf Rankings ist Gegenstand 
@@ -150,7 +150,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="post-typen">
-        <h2>Die 5 Post-Typen im Detail</h2>
+        <h2>Welche 5 Google Post-Typen gibt es?</h2>
         <AutoLexikonText>
           <p>
             Google bietet verschiedene Post-Formate für unterschiedliche Zwecke:
@@ -188,7 +188,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="content-strategie">
-        <h2>Content-Strategie für Google Posts</h2>
+        <h2>Wie entwickelst du eine Content-Strategie für Google Posts?</h2>
         <AutoLexikonText>
           <h3>Was funktioniert</h3>
           <ul>
@@ -220,7 +220,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="optimierung">
-        <h2>Posts optimieren für maximale Wirkung</h2>
+        <h2>Wie optimierst du Posts für maximale Wirkung?</h2>
         <AutoLexikonText>
           <h3>Bilder sind entscheidend</h3>
           <ul>
@@ -250,7 +250,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="frequenz">
-        <h2>Die richtige Posting-Frequenz</h2>
+        <h2>Wie oft solltest du Google Posts veröffentlichen?</h2>
         <AutoLexikonText>
           <h3>Empfohlene Frequenz</h3>
           <ul>
@@ -287,7 +287,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="erfolg-messen">
-        <h2>Erfolg messen</h2>
+        <h2>Wie misst du den Erfolg deiner Google Posts?</h2>
         <AutoLexikonText>
           <h3>Verfügbare Metriken</h3>
           <p>

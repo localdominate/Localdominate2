@@ -23,16 +23,16 @@ const CoreWebVitalsLocalSeo = () => {
   if (!article) return null;
 
   const tocItems = [
-    { id: "intro", title: "Einführung" },
+    { id: "intro", title: "Warum sind Core Web Vitals für lokale Unternehmen entscheidend?" },
     { id: "was-sind-cwv", title: "Was sind Core Web Vitals?" },
-    { id: "lcp", title: "LCP: Largest Contentful Paint" },
-    { id: "fid-inp", title: "FID/INP: Interaktivität" },
-    { id: "cls", title: "CLS: Cumulative Layout Shift" },
-    { id: "messen", title: "Core Web Vitals messen" },
-    { id: "optimierung", title: "Optimierungsstrategien" },
-    { id: "local-seo", title: "Bedeutung für Local SEO" },
-    { id: "mobile", title: "Mobile Performance" },
-    { id: "faq", title: "FAQ" }
+    { id: "lcp", title: "Wie optimierst du den LCP-Wert?" },
+    { id: "fid-inp", title: "Was ist INP und wie verbesserst du die Interaktivität?" },
+    { id: "cls", title: "Wie vermeidest du Layout-Verschiebungen (CLS)?" },
+    { id: "messen", title: "Wie misst du deine Core Web Vitals?" },
+    { id: "optimierung", title: "Welche Strategien verbessern deine Web Vitals?" },
+    { id: "local-seo", title: "Warum sind Core Web Vitals für Local SEO entscheidend?" },
+    { id: "mobile", title: "Wie optimierst du die mobile Performance?" },
+    { id: "faq", title: "Häufig gestellte Fragen" }
   ];
 
   const faqItems = [
@@ -87,7 +87,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Introduction */}
       <section id="intro">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum <LexikonLink term="Core Web Vitals" /> für lokale Unternehmen entscheidend sind</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum sind <LexikonLink term="Core Web Vitals" /> für lokale Unternehmen entscheidend?</h2>
         <p className="text-lg mb-4" data-featured-snippet="true" data-speakable="true">
           <strong>Core Web Vitals</strong> sind drei von Google definierte Metriken zur Messung der Nutzererfahrung: LCP (Largest Contentful Paint) misst die Ladezeit, INP (Interaction to Next Paint) die Reaktionsgeschwindigkeit und CLS (Cumulative Layout Shift) die visuelle Stabilität. Sie sind seit 2021 ein offizieller Ranking-Faktor. Nur 33 % aller Websites bestehen alle drei Werte – für lokale Unternehmen mit 92 % mobilem Traffic ist die Optimierung besonders kritisch.
         </p>
@@ -163,7 +163,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* LCP */}
       <section id="lcp">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">LCP: Largest Contentful Paint optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Wie optimierst du den LCP-Wert (Largest Contentful Paint)?</h2>
         
         <p className="mb-4">
           LCP misst, wann das <strong>größte sichtbare Element</strong> im Viewport geladen ist. Das kann ein Hero-Bild, eine große Überschrift oder ein Video-Thumbnail sein. Gute LCP-Werte verbessern auch dein <LexikonLink term="PageSpeed" /> Ranking.
@@ -246,7 +246,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* FID/INP */}
       <section id="fid-inp">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">INP: Interaction to Next Paint optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Was ist INP und wie verbesserst du die Interaktivität?</h2>
         
         <p className="mb-4">
           INP misst, wie schnell Ihre Website auf <strong>Nutzer-Interaktionen reagiert</strong> (Klicks, Tippen, Tastatureingaben). Anders als FID misst INP alle Interaktionen während des gesamten Besuchs.
@@ -294,7 +294,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* CLS */}
       <section id="cls">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">CLS: Cumulative Layout Shift optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Wie vermeidest du Layout-Verschiebungen (CLS)?</h2>
         
         <p className="mb-4">
           CLS misst, wie oft sich Elemente <strong>unerwartet verschieben</strong>, während die Seite lädt. Jeder hat es erlebt: Man will auf einen Link klicken, und plötzlich springt der Inhalt weg.
@@ -349,7 +349,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Messen */}
       <section id="messen">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Core Web Vitals messen & analysieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Wie misst du deine Core Web Vitals?</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <Card>
@@ -401,7 +401,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Optimierungsstrategien */}
       <section id="optimierung">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Ganzheitliche Core Web Vitals Optimierung</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Welche Strategien verbessern deine Core Web Vitals?</h2>
         
         <h3 className="text-xl font-semibold mb-3">1. Web-Hosting für schnelle Ladezeiten</h3>
         <p className="mb-4">
@@ -426,7 +426,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Bedeutung für Local SEO */}
       <section id="local-seo">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Core Web Vitals Bedeutung für Local SEO</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum sind Core Web Vitals für Local SEO entscheidend?</h2>
         
         <p className="mb-4">
           Core Web Vitals sind für lokale Unternehmen <strong>besonders relevant</strong>:
@@ -468,7 +468,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Mobile Performance */}
       <section id="mobile">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Mobile Performance für lokale SEO optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Wie optimierst du die mobile Performance für lokale SEO?</h2>
         
         <p className="mb-4">
           Google verwendet <strong>Mobile-First-Indexing</strong>. Ihre mobilen Core Web Vitals sind entscheidend:
@@ -485,7 +485,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* FAQ Section */}
       <section id="faq" className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">FAQ: Core Web Vitals & Local SEO</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">Häufig gestellte Fragen: Core Web Vitals & Local SEO</h2>
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((faq, index) => (
             <AccordionItem key={index} value={`faq-${index}`}>
