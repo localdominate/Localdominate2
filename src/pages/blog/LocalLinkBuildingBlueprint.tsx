@@ -634,6 +634,12 @@ const LocalLinkBuildingBlueprint = () => {
         description="Kopierfertige E-Mail-Templates fuer lokale Journalisten – ideal fuer Pressemitteilungen mit Link-Potenzial."
       />
 
+      <GuestPostOutlines
+        categories={["general", "craft", "legal"]}
+        title="Gastbeitrag-Outlines: Content-Vorlagen fuer Link-Kampagnen"
+        description="Fertige Artikel-Gliederungen mit SEO-Hinweisen – ideal fuer systematisches Gastbeitrag-Linkbuilding."
+      />
+
       <HelpfulnessWidget articleSlug="local-link-building-blueprint" />
 
       {/* FAQ */}

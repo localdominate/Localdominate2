@@ -650,6 +650,12 @@ const LocalContentMarketing = () => {
         description="Kopierfertige E-Mail-Templates fuer Cross-Promotions, Bundle-Angebote und Empfehlungs-Netzwerke."
       />
 
+      <GuestPostOutlines
+        categories={["general", "gastronomy", "retail"]}
+        title="Gastbeitrag-Outlines: Content-Ideen fuer lokale Medien"
+        description="Fertige Artikel-Gliederungen fuer Gastbeitraege – perfekt als Content-Marketing-Strategie fuer lokale Sichtbarkeit."
+      />
+
       <HelpfulnessWidget articleSlug="local-content-marketing" />
     </ArticleLayout>
   );

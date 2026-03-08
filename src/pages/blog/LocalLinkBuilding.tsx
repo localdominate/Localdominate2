@@ -682,6 +682,11 @@ Beste Grüße
         description="Kopierfertige E-Mail-Templates fuer die lokale Pressearbeit – fuer Eroeffnungen, Events, Auszeichnungen und mehr."
       />
 
+      <GuestPostOutlines
+        title="Gastbeitrag-Outlines: Artikel-Gliederungen nach Branche"
+        description="Fertige Content-Strukturen fuer Gastbeitraege auf lokalen Blogs und Stadtmagazinen – mit SEO-Hinweisen und Profi-Tipps."
+      />
+
       <HelpfulnessWidget articleSlug="local-link-building" />
     </ArticleLayout>
   );
