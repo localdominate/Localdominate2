@@ -5,6 +5,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LinkBuildingIdeaGenerator from "@/components/blog/LinkBuildingIdeaGenerator";
+import LinkBuildingOutreachTemplates from "@/components/blog/LinkBuildingOutreachTemplates";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Link, Building2, Newspaper, Users, Search, Trophy, AlertTriangle, Lightbulb } from "lucide-react";
 
@@ -668,6 +669,11 @@ Beste Grüße
           </AccordionItem>
         </Accordion>
       </section>
+
+      <LinkBuildingOutreachTemplates
+        title="Outreach-Vorlagen: Lokale Links aufbauen"
+        description="Kopierfertige E-Mail-Templates fuer jede Link-Building-Strategie – von Partnerschaften bis Pressearbeit."
+      />
 
       <HelpfulnessWidget articleSlug="local-link-building" />
     </ArticleLayout>

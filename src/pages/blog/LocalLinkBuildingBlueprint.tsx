@@ -12,6 +12,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Building2, Newspaper, Users, Trophy, Handshake, Calendar, GraduationCap, Heart, MapPin, Megaphone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import LinkBuildingOutreachTemplates from "@/components/blog/LinkBuildingOutreachTemplates";
 import {
   Table,
   TableHeader,
@@ -507,63 +508,10 @@ const LocalLinkBuildingBlueprint = () => {
 
       {/* Outreach-Templates */}
       <section id="outreach-templates">
-        <h2>Outreach-Templates zum Kopieren</h2>
-
-        <h3>Template 1: Partnerschafts-Anfrage</h3>
-        <pre className="bg-muted/50 rounded-lg p-4 text-sm overflow-x-auto my-4 whitespace-pre-wrap">
-{`Betreff: Kooperations-Idee: [Dein Unternehmen] x [Ihr Unternehmen]
-
-Hallo [Name],
-
-ich bin [Dein Name] von [Dein Unternehmen] in [Stadt/Stadtteil]. 
-Wir sind seit [X] Jahren in der Nachbarschaft und bedienen 
-ahnliche Kunden wie Sie.
-
-Ich hatte eine Idee: Wir konnten uns gegenseitig auf unseren 
-Websites als empfohlene Partner listen. Unsere Kunden fragen 
-regelmaessig nach [deren Service] — und ich wurde sie gerne 
-zu Ihnen schicken.
-
-Hatten Sie Interesse an einem kurzen Austausch?
-
-Beste Gruesse,
-[Dein Name]`}
-        </pre>
-
-        <h3>Template 2: Sponsoring-Anfrage</h3>
-        <pre className="bg-muted/50 rounded-lg p-4 text-sm overflow-x-auto my-4 whitespace-pre-wrap">
-{`Betreff: Sponsoring-Interesse fuer [Vereinsname]
-
-Hallo [Name],
-
-als lokales Unternehmen in [Stadt] moechten wir gerne den 
-[Vereinsname] unterstuetzen. Wir interessieren uns fuer 
-ein Sponsoring-Paket.
-
-Koennten Sie uns Informationen zu den verfuegbaren 
-Sponsoring-Optionen senden? Besonders interessant waere 
-fuer uns: Logo auf der Website + Erwaehnung auf Social Media.
-
-Herzliche Gruesse,
-[Dein Name], [Dein Unternehmen]`}
-        </pre>
-
-        <h3>Template 3: Unlinked Mention</h3>
-        <pre className="bg-muted/50 rounded-lg p-4 text-sm overflow-x-auto my-4 whitespace-pre-wrap">
-{`Betreff: Vielen Dank fuer die Erwaehnung!
-
-Hallo [Name],
-
-ich habe gesehen, dass Sie [Dein Unternehmen] in Ihrem 
-Artikel "[Artikeltitel]" erwaehnen — das freut uns sehr!
-
-Haetten Sie die Moeglichkeit, unseren Firmennamen mit 
-unserer Website [URL] zu verlinken? Das wuerde unseren 
-Lesern helfen, uns direkt zu finden.
-
-Vielen Dank und beste Gruesse,
-[Dein Name]`}
-        </pre>
+        <LinkBuildingOutreachTemplates
+          title="Outreach-Templates zum Kopieren"
+          description="15 kopierfertige E-Mail-Vorlagen fuer jede Link-Building-Strategie. Waehle eine Kategorie, passe die [Platzhalter] an und sende ab."
+        />
       </section>
 
       {/* DACH-spezifische Quellen */}
