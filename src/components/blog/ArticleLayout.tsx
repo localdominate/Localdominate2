@@ -542,6 +542,7 @@ const ArticleLayout = ({
           <PillarChecklistLinks articleSlug={article.slug} />
           <LocalSEOAuditCTA variant="standard" articleSlug={article.slug} />
           <ArticleConclusion slug={article.slug} />
+          <LlmFriendlySummary slug={article.slug} />
         </article>
 
         {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
