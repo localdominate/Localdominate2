@@ -163,7 +163,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* LCP */}
       <section id="lcp">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">LCP: Largest Contentful Paint optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Wie optimierst du den LCP-Wert (Largest Contentful Paint)?</h2>
         
         <p className="mb-4">
           LCP misst, wann das <strong>größte sichtbare Element</strong> im Viewport geladen ist. Das kann ein Hero-Bild, eine große Überschrift oder ein Video-Thumbnail sein. Gute LCP-Werte verbessern auch dein <LexikonLink term="PageSpeed" /> Ranking.
