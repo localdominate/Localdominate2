@@ -71,7 +71,7 @@ const LokaleSeo2026 = () => {
         ]
       },
       section4: {
-        title: "Zero-Click-Searches nutzen",
+        title: "Was sind Zero-Click-Searches und wie nutzt du sie?",
         text: "Über 50% aller Google-Suchen enden ohne Klick auf eine Website. Die Nutzer finden alle Infos direkt in den Suchergebnissen. Das ist keine Bedrohung – es ist eine Chance.",
         sub1: "Warum Zero-Click gut für dich ist",
         sub1Text: "Wenn ein Kunde deine Öffnungszeiten, Telefonnummer oder Adresse direkt in Google sieht, ist das ein Erfolg. Er braucht nicht auf deine Website zu klicken, um zu handeln.",
