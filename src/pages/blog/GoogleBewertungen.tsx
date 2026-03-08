@@ -17,6 +17,7 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
+import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
