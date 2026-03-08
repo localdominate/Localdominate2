@@ -616,7 +616,7 @@ const MobileLocalSeo = () => {
 
       {/* Checkliste */}
       <section id="checkliste" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Mobile Local SEO Checkliste</h2>
+        <h2 className="text-3xl font-bold mb-6">Ist dein Mobile Local SEO komplett? Die Checkliste</h2>
         
         <p className="mb-6">
           Nutze diese Checkliste, um deine lokale Website auf Mobilfreundlichkeit zu prüfen:
