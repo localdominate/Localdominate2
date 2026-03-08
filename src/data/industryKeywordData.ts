@@ -253,7 +253,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   immobilienmakler: {
     industry: "Immobilienmakler",
-    quickWin: "„Immobilienmakler [Stadtteil]" Keywords sind weniger umkämpft und zeigen lokale Expertise.",
+    quickWin: "'Immobilienmakler [Stadtteil]' Keywords sind weniger umkämpft und zeigen lokale Expertise.",
     clusters: [
       {
         name: "Makler + Standort",
