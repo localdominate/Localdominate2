@@ -8,6 +8,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
+import DefinitionBox from "@/components/blog/DefinitionBox";
 import { getArticleBySlug } from "@/data/blogArticles";
 import napKonsistenzImg from "@/assets/blog/nap-konsistenz.jpg";
 import { 
