@@ -169,6 +169,8 @@ const LocalSeoRoadmap = lazy(() => import("./pages/blog/LocalSeoRoadmap"));
 const SchemaStrategieDokument = lazy(() => import("./pages/blog/SchemaStrategieDokument"));
 const LocalSeoStatistiken = lazy(() => import("./pages/blog/LocalSeoStatistiken"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
+const FaqHub = lazy(() => import("./pages/blog/FaqHub"));
+const FaqSubHub = lazy(() => import("./pages/blog/FaqSubHub"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
 const CoreWebVitalsTracker = lazy(() => import("@/components/CoreWebVitalsTracker"));
