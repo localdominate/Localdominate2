@@ -1679,24 +1679,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "multi-location-seo",
     de: {
-      title: "Multi-Location SEO: Mehrere Standorte richtig optimieren",
-      metaTitle: "Multi-Location SEO | Filial-Marketing 2026",
-      metaDescription: "Wie Unternehmen mit mehreren Standorten ihre Local SEO skalieren. Zentrale vs. dezentrale Strategien und Best Practices.",
-      excerpt: "Der Guide für Unternehmen mit 2 bis 200 Standorten.",
+      title: "Multi-Location SEO Technik: Website-Architektur für mehrere Standorte",
+      metaTitle: "Multi-Location Website-Architektur | Technischer Guide 2026",
+      metaDescription: "Die technische Seite von Multi-Location SEO: URL-Struktur, hreflang, Schema Markup und Seitenarchitektur für 2–200 Standorte.",
+      excerpt: "Website-Architektur für Multi-Location: URL-Struktur, Standortseiten-Templates und Schema Markup richtig umsetzen.",
       category: "Technik"
     },
     en: {
-      title: "Multi-Location SEO: Properly Optimizing Multiple Locations",
-      metaTitle: "Multi-Location SEO | Branch Marketing 2026",
-      metaDescription: "How businesses with multiple locations scale their Local SEO. Central vs. decentralized strategies and best practices.",
-      excerpt: "The guide for businesses with 2 to 200 locations.",
+      title: "Multi-Location SEO Tech: Website Architecture for Multiple Locations",
+      metaTitle: "Multi-Location Website Architecture | Technical Guide 2026",
+      metaDescription: "The technical side of multi-location SEO: URL structure, hreflang, Schema Markup and site architecture for 2-200 locations.",
+      excerpt: "Website architecture for multi-location: URL structure, location page templates and Schema Markup done right.",
       category: "Technical"
     },
     readingTime: 18,
     publishedAt: "2026-02-22",
     updatedAt: "2026-02-22",
     icon: "📍",
-    keywords: ["multi location seo", "filialen seo", "franchise seo", "mehrere standorte"],
+    keywords: ["multi location website architektur", "standortseiten url struktur", "multi location schema markup", "mehrere standorte website"],
     featured: false
   },
   {
