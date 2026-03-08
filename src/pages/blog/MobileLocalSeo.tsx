@@ -40,8 +40,8 @@ const MobileLocalSeo = () => {
     <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       {/* Einführung */}
       <section id="intro" className="mb-12">
-        <p className="lead text-xl text-muted-foreground mb-6">
-          <strong>80% aller lokalen Suchanfragen erfolgen über Smartphones.</strong> Wenn deine Website nicht für mobile Nutzer optimiert ist, verlierst du täglich potenzielle Kunden. Dieser Guide zeigt dir, wie du deine lokale Website perfekt für Mobile optimierst – von der technischen Grundlage bis zur Conversion-Optimierung.
+        <p className="lead text-xl text-muted-foreground mb-4" data-featured-snippet="true" data-speakable="true">
+          <strong>Mobile Local SEO</strong> bezeichnet die Optimierung einer lokalen Unternehmenswebsite für Smartphone-Nutzer, einschließlich Mobile-First-Indexing, Core Web Vitals, Click-to-Call-Buttons und responsivem Design. Über 80 % aller lokalen Suchanfragen erfolgen mobil, und 76 % dieser Nutzer besuchen innerhalb von 24 Stunden ein Geschäft. Websites, die länger als 3 Sekunden laden, verlieren 53 % der mobilen Besucher.
         </p>
 
         <KeyTakeawaysBox 

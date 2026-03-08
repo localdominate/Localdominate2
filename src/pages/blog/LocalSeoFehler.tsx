@@ -42,11 +42,11 @@ const LocalSeoFehler = () => {
 
   return (
     <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
-      <p className="lead text-xl text-muted-foreground mb-8" id="intro">
-        <strong>90% aller lokalen Unternehmen machen mindestens 5 dieser Fehler</strong> – 
-        oft ohne es zu wissen. Jeder einzelne kostet Sie Sichtbarkeit in den <LexikonLink term="SERP">Suchergebnissen</LexikonLink>, 
-        Rankings im <LexikonLink term="Local Pack" /> und letztlich 
-        Kunden. In diesem Guide decken wir die 15 häufigsten <LexikonLink term="Local SEO" /> Fehler auf und zeigen 
+      <p className="lead text-xl text-muted-foreground mb-4" id="intro" data-featured-snippet="true" data-speakable="true">
+        <strong>Die häufigsten Local SEO Fehler</strong> sind NAP-Inkonsistenz, ein unvollständiges Google Business Profil, fehlende Bewertungsstrategie, kein Schema Markup und mangelnde mobile Optimierung. 90 % aller lokalen Unternehmen machen mindestens 5 dieser Fehler – oft ohne es zu wissen. Jeder einzelne kostet Sichtbarkeit im <LexikonLink term="Local Pack" /> und damit potenzielle Kunden.
+      </p>
+      <p className="text-muted-foreground mb-8">
+        In diesem Guide decken wir die 15 häufigsten <LexikonLink term="Local SEO" /> Fehler auf und zeigen 
         Ihnen, wie Sie sie sofort beheben können.
       </p>
 

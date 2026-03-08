@@ -112,9 +112,8 @@ const LocalSeoKeywords = () => {
           Was sind lokale Keywords?
         </h2>
         
-        <p>
-          <strong>Lokale Keywords</strong> sind Suchbegriffe, bei denen der Nutzer ein Ergebnis in seiner Nähe erwartet. 
-          Sie unterscheiden sich fundamental von nationalen Keywords und erfordern eine andere Strategie.
+        <p data-featured-snippet="true" data-speakable="true">
+          <strong>Lokale Keywords</strong> sind Suchbegriffe mit geografischem Bezug, bei denen der Nutzer ein Ergebnis in seiner Nähe erwartet. Sie enthalten entweder einen Ortsnamen (z. B. „Zahnarzt München") oder implizieren lokale Absicht (z. B. „Bäcker in der Nähe"). Long-Tail Keywords mit 3 oder mehr Wörtern machen 70 % aller lokalen Suchanfragen aus und haben eine 2,5-fach höhere Conversion-Rate als generische Suchbegriffe.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 my-8">

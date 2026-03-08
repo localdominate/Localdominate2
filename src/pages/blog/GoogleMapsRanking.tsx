@@ -225,8 +225,12 @@ const GoogleMapsRanking = () => {
     <ArticleLayout article={article} tocItems={t.tocItems} faqItems={faqItems}>
       <TableOfContents items={t.tocItems} />
 
-      <p className="text-xl leading-relaxed mb-8">
+      <p className="text-xl leading-relaxed mb-4">
         <strong>{t.intro.stat}</strong> {t.intro.text}
+      </p>
+
+      <p data-featured-snippet="true" data-speakable="true">
+        <strong>Google Maps Ranking verbessern</strong> bedeutet, das Google Business Profil, Bewertungen, NAP-Konsistenz und lokale Signale so zu optimieren, dass ein Unternehmen in den Top 3 des Local Packs erscheint. Google bewertet lokale Unternehmen nach drei Hauptkriterien: Nähe zum Suchenden, Relevanz der Suchanfrage und Bekanntheit (Prominence). 76 % der Nutzer, die lokal suchen, besuchen innerhalb von 24 Stunden ein Geschäft.
       </p>
 
       <BlogImage 
