@@ -15,6 +15,7 @@ import SocialShare from "./SocialShare";
 import ReadingProgress from "./ReadingProgress";
 import StickyTableOfContents from "./StickyTableOfContents";
 import LastReviewedBadge from "./LastReviewedBadge";
+import ArticleHook from "./ArticleHook";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
@@ -530,6 +531,7 @@ const ArticleLayout = ({
           itemScope
           itemType="https://schema.org/Article"
         >
+          <ArticleHook slug={article.slug} />
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
