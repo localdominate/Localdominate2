@@ -149,6 +149,7 @@ const GoogleMapsSpamErkennen = lazy(() => import("./pages/blog/GoogleMapsSpamErk
 const GoogleMapsKonkurrenzanalyse = lazy(() => import("./pages/blog/GoogleMapsKonkurrenzanalyse"));
 const GoogleMapsRankingCaseStudies = lazy(() => import("./pages/blog/GoogleMapsRankingCaseStudies"));
 const EntitySeoGuide = lazy(() => import("./pages/blog/EntitySeoGuide"));
+const SemanticSeoGuide = lazy(() => import("./pages/blog/SemanticSeoGuide"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -296,6 +297,7 @@ const App = () => (
                 <Route path="/blog/ai-zukunft-hub" element={<HubAiZukunft />} />
                 <Route path="/blog/troubleshooting-hub" element={<HubTroubleshooting />} />
                 <Route path="/blog/entity-seo-guide" element={<EntitySeoGuide />} />
+                <Route path="/blog/semantic-seo-topical-authority" element={<SemanticSeoGuide />} />
                 <Route path="/blog/website-content-ai-suchmaschinen" element={<WebsiteContentAiSuchmaschinen />} />
                 <Route path="/blog/ultimate-guide-local-seo" element={<UltimateGuideLocalSeo />} />
                 <Route path="/blog/local-seo-strategie-kleine-unternehmen" element={<LocalSeoStrategieKleineUnternehmen />} />

@@ -616,6 +616,29 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["entity seo", "knowledge graph", "schema markup", "sameAs", "structured data", "ai seo", "entität"],
     featured: true
   },
+  {
+    slug: "semantic-seo-topical-authority",
+    de: {
+      title: "Semantic SEO & Topical Authority: Der Komplettguide",
+      metaTitle: "Semantic SEO Guide | Topical Authority aufbauen 2026",
+      metaDescription: "Was ist Semantic SEO? Wie du mit Topic Clusters Themenautorität aufbaust, semantische Signale für Google setzt und von AI-Suchmaschinen zitiert wirst.",
+      excerpt: "Von Keyword-SEO zu Semantic SEO: Wie du mit Topic Clusters, internen Links und semantischen Signalen Themenautorität aufbaust.",
+      category: "AI & Zukunft"
+    },
+    en: {
+      title: "Semantic SEO & Topical Authority: The Complete Guide",
+      metaTitle: "Semantic SEO Guide | Build Topical Authority 2026",
+      metaDescription: "What is Semantic SEO? How to build topical authority with topic clusters, semantic signals for Google and AI search engines.",
+      excerpt: "From keyword SEO to semantic SEO: How to build topical authority with topic clusters, internal links and semantic signals.",
+      category: "AI & Future"
+    },
+    readingTime: 16,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🔗",
+    keywords: ["semantic seo", "topical authority", "topic cluster", "pillar page", "themenautorität", "interne verlinkung"],
+    featured: true
+  },
 
   // === NEUE ARTIKEL: STRATEGIE ===
   {
@@ -3797,6 +3820,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-konkurrenzanalyse",
   "google-maps-ranking-case-studies",
   "entity-seo-guide",
+  "semantic-seo-topical-authority",
 ]);
 
 // Get only published articles (with pages), deduplicated
