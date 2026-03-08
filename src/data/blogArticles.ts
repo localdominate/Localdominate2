@@ -955,7 +955,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-friseursalon-beauty",
     de: {
       title: "Local SEO für Friseursalons & Beauty-Studios: Der ultimative Guide mit Buchungsintegration 2026",
-      metaTitle: "Local SEO für Friseure & Beauty-Studios | Der ultimative Guide 2026",
+      metaTitle: "Local SEO Friseure & Beauty-Studios | Guide 2026",
       metaDescription: "Der längste SEO-Guide für Friseursalons, Kosmetikstudios & Barbershops. Mit Buchungsintegration, Keyword-Generator und Portfolio-Tipps. 6.000+ Worte!",
       excerpt: "Von Keywords über Buchungssysteme bis Social Media: Alles was Friseure und Beauty-Studios brauchen, um bei Google gefunden zu werden.",
       category: "Beauty & Wellness"
