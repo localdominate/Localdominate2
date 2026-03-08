@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
-import { useLanguage } from "@/i18n/LanguageContext";
-import SEOHead from "@/components/SEOHead";
 
 const AGB = () => {
   const { language } = useLanguage();

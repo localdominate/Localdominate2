@@ -2,9 +2,6 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
-import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/i18n/LanguageContext";
-import SEOHead from "@/components/SEOHead";
 
 const Datenschutz = () => {
   const { language } = useLanguage();
