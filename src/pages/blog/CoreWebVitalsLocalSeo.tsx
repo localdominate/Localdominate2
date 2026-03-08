@@ -376,7 +376,7 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-muted/50 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2">Lab-Daten vs. Field-Daten</h4>
+            <h3 className="font-semibold mb-2">Lab-Daten vs. Field-Daten: Was zählt für Rankings?</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="font-medium mb-1">Lab-Daten (Lighthouse)</p>
