@@ -1724,7 +1724,6 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "ai-overviews-local-seo",
-    primaryKeyword: "ai overviews auswirkungen local seo",
     de: {
       title: "AI-Overviews & Local Pack: Auswirkungen auf lokale Klickraten & Sichtbarkeit",
       metaTitle: "AI-Overviews Auswirkungen Local Pack | CTR-Analyse 2026",
