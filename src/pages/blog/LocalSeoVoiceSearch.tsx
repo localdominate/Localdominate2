@@ -16,13 +16,13 @@ const LocalSeoVoiceSearch = () => {
   const article = getArticleBySlug("local-seo-voice-search", language)!;
 
   const tocItems = [
-    { id: "voice-search-verstehen", title: "Voice Search verstehen" },
-    { id: "conversational-keywords", title: "Konversationelle Keywords" },
-    { id: "featured-snippets", title: "Featured Snippets erobern" },
-    { id: "google-business", title: "Google Business optimieren" },
-    { id: "technische-optimierung", title: "Technische Optimierung" },
-    { id: "lokale-fragen", title: "Lokale Fragen beantworten" },
-    { id: "zukunft", title: "Die Zukunft der Sprachsuche" },
+    { id: "voice-search-verstehen", title: "Was ist Voice Search und warum ist es wichtig?" },
+    { id: "conversational-keywords", title: "Wie findest du die richtigen Voice Search Keywords?" },
+    { id: "featured-snippets", title: "Wie eroberst du Featured Snippets für Voice Search?" },
+    { id: "google-business", title: "Wie optimierst du Google Business für Sprachsuche?" },
+    { id: "technische-optimierung", title: "Welche technischen Faktoren beeinflussen Voice Search?" },
+    { id: "lokale-fragen", title: "Wie beantwortest du lokale Fragen für Voice Search?" },
+    { id: "zukunft", title: "Wie entwickelt sich Voice Search in Zukunft?" },
     { id: "faq", title: "Häufige Fragen" }
   ];
 
