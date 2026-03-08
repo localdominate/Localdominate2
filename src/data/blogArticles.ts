@@ -43,7 +43,7 @@ export const blogArticles: BlogArticle[] = [
     de: {
       title: "Local SEO: Der ultimative Leitfaden für lokale Unternehmen 2026",
       metaTitle: "Local SEO Guide 2026: Komplett-Anleitung für Top-Rankings",
-      metaDescription: "Der umfassendste Local-SEO-Guide im DACH-Raum: Ranking-Faktoren, Google Business Profil, Bewertungen, NAP, Schema Markup & 10-Schritte-Strategie. Mit Beispielen aus DE, AT & CH.",
+      metaDescription: "Der umfassendste Local-SEO-Guide im DACH-Raum: Ranking-Faktoren, Google Business Profil, Bewertungen, NAP & Schema Markup. 10-Schritte-Strategie.",
       excerpt: "Alles über Local SEO in einem Guide: Von Google Business über Ranking-Faktoren bis zur 10-Schritte-Strategie — mit Praxisbeispielen aus Deutschland, Österreich und der Schweiz.",
       category: "Strategie"
     },
@@ -574,7 +574,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "google-maps-ranking-case-studies",
     de: {
       title: "Google Maps Ranking Case Studies: 6 Branchen, 6 Erfolge",
-      metaTitle: "Google Maps Case Studies | 6 Branchen-Erfolgsgeschichten 2026",
+      metaTitle: "Google Maps Case Studies | 6 Branchen-Erfolge 2026",
       metaDescription: "6 echte Google Maps Ranking Case Studies aus Gastronomie, Handwerk, Gesundheit, Recht, Beauty und Automotive. Mit konkreten Zahlen und Maßnahmen.",
       excerpt: "Von unsichtbar zu Platz 1: Wie Unternehmen aus 6 verschiedenen Branchen ihr Google Maps Ranking dramatisch verbessert haben.",
       category: "Google Maps"
@@ -597,15 +597,15 @@ export const blogArticles: BlogArticle[] = [
     slug: "entity-seo-guide",
     de: {
       title: "Entity SEO: Wie Suchmaschinen Entitäten verstehen & nutzen",
-      metaTitle: "Entity SEO Guide | Knowledge Graph & Entitäts-Optimierung 2026",
-      metaDescription: "Was ist Entity SEO? Wie Google und AI-Suchmaschinen Entitäten erkennen. Mit Knowledge-Graph-Strategien, Schema Markup, sameAs-Verknüpfung und Praxis-Checkliste.",
+      metaTitle: "Entity SEO Guide | Knowledge Graph optimieren 2026",
+      metaDescription: "Was ist Entity SEO? Wie Google Entitäten erkennt. Knowledge-Graph-Strategien, Schema Markup, sameAs & Praxis-Checkliste.",
       excerpt: "Von Keyword-SEO zu Entity SEO: Wie du dein Unternehmen als Entität im Knowledge Graph etablierst und deine Sichtbarkeit in Google und AI-Suche maximierst.",
       category: "AI & Zukunft"
     },
     en: {
       title: "Entity SEO: How Search Engines Understand Entities",
-      metaTitle: "Entity SEO Guide | Knowledge Graph & Entity Optimization 2026",
-      metaDescription: "What is Entity SEO? How Google and AI search engines recognize entities. With Knowledge Graph strategies, Schema Markup, sameAs linking and practical checklist.",
+      metaTitle: "Entity SEO Guide | Knowledge Graph Optimization 2026",
+      metaDescription: "What is Entity SEO? How Google and AI search engines recognize entities. Knowledge Graph strategies, Schema Markup & checklist.",
       excerpt: "From keyword SEO to entity SEO: How to establish your business as an entity in the Knowledge Graph and maximize visibility in Google and AI search.",
       category: "AI & Future"
     },
@@ -668,7 +668,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "citation-tracking-template",
     de: {
       title: "Citation Tracking Spreadsheet Template: Alle Verzeichnisse im Griff",
-      metaTitle: "Citation Tracking Template | Spreadsheet-Vorlage für DACH 2026",
+      metaTitle: "Citation Tracking Template | DACH Spreadsheet 2026",
       metaDescription: "Kostenloses Citation Tracking Template mit 22+ Verzeichnissen für DACH. Interaktive Checkliste, Copy-ready Spreadsheet und Quartals-Audit Workflow.",
       excerpt: "Systematisches Citation-Tracking mit interaktiver Checkliste, kopierbarer Spreadsheet-Vorlage und Quartals-Audit-Workflow für den DACH-Markt.",
       category: "Tools & Ressourcen"
@@ -699,7 +699,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local Keyword Research Template: Systematic Keyword Research for Local Businesses",
-      metaTitle: "Local Keyword Research Template | Workflow & Spreadsheet 2026",
+      metaTitle: "Local Keyword Research Template | Workflow 2026",
       metaDescription: "Free keyword research template for local SEO. 6 keyword types, 5-step workflow, copy-ready spreadsheet with keyword mapping and ranking tracker.",
       excerpt: "Systematic local keyword research with 6 keyword types, interactive 5-step workflow and copyable spreadsheet template for the DACH market.",
       category: "Tools & Resources"
@@ -932,15 +932,15 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-doener-kebab-imbiss",
     de: {
       title: "Local SEO für Döner & Kebab-Imbisse: Der ultimative Marketing-Guide 2026",
-      metaTitle: "Local SEO für Döner-Läden | Der ultimative Kebab-Marketing Guide 2026",
-      metaDescription: "Der längste SEO-Guide für Döner-Läden im deutschsprachigen Internet. Keywords, Google Business, Bewertungen, Lieferportale, Social Media und mehr. Mit 3 interaktiven Tools!",
+      metaTitle: "Local SEO für Döner-Läden | Kebab-Marketing 2026",
+      metaDescription: "Der komplette SEO-Guide für Döner-Läden: Keywords, Google Business, Bewertungen, Lieferportale & Social Media. Mit 3 interaktiven Tools!",
       excerpt: "Von Keywords über Bewertungen bis Lieferportale: Alles was Döner-Imbisse brauchen, um bei Google gefunden zu werden.",
       category: "Gastronomie"
     },
     en: {
       title: "Local SEO for Döner & Kebab Shops: The Ultimate Marketing Guide 2026",
-      metaTitle: "Local SEO for Döner Shops | The Ultimate Kebab Marketing Guide 2026",
-      metaDescription: "The longest SEO guide for Döner shops on the internet. Keywords, Google Business, reviews, delivery platforms, social media and more. With 3 interactive tools!",
+      metaTitle: "Local SEO for Döner Shops | Kebab Marketing 2026",
+      metaDescription: "Complete SEO guide for Döner shops: Keywords, Google Business, reviews, delivery platforms & social media. With 3 interactive tools!",
       excerpt: "From keywords to reviews to delivery platforms: Everything Döner shops need to be found on Google.",
       category: "Restaurants"
     },
@@ -955,14 +955,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-friseursalon-beauty",
     de: {
       title: "Local SEO für Friseursalons & Beauty-Studios: Der ultimative Guide mit Buchungsintegration 2026",
-      metaTitle: "Local SEO für Friseure & Beauty-Studios | Der ultimative Guide 2026",
+      metaTitle: "Local SEO Friseure & Beauty-Studios | Guide 2026",
       metaDescription: "Der längste SEO-Guide für Friseursalons, Kosmetikstudios & Barbershops. Mit Buchungsintegration, Keyword-Generator und Portfolio-Tipps. 6.000+ Worte!",
       excerpt: "Von Keywords über Buchungssysteme bis Social Media: Alles was Friseure und Beauty-Studios brauchen, um bei Google gefunden zu werden.",
       category: "Beauty & Wellness"
     },
     en: {
       title: "Local SEO for Hair Salons & Beauty Studios: The Ultimate Guide with Booking Integration 2026",
-      metaTitle: "Local SEO for Hair Salons & Beauty Studios | The Ultimate Guide 2026",
+      metaTitle: "Local SEO Hair Salons & Beauty Studios | Guide 2026",
       metaDescription: "The longest SEO guide for hair salons, beauty studios & barbershops. With booking integration, keyword generator and portfolio tips. 6,000+ words!",
       excerpt: "From keywords to booking systems to social media: Everything hair salons and beauty studios need to be found on Google.",
       category: "Beauty & Wellness"
@@ -1515,15 +1515,15 @@ export const blogArticles: BlogArticle[] = [
     slug: "technisches-local-seo-guide",
     de: {
       title: "Technisches Local SEO: Der komplette Guide für lokale Unternehmen 2026",
-      metaTitle: "Technisches Local SEO Guide | Schema, Speed, Mobile & Indexierung 2026",
-      metaDescription: "Der umfassendste Technical-Local-SEO-Guide: LocalBusiness Schema, Geo-Markup, Core Web Vitals, Mobile-First, interne Verlinkung & Indexierung. Mit 40-Punkte-Checkliste & Code-Beispielen.",
+      metaTitle: "Technisches Local SEO | Komplett-Guide 2026",
+      metaDescription: "Technical Local SEO Guide: LocalBusiness Schema, Core Web Vitals, Mobile-First, interne Verlinkung & Indexierung. Mit 40-Punkte-Checkliste.",
       excerpt: "Alles über technisches Local SEO: Von LocalBusiness Schema und Geo-Markup über Core Web Vitals und Mobile-Optimierung bis zu interner Verlinkung und Indexierungsstrategien — mit 40-Punkte-Checkliste.",
       category: "Technik"
     },
     en: {
       title: "Technical Local SEO: The Complete Guide for Local Businesses 2026",
-      metaTitle: "Technical Local SEO Guide | Schema, Speed, Mobile & Indexing 2026",
-      metaDescription: "The most comprehensive Technical Local SEO guide: LocalBusiness Schema, Geo Markup, Core Web Vitals, Mobile-First, internal linking & indexing strategies. With 40-point checklist.",
+      metaTitle: "Technical Local SEO | Complete Guide 2026",
+      metaDescription: "Technical Local SEO guide: LocalBusiness Schema, Core Web Vitals, Mobile-First, internal linking & indexing. With 40-point checklist.",
       excerpt: "Everything about technical Local SEO: From LocalBusiness Schema and Geo Markup to Core Web Vitals, mobile optimization, internal linking and indexing strategies.",
       category: "Technical"
     },
@@ -3079,8 +3079,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "gbp-suspendiert-reaktivieren",
     de: {
       title: "Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung)",
-      metaTitle: "GBP Suspendiert? So reaktivierst du dein Profil | Anleitung 2026",
-      metaDescription: "Dein Google Business Profil wurde suspendiert? Erfahre Schritt für Schritt, wie du eine Soft oder Hard Suspension erkennst und dein Profil erfolgreich reaktivierst.",
+      metaTitle: "GBP Suspendiert? Profil reaktivieren | 2026",
+      metaDescription: "Google Business Profil suspendiert? So erkennst du Soft oder Hard Suspension und reaktivierst dein Profil erfolgreich.",
       excerpt: "Der komplette Guide zur Reaktivierung eines suspendierten Google Business Profils mit Diagnose-Tool und Appeal-Vorlagen.",
       category: "Troubleshooting"
     },
@@ -3102,7 +3102,7 @@ export const blogArticles: BlogArticle[] = [
     de: {
       title: "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026)",
       metaTitle: "GBP Verifizierung fehlgeschlagen? 8 Lösungen | Guide 2026",
-      metaDescription: "Deine Google Business Verifizierung klappt nicht? Postkarte nicht erhalten, Code ungültig oder Video abgelehnt? Unser Problemlöser-Wizard zeigt dir die passende Lösung.",
+      metaDescription: "Google Business Verifizierung klappt nicht? Postkarte, Code oder Video abgelehnt? 8 Lösungen mit interaktivem Problemlöser-Wizard.",
       excerpt: "Der komplette Troubleshooting-Guide für alle Google Business Verifizierungsprobleme mit interaktivem Problemlöser.",
       category: "Troubleshooting"
     },
@@ -3123,14 +3123,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "duplicate-listing-entfernen",
     de: {
       title: "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026)",
-      metaTitle: "Duplicate Listing entfernen: Doppelte Google-Einträge löschen | 2026",
+      metaTitle: "Duplicate Listing entfernen | Google-Einträge 2026",
       metaDescription: "Hast du mehrere Google Business Einträge für denselben Standort? Lerne wie du Duplicates findest, richtig entfernst und zukünftige Dopplungen verhinderst.",
       excerpt: "Der komplette Guide zum Finden und Entfernen von doppelten Google Business Einträgen mit interaktiver Checkliste.",
       category: "Troubleshooting"
     },
     en: {
       title: "Delete Duplicate Google Listings – Duplicate Listing Guide (2026)",
-      metaTitle: "Remove Duplicate Listing: Delete Duplicate Google Listings | 2026",
+      metaTitle: "Remove Duplicate Google Listings | Guide 2026",
       metaDescription: "Do you have multiple Google Business listings for the same location? Learn how to find duplicates, properly remove them and prevent future duplications.",
       excerpt: "The complete guide to finding and removing duplicate Google Business listings with interactive checklist.",
       category: "Troubleshooting"
@@ -3262,7 +3262,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Using Google Business Attributes Correctly – All Options Explained (2026)",
-      metaTitle: "Using GBP Attributes Correctly | All Options Explained 2026",
+      metaTitle: "GBP Attributes Guide | All Options Explained 2026",
       metaDescription: "From LGBTQ+-friendly to wheelchair access: What Google Business attributes exist and how to use them for more visibility.",
       excerpt: "The complete overview of all Google Business attributes and how they improve your ranking and customer appeal.",
       category: "Google Business"
@@ -3299,7 +3299,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-citations-2025",
     de: {
       title: "Local Citations 2026: Die wichtigsten Branchenbücher & Verzeichnisse",
-      metaTitle: "Local Citations 2026: Top Branchenbücher & Verzeichnisse | Guide",
+      metaTitle: "Local Citations 2026 | Top Verzeichnisse DACH",
       metaDescription: "Welche Branchenbücher und Verzeichnisse sind 2026 noch relevant? Der komplette Guide zu Citations mit Priorisierung nach Branche.",
       excerpt: "Die wichtigsten Local Citations für 2026 mit branchenspezifischen Empfehlungen und Priorisierung.",
       category: "Local SEO"
@@ -3321,14 +3321,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-link-building",
     de: {
       title: "Local Link Building: Backlinks für lokale Unternehmen aufbauen (2026)",
-      metaTitle: "Local Link Building: Backlinks für lokale Unternehmen | Guide 2026",
+      metaTitle: "Local Link Building | Backlinks lokal aufbauen 2026",
       metaDescription: "Wie du als lokales Unternehmen hochwertige Backlinks aufbaust. Lokale Strategien, Sponsorings und Community-Links für bessere Rankings.",
       excerpt: "Der komplette Guide zum Aufbau lokaler Backlinks mit praktischen Strategien für kleine und mittlere Unternehmen.",
       category: "Local SEO"
     },
     en: {
       title: "Local Link Building: Building Backlinks for Local Businesses (2026)",
-      metaTitle: "Local Link Building: Backlinks for Local Businesses | 2026 Guide",
+      metaTitle: "Local Link Building | Local Backlinks Guide 2026",
       metaDescription: "How to build quality backlinks as a local business. Local strategies, sponsorships and community links for better rankings.",
       excerpt: "The complete guide to building local backlinks with practical strategies for small and medium businesses.",
       category: "Local SEO"
@@ -3365,14 +3365,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-content-marketing",
     de: {
       title: "Local Content Marketing: Inhalte für lokale Zielgruppen erstellen (2026)",
-      metaTitle: "Local Content Marketing: Lokale Inhalte erstellen | Guide 2026",
+      metaTitle: "Local Content Marketing | Lokale Inhalte 2026",
       metaDescription: "Wie du Inhalte erstellst, die deine lokale Zielgruppe ansprechen. Lokale Stories, Events und Community-Content für mehr Reichweite.",
       excerpt: "Der Strategie-Guide für lokales Content Marketing mit Ideen und Best Practices für lokale Unternehmen.",
       category: "Content"
     },
     en: {
       title: "Local Content Marketing: Creating Content for Local Audiences (2026)",
-      metaTitle: "Local Content Marketing: Creating Local Content | 2026 Guide",
+      metaTitle: "Local Content Marketing | Local Content 2026",
       metaDescription: "How to create content that appeals to your local audience. Local stories, events and community content for more reach.",
       excerpt: "The strategy guide for local content marketing with ideas and best practices for local businesses.",
       category: "Content"
@@ -3387,14 +3387,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-mehrstufig-unternehmen",
     de: {
       title: "Local SEO für mehrstufige Unternehmen: Multi-Location Strategien (2026)",
-      metaTitle: "Local SEO Multi-Location: Strategien für Filialisten | Guide 2026",
+      metaTitle: "Local SEO Multi-Location | Filialisten Guide 2026",
       metaDescription: "Wie Unternehmen mit mehreren Standorten ihre lokale SEO skalieren. Zentrale Verwaltung, lokale Anpassung und einheitliches Branding.",
       excerpt: "Der Enterprise-Guide für Multi-Location Local SEO mit Skalierungsstrategien und Best Practices.",
       category: "Strategie"
     },
     en: {
       title: "Local SEO for Multi-Location Businesses: Scaling Strategies (2026)",
-      metaTitle: "Local SEO Multi-Location: Strategies for Franchises | 2026 Guide",
+      metaTitle: "Local SEO Multi-Location | Franchise Guide 2026",
       metaDescription: "How multi-location businesses scale their local SEO. Central management, local adaptation and consistent branding.",
       excerpt: "The enterprise guide for multi-location Local SEO with scaling strategies and best practices.",
       category: "Strategy"
@@ -3438,7 +3438,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local SEO for Opticians & Hearing Aid Specialists: More Customers Through Google (2026)",
-      metaTitle: "Local SEO for Opticians & Hearing Aid Specialists | Industry Guide 2026",
+      metaTitle: "Local SEO Opticians & Hearing Aids | Guide 2026",
       metaDescription: "How opticians and hearing aid specialists win more customers through local SEO. Industry-specific keywords, portals and Google Business tips.",
       excerpt: "The industry guide for opticians and hearing aid specialists with specific SEO strategies and portal lists.",
       category: "Industries"
@@ -3453,14 +3453,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-notdienst-keywords",
     de: {
       title: "Notdienst Keywords: So wirst du bei Notfällen gefunden (2026)",
-      metaTitle: "Notdienst Keywords: Bei Notfällen gefunden werden | Guide 2026",
+      metaTitle: "Notdienst Keywords | Bei Notfällen gefunden 2026",
       metaDescription: "Wie du für Notfall-Suchen rankst. Schlüsseldienst, Notarzt, Klempner Notdienst - die richtigen Keywords und Strategien.",
       excerpt: "Der Spezial-Guide für Notdienst-Keywords und die Optimierung für dringende Suchanfragen.",
       category: "Strategie"
     },
     en: {
       title: "Emergency Service Keywords: How to Be Found in Emergencies (2026)",
-      metaTitle: "Emergency Service Keywords: Being Found in Emergencies | 2026 Guide",
+      metaTitle: "Emergency Service Keywords | Be Found Fast 2026",
       metaDescription: "How to rank for emergency searches. Locksmith, emergency doctor, emergency plumber - the right keywords and strategies.",
       excerpt: "The special guide for emergency service keywords and optimization for urgent search queries.",
       category: "Strategy"
@@ -3566,14 +3566,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "seo-ferienwohnungen",
     de: {
       title: "SEO für Ferienwohnungen: Schweiz, Bayern & Österreich – Raus aus der OTA-Falle",
-      metaTitle: "SEO Ferienwohnungen Schweiz, Bayern & Österreich | Direktbuchungen statt OTA",
+      metaTitle: "SEO Ferienwohnungen | Direktbuchungen DACH 2026",
       metaDescription: "Wie Ferienwohnungen durch SEO bis zu 13.500 CHF OTA-Provisionen sparen. Google My Business, AI Search & regionale Strategien für St. Moritz, Zermatt, Bayern.",
       excerpt: "15 % OTA-Provision bei jeder Buchung? SEO für Ferienwohnungen bringt Direktbuchungen, reduziert Abhängigkeit und steigert die Marge.",
       category: "Branche"
     },
     en: {
       title: "SEO for Vacation Rentals: Switzerland, Bavaria & Austria – Escape the OTA Trap",
-      metaTitle: "Vacation Rental SEO Switzerland, Bavaria & Austria | Direct Bookings",
+      metaTitle: "Vacation Rental SEO | Direct Bookings DACH 2026",
       metaDescription: "How vacation rentals save up to 13,500 CHF in OTA commissions through SEO. Google My Business, AI Search & regional strategies for St. Moritz, Zermatt, Bavaria.",
       excerpt: "15% OTA commission per booking? SEO for vacation rentals drives direct bookings, reduces dependency and boosts margins.",
       category: "Industry"
@@ -3588,14 +3588,14 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-reporting-template",
     de: {
       title: "Local SEO Reporting Template: Monatlicher Report + KPI-Vorlage",
-      metaTitle: "Local SEO Reporting Template | Monatliche Vorlage + KPIs 2026",
+      metaTitle: "Local SEO Reporting Template | KPI-Vorlage 2026",
       metaDescription: "Kostenlose Local SEO Report-Vorlage mit 10 KPIs, wöchentlicher Checkliste und ROI-Berechnung. Monatlichen Report erstellen wie ein Profi.",
       excerpt: "Die komplette Vorlage für professionelles Local SEO Reporting: 10 KPIs, monatlicher Report-Aufbau, Wettbewerber-Vergleich und ROI-Berechnung.",
       category: "Strategie"
     },
     en: {
       title: "Local SEO Reporting Template: Monthly Report + KPI Template",
-      metaTitle: "Local SEO Reporting Template | Monthly Template + KPIs 2026",
+      metaTitle: "Local SEO Reporting Template | KPI Template 2026",
       metaDescription: "Free Local SEO report template with 10 KPIs, weekly checklist and ROI calculation. Create monthly reports like a pro.",
       excerpt: "The complete template for professional Local SEO reporting: 10 KPIs, monthly report structure, competitor comparison and ROI calculation.",
       category: "Strategy"
@@ -3699,7 +3699,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "website-content-ai-suchmaschinen",
     de: {
       title: "Website-Content für AI-Suchmaschinen strukturieren: Der komplette Guide",
-      metaTitle: "Website-Content für AI-Suchmaschinen strukturieren | Guide 2026",
+      metaTitle: "Content für AI-Suchmaschinen | Struktur-Guide 2026",
       metaDescription: "Lerne wie du deinen Website-Content für ChatGPT, Perplexity und Google AI Overviews optimierst. Semantisches HTML, Schema Markup, llms.txt und AI-Attribute.",
       excerpt: "Schritt-für-Schritt: So machst du deine Website-Inhalte maschinenlesbar und zitierfähig für AI-Suchmaschinen.",
       category: "Technisches SEO"
@@ -3722,7 +3722,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-strategie-kleine-unternehmen",
     de: {
       title: "Local SEO Strategie für kleine Unternehmen: Der komplette Aktionsplan 2026",
-      metaTitle: "Local SEO Strategie für kleine Unternehmen | Aktionsplan 2026",
+      metaTitle: "Local SEO Strategie KMU | Aktionsplan 2026",
       metaDescription: "Die komplette Local-SEO-Strategie für KMU im DACH-Raum: 90-Tage-Plan, Checklisten, Tools & Branchenbeispiele. Kostenlos umsetzbar — ohne Agentur.",
       excerpt: "Schritt-für-Schritt Local-SEO-Strategie für kleine Unternehmen: Google Business Profil, Bewertungen, Citations, Content & Linkbuilding — mit 90-Tage-Aktionsplan für den DACH-Markt.",
       category: "Strategie"
@@ -3746,15 +3746,15 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-ranking-faktoren-erklaert",
     de: {
       title: "Local SEO Ranking-Faktoren erklärt: Alle Signale im Detail 2026",
-      metaTitle: "Local SEO Ranking-Faktoren 2026: Vollständige Analyse & Vergleich",
-      metaDescription: "Alle Local SEO Ranking-Faktoren erklärt: GBP-Signale (36 %), On-Page (18 %), Bewertungen (17 %), Links (13 %), Citations (7 %). Mit Vergleichstabellen & Aktionsplan.",
+      metaTitle: "Local SEO Ranking-Faktoren 2026 | Alle Signale",
+      metaDescription: "Alle Local SEO Ranking-Faktoren: GBP (36 %), On-Page (18 %), Bewertungen (17 %), Links (13 %), Citations (7 %). Vergleichstabellen & Aktionsplan.",
       excerpt: "Die vollständige Analyse aller lokalen Ranking-Faktoren: Google Business Profil, On-Page, Bewertungen, Links, Citations und Verhaltens-Signale — mit Gewichtung und Vergleichstabellen.",
       category: "Strategie"
     },
     en: {
       title: "Local SEO Ranking Factors Explained: All Signals in Detail 2026",
-      metaTitle: "Local SEO Ranking Factors 2026: Complete Analysis & Comparison",
-      metaDescription: "All Local SEO ranking factors explained: GBP signals (36%), on-page (18%), reviews (17%), links (13%), citations (7%). With comparison tables & action plan.",
+      metaTitle: "Local SEO Ranking Factors 2026 | Complete Analysis",
+      metaDescription: "All Local SEO ranking factors: GBP (36%), on-page (18%), reviews (17%), links (13%), citations (7%). Comparison tables & action plan.",
       excerpt: "Complete analysis of all local ranking factors: Google Business Profile, on-page, reviews, links, citations and behavioral signals — with weighting and comparison tables.",
       category: "Strategy"
     },
@@ -3771,14 +3771,14 @@ export const blogArticles: BlogArticle[] = [
     de: {
       title: "AI Search Optimization für lokale Unternehmen: Der komplette Guide 2026",
       metaTitle: "AI Search Optimization für lokale Unternehmen | Guide 2026",
-      metaDescription: "Wie AI-Suchmaschinen Quellen auswählen und wie lokale Unternehmen in AI-Empfehlungen erscheinen. GEO-Strategien, Schema Markup, llms.txt & Praxis-Checkliste für den DACH-Raum.",
+      metaDescription: "Wie AI-Suchmaschinen Quellen auswählen und lokale Unternehmen in AI-Empfehlungen erscheinen. GEO-Strategien, Schema Markup & llms.txt.",
       excerpt: "Alles über AI Search Optimization für lokale Unternehmen: Wie ChatGPT, Google AI Overviews und Perplexity Quellen auswählen — und wie du dein Business dort sichtbar machst.",
       category: "AI & Zukunft"
     },
     en: {
       title: "AI Search Optimization for Local Businesses: Complete Guide 2026",
       metaTitle: "AI Search Optimization for Local Businesses | Guide 2026",
-      metaDescription: "How AI search engines choose sources and how local businesses can appear in AI-generated recommendations. GEO strategies, Schema Markup, llms.txt & practical checklist.",
+      metaDescription: "How AI search engines choose sources and local businesses appear in AI recommendations. GEO strategies, Schema Markup & llms.txt.",
       excerpt: "Everything about AI Search Optimization for local businesses: How ChatGPT, Google AI Overviews and Perplexity choose sources — and how to make your business visible.",
       category: "AI & Future"
     },
@@ -3794,15 +3794,15 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-link-building-blueprint",
     de: {
       title: "Local Link Building Blueprint: Der komplette Leitfaden für lokale Backlinks 2026",
-      metaTitle: "Local Link Building Blueprint | Alle Strategien für lokale Backlinks 2026",
-      metaDescription: "Der umfassendste Local-Linkbuilding-Guide im DACH-Raum: Partnerschaften, Sponsoring, PR, Events, IHK-Links, Outreach-Templates & 90-Tage-Plan. Mit DACH-spezifischen Quellen.",
+      metaTitle: "Local Link Building Blueprint | DACH-Guide 2026",
+      metaDescription: "Local-Linkbuilding-Guide für DACH: Partnerschaften, Sponsoring, PR, Events, IHK-Links & Outreach-Templates. Mit 90-Tage-Plan.",
       excerpt: "Alle lokalen Linkbuilding-Strategien in einem Blueprint: Von IHK-Links über Vereinssponsoring und lokale PR bis zu Outreach-Templates — mit 90-Tage-Aktionsplan für den DACH-Markt.",
       category: "Content & Marketing"
     },
     en: {
       title: "Local Link Building Blueprint: Complete Guide to Local Backlinks 2026",
-      metaTitle: "Local Link Building Blueprint | All Strategies for Local Backlinks 2026",
-      metaDescription: "The most comprehensive local link building guide: partnerships, sponsorships, PR, events, chamber of commerce links, outreach templates & 90-day plan.",
+      metaTitle: "Local Link Building Blueprint | Guide 2026",
+      metaDescription: "Comprehensive local link building guide: partnerships, sponsorships, PR, events, outreach templates & 90-day action plan.",
       excerpt: "All local link building strategies in one blueprint: From chamber of commerce links to sponsorships, local PR and outreach templates — with a 90-day action plan.",
       category: "Content & Marketing"
     },
@@ -3819,14 +3819,14 @@ export const blogArticles: BlogArticle[] = [
     de: {
       title: "Die komplette Local SEO Checkliste 2026: 80+ Punkte in 8 Phasen",
       metaTitle: "Local SEO Checkliste 2026 | 80+ Punkte Schritt-für-Schritt",
-      metaDescription: "Die umfassendste Local SEO Checkliste: 80+ Punkte in 8 Phasen — von GBP-Setup über Schema Markup, Citations und Bewertungen bis Reporting. Mit 90-Tage-Implementierungsplan.",
+      metaDescription: "Die umfassendste Local SEO Checkliste: 80+ Punkte in 8 Phasen — GBP, Schema Markup, Citations, Bewertungen & Reporting. Mit 90-Tage-Plan.",
       excerpt: "Die komplette Schritt-für-Schritt Local SEO Checkliste: 80+ Massnahmen in 8 Phasen systematisch abarbeiten — mit Prioritäten, Zeitplan und branchenspezifischen Empfehlungen.",
       category: "Strategie"
     },
     en: {
       title: "The Complete Local SEO Checklist 2026: 80+ Steps in 8 Phases",
       metaTitle: "Local SEO Checklist 2026 | 80+ Steps Step-by-Step",
-      metaDescription: "The most comprehensive Local SEO checklist: 80+ steps in 8 phases — from GBP setup to Schema Markup, citations, reviews and reporting. With 90-day implementation plan.",
+      metaDescription: "The most comprehensive Local SEO checklist: 80+ steps in 8 phases — GBP, Schema Markup, citations, reviews & reporting. With 90-day plan.",
       excerpt: "The complete step-by-step Local SEO checklist: 80+ actions in 8 phases systematically executed — with priorities, timeline and industry-specific recommendations.",
       category: "Strategy"
     },
@@ -3866,15 +3866,15 @@ export const blogArticles: BlogArticle[] = [
     slug: "wie-google-maps-ranking-funktioniert",
     de: {
       title: "Wie Google Maps Ranking funktioniert: Nähe, Relevanz & Bekanntheit erklärt",
-      metaTitle: "Wie Google Maps Ranking funktioniert | Proximity, Relevanz, Prominence 2026",
-      metaDescription: "So bestimmt Google dein Maps-Ranking: Die 3 Hauptfaktoren Nähe, Relevanz und Bekanntheit erklärt mit Praxis-Beispielen, Ranking-Signalen und Optimierungstipps.",
+      metaTitle: "Wie Google Maps Ranking funktioniert | 2026 Guide",
+      metaDescription: "So bestimmt Google dein Maps-Ranking: Nähe, Relevanz und Bekanntheit erklärt mit Praxis-Beispielen und Optimierungstipps.",
       excerpt: "Google Maps Rankings basieren auf 3 Faktoren: Nähe, Relevanz und Bekanntheit. Erfahre wie sie zusammenspielen — mit Praxis-Beispielen, Signaltabellen und konkretem Aktionsplan.",
       category: "Google Maps"
     },
     en: {
       title: "How Google Maps Ranking Works: Proximity, Relevance & Prominence Explained",
-      metaTitle: "How Google Maps Ranking Works | Proximity, Relevance, Prominence 2026",
-      metaDescription: "How Google determines your Maps ranking: The 3 main factors proximity, relevance and prominence explained with practical examples and optimization tips.",
+      metaTitle: "How Google Maps Ranking Works | Guide 2026",
+      metaDescription: "How Google determines your Maps ranking: Proximity, relevance and prominence explained with practical examples and optimization tips.",
       excerpt: "Google Maps rankings are based on 3 factors: proximity, relevance and prominence. Learn how they interact — with practical examples and an action plan.",
       category: "Google Maps"
     },
