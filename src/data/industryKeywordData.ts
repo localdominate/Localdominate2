@@ -112,7 +112,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   handwerker: {
     industry: "Handwerker",
-    quickWin: "„[Gewerk] Notdienst [Stadt]" Keywords haben extrem hohe Conversion-Raten – Landing Pages mit Click-to-Call erstellen.",
+    quickWin: "'[Gewerk] Notdienst [Stadt]' Keywords haben extrem hohe Conversion-Raten - Landing Pages mit Click-to-Call erstellen.",
     clusters: [
       {
         name: "Gewerk + Stadt",
