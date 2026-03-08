@@ -799,6 +799,34 @@ Beispiel für Zahnarzt:
         </div>
       </section>
 
+      <LocalBusinessEcosystem config={{
+        city: 'Berlin',
+        population: '3,7 Mio.',
+        businesses: '~200.000',
+        avgSearchVolume: '82.000',
+        economicFacts: [
+          { label: 'Kaufkraftindex', value: '92%', trend: 'stable', insight: 'Unter Bundesdurchschnitt — preissensible Zielgruppe' },
+          { label: 'Startup-Gründungen/Jahr', value: '~40.000', trend: 'up', insight: 'Europas größte Startup-Szene = digitale Zielgruppe' },
+          { label: 'Touristen/Jahr', value: '14 Mio.', trend: 'up', insight: 'Massive Tourismus-Keywords für Gastro & Kultur' },
+          { label: 'Internationalität', value: '25%', trend: 'up', insight: 'Englische Keywords sind in Berlin Pflicht' },
+          { label: 'Ø Miete Gewerbe/m²', value: '16€', trend: 'up', insight: 'Günstiger als München/Frankfurt — mehr Neugründungen' },
+        ],
+        industryClusters: [
+          { name: 'Gastronomie & Nightlife', icon: '🍕', saturation: 'Übersättigt', opportunity: 'Niedrig', avgCompetitors: '150+ im Pack', avgRating: '4.2', avgReviews: '90', gap: 'Nischen-Küchen und Kiez-spezifische Positionierung fehlen oft', strategy: 'Kiez-Keywords statt Bezirk, Nischen-Küche betonen, Instagram-Verlinkung' },
+          { name: 'Tech & Startups', icon: '💻', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '25 im Pack', avgRating: '4.3', avgReviews: '15', gap: 'Lokale SEO wird von Tech-Firmen komplett ignoriert', strategy: 'B2B Local SEO mit Bezirk-Keywords, Coworking-Nähe-Keywords' },
+          { name: 'Kreativwirtschaft', icon: '🎨', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '20 im Pack', avgRating: '4.6', avgReviews: '22', gap: 'Portfolios oft ohne lokale Optimierung', strategy: 'Lokale Landingpages + Branchen-Verzeichnisse + Projekt-basierter Content' },
+          { name: 'Handwerk', icon: '🔧', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '30 im Pack', avgRating: '3.9', avgReviews: '18', gap: 'Massiver Fachkräftemangel = wenige Anbieter, hohe Nachfrage', strategy: 'Notdienst-Keywords + Bezirk-Abdeckung + schnelle Antwort-Zeiten betonen' },
+          { name: 'Gesundheit', icon: '⚕️', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '55 im Pack', avgRating: '3.6', avgReviews: '35', gap: 'Sehr niedrige Bewertungs-Qualität und Antwort-Rate', strategy: 'Online-Terminbuchung + 100% Bewertungs-Antworten + Spezialisierungs-Keywords' },
+        ],
+        underservedNiches: [
+          { niche: 'Englischsprachige Services', reason: '200.000+ Expats, kaum lokale SEO auf Englisch', potentialKeywords: ['English speaking therapist Berlin', 'accountant Berlin expat', 'English vet Berlin'] },
+          { niche: 'Kiez-spezifische Handwerker', reason: 'Berliner suchen nach Kiez, nicht nach Stadt — fast niemand optimiert dafür', potentialKeywords: ['Elektriker Graefekiez', 'Schlosser Boxhagener Platz', 'Installateur Bergmannkiez'] },
+          { niche: 'Nachhaltige / Vegane Services', reason: 'Berlin ist Vegan-Hauptstadt, aber lokale SEO hinkt hinterher', potentialKeywords: ['veganer Caterer Berlin', 'ökologische Reinigung Berlin', 'nachhaltiger Friseur Berlin'] },
+          { niche: 'Digitale Nomad Services', reason: 'Wachsende Community, sucht lokale Infrastruktur', potentialKeywords: ['Coworking Day Pass Berlin', 'Café Laptop Berlin Mitte', 'Mailbox Service Berlin'] },
+        ],
+        strategicInsight: 'Berlin ist ein Kiez-Markt. Stadtweit zu optimieren ist sinnlos — der Fokus muss auf 2-3 Kieze liegen. Die preissensible Zielgruppe sucht über mobile Geräte und erwartet schnelle Antworten. Englische Keywords sind in keiner anderen deutschen Stadt so wichtig.',
+      }} />
+
       <GeoTargetedKeywords config={{
         city: 'Berlin',
         country: 'DE',
