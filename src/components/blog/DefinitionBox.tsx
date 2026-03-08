@@ -10,6 +10,7 @@ interface DefinitionBoxProps {
 
 /**
  * A featured-snippet-optimized definition box for key SEO terms.
+ * Uses concise paragraph form (40-60 words) starting with "[Term] ist/bezeichnet..."
  * Renders with data-featured-snippet and data-speakable for AI/voice extraction.
  */
 const DefinitionBox = ({ term, definition, examples, linkToLexikon = true }: DefinitionBoxProps) => {
@@ -29,7 +30,12 @@ const DefinitionBox = ({ term, definition, examples, linkToLexikon = true }: Def
           {linkToLexikon ? <LexikonLink term={term}>{`Definition: ${term}`}</LexikonLink> : `Definition: ${term}`}
         </h4>
       </div>
-      <p className="text-foreground/90 text-[0.95rem] leading-relaxed mb-0" itemProp="description">
+      <p
+        className="text-foreground/90 text-[0.95rem] leading-relaxed mb-0"
+        itemProp="description"
+        data-featured-snippet="true"
+        data-speakable="true"
+      >
         {definition}
       </p>
       {examples && examples.length > 0 && (

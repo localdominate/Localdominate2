@@ -263,8 +263,12 @@ const GoogleMyBusiness = () => {
     <ArticleLayout article={article} tocItems={t.tocItems} faqItems={faqItems} additionalSchema={howToSchema}>
       <TableOfContents items={t.tocItems} />
 
-      <p className="text-xl leading-relaxed mb-8">
+      <p className="text-xl leading-relaxed mb-4">
         Dein <LexikonLink term="Google Business Profile" /> (früher Google My Business) ist das Schaufenster deines Unternehmens in der Google-Suche. Ein vollständig optimiertes Profil kann deine lokale Sichtbarkeit im <LexikonLink term="Local Pack" /> um bis zu 70% steigern. Diese Anleitung zeigt dir jeden Schritt.
+      </p>
+
+      <p data-featured-snippet="true" data-speakable="true">
+        <strong>Google Business Profil optimieren</strong> umfasst die vollständige Ausfüllung aller Profilfelder, die strategische Wahl der Geschäftskategorien, das regelmäßige Hochladen hochwertiger Fotos und die aktive Nutzung von Google Posts. Vollständig optimierte Profile erhalten 2,7-mal mehr Vertrauen und 70 % mehr Klicks als unvollständige Profile. Das Google Business Profil ist mit 36 % der wichtigste einzelne Ranking-Faktor für das Local Pack.
       </p>
 
       <KeyTakeawaysBox 
