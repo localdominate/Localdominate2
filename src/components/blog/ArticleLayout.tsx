@@ -66,10 +66,28 @@ const ArticleLayout = ({
   const relatedArticles = getRelatedArticles(article.slug, 6, language);
   const hasTrackedView = useRef(false);
   const [viewId, setViewId] = useState<string | null>(null);
+  const articleContentRef = useRef<HTMLElement>(null);
   
   // Use engagement tracking hook
   useArticleEngagement(viewId, article.readingTime);
-  
+
+  // Auto-inject AI-readability attributes on all article sections
+  useEffect(() => {
+    if (!articleContentRef.current) return;
+    const sections = articleContentRef.current.querySelectorAll('section[id]');
+    sections.forEach((section) => {
+      if (!section.hasAttribute('data-ai-summary')) {
+        section.setAttribute('data-ai-summary', 'true');
+      }
+    });
+    // Mark first paragraph of each section as speakable
+    sections.forEach((section) => {
+      const firstP = section.querySelector('p');
+      if (firstP && !firstP.hasAttribute('data-speakable')) {
+        firstP.setAttribute('data-speakable', 'true');
+      }
+    });
+  }, [children]);
   // Track article view and get view ID for engagement tracking
   useEffect(() => {
     if (hasTrackedView.current) return;
@@ -414,9 +432,18 @@ const ArticleLayout = ({
           </h1>
         </header>
 
-        {/* Article Content */}
-        <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary prose-li:text-muted-foreground">
-          {children}
+        {/* Article Content - AI-optimized wrapper */}
+        <article 
+          ref={articleContentRef}
+          className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary prose-li:text-muted-foreground"
+          data-article-slug={article.slug}
+          data-ai-content="true"
+          itemScope
+          itemType="https://schema.org/Article"
+        >
+          <div className="article-intro" data-speakable="true" data-ai-summary="true">
+            {children}
+          </div>
         </article>
 
         {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
