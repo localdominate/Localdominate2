@@ -401,7 +401,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Optimierungsstrategien */}
       <section id="optimierung">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Ganzheitliche Optimierungsstrategien</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Ganzheitliche Core Web Vitals Optimierung</h2>
         
         <h3 className="text-xl font-semibold mb-3">1. Hosting überprüfen</h3>
         <p className="mb-4">
