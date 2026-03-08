@@ -76,7 +76,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   restaurant: {
     industry: "Restaurants & Gastronomie",
-    quickWin: "Optimiere für „[Küche] Restaurant [Stadt/Stadtteil]" – lokale Suchanfragen mit hoher Kaufabsicht.",
+    quickWin: "Optimiere für '[Küche] Restaurant [Stadt/Stadtteil]' - lokale Suchanfragen mit hoher Kaufabsicht.",
     clusters: [
       {
         name: "Küche + Standort",
