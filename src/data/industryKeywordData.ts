@@ -529,7 +529,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   autowerkstatt: {
     industry: "Autowerkstätten",
-    quickWin: "Marken-spezifische Keywords wie „BMW Werkstatt [Stadt]" haben weniger Wettbewerb und höhere Conversion.",
+    quickWin: "Marken-spezifische Keywords wie 'BMW Werkstatt [Stadt]' haben weniger Wettbewerb und höhere Conversion.",
     clusters: [
       {
         name: "Werkstatt + Standort",
