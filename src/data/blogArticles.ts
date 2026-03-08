@@ -3819,7 +3819,7 @@ export const blogArticles: BlogArticle[] = [
     de: {
       title: "Die komplette Local SEO Checkliste 2026: 80+ Punkte in 8 Phasen",
       metaTitle: "Local SEO Checkliste 2026 | 80+ Punkte Schritt-für-Schritt",
-      metaDescription: "Die umfassendste Local SEO Checkliste: 80+ Punkte in 8 Phasen — von GBP-Setup über Schema Markup, Citations und Bewertungen bis Reporting. Mit 90-Tage-Implementierungsplan.",
+      metaDescription: "Die umfassendste Local SEO Checkliste: 80+ Punkte in 8 Phasen — GBP, Schema Markup, Citations, Bewertungen & Reporting. Mit 90-Tage-Plan.",
       excerpt: "Die komplette Schritt-für-Schritt Local SEO Checkliste: 80+ Massnahmen in 8 Phasen systematisch abarbeiten — mit Prioritäten, Zeitplan und branchenspezifischen Empfehlungen.",
       category: "Strategie"
     },
