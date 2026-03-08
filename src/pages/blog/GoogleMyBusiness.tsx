@@ -70,7 +70,7 @@ const GoogleMyBusiness = () => {
         exampleSecVal: "Café, Konditorei, Frühstücksrestaurant"
       },
       section4: {
-        title: "Google Posts strategisch nutzen",
+        title: "Wie nutzt du Google Posts strategisch?",
         text: "Google Posts sind wie Social Media Posts, die direkt in deinem Google Profil erscheinen. Sie zeigen Aktivität und können Klicks generieren.",
         types: [
           { title: "Updates", desc: "Neuigkeiten, Änderungen, allgemeine Infos" },
