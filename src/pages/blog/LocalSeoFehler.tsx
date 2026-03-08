@@ -672,7 +672,7 @@ const LocalSeoFehler = () => {
       <section id="bewertungs-fehler" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <Star className="h-8 w-8 text-primary" />
-          Bewertungs-Fehler (14-15)
+          Wie vermeidest du kritische Bewertungs-Fehler?
         </h2>
 
         {/* Fehler 14 */}
