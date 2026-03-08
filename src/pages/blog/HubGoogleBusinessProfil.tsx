@@ -1,5 +1,7 @@
 import TopicHubLayout, { HubArticleGroup, HubSummary, HubComparisonTable, HubResource } from "@/components/blog/TopicHubLayout";
 import { Building2 } from "lucide-react";
+import StepByStepProcess, { type ProcessStep } from "@/components/blog/StepByStepProcess";
+import { Store, Camera, Star, FileText, MapPin, Settings, MessageSquare, Search } from "lucide-react";
 
 const groups: HubArticleGroup[] = [
   {
