@@ -511,6 +511,37 @@ const LocalSeoStrategieKleineUnternehmen = () => {
         </p>
       </section>
 
+      {/* Competitive Analysis for Small Businesses */}
+      <CompetitiveAnalysisFramework data={{
+        competitors: [
+          { name: "Dein KMU", isYou: true, reviews: 5, rating: 4.0, citations: 8, gbpComplete: 50, backlinks: 5, responseRate: 30, photos: 3, postsPerMonth: 0 },
+          { name: "Lokaler Marktführer", reviews: 75, rating: 4.5, citations: 50, gbpComplete: 100, backlinks: 100, responseRate: 90, photos: 30, postsPerMonth: 4 },
+          { name: "Ähnliches KMU", reviews: 20, rating: 4.2, citations: 18, gbpComplete: 70, backlinks: 20, responseRate: 50, photos: 10, postsPerMonth: 1 },
+        ],
+        swot: {
+          strengths: [
+            { text: "Lokale Authentizität: Echte Kundennähe schlägt Filialisten" },
+            { text: "Schnelle Entscheidungswege — keine Konzern-Bürokratie" },
+            { text: "Persönliche Beziehungen = hohe Bewertungsbereitschaft" },
+          ],
+          weaknesses: [
+            { text: "Deutlich weniger Bewertungen und Citations als Marktführer" },
+            { text: "GBP nur zu 50% ausgefüllt" },
+            { text: "Kein Budget für professionelles Linkbuilding" },
+          ],
+          opportunities: [
+            { text: "Das 'Ähnliche KMU' zeigt: Mit 20 Reviews und 70% GBP ist viel erreichbar" },
+            { text: "Kostenlose Verzeichnis-Einträge schließen Citation-Lücke" },
+            { text: "Google Posts und Fotos sind kostenlos — sofort umsetzbar" },
+          ],
+          threats: [
+            { text: "Marktführer hat 15× mehr Bewertungen — schwer einholbar" },
+            { text: "Neue Online-Konkurrenz durch Plattformen (Lieferdienste etc.)" },
+          ],
+        },
+        insight: "Als KMU musst du nicht den Marktführer überholen — fokussiere auf Platz 2-3. GBP auf 100% bringen, 15+ Bewertungen in 3 Monaten und 20 Citations kosten nichts und bringen dich an das 'Ähnliche KMU' heran.",
+      }} />
+
       {/* Branchenspezifisch */}
       <section id="branchenspezifisch">
         <h2>Strategien nach Branche (DACH)</h2>

@@ -287,6 +287,40 @@ const GoogleMapsKonkurrenzanalyse = () => {
         </div>
       </section>
 
+      {/* Interactive Competitive Framework */}
+      <CompetitiveAnalysisFramework data={{
+        competitors: [
+          { name: "Dein Unternehmen", isYou: true, reviews: 25, rating: 4.3, citations: 20, gbpComplete: 75, backlinks: 30, responseRate: 60, photos: 10, postsPerMonth: 1 },
+          { name: "Top-Konkurrent 1", reviews: 120, rating: 4.6, citations: 60, gbpComplete: 100, backlinks: 200, responseRate: 100, photos: 45, postsPerMonth: 6 },
+          { name: "Top-Konkurrent 2", reviews: 80, rating: 4.5, citations: 45, gbpComplete: 95, backlinks: 120, responseRate: 85, photos: 30, postsPerMonth: 3 },
+          { name: "Top-Konkurrent 3", reviews: 50, rating: 4.4, citations: 35, gbpComplete: 80, backlinks: 65, responseRate: 70, photos: 20, postsPerMonth: 2 },
+          { name: "Schwächster im Pack", reviews: 30, rating: 4.1, citations: 25, gbpComplete: 60, backlinks: 25, responseRate: 40, photos: 8, postsPerMonth: 0 },
+        ],
+        swot: {
+          strengths: [
+            { text: "Höheres Rating als schwächster Pack-Konkurrent" },
+            { text: "Mehr Backlinks als unterer Pack-Bereich" },
+            { text: "Aktive Google Posts (1×/Monat)" },
+          ],
+          weaknesses: [
+            { text: "80% weniger Bewertungen als Top-Konkurrent" },
+            { text: "Citations nur bei 33% des Marktführers" },
+            { text: "GBP nur zu 75% ausgefüllt" },
+          ],
+          opportunities: [
+            { text: "Schwächster Pack-Platz (30 Reviews) ist mit 50+ Reviews überholbar" },
+            { text: "Keiner der Konkurrenten hat Review-Schema auf der Website" },
+            { text: "Nur 1 Konkurrent nutzt Google Q&A aktiv" },
+          ],
+          threats: [
+            { text: "Top-Konkurrent gewinnt 15+ Reviews/Monat (hohe Velocity)" },
+            { text: "Konkurrent 2 investiert in lokales Linkbuilding" },
+            { text: "Neue Franchise-Filiale im Einzugsgebiet geplant" },
+          ],
+        },
+        insight: "Dein realistischstes Ziel: Platz 3 im Local Pack. Fokussiere auf Bewertungs-Velocity (5+/Monat), GBP auf 100% bringen und 15 neue Citations in 8 Wochen. Der schwächste Pack-Platz ist dein direkter Gegner.",
+      }} />
+
       {/* 5-Schritte-Framework */}
       <section id="5-schritte" className="mb-12">
         <h2 className="flex items-center gap-2">
