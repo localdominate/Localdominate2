@@ -346,7 +346,7 @@ const LocalSeoFehler = () => {
       <section id="google-business" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <MapPin className="h-8 w-8 text-primary" />
-          Google Business Fehler (6-10)
+          Welche Google Business Fehler schaden deiner Sichtbarkeit?
         </h2>
 
         <p className="mb-6">
