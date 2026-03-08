@@ -114,11 +114,11 @@ const WieGoogleMapsRankingFunktioniert = () => {
           </TableHeader>
           <TableBody>
             {[
-              ["„Pizza in der Nahe"", "Sehr hoch", "Zeigt die nachsten 3 Pizzerien, unabhangig von Qualitat"],
-              ["„Zahnarzt Munchen"", "Mittel", "Zeigt Zahnarzte in ganz Munchen, Qualitat wird relevanter"],
-              ["„Bester Steuerberater Bayern"", "Niedrig", "Bekanntheit und Bewertungen dominieren, Entfernung sekundar"],
-              ["„Notdienst Klempner"", "Hoch", "Dringlichkeit = nahester verfugbarer Anbieter"],
-              ["Markensuche: „Backerei Schmidt"", "Sehr niedrig", "Google zeigt das gesuchte Unternehmen, egal wo"],
+              ["'Pizza in der Nahe'", "Sehr hoch", "Zeigt die nachsten 3 Pizzerien, unabhangig von Qualitat"],
+              ["'Zahnarzt Munchen'", "Mittel", "Zeigt Zahnarzte in ganz Munchen, Qualitat wird relevanter"],
+              ["'Bester Steuerberater Bayern'", "Niedrig", "Bekanntheit und Bewertungen dominieren, Entfernung sekundar"],
+              ["'Notdienst Klempner'", "Hoch", "Dringlichkeit = nahester verfugbarer Anbieter"],
+              ["Markensuche: 'Backerei Schmidt'", "Sehr niedrig", "Google zeigt das gesuchte Unternehmen, egal wo"],
             ].map(([szenario, gewichtung, beispiel], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{szenario}</TableCell>
@@ -277,11 +277,11 @@ const WieGoogleMapsRankingFunktioniert = () => {
           </TableHeader>
           <TableBody>
             {[
-              ["„Doner in der Nahe"", "⬆️⬆️⬆️", "⬆️", "➡️", "Nachster Doner gewinnt, egal ob 4.2 oder 4.8 Sterne"],
-              ["„Bester Zahnarzt Munchen"", "⬆️", "⬆️⬆️", "⬆️⬆️⬆️", "Top-bewerteter Zahnarzt, auch 3 km entfernt"],
-              ["„Notar Koln Ehrenfeld"", "⬆️⬆️", "⬆️⬆️⬆️", "⬆️", "Notar in Ehrenfeld mit passender Kategorie"],
-              ["„Pizza Margherita bestellen"", "⬆️⬆️", "⬆️⬆️⬆️", "⬆️⬆️", "Pizzeria mit Menu-Schema und Lieferservice"],
-              ["„Backerei Schmidt"", "➡️", "➡️", "⬆️⬆️⬆️", "Markensuche: Google zeigt genau dieses Geschaft"],
+              ["'Doner in der Nahe'", "\u2B06\uFE0F\u2B06\uFE0F\u2B06\uFE0F", "\u2B06\uFE0F", "\u27A1\uFE0F", "Nachster Doner gewinnt, egal ob 4.2 oder 4.8 Sterne"],
+              ["'Bester Zahnarzt Munchen'", "\u2B06\uFE0F", "\u2B06\uFE0F\u2B06\uFE0F", "\u2B06\uFE0F\u2B06\uFE0F\u2B06\uFE0F", "Top-bewerteter Zahnarzt, auch 3 km entfernt"],
+              ["'Notar Koln Ehrenfeld'", "\u2B06\uFE0F\u2B06\uFE0F", "\u2B06\uFE0F\u2B06\uFE0F\u2B06\uFE0F", "\u2B06\uFE0F", "Notar in Ehrenfeld mit passender Kategorie"],
+              ["'Pizza Margherita bestellen'", "\u2B06\uFE0F\u2B06\uFE0F", "\u2B06\uFE0F\u2B06\uFE0F\u2B06\uFE0F", "\u2B06\uFE0F\u2B06\uFE0F", "Pizzeria mit Menu-Schema und Lieferservice"],
+              ["'Backerei Schmidt'", "\u27A1\uFE0F", "\u27A1\uFE0F", "\u2B06\uFE0F\u2B06\uFE0F\u2B06\uFE0F", "Markensuche: Google zeigt genau dieses Geschaft"],
             ].map(([anfrage, naehe, relevanz, bekanntheit, ergebnis], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{anfrage}</TableCell>
