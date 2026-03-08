@@ -454,7 +454,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   fotograf: {
     industry: "Fotografen",
-    quickWin: "Anlass-Keywords wie „Hochzeitsfotograf [Stadt]" haben die höchsten Conversion-Raten bei Fotografen.",
+    quickWin: "Anlass-Keywords wie 'Hochzeitsfotograf [Stadt]' haben die höchsten Conversion-Raten bei Fotografen.",
     clusters: [
       {
         name: "Fotograf + Standort",
