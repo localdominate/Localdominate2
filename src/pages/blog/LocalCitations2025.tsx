@@ -7,6 +7,7 @@ import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
 import LocalCitationWorkflows from '../../components/blog/LocalCitationWorkflows';
+import DirectorySubmissionStrategy from '../../components/blog/DirectorySubmissionStrategy';
 import BlogImage from '../../components/blog/BlogImage';
 import DefinitionBox from '../../components/blog/DefinitionBox';
 import localCitationsImage from '../../assets/blog/local-citations.jpg';
