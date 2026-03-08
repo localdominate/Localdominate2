@@ -3651,6 +3651,7 @@ const PUBLISHED_SLUGS = new Set([
   "ai-suche-lokale-unternehmen",
   "local-link-building-blueprint",
   "local-seo-checkliste-komplett",
+  "google-maps-seo-hub",
 ]);
 
 // Get only published articles (with pages), deduplicated
