@@ -45,7 +45,7 @@ const GoogleBewertungen = () => {
         text2: "Mehr Bewertungen bedeuten mehr Sichtbarkeit, mehr Vertrauen und letztendlich mehr Umsatz."
       },
       section2: {
-        title: "7 ethische Strategien für mehr Reviews",
+        title: "Wie bekommst du mehr Google Bewertungen?",
         strategies: [
           { title: "1. Direkt nach dem Kauf fragen", desc: "Der beste Zeitpunkt ist direkt nach einer positiven Erfahrung. Sage einfach: \"Es freut mich, dass Sie zufrieden sind. Würden Sie uns mit einer Google Bewertung unterstützen?\"" },
           { title: "2. QR-Code auf Rechnungen", desc: "Platziere einen QR-Code auf deiner Rechnung, der direkt zur Bewertungsseite führt. So reduzierst du die Hürde auf ein Minimum." },
