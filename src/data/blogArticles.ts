@@ -3387,7 +3387,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-mehrstufig-unternehmen",
     de: {
       title: "Local SEO für mehrstufige Unternehmen: Multi-Location Strategien (2026)",
-      metaTitle: "Local SEO Multi-Location: Strategien für Filialisten | Guide 2026",
+      metaTitle: "Local SEO Multi-Location | Filialisten Guide 2026",
       metaDescription: "Wie Unternehmen mit mehreren Standorten ihre lokale SEO skalieren. Zentrale Verwaltung, lokale Anpassung und einheitliches Branding.",
       excerpt: "Der Enterprise-Guide für Multi-Location Local SEO mit Skalierungsstrategien und Best Practices.",
       category: "Strategie"
