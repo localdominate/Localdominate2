@@ -403,7 +403,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   tattoo: {
     industry: "Tattoo & Piercing Studios",
-    quickWin: "Stil-spezifische Keywords wie „Watercolor Tattoo [Stadt]" sind hochkonvertierend und wenig umkämpft.",
+    quickWin: "Stil-spezifische Keywords wie 'Watercolor Tattoo [Stadt]' sind hochkonvertierend und wenig umkämpft.",
     clusters: [
       {
         name: "Studio + Standort",
