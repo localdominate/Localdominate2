@@ -668,7 +668,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "citation-tracking-template",
     de: {
       title: "Citation Tracking Spreadsheet Template: Alle Verzeichnisse im Griff",
-      metaTitle: "Citation Tracking Template | Spreadsheet-Vorlage für DACH 2026",
+      metaTitle: "Citation Tracking Template | DACH Spreadsheet 2026",
       metaDescription: "Kostenloses Citation Tracking Template mit 22+ Verzeichnissen für DACH. Interaktive Checkliste, Copy-ready Spreadsheet und Quartals-Audit Workflow.",
       excerpt: "Systematisches Citation-Tracking mit interaktiver Checkliste, kopierbarer Spreadsheet-Vorlage und Quartals-Audit-Workflow für den DACH-Markt.",
       category: "Tools & Ressourcen"
