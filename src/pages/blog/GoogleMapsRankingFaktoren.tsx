@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import GoogleMapsRankingExplainer from "@/components/blog/GoogleMapsRankingExplainer";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import DefinitionBox from "@/components/blog/DefinitionBox";
 import { useLanguage } from "@/i18n/LanguageContext";
