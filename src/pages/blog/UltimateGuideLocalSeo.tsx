@@ -1,6 +1,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { DonutChart, ProcessFlow, GradientBarChart } from "@/components/blog/PillarVisuals";
 import { InternalResourceBox } from "@/components/blog/InternalResourceBox";
+import AiSearchOptNote from "@/components/blog/AiSearchOptNote";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
