@@ -650,6 +650,113 @@ const ConversionOptimizationReport = () => {
                   </CardContent>
                 </Card>
               </TabsContent>
+
+              {/* Save & History Tab */}
+              <TabsContent value="history" className="space-y-4">
+                {/* Save current report */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base flex items-center gap-2"><Save className="h-4 w-4 text-primary" /> Aktuellen Report speichern</CardTitle>
+                    <CardDescription>Speichere einen Snapshot der aktuellen Metriken und Empfehlungen</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex gap-3">
+                      <input
+                        type="text"
+                        placeholder="Optionale Notiz zum Report..."
+                        value={reportNotes}
+                        onChange={e => setReportNotes(e.target.value)}
+                        className="flex-1 px-3 py-2 border rounded-lg text-sm bg-background text-foreground"
+                      />
+                      <Button onClick={saveReport} disabled={isSaving}>
+                        <Save className="h-4 w-4 mr-1" /> {isSaving ? "Speichert..." : "Speichern"}
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Saved reports list */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base flex items-center gap-2"><History className="h-4 w-4 text-primary" /> Gespeicherte Reports</CardTitle>
+                    <CardDescription>{savedReports.length} Reports gespeichert</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    {savedReports.length === 0 ? (
+                      <p className="text-sm text-muted-foreground text-center py-8">Noch keine Reports gespeichert. Klicke oben auf "Report speichern".</p>
+                    ) : (
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead>Datum</TableHead>
+                            <TableHead>Sessions</TableHead>
+                            <TableHead>Conv. Rate</TableHead>
+                            <TableHead>Lead-Rate</TableHead>
+                            <TableHead>CTA-Klickrate</TableHead>
+                            <TableHead>Leads</TableHead>
+                            <TableHead>Notizen</TableHead>
+                            <TableHead className="text-right">Aktionen</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {savedReports.map(report => (
+                            <TableRow key={report.id}>
+                              <TableCell className="text-sm font-medium">
+                                {new Date(report.created_at).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
+                              </TableCell>
+                              <TableCell>{report.total_sessions?.toLocaleString()}</TableCell>
+                              <TableCell>
+                                <Badge variant="outline">{Number(report.conversion_rate || 0).toFixed(2)}%</Badge>
+                              </TableCell>
+                              <TableCell>
+                                <Badge variant="outline">{Number(report.lead_rate || 0).toFixed(2)}%</Badge>
+                              </TableCell>
+                              <TableCell>
+                                <Badge variant="outline">{Number(report.cta_click_rate || 0).toFixed(1)}%</Badge>
+                              </TableCell>
+                              <TableCell>{report.total_leads}</TableCell>
+                              <TableCell className="max-w-[200px] truncate text-sm text-muted-foreground">
+                                {report.notes || "—"}
+                              </TableCell>
+                              <TableCell className="text-right">
+                                <Button variant="ghost" size="sm" onClick={() => deleteReport(report.id)} className="text-destructive hover:text-destructive">
+                                  <Trash2 className="h-3 w-3" />
+                                </Button>
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    )}
+                  </CardContent>
+                </Card>
+
+                {/* Trend comparison from saved reports */}
+                {savedReports.length >= 2 && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-base">Historischer KPI-Verlauf</CardTitle>
+                      <CardDescription>Conversion Rate & Lead-Rate über gespeicherte Reports</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ResponsiveContainer width="100%" height={250}>
+                        <AreaChart data={[...savedReports].reverse().map(r => ({
+                          date: new Date(r.created_at).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" }),
+                          convRate: Number(r.conversion_rate || 0),
+                          leadRate: Number(r.lead_rate || 0),
+                          ctaRate: Number(r.cta_click_rate || 0),
+                        }))}>
+                          <XAxis dataKey="date" tick={{ fontSize: 10 }} />
+                          <YAxis tick={{ fontSize: 11 }} />
+                          <Tooltip />
+                          <Area type="monotone" dataKey="convRate" stroke="hsl(var(--primary))" fill="hsl(var(--primary))" fillOpacity={0.2} name="Conv. Rate %" />
+                          <Area type="monotone" dataKey="leadRate" stroke="#10b981" fill="#10b981" fillOpacity={0.15} name="Lead-Rate %" />
+                        </AreaChart>
+                      </ResponsiveContainer>
+                    </CardContent>
+                  </Card>
+                )}
+              </TabsContent>
             </Tabs>
           </>
         )}
