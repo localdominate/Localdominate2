@@ -3918,6 +3918,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-audit-template",
   "citation-tracking-template",
   "local-keyword-research-template",
+  "local-seo-monthly-checklist",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
