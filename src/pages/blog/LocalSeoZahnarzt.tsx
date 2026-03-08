@@ -230,6 +230,8 @@ const LocalSeoZahnarzt = () => {
 
       <ImplementationRoadmap data={industryImplementationData.zahnarzt} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.zahnarzt} />
+
       <IndustryComparisonTable data={industryComparisonData.zahnarzt} />
 
       <section id="faq">

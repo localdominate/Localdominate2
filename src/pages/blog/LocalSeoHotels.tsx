@@ -842,6 +842,8 @@ const LocalSeoHotels = () => {
 
       <ImplementationRoadmap data={industryImplementationData.hotels} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.hotels} />
+
       <IndustryComparisonTable data={industryComparisonData.hotels} />
 
       {/* FAQ */}

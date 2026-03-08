@@ -586,6 +586,8 @@ const LocalSeoHandwerker = () => {
 
       <ImplementationRoadmap data={industryImplementationData.handwerker} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.handwerker} />
+
       <IndustryComparisonTable data={industryComparisonData.handwerker} />
 
       {/* FAQ Section */}

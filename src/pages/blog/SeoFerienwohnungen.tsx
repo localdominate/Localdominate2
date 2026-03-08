@@ -304,6 +304,8 @@ const SeoFerienwohnungen = () => {
 
       <ImplementationRoadmap data={industryImplementationData.ferienwohnungen} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.ferienwohnungen} />
+
       <IndustryComparisonTable data={industryComparisonData.ferienwohnungen} />
 
       <h2 id="faq">Häufige Fragen zu SEO für Ferienwohnungen</h2>

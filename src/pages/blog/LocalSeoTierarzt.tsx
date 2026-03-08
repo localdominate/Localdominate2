@@ -576,6 +576,8 @@ const LocalSeoTierarzt = () => {
 
       <ImplementationRoadmap data={industryImplementationData.tierarzt} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.tierarzt} />
+
       <IndustryComparisonTable data={industryComparisonData.tierarzt} />
 
       {/* FAQ */}

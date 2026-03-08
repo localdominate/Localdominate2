@@ -292,6 +292,8 @@ const LocalSeoBackerei = () => {
 
       <ImplementationRoadmap data={industryImplementationData.baeckerei} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.baeckerei} />
+
       <IndustryComparisonTable data={industryComparisonData.baeckerei} />
 
       {/* FAQ Section */}

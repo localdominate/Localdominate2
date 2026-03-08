@@ -213,6 +213,8 @@ const LocalSeoOptiker = () => {
 
       <ImplementationRoadmap data={industryImplementationData.optiker} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.optiker} />
+
       <IndustryComparisonTable data={industryComparisonData.optiker} />
 
       <section id="faq">

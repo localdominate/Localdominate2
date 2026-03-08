@@ -291,6 +291,8 @@ const LocalSeoRestaurant = () => {
 
       <ImplementationRoadmap data={industryImplementationData.restaurant} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.restaurant} />
+
       <IndustryComparisonTable data={industryComparisonData.restaurant} />
 
       <section id="faq" className="mb-12">

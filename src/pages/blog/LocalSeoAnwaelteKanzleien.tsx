@@ -308,6 +308,8 @@ const LocalSeoAnwaelteKanzleien = () => {
 
       <ImplementationRoadmap data={industryImplementationData.anwaelte} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.anwaelte} />
+
       <IndustryComparisonTable data={industryComparisonData.anwaelte} />
 
       {/* FAQ */}

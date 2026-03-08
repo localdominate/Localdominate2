@@ -331,6 +331,8 @@ const LocalSeoFotograf = () => {
 
       <ImplementationRoadmap data={industryImplementationData.fotograf} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.fotograf} />
+
       <IndustryComparisonTable data={industryComparisonData.fotograf} />
 
       <section id="faq">

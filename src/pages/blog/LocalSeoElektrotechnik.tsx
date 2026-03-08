@@ -232,6 +232,8 @@ const LocalSeoElektrotechnik = () => {
 
       <ImplementationRoadmap data={industryImplementationData.elektrotechnik} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.elektrotechnik} />
+
       <IndustryComparisonTable data={industryComparisonData.elektrotechnik} />
 
       <section id="faq">
