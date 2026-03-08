@@ -176,7 +176,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Search Console → Abdeckung prüfen, robots.txt validieren</p>
           </div>
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">🐌 Ladezeit-Probleme</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">🐌 Ladezeit & Core Web Vitals Probleme</h3>
             <p className="text-gray-700 mb-2">Server langsam, große Bilder, zu viele Skripte. Core Web Vitals im roten Bereich.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> PageSpeed Insights prüfen, Bilder komprimieren, Caching aktivieren</p>
           </div>
