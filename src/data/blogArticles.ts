@@ -962,7 +962,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local SEO for Hair Salons & Beauty Studios: The Ultimate Guide with Booking Integration 2026",
-      metaTitle: "Local SEO for Hair Salons & Beauty Studios | The Ultimate Guide 2026",
+      metaTitle: "Local SEO Hair Salons & Beauty Studios | Guide 2026",
       metaDescription: "The longest SEO guide for hair salons, beauty studios & barbershops. With booking integration, keyword generator and portfolio tips. 6,000+ words!",
       excerpt: "From keywords to booking systems to social media: Everything hair salons and beauty studios need to be found on Google.",
       category: "Beauty & Wellness"
