@@ -146,29 +146,32 @@ export const keywordMapping: KeywordAssignment[] = [
   {
     slug: "google-maps-ranking-verbessern",
     primaryKeyword: "google maps ranking verbessern",
-    secondaryKeywords: ["google maps optimierung", "local seo google maps", "maps ranking steigern"],
-    lsiKeywords: ["google maps platz 1", "local pack ranking", "maps sichtbarkeit erhöhen", "google maps tipps"],
+    secondaryKeywords: ["maps ranking steigern", "google maps optimierung anleitung", "maps ranking aktionsplan"],
+    lsiKeywords: ["google maps platz 1", "7 schritte maps ranking", "maps sichtbarkeit erhöhen"],
     searchIntent: "informational",
     targetSearchVolume: "high",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Actionable how-to — differentiated from ranking-faktoren (theory) and algorithmus (explanation)"
   },
   {
     slug: "google-maps-seo-ranking-faktoren",
-    primaryKeyword: "google maps ranking faktoren",
-    secondaryKeywords: ["ranking faktoren maps", "local pack faktoren", "maps seo signale"],
-    lsiKeywords: ["proximity relevance prominence", "maps ranking algorithmus", "google maps 2026"],
+    primaryKeyword: "google maps ranking signale gewichtung",
+    secondaryKeywords: ["ranking signale maps", "local pack signale prozent", "maps seo 2026 gewichtung"],
+    lsiKeywords: ["gbp signale 32 prozent", "bewertungen gewichtung", "citations einfluss maps"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Signal weighting deep-dive — differentiated from algorithmus (concept) and verbessern (action)"
   },
   {
     slug: "wie-google-maps-ranking-funktioniert",
-    primaryKeyword: "wie google maps ranking funktioniert",
-    secondaryKeywords: ["google maps algorithmus", "proximity relevance prominence", "local pack ranking"],
-    lsiKeywords: ["maps ranking erklärung", "google maps seo faktoren", "maps ranking verstehen"],
+    primaryKeyword: "google maps algorithmus erklärt",
+    secondaryKeywords: ["maps algorithmus proximity relevance prominence", "local pack algorithmus", "wie google maps funktioniert"],
+    lsiKeywords: ["maps ranking erklärung", "drei säulen google maps", "algorithmus verständnis"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Conceptual explainer — differentiated from signale (data) and verbessern (action)"
   },
   {
     slug: "google-maps-spam-erkennen",
