@@ -18,6 +18,7 @@ import LastReviewedBadge from "./LastReviewedBadge";
 import ArticleHook from "./ArticleHook";
 import ArticleConclusion from "./ArticleConclusion";
 import LlmFriendlySummary from "./LlmFriendlySummary";
+import SectionAiSummary from "./SectionAiSummary";
 import LocalSEOAuditCTA from "./LocalSEOAuditCTA";
 import PillarChecklistLinks from "./PillarChecklistLinks";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
@@ -536,6 +537,7 @@ const ArticleLayout = ({
           itemType="https://schema.org/Article"
         >
           <ArticleHook slug={article.slug} />
+          <SectionAiSummary slug={article.slug} />
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
