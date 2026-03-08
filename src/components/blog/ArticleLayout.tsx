@@ -540,6 +540,7 @@ const ArticleLayout = ({
         >
           <ArticleHook slug={article.slug} />
           <SectionAiSummary slug={article.slug} />
+          <InlineDefinitionBox slug={article.slug} />
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
