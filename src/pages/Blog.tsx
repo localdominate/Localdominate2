@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight, BookOpen, Sparkles } from "lucide-react";
+import { BookOpen, Sparkles } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
@@ -8,14 +8,7 @@ import ArticleCard from "@/components/blog/ArticleCard";
 import CategoryFilter from "@/components/blog/CategoryFilter";
 import { getAllArticles, getCategories, getArticleCountByCategory } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 const Blog = () => {
   const { language } = useLanguage();
