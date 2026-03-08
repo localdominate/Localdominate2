@@ -16,6 +16,7 @@ import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
+import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
