@@ -3794,8 +3794,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-link-building-blueprint",
     de: {
       title: "Local Link Building Blueprint: Der komplette Leitfaden für lokale Backlinks 2026",
-      metaTitle: "Local Link Building Blueprint | Alle Strategien für lokale Backlinks 2026",
-      metaDescription: "Der umfassendste Local-Linkbuilding-Guide im DACH-Raum: Partnerschaften, Sponsoring, PR, Events, IHK-Links, Outreach-Templates & 90-Tage-Plan. Mit DACH-spezifischen Quellen.",
+      metaTitle: "Local Link Building Blueprint | DACH-Guide 2026",
+      metaDescription: "Local-Linkbuilding-Guide für DACH: Partnerschaften, Sponsoring, PR, Events, IHK-Links & Outreach-Templates. Mit 90-Tage-Plan.",
       excerpt: "Alle lokalen Linkbuilding-Strategien in einem Blueprint: Von IHK-Links über Vereinssponsoring und lokale PR bis zu Outreach-Templates — mit 90-Tage-Aktionsplan für den DACH-Markt.",
       category: "Content & Marketing"
     },
