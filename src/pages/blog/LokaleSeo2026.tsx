@@ -96,6 +96,10 @@ const LokaleSeo2026 = () => {
           { q: "Wie bereite ich mich auf KI-Suche vor?", a: "Strukturiere deine Inhalte klar, nutze Schema.org Markup und beantworte häufige Fragen direkt auf deiner Website und im Google Profil." },
           { q: "Ist Voice Search wirklich so wichtig?", a: "Für lokale Suchen ja. \"In der Nähe\" und \"jetzt geöffnet\" Anfragen erfolgen oft per Sprache, besonders unterwegs." },
           { q: "Was ist der wichtigste SEO-Trend 2026?", a: "Nutzererfahrung. Google misst immer genauer, ob Kunden bei dir finden, was sie suchen. Zufriedene Kunden = besseres Ranking." },
+          { q: "Wie wirken sich Google AI Overviews auf lokale Unternehmen aus?", a: "AI Overviews zeigen Zusammenfassungen über lokalen Suchergebnissen. Für transaktionale Suchen ('Friseur in der Nähe') ist der Einfluss gering. Für informationelle Suchen sinkt der Click-Through um bis zu 40 %. Optimiere mit strukturierten Daten und Fact-first-Content, um als AI-Quelle zitiert zu werden." },
+          { q: "Brauche ich als lokales Unternehmen eine llms.txt-Datei?", a: "Ja, llms.txt hilft AI-Crawlern, deine Unternehmensdaten strukturiert zu erfassen. Trage dort Name, Adresse, Leistungen, Öffnungszeiten und FAQs ein. Der Aufwand ist minimal (30 Minuten), der potenzielle Nutzen für AI-Sichtbarkeit aber erheblich." },
+          { q: "Wie bereite ich meine Website auf Zero-Click-Searches vor?", a: "Optimiere dein Google Business Profil vollständig, nutze FAQ-Schema für häufige Fragen und stelle sicher, dass Google alle relevanten Informationen (Preise, Öffnungszeiten, Services) direkt in den SERPs anzeigen kann. Ziel: Auch ohne Klick als Experte sichtbar sein." },
+          { q: "Welche Tools helfen bei der lokalen SEO-Optimierung 2026?", a: "Kostenlos: Google Business Profil, Google Search Console, PageSpeed Insights. Bezahlt: BrightLocal (Rankings & Citations), Semrush (Keyword-Recherche), Whitespark (Citation-Audit). Für AI-Monitoring: Google Search Console AI-Berichte und Referrer-Tracking für chatgpt.com und perplexity.ai." },
         ]
       }
     },
