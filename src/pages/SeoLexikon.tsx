@@ -200,6 +200,20 @@ const TermDetail = ({ term, onTermClick, readTerms, onToggleRead }: {
         </TabsList>
 
         <TabsContent value="overview" className="mt-4 space-y-4">
+          {/* Featured Snippet Definition Block */}
+          {term.snippetDefinition && (
+            <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+              <CardHeader className="pb-2">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Sparkles className="w-5 h-5 text-primary" />
+                  Kurzantwort
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground font-medium leading-relaxed" data-speakable="true" data-ai-summary="true" data-featured-snippet="true">{term.snippetDefinition}</p>
+              </CardContent>
+            </Card>
+          )}
           <Card className="bg-card/50 border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
