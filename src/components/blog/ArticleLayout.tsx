@@ -400,6 +400,9 @@ const ArticleLayout = ({
           {children}
         </article>
 
+        {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
+        <ArticleContextLinks articleSlug={article.slug} />
+
         {/* Social Share */}
         <div className="my-8 py-6 border-t border-b border-border">
           <SocialShare 
