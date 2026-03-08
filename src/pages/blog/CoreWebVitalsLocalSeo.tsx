@@ -153,7 +153,7 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-muted/50 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2">Wichtig zu wissen</h4>
+            <h3 className="font-semibold mb-2">Von FID zu INP: Der neue Interaktivitäts-Standard</h3>
             <p className="text-muted-foreground">
               Im März 2024 hat Google <strong>FID (First Input Delay) durch INP</strong> ersetzt. INP misst alle Interaktionen während des gesamten Besuchs, nicht nur die erste. Wenn Ihre alten Ressourcen noch von FID sprechen – INP ist der neue Standard.
             </p>
