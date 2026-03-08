@@ -445,7 +445,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card className="bg-primary/5">
             <CardContent className="p-4">
               <Clock className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Notfall-Suchen</h4>
+              <h3 className="font-semibold mb-2">Core Web Vitals bei Notfall-Suchen</h3>
               <p className="text-sm text-muted-foreground">
                 Bei "Zahnarzt Notdienst" oder "Autowerkstatt in der Nähe" zählt jede Sekunde. Langsame Seiten verlieren.
               </p>
