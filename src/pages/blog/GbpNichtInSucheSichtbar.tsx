@@ -77,8 +77,25 @@ const GbpNichtInSucheSichtbar: React.FC = () => {
     "local-seo-fehler"
   ];
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Google Business Profil sichtbar machen – Diagnose und Lösung",
+    description: "Schritt-für-Schritt Diagnose warum dein Google Business Profil nicht in der Suche erscheint und wie du die Sichtbarkeit wiederherstellst.",
+    totalTime: "P21D",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
+    step: [
+      { "@type": "HowToStep", position: 1, name: "Sichtbarkeitsproblem eingrenzen", text: "Kläre ob dein Profil gar nicht indexiert, nur bei bestimmten Keywords unsichtbar oder nur im Local Pack fehlend ist." },
+      { "@type": "HowToStep", position: 2, name: "Verifizierungsstatus prüfen", text: "Der häufigste Grund: Fehlende Verifizierung. Prüfe im GBP-Dashboard ob dein Profil vollständig verifiziert ist." },
+      { "@type": "HowToStep", position: 3, name: "Profil-Vollständigkeit sicherstellen", text: "Fülle alle Felder aus: Kategorie, Beschreibung, Öffnungszeiten, Telefon, Website. Unvollständige Profile werden seltener angezeigt." },
+      { "@type": "HowToStep", position: 4, name: "Fotos und Aktivität hinzufügen", text: "Lade mindestens 10 Fotos hoch, schreibe regelmäßig Posts und antworte auf Bewertungen. Aktive Profile werden bevorzugt indexiert." },
+      { "@type": "HowToStep", position: 5, name: "Richtlinienverstöße beheben", text: "Prüfe ob Keywords im Firmennamen, eine falsche Kategorie oder eine nicht-existente Adresse zur Unsichtbarkeit führen." },
+      { "@type": "HowToStep", position: 6, name: "Indexierung abwarten oder beschleunigen", text: "Neue Profile brauchen 1-3 Wochen. Beschleunige durch NAP-Konsistenz, Citations in Verzeichnissen und erste Bewertungen." },
+    ],
+  };
+
   return (
-    <ArticleLayout article={articleData} faqItems={faqs}>
+    <ArticleLayout article={articleData} faqItems={faqs} additionalSchema={howToSchema}>
       <div className="max-w-4xl mx-auto">
         <TableOfContents items={toc} />
 

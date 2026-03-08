@@ -83,8 +83,25 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
     "local-seo-audit-checkliste"
   ];
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Plötzlichen Google Ranking-Verlust diagnostizieren und beheben",
+    description: "Diagnose-Guide für lokale Unternehmen: 12 Ursachen für plötzliche Ranking-Einbrüche identifizieren und systematisch beheben.",
+    totalTime: "P14D",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
+    step: [
+      { "@type": "HowToStep", position: 1, name: "Google-Update prüfen", text: "Prüfe das Google Search Status Dashboard und SEO-News ob ein Algorithmus-Update stattfand. Bei breiten Updates sind viele Seiten betroffen." },
+      { "@type": "HowToStep", position: 2, name: "Search Console auf Fehler prüfen", text: "Öffne die Google Search Console und suche nach manuellen Maßnahmen, Indexierungsfehlern oder Sicherheitsproblemen." },
+      { "@type": "HowToStep", position: 3, name: "GBP-Status kontrollieren", text: "Prüfe ob dein Google Business Profil suspendiert, unvollständig oder als Duplicate markiert wurde." },
+      { "@type": "HowToStep", position: 4, name: "Technische Website-Probleme ausschließen", text: "Teste Ladezeit, Mobile-Friendliness, SSL-Zertifikat und Crawlbarkeit. Prüfe ob robots.txt oder noindex-Tags den Zugriff blockieren." },
+      { "@type": "HowToStep", position: 5, name: "Konkurrenz-Veränderungen analysieren", text: "Prüfe ob Konkurrenten optimiert haben oder neue starke Wettbewerber im Markt erschienen sind." },
+      { "@type": "HowToStep", position: 6, name: "Gezielte Gegenmaßnahmen umsetzen", text: "Setze je nach identifizierter Ursache die passende Maßnahme um: Content-Optimierung, technische Fixes oder GBP-Reaktivierung." },
+    ],
+  };
+
   return (
-    <ArticleLayout article={articleData} faqItems={faqs}>
+    <ArticleLayout article={articleData} faqItems={faqs} additionalSchema={howToSchema}>
       <div className="max-w-4xl mx-auto">
         <TableOfContents items={toc} />
 

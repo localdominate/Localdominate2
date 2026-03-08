@@ -83,8 +83,25 @@ const GbpSuspendiertReaktivieren: React.FC = () => {
     { question: "Beeinträchtigt eine Suspendierung mein SEO-Ranking dauerhaft?", answer: "Nach erfolgreicher Reaktivierung erholt sich dein Ranking normalerweise innerhalb von 2-4 Wochen." }
   ];
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Google Business Profil nach Suspendierung reaktivieren",
+    description: "Schritt-für-Schritt Anleitung zur Reaktivierung eines suspendierten Google Business Profils – von der Diagnose bis zum erfolgreichen Appeal.",
+    totalTime: "P7D",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
+    step: [
+      { "@type": "HowToStep", position: 1, name: "Suspendierungstyp identifizieren", text: "Prüfe ob du eine Soft Suspension (Profil bearbeitbar, aber unsichtbar) oder Hard Suspension (kein Zugriff mehr) hast. Dies bestimmt den Lösungsweg." },
+      { "@type": "HowToStep", position: 2, name: "Richtlinienverstoß analysieren", text: "Überprüfe dein Profil auf häufige Verstöße: Keyword-Stuffing im Namen, falsche Adresse, verbotene Inhalte oder fehlende Nachweise." },
+      { "@type": "HowToStep", position: 3, name: "Verstoß korrigieren", text: "Behebe alle identifizierten Probleme. Entferne Keywords aus dem Firmennamen, korrigiere die Adresse und lösche unzulässige Inhalte." },
+      { "@type": "HowToStep", position: 4, name: "Nachweise vorbereiten", text: "Sammle Gewerbeschein, Handelsregisterauszug, Mietvertrag oder Stromrechnung als Nachweis der Geschäftstätigkeit am angegebenen Standort." },
+      { "@type": "HowToStep", position: 5, name: "Reinstatement-Formular ausfüllen", text: "Reiche über das Google Reinstatement-Formular einen Appeal ein. Beschreibe die durchgeführten Korrekturen und füge Nachweise bei." },
+      { "@type": "HowToStep", position: 6, name: "Auf Antwort warten und nachfassen", text: "Google antwortet innerhalb von 3-7 Werktagen. Bei Ablehnung warte 7 Tage, korrigiere weitere Punkte und reiche erneut ein." },
+    ],
+  };
+
   return (
-    <ArticleLayout article={articleData} tocItems={tocItems} faqItems={faqItems}>
+    <ArticleLayout article={articleData} tocItems={tocItems} faqItems={faqItems} additionalSchema={howToSchema}>
       <AutoLexikonText>
         {/* Hero Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

@@ -116,8 +116,25 @@ const GbpVerifizierungFehlgeschlagen: React.FC = () => {
     { question: "Was wenn ich ein Service Area Business habe?", answer: "Bei SABs wird die Verifizierung an deine Privatadresse geschickt, die du dann verbergen kannst." }
   ];
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Google Business Profil Verifizierung erfolgreich abschließen",
+    description: "Anleitung zur Lösung aller häufigen Verifizierungsprobleme bei Google Business Profile – von fehlender Postkarte bis abgelehnter Video-Verifizierung.",
+    totalTime: "P14D",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
+    step: [
+      { "@type": "HowToStep", position: 1, name: "Adressdaten prüfen", text: "Stelle sicher, dass deine Geschäftsadresse exakt korrekt ist – inkl. Hausnummer, Stockwerk und Zusatz. 45% aller Verifizierungsprobleme entstehen durch Adressfehler." },
+      { "@type": "HowToStep", position: 2, name: "Verifizierungsmethode wählen", text: "Wähle die verfügbare Methode mit der höchsten Erfolgsrate: Video (89%), E-Mail (92%), Telefon (85%) oder Postkarte (78%)." },
+      { "@type": "HowToStep", position: 3, name: "Postkarte korrekt anfordern", text: "Falls Postkarte: Fordere den Code an und ändere danach KEINE Profildaten. Der Code ist 30 Tage gültig. Max. 5 Postkarten möglich." },
+      { "@type": "HowToStep", position: 4, name: "Code eingeben oder Video einreichen", text: "Gib den erhaltenen Code im GBP-Dashboard ein oder reiche ein Video mit Außenansicht, Schild und Innenraum ein." },
+      { "@type": "HowToStep", position: 5, name: "Bei Ablehnung alternative Methode nutzen", text: "Nach 2 Fehlversuchen bietet Google oft alternative Methoden an. Wechsle zur Video-Verifizierung für die höchste Erfolgsrate." },
+      { "@type": "HowToStep", position: 6, name: "Google Support kontaktieren", text: "Falls alle Methoden scheitern, kontaktiere den Google Business Support mit Gewerbenachweis und detaillierter Problembeschreibung." },
+    ],
+  };
+
   return (
-    <ArticleLayout article={articleData} tocItems={tocItems} faqItems={faqItems}>
+    <ArticleLayout article={articleData} tocItems={tocItems} faqItems={faqItems} additionalSchema={howToSchema}>
       <AutoLexikonText>
         {/* Hero Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

@@ -99,8 +99,25 @@ const DuplicateListingEntfernen: React.FC = () => {
     }
   ];
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Doppelte Google Business Einträge finden und entfernen",
+    description: "Schritt-für-Schritt Anleitung zum Aufspüren und Löschen von Duplicate Listings in Google Business Profile und Google Maps.",
+    totalTime: "P7D",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
+    step: [
+      { "@type": "HowToStep", position: 1, name: "Duplicates in Google Maps suchen", text: "Suche deinen Firmennamen und Adresse in Google Maps. Prüfe ob mehrere Einträge mit ähnlichem Namen, gleicher Adresse oder Telefonnummer erscheinen." },
+      { "@type": "HowToStep", position: 2, name: "Duplicate-Typ bestimmen", text: "Identifiziere ob es sich um exakte Duplikate, Abteilungs-Duplicates, Adressvarianten oder Telefon-Duplicates handelt." },
+      { "@type": "HowToStep", position: 3, name: "Eigentümerschaft klären", text: "Stelle fest, welcher Eintrag dir gehört und welcher fremd erstellt wurde. Beanspruche ggf. den Haupteintrag über das GBP-Dashboard." },
+      { "@type": "HowToStep", position: 4, name: "Merge oder Löschung beantragen", text: "Melde Duplicates über 'Änderung vorschlagen' > 'Geschlossen oder existiert nicht' oder beantrage einen Merge beim Google Support." },
+      { "@type": "HowToStep", position: 5, name: "Bewertungen sichern", text: "Prüfe ob der zu löschende Eintrag Bewertungen hat. Bei einem Merge können Bewertungen teilweise übertragen werden." },
+      { "@type": "HowToStep", position: 6, name: "Quartalsweisen Audit einrichten", text: "Richte einen regelmäßigen Audit alle 3 Monate ein, um neue Duplicates frühzeitig zu erkennen und zu entfernen." },
+    ],
+  };
+
   return (
-    <ArticleLayout article={articleData} tocItems={tocItems}>
+    <ArticleLayout article={articleData} tocItems={tocItems} additionalSchema={howToSchema}>
       <AutoLexikonText>
         {/* Hero Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
