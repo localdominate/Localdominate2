@@ -41,6 +41,7 @@ const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
 const LocalSeoRestaurant = lazy(() => import("./pages/blog/LocalSeoRestaurant"));
+const LocalSeoAnwaelteKanzleien = lazy(() => import("./pages/blog/LocalSeoAnwaelteKanzleien"));
 const GoogleMyBusiness = lazy(() => import("./pages/blog/GoogleMyBusiness"));
 const LokaleSeo2026 = lazy(() => import("./pages/blog/LokaleSeo2026"));
 const NapKonsistenz = lazy(() => import("./pages/blog/NapKonsistenz"));
@@ -208,6 +209,7 @@ const App = () => (
                 <Route path="/blog/google-maps-ranking-verbessern" element={<GoogleMapsRanking />} />
                 <Route path="/blog/google-bewertungen-bekommen" element={<GoogleBewertungen />} />
                 <Route path="/blog/local-seo-fuer-restaurants" element={<LocalSeoRestaurant />} />
+                <Route path="/blog/local-seo-anwaelte-kanzleien" element={<LocalSeoAnwaelteKanzleien />} />
                 <Route path="/blog/google-my-business-optimieren" element={<GoogleMyBusiness />} />
                 <Route path="/blog/lokale-suchmaschinenoptimierung-2026" element={<LokaleSeo2026 />} />
                 <Route path="/blog/nap-konsistenz-local-seo" element={<NapKonsistenz />} />
