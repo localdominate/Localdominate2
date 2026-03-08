@@ -7,6 +7,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
+import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
 import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoKoelnImg from "@/assets/blog/local-seo-koeln.jpg";
@@ -514,6 +515,32 @@ const LocalSeoKoeln = () => {
           ))}
         </div>
       </section>
+
+      <LocalBusinessEcosystem config={{
+        city: 'Köln',
+        population: '1,1 Mio.',
+        businesses: '~80.000',
+        avgSearchVolume: '32.000',
+        economicFacts: [
+          { label: 'Kaufkraftindex', value: '105%', trend: 'stable', insight: 'Leicht über Durchschnitt — breite Mittelschicht' },
+          { label: 'Medienstandort', value: '#2 nach HH', trend: 'stable', insight: 'RTL, WDR, Produktionsfirmen = kreative Keywords' },
+          { label: 'Messe-Besucher/Jahr', value: '2 Mio.', trend: 'up', insight: 'Gamescom, Photokina, DMEXCO — temporäre Nachfragespitzen' },
+          { label: 'Karneval-Touristen', value: '1,5 Mio.', trend: 'stable', insight: 'Karneval ist DER saisonale Keyword-Peak in Köln' },
+        ],
+        industryClusters: [
+          { name: 'Gastronomie & Brauhäuser', icon: '🍺', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '70 im Pack', avgRating: '4.2', avgReviews: '85', gap: 'Brauhäuser oft ohne aktuelle Google Posts und Events', strategy: 'Kölsch-Keywords + Veedel-Fokus + Event-basierte Posts + Karneval-Content' },
+          { name: 'Medien & Produktion', icon: '📺', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '25 im Pack', avgRating: '4.4', avgReviews: '18', gap: 'Produktionsfirmen ohne lokale SEO-Präsenz', strategy: 'Veedel-Keywords + Portfolio-Content + Google Posts mit Projekten' },
+          { name: 'Handwerk', icon: '🔧', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '20 im Pack', avgRating: '3.9', avgReviews: '14', gap: 'Extremer Mangel an digital sichtbaren Handwerkern', strategy: 'Veedel-Abdeckung + Notdienst-Keywords + Bewertungs-Offensive' },
+          { name: 'Einzelhandel & Shopping', icon: '🛍️', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '55 im Pack', avgRating: '4.1', avgReviews: '35', gap: 'Schildergasse-Stores ohne GBP, Veedel-Läden unsichtbar', strategy: 'Click & Collect + Veedel-Einkaufsstraßen + Produkt-Posts' },
+          { name: 'Gesundheit', icon: '⚕️', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '40 im Pack', avgRating: '3.7', avgReviews: '28', gap: 'Niedrigste Antwort-Rate auf Bewertungen im DACH-Vergleich', strategy: 'Online-Terminbuchung + Bewertungs-Management + Spezialisierung' },
+        ],
+        underservedNiches: [
+          { niche: 'Karneval-Services', reason: '1,5 Mio. Karnevalstouristen, kaum saisonale Local SEO', potentialKeywords: ['Kostümverleih Köln', 'Karneval Schminken Köln', 'Perücke kaufen Köln Karneval'] },
+          { niche: 'Veedel-Handwerker', reason: 'Kölner suchen nach Veedel, kaum jemand optimiert dafür', potentialKeywords: ['Elektriker Ehrenfeld', 'Maler Nippes Köln', 'Schreiner Südstadt'] },
+          { niche: 'Gaming & Digital (Gamescom-Effekt)', reason: 'Gamescom zieht Gaming-Community an, lokale Services profitieren', potentialKeywords: ['Gaming Café Köln', 'PC Reparatur Köln', 'Streaming Setup Köln'] },
+        ],
+        strategicInsight: 'Köln ist ein "Veedel-Markt" — ähnlich wie Berlins Kieze suchen Kölner hyper-lokal. Die Karnevals-Saison ist der größte saisonale Faktor aller deutschen Städte. Wer Karneval-Keywords 3 Monate vorher vorbereitet, gewinnt massiv Traffic.',
+      }} />
 
       <GeoTargetedKeywords config={{
         city: 'Köln',
