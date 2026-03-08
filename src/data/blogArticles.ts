@@ -4231,6 +4231,7 @@ const PUBLISHED_SLUGS = new Set([
   "semantic-seo-topical-authority",
   "schema-strategie-dokument",
   "local-seo-statistiken-daten",
+  "ai-visibility-checklist",
   "local-seo-vs-organisch",
   "google-maps-seo-vs-organic-seo",
   "ai-search-vs-traditional-search",
