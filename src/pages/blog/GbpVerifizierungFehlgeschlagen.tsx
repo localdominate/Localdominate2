@@ -8,6 +8,7 @@ import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import VerifizierungsProblemWizard from '@/components/blog/VerifizierungsProblemWizard';
 import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
 import { Mail, Phone, Video, MapPin, CheckCircle, Clock, AlertCircle, ArrowRight, FileText, Camera, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
