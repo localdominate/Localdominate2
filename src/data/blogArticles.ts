@@ -3865,24 +3865,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "wie-google-maps-ranking-funktioniert",
     de: {
-      title: "Wie Google Maps Ranking funktioniert: Nähe, Relevanz & Bekanntheit erklärt",
-      metaTitle: "Wie Google Maps Ranking funktioniert | 2026 Guide",
-      metaDescription: "So bestimmt Google dein Maps-Ranking: Nähe, Relevanz und Bekanntheit erklärt mit Praxis-Beispielen und Optimierungstipps.",
-      excerpt: "Google Maps Rankings basieren auf 3 Faktoren: Nähe, Relevanz und Bekanntheit. Erfahre wie sie zusammenspielen — mit Praxis-Beispielen, Signaltabellen und konkretem Aktionsplan.",
+      title: "Google Maps Algorithmus erklärt: Nähe, Relevanz & Bekanntheit im Detail",
+      metaTitle: "Google Maps Algorithmus erklärt | Nähe, Relevanz, Bekanntheit",
+      metaDescription: "So funktioniert der Google Maps Algorithmus: Die 3 Säulen Nähe, Relevanz und Bekanntheit mit Praxis-Beispielen und Einflussfaktoren-Diagramm.",
+      excerpt: "Der Google Maps Algorithmus basiert auf 3 Säulen: Nähe, Relevanz und Bekanntheit. So spielen sie zusammen — mit Diagrammen und Branchenbeispielen.",
       category: "Google Maps"
     },
     en: {
-      title: "How Google Maps Ranking Works: Proximity, Relevance & Prominence Explained",
-      metaTitle: "How Google Maps Ranking Works | Guide 2026",
-      metaDescription: "How Google determines your Maps ranking: Proximity, relevance and prominence explained with practical examples and optimization tips.",
-      excerpt: "Google Maps rankings are based on 3 factors: proximity, relevance and prominence. Learn how they interact — with practical examples and an action plan.",
+      title: "Google Maps Algorithm Explained: Proximity, Relevance & Prominence in Detail",
+      metaTitle: "Google Maps Algorithm Explained | Proximity, Relevance, Prominence",
+      metaDescription: "How the Google Maps algorithm works: The 3 pillars proximity, relevance and prominence with practical examples and influence factor diagrams.",
+      excerpt: "The Google Maps algorithm is based on 3 pillars: proximity, relevance and prominence. How they interact — with diagrams and industry examples.",
       category: "Google Maps"
     },
     readingTime: 18,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "🗺️",
-    keywords: ["google maps ranking", "wie google maps ranking funktioniert", "proximity relevance prominence", "local pack ranking", "maps seo faktoren", "google maps algorithmus"],
+    keywords: ["google maps algorithmus", "maps algorithmus erklärt", "proximity relevance prominence", "wie google maps funktioniert", "local pack algorithmus"],
     featured: true
   },
   // === SCHEMA STRATEGY DOCUMENT ===
