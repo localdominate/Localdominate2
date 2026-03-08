@@ -112,7 +112,7 @@ const LocalSeoStatistiken = () => {
   return (
     <ArticleLayout
       article={article}
-      jsonLd={jsonLd}
+      additionalSchema={jsonLd}
       faqItems={faqItems}
     >
       <TableOfContents items={tocItems} />
