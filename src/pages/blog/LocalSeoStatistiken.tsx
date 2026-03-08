@@ -379,7 +379,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 8: Methodology */}
       <section id="methodik">
-        <h2>Methodik & Quellenverzeichnis</h2>
+        <h2>Woher stammen diese Daten?</h2>
         <p>
           Alle Statistiken auf dieser Seite stammen aus öffentlich zugänglichen Studien, offiziellen 
           Branchenberichten und eigenen Datenanalysen. Wir priorisieren primäre Datenquellen und 

@@ -287,7 +287,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="erfolg-messen">
-        <h2>Erfolg messen</h2>
+        <h2>Wie misst du den Erfolg deiner Google Posts?</h2>
         <AutoLexikonText>
           <h3>Verfügbare Metriken</h3>
           <p>

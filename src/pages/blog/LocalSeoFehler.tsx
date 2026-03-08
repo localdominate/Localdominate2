@@ -807,7 +807,7 @@ const LocalSeoFehler = () => {
 
       {/* Schnell-Checkliste */}
       <section id="checkliste" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Schnell-Checkliste: Alle 15 Fehler</h2>
+        <h2 className="text-3xl font-bold mb-6">Ist dein Local SEO fehlerfrei? Die Schnell-Checkliste</h2>
 
         <div className="bg-muted/30 rounded-lg p-6">
           <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
