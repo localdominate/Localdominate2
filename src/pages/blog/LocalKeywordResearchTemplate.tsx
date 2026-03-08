@@ -330,8 +330,7 @@ const LocalKeywordResearchTemplate = () => {
   };
 
   return (
-    <ArticleLayout article={article}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    <ArticleLayout article={article} additionalSchema={jsonLd} faqItems={faqItems}>
 
       <TableOfContents items={tocItems} />
       <KeyTakeawaysBox title="Auf einen Blick" items={keyTakeaways} />

@@ -32,8 +32,16 @@ const LokaleInfluencerKooperationen = () => {
   const { language } = useLanguage();
   const article = getArticleBySlug("lokale-influencer-kooperationen", language)!;
 
+  const faqItems = [
+    { question: "Was kostet eine Influencer-Kooperation für lokale Unternehmen?", answer: "Viele lokale Kooperationen funktionieren über Produkttausch (0 € Cashkosten). Bei bezahlten Kooperationen liegen Mikro-Influencer typischerweise bei 50–300 € pro Post." },
+    { question: "Bringen Influencer-Kooperationen wirklich SEO-Vorteile?", answer: "Ja, über mehrere Wege: Blogger mit eigener Website liefern Backlinks, Social-Media-Posts generieren Brand Mentions und Geo-Signale, und der erhöhte Brand Search Traffic ist ein positives Ranking-Signal." },
+    { question: "Wie finde ich Influencer in meiner Stadt?", answer: "Suchen Sie auf Instagram nach lokalen Hashtags, prüfen Sie Location Tags Ihrer Gegend, googlen Sie 'Blogger [Stadt]' und fragen Sie Ihre bestehenden Kunden – oft haben Sie bereits Kunden mit Reichweite." },
+    { question: "Wie oft sollte ein Influencer über mein Unternehmen posten?", answer: "Für maximale Wirkung empfehlen wir 2–4 Posts pro Monat über mindestens 3 Monate. Einmalige Posts haben kaum nachhaltigen SEO-Effekt. Regelmäßige Erwähnungen bauen echte Markenassoziation auf." },
+    { question: "Muss Influencer-Werbung gekennzeichnet werden?", answer: "Ja, in Deutschland, Österreich und der Schweiz ist die Kennzeichnung von Werbung Pflicht. Auch Produkttausch gilt als Werbung und muss gekennzeichnet werden." },
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

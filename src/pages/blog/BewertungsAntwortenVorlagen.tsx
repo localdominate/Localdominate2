@@ -31,8 +31,15 @@ const BewertungsAntwortenVorlagen = () => {
     "Auch negative Bewertungen bieten Chancen zur Imagepflege"
   ];
 
+  const faqItems = [
+    { question: "Muss ich auf jede Bewertung antworten?", answer: "Idealerweise ja. Besonders wichtig sind Antworten auf negative Bewertungen und ausführliche positive Reviews. Bei vielen Bewertungen priorisieren Sie 1-2 Sterne Reviews und sehr detaillierte positive Bewertungen." },
+    { question: "Wie schnell sollte ich auf Bewertungen antworten?", answer: "Ideal ist eine Antwort innerhalb von 24 Stunden, spätestens nach 48 Stunden. Bei negativen Bewertungen ist eine schnelle Reaktion besonders wichtig." },
+    { question: "Was tun bei Fake-Bewertungen?", answer: "Antworten Sie sachlich und neutral. Melden Sie die Bewertung parallel bei Google zur Überprüfung. Formulieren Sie z.B.: 'Wir können diesen Vorfall leider nicht nachvollziehen. Bitte kontaktieren Sie uns direkt.'" },
+    { question: "Kann ich negative Bewertungen löschen lassen?", answer: "Nur wenn sie gegen Googles Richtlinien verstoßen (Spam, falsche Inhalte, Beleidigungen). Echte negative Kundenerfahrungen können nicht gelöscht werden. Fokussieren Sie sich auf professionelle Antworten." },
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage
