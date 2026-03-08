@@ -3482,6 +3482,30 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["local seo ranking faktoren", "lokale ranking faktoren", "google local ranking", "local pack ranking faktoren", "local seo signale", "ranking faktoren local seo 2026", "gbp ranking faktoren"],
     featured: true
   },
+  // === PILLAR PAGE: AI-SUCHE FÜR LOKALE UNTERNEHMEN ===
+  {
+    slug: "ai-suche-lokale-unternehmen",
+    de: {
+      title: "AI Search Optimization für lokale Unternehmen: Der komplette Guide 2026",
+      metaTitle: "AI Search Optimization für lokale Unternehmen | Guide 2026",
+      metaDescription: "Wie AI-Suchmaschinen Quellen auswählen und wie lokale Unternehmen in AI-Empfehlungen erscheinen. GEO-Strategien, Schema Markup, llms.txt & Praxis-Checkliste für den DACH-Raum.",
+      excerpt: "Alles über AI Search Optimization für lokale Unternehmen: Wie ChatGPT, Google AI Overviews und Perplexity Quellen auswählen — und wie du dein Business dort sichtbar machst.",
+      category: "AI & Zukunft"
+    },
+    en: {
+      title: "AI Search Optimization for Local Businesses: Complete Guide 2026",
+      metaTitle: "AI Search Optimization for Local Businesses | Guide 2026",
+      metaDescription: "How AI search engines choose sources and how local businesses can appear in AI-generated recommendations. GEO strategies, Schema Markup, llms.txt & practical checklist.",
+      excerpt: "Everything about AI Search Optimization for local businesses: How ChatGPT, Google AI Overviews and Perplexity choose sources — and how to make your business visible.",
+      category: "AI & Future"
+    },
+    readingTime: 24,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🤖",
+    keywords: ["ai search optimization", "geo optimierung", "ai suche lokale unternehmen", "chatgpt local seo", "google ai overviews local", "llms.txt", "ai suchmaschinenoptimierung", "generative engine optimization"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3576,6 +3600,7 @@ const PUBLISHED_SLUGS = new Set([
   "website-content-ai-suchmaschinen",
   "local-seo-strategie-kleine-unternehmen",
   "local-seo-ranking-faktoren-erklaert",
+  "ai-suche-lokale-unternehmen",
 ]);
 
 // Get only published articles (with pages), deduplicated

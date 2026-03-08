@@ -140,6 +140,7 @@ const UeberUns = lazy(() => import("./pages/UeberUns"));
 const UltimateGuideLocalSeo = lazy(() => import("./pages/blog/UltimateGuideLocalSeo"));
 const LocalSeoStrategieKleineUnternehmen = lazy(() => import("./pages/blog/LocalSeoStrategieKleineUnternehmen"));
 const LocalSeoRankingFaktorenErklaert = lazy(() => import("./pages/blog/LocalSeoRankingFaktorenErklaert"));
+const AiSucheLokaleUnternehmen = lazy(() => import("./pages/blog/AiSucheLokaleUnternehmen"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -290,6 +291,7 @@ const App = () => (
                 <Route path="/blog/ultimate-guide-local-seo" element={<UltimateGuideLocalSeo />} />
                 <Route path="/blog/local-seo-strategie-kleine-unternehmen" element={<LocalSeoStrategieKleineUnternehmen />} />
                 <Route path="/blog/local-seo-ranking-faktoren-erklaert" element={<LocalSeoRankingFaktorenErklaert />} />
+                <Route path="/blog/ai-suche-lokale-unternehmen" element={<AiSucheLokaleUnternehmen />} />
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
