@@ -71,6 +71,11 @@ const ANCHOR_TEXT_MAP: Record<string, Omit<AnchorTextRecommendation, "slug" | "p
     variations: ["der komplette lokale Linkbuilding-Leitfaden", "alle lokalen Backlink-Strategien"],
     naturalAnchor: "unser umfassender Linkbuilding-Blueprint für lokale Unternehmen",
   },
+  "local-seo-checkliste-komplett": {
+    primaryAnchor: "die komplette Local SEO Checkliste",
+    variations: ["Local SEO Checkliste mit 80+ Punkten", "Schritt-für-Schritt Local SEO Anleitung"],
+    naturalAnchor: "unsere umfassende Local-SEO-Implementierungs-Checkliste",
+  },
 
   // === HUB PAGES ===
   "google-business-profil-hub": {

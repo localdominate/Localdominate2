@@ -3650,6 +3650,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-ranking-faktoren-erklaert",
   "ai-suche-lokale-unternehmen",
   "local-link-building-blueprint",
+  "local-seo-checkliste-komplett",
 ]);
 
 // Get only published articles (with pages), deduplicated
