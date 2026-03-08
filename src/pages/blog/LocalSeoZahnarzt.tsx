@@ -13,6 +13,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
@@ -309,6 +311,7 @@ const LocalSeoZahnarzt = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.zahnarzt} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.zahnarzt} />
       <IndustryRankingChallenges config={industryRankingConfigs.zahnarzt} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.zahnarzt} />
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />
 
       <SourcesSection sources={[

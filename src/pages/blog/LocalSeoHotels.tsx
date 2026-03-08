@@ -8,6 +8,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
@@ -972,6 +974,7 @@ const LocalSeoHotels = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.hotels} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.hotels} />
       <IndustryRankingChallenges config={industryRankingConfigs.hotels} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.hotels} />
       <HelpfulnessWidget articleSlug="local-seo-hotels" />
     </ArticleLayout>
   );

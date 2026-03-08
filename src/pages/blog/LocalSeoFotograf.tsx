@@ -11,6 +11,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
@@ -405,6 +407,7 @@ const LocalSeoFotograf = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.fotograf} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.fotograf} />
       <IndustryRankingChallenges config={industryRankingConfigs.fotograf} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.fotograf} />
       <HelpfulnessWidget articleSlug="local-seo-fotograf" />
 
       <SourcesSection sources={[

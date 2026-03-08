@@ -12,6 +12,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
@@ -344,6 +346,7 @@ const LocalSeoRestaurant = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.restaurant} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.restaurant} />
       <IndustryRankingChallenges config={industryRankingConfigs.restaurant} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.restaurant} />
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />
 
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="end" />

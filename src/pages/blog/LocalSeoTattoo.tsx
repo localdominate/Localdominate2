@@ -8,6 +8,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -218,6 +220,7 @@ const LocalSeoTattoo = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.tattoo} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.tattoo} />
       <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.tattoo} />
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
       <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />

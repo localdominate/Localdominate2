@@ -8,6 +8,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -219,6 +221,7 @@ const LocalSeoYoga = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.yoga} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.yoga} />
       <IndustryRankingChallenges config={industryRankingConfigs.yoga} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.yoga} />
       <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
       <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />
       <SourcesSection sources={sources} />

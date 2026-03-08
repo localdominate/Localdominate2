@@ -10,6 +10,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -715,6 +717,7 @@ const LocalSeoAnwaelte = () => {
         <SearchIntentAnalysis config={searchIntentConfigs.anwaelte} />
         <IndustryKeywordOpportunities config={industryKeywordConfigs.anwaelte} />
         <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
+        <ContentUpgradeSection config={contentUpgradeConfigs.anwaelte} />
         <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 
         <BlogCTAABTest articleSlug="local-seo-anwaelte-kanzleien" position="end" />

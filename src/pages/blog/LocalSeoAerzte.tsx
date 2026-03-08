@@ -10,6 +10,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -933,6 +935,7 @@ const LocalSeoAerzte = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.aerzte} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.aerzte} />
       <IndustryRankingChallenges config={industryRankingConfigs.aerzte} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.aerzte} />
       <HelpfulnessWidget articleSlug="local-seo-aerzte-praxen" />
     </ArticleLayout>
   );

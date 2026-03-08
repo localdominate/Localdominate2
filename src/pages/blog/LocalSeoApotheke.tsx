@@ -8,6 +8,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -214,6 +216,7 @@ const LocalSeoApotheke = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.apotheke} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.apotheke} />
       <IndustryRankingChallenges config={industryRankingConfigs.apotheke} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.apotheke} />
       <HelpfulnessWidget articleSlug="local-seo-apotheke" />
       <RelatedIndustryGuides currentSlug="local-seo-apotheken" />
       <SourcesSection sources={sources} />

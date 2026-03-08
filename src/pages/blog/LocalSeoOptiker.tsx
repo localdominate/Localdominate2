@@ -11,6 +11,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
@@ -274,6 +276,7 @@ const LocalSeoOptiker = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.optiker} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.optiker} />
       <IndustryRankingChallenges config={industryRankingConfigs.optiker} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.optiker} />
       <HelpfulnessWidget articleSlug="local-seo-optiker" />
 
       <SourcesSection sources={[

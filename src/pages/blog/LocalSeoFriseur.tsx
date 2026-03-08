@@ -8,6 +8,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -1233,6 +1235,7 @@ const LocalSeoFriseur: React.FC = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.friseur} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.friseur} />
       <IndustryRankingChallenges config={industryRankingConfigs.friseur} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.friseur} />
       <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>
   );

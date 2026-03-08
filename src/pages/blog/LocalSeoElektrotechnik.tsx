@@ -11,6 +11,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
@@ -293,6 +295,7 @@ const LocalSeoElektrotechnik = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.elektrotechnik} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.elektrotechnik} />
       <IndustryRankingChallenges config={industryRankingConfigs.elektrotechnik} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.elektrotechnik} />
       <HelpfulnessWidget articleSlug="local-seo-elektrotechnik" />
 
       <SourcesSection sources={[

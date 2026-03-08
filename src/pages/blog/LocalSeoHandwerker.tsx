@@ -13,6 +13,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
@@ -654,6 +656,7 @@ const LocalSeoHandwerker = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.handwerker} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.handwerker} />
       <IndustryRankingChallenges config={industryRankingConfigs.handwerker} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.handwerker} />
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <RelatedIndustryGuides currentSlug="local-seo-handwerker" />

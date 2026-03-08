@@ -8,6 +8,8 @@ import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOppor
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
+import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -325,6 +327,7 @@ const LocalSeoBackerei = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.baeckerei} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.baeckerei} />
       <IndustryRankingChallenges config={industryRankingConfigs.baeckerei} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.baeckerei} />
       <HelpfulnessWidget articleSlug="local-seo-baeckerei" />
     </ArticleLayout>
   );
