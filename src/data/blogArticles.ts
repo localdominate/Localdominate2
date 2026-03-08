@@ -4019,6 +4019,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-roadmap-90-tage",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
+  "schema-strategie-dokument",
 ]);
 
 // Get only published articles (with pages), deduplicated

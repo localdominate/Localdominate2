@@ -335,6 +335,7 @@ const App = () => (
                 <Route path="/blog/google-maps-ranking-tracker" element={<GoogleMapsRankingTracker />} />
                 <Route path="/blog/local-seo-strategy-planner" element={<LocalSeoStrategyPlanner />} />
                 <Route path="/blog/local-seo-roadmap-90-tage" element={<LocalSeoRoadmap />} />
+                <Route path="/blog/schema-strategie-dokument" element={<SchemaStrategieDokument />} />
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
