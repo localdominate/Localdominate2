@@ -3079,8 +3079,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "gbp-suspendiert-reaktivieren",
     de: {
       title: "Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung)",
-      metaTitle: "GBP Suspendiert? So reaktivierst du dein Profil | Anleitung 2026",
-      metaDescription: "Dein Google Business Profil wurde suspendiert? Erfahre Schritt für Schritt, wie du eine Soft oder Hard Suspension erkennst und dein Profil erfolgreich reaktivierst.",
+      metaTitle: "GBP Suspendiert? Profil reaktivieren | 2026",
+      metaDescription: "Google Business Profil suspendiert? So erkennst du Soft oder Hard Suspension und reaktivierst dein Profil erfolgreich.",
       excerpt: "Der komplette Guide zur Reaktivierung eines suspendierten Google Business Profils mit Diagnose-Tool und Appeal-Vorlagen.",
       category: "Troubleshooting"
     },
