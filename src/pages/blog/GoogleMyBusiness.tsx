@@ -108,11 +108,11 @@ const GoogleMyBusiness = () => {
     },
     en: {
       tocItems: [
-        { id: "grundlagen", title: "Basics: Setting Up and Verifying Your Profile" },
-        { id: "vollstaendigkeit", title: "Maximizing Profile Completeness" },
-        { id: "kategorien", title: "Choosing the Right Categories" },
-        { id: "posts", title: "Using Google Posts Strategically" },
-        { id: "insights", title: "Understanding and Using Insights" },
+        { id: "grundlagen", title: "How Do You Set Up Your Google Business Profile?" },
+        { id: "vollstaendigkeit", title: "How Do You Maximize Profile Completeness?" },
+        { id: "kategorien", title: "How Do You Choose the Right Categories?" },
+        { id: "posts", title: "How Do You Use Google Posts Strategically?" },
+        { id: "insights", title: "What Do Google Business Insights Reveal?" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
       intro: "Your <strong>Google Business Profile</strong> (formerly Google My Business) is your business's storefront in Google Search. A fully optimized profile can increase your local visibility by up to 70%. This guide shows you every step.",
