@@ -107,7 +107,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </p>
 
         <div className="bg-blue-50 rounded-xl p-6 my-8">
-          <h4 className="font-bold text-lg mb-4">🔍 Sofort-Diagnose Checkliste:</h4>
+          <h3 className="font-bold text-lg mb-4">🔍 Ranking-Verlust Sofort-Diagnose Checkliste</h3>
           <div className="space-y-3">
             {[
               "Ist die Website erreichbar? (Serverprobleme ausschließen)",
