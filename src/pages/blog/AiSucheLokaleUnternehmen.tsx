@@ -8,6 +8,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AiSearchOptNote from "@/components/blog/AiSearchOptNote";
+import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -747,6 +748,7 @@ Attribution-required: yes`}
 
       <AiSearchOptNote articleSlug="ai-suche-lokale-unternehmen" />
 
+      <AiCitationStrategyBox articleSlug="ai-suche-lokale-unternehmen" />
       <HelpfulnessWidget articleSlug="ai-suche-lokale-unternehmen" />
 
       {/* FAQ */}

@@ -8,6 +8,7 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
+import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
@@ -555,6 +556,7 @@ const AiVisibilityChecklist = () => {
       <BlogFAQSection faqs={faqItems} />
       <SourcesSection sources={sources} />
       <ArticleCTA />
+      <AiCitationStrategyBox articleSlug="ai-visibility-checklist" />
       <HelpfulnessWidget articleSlug="ai-visibility-checklist" />
     </ArticleLayout>
   );

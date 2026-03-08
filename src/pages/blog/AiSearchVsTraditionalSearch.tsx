@@ -3,6 +3,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
@@ -472,6 +473,7 @@ const AiSearchVsTraditionalSearch = () => {
         <BlogFAQSection faqs={faqItems} />
       </section>
 
+      <AiCitationStrategyBox articleSlug="ai-search-vs-traditional-search" />
       <HelpfulnessWidget articleSlug="ai-search-vs-traditional-search" />
 
       <SourcesSection sources={sources} />

@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogImage from "@/components/blog/BlogImage";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { getArticleBySlug } from "@/data/blogArticles";
@@ -495,6 +496,7 @@ const WebsiteContentAiSuchmaschinen = () => {
         { title: "llms.txt Standard", url: "https://llmstxt.org/", type: "documentation", description: "Community-Standard für AI-Crawler-Informationen" },
       ]} />
 
+      <AiCitationStrategyBox articleSlug="website-content-ai-suchmaschinen" />
       <HelpfulnessWidget articleSlug="website-content-ai-suchmaschinen" />
       <BlogCTAABTest articleSlug="website-content-ai-suchmaschinen" position="end" />
     </ArticleLayout>

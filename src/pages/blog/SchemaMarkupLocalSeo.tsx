@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LocalBusinessSchemaGenerator from "@/components/blog/LocalBusinessSchemaGenerator";
@@ -1226,6 +1227,7 @@ const SchemaMarkupLocalSeo = () => {
         </div>
       </section>
 
+      <AiCitationStrategyBox articleSlug="schema-markup-local-seo" />
       <HelpfulnessWidget articleSlug="schema-markup-local-seo" />
     </ArticleLayout>
   );
