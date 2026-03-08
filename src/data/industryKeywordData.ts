@@ -218,7 +218,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   zahnarzt: {
     industry: "Zahnärzte",
-    quickWin: "„Zahnarzt Angstpatienten [Stadt]" ist ein hoch-konvertierendes Long-Tail-Keyword mit geringem Wettbewerb.",
+    quickWin: "'Zahnarzt Angstpatienten [Stadt]' ist ein hoch-konvertierendes Long-Tail-Keyword mit geringem Wettbewerb.",
     clusters: [
       {
         name: "Zahnarzt + Stadt",
