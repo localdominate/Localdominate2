@@ -216,10 +216,10 @@ const LocalSeoRankingFaktorenErklaert = () => {
           <TableBody>
             {[
               ["NAP im Footer/Kontaktseite", "Sehr hoch", "Identisch mit GBP auf jeder Seite"],
-              ["Lokale Keywords in Title Tags", "Sehr hoch", "„[Service] [Stadt] | [Markenname]""],
+              ["Lokale Keywords in Title Tags", "Sehr hoch", "[Service] [Stadt] | [Markenname]"],
               ["LocalBusiness Schema Markup", "Hoch", "JSON-LD mit allen Feldern"],
               ["Lokale Landingpages", "Hoch", "1 Seite pro Service + Stadt/Stadtteil"],
-              ["H1 mit lokalem Bezug", "Hoch", "„Ihr [Service] in [Stadt]""],
+              ["H1 mit lokalem Bezug", "Hoch", "Ihr [Service] in [Stadt]"],
               ["Lokaler Content (Blog)", "Mittel", "Regionale Ratgeber, Case Studies"],
               ["Interne Verlinkung", "Mittel", "Hub-Spoke-Struktur mit lokalen Ankertexten"],
               ["Mobile-Optimierung", "Hoch", "Responsive, schnelle Ladezeit, Touch-optimiert"],
