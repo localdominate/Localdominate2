@@ -10,6 +10,7 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
+import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import { CheckCircle, AlertTriangle, Target, Wrench } from "lucide-react";
 import {
   Table,
