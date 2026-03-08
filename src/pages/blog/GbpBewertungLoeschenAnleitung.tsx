@@ -7,6 +7,7 @@ import AutoLexikonText from '../../components/blog/AutoLexikonText';
 import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
+import ReviewResponseTemplates from '@/components/blog/ReviewResponseTemplates';
 import BlogImage from '../../components/blog/BlogImage';
 import gbpBewertungLoeschenImage from '../../assets/blog/gbp-bewertung-loeschen.jpg';
 
