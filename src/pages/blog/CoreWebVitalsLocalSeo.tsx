@@ -87,7 +87,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Introduction */}
       <section id="intro">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum <LexikonLink term="Core Web Vitals" /> für lokale Unternehmen entscheidend sind</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum sind <LexikonLink term="Core Web Vitals" /> für lokale Unternehmen entscheidend?</h2>
         <p className="text-lg mb-4" data-featured-snippet="true" data-speakable="true">
           <strong>Core Web Vitals</strong> sind drei von Google definierte Metriken zur Messung der Nutzererfahrung: LCP (Largest Contentful Paint) misst die Ladezeit, INP (Interaction to Next Paint) die Reaktionsgeschwindigkeit und CLS (Cumulative Layout Shift) die visuelle Stabilität. Sie sind seit 2021 ein offizieller Ranking-Faktor. Nur 33 % aller Websites bestehen alle drei Werte – für lokale Unternehmen mit 92 % mobilem Traffic ist die Optimierung besonders kritisch.
         </p>
