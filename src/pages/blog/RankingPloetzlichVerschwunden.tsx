@@ -252,7 +252,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </ul>
         </div>
 
-        <h2 id="penalty" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Manuelle Abstrafung erkennen</h2>
+        <h2 id="penalty" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Penalty & manuelle Abstrafung erkennen</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Manuelle Penalties sind selten, aber schwerwiegend. So erkennst und behebst du sie:
