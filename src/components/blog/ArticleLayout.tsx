@@ -17,6 +17,7 @@ import StickyTableOfContents from "./StickyTableOfContents";
 import LastReviewedBadge from "./LastReviewedBadge";
 import ArticleHook from "./ArticleHook";
 import ArticleConclusion from "./ArticleConclusion";
+import LlmFriendlySummary from "./LlmFriendlySummary";
 import LocalSEOAuditCTA from "./LocalSEOAuditCTA";
 import PillarChecklistLinks from "./PillarChecklistLinks";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
@@ -541,6 +542,7 @@ const ArticleLayout = ({
           <PillarChecklistLinks articleSlug={article.slug} />
           <LocalSEOAuditCTA variant="standard" articleSlug={article.slug} />
           <ArticleConclusion slug={article.slug} />
+          <LlmFriendlySummary slug={article.slug} />
         </article>
 
         {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
