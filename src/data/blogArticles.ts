@@ -268,24 +268,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-audit-checkliste",
     de: {
-      title: "Local SEO Audit Checkliste: 50+ Punkte für mehr Sichtbarkeit",
-      metaTitle: "Local SEO Audit Checkliste 2026: 50+ Prüfpunkte",
-      metaDescription: "Komplette Local SEO Audit Checkliste mit 50+ Punkten. Google Business, Website, Citations, Bewertungen - alles prüfen!",
-      excerpt: "Die ultimative Checkliste für dein Local SEO Audit. Prüfe alle wichtigen Faktoren für maximale lokale Sichtbarkeit.",
+      title: "Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring",
+      metaTitle: "Local SEO Audit: Ist-Analyse & Diagnose | 2026",
+      metaDescription: "Local SEO Audit durchführen: 50+ Diagnose-Punkte mit Scoring-System. GBP, Website, Citations und Bewertungen systematisch analysieren.",
+      excerpt: "Führe eine professionelle Local SEO Ist-Analyse durch: 50+ Diagnose-Punkte mit Scoring und Handlungsempfehlungen.",
       category: "Strategie",
     },
     en: {
-      title: "Local SEO Audit Checklist: 50+ Points for More Visibility",
-      metaTitle: "Local SEO Audit Checklist 2026: 50+ Check Points",
-      metaDescription: "Complete Local SEO audit checklist with 50+ points. Google Business, website, citations, reviews - check everything!",
-      excerpt: "The ultimate checklist for your Local SEO audit. Check all important factors for maximum local visibility.",
+      title: "Local SEO Audit: Status Analysis with 50+ Diagnostic Points & Scoring",
+      metaTitle: "Local SEO Audit: Status Analysis & Diagnosis | 2026",
+      metaDescription: "Conduct a Local SEO audit: 50+ diagnostic points with scoring system. Systematically analyze GBP, website, citations and reviews.",
+      excerpt: "Conduct a professional Local SEO status analysis: 50+ diagnostic points with scoring and action recommendations.",
       category: "Strategy",
     },
     readingTime: 15,
     publishedAt: "2026-01-07",
     updatedAt: "2026-01-07",
     icon: "✅",
-    keywords: ["local seo audit", "seo checklist", "local seo analysis"],
+    keywords: ["local seo audit", "seo diagnose", "local seo analyse", "seo scoring"],
     featured: true
   },
 
