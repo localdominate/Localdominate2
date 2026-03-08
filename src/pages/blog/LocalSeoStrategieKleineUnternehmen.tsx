@@ -12,6 +12,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import LocalCitationWorkflows from "@/components/blog/LocalCitationWorkflows";
+import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
 import { CheckCircle, AlertTriangle, Target, Wrench } from "lucide-react";
 import {
   Table,
