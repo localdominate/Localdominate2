@@ -78,6 +78,11 @@ const ANCHOR_TEXT_MAP: Record<string, Omit<AnchorTextRecommendation, "slug" | "p
   },
 
   // === HUB PAGES ===
+  "google-maps-seo-hub": {
+    primaryAnchor: "Google Maps SEO Hub",
+    variations: ["alle Google Maps SEO Guides", "Maps-SEO-Artikelsammlung"],
+    naturalAnchor: "unser Google Maps SEO Hub mit allen Guides",
+  },
   "google-business-profil-hub": {
     primaryAnchor: "Google Business Profil Guides",
     variations: ["alle GBP-Anleitungen", "Google Business Hub"],

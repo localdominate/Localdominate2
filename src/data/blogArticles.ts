@@ -3554,6 +3554,30 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["local seo checkliste", "local seo checklist", "lokale seo checkliste", "local seo schritt für schritt", "local seo implementierung", "local seo anleitung", "local seo 2026"],
     featured: true
   },
+  // === HUB PAGE: GOOGLE MAPS SEO ===
+  {
+    slug: "google-maps-seo-hub",
+    de: {
+      title: "Google Maps SEO Hub: Alle Guides für lokale Sichtbarkeit",
+      metaTitle: "Google Maps SEO Hub – Alle Guides für Top-Rankings 2026",
+      metaDescription: "Das umfassendste Google Maps SEO Hub: Rankings verbessern, GBP optimieren, Bewertungen managen, Insights analysieren und Probleme lösen. 25+ Artikel.",
+      excerpt: "Dein zentraler Einstiegspunkt für Google Maps SEO: Rankings, GBP-Optimierung, Bewertungen, Analyse und Troubleshooting — 25+ verlinkte Guides.",
+      category: "Google Maps"
+    },
+    en: {
+      title: "Google Maps SEO Hub: All Guides for Local Visibility",
+      metaTitle: "Google Maps SEO Hub – All Guides for Top Rankings 2026",
+      metaDescription: "The most comprehensive Google Maps SEO hub: improve rankings, optimize GBP, manage reviews, analyze insights and fix issues. 25+ articles.",
+      excerpt: "Your central entry point for Google Maps SEO: rankings, GBP optimization, reviews, analysis and troubleshooting — 25+ linked guides.",
+      category: "Google Maps"
+    },
+    readingTime: 8,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🗺️",
+    keywords: ["google maps seo", "google maps ranking", "maps optimierung", "google maps marketing", "lokale sichtbarkeit google maps"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
