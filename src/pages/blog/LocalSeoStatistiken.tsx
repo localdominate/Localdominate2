@@ -26,14 +26,14 @@ const LocalSeoStatistiken = () => {
   if (!article) return null;
 
   const tocItems = [
-    { id: "ueberblick", title: "Local SEO in Zahlen" },
-    { id: "google-business", title: "Google Business Profil Statistiken" },
-    { id: "bewertungen", title: "Die Macht der Bewertungen" },
-    { id: "mobile", title: "Mobile lokale Suche" },
-    { id: "branchen", title: "Branchenspezifische Daten" },
-    { id: "ranking-faktoren", title: "Ranking-Faktoren 2026" },
-    { id: "trends", title: "Trends & Prognosen" },
-    { id: "methodik", title: "Methodik & Quellen" },
+    { id: "ueberblick", title: "Wie viele Suchen haben lokale Absicht?" },
+    { id: "google-business", title: "Welche Kennzahlen hat das Google Business Profil?" },
+    { id: "bewertungen", title: "Wie stark beeinflussen Bewertungen das Ranking?" },
+    { id: "mobile", title: "Wie wichtig ist Mobile für lokale Suche?" },
+    { id: "branchen", title: "Welche Branchen profitieren am meisten von Local SEO?" },
+    { id: "ranking-faktoren", title: "Welche Faktoren bestimmen das lokale Ranking 2026?" },
+    { id: "trends", title: "Welche Local SEO Trends prägen 2026?" },
+    { id: "methodik", title: "Woher stammen diese Daten?" },
   ];
 
   const faqItems = [
