@@ -164,17 +164,37 @@ const ArticleLayout = ({
 
   const articleOgImage = getOgImage(article.slug);
   
-  // Author/Organization Schema
+  // Author Profile & Schema
+  const articleAuthor = getArticleAuthor(article.slug);
   const authorSchema = {
+    "@type": "Person" as const,
+    "@id": `https://localdominate.org/#person-${articleAuthor.slug}`,
+    "name": articleAuthor.name,
+    "jobTitle": articleAuthor.schemaOrg.jobTitle,
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "https://localdominate.org/#organization",
+      "name": "Local Dominator",
+      "url": "https://localdominate.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://localdominate.org/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "knowsAbout": articleAuthor.schemaOrg.knowsAbout,
+    "sameAs": articleAuthor.schemaOrg.sameAs,
+  };
+
+  const publisherSchema = {
     "@type": "Organization",
     "@id": "https://localdominate.org/#organization",
     "name": "Local Dominator",
     "url": "https://localdominate.org",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://localdominate.org/logo.png",
-      "width": 512,
-      "height": 512
+      "url": "https://localdominate.org/logo.png"
     },
     "sameAs": [
       "https://twitter.com/localdominator",
