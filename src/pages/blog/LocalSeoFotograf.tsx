@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -317,6 +319,8 @@ const LocalSeoFotograf = () => {
           </ul>
         </AutoLexikonText>
       </section>
+
+      <ImplementationRoadmap data={industryImplementationData.fotograf} />
 
       <section id="faq">
         <h2>Häufige Fragen</h2>

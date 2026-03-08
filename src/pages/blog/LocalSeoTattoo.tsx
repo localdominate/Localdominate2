@@ -5,6 +5,8 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -172,6 +174,8 @@ const LocalSeoTattoo = () => {
       </section>
 
       <BlogCTAABTest articleSlug="local-seo-tattoo-piercing" position="end" />
+
+      <ImplementationRoadmap data={industryImplementationData.tattoo} />
 
       <section id="faq" className="mb-12 scroll-mt-20">
         <h2 className="text-2xl font-bold mb-6">Häufige Fragen zu Local SEO für Tattoo-Studios</h2>

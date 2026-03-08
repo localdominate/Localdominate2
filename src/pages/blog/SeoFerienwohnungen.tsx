@@ -4,6 +4,8 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -290,6 +292,8 @@ const SeoFerienwohnungen = () => {
           Weniger Provision. Mehr Direktbuchungen. Mehr Kontrolle.
         </p>
       </div>
+
+      <ImplementationRoadmap data={industryImplementationData.ferienwohnungen} />
 
       <h2 id="faq">Häufige Fragen zu SEO für Ferienwohnungen</h2>
 

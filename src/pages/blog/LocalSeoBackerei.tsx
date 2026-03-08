@@ -7,6 +7,8 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, MapPin, Star, Clock, Camera, TrendingUp, Users, Wheat, Cake, Coffee } from "lucide-react";
 import {
@@ -272,6 +274,8 @@ const LocalSeoBackerei = () => {
       </section>
 
       <BlogCTAABTest articleSlug="local-seo-baeckerei" position="end" />
+
+      <ImplementationRoadmap data={industryImplementationData.baeckerei} />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">

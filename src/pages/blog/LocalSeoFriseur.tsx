@@ -42,6 +42,8 @@ import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer
 import ArticleCTA from '@/components/blog/ArticleCTA';
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 
 const LocalSeoFriseur: React.FC = () => {
   const { language } = useLanguage();
@@ -1068,6 +1070,8 @@ const LocalSeoFriseur: React.FC = () => {
 
       {/* CTA */}
       <ArticleCTA variant="box" />
+
+      <ImplementationRoadmap data={industryImplementationData.friseur} />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">

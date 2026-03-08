@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
@@ -210,6 +212,8 @@ const LocalSeoZahnarzt = () => {
       </section>
 
       <IndustryLandingCTA industry="arztpraxis" />
+
+      <ImplementationRoadmap data={industryImplementationData.zahnarzt} />
 
       <section id="faq">
         <h2>Häufige Fragen</h2>

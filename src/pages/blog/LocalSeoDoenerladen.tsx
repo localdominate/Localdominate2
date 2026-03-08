@@ -4,6 +4,8 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -954,6 +956,8 @@ const LocalSeoDoenerladen = () => {
       </section>
 
       <BlogCTAABTest articleSlug="local-seo-doener-kebab-imbiss" position="end" />
+
+      <ImplementationRoadmap data={industryImplementationData.doener} />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">

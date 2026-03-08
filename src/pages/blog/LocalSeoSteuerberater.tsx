@@ -5,6 +5,8 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -716,6 +718,8 @@ Herzliche Grüße,
 }`}</pre>
         </div>
       </section>
+
+      <ImplementationRoadmap data={industryImplementationData.steuerberater} />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
