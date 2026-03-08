@@ -13,6 +13,13 @@ const LocalSeoNotdienstKeywords = () => {
   const { language } = useLanguage();
   const article = getArticleBySlug("local-seo-notdienst-keywords", language)!;
 
+  const faqItems = [
+    { question: "Lohnt sich SEO für Notdienst-Keywords?", answer: "Absolut. Obwohl die Conversion-Wahrscheinlichkeit bei jedem Klick hoch ist, sind auch die Werbekosten bei Google Ads sehr hoch. Organische Rankings für Notdienst-Keywords sind daher besonders wertvoll und rechnen sich schnell." },
+    { question: "Wie schnell muss meine Website laden?", answer: "Für Notdienst-Suchen sollte Ihre Website in unter 2 Sekunden laden. Bei Notfällen haben Menschen keine Geduld – ist Ihre Seite langsam, klicken sie auf das nächste Ergebnis. Mobile-Ladezeit ist besonders kritisch." },
+    { question: "Sollte ich 24/7-Verfügbarkeit anbieten?", answer: "Das hängt von Ihrer Branche und Kapazität ab. Wenn Sie keinen echten 24/7-Service bieten können, seien Sie transparent. Falsche Versprechen führen zu schlechten Bewertungen. Besser: Ehrliche Notdienst-Zeiten angeben." },
+    { question: "Wie wichtig sind Bewertungen bei Notdiensten?", answer: "Extrem wichtig. Bei Notfällen vertrauen Menschen auf das erste Ergebnis mit guten Bewertungen. Eine 5-Sterne-Bewertung mit vielen Reviews kann den Unterschied machen, ob jemand Sie anruft oder weitersucht." },
+  ];
+
   const tocItems = [
     { id: "notdienst-suchen", title: "So suchen Menschen im Notfall" },
     { id: "keyword-typen", title: "Notdienst-Keyword-Typen" },
