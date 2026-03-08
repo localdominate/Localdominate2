@@ -48,7 +48,8 @@ const subHubResources: Record<string, ResourceItem[]> = {
 };
 
 const FaqSubHub = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const location = useLocation();
+  const slug = location.pathname.split("/blog/")[1];
   const [expandedFaqs, setExpandedFaqs] = useState<Set<number>>(new Set());
 
   const category = faqCategories.find((c) => c.slug === slug);
