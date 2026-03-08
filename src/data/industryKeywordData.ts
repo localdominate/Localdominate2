@@ -429,7 +429,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   yoga: {
     industry: "Yoga & Pilates Studios",
-    quickWin: "Kurs-spezifische Keywords wie „Hot Yoga [Stadt]" oder „Prenatal Yoga [Stadt]" haben überraschend niedrige Konkurrenz.",
+    quickWin: "Kurs-spezifische Keywords wie 'Hot Yoga [Stadt]' oder 'Prenatal Yoga [Stadt]' haben überraschend niedrige Konkurrenz.",
     clusters: [
       {
         name: "Studio + Standort",
