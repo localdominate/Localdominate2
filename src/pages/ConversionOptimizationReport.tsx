@@ -316,7 +316,7 @@ const ConversionOptimizationReport = () => {
   }
 
   if (!user) {
-    return <AdminLoginScreen onSignIn={signIn} error={authError} />;
+    return <AdminLoginScreen onLogin={signIn} isLoading={authLoading} error={authError} />;
   }
 
   if (!isAdmin) {
