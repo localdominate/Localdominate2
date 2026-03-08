@@ -426,7 +426,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Bedeutung für Local SEO */}
       <section id="local-seo">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Core Web Vitals Bedeutung für Local SEO</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Warum sind Core Web Vitals für Local SEO entscheidend?</h2>
         
         <p className="mb-4">
           Core Web Vitals sind für lokale Unternehmen <strong>besonders relevant</strong>:
