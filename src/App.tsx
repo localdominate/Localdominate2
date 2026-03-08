@@ -140,6 +140,7 @@ const HubContentMarketing = lazy(() => import("./pages/blog/HubContentMarketing"
 const HubToolsRessourcen = lazy(() => import("./pages/blog/HubToolsRessourcen"));
 const HubAiZukunft = lazy(() => import("./pages/blog/HubAiZukunft"));
 const HubTroubleshooting = lazy(() => import("./pages/blog/HubTroubleshooting"));
+const HubCaseStudies = lazy(() => import("./pages/blog/HubCaseStudies"));
 const WebsiteContentAiSuchmaschinen = lazy(() => import("./pages/blog/WebsiteContentAiSuchmaschinen"));
 const Partner = lazy(() => import("./pages/Partner"));
 const Redaktionsrichtlinien = lazy(() => import("./pages/Redaktionsrichtlinien"));
