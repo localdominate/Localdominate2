@@ -212,7 +212,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 5: Industry Stats */}
       <section id="branchen">
-        <h2>Branchenspezifische Local SEO Statistiken</h2>
+        <h2>Welche Branchen profitieren am meisten von Local SEO?</h2>
         <p>
           Jede Branche hat eigene Suchgewohnheiten, Conversion-Muster und Wettbewerbsdynamiken. 
           Hier findest du die wichtigsten Datenpunkte für 22 Branchen — von Gastronomie über Gesundheit 
