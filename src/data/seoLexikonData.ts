@@ -16,7 +16,7 @@ export interface SEOTerm {
   shortDescription: string;
   fullDescription: string;
   /** Concise 40-60 word definition optimized for Google Featured Snippets. Starts with "[Term] ist/bezeichnet/sind..." */
-  snippetDefinition: string;
+  snippetDefinition?: string;
   features: string[];
   statistics: {
     label: string;
