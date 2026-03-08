@@ -9,6 +9,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
+import ReputationManagementStrategy from "@/components/blog/ReputationManagementStrategy";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -377,6 +378,13 @@ const BewertungsAntwortenVorlagen = () => {
       <SmsReviewTemplates
         title="SMS-Vorlagen: Bewertungen per SMS anfragen"
         description="Der schnellste Kanal mit 98% Oeffnungsrate. Kopierfertige SMS-Templates mit Zeichenzaehler."
+      />
+
+      <ReputationManagementStrategy
+        focus={["response", "growth"]}
+        title="Vom Antworten zum Wachstum: Strategisches Bewertungsmanagement"
+        description="Wie du Antworten auf Bewertungen in eine systematische Wachstumsstrategie verwandelst."
+        compact
       />
 
       <HelpfulnessWidget articleSlug="bewertungs-antworten-vorlagen" />

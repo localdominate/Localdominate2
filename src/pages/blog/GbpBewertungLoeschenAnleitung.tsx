@@ -8,6 +8,7 @@ import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
 import ReviewResponseTemplates from '@/components/blog/ReviewResponseTemplates';
+import ReputationManagementStrategy from '@/components/blog/ReputationManagementStrategy';
 import BlogImage from '../../components/blog/BlogImage';
 import gbpBewertungLoeschenImage from '../../assets/blog/gbp-bewertung-loeschen.jpg';
 
@@ -313,6 +314,13 @@ const GbpBewertungLoeschenAnleitung: React.FC = () => {
           title="Vorlagen: Auf unfaire Bewertungen reagieren"
           description="Professionelle Antwortvorlagen fuer Fake-Bewertungen und Eskalationsfaelle."
           categories={["fake", "escalation"]}
+        />
+
+        <ReputationManagementStrategy
+          focus={["prevention", "monitoring", "response"]}
+          title="Proaktives Bewertungsmanagement"
+          description="Fake-Bewertungen sind nur ein Symptom – mit diesem Framework verhinderst du Probleme und reagierst richtig."
+          compact
         />
 
         <HelpfulnessWidget articleSlug={articleData.slug} />

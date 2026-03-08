@@ -18,6 +18,7 @@ import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
+import ReputationManagementStrategy from "@/components/blog/ReputationManagementStrategy";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
@@ -416,6 +417,11 @@ const GoogleBewertungen = () => {
       <SmsReviewTemplates
         title="SMS-Vorlagen: Bewertungen per Kurznachricht"
         description="SMS haben 98% Oeffnungsrate – der effektivste Kanal fuer Bewertungsanfragen. Kopierfertig mit Zeichenzaehler."
+      />
+
+      <ReputationManagementStrategy
+        title="Reputation Management: Dein 5-Phasen-Framework"
+        description="Von der Praevention bis zum Wachstum – so baust du systematisch eine starke Online-Reputation auf."
       />
 
       <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />

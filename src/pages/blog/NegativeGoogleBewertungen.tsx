@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewResponseGenerator from "@/components/blog/ReviewResponseGenerator";
 import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
+import ReputationManagementStrategy from "@/components/blog/ReputationManagementStrategy";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import StepByStepProcess from "@/components/blog/StepByStepProcess";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -869,6 +870,12 @@ const NegativeGoogleBewertungen = () => {
         title="Antwort-Vorlagen fuer negative Bewertungen"
         description="Kopierfertige Vorlagen fuer jede Art von Kritik. Passe die [Platzhalter] an dein Unternehmen an."
         categories={["negative", "fake", "escalation"]}
+      />
+
+      <ReputationManagementStrategy
+        focus={["response", "recovery"]}
+        title="Krisenmanagement: Reaktion & Wiederherstellung"
+        description="Fokussiertes Framework fuer den professionellen Umgang mit negativen Bewertungen und die Wiederherstellung deiner Reputation."
       />
 
       <HelpfulnessWidget articleSlug="negative-google-bewertungen" />
