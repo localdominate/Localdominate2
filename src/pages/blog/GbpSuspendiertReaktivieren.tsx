@@ -7,7 +7,8 @@ import KeyTakeawaysBox from '@/components/blog/KeyTakeawaysBox';
 import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import SuspendierungsDiagnose from '@/components/blog/SuspendierungsDiagnose';
-import { AlertTriangle, CheckCircle, Clock, FileText, Shield, Phone, Mail, ArrowRight, XCircle, AlertCircle } from 'lucide-react';
+import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import { AlertTriangle, CheckCircle, Clock, FileText, Shield, Phone, Mail, ArrowRight, XCircle, AlertCircle, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const GbpSuspendiertReaktivieren: React.FC = () => {
@@ -332,62 +333,52 @@ const GbpSuspendiertReaktivieren: React.FC = () => {
             Je nach Art der Suspendierung unterscheidet sich das Vorgehen. Hier ist der komplette Prozess:
           </p>
 
-          <div className="space-y-6">
-            {[
+          <StepByStepProcess
+            steps={[
               {
-                step: 1,
                 title: "Suspendierungstyp identifizieren",
-                content: "Nutze unser Diagnose-Tool oben oder prüfe, ob du dich noch in dein GBP Dashboard einloggen kannst. Hard Suspensions zeigen 'Konto gesperrt'."
+                description: "Nutze unser Diagnose-Tool oben oder prüfe, ob du dich noch in dein GBP Dashboard einloggen kannst. Hard Suspensions zeigen 'Konto gesperrt'.",
+                icon: Search,
+                duration: "5 Min.",
+                tip: "Mache Screenshots vom aktuellen Zustand deines Profils als Dokumentation."
               },
               {
-                step: 2,
                 title: "Ursache analysieren",
-                content: "Prüfe dein Profil auf die 8 häufigsten Probleme. Wurde der Firmenname geändert? Stimmt die Adresse? Gibt es verdächtige Bewertungen?"
+                description: "Prüfe dein Profil auf die 8 häufigsten Probleme. Wurde der Firmenname geändert? Stimmt die Adresse? Gibt es verdächtige Bewertungen?",
+                icon: AlertCircle,
+                duration: "15 Min.",
+                tip: "Vergleiche dein Profil mit den Google-Richtlinien Punkt für Punkt."
               },
               {
-                step: 3,
                 title: "Probleme beheben",
-                content: "Korrigiere alle identifizierten Verstöße BEVOR du den Appeal einreichst. Bei Soft Suspensions reicht oft schon das."
+                description: "Korrigiere alle identifizierten Verstöße BEVOR du den Appeal einreichst. Bei Soft Suspensions reicht oft schon das.",
+                icon: CheckCircle,
+                duration: "30-60 Min.",
+                warning: "Ändere den Firmennamen nur, wenn er aktuell falsch ist. Unnötige Änderungen können den Prozess verzögern."
               },
               {
-                step: 4,
                 title: "Nachweise sammeln",
-                content: "Bereite Dokumente vor: Gewerbeschein, Handelsregisterauszug, Fotos vom Geschäft mit sichtbarer Adresse, Stromrechnungen."
+                description: "Bereite Dokumente vor: Gewerbeschein, Handelsregisterauszug, Fotos vom Geschäft mit sichtbarer Adresse, Stromrechnungen.",
+                icon: FileText,
+                duration: "1-2 Std.",
+                tip: "Fotos mit sichtbarer Hausnummer und Firmenschild haben die höchste Erfolgsrate."
               },
               {
-                step: 5,
                 title: "Appeal einreichen",
-                content: "Nutze das Reinstatement Request Formular. Füge alle Nachweise hinzu und erkläre sachlich, was du korrigiert hast."
+                description: "Nutze das Reinstatement Request Formular. Füge alle Nachweise hinzu und erkläre sachlich, was du korrigiert hast.",
+                icon: Mail,
+                duration: "15 Min.",
+                warning: "Reiche nur EINEN Appeal ein. Mehrere parallele Anfragen verzögern die Bearbeitung."
               },
               {
-                step: 6,
-                title: "Geduld haben",
-                content: "Die Bearbeitung dauert 3-7 Werktage. Reiche KEINEN zweiten Appeal ein, das verzögert nur den Prozess."
+                title: "Geduld haben & nachverfolgen",
+                description: "Die Bearbeitung dauert 3-7 Werktage. Prüfe dein E-Mail-Postfach täglich auf Rückfragen von Google.",
+                icon: Clock,
+                duration: "3-7 Tage",
+                tip: "Wurde dein Appeal nach 10 Tagen nicht beantwortet? Dann poste höflich im Google Business Profile Community Forum."
               }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                    {item.step}
-                  </div>
-                  {index < 5 && (
-                    <div className="w-0.5 h-16 bg-primary/30 mx-auto mt-2" />
-                  )}
-                </div>
-                <Card className="flex-1 p-4">
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.content}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+            ]}
+          />
         </section>
 
         {/* Section 6 */}

@@ -7,6 +7,7 @@ import KeyTakeawaysBox from '@/components/blog/KeyTakeawaysBox';
 import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import DuplicateFinderCheckliste from '@/components/blog/DuplicateFinderCheckliste';
+import StepByStepProcess from '@/components/blog/StepByStepProcess';
 import { Copy, Search, Trash2, GitMerge, AlertTriangle, CheckCircle, Clock, ArrowRight, MapPin, Building, Star, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -371,62 +372,56 @@ const DuplicateListingEntfernen: React.FC = () => {
           </p>
 
           <h3 className="text-xl font-semibold mb-4">Variante A: Du hast Zugriff auf das Duplicate</h3>
-          <div className="space-y-4 mb-8">
-            {[
-              { step: 1, title: "Im GBP Dashboard anmelden", content: "Gehe zu business.google.com und wähle das Duplicate-Profil aus." },
-              { step: 2, title: "Zu Profil-Einstellungen navigieren", content: "Klicke auf das Drei-Punkte-Menü → 'Profil entfernen' oder 'Als dauerhaft geschlossen markieren'." },
-              { step: 3, title: "Grund angeben", content: "Wähle 'Duplicate eines anderen Eintrags' als Grund und verlinke dein Hauptprofil." },
-              { step: 4, title: "Bestätigen und warten", content: "Die Entfernung dauert 3-7 Tage. Prüfe danach die Google-Suche." },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-sm">
-                    {item.step}
-                  </div>
-                </div>
-                <Card className="flex-1 p-4">
-                  <h4 className="font-semibold">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground mt-1">{item.content}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <StepByStepProcess
+            steps={[
+              {
+                title: "Im GBP Dashboard anmelden",
+                description: "Gehe zu business.google.com und wähle das Duplicate-Profil aus.",
+                duration: "2 Min."
+              },
+              {
+                title: "Zu Profil-Einstellungen navigieren",
+                description: "Klicke auf das Drei-Punkte-Menü → 'Profil entfernen' oder 'Als dauerhaft geschlossen markieren'.",
+                tip: "Markiere das Profil zuerst als 'dauerhaft geschlossen', bevor du es löschst – das signalisiert Google eine gewollte Aktion."
+              },
+              {
+                title: "Grund angeben",
+                description: "Wähle 'Duplicate eines anderen Eintrags' als Grund und verlinke dein Hauptprofil.",
+                warning: "Stelle sicher, dass du das RICHTIGE Profil löschst – nicht dein Hauptprofil!"
+              },
+              {
+                title: "Bestätigen und warten",
+                description: "Die Entfernung dauert 3-7 Tage. Prüfe danach die Google-Suche.",
+                duration: "3-7 Tage"
+              }
+            ]}
+          />
 
-          <h3 className="text-xl font-semibold mb-4">Variante B: Du hast KEINEN Zugriff</h3>
-          <div className="space-y-4">
-            {[
-              { step: 1, title: "In Google Maps öffnen", content: "Suche das Duplicate in Google Maps und öffne das Profil." },
-              { step: 2, title: "Änderung vorschlagen", content: "Klicke auf 'Änderung vorschlagen' → 'Schließen oder entfernen'." },
-              { step: 3, title: "Duplicate melden", content: "Wähle 'Duplicate eines anderen Ortes' und füge den Link zu deinem echten Profil hinzu." },
-              { step: 4, title: "Geduld haben", content: "Externe Meldungen dauern länger (1-3 Wochen). Bei Ablehnung: Google Support kontaktieren." },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">
-                    {item.step}
-                  </div>
-                </div>
-                <Card className="flex-1 p-4">
-                  <h4 className="font-semibold">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground mt-1">{item.content}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <h3 className="text-xl font-semibold mb-4 mt-10">Variante B: Du hast KEINEN Zugriff</h3>
+          <StepByStepProcess
+            steps={[
+              {
+                title: "In Google Maps öffnen",
+                description: "Suche das Duplicate in Google Maps und öffne das Profil.",
+                duration: "5 Min."
+              },
+              {
+                title: "Änderung vorschlagen",
+                description: "Klicke auf 'Änderung vorschlagen' → 'Schließen oder entfernen'.",
+                tip: "Bitte auch Mitarbeiter und Kunden, die Änderung ebenfalls vorzuschlagen – mehr Meldungen = schnellere Bearbeitung."
+              },
+              {
+                title: "Duplicate melden",
+                description: "Wähle 'Duplicate eines anderen Ortes' und füge den Link zu deinem echten Profil hinzu."
+              },
+              {
+                title: "Geduld haben",
+                description: "Externe Meldungen dauern länger (1-3 Wochen). Bei Ablehnung: Google Support kontaktieren.",
+                duration: "1-3 Wochen",
+                warning: "Melde dich beim Google Business Profile Support mit deinem Fall, falls die Meldung nach 3 Wochen abgelehnt wurde."
+              }
+            ]}
+          />
         </section>
 
         {/* Section 7 */}

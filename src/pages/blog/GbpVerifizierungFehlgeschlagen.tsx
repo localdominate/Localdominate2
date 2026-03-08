@@ -7,6 +7,7 @@ import KeyTakeawaysBox from '@/components/blog/KeyTakeawaysBox';
 import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import VerifizierungsProblemWizard from '@/components/blog/VerifizierungsProblemWizard';
+import StepByStepProcess from '@/components/blog/StepByStepProcess';
 import { Mail, Phone, Video, MapPin, CheckCircle, Clock, AlertCircle, ArrowRight, FileText, Camera, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -277,40 +278,35 @@ const GbpVerifizierungFehlgeschlagen: React.FC = () => {
             Die Postkarten-Verifizierung ist die häufigste Methode, aber auch die fehleranfälligste. So gehst du vor, wenn die Postkarte nicht ankommt:
           </p>
 
-          <div className="space-y-4">
-            <Card className="p-4">
-              <h4 className="font-semibold mb-3">Schritt 1: Warte die volle Zeitspanne ab</h4>
-              <p className="text-sm text-muted-foreground">
-                In Deutschland dauert die Zustellung 5-14 Tage. Fordere erst nach 14 Tagen eine neue Postkarte an. Google zählt die Versuche.
-              </p>
-            </Card>
-
-            <Card className="p-4">
-              <h4 className="font-semibold mb-3">Schritt 2: Prüfe die Adresse</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Ist die Adresse exakt wie auf dem Briefkasten?</li>
-                <li>• Fehlt die Hausnummer-Ergänzung (z.B. "a" oder "Hinterhaus")?</li>
-                <li>• Ist der Firmenname auf dem Briefkasten lesbar?</li>
-              </ul>
-            </Card>
-
-            <Card className="p-4">
-              <h4 className="font-semibold mb-3">Schritt 3: Fordere eine neue Postkarte an</h4>
-              <p className="text-sm text-muted-foreground">
-                Im GBP Dashboard: Verifizierung → Neue Postkarte senden. Du kannst maximal 5 Postkarten anfordern, bevor Google die Methode sperrt.
-              </p>
-            </Card>
-
-            <Card className="p-4 border-primary/20 bg-primary/5">
-              <h4 className="font-semibold mb-3 flex items-center gap-2">
-                <Video className="h-5 w-5 text-primary" />
-                Schritt 4: Alternative Methode anfordern
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                Nach 2 gescheiterten Postkarten-Versuchen wird oft Video-Verifizierung angeboten. Diese hat eine höhere Erfolgsrate (89%) und ist schneller.
-              </p>
-            </Card>
-          </div>
+          <StepByStepProcess
+            title="Postkarte nicht erhalten – So gehst du vor"
+            steps={[
+              {
+                title: "Warte die volle Zeitspanne ab",
+                description: "In Deutschland dauert die Zustellung 5-14 Tage. Fordere erst nach 14 Tagen eine neue Postkarte an. Google zählt die Versuche.",
+                duration: "5-14 Tage",
+                warning: "Fordere keine neue Postkarte vor Ablauf der 14 Tage an – das kann als verdächtiges Verhalten gewertet werden."
+              },
+              {
+                title: "Prüfe die Adresse",
+                description: "Ist die Adresse exakt wie auf dem Briefkasten? Fehlt die Hausnummer-Ergänzung (z.B. 'a' oder 'Hinterhaus')? Ist der Firmenname auf dem Briefkasten lesbar?",
+                duration: "5 Min.",
+                tip: "Der Firmenname muss exakt so auf dem Briefkasten stehen, wie im Google Business Profile angegeben."
+              },
+              {
+                title: "Fordere eine neue Postkarte an",
+                description: "Im GBP Dashboard: Verifizierung → Neue Postkarte senden. Du kannst maximal 5 Postkarten anfordern, bevor Google die Methode sperrt.",
+                duration: "2 Min.",
+                warning: "Maximal 5 Versuche möglich. Danach wird die Postkarten-Methode für dein Profil deaktiviert."
+              },
+              {
+                title: "Alternative Methode anfordern",
+                description: "Nach 2 gescheiterten Postkarten-Versuchen wird oft Video-Verifizierung angeboten. Diese hat eine höhere Erfolgsrate (89%) und ist schneller.",
+                icon: Video,
+                tip: "Die Video-Verifizierung ist die schnellste und zuverlässigste Methode – nutze sie, sobald sie angeboten wird."
+              }
+            ]}
+          />
         </section>
 
         {/* Section 5 */}
