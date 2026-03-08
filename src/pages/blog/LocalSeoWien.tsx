@@ -459,6 +459,32 @@ const LocalSeoWien = () => {
         </div>
       </section>
 
+      <LocalBusinessEcosystem config={{
+        city: 'Wien',
+        population: '1,9 Mio.',
+        businesses: '~95.000',
+        avgSearchVolume: '35.000',
+        economicFacts: [
+          { label: 'Kaufkraftindex (AT)', value: '112%', trend: 'up', insight: 'Höchste Kaufkraft Österreichs — Premium-Positionierung lohnt' },
+          { label: 'Touristen/Jahr', value: '8 Mio.', trend: 'up', insight: 'Kultur-Tourismus treibt Gastro- und Hotel-Keywords' },
+          { label: 'Wahlarzt-Anteil', value: '60%+', trend: 'up', insight: 'Österreich-spezifisch: Wahlarzt-Keywords sind Top-Performer' },
+          { label: 'KMU-Anteil', value: '99,6%', trend: 'stable', insight: 'Fast nur KMU — Local SEO ist für fast alle relevant' },
+        ],
+        industryClusters: [
+          { name: 'Gastronomie & Kaffeehäuser', icon: '☕', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '80 im Pack', avgRating: '4.3', avgReviews: '110', gap: 'Tradition vs. Innovation — Kaffeehäuser ohne digitale Präsenz', strategy: 'Kaffeehaus-Keywords + Wiener Küche + Tourismus-englisch + Google Posts' },
+          { name: 'Gesundheit (Wahlarzt)', icon: '⚕️', saturation: 'Mittel', opportunity: 'Sehr hoch', avgCompetitors: '35 im Pack', avgRating: '4.0', avgReviews: '20', gap: 'Wahlarzt-Suchen boomen, aber kaum lokale Optimierung', strategy: 'Wahlarzt-Keywords + Bezirk-Nummer (1010, 1070) + Online-Terminbuchung' },
+          { name: 'Handwerk', icon: '🔧', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '15 im Pack', avgRating: '3.9', avgReviews: '10', gap: 'Handwerk in Wien ist chronisch unterdigitalisiert', strategy: 'Installateur statt Klempner (AT-Begriffe!) + Bezirk-Keywords + Notdienst' },
+          { name: 'Kultur & Events', icon: '🎭', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '25 im Pack', avgRating: '4.5', avgReviews: '50', gap: 'Event-Locations ohne Google Business Profil', strategy: 'Ballsaison-Keywords + Konzert-Locations + Tourismus-Intent auf Englisch' },
+          { name: 'Recht & Finanzen', icon: '⚖️', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '30 im Pack', avgRating: '4.2', avgReviews: '12', gap: 'Wiener Kanzleien ignorieren Google Maps fast komplett', strategy: 'Rechtsgebiet + Bezirk-Keywords + Erstberatungs-CTA + FAQ-Schema' },
+        ],
+        underservedNiches: [
+          { niche: 'Heurigen-Tourismus', reason: 'Millionen suchen "Heuriger Wien" — wenige sind lokal optimiert', potentialKeywords: ['Heuriger Wien Grinzing', 'bester Heuriger Wien', 'Buschenschank Wien'] },
+          { niche: 'Bezirk-Nummern als Keywords', reason: 'Wiener suchen mit PLZ/Bezirksnummer, kaum jemand optimiert dafür', potentialKeywords: ['Zahnarzt 1070', 'Friseur 1030 Wien', 'Restaurant 1010'] },
+          { niche: 'Expat-Services (Englisch)', reason: 'UN-Stadt, EU-Agenturen, internationale Community wächst', potentialKeywords: ['English doctor Vienna', 'Steuerberater Wien English', 'kindergarten Vienna bilingual'] },
+        ],
+        strategicInsight: 'Wien ist ein Tradition-trifft-Digitalisierung-Markt. Die meisten KMU sind offline stark, aber online unsichtbar. Wer jetzt in Local SEO investiert, hat in vielen Branchen kaum Konkurrenz. Österreichische Begriffe (Wahlarzt, Installateur, Ordinationsassistentin) sind Pflicht.',
+      }} />
+
       <GeoTargetedKeywords config={{
         city: 'Wien',
         country: 'AT',

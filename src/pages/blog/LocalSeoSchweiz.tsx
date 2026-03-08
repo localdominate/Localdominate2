@@ -521,6 +521,31 @@ const LocalSeoSchweiz = () => {
           Wir helfen Schweizer Unternehmen dabei, in ihrer Region gefunden zu werden. 
           Von Zürich bis Genf, von Basel bis Lugano.
         </p>
+        <LocalBusinessEcosystem config={{
+          city: 'Schweiz',
+          population: '8,8 Mio.',
+          businesses: '~600.000',
+          avgSearchVolume: '55.000',
+          economicFacts: [
+            { label: 'Kaufkraftindex (EU-Vergleich)', value: '160%', trend: 'up', insight: 'Höchste Kaufkraft Europas — Premium-Keywords performen überdurchschnittlich' },
+            { label: 'Amtssprachen', value: '4', trend: 'stable', insight: 'DE, FR, IT, RM — mehrsprachige SEO ist Pflicht' },
+            { label: 'KMU-Anteil', value: '99,7%', trend: 'stable', insight: 'Fast ausschließlich KMU — Local SEO ist für alle relevant' },
+            { label: 'Google.ch Marktanteil', value: '94%', trend: 'stable', insight: 'Google dominiert, aber .ch-Domains werden stark bevorzugt' },
+          ],
+          industryClusters: [
+            { name: 'Treuhand & Finanzen', icon: '🏦', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '25 im Pack', avgRating: '4.3', avgReviews: '12', gap: 'Treuhand-Büros fast ohne Online-Präsenz', strategy: '"Treuhand" statt "Steuerberater" + Kantons-Keywords + KMU-Fokus' },
+            { name: 'Gastronomie', icon: '🧀', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '50 im Pack', avgRating: '4.4', avgReviews: '70', gap: 'Beizen ohne Google Business, Bergrestaurants ohne Local SEO', strategy: 'Schweizerdeutsche Keywords (Beiz, Znüni) + Tourismus-Englisch + Saison-Content' },
+            { name: 'Gesundheit', icon: '⚕️', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '30 im Pack', avgRating: '4.0', avgReviews: '15', gap: 'Ärzte in der Schweiz haben kaum Online-Bewertungen', strategy: 'Kanton-Keywords + Online-Terminbuchung + Mehrsprachigkeit' },
+            { name: 'Handwerk', icon: '🔧', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '12 im Pack', avgRating: '4.0', avgReviews: '8', gap: 'Schweizer Handwerker sind digital fast unsichtbar', strategy: 'Kantons-Abdeckung + Notdienst + .ch-Domain ist Pflicht' },
+            { name: 'Tourismus & Hotellerie', icon: '🏔️', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '45 im Pack', avgRating: '4.5', avgReviews: '120', gap: 'Viele Hotels ohne Google Posts und aktives Bewertungsmanagement', strategy: 'Mehrsprachig (DE/EN/FR) + Saison-Keywords (Ski/Wandern) + Erlebnis-Content' },
+          ],
+          underservedNiches: [
+            { niche: 'Romandie-Services auf Deutsch', reason: 'Deutsche Schweizer suchen Services in der Romandie, kaum DE-Content', potentialKeywords: ['Zahnarzt Genf deutsch', 'Restaurant Lausanne deutsch', 'Anwalt Fribourg deutsch'] },
+            { niche: 'Grenzgänger-Services', reason: '350.000 Grenzgänger, spezifische Bedürfnisse', potentialKeywords: ['Steuerberater Grenzgänger Basel', 'Versicherung Grenzgänger Zürich', 'Bank Grenzgänger Schweiz'] },
+            { niche: 'Nachhaltige Schweizer Produkte', reason: 'Hohe Bereitschaft für Premium-Nachhaltigkeit', potentialKeywords: ['Bio Restaurant Zürich', 'nachhaltige Mode Bern', 'Zero Waste Laden Basel'] },
+          ],
+          strategicInsight: 'Die Schweiz hat die höchste Kaufkraft und gleichzeitig die niedrigste Local SEO Reife in DACH. Wer jetzt in Local SEO investiert, hat in den meisten Branchen fast keinen Wettbewerb. Mehrsprachigkeit und .ch-Domain sind die wichtigsten Differenzierungsfaktoren.',
+        }} />
         <GeoTargetedKeywords config={{
           city: 'Schweiz (DACH)',
           country: 'CH',
