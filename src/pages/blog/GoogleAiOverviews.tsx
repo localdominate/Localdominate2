@@ -6,6 +6,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import { getArticleBySlug } from "@/data/blogArticles";
 import googleAiOverviewsImg from "@/assets/blog/google-ai-overviews.jpg";
 import { 
