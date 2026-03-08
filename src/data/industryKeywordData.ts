@@ -3,7 +3,7 @@ import { IndustryKeywordConfig } from "@/components/blog/IndustryKeywordOpportun
 export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
   aerzte: {
     industry: "Ärzte & Praxen",
-    quickWin: "Fokussiere auf „[Fachrichtung] + [Stadt]" Keywords – diese haben hohe Transaktionsintention und oft moderate Konkurrenz.",
+    quickWin: "Fokussiere auf '[Fachrichtung] + [Stadt]' Keywords - diese haben hohe Transaktionsintention und oft moderate Konkurrenz.",
     clusters: [
       {
         name: "Fachrichtung + Stadt",
