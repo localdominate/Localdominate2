@@ -5,6 +5,8 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
