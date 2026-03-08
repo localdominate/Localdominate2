@@ -543,7 +543,7 @@ const MobileLocalSeo = () => {
       <section id="amp" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
           <FileCode className="h-8 w-8 text-primary" />
-          AMP für lokale Websites: Noch relevant?
+          Brauchst du noch AMP für Local SEO?
         </h2>
         
         <p className="mb-6">
