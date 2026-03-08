@@ -153,6 +153,7 @@ const GoogleMapsKonkurrenzanalyse = lazy(() => import("./pages/blog/GoogleMapsKo
 const GoogleMapsRankingCaseStudies = lazy(() => import("./pages/blog/GoogleMapsRankingCaseStudies"));
 const EntitySeoGuide = lazy(() => import("./pages/blog/EntitySeoGuide"));
 const SemanticSeoGuide = lazy(() => import("./pages/blog/SemanticSeoGuide"));
+const GoogleMapsAuditTemplate = lazy(() => import("./pages/blog/GoogleMapsAuditTemplate"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -316,6 +317,7 @@ const App = () => (
                 <Route path="/blog/google-maps-spam-erkennen" element={<GoogleMapsSpamErkennen />} />
                 <Route path="/blog/google-maps-konkurrenzanalyse" element={<GoogleMapsKonkurrenzanalyse />} />
                 <Route path="/blog/google-maps-ranking-case-studies" element={<GoogleMapsRankingCaseStudies />} />
+                <Route path="/blog/google-maps-audit-template" element={<GoogleMapsAuditTemplate />} />
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />

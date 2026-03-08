@@ -640,6 +640,30 @@ export const blogArticles: BlogArticle[] = [
     featured: true
   },
 
+  {
+    slug: "google-maps-audit-template",
+    de: {
+      title: "Google Maps Audit Template: Vollständige Checkliste mit 75+ Punkten",
+      metaTitle: "Google Maps Audit Template | 75+ Prüfpunkte Checkliste 2026",
+      metaDescription: "Kostenloses Google Maps Audit Template mit 75+ Prüfpunkten in 10 Kategorien. Interaktive Checkliste mit Fortschrittsspeicherung und Priorisierung.",
+      excerpt: "Systematisches Google Maps Audit mit 75+ Prüfpunkten: GBP-Profil, Bewertungen, Citations, Schema Markup und mehr — interaktiv mit Fortschritt.",
+      category: "Google Maps"
+    },
+    en: {
+      title: "Google Maps Audit Template: Complete Checklist with 75+ Points",
+      metaTitle: "Google Maps Audit Template | 75+ Checkpoint Checklist 2026",
+      metaDescription: "Free Google Maps audit template with 75+ checkpoints in 10 categories. Interactive checklist with progress saving and prioritization.",
+      excerpt: "Systematic Google Maps audit with 75+ checkpoints: GBP profile, reviews, citations, schema markup and more — interactive with progress tracking.",
+      category: "Google Maps"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🗺️",
+    keywords: ["google maps audit", "maps audit template", "local seo audit", "gbp audit", "google maps checkliste", "maps ranking audit"],
+    featured: false
+  },
+
   // === NEUE ARTIKEL: STRATEGIE ===
   {
     slug: "local-link-building",
@@ -3819,6 +3843,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-spam-erkennen",
   "google-maps-konkurrenzanalyse",
   "google-maps-ranking-case-studies",
+  "google-maps-audit-template",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
