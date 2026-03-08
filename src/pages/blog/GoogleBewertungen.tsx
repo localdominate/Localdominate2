@@ -57,7 +57,7 @@ const GoogleBewertungen = () => {
         ]
       },
       section3: {
-        title: "QR-Code und Smart-Link Taktiken",
+        title: "Wie nutzt du QR-Codes für mehr Bewertungen?",
         text1: "Der Schlüssel zu mehr Bewertungen ist die Reduzierung von Hindernissen. Mit einem direkten Link oder QR-Code muss der Kunde nicht erst nach deinem Unternehmen suchen.",
         stepsTitle: "So erstellst du deinen Bewertungslink:",
         steps: [
