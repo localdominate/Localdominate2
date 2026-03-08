@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogImage from "@/components/blog/BlogImage";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { getArticleBySlug } from "@/data/blogArticles";
