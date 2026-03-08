@@ -871,6 +871,7 @@ const LocalSeoFitness = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.fitness} />
       <HelpfulnessWidget articleSlug="local-seo-fitnessstudio-gym" />
     </ArticleLayout>
   );

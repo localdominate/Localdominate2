@@ -706,6 +706,7 @@ const LocalSeoAnwaelte = () => {
           </li>
         </ul>
 
+        <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
         <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 
         <BlogCTAABTest articleSlug="local-seo-anwaelte-kanzleien" position="end" />

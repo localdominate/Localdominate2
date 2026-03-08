@@ -963,6 +963,7 @@ const LocalSeoHotels = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.hotels} />
       <HelpfulnessWidget articleSlug="local-seo-hotels" />
     </ArticleLayout>
   );

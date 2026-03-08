@@ -337,6 +337,7 @@ const LocalSeoRestaurant = () => {
         description="Kurze SMS-Templates fuer die Gastronomie – direkt nach dem Besuch oder als Erinnerung."
       />
 
+      <IndustryRankingChallenges config={industryRankingConfigs.restaurant} />
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />
 
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="end" />
