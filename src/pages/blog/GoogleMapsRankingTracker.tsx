@@ -488,6 +488,9 @@ const GoogleMapsRankingTracker = () => {
       </section>
 
       {/* Related */}
+      {/* Ranking Tracking Explainer */}
+      <GoogleMapsRankingExplainer />
+
       <Card className="mb-8 bg-muted/30">
         <CardContent className="pt-6">
           <h3 className="font-semibold text-foreground mb-3">📚 Weiterführende Ressourcen</h3>
