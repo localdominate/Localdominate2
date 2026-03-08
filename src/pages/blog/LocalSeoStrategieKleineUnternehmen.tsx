@@ -1,3 +1,4 @@
+import CompetitiveAnalysisFramework from "@/components/blog/CompetitiveAnalysisFramework";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { ProcessFlow, GradientBarChart } from "@/components/blog/PillarVisuals";
 import { InternalResourceBox } from "@/components/blog/InternalResourceBox";
