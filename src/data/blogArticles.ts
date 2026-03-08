@@ -3530,6 +3530,30 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["local link building", "lokale backlinks", "lokales linkbuilding", "ihk backlink", "vereinssponsoring seo", "lokale pr linkbuilding", "backlinks lokale unternehmen", "link building dach"],
     featured: true
   },
+  // === PILLAR PAGE: COMPLETE LOCAL SEO CHECKLIST ===
+  {
+    slug: "local-seo-checkliste-komplett",
+    de: {
+      title: "Die komplette Local SEO Checkliste 2026: 80+ Punkte in 8 Phasen",
+      metaTitle: "Local SEO Checkliste 2026 | 80+ Punkte Schritt-für-Schritt",
+      metaDescription: "Die umfassendste Local SEO Checkliste: 80+ Punkte in 8 Phasen — von GBP-Setup über Schema Markup, Citations und Bewertungen bis Reporting. Mit 90-Tage-Implementierungsplan.",
+      excerpt: "Die komplette Schritt-für-Schritt Local SEO Checkliste: 80+ Massnahmen in 8 Phasen systematisch abarbeiten — mit Prioritäten, Zeitplan und branchenspezifischen Empfehlungen.",
+      category: "Strategie"
+    },
+    en: {
+      title: "The Complete Local SEO Checklist 2026: 80+ Steps in 8 Phases",
+      metaTitle: "Local SEO Checklist 2026 | 80+ Steps Step-by-Step",
+      metaDescription: "The most comprehensive Local SEO checklist: 80+ steps in 8 phases — from GBP setup to Schema Markup, citations, reviews and reporting. With 90-day implementation plan.",
+      excerpt: "The complete step-by-step Local SEO checklist: 80+ actions in 8 phases systematically executed — with priorities, timeline and industry-specific recommendations.",
+      category: "Strategy"
+    },
+    readingTime: 20,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "📋",
+    keywords: ["local seo checkliste", "local seo checklist", "lokale seo checkliste", "local seo schritt für schritt", "local seo implementierung", "local seo anleitung", "local seo 2026"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3626,6 +3650,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-ranking-faktoren-erklaert",
   "ai-suche-lokale-unternehmen",
   "local-link-building-blueprint",
+  "local-seo-checkliste-komplett",
 ]);
 
 // Get only published articles (with pages), deduplicated
