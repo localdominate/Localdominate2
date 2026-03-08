@@ -1,4 +1,6 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
@@ -228,6 +230,10 @@ const LocalSeoRestaurant = () => {
         <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">{t.section2.sub3}</h3>
         <p>{t.section2.sub3Text}</p>
       </section>
+
+      {miniSuccessStories.restaurant?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
 
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="middle" />
 

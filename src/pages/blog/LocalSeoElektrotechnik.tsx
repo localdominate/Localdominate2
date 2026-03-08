@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
@@ -216,6 +218,10 @@ const LocalSeoElektrotechnik = () => {
           </ul>
         </AutoLexikonText>
       </section>
+
+      {miniSuccessStories.elektrotechnik?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
 
       <IndustryLandingCTA industry="handwerker" />
 

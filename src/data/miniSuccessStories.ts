@@ -1,0 +1,300 @@
+import { TrendingUp, MapPin, Star, Quote } from "lucide-react";
+
+export interface MiniSuccessStoryData {
+  business: string;
+  location: string;
+  industry: string;
+  metric: string;
+  metricLabel: string;
+  quote: string;
+  author: string;
+  role: string;
+  timeframe: string;
+}
+
+export const miniSuccessStories: Record<string, MiniSuccessStoryData[]> = {
+  restaurant: [
+    {
+      business: "Osteria del Sole",
+      location: "Frankfurt",
+      industry: "Italienisches Restaurant",
+      metric: "+320%",
+      metricLabel: "mehr Reservierungen über Google",
+      quote: "Seit wir unsere Speisekarte als HTML-Text statt PDF hochladen, finden uns Kunden für einzelne Gerichte wie 'Ossobuco Frankfurt'.",
+      author: "Maria G.",
+      role: "Inhaberin",
+      timeframe: "in 4 Monaten",
+    },
+    {
+      business: "Thai Garden",
+      location: "Leipzig",
+      industry: "Asiatisches Restaurant",
+      metric: "Platz 1",
+      metricLabel: "für 'Thai Restaurant Leipzig'",
+      quote: "Die Kombination aus 120+ Bewertungen und wöchentlichen Google Posts hat alles verändert.",
+      author: "Sunan P.",
+      role: "Geschäftsführer",
+      timeframe: "in 5 Monaten",
+    },
+  ],
+  handwerker: [
+    {
+      business: "Maler Petersen",
+      location: "Bremen",
+      industry: "Malerbetrieb",
+      metric: "+450%",
+      metricLabel: "mehr Anfragen über Google Maps",
+      quote: "Vorher-Nachher-Fotos unserer Fassadenprojekte haben unsere Maps-Klickrate verdreifacht.",
+      author: "Jan P.",
+      role: "Malermeister",
+      timeframe: "in 3 Monaten",
+    },
+  ],
+  zahnarzt: [
+    {
+      business: "Zahnarztpraxis Dr. Chen",
+      location: "Nürnberg",
+      industry: "Zahnmedizin",
+      metric: "+180%",
+      metricLabel: "mehr Neupatienten/Monat",
+      quote: "Seitdem wir für jede Behandlung eine eigene Seite haben – Implantate, Bleaching, Angstpatienten – ranken wir für dutzende Longtails.",
+      author: "Dr. Lin C.",
+      role: "Praxisinhaberin",
+      timeframe: "in 6 Monaten",
+    },
+  ],
+  friseur: [
+    {
+      business: "Salon Kopfkunst",
+      location: "Dortmund",
+      industry: "Friseursalon",
+      metric: "+250%",
+      metricLabel: "mehr Online-Terminbuchungen",
+      quote: "Instagram-Reels mit Vorher-Nachher-Transformationen bringen uns Google-Rankings UND direkten Traffic.",
+      author: "Petra K.",
+      role: "Inhaberin",
+      timeframe: "in 4 Monaten",
+    },
+  ],
+  baeckerei: [
+    {
+      business: "Brot & Seele",
+      location: "Augsburg",
+      industry: "Handwerksbäckerei",
+      metric: "+200%",
+      metricLabel: "mehr Google-Maps-Aufrufe",
+      quote: "Unsere saisonalen Spezialitäten als Google Posts zu teilen war der einfachste SEO-Hack aller Zeiten.",
+      author: "Klaus B.",
+      role: "Bäckermeister",
+      timeframe: "in 3 Monaten",
+    },
+  ],
+  fitness: [
+    {
+      business: "CrossFit Rhein",
+      location: "Mannheim",
+      industry: "Fitnessstudio",
+      metric: "+340%",
+      metricLabel: "mehr Probetraining-Buchungen",
+      quote: "Kurspläne als strukturierte Daten plus Member-Testimonials auf Google – das war unser Gamechanger.",
+      author: "Tim R.",
+      role: "Box Owner",
+      timeframe: "in 5 Monaten",
+    },
+  ],
+  steuerberater: [
+    {
+      business: "Steuerkanzlei Bergmann",
+      location: "Bonn",
+      industry: "Steuerberatung",
+      metric: "+280%",
+      metricLabel: "mehr Mandatsanfragen",
+      quote: "Blog-Artikel zu aktuellen Steueränderungen bringen uns organischen Traffic, und unser GBP konvertiert ihn in Mandanten.",
+      author: "Dr. Eva B.",
+      role: "Steuerberaterin",
+      timeframe: "in 6 Monaten",
+    },
+  ],
+  elektrotechnik: [
+    {
+      business: "E-Technik Bauer",
+      location: "Karlsruhe",
+      industry: "Elektroinstallation",
+      metric: "+520%",
+      metricLabel: "mehr Wallbox-Anfragen",
+      quote: "Eine einzige Landingpage für 'Wallbox Installation Karlsruhe' bringt uns 8-10 Anfragen pro Woche.",
+      author: "Michael B.",
+      role: "Elektromeister",
+      timeframe: "in 3 Monaten",
+    },
+  ],
+  hotels: [
+    {
+      business: "Boutique Hotel Altstadtperle",
+      location: "Salzburg",
+      industry: "Boutique-Hotel",
+      metric: "+65%",
+      metricLabel: "mehr Direktbuchungen (weniger OTA)",
+      quote: "Seit wir lokale Reiseführer-Inhalte auf unserer Website haben, buchen Gäste direkt statt über Booking.com.",
+      author: "Anna S.",
+      role: "Hotelière",
+      timeframe: "in 8 Monaten",
+    },
+  ],
+  physiotherapie: [
+    {
+      business: "PhysioAktiv",
+      location: "Essen",
+      industry: "Physiotherapie",
+      metric: "+220%",
+      metricLabel: "mehr Privatpatienten",
+      quote: "Spezialisierungs-Keywords wie 'Sportphysiotherapie Essen' haben uns die Premium-Zielgruppe gebracht.",
+      author: "Markus T.",
+      role: "Praxisinhaber",
+      timeframe: "in 4 Monaten",
+    },
+  ],
+  optiker: [
+    {
+      business: "Brillenhaus Sonnenklar",
+      location: "Wiesbaden",
+      industry: "Optiker",
+      metric: "+190%",
+      metricLabel: "mehr Beratungstermine",
+      quote: "Google Lens und visuelle Suche kommen – wer seine Brillen-Fotos jetzt optimiert, gewinnt morgen.",
+      author: "Sandra L.",
+      role: "Optikermeisterin",
+      timeframe: "in 5 Monaten",
+    },
+  ],
+  doener: [
+    {
+      business: "Kebap König",
+      location: "Hannover",
+      industry: "Döner-Imbiss",
+      metric: "+380%",
+      metricLabel: "mehr Maps-Klicks",
+      quote: "Seit wir täglich frische Fotos posten und auf jede Bewertung antworten, stehen die Leute Schlange.",
+      author: "Emre K.",
+      role: "Inhaber",
+      timeframe: "in 2 Monaten",
+    },
+  ],
+  yoga: [
+    {
+      business: "Namaste Yoga Studio",
+      location: "Freiburg",
+      industry: "Yoga-Studio",
+      metric: "+260%",
+      metricLabel: "mehr Kurs-Anmeldungen",
+      quote: "Content über 'Yoga für Anfänger Freiburg' bringt genau die Zielgruppe, die dann auch bleibt.",
+      author: "Sarah M.",
+      role: "Yoga-Lehrerin",
+      timeframe: "in 4 Monaten",
+    },
+  ],
+  tattoo: [
+    {
+      business: "Dark Arts Tattoo",
+      location: "Berlin",
+      industry: "Tattoo-Studio",
+      metric: "+400%",
+      metricLabel: "mehr Terminanfragen",
+      quote: "Portfolio-Seiten nach Stil – Realistisch, Watercolor, Blackwork – ranken einzeln für ihre Keywords.",
+      author: "Alex D.",
+      role: "Studio-Inhaber",
+      timeframe: "in 5 Monaten",
+    },
+  ],
+  immobilienmakler: [
+    {
+      business: "Immobilien Schönfeld",
+      location: "Potsdam",
+      industry: "Immobilienmakler",
+      metric: "+310%",
+      metricLabel: "mehr Verkäufer-Leads",
+      quote: "Stadtteil-Marktberichte als Content-Strategie haben uns als lokale Experten positioniert.",
+      author: "Claudia S.",
+      role: "Geschäftsführerin",
+      timeframe: "in 6 Monaten",
+    },
+  ],
+  anwaelte: [
+    {
+      business: "Kanzlei Richter & Stein",
+      location: "Dresden",
+      industry: "Rechtsanwaltskanzlei",
+      metric: "+240%",
+      metricLabel: "mehr Erstberatungen",
+      quote: "FAQ-Seiten zu Rechtsthemen bringen organischen Traffic, unsere Stadtseite konvertiert lokal.",
+      author: "RA Thomas R.",
+      role: "Partner",
+      timeframe: "in 5 Monaten",
+    },
+  ],
+  tierarzt: [
+    {
+      business: "Tierarztpraxis Vier Pfoten",
+      location: "Münster",
+      industry: "Tierarztpraxis",
+      metric: "+300%",
+      metricLabel: "mehr Notdienst-Anrufe",
+      quote: "Die Notdienst-Landingpage mit Click-to-Call hat unsere Anrufzahlen am Wochenende verdreifacht.",
+      author: "Dr. Katja W.",
+      role: "Tierärztin",
+      timeframe: "in 3 Monaten",
+    },
+  ],
+  apotheke: [
+    {
+      business: "Löwen-Apotheke",
+      location: "Heidelberg",
+      industry: "Apotheke",
+      metric: "+170%",
+      metricLabel: "mehr Laufkundschaft",
+      quote: "Google Posts über Impfaktionen und Gesundheitstage bringen gezielt Neukunden in unsere Apotheke.",
+      author: "Dr. Andrea M.",
+      role: "Apothekerin",
+      timeframe: "in 4 Monaten",
+    },
+  ],
+  autowerkstatt: [
+    {
+      business: "Auto Fischer",
+      location: "Aachen",
+      industry: "Freie Werkstatt",
+      metric: "+290%",
+      metricLabel: "mehr Werkstatttermine",
+      quote: "Seitdem wir für jede Automarke eine eigene Seite haben, ranken wir für 'BMW Werkstatt Aachen' auf Platz 1.",
+      author: "Frank F.",
+      role: "KFZ-Meister",
+      timeframe: "in 4 Monaten",
+    },
+  ],
+  ferienwohnungen: [
+    {
+      business: "Ferienwohnung Bergblick",
+      location: "Garmisch-Partenkirchen",
+      industry: "Ferienwohnung",
+      metric: "+85%",
+      metricLabel: "mehr Direktbuchungen",
+      quote: "Ein Blog über lokale Wanderwege und Ausflugsziele bringt genau die Gäste, die direkt buchen.",
+      author: "Monika H.",
+      role: "Vermieterin",
+      timeframe: "in 6 Monaten",
+    },
+  ],
+  fotograf: [
+    {
+      business: "Lichtfänger Fotografie",
+      location: "Regensburg",
+      industry: "Fotostudio",
+      metric: "+350%",
+      metricLabel: "mehr Hochzeits-Anfragen",
+      quote: "Location-spezifische Portfolio-Seiten mit Alt-Tags ranken für 'Hochzeitsfotograf [Location]'.",
+      author: "Tobias L.",
+      role: "Fotograf",
+      timeframe: "in 5 Monaten",
+    },
+  ],
+};

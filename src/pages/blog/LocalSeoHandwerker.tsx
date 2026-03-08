@@ -17,6 +17,8 @@ import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
 import { industryComparisonData } from "@/data/industryComparisonData";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
@@ -570,6 +572,10 @@ const LocalSeoHandwerker = () => {
           ))}
         </ul>
       </section>
+
+      {miniSuccessStories.handwerker?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
 
       <IndustryLandingCTA industry="handwerker" />
 

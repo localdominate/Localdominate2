@@ -4,6 +4,8 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
@@ -793,6 +795,10 @@ Herzliche Grüße,
           </AccordionItem>
         </Accordion>
       </section>
+
+      {miniSuccessStories.steuerberater?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
 
       <section id="praxisbeispiel" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Steuerkanzlei gewinnt Mandanten online</h2>

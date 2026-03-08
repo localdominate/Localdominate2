@@ -41,6 +41,8 @@ import BookingPlatformTable from '@/components/blog/BookingPlatformTable';
 import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer';
 import ArticleCTA from '@/components/blog/ArticleCTA';
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
@@ -1199,6 +1201,10 @@ const LocalSeoFriseur: React.FC = () => {
           </a>
         </div>
       </div>
+
+      {miniSuccessStories.friseur?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
 
       <section id="praxisbeispiel" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Friseursalon verdreifacht Neukunden</h2>

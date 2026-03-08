@@ -1,4 +1,6 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import TableOfContents from "@/components/blog/TableOfContents";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -214,6 +216,10 @@ const LocalSeoZahnarzt = () => {
           </ul>
         </AutoLexikonText>
       </section>
+
+      {miniSuccessStories.zahnarzt?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
 
       <IndustryLandingCTA industry="arztpraxis" />
 
