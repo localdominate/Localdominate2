@@ -278,6 +278,9 @@ const LocalSeoRestaurant = () => {
         </div>
       </section>
 
+      {industryStats.restaurant?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.restaurant} />
 
       <IndustryComparisonTable data={industryComparisonData.restaurant} />

@@ -487,6 +487,9 @@ const LocalSeoAutowerkstatt = () => {
         </div>
       </section>
 
+      {industryStats.autowerkstatt?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.autowerkstatt} />
 
       <IndustryComparisonTable data={industryComparisonData.autowerkstatt} />

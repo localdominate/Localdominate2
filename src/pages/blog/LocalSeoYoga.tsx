@@ -180,6 +180,9 @@ const LocalSeoYoga = () => {
 
       <BlogCTAABTest articleSlug="local-seo-yoga-pilates" position="end" />
 
+      {industryStats.yoga?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.yoga} />
 
       <IndustryComparisonTable data={industryComparisonData.yoga} />

@@ -324,6 +324,9 @@ const LocalSeoFotograf = () => {
         </AutoLexikonText>
       </section>
 
+      {industryStats.fotograf?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.fotograf} />
 
       <IndustryComparisonTable data={industryComparisonData.fotograf} />

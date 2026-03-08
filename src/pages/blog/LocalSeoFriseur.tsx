@@ -1075,6 +1075,9 @@ const LocalSeoFriseur: React.FC = () => {
       {/* CTA */}
       <ArticleCTA variant="box" />
 
+      {industryStats.friseur?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.friseur} />
 
       <IndustryComparisonTable data={industryComparisonData.friseur} />

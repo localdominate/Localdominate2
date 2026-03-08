@@ -734,6 +734,9 @@ const LocalSeoFitness = () => {
         </div>
       </section>
 
+      {industryStats.fitness?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.fitness} />
 
       <IndustryComparisonTable data={industryComparisonData.fitness} />

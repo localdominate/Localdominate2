@@ -961,6 +961,9 @@ const LocalSeoDoenerladen = () => {
 
       <BlogCTAABTest articleSlug="local-seo-doener-kebab-imbiss" position="end" />
 
+      {industryStats.doener?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.doener} />
 
       <IndustryComparisonTable data={industryComparisonData.doener} />

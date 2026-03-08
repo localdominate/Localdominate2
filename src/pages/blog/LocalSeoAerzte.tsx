@@ -743,6 +743,9 @@ const LocalSeoAerzte = () => {
 
       <ArticleCTA />
 
+      {industryStats.aerzte?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.aerzte} />
 
       <IndustryComparisonTable data={industryComparisonData.aerzte} />

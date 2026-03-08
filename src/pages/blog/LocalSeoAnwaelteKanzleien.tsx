@@ -301,6 +301,9 @@ const LocalSeoAnwaelteKanzleien = () => {
         </AutoLexikonText>
       </section>
 
+      {industryStats.anwaelte?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.anwaelte} />
 
       <IndustryComparisonTable data={industryComparisonData.anwaelte} />

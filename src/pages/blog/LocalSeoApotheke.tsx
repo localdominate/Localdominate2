@@ -179,6 +179,9 @@ const LocalSeoApotheke = () => {
 
       <BlogCTAABTest articleSlug="local-seo-apotheke" position="end" />
 
+      {industryStats.apotheke?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.apotheke} />
 
       <IndustryComparisonTable data={industryComparisonData.apotheke} />

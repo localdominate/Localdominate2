@@ -217,6 +217,9 @@ const LocalSeoZahnarzt = () => {
 
       <IndustryLandingCTA industry="arztpraxis" />
 
+      {industryStats.zahnarzt?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.zahnarzt} />
 
       <IndustryComparisonTable data={industryComparisonData.zahnarzt} />

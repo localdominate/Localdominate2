@@ -219,6 +219,9 @@ const LocalSeoElektrotechnik = () => {
 
       <IndustryLandingCTA industry="handwerker" />
 
+      {industryStats.elektrotechnik?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
+
       <ImplementationRoadmap data={industryImplementationData.elektrotechnik} />
 
       <IndustryComparisonTable data={industryComparisonData.elektrotechnik} />
