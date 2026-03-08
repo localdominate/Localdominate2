@@ -105,10 +105,10 @@ const LokaleSeo2026 = () => {
     },
     en: {
       tocItems: [
-        { id: "trends", title: "The Most Important Trends for 2026" },
-        { id: "ki", title: "AI and Local Search" },
-        { id: "voice", title: "Voice Search Optimization" },
-        { id: "zero-click", title: "Using Zero-Click Searches" },
+        { id: "trends", title: "Which Local SEO Trends Dominate 2026?" },
+        { id: "ki", title: "How Is AI Changing Local Search?" },
+        { id: "voice", title: "How Do You Optimize for Voice Search?" },
+        { id: "zero-click", title: "What Are Zero-Click Searches and How Do You Use Them?" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
       intro: "Local search engine optimization is evolving rapidly. What worked in 2024 may already be outdated in 2026. This article shows you the latest trends and how to future-proof your local business.",
