@@ -218,6 +218,20 @@ const UltimateGuideLocalSeo = () => {
         </p>
       </section>
 
+      <DonutChart
+        title="Local Pack Ranking-Faktoren Verteilung (Whitespark 2024)"
+        data={[
+          { name: "Google Business Profil", value: 32 },
+          { name: "On-Page SEO", value: 19 },
+          { name: "Bewertungen", value: 16 },
+          { name: "Link-Signale", value: 11 },
+          { name: "Verhaltens-Signale", value: 8 },
+          { name: "Citations", value: 7 },
+          { name: "Personalisierung", value: 7 },
+        ]}
+        centerLabel="Basierend auf Whitespark Local Search Ranking Factors 2024"
+      />
+
       {/* Google Business Profil */}
       <section id="google-business-profil" data-ai-summary="true">
         <h2>Google Business Profil optimieren: Der wichtigste Schritt</h2>

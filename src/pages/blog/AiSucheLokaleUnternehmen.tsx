@@ -150,6 +150,33 @@ const AiSucheLokaleUnternehmen = () => {
         </p>
       </section>
 
+      <ComparisonRadar
+        title="AI Source Selection: SEO vs. GEO Faktoren"
+        labelA="Traditionelles SEO"
+        labelB="GEO (AI-Optimierung)"
+        data={[
+          { subject: "Backlinks", A: 90, B: 30 },
+          { subject: "Schema Markup", A: 40, B: 95 },
+          { subject: "E-E-A-T", A: 70, B: 90 },
+          { subject: "Content-Länge", A: 80, B: 40 },
+          { subject: "Aktualität", A: 50, B: 85 },
+          { subject: "Zitierbarkeit", A: 20, B: 95 },
+          { subject: "Keyword-Dichte", A: 75, B: 25 },
+          { subject: "Semantik/Struktur", A: 60, B: 90 },
+        ]}
+      />
+
+      <GradientBarChart
+        title="AI-Plattformen: Marktanteil bei lokalen Suchen (2026)"
+        items={[
+          { label: "Google AI Overviews", value: 88 },
+          { label: "ChatGPT Search", value: 5 },
+          { label: "Apple Intelligence", value: 3 },
+          { label: "Perplexity", value: 2 },
+          { label: "Bing Copilot", value: 2 },
+        ]}
+      />
+
       {/* Wie AI Quellen auswählt */}
       <section id="wie-ai-quellen-waehlt" data-ai-summary="true">
         <h2>Wie AI-Assistenten Quellen auswählen</h2>

@@ -1,4 +1,5 @@
 import { getArticleBySlug } from "@/data/blogArticles";
+import { GradientBarChart, ProcessFlow } from "@/components/blog/PillarVisuals";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
