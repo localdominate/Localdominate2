@@ -5,6 +5,7 @@ import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
+import DirectorySubmissionStrategy from "@/components/blog/DirectorySubmissionStrategy";
 import {
   Table,
   TableHeader,
@@ -371,6 +372,8 @@ const CitationVerzeichnisse = () => {
               ))}
             </div>
           </section>
+
+          <DirectorySubmissionStrategy compact={false} />
 
           {/* Internal Links */}
           <section className="border-t border-border pt-12">
