@@ -853,6 +853,70 @@ Beispiel für Zahnarzt:
         dialektTip: 'Berlinerisch hat weniger SEO-Relevanz als Bayerisch, aber "Kiez" statt "Viertel" und "Späti" statt "Kiosk" haben eigenes Suchvolumen.',
       }} />
 
+      <CityRankingChallenges config={{
+        city: 'Berlin',
+        overallDifficulty: 'Sehr hoch',
+        challenges: [
+          {
+            title: 'Fragmentierter Markt über 12 Bezirke',
+            difficulty: 'Sehr hoch',
+            description: 'Berlin ist keine einheitliche Stadt — jeder Kiez hat eigenes Suchverhalten, eigene Zielgruppen und eigene Wettbewerber. Eine stadtweite Strategie reicht nicht.',
+            impact: 'Kiez-spezifische Keywords konvertieren 3× besser als generische Berlin-Keywords',
+            strategies: [
+              'Pro Bezirk/Kiez eigene optimierte Landing Page erstellen',
+              'Lokale Backlinks von Bezirks-Blogs und Kiez-Portalen aufbauen',
+              'Google Business Profil mit Kiez-spezifischen Beiträgen bespielen',
+              'Nachbar-Kieze als sekundäre Keywords mitabdecken'
+            ],
+            quickWin: 'Kiez-Name in Google Business Unternehmensbezeichnung aufnehmen (wenn regelkonform)'
+          },
+          {
+            title: 'Hoher Anteil internationaler Suchanfragen',
+            difficulty: 'Hoch',
+            description: 'Berlin hat einen enormen Expat- und Touristen-Anteil. Viele Suchanfragen erfolgen auf Englisch, was die Keyword-Strategie verdoppelt.',
+            impact: 'Bis zu 35% der lokalen Suchanfragen in Berlin sind auf Englisch',
+            strategies: [
+              'Zweisprachige Google Business Profile (DE + EN)',
+              'Englische Landing Pages für Touristen-relevante Services',
+              'Hreflang-Tags für mehrsprachige Inhalte implementieren'
+            ],
+            quickWin: 'Google Business FAQ auf Englisch ergänzen'
+          },
+          {
+            title: 'Startup-Kultur treibt digitale Konkurrenz',
+            difficulty: 'Hoch',
+            description: 'Berlins Tech-Szene bedeutet überdurchschnittlich viele digital-affine Wettbewerber, die SEO professionell betreiben.',
+            impact: 'SEO-Qualität der Top-10 Ergebnisse ist in Berlin 40% höher als in anderen Städten',
+            strategies: [
+              'Content-Qualität über Quantität — E-E-A-T Signale maximieren',
+              'Technisches SEO als Differenzierungsmerkmal nutzen',
+              'Lokale PR und Gastbeiträge bei Berliner Medien platzieren'
+            ],
+            quickWin: 'Strukturierte Daten (LocalBusiness Schema) vollständig implementieren'
+          },
+          {
+            title: 'Gentrifizierung verändert Suchverhalten',
+            difficulty: 'Mittel',
+            description: 'Kieze verändern sich schnell — was gestern Neukölln war, ist morgen "Kreuzkölln". Suchtrends verschieben sich mit der Bevölkerung.',
+            impact: 'Neue Kiez-Bezeichnungen können innerhalb von Monaten signifikantes Suchvolumen aufbauen',
+            strategies: [
+              'Google Trends für Berliner Kiez-Bezeichnungen monitoren',
+              'Schnell auf neue Trendviertel-Keywords reagieren',
+              'Content regelmäßig an veränderte Zielgruppen anpassen'
+            ],
+            quickWin: 'Google Alerts für "[Kiez-Name] + eröffnet/neu" einrichten'
+          }
+        ],
+        marketInsights: [
+          { label: 'Wettbewerb', value: '9.0/10', trend: 'up' },
+          { label: 'Expat-Anteil', value: '~20%', trend: 'up' },
+          { label: 'Digital-Affinität', value: 'Sehr hoch', trend: 'up' },
+          { label: 'Mobil-Anteil', value: '82%', trend: 'up' }
+        ],
+        topStrategy: 'Kiez-first Strategie: Jeder Berliner Kiez ist ein eigener Mikro-Markt. Dominiere deinen Kiez, bevor du auf die ganze Stadt expandierst.',
+        localAdvantage: 'Berliner schätzen authentische, lokal verwurzelte Businesses. "Aus dem Kiez, für den Kiez" ist ein starkes Verkaufsargument.'
+      }} />
+
       <HelpfulnessWidget articleSlug="local-seo-berlin" />
     </ArticleLayout>
   );
