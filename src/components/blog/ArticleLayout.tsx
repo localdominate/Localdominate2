@@ -475,6 +475,50 @@ const ArticleLayout = ({
           </h1>
         </header>
 
+        {/* Auto-rendered inline Table of Contents (mobile + tablet) */}
+        {effectiveTocItems.length > 2 && (
+          <nav id="auto-toc-nav" className="bg-muted/50 border border-border rounded-xl p-5 mb-8 xl:hidden not-prose" aria-label="Inhaltsverzeichnis">
+            <div className="flex items-center gap-2 mb-4">
+              <List className="h-5 w-5 text-primary" />
+              <h2 className="font-semibold text-foreground text-base">Inhaltsverzeichnis</h2>
+            </div>
+            <ol className="space-y-1">
+              {(() => {
+                let mainIdx = 0;
+                return effectiveTocItems.map((item) => {
+                  const isActive = activeTocId === item.id;
+                  const isSub = item.level === 3;
+                  if (!isSub) mainIdx++;
+                  return (
+                    <li key={item.id}>
+                      <button
+                        onClick={() => {
+                          const el = document.getElementById(item.id);
+                          if (el) {
+                            const pos = el.getBoundingClientRect().top + window.pageYOffset - 100;
+                            window.scrollTo({ top: pos, behavior: "smooth" });
+                          }
+                        }}
+                        className={cn(
+                          "text-left text-sm w-full px-3 py-1.5 rounded-lg transition-all duration-200",
+                          "hover:bg-primary/10 hover:text-primary",
+                          isSub && "ml-4",
+                          isActive
+                            ? "bg-primary/15 text-primary font-medium"
+                            : isSub ? "text-muted-foreground" : "text-foreground"
+                        )}
+                      >
+                        {!isSub && <span className="text-primary mr-2">{mainIdx}.</span>}
+                        {item.title}
+                      </button>
+                    </li>
+                  );
+                });
+              })()}
+            </ol>
+          </nav>
+        )}
+
         {/* Article Content - AI-optimized wrapper */}
         <article 
           ref={articleContentRef}
