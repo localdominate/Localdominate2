@@ -143,8 +143,8 @@ const NapKonsistenz = () => {
           term="NAP-Konsistenz"
           definition="NAP steht für Name, Address, Phone – die drei wichtigsten Unternehmensdaten für lokale Suchmaschinenoptimierung. NAP-Konsistenz bedeutet, dass diese Daten überall im Internet exakt gleich geschrieben sind – auf der eigenen Website, im Google Business Profile und in allen Branchenverzeichnissen."
           examples={[
-            "Name: Immer den offiziellen Geschäftsnamen verwenden (z.B. „Müller GmbH", nicht „Firma Müller")",
-            "Address: Einheitliches Format (z.B. „Str." vs. „Straße" konsistent halten)",
+            'Name: Immer den offiziellen Geschäftsnamen verwenden (z.B. "Müller GmbH", nicht "Firma Müller")',
+            'Address: Einheitliches Format (z.B. "Str." vs. "Straße" konsistent halten)',
             "Phone: Gleiche Schreibweise mit/ohne Vorwahl und Leerzeichen"
           ]}
         />

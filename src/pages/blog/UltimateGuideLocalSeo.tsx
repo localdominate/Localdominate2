@@ -109,7 +109,7 @@ const UltimateGuideLocalSeo = () => {
           term="Local SEO"
           definition="Local SEO (lokale Suchmaschinenoptimierung) bezeichnet alle Maßnahmen, die die Sichtbarkeit eines Unternehmens in standortbezogenen Suchergebnissen verbessern. Es umfasst die Optimierung des Google Business Profiles, lokaler Keywords, Citations, Bewertungen und strukturierter Daten für ein definiertes geografisches Einzugsgebiet."
           examples={[
-            "Suchen wie „Bäcker in meiner Nähe", „Anwalt München" oder „Friseur Basel"",
+            'Suchen wie "Bäcker in meiner Nähe", "Anwalt München" oder "Friseur Basel"',
             "Sichtbarkeit im Local Pack (Top-3-Karteneinträge bei Google)",
             "Ranking in Google Maps und organischen lokalen Ergebnissen"
           ]}

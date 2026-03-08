@@ -105,7 +105,7 @@ const LocalSeoVsMaps: React.FC = () => {
           term="Local SEO"
           definition="Local SEO bezeichnet alle Maßnahmen zur Verbesserung der Sichtbarkeit eines Unternehmens in standortbezogenen Suchergebnissen. Es umfasst Website-Optimierung, Google Business Profile, lokale Backlinks, Citations und Bewertungsmanagement."
           examples={[
-            "On-Page-Optimierung mit lokalen Keywords (z.B. „Zahnarzt Berlin Mitte")",
+            'On-Page-Optimierung mit lokalen Keywords (z.B. "Zahnarzt Berlin Mitte")',
             "Aufbau lokaler Backlinks von Branchenverzeichnissen und Partnern",
             "Google Business Profile vollständig einrichten und pflegen"
           ]}
