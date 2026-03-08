@@ -3372,7 +3372,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local Content Marketing: Creating Content for Local Audiences (2026)",
-      metaTitle: "Local Content Marketing: Creating Local Content | 2026 Guide",
+      metaTitle: "Local Content Marketing | Local Content 2026",
       metaDescription: "How to create content that appeals to your local audience. Local stories, events and community content for more reach.",
       excerpt: "The strategy guide for local content marketing with ideas and best practices for local businesses.",
       category: "Content"
