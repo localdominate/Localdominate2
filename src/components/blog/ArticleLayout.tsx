@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import AuthorBox from "./AuthorBox";
+import { getArticleAuthor } from "@/data/authorProfiles";
 import { List } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ArticleContextLinks from "./ArticleContextLinks";
@@ -163,17 +164,37 @@ const ArticleLayout = ({
 
   const articleOgImage = getOgImage(article.slug);
   
-  // Author/Organization Schema
+  // Author Profile & Schema
+  const articleAuthor = getArticleAuthor(article.slug);
   const authorSchema = {
+    "@type": "Person" as const,
+    "@id": `https://localdominate.org/#person-${articleAuthor.slug}`,
+    "name": articleAuthor.name,
+    "jobTitle": articleAuthor.schemaOrg.jobTitle,
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "https://localdominate.org/#organization",
+      "name": "Local Dominator",
+      "url": "https://localdominate.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://localdominate.org/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "knowsAbout": articleAuthor.schemaOrg.knowsAbout,
+    "sameAs": articleAuthor.schemaOrg.sameAs,
+  };
+
+  const publisherSchema = {
     "@type": "Organization",
     "@id": "https://localdominate.org/#organization",
     "name": "Local Dominator",
     "url": "https://localdominate.org",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://localdominate.org/logo.png",
-      "width": 512,
-      "height": 512
+      "url": "https://localdominate.org/logo.png"
     },
     "sameAs": [
       "https://twitter.com/localdominator",
@@ -186,7 +207,7 @@ const ArticleLayout = ({
     "@type": "Person",
     "name": reviewedBy.name,
     "jobTitle": reviewedBy.credentials,
-    "worksFor": authorSchema
+    "worksFor": publisherSchema
   } : null;
 
   // Determine WebPage type based on article type
@@ -210,16 +231,7 @@ const ArticleLayout = ({
     "articleBody": article.excerpt,
     "wordCount": article.readingTime * 200,
     "author": authorSchema,
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://localdominate.org/#organization",
-      "name": "Local Dominator",
-      "url": "https://localdominate.org",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://localdominate.org/logo.png"
-      }
-    },
+    "publisher": publisherSchema,
     ...(reviewerSchema && {
       "reviewedBy": reviewerSchema,
       "lastReviewed": reviewedBy?.reviewDate
@@ -449,6 +461,8 @@ const ArticleLayout = ({
           <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
             {article.title}
           </h1>
+          {/* Author byline */}
+          <AuthorBox articleSlug={article.slug} compact />
         </header>
 
         {/* Auto-rendered inline Table of Contents (mobile + tablet) */}
@@ -524,7 +538,7 @@ const ArticleLayout = ({
           />
         </div>
 
-        <AuthorBox />
+        <AuthorBox articleSlug={article.slug} />
         <RelatedArticles articles={relatedArticles} />
       </main>
 
