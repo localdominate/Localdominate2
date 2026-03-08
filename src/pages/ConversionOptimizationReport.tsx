@@ -19,8 +19,9 @@ import {
   ArrowLeft, TrendingUp, TrendingDown, Target, MousePointerClick,
   Eye, Users, Zap, AlertTriangle, CheckCircle2, Lightbulb,
   ArrowRight, BarChart3, Clock, FileText, Smartphone, Monitor,
-  RefreshCw
+  RefreshCw, Save, History, Trash2, Download
 } from "lucide-react";
+import { toast } from "sonner";
 
 const COLORS = ["hsl(var(--primary))", "hsl(var(--destructive))", "#f59e0b", "#10b981", "#8b5cf6", "#06b6d4"];
 
