@@ -183,7 +183,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   fitness: {
     industry: "Fitnessstudios & Gyms",
-    quickWin: "„Fitnessstudio [Stadtteil]" und spezifische Kursangebote haben oft niedrige Konkurrenz und hohe Conversion.",
+    quickWin: "'Fitnessstudio [Stadtteil]' und spezifische Kursangebote haben oft niedrige Konkurrenz und hohe Conversion.",
     clusters: [
       {
         name: "Studio + Standort",
