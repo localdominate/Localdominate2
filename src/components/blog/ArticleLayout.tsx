@@ -5,6 +5,8 @@ import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import AuthorBox from "./AuthorBox";
+import { List } from "lucide-react";
+import { cn } from "@/lib/utils";
 import ArticleContextLinks from "./ArticleContextLinks";
 import RelatedArticles from "./RelatedArticles";
 import MobileArticleCTA from "./MobileArticleCTA";
@@ -67,9 +69,51 @@ const ArticleLayout = ({
   const hasTrackedView = useRef(false);
   const [viewId, setViewId] = useState<string | null>(null);
   const articleContentRef = useRef<HTMLElement>(null);
+  const [autoTocItems, setAutoTocItems] = useState<TOCItem[]>([]);
+  const [activeTocId, setActiveTocId] = useState<string>("");
   
   // Use engagement tracking hook
   useArticleEngagement(viewId, article.readingTime);
+
+  // Auto-generate TOC from h2 headings if no tocItems provided
+  useEffect(() => {
+    if (tocItems && tocItems.length > 0) return;
+    if (!articleContentRef.current) return;
+    
+    const headings = articleContentRef.current.querySelectorAll('h2[id], section[id] > h2');
+    const items: TOCItem[] = [];
+    headings.forEach((heading) => {
+      const id = heading.id || heading.parentElement?.id;
+      if (id) {
+        items.push({ id, title: heading.textContent?.replace(/^[^\w\s]*\s*/, '') || '' });
+      }
+    });
+    if (items.length > 2) setAutoTocItems(items);
+  }, [children, tocItems]);
+
+  // Active section tracking for inline TOC
+  const effectiveTocItems = tocItems && tocItems.length > 0 ? tocItems : autoTocItems;
+  
+  useEffect(() => {
+    if (effectiveTocItems.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter(e => e.isIntersecting);
+        if (visible.length > 0) {
+          const closest = visible.reduce((prev, curr) =>
+            prev.boundingClientRect.top < curr.boundingClientRect.top ? prev : curr
+          );
+          setActiveTocId(closest.target.id);
+        }
+      },
+      { rootMargin: "-80px 0px -70% 0px", threshold: 0 }
+    );
+    effectiveTocItems.forEach(item => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [effectiveTocItems]);
 
   // Auto-inject AI-readability attributes on all article sections
   useEffect(() => {
@@ -80,7 +124,6 @@ const ArticleLayout = ({
         section.setAttribute('data-ai-summary', 'true');
       }
     });
-    // Mark first paragraph of each section as speakable
     sections.forEach((section) => {
       const firstP = section.querySelector('p');
       if (firstP && !firstP.hasAttribute('data-speakable')) {
@@ -431,6 +474,53 @@ const ArticleLayout = ({
             {article.title}
           </h1>
         </header>
+
+        {/* Auto-rendered inline Table of Contents (mobile + tablet) */}
+        {effectiveTocItems.length > 2 && (
+          <nav id="auto-toc-nav" className={cn(
+            "bg-muted/50 border border-border rounded-xl p-5 mb-8 not-prose",
+            tocItems && tocItems.length > 0 ? "xl:hidden" : "" // Hide on desktop only when sticky TOC exists
+          )} aria-label="Inhaltsverzeichnis">
+            <div className="flex items-center gap-2 mb-4">
+              <List className="h-5 w-5 text-primary" />
+              <h2 className="font-semibold text-foreground text-base">Inhaltsverzeichnis</h2>
+            </div>
+            <ol className="space-y-1">
+              {(() => {
+                let mainIdx = 0;
+                return effectiveTocItems.map((item) => {
+                  const isActive = activeTocId === item.id;
+                  const isSub = item.level === 3;
+                  if (!isSub) mainIdx++;
+                  return (
+                    <li key={item.id}>
+                      <button
+                        onClick={() => {
+                          const el = document.getElementById(item.id);
+                          if (el) {
+                            const pos = el.getBoundingClientRect().top + window.pageYOffset - 100;
+                            window.scrollTo({ top: pos, behavior: "smooth" });
+                          }
+                        }}
+                        className={cn(
+                          "text-left text-sm w-full px-3 py-1.5 rounded-lg transition-all duration-200",
+                          "hover:bg-primary/10 hover:text-primary",
+                          isSub && "ml-4",
+                          isActive
+                            ? "bg-primary/15 text-primary font-medium"
+                            : isSub ? "text-muted-foreground" : "text-foreground"
+                        )}
+                      >
+                        {!isSub && <span className="text-primary mr-2">{mainIdx}.</span>}
+                        {item.title}
+                      </button>
+                    </li>
+                  );
+                });
+              })()}
+            </ol>
+          </nav>
+        )}
 
         {/* Article Content - AI-optimized wrapper */}
         <article 
