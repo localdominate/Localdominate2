@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
 import { industryRankingConfigs } from "@/data/industryRankingData";
+import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
+import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
