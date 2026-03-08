@@ -197,6 +197,7 @@ const App = () => (
                 <Route path="/admin/article-feedback" element={<ArticleFeedbackDashboard />} />
                 <Route path="/admin/blog-analytics" element={<BlogAnalytics />} />
                 <Route path="/admin/content-performance" element={<ContentPerformanceDashboard />} />
+                <Route path="/admin/conversion-report" element={<ConversionOptimizationReport />} />
                 <Route path="/admin/ab-test-zentrale" element={<ABTestZentrale />} />
                 <Route path="/admin/reset-password" element={<ResetPassword />} />
                 <Route path="/admin/update-password" element={<UpdatePassword />} />
