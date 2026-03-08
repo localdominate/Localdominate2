@@ -3506,6 +3506,30 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["ai search optimization", "geo optimierung", "ai suche lokale unternehmen", "chatgpt local seo", "google ai overviews local", "llms.txt", "ai suchmaschinenoptimierung", "generative engine optimization"],
     featured: true
   },
+  // === PILLAR PAGE: LOCAL LINK BUILDING BLUEPRINT ===
+  {
+    slug: "local-link-building-blueprint",
+    de: {
+      title: "Local Link Building Blueprint: Der komplette Leitfaden für lokale Backlinks 2026",
+      metaTitle: "Local Link Building Blueprint | Alle Strategien für lokale Backlinks 2026",
+      metaDescription: "Der umfassendste Local-Linkbuilding-Guide im DACH-Raum: Partnerschaften, Sponsoring, PR, Events, IHK-Links, Outreach-Templates & 90-Tage-Plan. Mit DACH-spezifischen Quellen.",
+      excerpt: "Alle lokalen Linkbuilding-Strategien in einem Blueprint: Von IHK-Links über Vereinssponsoring und lokale PR bis zu Outreach-Templates — mit 90-Tage-Aktionsplan für den DACH-Markt.",
+      category: "Content & Marketing"
+    },
+    en: {
+      title: "Local Link Building Blueprint: Complete Guide to Local Backlinks 2026",
+      metaTitle: "Local Link Building Blueprint | All Strategies for Local Backlinks 2026",
+      metaDescription: "The most comprehensive local link building guide: partnerships, sponsorships, PR, events, chamber of commerce links, outreach templates & 90-day plan.",
+      excerpt: "All local link building strategies in one blueprint: From chamber of commerce links to sponsorships, local PR and outreach templates — with a 90-day action plan.",
+      category: "Content & Marketing"
+    },
+    readingTime: 22,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🔗",
+    keywords: ["local link building", "lokale backlinks", "lokales linkbuilding", "ihk backlink", "vereinssponsoring seo", "lokale pr linkbuilding", "backlinks lokale unternehmen", "link building dach"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3601,6 +3625,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-strategie-kleine-unternehmen",
   "local-seo-ranking-faktoren-erklaert",
   "ai-suche-lokale-unternehmen",
+  "local-link-building-blueprint",
 ]);
 
 // Get only published articles (with pages), deduplicated
