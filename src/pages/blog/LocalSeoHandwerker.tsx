@@ -573,6 +573,8 @@ const LocalSeoHandwerker = () => {
 
       <ImplementationRoadmap data={industryImplementationData.handwerker} />
 
+      <IndustryComparisonTable data={industryComparisonData.handwerker} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6">
