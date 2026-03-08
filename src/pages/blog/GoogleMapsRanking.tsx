@@ -117,10 +117,10 @@ const GoogleMapsRanking = () => {
     },
     en: {
       tocItems: [
-        { id: "warum-wichtig", title: "Why Google Maps Matters More Than Your Website" },
-        { id: "ranking-faktoren", title: "The 7 Decisive Ranking Factors" },
-        { id: "optimierung", title: "Step-by-Step Optimization" },
-        { id: "fehler", title: "Common Mistakes to Avoid" },
+        { id: "warum-wichtig", title: "Why Does Google Maps Matter More Than Your Website?" },
+        { id: "ranking-faktoren", title: "What Are the 7 Key Google Maps Ranking Factors?" },
+        { id: "optimierung", title: "How Do You Optimize Your Google Maps Ranking Step by Step?" },
+        { id: "fehler", title: "What Mistakes Should You Avoid in Google Maps Ranking?" },
         { id: "faq", title: "Frequently Asked Questions" },
       ],
       intro: {
