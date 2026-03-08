@@ -5,6 +5,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import FehlerDiagnoseQuiz from "@/components/blog/FehlerDiagnoseQuiz";
+import RankingMonitoringStrategy from "@/components/blog/RankingMonitoringStrategy";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle, CheckCircle, XCircle, Zap, MapPin, Star, Globe, Smartphone, Search, FileText, MessageSquare, Clock, Users, Shield } from "lucide-react";
 import {
@@ -945,6 +946,9 @@ const LocalSeoFehler = () => {
           </ol>
         </div>
       </section>
+
+      {/* Ranking Monitoring Strategy */}
+      <RankingMonitoringStrategy compact />
 
       <HelpfulnessWidget articleSlug="local-seo-fehler" />
     </ArticleLayout>
