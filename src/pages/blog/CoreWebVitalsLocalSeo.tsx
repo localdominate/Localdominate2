@@ -203,7 +203,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card>
             <CardContent className="p-4">
               <Image className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Bilder optimieren</h4>
+              <h4 className="font-semibold mb-2">Bilder für schnelleren LCP optimieren</h4>
               <ul className="text-sm space-y-1 text-muted-foreground">
                 <li>• WebP/AVIF-Format verwenden</li>
                 <li>• Bilder komprimieren (TinyPNG, ShortPixel)</li>
