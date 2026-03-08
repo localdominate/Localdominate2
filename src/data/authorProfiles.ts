@@ -365,6 +365,7 @@ export const ARTICLE_AUTHORS: Record<string, AuthorId> = {
   "google-business-produkte-services": "markus-schmidt",
   "google-business-insights-verstehen": "markus-schmidt",
   "local-seo-vs-maps-seo": "markus-schmidt",
+  "local-seo-vs-organisch": "markus-schmidt",
   "wie-google-maps-ranking-funktioniert": "markus-schmidt",
   "google-maps-konkurrenzanalyse": "markus-schmidt",
   "local-seo-strategie-kleine-unternehmen": "markus-schmidt",
