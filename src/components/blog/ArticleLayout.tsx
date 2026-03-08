@@ -461,6 +461,8 @@ const ArticleLayout = ({
           <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
             {article.title}
           </h1>
+          {/* Author byline */}
+          <AuthorBox articleSlug={article.slug} compact />
         </header>
 
         {/* Auto-rendered inline Table of Contents (mobile + tablet) */}
