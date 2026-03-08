@@ -153,6 +153,7 @@ const GoogleMapsKonkurrenzanalyse = lazy(() => import("./pages/blog/GoogleMapsKo
 const GoogleMapsRankingCaseStudies = lazy(() => import("./pages/blog/GoogleMapsRankingCaseStudies"));
 const EntitySeoGuide = lazy(() => import("./pages/blog/EntitySeoGuide"));
 const SemanticSeoGuide = lazy(() => import("./pages/blog/SemanticSeoGuide"));
+const GoogleMapsAuditTemplate = lazy(() => import("./pages/blog/GoogleMapsAuditTemplate"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
