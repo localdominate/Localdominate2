@@ -688,6 +688,30 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  {
+    slug: "local-keyword-research-template",
+    de: {
+      title: "Local Keyword Research Template: Systematische Keyword-Recherche für lokale Unternehmen",
+      metaTitle: "Local Keyword Research Template | Vorlage & Workflow 2026",
+      metaDescription: "Kostenloses Keyword Research Template für Local SEO. 6 Keyword-Typen, 5-Schritte-Workflow, Copy-ready Spreadsheet mit Keyword Mapping und Ranking-Tracker.",
+      excerpt: "Systematische lokale Keyword-Recherche mit 6 Keyword-Typen, interaktivem 5-Schritte-Workflow und kopierbarer Spreadsheet-Vorlage für den DACH-Markt.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Local Keyword Research Template: Systematic Keyword Research for Local Businesses",
+      metaTitle: "Local Keyword Research Template | Workflow & Spreadsheet 2026",
+      metaDescription: "Free keyword research template for local SEO. 6 keyword types, 5-step workflow, copy-ready spreadsheet with keyword mapping and ranking tracker.",
+      excerpt: "Systematic local keyword research with 6 keyword types, interactive 5-step workflow and copyable spreadsheet template for the DACH market.",
+      category: "Tools & Resources"
+    },
+    readingTime: 11,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🔍",
+    keywords: ["keyword recherche", "keyword research template", "lokale keywords", "keyword mapping", "keyword spreadsheet", "local seo keywords"],
+    featured: false
+  },
+
   // === NEUE ARTIKEL: STRATEGIE ===
   {
     slug: "local-link-building",
@@ -3869,6 +3893,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-ranking-case-studies",
   "google-maps-audit-template",
   "citation-tracking-template",
+  "local-keyword-research-template",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
