@@ -8,6 +8,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -439,6 +440,9 @@ const LocalSeoChecklisteKomplett = () => {
       </section>
 
       <ArticleCTA variant="box" />
+
+      {/* Interaktiver Onboarding-Guide */}
+      <LocalSEOOnboardingGuide compact />
 
       {/* 90-Tage-Plan */}
       <section id="zeitplan" data-ai-summary="true">

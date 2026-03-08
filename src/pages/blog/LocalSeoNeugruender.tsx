@@ -5,6 +5,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { 
   Rocket, 
@@ -242,6 +243,9 @@ const LocalSeoNeugruender = () => {
           ))}
         </ol>
       </section>
+
+      {/* Interaktiver Onboarding-Guide */}
+      <LocalSEOOnboardingGuide />
 
       {/* 90-Tage-Zeitplan */}
       <section id="zeitplan" className="mb-12">

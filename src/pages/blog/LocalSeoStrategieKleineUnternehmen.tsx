@@ -12,6 +12,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import LocalCitationWorkflows from "@/components/blog/LocalCitationWorkflows";
+import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
 import { CheckCircle, AlertTriangle, Target, Wrench } from "lucide-react";
 import {
   Table,
@@ -617,6 +618,9 @@ const LocalSeoStrategieKleineUnternehmen = () => {
           Unsere vollständige Tool-Übersicht mit Bewertungen findest du in der <Link to="/blog/seo-toolbox-kostenlose-ressourcen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">SEO Toolbox</Link> und dem <Link to="/blog/ki-tools-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">KI-Tools für Local SEO Guide</Link>.
         </p>
       </section>
+
+      {/* Interaktiver Onboarding-Guide */}
+      <LocalSEOOnboardingGuide compact />
 
       {/* 90-Tage-Plan */}
       <section id="90-tage-plan">
