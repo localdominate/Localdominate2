@@ -367,6 +367,8 @@ const LocalCitations2025: React.FC = () => {
 
         <LocalCitationWorkflows />
 
+        <DirectorySubmissionStrategy />
+
         <SourcesSection sources={sources} />
 
         <HelpfulnessWidget articleSlug={articleData.slug} />

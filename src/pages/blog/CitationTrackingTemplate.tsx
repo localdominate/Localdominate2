@@ -508,6 +508,8 @@ const CitationTrackingTemplate = () => {
 
       <LocalCitationWorkflows compact />
 
+      <DirectorySubmissionStrategy compact tiers={["tier1"]} />
+
       <SourcesSection sources={sources} />
       <ArticleCTA />
       <HelpfulnessWidget articleSlug="citation-tracking-template" />
