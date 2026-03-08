@@ -325,7 +325,7 @@ const ConversionOptimizationReport = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Conversion Optimization Report" description="CTA-Performance, Lead-Generierung und Optimierungsempfehlungen" noIndex />
+      <SEOHead title="Conversion Optimization Report" description="CTA-Performance, Lead-Generierung und Optimierungsempfehlungen" noindex />
 
       {/* Header */}
       <div className="bg-card border-b">
