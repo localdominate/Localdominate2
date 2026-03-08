@@ -166,7 +166,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 2: Google Business Profile */}
       <section id="google-business">
-        <h2>Google Business Profil: Daten & Benchmarks</h2>
+        <h2>Welche Kennzahlen hat das Google Business Profil?</h2>
         <p>
           Das Google Business Profil ist der wichtigste Einzelfaktor für lokale Sichtbarkeit. 
           Diese Statistiken zeigen den messbaren Impact einer professionellen GBP-Optimierung.
