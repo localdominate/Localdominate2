@@ -181,7 +181,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> PageSpeed Insights prüfen, Bilder komprimieren, Caching aktivieren</p>
           </div>
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">🔗 Broken Redirects</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">🔗 Fehlerhafte Weiterleitungen & Redirect-Chains</h3>
             <p className="text-gray-700 mb-2">Nach Website-Migration fehlen Weiterleitungen oder Redirect-Chains entstanden.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Screaming Frog Crawl, alle 301-Redirects prüfen</p>
           </div>
