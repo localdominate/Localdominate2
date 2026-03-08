@@ -85,7 +85,7 @@ const GoogleMapsRanking = () => {
         }
       },
       section4: {
-        title: "Häufige Fehler vermeiden",
+        title: "Welche Fehler solltest du beim Google Maps Ranking vermeiden?",
         mistakes: [
           { title: "Keyword-Stuffing im Namen", desc: "Füge keine Keywords in deinen Unternehmensnamen ein – das verstößt gegen Googles Richtlinien." },
           { title: "Inkonsistente NAP-Daten", desc: "Unterschiedliche Adressen auf verschiedenen Plattformen verwirren Google." },
