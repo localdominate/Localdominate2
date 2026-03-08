@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Clock, ExternalLink, FileText, CheckSquare, Lightbulb } from "lucide-react";
+import HubNavigationBar from "@/components/blog/HubNavigationBar";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import { Card, CardContent } from "@/components/ui/card";
 import SEOHead from "@/components/SEOHead";
@@ -140,6 +141,8 @@ const TopicHubLayout = ({
             </div>
           </div>
         </section>
+
+        <HubNavigationBar />
 
         {/* Summary */}
         {summary && (
