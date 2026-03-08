@@ -4096,6 +4096,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-statistiken-daten",
   "local-seo-vs-organisch",
   "google-maps-seo-vs-organic-seo",
+  "ai-search-vs-traditional-search",
 ]);
 
 // Get only published articles (with pages), deduplicated
