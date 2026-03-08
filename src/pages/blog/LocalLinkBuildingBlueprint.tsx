@@ -9,6 +9,7 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
 import GuestPostOutlines from "@/components/blog/GuestPostOutlines";
+import EventSponsorshipStrategy from "@/components/blog/EventSponsorshipStrategy";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
