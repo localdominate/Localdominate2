@@ -504,24 +504,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "google-maps-seo-ranking-faktoren",
     de: {
-      title: "Google Maps SEO 2026: Die 20 wichtigsten Ranking-Faktoren",
-      metaTitle: "Google Maps Ranking-Faktoren | SEO 2026",
-      metaDescription: "Die 20 wichtigsten Ranking-Faktoren für Google Maps im Detail erklärt. Proximity, Relevance, Prominence und alle Signale, die zählen.",
-      excerpt: "Verstehe genau, welche Faktoren dein Google Maps Ranking beeinflussen und wie du sie optimierst.",
+      title: "Google Maps SEO 2026: Alle 20 Ranking-Signale mit Gewichtung",
+      metaTitle: "Google Maps 20 Ranking-Signale & Gewichtung | 2026",
+      metaDescription: "Alle 20 Google Maps Ranking-Signale mit Gewichtung: GBP-Signale (32 %), Bewertungen (16 %), Citations (11 %) und mehr. Vollständige Signal-Tabelle.",
+      excerpt: "Die vollständige Übersicht aller 20 Google Maps Ranking-Signale mit prozentualer Gewichtung und Optimierungspriorität.",
       category: "Local SEO"
     },
     en: {
-      title: "Google Maps SEO 2026: The 20 Most Important Ranking Factors",
-      metaTitle: "Google Maps Ranking Factors | SEO 2026",
-      metaDescription: "The 20 most important ranking factors for Google Maps explained in detail. Proximity, Relevance, Prominence and all the signals that matter.",
-      excerpt: "Understand exactly which factors influence your Google Maps ranking and how to optimize them.",
+      title: "Google Maps SEO 2026: All 20 Ranking Signals with Weighting",
+      metaTitle: "Google Maps 20 Ranking Signals & Weighting | 2026",
+      metaDescription: "All 20 Google Maps ranking signals with weighting: GBP signals (32%), reviews (16%), citations (11%) and more. Complete signal table.",
+      excerpt: "The complete overview of all 20 Google Maps ranking signals with percentage weighting and optimization priority.",
       category: "Local SEO"
     },
     readingTime: 18,
     publishedAt: "2026-01-28",
     updatedAt: "2026-01-28",
     icon: "🗺️",
-    keywords: ["google maps ranking", "ranking faktoren", "local pack", "maps seo", "proximity relevance prominence"],
+    keywords: ["google maps ranking signale", "ranking faktoren gewichtung", "local pack signale", "maps seo 2026", "proximity relevance prominence gewichtung"],
     featured: true
   },
   {
