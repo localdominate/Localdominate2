@@ -186,7 +186,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Screaming Frog Crawl, alle 301-Redirects prüfen</p>
           </div>
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">📱 Mobile-Probleme</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">📱 Mobile-Usability Probleme</h3>
             <p className="text-gray-700 mb-2">Nach Design-Änderungen ist die mobile Version nicht mehr nutzbar.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Mobile-Friendly Test, auf echten Geräten testen</p>
           </div>
