@@ -29,7 +29,7 @@ const LokaleSeo2026 = () => {
       ],
       intro: "Lokale Suchmaschinenoptimierung entwickelt sich rasant weiter. Was 2024 funktioniert hat, ist 2026 vielleicht schon veraltet. Dieser Artikel zeigt dir die neuesten Trends und wie du dein lokales Unternehmen zukunftssicher aufstellst.",
       section1: {
-        title: "Die wichtigsten Trends 2026",
+        title: "Welche Local SEO Trends dominieren 2026?",
         text: "Die lokale Suche verändert sich grundlegend. Diese fünf Trends werden 2026 dominieren:",
         trends: [
           { title: "KI-gestützte Suchergebnisse", desc: "Google AI Overviews beeinflussen, wie lokale Ergebnisse angezeigt werden. Strukturierte Daten werden wichtiger denn je." },
