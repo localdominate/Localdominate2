@@ -857,9 +857,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "google-sge-lokale-suche",
-    primaryKeyword: "google sge lokale suche",
-    secondaryKeywords: ["search generative experience", "ai suche lokal", "sge optimierung"],
-    lsiKeywords: ["generative search", "local seo ai", "sge vorbereitung"],
+    primaryKeyword: "google sge prognose vorbereitung",
+    secondaryKeywords: ["search generative experience prognose", "sge zeitleiste", "sge vorbereitung lokal"],
+    lsiKeywords: ["generative search zukunft", "local seo sge readiness", "sge kmu vorbereitung"],
     searchIntent: "informational",
     targetSearchVolume: "low",
     contentType: "cluster"
