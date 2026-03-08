@@ -6,6 +6,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import CompetitorTrackingStrategy from "@/components/blog/CompetitorTrackingStrategy";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -320,6 +321,9 @@ const GoogleMapsKonkurrenzanalyse = () => {
         },
         insight: "Dein realistischstes Ziel: Platz 3 im Local Pack. Fokussiere auf Bewertungs-Velocity (5+/Monat), GBP auf 100% bringen und 15 neue Citations in 8 Wochen. Der schwächste Pack-Platz ist dein direkter Gegner.",
       }} />
+
+      {/* Competitor Tracking Strategy */}
+      <CompetitorTrackingStrategy />
 
       {/* 5-Schritte-Framework */}
       <section id="5-schritte" className="mb-12">

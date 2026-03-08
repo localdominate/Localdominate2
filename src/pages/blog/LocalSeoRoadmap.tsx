@@ -9,6 +9,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import CompetitorTrackingStrategy from "@/components/blog/CompetitorTrackingStrategy";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -268,6 +269,9 @@ const LocalSeoRoadmap = () => {
         ],
         insight: "Die Roadmap adressiert alle 8 Metriken systematisch: Wochen 1-2 schließen GBP-Lücken, Wochen 3-6 Citations, Wochen 7-8 Bewertungen, Wochen 9-12 Content und Backlinks.",
       }} />
+
+      {/* Competitor Tracking Strategy */}
+      <CompetitorTrackingStrategy compact />
 
       {/* Visual Gantt-style Roadmap */}
       <section id="visual-roadmap" className="mb-10">

@@ -9,6 +9,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import CompetitorTrackingStrategy from "@/components/blog/CompetitorTrackingStrategy";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -367,6 +368,9 @@ const LocalSeoStrategyPlanner = () => {
         },
         insight: "Fokussiere die ersten 4 Wochen auf GBP-Vollständigkeit (65% → 100%) und Bewertungen. Diese Quick-Wins schließen die größten Lücken zu Konkurrent B und C. Backlinks und Content folgen in Phase 5-6.",
       }} />
+
+      {/* Competitor Tracking Strategy */}
+      <CompetitorTrackingStrategy compact />
 
       {/* Progress */}
       <Card className="mb-8 border-primary/20 bg-primary/5">
