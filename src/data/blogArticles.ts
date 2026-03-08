@@ -4048,6 +4048,7 @@ const PUBLISHED_SLUGS = new Set([
   "semantic-seo-topical-authority",
   "schema-strategie-dokument",
   "local-seo-statistiken-daten",
+  "local-seo-vs-organisch",
 ]);
 
 // Get only published articles (with pages), deduplicated

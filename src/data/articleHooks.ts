@@ -432,6 +432,12 @@ export const articleHooks: Record<string, ArticleHookData> = {
     de: "88+ Datenpunkte, 22 Branchen, 1 Ziel: datenbasierte Entscheidungen. Ob Bewertungs-Benchmarks oder Mobile-Trends — hier findest du die Zahlen, die deine Strategie untermauern.",
     en: "88+ data points, 22 industries, 1 goal: data-driven decisions. Whether review benchmarks or mobile trends — here you'll find the numbers that back up your strategy."
   },
+
+  // === COMPARISON ===
+  "local-seo-vs-organisch": {
+    de: "Klassisches SEO oder Local SEO — zwei Disziplinen, die oft verwechselt werden, aber fundamental unterschiedliche Strategien erfordern. Wer beides versteht, investiert gezielter und gewinnt schneller.",
+    en: "Classic SEO or Local SEO — two disciplines often confused, yet requiring fundamentally different strategies. Understanding both means investing smarter and winning faster."
+  },
 };
 
 /**

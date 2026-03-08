@@ -534,7 +534,7 @@ const LocalSeoRankingFaktorenErklaert = () => {
         </div>
 
         <p>
-          Tiefer in die Unterschiede: <Link to="/blog/local-seo-vs-maps-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO vs. Maps SEO</Link> | <Link to="/blog/google-maps-seo-ranking-faktoren" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Google Maps Ranking-Faktoren</Link>.
+          Tiefer in die Unterschiede: <Link to="/blog/local-seo-vs-organisch" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO vs. Organic SEO</Link> | <Link to="/blog/local-seo-vs-maps-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO vs. Maps SEO</Link> | <Link to="/blog/google-maps-seo-ranking-faktoren" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Google Maps Ranking-Faktoren</Link>.
         </p>
       </section>
 
