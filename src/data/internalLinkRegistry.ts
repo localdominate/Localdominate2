@@ -260,6 +260,7 @@ export const HUB_DEFINITIONS: HubDefinition[] = [
       "ki-tools-local-seo",
       "local-seo-voice-search",
       "e-e-a-t-lokale-unternehmen",
+      "entity-seo-guide",
     ],
   },
   {

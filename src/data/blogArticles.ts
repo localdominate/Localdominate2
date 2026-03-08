@@ -593,6 +593,29 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["case study", "google maps ranking", "local seo erfolg", "ranking verbessern", "fallstudie", "branchenvergleich"],
     featured: true
   },
+  {
+    slug: "entity-seo-guide",
+    de: {
+      title: "Entity SEO: Wie Suchmaschinen Entitäten verstehen & nutzen",
+      metaTitle: "Entity SEO Guide | Knowledge Graph & Entitäts-Optimierung 2026",
+      metaDescription: "Was ist Entity SEO? Wie Google und AI-Suchmaschinen Entitäten erkennen. Mit Knowledge-Graph-Strategien, Schema Markup, sameAs-Verknüpfung und Praxis-Checkliste.",
+      excerpt: "Von Keyword-SEO zu Entity SEO: Wie du dein Unternehmen als Entität im Knowledge Graph etablierst und deine Sichtbarkeit in Google und AI-Suche maximierst.",
+      category: "AI & Zukunft"
+    },
+    en: {
+      title: "Entity SEO: How Search Engines Understand Entities",
+      metaTitle: "Entity SEO Guide | Knowledge Graph & Entity Optimization 2026",
+      metaDescription: "What is Entity SEO? How Google and AI search engines recognize entities. With Knowledge Graph strategies, Schema Markup, sameAs linking and practical checklist.",
+      excerpt: "From keyword SEO to entity SEO: How to establish your business as an entity in the Knowledge Graph and maximize visibility in Google and AI search.",
+      category: "AI & Future"
+    },
+    readingTime: 15,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🧠",
+    keywords: ["entity seo", "knowledge graph", "schema markup", "sameAs", "structured data", "ai seo", "entität"],
+    featured: true
+  },
 
   // === NEUE ARTIKEL: STRATEGIE ===
   {
@@ -3773,6 +3796,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-spam-erkennen",
   "google-maps-konkurrenzanalyse",
   "google-maps-ranking-case-studies",
+  "entity-seo-guide",
 ]);
 
 // Get only published articles (with pages), deduplicated

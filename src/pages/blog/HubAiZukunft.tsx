@@ -10,6 +10,7 @@ const groups: HubArticleGroup[] = [
       "google-ai-overviews-local-seo",
       "ai-search-optimization-2026",
       "website-content-ai-suchmaschinen",
+      "entity-seo-guide",
     ],
   },
   {
