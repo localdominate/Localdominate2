@@ -299,6 +299,7 @@ const App = () => (
                 <Route path="/blog/gbp-oeffnungszeiten-sondertage" element={<GbpOeffnungszeitenSondertage />} />
                 <Route path="/blog/gbp-attribute-richtig-nutzen" element={<GbpAttributeRichtigNutzen />} />
                 <Route path="/blog/local-seo-vs-maps-seo" element={<LocalSeoVsMaps />} />
+                <Route path="/blog/local-seo-vs-organisch" element={<LocalSeoVsOrganisch />} />
                 <Route path="/blog/local-citations-2025" element={<LocalCitations2025 />} />
                 <Route path="/blog/local-seo-baeckerei" element={<LocalSeoBackerei />} />
                 <Route path="/blog/local-seo-hannover" element={<LocalSeoHannover />} />
