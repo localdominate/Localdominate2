@@ -449,35 +449,7 @@ const LocalSeoChecklisteKomplett = () => {
       <section id="zeitplan" data-ai-summary="true">
         <h2>Der 90-Tage-Implementierungsplan</h2>
 
-        <Table className="my-6">
-          <TableHeader>
-            <TableRow>
-              <TableHead className="font-bold">Zeitraum</TableHead>
-              <TableHead className="font-bold">Phase</TableHead>
-              <TableHead className="font-bold">Wichtigste Aufgaben</TableHead>
-              <TableHead className="font-bold">Erwartetes Ergebnis</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {[
-              ["Woche 1", "GBP + Website", "GBP verifizieren, NAP auf Website, Kontaktseite", "GBP live, erste Sichtbarkeit"],
-              ["Woche 2", "GBP + Technik", "Fotos, Kategorien, SSL, Schema Markup", "Rich Snippets, Sterneanzeige"],
-              ["Woche 3", "Technisches SEO", "Core Web Vitals, Sitemap, Mobile Check", "Schnelle, indexierbare Seite"],
-              ["Woche 4", "Content", "Lokale Keywords, Standortseiten, FAQ", "Organische lokale Rankings"],
-              ["Woche 5-6", "Citations", "Top-20 Verzeichnisse, NAP-Konsistenz", "Breitere lokale Prasenz"],
-              ["Woche 7-8", "Bewertungen", "Bewertungs-Prozess starten, erste 10 Reviews", "Sterne in Google, Social Proof"],
-              ["Woche 9-10", "Linkbuilding", "IHK-Link, 2 Sponsorings, Unlinked Mentions", "Erste hochwertige Backlinks"],
-              ["Woche 11-12", "Tracking + Optimierung", "Analytics-Setup, erstes Reporting, Lucken schliessen", "Datenbasierte Optimierung"],
-            ].map(([zeit, phase, aufgaben, ergebnis], i) => (
-              <TableRow key={i}>
-                <TableCell className="font-bold text-primary whitespace-nowrap">{zeit}</TableCell>
-                <TableCell className="font-medium whitespace-nowrap">{phase}</TableCell>
-                <TableCell className="text-muted-foreground text-sm">{aufgaben}</TableCell>
-                <TableCell className="text-muted-foreground text-sm">{ergebnis}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+        <NinetyDayImplementationPlan compact />
 
         <p>
           Detaillierter Strategieplan: <Link to="/blog/local-seo-strategie-kleine-unternehmen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Strategie fur kleine Unternehmen</Link>.
