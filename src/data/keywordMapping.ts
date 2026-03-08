@@ -704,9 +704,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-strategy-planner",
-    primaryKeyword: "local seo strategieplan",
-    secondaryKeywords: ["seo strategy planner", "local seo plan", "90 tage seo plan"],
-    lsiKeywords: ["local seo roadmap", "seo strategieplan vorlage", "seo phasen plan"],
+    primaryKeyword: "local seo aufgabenplan",
+    secondaryKeywords: ["seo strategy planner", "seo aufgaben checkliste", "local seo budget planung"],
+    lsiKeywords: ["seo phasen plan", "49 aufgaben seo", "seo budget schätzung"],
     searchIntent: "informational",
     targetSearchVolume: "low",
     contentType: "cluster"
