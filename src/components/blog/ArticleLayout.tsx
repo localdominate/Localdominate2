@@ -477,7 +477,10 @@ const ArticleLayout = ({
 
         {/* Auto-rendered inline Table of Contents (mobile + tablet) */}
         {effectiveTocItems.length > 2 && (
-          <nav id="auto-toc-nav" className="bg-muted/50 border border-border rounded-xl p-5 mb-8 xl:hidden not-prose" aria-label="Inhaltsverzeichnis">
+          <nav id="auto-toc-nav" className={cn(
+            "bg-muted/50 border border-border rounded-xl p-5 mb-8 not-prose",
+            tocItems && tocItems.length > 0 ? "xl:hidden" : "" // Hide on desktop only when sticky TOC exists
+          )} aria-label="Inhaltsverzeichnis">
             <div className="flex items-center gap-2 mb-4">
               <List className="h-5 w-5 text-primary" />
               <h2 className="font-semibold text-foreground text-base">Inhaltsverzeichnis</h2>
