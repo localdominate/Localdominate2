@@ -17,12 +17,12 @@ const GooglePostsRankingFaktor = () => {
 
   const tocItems = [
     { id: "was-sind-google-posts", title: "Was sind Google Posts?" },
-    { id: "ranking-einfluss", title: "Einfluss auf Rankings" },
-    { id: "post-typen", title: "Die 5 Post-Typen" },
-    { id: "content-strategie", title: "Content-Strategie" },
-    { id: "optimierung", title: "Posts optimieren" },
-    { id: "frequenz", title: "Posting-Frequenz" },
-    { id: "erfolg-messen", title: "Erfolg messen" },
+    { id: "ranking-einfluss", title: "Wie beeinflussen Google Posts dein lokales Ranking?" },
+    { id: "post-typen", title: "Welche 5 Google Post-Typen gibt es?" },
+    { id: "content-strategie", title: "Wie entwickelst du eine Content-Strategie für Posts?" },
+    { id: "optimierung", title: "Wie optimierst du Posts für maximale Wirkung?" },
+    { id: "frequenz", title: "Wie oft solltest du Google Posts veröffentlichen?" },
+    { id: "erfolg-messen", title: "Wie misst du den Erfolg deiner Google Posts?" },
     { id: "faq", title: "Häufige Fragen" }
   ];
 
