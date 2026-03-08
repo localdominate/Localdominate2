@@ -933,6 +933,13 @@ const LocalSeoHotels = () => {
         </div>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Hotel reduziert OTA-Abhängigkeit</h2>
+        {industryCaseStudies.hotels.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-hotels" />
     </ArticleLayout>
   );

@@ -186,6 +186,13 @@ const LocalSeoYoga = () => {
         </Accordion>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Yoga-Studio steigert Kursauslastung</h2>
+        {industryCaseStudies.yoga.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
       <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />
       <SourcesSection sources={sources} />

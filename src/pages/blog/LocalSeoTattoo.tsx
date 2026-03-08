@@ -185,6 +185,13 @@ const LocalSeoTattoo = () => {
         </Accordion>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Tattoo-Studio verdreifacht Anfragen</h2>
+        {industryCaseStudies.tattoo.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
       <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />

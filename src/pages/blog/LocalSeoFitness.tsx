@@ -841,6 +841,13 @@ const LocalSeoFitness = () => {
         </div>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Boutique-Gym gegen Ketten</h2>
+        {industryCaseStudies.fitness.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-fitnessstudio-gym" />
     </ArticleLayout>
   );
