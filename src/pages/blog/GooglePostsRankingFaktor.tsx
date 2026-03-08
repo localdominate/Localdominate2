@@ -119,7 +119,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="ranking-einfluss">
-        <h2>Einfluss auf lokale Rankings</h2>
+        <h2>Wie beeinflussen Google Posts dein lokales Ranking?</h2>
         <AutoLexikonText>
           <p>
             Die direkte Wirkung von Google Posts auf Rankings ist Gegenstand 
