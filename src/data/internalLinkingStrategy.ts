@@ -56,6 +56,11 @@ const ANCHOR_TEXT_MAP: Record<string, Omit<AnchorTextRecommendation, "slug" | "p
     variations: ["Local-SEO-Aktionsplan für KMU", "SEO-Strategie für lokale Unternehmen"],
     naturalAnchor: "unsere Schritt-für-Schritt Local-SEO-Strategie",
   },
+  "local-seo-ranking-faktoren-erklaert": {
+    primaryAnchor: "Local SEO Ranking-Faktoren erklärt",
+    variations: ["alle lokalen Ranking-Faktoren im Detail", "Ranking-Signale für Local SEO"],
+    naturalAnchor: "unsere vollständige Ranking-Faktoren-Analyse",
+  },
 
   // === HUB PAGES ===
   "google-business-profil-hub": {
