@@ -214,6 +214,7 @@ const LocalSeoYoga = () => {
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.yoga} />
       <IndustryRankingChallenges config={industryRankingConfigs.yoga} />
       <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
       <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />

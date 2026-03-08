@@ -815,6 +815,7 @@ Herzliche Grüße,
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.steuerberater} />
       <IndustryRankingChallenges config={industryRankingConfigs.steuerberater} />
       <HelpfulnessWidget articleSlug="local-seo-steuerberater" />
 

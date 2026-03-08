@@ -400,6 +400,7 @@ const LocalSeoFotograf = () => {
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.fotograf} />
       <IndustryRankingChallenges config={industryRankingConfigs.fotograf} />
       <HelpfulnessWidget articleSlug="local-seo-fotograf" />
 

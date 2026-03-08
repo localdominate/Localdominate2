@@ -381,6 +381,7 @@ const LocalSeoAnwaelteKanzleien = () => {
         description="Kopierfertige Texte fuer Anwaelte: Nach Mandatsabschluss per E-Mail und Telefon. Mit Schweigepflicht-Hinweisen."
       />
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.anwaelte} />
       <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
       <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 

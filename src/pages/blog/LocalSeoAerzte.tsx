@@ -928,6 +928,7 @@ const LocalSeoAerzte = () => {
         </p>
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.aerzte} />
       <IndustryRankingChallenges config={industryRankingConfigs.aerzte} />
       <HelpfulnessWidget articleSlug="local-seo-aerzte-praxen" />
     </ArticleLayout>

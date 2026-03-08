@@ -256,6 +256,7 @@ const LocalSeoPhysiotherapie = () => {
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.physiotherapie} />
       <IndustryRankingChallenges config={industryRankingConfigs.physiotherapie} />
       <HelpfulnessWidget articleSlug="local-seo-physiotherapie" />
 

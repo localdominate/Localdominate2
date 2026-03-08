@@ -803,6 +803,7 @@ Herzliche Grüße,
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.immobilienmakler} />
       <IndustryRankingChallenges config={industryRankingConfigs.immobilienmakler} />
       <HelpfulnessWidget articleSlug="local-seo-immobilienmakler" />
 
