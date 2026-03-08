@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import DefinitionBox from "@/components/blog/DefinitionBox";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
