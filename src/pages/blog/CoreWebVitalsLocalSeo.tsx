@@ -455,10 +455,10 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-muted/50 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2 flex items-center gap-2">
+            <h3 className="font-semibold mb-2 flex items-center gap-2">
               <TrendingUp className="h-5 w-5 text-primary" />
-              Conversion-Impact
-            </h4>
+              Conversion-Impact schnellerer Ladezeiten
+            </h3>
             <p className="text-muted-foreground">
               <strong>1 Sekunde schnellere Ladezeit = 7% mehr Conversions.</strong> Für ein lokales Restaurant mit 1.000 monatlichen Website-Besuchern bedeutet das potenziell 70 zusätzliche Reservierungen pro Monat.
             </p>
