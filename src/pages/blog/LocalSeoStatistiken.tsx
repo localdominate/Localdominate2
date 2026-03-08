@@ -253,7 +253,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 6: Ranking Factors */}
       <section id="ranking-faktoren">
-        <h2>Local SEO Ranking-Faktoren 2026: Gewichtung</h2>
+        <h2>Welche Faktoren bestimmen das lokale Ranking 2026?</h2>
         <p>
           Basierend auf der jährlichen Whitespark/Moz Local Search Ranking Factors Studie und eigenen Analysen 
           zeigt diese Aufstellung die relative Gewichtung der wichtigsten Ranking-Faktoren für das Local Pack.
