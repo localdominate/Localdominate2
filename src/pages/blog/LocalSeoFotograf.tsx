@@ -9,6 +9,8 @@ import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
+import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
+import { industryComparisonData } from "@/data/industryComparisonData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -321,6 +323,8 @@ const LocalSeoFotograf = () => {
       </section>
 
       <ImplementationRoadmap data={industryImplementationData.fotograf} />
+
+      <IndustryComparisonTable data={industryComparisonData.fotograf} />
 
       <section id="faq">
         <h2>Häufige Fragen</h2>

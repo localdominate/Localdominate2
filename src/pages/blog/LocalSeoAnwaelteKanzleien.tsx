@@ -11,6 +11,8 @@ import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
+import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
+import { industryComparisonData } from "@/data/industryComparisonData";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -298,6 +300,8 @@ const LocalSeoAnwaelteKanzleien = () => {
       </section>
 
       <ImplementationRoadmap data={industryImplementationData.anwaelte} />
+
+      <IndustryComparisonTable data={industryComparisonData.anwaelte} />
 
       {/* FAQ */}
       <section id="faq">

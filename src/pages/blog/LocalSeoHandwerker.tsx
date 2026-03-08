@@ -12,6 +12,8 @@ import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
+import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
+import { industryComparisonData } from "@/data/industryComparisonData";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
@@ -570,6 +572,8 @@ const LocalSeoHandwerker = () => {
       <IndustryLandingCTA industry="handwerker" />
 
       <ImplementationRoadmap data={industryImplementationData.handwerker} />
+
+      <IndustryComparisonTable data={industryComparisonData.handwerker} />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">

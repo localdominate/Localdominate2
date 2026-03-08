@@ -44,6 +44,8 @@ import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
+import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
+import { industryComparisonData } from "@/data/industryComparisonData";
 
 const LocalSeoFriseur: React.FC = () => {
   const { language } = useLanguage();
@@ -1072,6 +1074,8 @@ const LocalSeoFriseur: React.FC = () => {
       <ArticleCTA variant="box" />
 
       <ImplementationRoadmap data={industryImplementationData.friseur} />
+
+      <IndustryComparisonTable data={industryComparisonData.friseur} />
 
       {/* FAQ Section */}
       <section id="faq" className="mb-12">

@@ -6,6 +6,8 @@ import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
+import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
+import { industryComparisonData } from "@/data/industryComparisonData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -731,6 +733,8 @@ const LocalSeoFitness = () => {
       </section>
 
       <ImplementationRoadmap data={industryImplementationData.fitness} />
+
+      <IndustryComparisonTable data={industryComparisonData.fitness} />
 
       {/* FAQ */}
       <section id="faq" className="mb-12">
