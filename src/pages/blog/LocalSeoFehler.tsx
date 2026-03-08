@@ -31,8 +31,17 @@ const LocalSeoFehler = () => {
     { id: "faq", title: "FAQ" }
   ];
 
+  const faqItems = [
+    { question: "Welcher Local SEO Fehler ist am schlimmsten?", answer: "Die größten Auswirkungen haben typischerweise: 1) NAP-Inkonsistenz, 2) Unvollständiges Google Business Profil, und 3) Keine Bewertungsstrategie. Diese drei sollten Sie zuerst beheben." },
+    { question: "Wie lange dauert es, alle Fehler zu beheben?", answer: "Die technischen Fehler können oft in einem Tag behoben werden. Google Business Optimierung braucht 2-3 Tage konzentrierter Arbeit. Content und Bewertungen sind laufende Aufgaben. Rechnen Sie mit 2-4 Wochen für die Basis-Korrekturen." },
+    { question: "Kann ich Local SEO Fehler alleine beheben?", answer: "Die meisten Fehler können Sie selbst beheben, besonders wenn Sie technisch nicht völlig unerfahren sind. Für Schema Markup und Website-Optimierung könnte professionelle Hilfe sinnvoll sein." },
+    { question: "Was kostet die Behebung dieser Fehler?", answer: "Vieles ist kostenlos: Google Business optimieren, NAP korrigieren, auf Bewertungen antworten, Content schreiben. Kosten entstehen ggf. für besseres Hosting (ca. 10-30€/Monat) oder professionelle Fotos (einmalig 200-500€)." },
+    { question: "Wann sehe ich Ergebnisse nach der Fehlerbehebung?", answer: "Einige Verbesserungen sind sofort sichtbar (vollständiges GBP, Antworten auf Bewertungen). Ranking-Verbesserungen brauchen typischerweise 4-12 Wochen. Der Compound-Effekt setzt nach 3-6 Monaten ein." },
+    { question: "Was, wenn ich diese Fehler schon seit Jahren mache?", answer: "Besser spät als nie! Google bewertet Ihren aktuellen Zustand, nicht die Vergangenheit. Sobald Sie die Fehler beheben, beginnt Google, Ihre Seite neu zu bewerten." },
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         <strong>90% aller lokalen Unternehmen machen mindestens 5 dieser Fehler</strong> – 
         oft ohne es zu wissen. Jeder einzelne kostet Sie Sichtbarkeit in den <LexikonLink term="SERP">Suchergebnissen</LexikonLink>, 

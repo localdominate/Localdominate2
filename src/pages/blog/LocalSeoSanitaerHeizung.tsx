@@ -34,8 +34,16 @@ const LocalSeoSanitaerHeizung = () => {
   const { language } = useLanguage();
   const article = getArticleBySlug("local-seo-sanitaer-heizung", language)!;
 
+  const faqItems = [
+    { question: "Wie wichtig ist Notdienst-SEO für SHK-Betriebe?", answer: "Extrem wichtig. Notdienst-Suchen haben die höchste Conversion-Rate aller lokalen Suchanfragen — oft über 50%. Der Suchende hat ein akutes Problem und ruft den ersten seriös wirkenden Betrieb an." },
+    { question: "Welche Google Business Kategorie für SHK?", answer: "Wählen Sie die Primärkategorie nach Ihrem Hauptgewerk: 'Klempner' für Sanitär, 'Heizungsinstallateur' für Heizung, 'Klimaanlagen-Service' für Klima. Fügen Sie alle weiteren Gewerke als Sekundärkategorien hinzu." },
+    { question: "Lohnt sich MyHammer für SHK-Betriebe?", answer: "Ja, MyHammer ist die größte Handwerker-Plattform in Deutschland und liefert qualifizierte Anfragen. Besonders effektiv für Badsanierungen und Heizungsinstallationen, weniger für Notdienst-Einsätze." },
+    { question: "Wie nutze ich Förderungen für SEO?", answer: "Erstellen Sie ausführliche Ratgeber zu BAFA- und KfW-Förderungen für Heizungstausch und energetische Sanierung. Diese Keywords haben extrem hohes Suchvolumen und ziehen Kunden mit hohem Auftragswert an." },
+    { question: "Wie viele Standort-Seiten brauche ich?", answer: "Erstellen Sie eine eigene Seite für jede Stadt und jeden größeren Stadtteil in Ihrem Einzugsgebiet. Jede Seite braucht einzigartigen Content — kopieren Sie nicht einfach den Stadtnamen aus." },
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

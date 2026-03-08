@@ -33,8 +33,17 @@ const LocalSeoCaseStudy = () => {
     { id: "faq", title: "FAQ" }
   ];
 
+  const faqItems = [
+    { question: "Kann ich diese Local SEO Strategie auch ohne Budget umsetzen?", answer: "Vieles geht auch kostenlos: Google Business optimieren, um Bewertungen bitten, auf Bewertungen antworten, lokale Verzeichnisse pflegen. Rechnen Sie mit mindestens 5-10 Stunden pro Woche." },
+    { question: "Wie lange dauert es, bis ich Ergebnisse sehe?", answer: "Erste Verbesserungen bei Bewertungen und Google Posts sehen Sie sofort. Rankings verbessern sich typischerweise nach 4-8 Wochen. Signifikante Umsatzsteigerungen brauchen 3-6 Monate konsequenter Arbeit." },
+    { question: "Funktioniert Local SEO auch in größeren Städten?", answer: "Ja, aber die Konkurrenz ist härter. In München brauchen Sie mehr Bewertungen und stärkere Backlinks als in Rosenheim. Fokussieren Sie sich auf Ihren Stadtteil oder ein Nischen-Keyword." },
+    { question: "Was, wenn ich schlechte Bewertungen habe?", answer: "Negative Bewertungen sind nicht das Ende. Antworten Sie professionell und empathisch. Google gewichtet neuere Bewertungen stärker. Nach 50-100 neuen 5-Sterne-Bewertungen werden die alten negativen kaum noch wahrgenommen." },
+    { question: "Brauche ich eine Agentur für Local SEO?", answer: "Sie können vieles selbst machen, besonders tägliche Aufgaben wie Posts, Bewertungsmanagement und Kundenkommunikation. Eine einmalige Beratung kann sinnvoll sein, um die richtige Strategie zu entwickeln." },
+    { question: "Gilt diese Strategie nur für Bäckereien?", answer: "Nein! Die Prinzipien gelten für alle lokalen Unternehmen. Die konkreten Taktiken müssen angepasst werden, aber die Grundstrategie funktioniert überall." },
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         Eine traditionelle Bäckerei in einer bayerischen Kleinstadt kämpft gegen Filialketten 
         und Online-Bestellungen. Durch eine konsequente Local SEO Strategie konnte sie nicht 

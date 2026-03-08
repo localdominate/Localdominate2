@@ -41,8 +41,16 @@ const LocalSeoFotograf = () => {
     { icon: Calendar, name: "Events & Feiern", keywords: ["Eventfotograf", "Geburtstagsfotograf", "Firmenevent Fotograf"] }
   ];
 
+  const faqItems = [
+    { question: "Wie wichtig ist Instagram für Fotografen-SEO?", answer: "Instagram selbst bringt keine SEO-Vorteile (Links sind nofollow), aber es ist ein wichtiger Verkaufskanal. Die beste Strategie: Nutzen Sie Instagram für Reichweite und leiten Sie Interessenten auf Ihre SEO-optimierte Website." },
+    { question: "Sollte ich meine Preise online zeigen?", answer: "Ja, zumindest Orientierungspreise. 'Ab 1.500€' oder Preisspannen helfen sowohl Kunden als auch Ihnen: Sie ziehen die richtigen Anfragen an und können für Keywords wie 'Hochzeitsfotograf Preise' ranken." },
+    { question: "Wie viele Bilder sollten im Portfolio sein?", answer: "Qualität vor Quantität! 50-100 Ihrer absolut besten Bilder sind besser als 500 mittelmäßige. Für SEO wichtiger: Organisieren Sie sie in Kategorien mit beschreibendem Text." },
+    { question: "Lohnt sich ein Blog für Fotografen?", answer: "Absolut! Ein Blog mit Shootings, Location-Guides und Tipps bringt kontinuierlich neue Besucher. Jede veröffentlichte Hochzeit ist Content für Keywords wie 'Hochzeit [Location]'." },
+    { question: "Wie lange dauert es, bis SEO für Fotografen wirkt?", answer: "Bei lokalen Keywords können Sie innerhalb von 3-6 Monaten gute Rankings erreichen. Für kompetitive Keywords in Großstädten kann es 6-12 Monate dauern." },
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

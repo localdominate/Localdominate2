@@ -30,8 +30,15 @@ const GoogleBusinessInsightsVerstehen = () => {
     "Regelmäßige Analyse ermöglicht datengesteuerte Verbesserungen"
   ];
 
+  const faqItems = [
+    { question: "Wie oft werden Google Business Insights aktualisiert?", answer: "Die Daten werden in der Regel alle 24-48 Stunden aktualisiert. Bei einigen Metriken kann es bis zu 72 Stunden dauern. Für die genaueste Analyse schauen Sie auf Wochenwerte statt Tageswerte." },
+    { question: "Warum sehe ich weniger Insights-Daten als früher?", answer: "Google hat die Insights mehrfach überarbeitet. Einige frühere Metriken wurden entfernt oder zusammengefasst. Die aktuellen Daten fokussieren auf die relevantesten Geschäftsmetriken." },
+    { question: "Kann ich Insights exportieren?", answer: "Ja, in Google Business Profile können Sie Performance-Daten als CSV-Datei exportieren. Klicken Sie auf das Download-Symbol im Performance-Bereich." },
+    { question: "Was sind gute Benchmark-Werte für Google Business?", answer: "Es gibt keine universellen Benchmarks – die Werte hängen stark von Branche, Standort und Unternehmensgröße ab. Vergleichen Sie Ihre Entwicklung über Zeit und nutzen Sie den Konkurrenzvergleich bei Foto-Metriken." },
+  ];
+
   return (
-    <ArticleLayout article={article} tocItems={tocItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
 
       <BlogImage

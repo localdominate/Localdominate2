@@ -37,19 +37,32 @@ const SchemaMarkupLocalSeo = () => {
     { id: "faq", title: "FAQ" }
   ];
 
-  const localBusinessSchema = {
+  const faqItems = [
+    { question: "Wie lange dauert es, bis Schema in Google erscheint?", answer: "Nach der Implementierung kann es 2-4 Wochen dauern, bis Google Ihr Schema verarbeitet und Rich Snippets anzeigt. Nutzen Sie die Google Search Console, um den Status zu überwachen." },
+    { question: "Beeinflusst Schema Markup direkt das Ranking?", answer: "Schema ist kein direkter Ranking-Faktor. Allerdings verbessert es die Klickrate (CTR) durch attraktivere Suchergebnisse, was indirekt zu besseren Rankings führen kann." },
+    { question: "Kann ich Schema für mehrere Standorte nutzen?", answer: "Ja! Für jeden Standort erstellen Sie eine eigene Seite mit individuellem LocalBusiness Schema. Wichtig: Jeder Standort braucht einen einzigartigen @id-Wert." },
+    { question: "Muss Schema mit Google Business übereinstimmen?", answer: "Unbedingt! Inkonsistenzen zwischen Schema Markup und Google Business Profil können Vertrauensprobleme verursachen. Name, Adresse, Telefonnummer und Öffnungszeiten müssen exakt übereinstimmen." },
+    { question: "Wie viele Schema-Typen kann ich kombinieren?", answer: "Es gibt keine feste Grenze. Sinnvoll ist die Kombination von LocalBusiness mit FAQPage, BreadcrumbList und ggf. Service oder Event Schema." },
+    { question: "Was ist der Unterschied zwischen JSON-LD und Microdata?", answer: "JSON-LD wird als separater Script-Block eingefügt und ist unabhängig vom HTML. Microdata wird direkt in HTML-Elemente eingebettet. Google bevorzugt JSON-LD." },
+    { question: "Kann Schema auf dynamischen Seiten verwendet werden?", answer: "Ja, aber stellen Sie sicher, dass das Schema beim Server-Side Rendering oder nach dem JavaScript-Laden im HTML-DOM vorhanden ist. Statisches HTML ist zuverlässiger." },
+  ];
+
+  const localBusinessReferenceSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "name": article.title,
-    "description": article.metaDescription,
-    "author": {
-      "@type": "Person",
-      "name": "Local SEO Experte"
+    "@type": "LocalBusiness",
+    "@id": "https://localdominate.org/#localbusiness-example",
+    "name": "Beispiel lokales Unternehmen",
+    "description": "Schema Markup Implementierungsbeispiel für lokale Unternehmen",
+    "url": "https://localdominate.org",
+    "telephone": "+49-XXX-XXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DE"
     }
   };
 
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={localBusinessSchema}>
+    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={localBusinessReferenceSchema} faqItems={faqItems}>
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         Schema Markup ist der <strong>unsichtbare Turbo für Ihre lokale Sichtbarkeit</strong>. 
         Während Ihre Konkurrenz mit einfachen Suchergebnissen kämpft, können Sie mit 
