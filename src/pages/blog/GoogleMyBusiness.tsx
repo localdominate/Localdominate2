@@ -45,7 +45,7 @@ const GoogleMyBusiness = () => {
         tip: "Bei einigen Unternehmen ist auch eine Video-Verifizierung möglich. Das geht schneller als der Postweg."
       },
       section2: {
-        title: "Profil-Vollständigkeit maximieren",
+        title: "Wie maximierst du die Profil-Vollständigkeit?",
         text: "Google bevorzugt vollständige Profile. Je mehr Informationen du bereitstellst, desto besser dein Ranking.",
         items: [
           { title: "Unternehmensbeschreibung", desc: "750 Zeichen nutzen. Keywords natürlich einbauen. Beschreibe was dich einzigartig macht.", status: "Pflicht" },
