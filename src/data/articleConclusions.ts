@@ -2016,6 +2016,28 @@ export const articleConclusions: Record<string, ArticleConclusionData> = {
       ]
     }
   },
+  "google-maps-seo-vs-organic-seo": {
+    de: {
+      summary: "Google Maps SEO und Organic SEO sind zwei verschiedene Disziplinen mit eigenen Regeln — aber sie sind keine Gegner. Maps bringt schnelle, direkte Kundenaktionen (Anrufe, Besuche), Organic baut langfristige Autorität auf. Die effektivste Strategie kombiniert 60% Maps + 40% Organic.",
+      nextSteps: [
+        "Optimiere dein Google Business Profile vollständig (Fotos, Posts, Attribute)",
+        "Starte systematisches Bewertungsmanagement (Ziel: 5+ neue Reviews/Monat)",
+        "Erstelle lokale Landingpages für deine wichtigsten Leistungen + Stadt",
+        "Baue lokale Backlinks auf (Vereine, Handelskammer, lokale Presse)",
+        "Nutze das Google Maps Audit Template für eine Bestandsaufnahme"
+      ]
+    },
+    en: {
+      summary: "Google Maps SEO and Organic SEO are two different disciplines with their own rules — but they're not opponents. Maps delivers fast, direct customer actions (calls, visits), Organic builds long-term authority. The most effective strategy combines 60% Maps + 40% Organic.",
+      nextSteps: [
+        "Fully optimize your Google Business Profile (photos, posts, attributes)",
+        "Start systematic review management (goal: 5+ new reviews/month)",
+        "Create local landing pages for your key services + city",
+        "Build local backlinks (clubs, chamber of commerce, local press)",
+        "Use the Google Maps Audit Template for a baseline assessment"
+      ]
+    }
+  },
 };
 
 /**

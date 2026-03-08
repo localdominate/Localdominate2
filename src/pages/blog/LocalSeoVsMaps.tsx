@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ArticleLayout from '../../components/blog/ArticleLayout';
 import TableOfContents from '../../components/blog/TableOfContents';
 import KeyTakeawaysBox from '../../components/blog/KeyTakeawaysBox';
@@ -343,6 +344,13 @@ const LocalSeoVsMaps: React.FC = () => {
             <li><strong>Monat 3-6:</strong> Website für Local SEO optimieren</li>
             <li><strong>Monat 6+:</strong> Lokale Backlinks aufbauen</li>
           </ol>
+        </div>
+        <div className="my-8 p-5 bg-muted/50 rounded-xl">
+          <h3 className="font-bold text-foreground mb-3">Weiterführende Vergleiche</h3>
+          <ul className="space-y-2 text-sm">
+            <li>→ <Link to="/blog/google-maps-seo-vs-organic-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary">Google Maps SEO vs. Organic SEO</Link></li>
+            <li>→ <Link to="/blog/local-seo-vs-organisch" className="text-primary underline decoration-primary/30 hover:decoration-primary">Local SEO vs. Organic SEO</Link></li>
+          </ul>
         </div>
 
         <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen</h2>

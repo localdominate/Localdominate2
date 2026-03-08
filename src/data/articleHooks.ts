@@ -438,6 +438,10 @@ export const articleHooks: Record<string, ArticleHookData> = {
     de: "Klassisches SEO oder Local SEO — zwei Disziplinen, die oft verwechselt werden, aber fundamental unterschiedliche Strategien erfordern. Wer beides versteht, investiert gezielter und gewinnt schneller.",
     en: "Classic SEO or Local SEO — two disciplines often confused, yet requiring fundamentally different strategies. Understanding both means investing smarter and winning faster."
   },
+  "google-maps-seo-vs-organic-seo": {
+    de: "Das Local Pack erhält 42 % aller Klicks bei lokalen Suchen — doch die organischen Ergebnisse darunter bringen den langfristigen Traffic. Wer versteht, wie sich beide Kanäle ergänzen, maximiert seine lokale Sichtbarkeit.",
+    en: "The Local Pack captures 42% of all clicks for local searches — yet organic results below bring long-term traffic. Understanding how both channels complement each other maximizes your local visibility."
+  },
 };
 
 /**
