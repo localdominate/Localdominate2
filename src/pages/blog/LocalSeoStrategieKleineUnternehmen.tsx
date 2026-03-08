@@ -697,6 +697,11 @@ const LocalSeoStrategieKleineUnternehmen = () => {
         ]}
       />
 
+      <LocalPartnershipOutreachTemplates
+        title="Partnerschafts-Vorlagen fuer kleine Unternehmen"
+        description="Kopierfertige E-Mail-Templates fuer lokale Kooperationen – ideal fuer Unternehmen mit kleinem Budget."
+      />
+
       {/* FAQ */}
       <section id="faq">
         <h2>Häufig gestellte Fragen</h2>
