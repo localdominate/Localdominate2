@@ -6,6 +6,7 @@ import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -327,6 +328,12 @@ const LokaleInfluencerKooperationen = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <LocalPartnershipOutreachTemplates
+        types={["influencer", "cross-promo"]}
+        title="Outreach-Vorlagen: Influencer & Cross-Promotion"
+        description="Kopierfertige E-Mail-Templates fuer Mikro-Influencer-Kooperationen und lokale Cross-Promotions."
+      />
 
       <HelpfulnessWidget articleSlug="lokale-influencer-kooperationen" />
 

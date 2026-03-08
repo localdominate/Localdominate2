@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
+import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, FileText, MapPin, Calendar, Users, Repeat, Download, Lightbulb, AlertTriangle, TrendingUp } from "lucide-react";
 
@@ -641,6 +642,12 @@ const LocalContentMarketing = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <LocalPartnershipOutreachTemplates
+        types={["cross-promo", "bundle", "referral"]}
+        title="Partnerschafts-Vorlagen: Content-Kooperationen starten"
+        description="Kopierfertige E-Mail-Templates fuer Cross-Promotions, Bundle-Angebote und Empfehlungs-Netzwerke."
+      />
 
       <HelpfulnessWidget articleSlug="local-content-marketing" />
     </ArticleLayout>

@@ -10,6 +10,7 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
+import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import { CheckCircle, AlertTriangle, Target, Wrench } from "lucide-react";
 import {
   Table,
@@ -694,6 +695,11 @@ const LocalSeoStrategieKleineUnternehmen = () => {
           { label: "Local SEO Budget-Rechner", href: "/blog/local-seo-kosten-budgetplanung", type: "tool", description: "Budget planen" },
           { label: "Branchen-Hub", href: "/blog/branchen-hub", type: "hub", description: "Branchenspezifische Guides" },
         ]}
+      />
+
+      <LocalPartnershipOutreachTemplates
+        title="Partnerschafts-Vorlagen fuer kleine Unternehmen"
+        description="Kopierfertige E-Mail-Templates fuer lokale Kooperationen – ideal fuer Unternehmen mit kleinem Budget."
       />
 
       {/* FAQ */}

@@ -6,6 +6,7 @@ import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -230,6 +231,12 @@ const LokaleEventsMarketing = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <LocalPartnershipOutreachTemplates
+        types={["joint-event", "cross-promo", "charity"]}
+        title="Outreach-Vorlagen: Event-Partnerschaften starten"
+        description="Kopierfertige E-Mail-Templates fuer gemeinsame Events, Cross-Promotions und Charity-Aktionen mit lokalen Partnern."
+      />
 
       <HelpfulnessWidget articleSlug="lokale-events-marketing" />
 
