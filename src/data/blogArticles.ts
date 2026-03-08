@@ -712,6 +712,30 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  {
+    slug: "local-seo-monthly-checklist",
+    de: {
+      title: "Local SEO Monthly Checklist: Die monatliche Routine für Top-Rankings",
+      metaTitle: "Local SEO Monthly Checklist | Monatliche Routine 2026",
+      metaDescription: "Monatliche Local SEO Checkliste mit 45+ Aufgaben in 8 Bereichen. Interaktiv mit Zeitschätzung, Priorisierung und kopierbarer Vorlage.",
+      excerpt: "Die komplette monatliche Local-SEO-Routine: 45+ Aufgaben in 8 Bereichen mit Zeitschätzung, Priorisierung und Wochenplan für nachhaltige Rankings.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Local SEO Monthly Checklist: The Monthly Routine for Top Rankings",
+      metaTitle: "Local SEO Monthly Checklist | Monthly Routine 2026",
+      metaDescription: "Monthly local SEO checklist with 45+ tasks in 8 areas. Interactive with time estimates, prioritization and copyable template.",
+      excerpt: "The complete monthly local SEO routine: 45+ tasks in 8 areas with time estimates, prioritization and weekly plan for sustainable rankings.",
+      category: "Tools & Resources"
+    },
+    readingTime: 10,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "📅",
+    keywords: ["monthly checklist", "monatliche checkliste", "local seo routine", "local seo pflege", "seo maintenance", "monatliches seo"],
+    featured: false
+  },
+
   // === NEUE ARTIKEL: STRATEGIE ===
   {
     slug: "local-link-building",
@@ -3894,6 +3918,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-audit-template",
   "citation-tracking-template",
   "local-keyword-research-template",
+  "local-seo-monthly-checklist",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
