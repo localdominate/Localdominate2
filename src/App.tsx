@@ -162,6 +162,7 @@ const LocalSeoMonthlyChecklist = lazy(() => import("./pages/blog/LocalSeoMonthly
 const GoogleMapsRankingTracker = lazy(() => import("./pages/blog/GoogleMapsRankingTracker"));
 const LocalSeoStrategyPlanner = lazy(() => import("./pages/blog/LocalSeoStrategyPlanner"));
 const LocalSeoRoadmap = lazy(() => import("./pages/blog/LocalSeoRoadmap"));
+const SchemaStrategieDokument = lazy(() => import("./pages/blog/SchemaStrategieDokument"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
