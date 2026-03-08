@@ -144,7 +144,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
             </ul>
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <h4 className="font-bold text-lg mb-3 text-green-600">🛠️ Prüftools</h4>
+            <h3 className="font-bold text-lg mb-3 text-green-600">🛠️ SEO-Tools zur Update-Erkennung</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• Moz Algorithm History</li>
               <li>• Semrush Sensor</li>
