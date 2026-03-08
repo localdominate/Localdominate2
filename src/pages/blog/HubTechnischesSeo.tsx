@@ -1,5 +1,6 @@
 import TopicHubLayout, { HubArticleGroup, HubSummary, HubComparisonTable, HubResource } from "@/components/blog/TopicHubLayout";
 import { Settings } from "lucide-react";
+import TechnicalSeoAuditFramework, { technicalFoundationAudit, localSignalsAudit, reviewReputationAudit } from "@/components/blog/TechnicalSeoAuditFramework";
 
 const groups: HubArticleGroup[] = [
   {
