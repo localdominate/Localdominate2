@@ -1,4 +1,5 @@
 import { Language } from "@/i18n/translations";
+import { getArticleReviewMeta } from "@/data/articleReviewDates";
 
 export interface BlogArticleContent {
   title: string;
