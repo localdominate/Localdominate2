@@ -547,6 +547,7 @@ const ArticleLayout = ({
           <PillarChecklistLinks articleSlug={article.slug} />
           <LocalSEOAuditCTA variant="standard" articleSlug={article.slug} />
           <ArticleConclusion slug={article.slug} />
+          <ArticleGlossary slug={article.slug} />
           <LlmFriendlySummary slug={article.slug} />
         </article>
 
