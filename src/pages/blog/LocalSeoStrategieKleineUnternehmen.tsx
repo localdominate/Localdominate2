@@ -617,12 +617,7 @@ const LocalSeoStrategieKleineUnternehmen = () => {
         </p>
       </section>
 
-      <ArticleCTA 
-        headline="Local SEO für dein Unternehmen — professionell umgesetzt"
-        text="Du willst die Strategie nicht allein umsetzen? Wir übernehmen die komplette Local-SEO-Optimierung für dein Unternehmen im DACH-Raum."
-        ctaText="Kostenlose Erstberatung"
-        ctaLink="/#kontakt"
-      />
+      <ArticleCTA variant="box" />
 
       {/* FAQ */}
       <section id="faq">
