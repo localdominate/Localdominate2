@@ -275,6 +275,8 @@ const LocalSeoBackerei = () => {
 
       <BlogCTAABTest articleSlug="local-seo-baeckerei" position="end" />
 
+      <ImplementationRoadmap data={industryImplementationData.baeckerei} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2 className="text-3xl font-bold mb-6">Häufige Fragen zu SEO für Bäckereien</h2>

@@ -957,6 +957,8 @@ const LocalSeoDoenerladen = () => {
 
       <BlogCTAABTest articleSlug="local-seo-doener-kebab-imbiss" position="end" />
 
+      <ImplementationRoadmap data={industryImplementationData.doener} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2 className="text-3xl font-bold mb-6">Häufig gestellte Fragen: Döner-SEO A-Z</h2>
