@@ -524,6 +524,29 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["google maps ranking", "ranking faktoren", "local pack", "maps seo", "proximity relevance prominence"],
     featured: true
   },
+  {
+    slug: "google-maps-spam-erkennen",
+    de: {
+      title: "Google Maps Spam erkennen & melden: Der komplette Guide",
+      metaTitle: "Google Maps Spam erkennen & melden | Anleitung 2026",
+      metaDescription: "Lerne die 8 häufigsten Spam-Arten auf Google Maps zu erkennen und effektiv zu melden. Mit Checklisten, Beispielen und Schritt-für-Schritt Anleitungen.",
+      excerpt: "Gefälschte Einträge, Keyword-Stuffing, Fake-Bewertungen: So erkennst und meldest du Google Maps Spam und schützt dein eigenes Profil.",
+      category: "Google Maps"
+    },
+    en: {
+      title: "Google Maps Spam Detection & Reporting: Complete Guide",
+      metaTitle: "Google Maps Spam Detection & Reporting | Guide 2026",
+      metaDescription: "Learn to identify the 8 most common Google Maps spam types and report them effectively. With checklists, examples, and step-by-step instructions.",
+      excerpt: "Fake listings, keyword stuffing, fake reviews: How to detect and report Google Maps spam and protect your own profile.",
+      category: "Google Maps"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🛡️",
+    keywords: ["google maps spam", "spam melden", "fake bewertungen", "keyword stuffing", "google business spam", "spam erkennen"],
+    featured: false
+  },
 
   // === NEUE ARTIKEL: STRATEGIE ===
   {
@@ -3701,6 +3724,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-checkliste-komplett",
   "google-maps-seo-hub",
   "wie-google-maps-ranking-funktioniert",
+  "google-maps-spam-erkennen",
 ]);
 
 // Get only published articles (with pages), deduplicated

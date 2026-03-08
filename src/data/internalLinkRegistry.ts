@@ -79,6 +79,7 @@ export const HUB_DEFINITIONS: HubDefinition[] = [
       "gbp-nicht-in-suche-sichtbar",
       "duplicate-listing-entfernen",
       "ranking-ploetzlich-verschwunden",
+      "google-maps-spam-erkennen",
     ],
   },
   {
@@ -274,6 +275,7 @@ export const HUB_DEFINITIONS: HubDefinition[] = [
       "local-seo-fehler",
       "gbp-bewertung-loeschen-anleitung",
       "negative-google-bewertungen",
+      "google-maps-spam-erkennen",
     ],
   },
 ];
