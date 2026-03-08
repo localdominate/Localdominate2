@@ -402,7 +402,7 @@ const MobileLocalSeo = () => {
       <section id="mobile-ux" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
           <Layout className="h-8 w-8 text-primary" />
-          Mobile UX Best Practices
+          Welche Mobile UX Best Practices steigern Conversions?
         </h2>
         
         <p className="mb-6">
