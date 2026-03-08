@@ -212,7 +212,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
             </ul>
           </div>
           <div className="bg-white border-2 border-green-200 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-3">✅ Sofortmaßnahmen</h4>
+            <h3 className="font-bold text-lg mb-3">✅ GBP-Sofortmaßnahmen bei Ranking-Einbruch</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• GBP-Dashboard auf Warnungen prüfen</li>
               <li>• Alle Informationen auf Aktualität prüfen</li>
