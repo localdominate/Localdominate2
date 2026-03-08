@@ -155,7 +155,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </div>
 
         <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8 rounded-r-lg">
-          <h4 className="font-bold text-yellow-800 mb-2">Nach einem Core Update</h4>
+          <h3 className="font-bold text-yellow-800 mb-2">Ranking nach einem Google Core Update stabilisieren</h3>
           <p className="text-yellow-700">
             Warte mindestens 2 Wochen ab, bevor du drastische Änderungen machst. Updates "rollen" oft über mehrere Wochen aus 
             und Rankings können sich von selbst stabilisieren.
