@@ -485,7 +485,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* FAQ Section */}
       <section id="faq" className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">Häufig gestellte Fragen</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">FAQ: Core Web Vitals & Local SEO</h2>
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((faq, index) => (
             <AccordionItem key={index} value={`faq-${index}`}>

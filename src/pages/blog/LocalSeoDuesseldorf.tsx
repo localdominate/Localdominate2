@@ -170,7 +170,7 @@ const LocalSeoDuesseldorf = () => {
       <BlogCTAABTest articleSlug="local-seo-duesseldorf" position="end" />
 
       <section id="faq" className="mb-12 scroll-mt-20">
-        <h2 className="text-2xl font-bold mb-6">Häufige Fragen zu Local SEO in Düsseldorf</h2>
+        <h2 className="text-2xl font-bold mb-6">FAQ: Local SEO in Düsseldorf</h2>
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((faq, index) => (
             <AccordionItem key={index} value={`faq-${index}`}>
