@@ -889,6 +889,8 @@ Sitemap: https://example.de/sitemap.xml`}
         ]}
       />
 
+      <AiSearchOptNote articleSlug="technisches-local-seo-guide" />
+
       <HelpfulnessWidget articleSlug="technisches-local-seo-guide" />
 
       {/* FAQ */}

@@ -395,6 +395,8 @@ const LocalSeoStatistiken = () => {
         </p>
       </section>
 
+      <AiSearchOptNote articleSlug="local-seo-statistiken" />
+
       <SourcesSection
         sources={[
           { title: "Google/Ipsos: Understanding Consumers' Local Search Behavior", url: "https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-search-trends-2023/" },

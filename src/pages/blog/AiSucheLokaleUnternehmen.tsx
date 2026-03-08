@@ -744,6 +744,8 @@ Attribution-required: yes`}
         ]}
       />
 
+      <AiSearchOptNote articleSlug="ai-suche-lokale-unternehmen" />
+
       <HelpfulnessWidget articleSlug="ai-suche-lokale-unternehmen" />
 
       {/* FAQ */}

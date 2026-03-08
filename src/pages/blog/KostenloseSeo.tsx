@@ -1032,6 +1032,8 @@ const KostenloseSeo = () => {
         </div>
       </section>
 
+      <AiSearchOptNote articleSlug="kostenloses-seo-guide" />
+
       <SourcesSection 
         sources={[
           { title: "Google Search Console Hilfe", url: "https://support.google.com/webmasters", type: "documentation", description: "Offizielle Google-Dokumentation zur Search Console" },

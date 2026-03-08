@@ -363,6 +363,8 @@ const LokaleSeo2026 = () => {
         ]}
       />
 
+      <AiSearchOptNote articleSlug="lokale-suchmaschinenoptimierung-2026" />
+
       <HelpfulnessWidget articleSlug="lokale-suchmaschinenoptimierung-2026" />
 
       <BlogCTAABTest articleSlug="lokale-suchmaschinenoptimierung-2026" position="end" />

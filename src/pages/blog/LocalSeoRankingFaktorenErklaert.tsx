@@ -707,6 +707,8 @@ const LocalSeoRankingFaktorenErklaert = () => {
         <BlogFAQSection faqs={faqItems} />
       </section>
 
+      <AiSearchOptNote articleSlug="local-seo-ranking-faktoren-erklaert" />
+
       <SourcesSection sources={sources} />
     </ArticleLayout>
   );

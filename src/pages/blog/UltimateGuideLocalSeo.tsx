@@ -725,6 +725,8 @@ const UltimateGuideLocalSeo = () => {
         ]}
       />
 
+      <AiSearchOptNote articleSlug="ultimate-guide-local-seo" />
+
       {/* FAQ */}
       <section id="faq">
         <h2>Häufig gestellte Fragen zu Local SEO</h2>

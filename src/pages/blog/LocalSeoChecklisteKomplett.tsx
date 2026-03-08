@@ -514,6 +514,8 @@ const LocalSeoChecklisteKomplett = () => {
         ]}
       />
 
+      <AiSearchOptNote articleSlug="local-seo-checkliste-komplett" />
+
       <HelpfulnessWidget articleSlug="local-seo-checkliste-komplett" />
 
       {/* FAQ */}
