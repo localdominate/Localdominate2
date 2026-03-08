@@ -749,6 +749,35 @@ const LocalSeoMuenchen = () => {
         </div>
       </section>
 
+      <LocalBusinessEcosystem config={{
+        city: 'München',
+        population: '1,5 Mio.',
+        businesses: '~120.000',
+        avgSearchVolume: '45.000',
+        economicFacts: [
+          { label: 'Kaufkraftindex', value: '134%', trend: 'up', insight: 'Höchste Kaufkraft aller deutschen Großstädte' },
+          { label: 'Arbeitslosenquote', value: '3,2%', trend: 'down', insight: 'Nahezu Vollbeschäftigung = zahlungskräftige Kunden' },
+          { label: 'Touristen/Jahr', value: '8,5 Mio.', trend: 'up', insight: 'Tourismus-Keywords für Gastro & Hotellerie relevant' },
+          { label: 'Gründungsrate', value: '+4,2%', trend: 'up', insight: 'Steigende Konkurrenz, aber auch steigende Nachfrage' },
+          { label: 'Ø Miete Gewerbe/m²', value: '22€', trend: 'up', insight: 'Hohe Fixkosten = digitale Sichtbarkeit besonders wertvoll' },
+        ],
+        industryClusters: [
+          { name: 'Gastronomie', icon: '🍺', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '85 im Pack', avgRating: '4.3', avgReviews: '120', gap: 'Wenige mit regelmäßigen Google Posts und Video-Content', strategy: 'Differenzierung über GBP-Posts, Food-Fotos und aktives Bewertungsmanagement' },
+          { name: 'Handwerk & Bau', icon: '🔧', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '40 im Pack', avgRating: '4.1', avgReviews: '25', gap: 'Die meisten haben schlechte Websites und keine SEO-Strategie', strategy: 'Stadtteil-Landingpages + Notdienst-Keywords + Bewertungen aktiv sammeln' },
+          { name: 'Gesundheit & Ärzte', icon: '⚕️', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '60 im Pack', avgRating: '3.8', avgReviews: '45', gap: 'Niedrige Antwort-Rate auf Bewertungen (< 20%)', strategy: 'Spezialisierungs-Keywords + 100% Bewertungs-Antwort-Rate + Online-Terminbuchung' },
+          { name: 'Recht & Finanzen', icon: '⚖️', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '35 im Pack', avgRating: '4.4', avgReviews: '18', gap: 'Kaum Kanzleien mit Blog-Content oder FAQ-Schema', strategy: 'Rechtsgebiet-spezifische Landingpages + FAQ-Schema + Erstberatungs-CTA' },
+          { name: 'Beauty & Wellness', icon: '💆', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '70 im Pack', avgRating: '4.5', avgReviews: '65', gap: 'Wenige nutzen Google Posts für saisonale Angebote', strategy: 'Instagram-Integration + Buchungs-Link im GBP + Stadtteil-Keywords' },
+          { name: 'Tech & IT-Services', icon: '💻', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '15 im Pack', avgRating: '4.2', avgReviews: '12', gap: 'Fast keine lokale SEO-Präsenz trotz hoher Nachfrage', strategy: 'Sofort Local Pack dominieren — minimaler Wettbewerb für "IT-Service München"' },
+        ],
+        underservedNiches: [
+          { niche: 'Nachhaltige Dienstleister', reason: 'Steigende Nachfrage nach Öko-/Bio-Services, wenige optimierte GBP-Profile', potentialKeywords: ['nachhaltiger Friseur München', 'Bio-Restaurant München', 'ökologischer Maler München'] },
+          { niche: 'Expat-Services (Englisch)', reason: '25% der Bevölkerung international, aber kaum englische Local SEO', potentialKeywords: ['English speaking doctor Munich', 'tax advisor Munich expats', 'English hairdresser Munich'] },
+          { niche: 'Mobile Dienstleister', reason: 'Mobile Services boomen post-COVID, kaum Local Pack Präsenz', potentialKeywords: ['mobiler Friseur München', 'Massage Hausbesuch München', 'mobiler Tierarzt München'] },
+          { niche: 'Senioren-Services', reason: 'Alternde Bevölkerung, Kinder suchen online für Eltern', potentialKeywords: ['Seniorenbetreuung München', 'Hausarzt Hausbesuch München', 'Pflegedienst München Schwabing'] },
+        ],
+        strategicInsight: 'München belohnt Premium-Positionierung. Die hohe Kaufkraft bedeutet, dass Qualitäts-Signale (hohe Bewertungen, professionelle Fotos, vollständiges GBP) wichtiger sind als der günstigste Preis. Fokus auf Stadtteil-Keywords und Spezialisierung.',
+      }} />
+
       <BlogCTAABTest articleSlug="local-seo-muenchen" position="middle" />
 
       {/* FAQ Section */}
