@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
 import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
+import CityRankingChallenges from "@/components/blog/CityRankingChallenges";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
