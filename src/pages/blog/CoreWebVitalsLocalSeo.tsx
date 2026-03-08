@@ -403,7 +403,7 @@ const CoreWebVitalsLocalSeo = () => {
       <section id="optimierung">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Ganzheitliche Core Web Vitals Optimierung</h2>
         
-        <h3 className="text-xl font-semibold mb-3">1. Hosting überprüfen</h3>
+        <h3 className="text-xl font-semibold mb-3">1. Web-Hosting für schnelle Ladezeiten</h3>
         <p className="mb-4">
           Günstiges Shared-Hosting ist oft der <strong>größte Bremser</strong>. Für lokale Unternehmen empfehlen wir:
         </p>
