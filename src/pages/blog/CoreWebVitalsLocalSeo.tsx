@@ -246,7 +246,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* FID/INP */}
       <section id="fid-inp">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">INP: Interaction to Next Paint optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Was ist INP und wie verbesserst du die Interaktivität?</h2>
         
         <p className="mb-4">
           INP misst, wie schnell Ihre Website auf <strong>Nutzer-Interaktionen reagiert</strong> (Klicks, Tippen, Tastatureingaben). Anders als FID misst INP alle Interaktionen während des gesamten Besuchs.
