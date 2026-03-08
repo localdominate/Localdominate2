@@ -7,6 +7,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import LocalKeywordFramework from "@/components/blog/LocalKeywordFramework";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoKeywordsImg from "@/assets/blog/local-seo-keywords.jpg";
 import { 
