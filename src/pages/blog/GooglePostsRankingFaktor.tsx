@@ -220,7 +220,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="optimierung">
-        <h2>Posts optimieren für maximale Wirkung</h2>
+        <h2>Wie optimierst du Posts für maximale Wirkung?</h2>
         <AutoLexikonText>
           <h3>Bilder sind entscheidend</h3>
           <ul>
