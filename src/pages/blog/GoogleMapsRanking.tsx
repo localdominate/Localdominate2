@@ -135,7 +135,7 @@ const GoogleMapsRanking = () => {
         p2: "Your Google Business Profile shows opening hours, reviews, photos, and direct directions – everything a customer needs for a quick decision."
       },
       section2: {
-        title: "The 7 Decisive Ranking Factors",
+        title: "What Are the 7 Key Google Maps Ranking Factors?",
         intro: "Google evaluates local businesses based on three main criteria:",
         criteria: ["Relevance", "Distance", "Prominence"],
         criteriaEnd: "These are composed of various factors:",
