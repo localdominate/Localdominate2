@@ -1084,6 +1084,8 @@ const LocalSeoFriseur: React.FC = () => {
 
       <ImplementationRoadmap data={industryImplementationData.friseur} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.friseur} />
+
       <IndustryComparisonTable data={industryComparisonData.friseur} />
 
       {/* FAQ Section */}
