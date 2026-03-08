@@ -325,6 +325,7 @@ const App = () => (
                 <Route path="/blog/citation-tracking-template" element={<CitationTrackingTemplate />} />
                 <Route path="/blog/local-keyword-research-template" element={<LocalKeywordResearchTemplate />} />
                 <Route path="/blog/local-seo-monthly-checklist" element={<LocalSeoMonthlyChecklist />} />
+                <Route path="/blog/google-maps-ranking-tracker" element={<GoogleMapsRankingTracker />} />
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
