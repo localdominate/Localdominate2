@@ -234,7 +234,7 @@ const SeoFerienwohnungen = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <div className="bg-muted/50 rounded-lg p-4">
-          <h4 className="font-semibold text-foreground mb-2">⚡ Performance</h4>
+          <h3 className="font-semibold text-foreground mb-2">⚡ Performance</h3>
           <ul className="space-y-1 text-sm text-muted-foreground">
             <li>✅ Ladezeit unter 2 Sekunden</li>
             <li>✅ <Link to="/blog/core-web-vitals-local-seo" className="text-primary hover:underline">Mobile First</Link></li>
