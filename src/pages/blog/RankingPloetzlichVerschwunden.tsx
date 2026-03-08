@@ -298,7 +298,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </div>
         </div>
 
-        <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen</h2>
+        <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen zu Ranking-Verlusten</h2>
         <BlogFAQSection faqs={faqs} />
 
         <SourcesSection sources={sources} />
