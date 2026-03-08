@@ -21,11 +21,11 @@ const GoogleMyBusiness = () => {
   const content = {
     de: {
       tocItems: [
-        { id: "grundlagen", title: "Grundlagen: Profil einrichten und verifizieren" },
-        { id: "vollstaendigkeit", title: "Profil-Vollständigkeit maximieren" },
-        { id: "kategorien", title: "Kategorien richtig wählen" },
-        { id: "posts", title: "Google Posts strategisch nutzen" },
-        { id: "insights", title: "Insights verstehen und nutzen" },
+        { id: "grundlagen", title: "Wie richtest du dein Google Business Profil ein?" },
+        { id: "vollstaendigkeit", title: "Wie maximierst du die Profil-Vollständigkeit?" },
+        { id: "kategorien", title: "Wie wählst du die richtigen Kategorien?" },
+        { id: "posts", title: "Wie nutzt du Google Posts strategisch?" },
+        { id: "insights", title: "Was verraten dir die Google Business Insights?" },
         { id: "faq", title: "Häufig gestellte Fragen" },
       ],
       intro: "Dein <strong>Google Business Profil</strong> (früher Google My Business) ist das Schaufenster deines Unternehmens in der Google-Suche. Ein vollständig optimiertes Profil kann deine lokale Sichtbarkeit um bis zu 70% steigern. Diese Anleitung zeigt dir jeden Schritt.",
