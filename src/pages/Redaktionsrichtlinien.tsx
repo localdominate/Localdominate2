@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, CheckCircle, Users, Search, FileText, RefreshCw, Shield, Award } from "lucide-react";
+import { BookOpen, CheckCircle, Users, Search, FileText, RefreshCw, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 const Redaktionsrichtlinien = () => {
   const { language } = useLanguage();
