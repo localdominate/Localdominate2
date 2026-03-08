@@ -362,6 +362,11 @@ const BewertungsAntwortenVorlagen = () => {
         </Accordion>
       </section>
 
+      <ReviewResponseTemplates
+        title="Alle Antwort-Vorlagen zum Kopieren"
+        description="14 professionelle Vorlagen fuer jedes Bewertungs-Szenario. Klicke auf eine Vorlage, passe die [Platzhalter] an und kopiere sie direkt."
+      />
+
       <HelpfulnessWidget articleSlug="bewertungs-antworten-vorlagen" />
 
       <SourcesSection sources={[

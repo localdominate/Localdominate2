@@ -309,6 +309,12 @@ const GbpBewertungLoeschenAnleitung: React.FC = () => {
 
         <SourcesSection sources={sources} />
 
+        <ReviewResponseTemplates
+          title="Vorlagen: Auf unfaire Bewertungen reagieren"
+          description="Professionelle Antwortvorlagen fuer Fake-Bewertungen und Eskalationsfaelle."
+          categories={["fake", "escalation"]}
+        />
+
         <HelpfulnessWidget articleSlug={articleData.slug} />
       </div>
     </ArticleLayout>

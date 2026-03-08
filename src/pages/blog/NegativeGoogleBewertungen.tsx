@@ -865,6 +865,12 @@ const NegativeGoogleBewertungen = () => {
         </div>
       </section>
 
+      <ReviewResponseTemplates
+        title="Antwort-Vorlagen fuer negative Bewertungen"
+        description="Kopierfertige Vorlagen fuer jede Art von Kritik. Passe die [Platzhalter] an dein Unternehmen an."
+        categories={["negative", "fake", "escalation"]}
+      />
+
       <HelpfulnessWidget articleSlug="negative-google-bewertungen" />
 
       <BlogCTAABTest articleSlug="negative-google-bewertungen" position="end" />
