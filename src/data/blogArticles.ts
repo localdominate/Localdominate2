@@ -3365,7 +3365,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-content-marketing",
     de: {
       title: "Local Content Marketing: Inhalte für lokale Zielgruppen erstellen (2026)",
-      metaTitle: "Local Content Marketing: Lokale Inhalte erstellen | Guide 2026",
+      metaTitle: "Local Content Marketing | Lokale Inhalte 2026",
       metaDescription: "Wie du Inhalte erstellst, die deine lokale Zielgruppe ansprechen. Lokale Stories, Events und Community-Content für mehr Reichweite.",
       excerpt: "Der Strategie-Guide für lokales Content Marketing mit Ideen und Best Practices für lokale Unternehmen.",
       category: "Content"
