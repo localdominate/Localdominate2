@@ -1227,28 +1227,28 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
-  // TECHNISCHE HUB-SEITE
+  // === PILLAR PAGE: TECHNISCHES LOCAL SEO GUIDE ===
   {
     slug: "technisches-local-seo-guide",
     de: {
-      title: "Technisches Local SEO: Der komplette Guide für lokale Unternehmen",
-      metaTitle: "Technisches Local SEO | Kompletter Guide 2026",
-      metaDescription: "Alles über Technical SEO für lokale Unternehmen: Core Web Vitals, Schema Markup, Mobile-Optimierung, E-E-A-T und AI Search. Mit 25-Punkte-Checkliste.",
-      excerpt: "Der zentrale Hub für alle technischen SEO-Themen: Performance, Schema, Mobile, E-E-A-T und AI-Optimierung für lokale Unternehmen.",
+      title: "Technisches Local SEO: Der komplette Guide für lokale Unternehmen 2026",
+      metaTitle: "Technisches Local SEO Guide | Schema, Speed, Mobile & Indexierung 2026",
+      metaDescription: "Der umfassendste Technical-Local-SEO-Guide: LocalBusiness Schema, Geo-Markup, Core Web Vitals, Mobile-First, interne Verlinkung & Indexierung. Mit 40-Punkte-Checkliste & Code-Beispielen.",
+      excerpt: "Alles über technisches Local SEO: Von LocalBusiness Schema und Geo-Markup über Core Web Vitals und Mobile-Optimierung bis zu interner Verlinkung und Indexierungsstrategien — mit 40-Punkte-Checkliste.",
       category: "Technik"
     },
     en: {
-      title: "Technical Local SEO: The Complete Guide for Local Businesses",
-      metaTitle: "Technical Local SEO | Complete Guide 2026",
-      metaDescription: "Everything about Technical SEO for local businesses: Core Web Vitals, Schema Markup, Mobile Optimization, E-E-A-T and AI Search. With 25-point checklist.",
-      excerpt: "The central hub for all technical SEO topics: Performance, Schema, Mobile, E-E-A-T and AI optimization for local businesses.",
+      title: "Technical Local SEO: The Complete Guide for Local Businesses 2026",
+      metaTitle: "Technical Local SEO Guide | Schema, Speed, Mobile & Indexing 2026",
+      metaDescription: "The most comprehensive Technical Local SEO guide: LocalBusiness Schema, Geo Markup, Core Web Vitals, Mobile-First, internal linking & indexing strategies. With 40-point checklist.",
+      excerpt: "Everything about technical Local SEO: From LocalBusiness Schema and Geo Markup to Core Web Vitals, mobile optimization, internal linking and indexing strategies.",
       category: "Technical"
     },
-    readingTime: 20,
+    readingTime: 25,
     publishedAt: "2026-03-05",
-    updatedAt: "2026-03-05",
+    updatedAt: "2026-03-08",
     icon: "⚙️",
-    keywords: ["technical seo", "technisches seo", "local seo technik", "schema markup", "core web vitals", "mobile seo", "eeat"],
+    keywords: ["technical seo", "technisches seo", "localbusiness schema", "schema markup", "core web vitals", "mobile seo", "interne verlinkung local seo", "geo markup", "indexierung local seo", "site speed lokale website"],
     featured: true
   },
 
