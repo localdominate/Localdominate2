@@ -287,6 +287,8 @@ const LocalLinkBuilding = () => {
         </div>
       </section>
 
+      <EventSponsorshipStrategy />
+
       <BlogCTAABTest articleSlug="local-link-building" position="middle" />
 
       {/* Lokale Presse */}

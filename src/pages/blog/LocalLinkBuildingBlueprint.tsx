@@ -551,6 +551,8 @@ const LocalLinkBuildingBlueprint = () => {
         </p>
       </section>
 
+      <EventSponsorshipStrategy compact />
+
       {/* 90-Tage-Plan */}
       <section id="linkbuilding-plan">
         <h2>Der 90-Tage-Linkbuilding-Plan</h2>
