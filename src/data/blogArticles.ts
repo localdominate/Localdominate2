@@ -3453,7 +3453,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-notdienst-keywords",
     de: {
       title: "Notdienst Keywords: So wirst du bei Notfällen gefunden (2026)",
-      metaTitle: "Notdienst Keywords: Bei Notfällen gefunden werden | Guide 2026",
+      metaTitle: "Notdienst Keywords | Bei Notfällen gefunden 2026",
       metaDescription: "Wie du für Notfall-Suchen rankst. Schlüsseldienst, Notarzt, Klempner Notdienst - die richtigen Keywords und Strategien.",
       excerpt: "Der Spezial-Guide für Notdienst-Keywords und die Optimierung für dringende Suchanfragen.",
       category: "Strategie"
