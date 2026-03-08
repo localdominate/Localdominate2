@@ -187,6 +187,8 @@ const LocalSeoYoga = () => {
 
       <ImplementationRoadmap data={industryImplementationData.yoga} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.yoga} />
+
       <IndustryComparisonTable data={industryComparisonData.yoga} />
 
       <section id="faq" className="mb-12 scroll-mt-20">

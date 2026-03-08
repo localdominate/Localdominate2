@@ -725,6 +725,8 @@ Herzliche Grüße,
 
       <ImplementationRoadmap data={industryImplementationData.immobilienmakler} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.immobilienmakler} />
+
       <IndustryComparisonTable data={industryComparisonData.immobilienmakler} />
 
       {/* FAQ Section */}

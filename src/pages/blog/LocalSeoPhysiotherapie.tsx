@@ -203,6 +203,8 @@ const LocalSeoPhysiotherapie = () => {
 
       <ImplementationRoadmap data={industryImplementationData.physiotherapie} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.physiotherapie} />
+
       <IndustryComparisonTable data={industryComparisonData.physiotherapie} />
 
       <section id="faq">

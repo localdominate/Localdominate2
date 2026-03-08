@@ -732,6 +732,8 @@ Herzliche Grüße,
 
       <ImplementationRoadmap data={industryImplementationData.steuerberater} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.steuerberater} />
+
       <IndustryComparisonTable data={industryComparisonData.steuerberater} />
 
       {/* FAQ Section */}

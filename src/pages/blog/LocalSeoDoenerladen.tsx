@@ -968,6 +968,8 @@ const LocalSeoDoenerladen = () => {
 
       <ImplementationRoadmap data={industryImplementationData.doener} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.doener} />
+
       <IndustryComparisonTable data={industryComparisonData.doener} />
 
       {/* FAQ Section */}

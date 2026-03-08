@@ -494,6 +494,8 @@ const LocalSeoAutowerkstatt = () => {
 
       <ImplementationRoadmap data={industryImplementationData.autowerkstatt} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.autowerkstatt} />
+
       <IndustryComparisonTable data={industryComparisonData.autowerkstatt} />
 
       {/* FAQ Section */}

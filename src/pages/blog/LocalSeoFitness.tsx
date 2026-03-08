@@ -743,6 +743,8 @@ const LocalSeoFitness = () => {
 
       <ImplementationRoadmap data={industryImplementationData.fitness} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.fitness} />
+
       <IndustryComparisonTable data={industryComparisonData.fitness} />
 
       {/* FAQ */}

@@ -186,6 +186,8 @@ const LocalSeoTattoo = () => {
 
       <ImplementationRoadmap data={industryImplementationData.tattoo} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.tattoo} />
+
       <IndustryComparisonTable data={industryComparisonData.tattoo} />
 
       <section id="faq" className="mb-12 scroll-mt-20">

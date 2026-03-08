@@ -750,6 +750,8 @@ const LocalSeoAerzte = () => {
 
       <ImplementationRoadmap data={industryImplementationData.aerzte} />
 
+      <IndustryBenchmarkTable data={industryBenchmarkData.aerzte} />
+
       <IndustryComparisonTable data={industryComparisonData.aerzte} />
 
       {/* FAQ Section */}
