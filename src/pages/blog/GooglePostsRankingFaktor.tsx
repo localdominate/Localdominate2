@@ -188,7 +188,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="content-strategie">
-        <h2>Content-Strategie für Google Posts</h2>
+        <h2>Wie entwickelst du eine Content-Strategie für Google Posts?</h2>
         <AutoLexikonText>
           <h3>Was funktioniert</h3>
           <ul>
