@@ -40,6 +40,8 @@ import BeautyKeywordGenerator from '@/components/blog/BeautyKeywordGenerator';
 import BookingPlatformTable from '@/components/blog/BookingPlatformTable';
 import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer';
 import ArticleCTA from '@/components/blog/ArticleCTA';
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 
 const LocalSeoFriseur: React.FC = () => {
   const { language } = useLanguage();
