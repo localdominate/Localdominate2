@@ -79,6 +79,11 @@ const Index = () => {
       <LanguageSwitch />
       <HeroSection />
       
+      {/* Statistics Bar - E-E-A-T data signals */}
+      <Suspense fallback={<NullFallback />}>
+        <StatisticsBar />
+      </Suspense>
+      
       {/* Initialize tracking after critical content */}
       <TrackingInitializer />
       
