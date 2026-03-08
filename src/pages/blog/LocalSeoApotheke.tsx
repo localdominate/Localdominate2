@@ -211,6 +211,7 @@ const LocalSeoApotheke = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.apotheke} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.apotheke} />
       <IndustryRankingChallenges config={industryRankingConfigs.apotheke} />
       <HelpfulnessWidget articleSlug="local-seo-apotheke" />

@@ -1148,6 +1148,7 @@ const LocalSeoDoenerladen = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.doener} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.doener} />
       <IndustryRankingChallenges config={industryRankingConfigs.doener} />
       <HelpfulnessWidget articleSlug="local-seo-doener-kebab-imbiss" />

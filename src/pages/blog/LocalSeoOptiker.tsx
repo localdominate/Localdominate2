@@ -271,6 +271,7 @@ const LocalSeoOptiker = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.optiker} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.optiker} />
       <IndustryRankingChallenges config={industryRankingConfigs.optiker} />
       <HelpfulnessWidget articleSlug="local-seo-optiker" />

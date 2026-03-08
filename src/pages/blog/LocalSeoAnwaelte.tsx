@@ -712,6 +712,7 @@ const LocalSeoAnwaelte = () => {
           </li>
         </ul>
 
+        <SearchIntentAnalysis config={searchIntentConfigs.anwaelte} />
         <IndustryKeywordOpportunities config={industryKeywordConfigs.anwaelte} />
         <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
         <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />

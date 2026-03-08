@@ -1230,6 +1230,7 @@ const LocalSeoFriseur: React.FC = () => {
         description="Kopierfertige Texte fuer Friseure: Nach dem Styling und per WhatsApp-Follow-up."
       />
 
+      <SearchIntentAnalysis config={searchIntentConfigs.friseur} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.friseur} />
       <IndustryRankingChallenges config={industryRankingConfigs.friseur} />
       <HelpfulnessWidget articleSlug="local-seo-friseur" />

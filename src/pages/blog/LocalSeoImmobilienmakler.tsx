@@ -805,6 +805,7 @@ Herzliche Grüße,
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.immobilienmakler} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.immobilienmakler} />
       <IndustryRankingChallenges config={industryRankingConfigs.immobilienmakler} />
       <HelpfulnessWidget articleSlug="local-seo-immobilienmakler" />

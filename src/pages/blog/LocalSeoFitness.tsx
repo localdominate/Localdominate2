@@ -877,6 +877,7 @@ const LocalSeoFitness = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.fitness} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.fitness} />
       <IndustryRankingChallenges config={industryRankingConfigs.fitness} />
       <HelpfulnessWidget articleSlug="local-seo-fitnessstudio-gym" />

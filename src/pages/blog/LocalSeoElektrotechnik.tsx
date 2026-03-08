@@ -290,6 +290,7 @@ const LocalSeoElektrotechnik = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.elektrotechnik} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.elektrotechnik} />
       <IndustryRankingChallenges config={industryRankingConfigs.elektrotechnik} />
       <HelpfulnessWidget articleSlug="local-seo-elektrotechnik" />

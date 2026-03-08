@@ -402,6 +402,7 @@ const LocalSeoFotograf = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.fotograf} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.fotograf} />
       <IndustryRankingChallenges config={industryRankingConfigs.fotograf} />
       <HelpfulnessWidget articleSlug="local-seo-fotograf" />

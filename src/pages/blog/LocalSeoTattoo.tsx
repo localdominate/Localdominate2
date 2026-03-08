@@ -215,6 +215,7 @@ const LocalSeoTattoo = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.tattoo} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.tattoo} />
       <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />

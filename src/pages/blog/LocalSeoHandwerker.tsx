@@ -651,6 +651,7 @@ const LocalSeoHandwerker = () => {
         description="Kurze SMS-Templates nach Auftragsabschluss – direkt und effektiv."
       />
 
+      <SearchIntentAnalysis config={searchIntentConfigs.handwerker} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.handwerker} />
       <IndustryRankingChallenges config={industryRankingConfigs.handwerker} />
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />

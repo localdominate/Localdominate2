@@ -346,6 +346,7 @@ const LocalSeoSanitaerHeizung = () => {
         </Accordion>
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.sanitaer} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.sanitaer} />
       <IndustryRankingChallenges config={industryRankingConfigs.sanitaer} />
       <HelpfulnessWidget articleSlug="local-seo-sanitaer-heizung" />
