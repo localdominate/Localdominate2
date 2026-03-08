@@ -368,6 +368,11 @@ const BewertungsAntwortenVorlagen = () => {
         description="14 professionelle Vorlagen fuer jedes Bewertungs-Szenario. Klicke auf eine Vorlage, passe die [Platzhalter] an und kopiere sie direkt."
       />
 
+      <ReviewEmailTemplates
+        title="E-Mail-Vorlagen: Bewertungen aktiv anfragen"
+        description="Proaktiv Bewertungen sammeln mit professionellen E-Mail-Templates. Betreffzeile + Text – einfach anpassen und versenden."
+      />
+
       <HelpfulnessWidget articleSlug="bewertungs-antworten-vorlagen" />
 
       <SourcesSection sources={[
