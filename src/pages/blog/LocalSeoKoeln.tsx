@@ -7,6 +7,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
+import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
 import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoKoelnImg from "@/assets/blog/local-seo-koeln.jpg";
