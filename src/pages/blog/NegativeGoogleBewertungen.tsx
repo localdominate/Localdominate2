@@ -496,45 +496,35 @@ const NegativeGoogleBewertungen = () => {
 
         <h3>Schritt-für-Schritt: Bewertung melden</h3>
 
-        <div className="bg-muted/30 rounded-lg p-6 my-6">
-          <ol className="space-y-4">
-            <li className="flex gap-4">
-              <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</span>
-              <div>
-                <strong>Google Business Profil öffnen</strong>
-                <p className="text-sm text-muted-foreground">Melden Sie sich in Ihrem Google Business Profil an</p>
-              </div>
-            </li>
-            <li className="flex gap-4">
-              <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</span>
-              <div>
-                <strong>Bewertungen aufrufen</strong>
-                <p className="text-sm text-muted-foreground">Navigieren Sie zu "Rezensionen" in der linken Seitenleiste</p>
-              </div>
-            </li>
-            <li className="flex gap-4">
-              <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</span>
-              <div>
-                <strong>Drei-Punkte-Menü klicken</strong>
-                <p className="text-sm text-muted-foreground">Bei der betreffenden Bewertung auf die drei Punkte klicken</p>
-              </div>
-            </li>
-            <li className="flex gap-4">
-              <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">4</span>
-              <div>
-                <strong>"Als unangemessen melden" wählen</strong>
-                <p className="text-sm text-muted-foreground">Die passende Verstoss-Kategorie auswählen</p>
-              </div>
-            </li>
-            <li className="flex gap-4">
-              <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">5</span>
-              <div>
-                <strong>Warten</strong>
-                <p className="text-sm text-muted-foreground">Google prüft die Meldung – Bearbeitungszeit: 3-14 Tage</p>
-              </div>
-            </li>
-          </ol>
-        </div>
+        <StepByStepProcess
+          steps={[
+            {
+              title: "Google Business Profil öffnen",
+              description: "Melden Sie sich in Ihrem Google Business Profil an.",
+              duration: "1 Min."
+            },
+            {
+              title: "Bewertungen aufrufen",
+              description: "Navigieren Sie zu 'Rezensionen' in der linken Seitenleiste.",
+              tip: "Filtern Sie nach Bewertungen mit 1-2 Sternen, um problematische Reviews schnell zu finden."
+            },
+            {
+              title: "Drei-Punkte-Menü klicken",
+              description: "Bei der betreffenden Bewertung auf die drei Punkte klicken."
+            },
+            {
+              title: "'Als unangemessen melden' wählen",
+              description: "Die passende Verstoß-Kategorie auswählen. Wählen Sie die Kategorie, die am besten zum Verstoß passt.",
+              warning: "Melden Sie nur Bewertungen, die tatsächlich gegen die Richtlinien verstoßen. Unbegründete Meldungen können Ihren Account negativ beeinflussen."
+            },
+            {
+              title: "Warten & ggf. eskalieren",
+              description: "Google prüft die Meldung innerhalb von 3-14 Tagen. Bei Ablehnung können Sie über den Google Business Support erneut Einspruch einlegen.",
+              duration: "3-14 Tage",
+              tip: "Dokumentieren Sie den Verstoß mit Screenshots, falls Sie eskalieren müssen."
+            }
+          ]}
+        />
 
         <h3>Rechtliche Optionen (DE/AT/CH)</h3>
 
