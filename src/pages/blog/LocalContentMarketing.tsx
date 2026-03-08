@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
+import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, FileText, MapPin, Calendar, Users, Repeat, Download, Lightbulb, AlertTriangle, TrendingUp } from "lucide-react";
 
