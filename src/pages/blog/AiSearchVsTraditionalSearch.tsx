@@ -6,6 +6,8 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -440,6 +442,15 @@ const AiSearchVsTraditionalSearch = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Case Studies */}
+      <section id="praxisbeispiele" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-2">Praxisbeispiele: AI-Suche vs. Traditionelle Suche</h2>
+        <p className="text-muted-foreground mb-6">Hypothetische Fallstudien zeigen, wie Unternehmen sich für beide Suchwelten optimieren.</p>
+        {industryCaseStudies["ai-search-vs-traditional-search"]?.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       {/* Internal Links */}

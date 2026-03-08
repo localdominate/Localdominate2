@@ -6,6 +6,8 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -429,6 +431,15 @@ const GoogleMapsSeoVsOrganicSeo = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Case Studies */}
+      <section id="praxisbeispiele" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-2">Praxisbeispiele: Maps SEO vs. Organic SEO</h2>
+        <p className="text-muted-foreground mb-6">Hypothetische Fallstudien zeigen, wie Unternehmen mit der richtigen Kanal-Strategie mehr Kunden gewinnen.</p>
+        {industryCaseStudies["google-maps-seo-vs-organic-seo"]?.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       {/* Internal Links */}
