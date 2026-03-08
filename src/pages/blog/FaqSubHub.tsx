@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, ChevronUp, HelpCircle, ArrowLeft, BookOpen } from "lucide-react";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import SEOHead from "@/components/SEOHead";
