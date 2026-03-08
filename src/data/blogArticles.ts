@@ -763,24 +763,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-strategy-planner",
     de: {
-      title: "Local SEO Strategy Planner: Der 7-Phasen-Plan für Top-Rankings",
-      metaTitle: "Local SEO Strategy Planner | 7-Phasen 90-Tage-Plan 2026",
-      metaDescription: "Kostenloser Local SEO Strategieplan mit 49 Aufgaben in 7 Phasen. Interaktive Checkliste, 90-Tage-Timeline, Budget-Planung und kopierbares Template.",
-      excerpt: "Systematischer 7-Phasen-Strategieplan für Local SEO: Vom Audit über Citations und Bewertungen bis zum laufenden Tracking — mit 90-Tage-Timeline.",
+      title: "Local SEO Strategy Planner: 7-Phasen-Aufgabenplan mit Budget & Checkliste",
+      metaTitle: "Local SEO Strategy Planner | 7-Phasen Aufgabenplan 2026",
+      metaDescription: "Kostenloser Local SEO Strategieplan mit 49 Aufgaben in 7 Phasen. Interaktive Aufgaben-Checkliste, Budget-Planung und kopierbares Template.",
+      excerpt: "Systematischer 7-Phasen-Aufgabenplan für Local SEO: 49 konkrete Aufgaben mit Budget-Schätzung und Priorität — als interaktive Checkliste.",
       category: "Tools & Ressourcen"
     },
     en: {
-      title: "Local SEO Strategy Planner: The 7-Phase Plan for Top Rankings",
-      metaTitle: "Local SEO Strategy Planner | 7-Phase 90-Day Plan 2026",
-      metaDescription: "Free local SEO strategy plan with 49 tasks in 7 phases. Interactive checklist, 90-day timeline, budget planning and copyable template.",
-      excerpt: "Systematic 7-phase strategy plan for local SEO: From audit to citations and reviews to ongoing tracking — with 90-day timeline.",
+      title: "Local SEO Strategy Planner: 7-Phase Task Plan with Budget & Checklist",
+      metaTitle: "Local SEO Strategy Planner | 7-Phase Task Plan 2026",
+      metaDescription: "Free local SEO strategy plan with 49 tasks in 7 phases. Interactive task checklist, budget planning and copyable template.",
+      excerpt: "Systematic 7-phase task plan for local SEO: 49 concrete tasks with budget estimates and priorities — as interactive checklist.",
       category: "Tools & Resources"
     },
     readingTime: 14,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "🎯",
-    keywords: ["local seo strategie", "seo strategy planner", "local seo plan", "90 tage plan", "local seo roadmap", "seo strategieplan"],
+    keywords: ["local seo aufgabenplan", "seo strategy planner", "seo aufgaben checkliste", "local seo budget planung", "seo phasen plan"],
     featured: false
   },
 
