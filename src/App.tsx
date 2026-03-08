@@ -38,8 +38,8 @@ const ConversionOptimizationReport = lazy(() => import("./pages/ConversionOptimi
 const InternalLinkingDashboard = lazy(() => import("./pages/InternalLinkingDashboard"));
 const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
+const ContentUpdateCalendar = lazy(() => import("./pages/ContentUpdateCalendar"));
 
-// Lazy load all blog articles
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
 const LocalSeoRestaurant = lazy(() => import("./pages/blog/LocalSeoRestaurant"));
