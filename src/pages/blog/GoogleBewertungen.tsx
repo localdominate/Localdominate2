@@ -240,6 +240,10 @@ const GoogleBewertungen = () => {
         <strong>{t.intro.stat}</strong> lesen Online-Bewertungen, bevor sie ein lokales Unternehmen besuchen. <LexikonLink term="Reviews (Bewertungen)">Google Bewertungen</LexikonLink> sind der wichtigste Vertrauensfaktor für potenzielle Kunden. Hier erfährst du, wie du mehr authentische Bewertungen bekommst – ohne gegen Googles Richtlinien zu verstoßen.
       </p>
 
+      <p data-featured-snippet="true" data-speakable="true">
+        <strong>Mehr Google Bewertungen bekommen</strong> gelingt durch sieben ethische Strategien: direkt nach dem Kauf fragen, QR-Codes auf Rechnungen und Visitenkarten platzieren, Follow-up-E-Mails senden, das Team einbinden, auf alle Bewertungen antworten, exzellenten Service bieten und Hinweisschilder am Eingang aufstellen. Unternehmen mit über 50 Bewertungen genießen 70 % mehr Vertrauen. Google verbietet Bewertungskauf und Gegenleistungen für Reviews.
+      </p>
+
       <KeyTakeawaysBox 
         items={language === "de" ? [
           "Warum Bewertungen entscheidend für lokales Ranking sind",
