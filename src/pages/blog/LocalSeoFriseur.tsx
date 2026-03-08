@@ -42,6 +42,8 @@ import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer
 import ArticleCTA from '@/components/blog/ArticleCTA';
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
+import { industryImplementationData } from "@/data/industryImplementationData";
 
 const LocalSeoFriseur: React.FC = () => {
   const { language } = useLanguage();
