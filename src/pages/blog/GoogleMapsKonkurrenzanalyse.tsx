@@ -322,6 +322,9 @@ const GoogleMapsKonkurrenzanalyse = () => {
         insight: "Dein realistischstes Ziel: Platz 3 im Local Pack. Fokussiere auf Bewertungs-Velocity (5+/Monat), GBP auf 100% bringen und 15 neue Citations in 8 Wochen. Der schwächste Pack-Platz ist dein direkter Gegner.",
       }} />
 
+      {/* Competitor Tracking Strategy */}
+      <CompetitorTrackingStrategy />
+
       {/* 5-Schritte-Framework */}
       <section id="5-schritte" className="mb-12">
         <h2 className="flex items-center gap-2">
