@@ -538,7 +538,7 @@ const ArticleLayout = ({
           />
         </div>
 
-        <AuthorBox />
+        <AuthorBox articleSlug={article.slug} />
         <RelatedArticles articles={relatedArticles} />
       </main>
 
