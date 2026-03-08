@@ -1105,9 +1105,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-baeckerei-konditorei",
-    primaryKeyword: "local seo bäckerei",
-    secondaryKeywords: ["bäcker marketing", "konditorei seo", "handwerksbäcker seo"],
-    lsiKeywords: ["frische keywords", "öffnungszeiten bäckerei", "bäckerei google maps"],
+    primaryKeyword: "local seo konditorei",
+    secondaryKeywords: ["konditorei marketing", "tortenbetrieb seo", "hochzeitstorte keywords"],
+    lsiKeywords: ["spezialitäten marketing", "konditorei google maps", "torten bestellungen seo"],
     searchIntent: "informational",
     targetSearchVolume: "low",
     contentType: "cluster"
