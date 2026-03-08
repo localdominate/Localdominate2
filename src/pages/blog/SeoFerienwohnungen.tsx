@@ -242,7 +242,7 @@ const SeoFerienwohnungen = () => {
           </ul>
         </div>
         <div className="bg-muted/50 rounded-lg p-4">
-          <h4 className="font-semibold text-foreground mb-2">🏗️ Struktur</h4>
+          <h3 className="font-semibold text-foreground mb-2">🏗️ Struktur</h3>
           <ul className="space-y-1 text-sm text-muted-foreground">
             <li>✅ FAQ-Schema</li>
             <li>✅ Interne Verlinkung</li>

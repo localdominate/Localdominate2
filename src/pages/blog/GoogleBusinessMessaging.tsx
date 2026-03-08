@@ -215,7 +215,7 @@ const GoogleBusinessMessaging = () => {
             }
           ].map((item, index) => (
             <div key={index} className="bg-card border border-border rounded-lg p-4">
-              <h4 className="font-semibold text-foreground mb-2">{item.titel}</h4>
+              <h3 className="font-semibold text-foreground mb-2">{item.titel}</h3>
               <p className="text-sm text-muted-foreground italic">"{item.beispiel}"</p>
             </div>
           ))}
