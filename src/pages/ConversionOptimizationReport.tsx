@@ -303,7 +303,7 @@ const ConversionOptimizationReport = () => {
   const saveReport = async () => {
     setIsSaving(true);
     try {
-      const { data, error } = await supabase.from("conversion_reports").insert({
+      const payload = {
         total_sessions: sessionCount,
         total_conversions: metrics.totalConversions,
         total_leads: metrics.totalLeads,
@@ -313,14 +313,15 @@ const ConversionOptimizationReport = () => {
         checkout_completion_rate: metrics.checkoutCompletionRate,
         avg_engagement_score: metrics.avgEngagement,
         avg_time_to_first_cta_seconds: metrics.avgTimeToFirstCta,
-        funnel_data: funnelData,
-        cta_by_location: ctaByLocation,
-        lead_sources: leadSources,
-        top_pages: topPages,
-        recommendations: recommendations,
+        funnel_data: funnelData as any,
+        cta_by_location: ctaByLocation as any,
+        lead_sources: leadSources as any,
+        top_pages: topPages as any,
+        recommendations: recommendations as any,
         notes: reportNotes || null,
         created_by: user?.id,
-      }).select().single();
+      };
+      const { data, error } = await supabase.from("conversion_reports").insert(payload).select().single();
       if (error) throw error;
       setSavedReports(prev => [data, ...prev]);
       setReportNotes("");
