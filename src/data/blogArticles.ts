@@ -3801,8 +3801,8 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local Link Building Blueprint: Complete Guide to Local Backlinks 2026",
-      metaTitle: "Local Link Building Blueprint | All Strategies for Local Backlinks 2026",
-      metaDescription: "The most comprehensive local link building guide: partnerships, sponsorships, PR, events, chamber of commerce links, outreach templates & 90-day plan.",
+      metaTitle: "Local Link Building Blueprint | Guide 2026",
+      metaDescription: "Comprehensive local link building guide: partnerships, sponsorships, PR, events, outreach templates & 90-day action plan.",
       excerpt: "All local link building strategies in one blueprint: From chamber of commerce links to sponsorships, local PR and outreach templates — with a 90-day action plan.",
       category: "Content & Marketing"
     },
