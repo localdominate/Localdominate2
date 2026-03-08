@@ -2,6 +2,7 @@ import React from 'react';
 import ArticleLayout from '@/components/blog/ArticleLayout';
 import { getArticleBySlug } from '@/data/blogArticles';
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
