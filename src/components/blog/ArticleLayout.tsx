@@ -207,7 +207,7 @@ const ArticleLayout = ({
     "@type": "Person",
     "name": reviewedBy.name,
     "jobTitle": reviewedBy.credentials,
-    "worksFor": authorSchema
+    "worksFor": publisherSchema
   } : null;
 
   // Determine WebPage type based on article type
