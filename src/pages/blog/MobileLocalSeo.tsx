@@ -163,7 +163,7 @@ const MobileLocalSeo = () => {
 
       {/* Click-to-Call & Maps */}
       <section id="click-to-call" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Click-to-Call & Maps Integration</h2>
+        <h2 className="text-3xl font-bold mb-6">Wie implementierst du Click-to-Call und Maps?</h2>
         
         <p className="mb-6">
           Mobile Nutzer erwarten <strong>sofortige Aktionsmöglichkeiten</strong>. Die wichtigsten sind: Direkt anrufen und Wegbeschreibung erhalten. Hier erfährst du, wie du beides optimal implementierst.
