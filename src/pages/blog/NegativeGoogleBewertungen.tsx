@@ -872,6 +872,12 @@ const NegativeGoogleBewertungen = () => {
         categories={["negative", "fake", "escalation"]}
       />
 
+      <ReputationManagementStrategy
+        focus={["response", "recovery"]}
+        title="Krisenmanagement: Reaktion & Wiederherstellung"
+        description="Fokussiertes Framework fuer den professionellen Umgang mit negativen Bewertungen und die Wiederherstellung deiner Reputation."
+      />
+
       <HelpfulnessWidget articleSlug="negative-google-bewertungen" />
 
       <BlogCTAABTest articleSlug="negative-google-bewertungen" position="end" />

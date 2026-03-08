@@ -380,6 +380,13 @@ const BewertungsAntwortenVorlagen = () => {
         description="Der schnellste Kanal mit 98% Oeffnungsrate. Kopierfertige SMS-Templates mit Zeichenzaehler."
       />
 
+      <ReputationManagementStrategy
+        focus={["response", "growth"]}
+        title="Vom Antworten zum Wachstum: Strategisches Bewertungsmanagement"
+        description="Wie du Antworten auf Bewertungen in eine systematische Wachstumsstrategie verwandelst."
+        compact
+      />
+
       <HelpfulnessWidget articleSlug="bewertungs-antworten-vorlagen" />
 
       <SourcesSection sources={[

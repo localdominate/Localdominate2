@@ -419,6 +419,11 @@ const GoogleBewertungen = () => {
         description="SMS haben 98% Oeffnungsrate – der effektivste Kanal fuer Bewertungsanfragen. Kopierfertig mit Zeichenzaehler."
       />
 
+      <ReputationManagementStrategy
+        title="Reputation Management: Dein 5-Phasen-Framework"
+        description="Von der Praevention bis zum Wachstum – so baust du systematisch eine starke Online-Reputation auf."
+      />
+
       <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />
 
       <LeadGenerationCTA articleSlug="google-bewertungen-bekommen" position="end" variant="compact" />

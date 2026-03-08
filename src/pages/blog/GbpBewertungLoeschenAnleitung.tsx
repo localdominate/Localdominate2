@@ -316,6 +316,13 @@ const GbpBewertungLoeschenAnleitung: React.FC = () => {
           categories={["fake", "escalation"]}
         />
 
+        <ReputationManagementStrategy
+          focus={["prevention", "monitoring", "response"]}
+          title="Proaktives Bewertungsmanagement"
+          description="Fake-Bewertungen sind nur ein Symptom – mit diesem Framework verhinderst du Probleme und reagierst richtig."
+          compact
+        />
+
         <HelpfulnessWidget articleSlug={articleData.slug} />
       </div>
     </ArticleLayout>
