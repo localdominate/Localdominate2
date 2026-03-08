@@ -401,6 +401,11 @@ const GoogleBewertungen = () => {
         ]}
       />
 
+      <ReviewAcquisitionScripts
+        title="Bewertungs-Scripts: Alle Branchen & Kanaele"
+        description="Kopierfertige Texte fuer E-Mail, SMS, WhatsApp, Vor-Ort-Gespraeche und mehr. Waehle deine Branche und deinen Kanal."
+      />
+
       <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />
 
       <LeadGenerationCTA articleSlug="google-bewertungen-bekommen" position="end" variant="compact" />

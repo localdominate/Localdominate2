@@ -371,6 +371,12 @@ const LocalSeoAnwaelteKanzleien = () => {
         ))}
       </section>
 
+      <ReviewAcquisitionScripts
+        industries={["anwalt"]}
+        title="Bewertungs-Scripts fuer Kanzleien"
+        description="Kopierfertige Texte fuer Anwaelte: Nach Mandatsabschluss per E-Mail und Telefon. Mit Schweigepflicht-Hinweisen."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 
       <SourcesSection sources={[

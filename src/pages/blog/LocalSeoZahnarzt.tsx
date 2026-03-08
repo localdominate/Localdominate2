@@ -280,6 +280,12 @@ const LocalSeoZahnarzt = () => {
         ))}
       </section>
 
+      <ReviewAcquisitionScripts
+        industries={["zahnarzt"]}
+        title="Bewertungs-Scripts fuer Zahnarztpraxen"
+        description="Kopierfertige Texte fuer Zahnaerzte: Am Empfang und per SMS nach der Prophylaxe."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />
 
       <SourcesSection sources={[

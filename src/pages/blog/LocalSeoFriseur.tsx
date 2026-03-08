@@ -1218,6 +1218,12 @@ const LocalSeoFriseur: React.FC = () => {
         ))}
       </section>
 
+      <ReviewAcquisitionScripts
+        industries={["friseur"]}
+        title="Bewertungs-Scripts fuer Friseursalons"
+        description="Kopierfertige Texte fuer Friseure: Nach dem Styling und per WhatsApp-Follow-up."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>
   );

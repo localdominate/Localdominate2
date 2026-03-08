@@ -315,6 +315,12 @@ const LocalSeoRestaurant = () => {
         ))}
       </section>
 
+      <ReviewAcquisitionScripts
+        industries={["restaurant"]}
+        title="Bewertungs-Scripts fuer Restaurants"
+        description="Kopierfertige Texte fuer die Gastronomie: Vor Ort, per E-Mail und SMS."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />
 
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="end" />

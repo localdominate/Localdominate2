@@ -625,6 +625,12 @@ const LocalSeoHandwerker = () => {
         ))}
       </section>
 
+      <ReviewAcquisitionScripts
+        industries={["handwerker"]}
+        title="Bewertungs-Scripts fuer Handwerksbetriebe"
+        description="Kopierfertige Texte fuer Handwerker: Bei Abnahme, per WhatsApp und in der Rechnung."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <RelatedIndustryGuides currentSlug="local-seo-handwerker" />
