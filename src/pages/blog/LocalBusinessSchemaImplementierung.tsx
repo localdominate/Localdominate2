@@ -819,6 +819,7 @@ const LocalBusinessSchemaImplementierung = () => {
         </div>
       </section>
 
+      <AiCitationStrategyBox articleSlug="localbusiness-schema-implementierung" />
       <HelpfulnessWidget articleSlug="localbusiness-schema-implementierung" />
     </ArticleLayout>
   );

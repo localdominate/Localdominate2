@@ -818,6 +818,7 @@ const ReviewSchemaImplementierung = () => {
         </div>
       </section>
 
+      <AiCitationStrategyBox articleSlug="review-schema-implementierung" />
       <HelpfulnessWidget articleSlug="review-schema-implementierung" />
     </ArticleLayout>
   );

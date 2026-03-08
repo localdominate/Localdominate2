@@ -385,6 +385,7 @@ const LocalSeoVoiceSearch = () => {
         </Accordion>
       </section>
 
+      <AiCitationStrategyBox articleSlug="local-seo-voice-search" />
       <HelpfulnessWidget articleSlug="local-seo-voice-search" />
 
       <SourcesSection sources={[

@@ -1227,6 +1227,7 @@ const SchemaMarkupLocalSeo = () => {
         </div>
       </section>
 
+      <AiCitationStrategyBox articleSlug="schema-markup-local-seo" />
       <HelpfulnessWidget articleSlug="schema-markup-local-seo" />
     </ArticleLayout>
   );

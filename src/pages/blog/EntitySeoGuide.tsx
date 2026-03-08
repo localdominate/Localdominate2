@@ -818,6 +818,7 @@ const EntitySeoGuide = () => {
       />
 
       <BlogCTAABTest articleSlug="entity-seo-guide" position="end" />
+      <AiCitationStrategyBox articleSlug="entity-seo-guide" />
       <HelpfulnessWidget articleSlug="entity-seo-guide" />
     </ArticleLayout>
   );

@@ -450,6 +450,7 @@ const GoogleAiOverviews = () => {
         </div>
       </section>
 
+      <AiCitationStrategyBox articleSlug="google-ai-overviews-local-seo" />
       <HelpfulnessWidget articleSlug="google-ai-overviews-local-seo" />
 
       <SourcesSection sources={sources} />

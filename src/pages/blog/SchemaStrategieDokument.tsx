@@ -615,6 +615,7 @@ const SchemaStrategieDokument = () => {
         <BlogFAQSection faqs={faqItems} />
       </section>
 
+      <AiCitationStrategyBox articleSlug="schema-strategie-dokument" />
       <HelpfulnessWidget articleSlug="schema-strategie-dokument" />
 
       <SourcesSection sources={[

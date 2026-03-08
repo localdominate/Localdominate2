@@ -473,6 +473,7 @@ const AiSearchVsTraditionalSearch = () => {
         <BlogFAQSection faqs={faqItems} />
       </section>
 
+      <AiCitationStrategyBox articleSlug="ai-search-vs-traditional-search" />
       <HelpfulnessWidget articleSlug="ai-search-vs-traditional-search" />
 
       <SourcesSection sources={sources} />

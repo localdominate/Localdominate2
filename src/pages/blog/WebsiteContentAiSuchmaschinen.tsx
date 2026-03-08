@@ -496,6 +496,7 @@ const WebsiteContentAiSuchmaschinen = () => {
         { title: "llms.txt Standard", url: "https://llmstxt.org/", type: "documentation", description: "Community-Standard für AI-Crawler-Informationen" },
       ]} />
 
+      <AiCitationStrategyBox articleSlug="website-content-ai-suchmaschinen" />
       <HelpfulnessWidget articleSlug="website-content-ai-suchmaschinen" />
       <BlogCTAABTest articleSlug="website-content-ai-suchmaschinen" position="end" />
     </ArticleLayout>

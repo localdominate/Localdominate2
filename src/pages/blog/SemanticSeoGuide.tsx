@@ -741,6 +741,7 @@ const SemanticSeoGuide = () => {
       />
 
       <BlogCTAABTest articleSlug="semantic-seo-topical-authority" position="end" />
+      <AiCitationStrategyBox articleSlug="semantic-seo-topical-authority" />
       <HelpfulnessWidget articleSlug="semantic-seo-topical-authority" />
     </ArticleLayout>
   );
