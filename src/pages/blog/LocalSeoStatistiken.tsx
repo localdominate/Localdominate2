@@ -3,6 +3,8 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import StatisticBox from "@/components/blog/StatisticBox";
+import RankingFactorChart from "@/components/blog/RankingFactorChart";
+import SeoFlowDiagram from "@/components/blog/SeoFlowDiagram";
 import {
   generalLocalSeoStats,
   googleBusinessStats,
