@@ -369,6 +369,9 @@ const LocalSeoStrategyPlanner = () => {
         insight: "Fokussiere die ersten 4 Wochen auf GBP-Vollständigkeit (65% → 100%) und Bewertungen. Diese Quick-Wins schließen die größten Lücken zu Konkurrent B und C. Backlinks und Content folgen in Phase 5-6.",
       }} />
 
+      {/* Competitor Tracking Strategy */}
+      <CompetitorTrackingStrategy compact />
+
       {/* Progress */}
       <Card className="mb-8 border-primary/20 bg-primary/5">
         <CardContent className="pt-6">
