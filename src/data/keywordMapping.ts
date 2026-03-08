@@ -83,9 +83,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-checkliste-komplett",
-    primaryKeyword: "local seo checkliste",
-    secondaryKeywords: ["local seo checklist", "lokale seo checkliste", "local seo schritt für schritt"],
-    lsiKeywords: ["local seo implementierung", "local seo anleitung", "local seo 2026", "seo punkte abarbeiten"],
+    primaryKeyword: "local seo implementierung",
+    secondaryKeywords: ["local seo maßnahmen", "lokale seo umsetzung", "local seo schritt für schritt"],
+    lsiKeywords: ["seo implementierungsplan", "local seo phasen", "seo maßnahmen priorisiert"],
     searchIntent: "informational",
     targetSearchVolume: "high",
     contentType: "pillar"
