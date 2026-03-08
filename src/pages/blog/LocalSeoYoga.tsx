@@ -4,6 +4,8 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
 import { industryRankingConfigs } from "@/data/industryRankingData";
+import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
+import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -212,6 +214,7 @@ const LocalSeoYoga = () => {
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.yoga} />
       <IndustryRankingChallenges config={industryRankingConfigs.yoga} />
       <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
       <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />

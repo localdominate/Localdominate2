@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
 import { industryRankingConfigs } from "@/data/industryRankingData";
+import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
+import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
@@ -398,6 +400,7 @@ const LocalSeoFotograf = () => {
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.fotograf} />
       <IndustryRankingChallenges config={industryRankingConfigs.fotograf} />
       <HelpfulnessWidget articleSlug="local-seo-fotograf" />
 

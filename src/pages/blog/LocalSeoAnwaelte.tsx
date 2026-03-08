@@ -6,6 +6,8 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
 import { industryRankingConfigs } from "@/data/industryRankingData";
+import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
+import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -708,6 +710,7 @@ const LocalSeoAnwaelte = () => {
           </li>
         </ul>
 
+        <IndustryKeywordOpportunities config={industryKeywordConfigs.anwaelte} />
         <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
         <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 

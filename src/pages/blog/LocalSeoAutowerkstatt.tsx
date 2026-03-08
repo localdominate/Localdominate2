@@ -5,6 +5,8 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
 import { industryRankingConfigs } from "@/data/industryRankingData";
+import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
+import { industryKeywordConfigs } from "@/data/industryKeywordData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -524,6 +526,7 @@ const LocalSeoAutowerkstatt = () => {
         ))}
       </section>
 
+      <IndustryKeywordOpportunities config={industryKeywordConfigs.autowerkstatt} />
       <IndustryRankingChallenges config={industryRankingConfigs.autowerkstatt} />
       <HelpfulnessWidget articleSlug="local-seo-autowerkstatt" />
 
