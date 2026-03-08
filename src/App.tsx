@@ -38,8 +38,8 @@ const ConversionOptimizationReport = lazy(() => import("./pages/ConversionOptimi
 const InternalLinkingDashboard = lazy(() => import("./pages/InternalLinkingDashboard"));
 const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
+const ContentUpdateCalendar = lazy(() => import("./pages/ContentUpdateCalendar"));
 
-// Lazy load all blog articles
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
 const LocalSeoRestaurant = lazy(() => import("./pages/blog/LocalSeoRestaurant"));
@@ -205,6 +205,7 @@ const App = () => (
                 <Route path="/admin/ab-test-zentrale" element={<ABTestZentrale />} />
                 <Route path="/admin/reset-password" element={<ResetPassword />} />
                 <Route path="/admin/update-password" element={<UpdatePassword />} />
+                <Route path="/admin/content-calendar" element={<ContentUpdateCalendar />} />
                 <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
                 <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
                 <Route path="/arztpraxis-marketing" element={<ArztpraxisMarketing />} />
