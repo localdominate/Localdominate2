@@ -1,6 +1,7 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { DonutChart, ProcessFlow, GradientBarChart } from "@/components/blog/PillarVisuals";
 import { InternalResourceBox } from "@/components/blog/InternalResourceBox";
+import AiSearchOptNote from "@/components/blog/AiSearchOptNote";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
@@ -723,6 +724,8 @@ const UltimateGuideLocalSeo = () => {
           { label: "Technisches Local SEO Guide", href: "/blog/technisches-local-seo-guide", type: "pillar", description: "Schema, CWV, Mobile" },
         ]}
       />
+
+      <AiSearchOptNote articleSlug="ultimate-guide-local-seo" />
 
       {/* FAQ */}
       <section id="faq">

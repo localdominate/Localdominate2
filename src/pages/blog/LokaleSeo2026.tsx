@@ -8,6 +8,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiSearchOptNote from "@/components/blog/AiSearchOptNote";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -362,6 +363,8 @@ const LokaleSeo2026 = () => {
           { title: "Think with Google", url: "https://www.thinkwithgoogle.com/", type: "article", description: language === "de" ? "Google-Insights zu Suchtrends" : "Google insights on search trends" }
         ]}
       />
+
+      <AiSearchOptNote articleSlug="lokale-suchmaschinenoptimierung-2026" />
 
       <HelpfulnessWidget articleSlug="lokale-suchmaschinenoptimierung-2026" />
 

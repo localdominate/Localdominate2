@@ -9,6 +9,7 @@ import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import AiSearchOptNote from "@/components/blog/AiSearchOptNote";
 import LexikonLink from "@/components/blog/LexikonLink";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -888,6 +889,8 @@ Sitemap: https://example.de/sitemap.xml`}
           { label: "AI-Suche Guide", href: "/blog/ai-suche-lokale-unternehmen", type: "pillar", description: "Schema für AI" },
         ]}
       />
+
+      <AiSearchOptNote articleSlug="technisches-local-seo-guide" />
 
       <HelpfulnessWidget articleSlug="technisches-local-seo-guide" />
 
