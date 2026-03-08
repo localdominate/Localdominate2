@@ -12,6 +12,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Building2, Newspaper, Users, Trophy, Handshake, Calendar, GraduationCap, Heart, MapPin, Megaphone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import LinkBuildingOutreachTemplates from "@/components/blog/LinkBuildingOutreachTemplates";
 import {
   Table,
   TableHeader,
