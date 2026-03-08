@@ -537,6 +537,7 @@ const ArticleLayout = ({
           itemType="https://schema.org/Article"
         >
           <ArticleHook slug={article.slug} />
+          <SectionAiSummary slug={article.slug} />
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
