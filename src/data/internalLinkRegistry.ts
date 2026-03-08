@@ -245,6 +245,13 @@ export const HUB_DEFINITIONS: HubDefinition[] = [
       "kostenloses-seo-guide",
       "lokale-seo-fuer-neugruender",
       "local-seo-case-study-baecker",
+      "google-maps-audit-template",
+      "citation-tracking-template",
+      "local-keyword-research-template",
+      "local-seo-monthly-checklist",
+      "google-maps-ranking-tracker",
+      "local-seo-strategy-planner",
+      "local-seo-roadmap-90-tage",
     ],
   },
   {
