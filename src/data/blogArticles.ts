@@ -932,8 +932,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-doener-kebab-imbiss",
     de: {
       title: "Local SEO für Döner & Kebab-Imbisse: Der ultimative Marketing-Guide 2026",
-      metaTitle: "Local SEO für Döner-Läden | Der ultimative Kebab-Marketing Guide 2026",
-      metaDescription: "Der längste SEO-Guide für Döner-Läden im deutschsprachigen Internet. Keywords, Google Business, Bewertungen, Lieferportale, Social Media und mehr. Mit 3 interaktiven Tools!",
+      metaTitle: "Local SEO für Döner-Läden | Kebab-Marketing 2026",
+      metaDescription: "Der komplette SEO-Guide für Döner-Läden: Keywords, Google Business, Bewertungen, Lieferportale & Social Media. Mit 3 interaktiven Tools!",
       excerpt: "Von Keywords über Bewertungen bis Lieferportale: Alles was Döner-Imbisse brauchen, um bei Google gefunden zu werden.",
       category: "Gastronomie"
     },
