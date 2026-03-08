@@ -1,5 +1,6 @@
 import React from 'react';
 import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
+import RankingMonitoringStrategy from '@/components/blog/RankingMonitoringStrategy';
 import ArticleLayout from '../../components/blog/ArticleLayout';
 import TableOfContents from '../../components/blog/TableOfContents';
 import KeyTakeawaysBox from '../../components/blog/KeyTakeawaysBox';
