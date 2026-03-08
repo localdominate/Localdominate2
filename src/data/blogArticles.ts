@@ -3394,7 +3394,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local SEO for Multi-Location Businesses: Scaling Strategies (2026)",
-      metaTitle: "Local SEO Multi-Location: Strategies for Franchises | 2026 Guide",
+      metaTitle: "Local SEO Multi-Location | Franchise Guide 2026",
       metaDescription: "How multi-location businesses scale their local SEO. Central management, local adaptation and consistent branding.",
       excerpt: "The enterprise guide for multi-location Local SEO with scaling strategies and best practices.",
       category: "Strategy"
