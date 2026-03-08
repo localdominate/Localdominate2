@@ -40,7 +40,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   anwaelte: {
     industry: "Anwälte & Kanzleien",
-    quickWin: "„Anwalt für [Rechtsgebiet] [Stadt]" Keywords konvertieren am besten – erstelle Landingpages pro Rechtsgebiet.",
+    quickWin: "'Anwalt für [Rechtsgebiet] [Stadt]' Keywords konvertieren am besten - erstelle Landingpages pro Rechtsgebiet.",
     clusters: [
       {
         name: "Rechtsgebiet + Stadt",
