@@ -3873,8 +3873,8 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "How Google Maps Ranking Works: Proximity, Relevance & Prominence Explained",
-      metaTitle: "How Google Maps Ranking Works | Proximity, Relevance, Prominence 2026",
-      metaDescription: "How Google determines your Maps ranking: The 3 main factors proximity, relevance and prominence explained with practical examples and optimization tips.",
+      metaTitle: "How Google Maps Ranking Works | Guide 2026",
+      metaDescription: "How Google determines your Maps ranking: Proximity, relevance and prominence explained with practical examples and optimization tips.",
       excerpt: "Google Maps rankings are based on 3 factors: proximity, relevance and prominence. Learn how they interact — with practical examples and an action plan.",
       category: "Google Maps"
     },
