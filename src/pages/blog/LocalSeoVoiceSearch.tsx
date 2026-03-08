@@ -303,7 +303,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="zukunft">
-        <h2>Die Zukunft der Sprachsuche</h2>
+        <h2>Wie entwickelt sich Voice Search in Zukunft?</h2>
         <AutoLexikonText>
           <h3>Trends 2026 und darüber hinaus</h3>
           <ul>
