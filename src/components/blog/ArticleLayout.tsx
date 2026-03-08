@@ -18,14 +18,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 import { getSessionId } from "@/lib/sessionManager";
 import { useArticleEngagement } from "@/hooks/useArticleEngagement";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 interface TOCItem {
   id: string;
