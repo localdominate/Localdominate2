@@ -504,6 +504,9 @@ const CitationTrackingTemplate = () => {
       </Card>
 
       <BlogFAQSection faqs={faqItems} />
+
+      <LocalCitationWorkflows compact />
+
       <SourcesSection sources={sources} />
       <ArticleCTA />
       <HelpfulnessWidget articleSlug="citation-tracking-template" />

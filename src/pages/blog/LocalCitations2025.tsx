@@ -364,6 +364,8 @@ const LocalCitations2025: React.FC = () => {
         <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen</h2>
         <BlogFAQSection faqs={faqs} />
 
+        <LocalCitationWorkflows />
+
         <SourcesSection sources={sources} />
 
         <HelpfulnessWidget articleSlug={articleData.slug} />
