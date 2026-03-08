@@ -9,6 +9,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
+import ReputationManagementStrategy from "@/components/blog/ReputationManagementStrategy";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
