@@ -80,6 +80,9 @@ const ConversionOptimizationReport = () => {
   const [engagement, setEngagement] = useState<EngagementRow[]>([]);
   const [sessionCount, setSessionCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [savedReports, setSavedReports] = useState<any[]>([]);
+  const [reportNotes, setReportNotes] = useState("");
 
   useEffect(() => {
     if (!isAdmin) return;
