@@ -3299,24 +3299,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-citations-2025",
     de: {
-      title: "Local Citations 2026: Die wichtigsten Branchenbücher & Verzeichnisse",
-      metaTitle: "Local Citations 2026 | Top Verzeichnisse DACH",
-      metaDescription: "Welche Branchenbücher und Verzeichnisse sind 2026 noch relevant? Der komplette Guide zu Citations mit Priorisierung nach Branche.",
-      excerpt: "Die wichtigsten Local Citations für 2026 mit branchenspezifischen Empfehlungen und Priorisierung.",
+      title: "Top-Verzeichnisse DACH 2026: Branchenspezifische Citation-Quellen nach Relevanz sortiert",
+      metaTitle: "Top Verzeichnisse DACH 2026 | Branchenspezifisch sortiert",
+      metaDescription: "Welche Branchenbücher sind 2026 noch relevant? Nach Branche sortierte Verzeichnisliste mit Relevanz-Score und DA-Werten für DACH.",
+      excerpt: "Branchenspezifisch priorisierte Verzeichnisliste für DACH: Relevanz-Score, Domain Authority und Eintragungstipps.",
       category: "Local SEO"
     },
     en: {
-      title: "Local Citations 2026: The Most Important Directories & Listings",
-      metaTitle: "Local Citations 2026: Top Directories & Listings | Guide",
-      metaDescription: "Which business directories and listings are still relevant in 2026? The complete guide to citations with prioritization by industry.",
-      excerpt: "The most important Local Citations for 2026 with industry-specific recommendations and prioritization.",
+      title: "Top DACH Directories 2026: Industry-Specific Citation Sources Ranked by Relevance",
+      metaTitle: "Top DACH Directories 2026 | Industry-Specific Rankings",
+      metaDescription: "Which business directories are still relevant in 2026? Industry-sorted directory list with relevance scores and DA values for DACH.",
+      excerpt: "Industry-specifically prioritized directory list for DACH: relevance scores, domain authority and listing tips.",
       category: "Local SEO"
     },
     readingTime: 14,
     publishedAt: "2025-01-10",
     updatedAt: "2026-02-08",
     icon: "📚",
-    keywords: ["local citations", "branchenbücher", "verzeichnisse", "citations aufbauen", "nap einträge"]
+    keywords: ["top verzeichnisse dach", "branchenbücher 2026", "citation quellen", "verzeichnis relevanz", "nap einträge branche"]
   },
   {
     slug: "local-link-building",
