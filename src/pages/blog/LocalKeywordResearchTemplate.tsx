@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
 import { toast } from "sonner";
+import LocalKeywordFramework from "@/components/blog/LocalKeywordFramework";
 
 const STORAGE_KEY = "keyword-research-template-progress";
 
