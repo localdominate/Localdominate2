@@ -374,6 +374,11 @@ const BewertungsAntwortenVorlagen = () => {
         description="Proaktiv Bewertungen sammeln mit professionellen E-Mail-Templates. Betreffzeile + Text – einfach anpassen und versenden."
       />
 
+      <SmsReviewTemplates
+        title="SMS-Vorlagen: Bewertungen per SMS anfragen"
+        description="Der schnellste Kanal mit 98% Oeffnungsrate. Kopierfertige SMS-Templates mit Zeichenzaehler."
+      />
+
       <HelpfulnessWidget articleSlug="bewertungs-antworten-vorlagen" />
 
       <SourcesSection sources={[

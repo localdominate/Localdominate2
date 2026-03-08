@@ -413,6 +413,11 @@ const GoogleBewertungen = () => {
         description="Kopierfertige E-Mail-Templates mit Betreffzeile und Textkoerper. Waehle Branche und Zeitpunkt – anpassen und versenden."
       />
 
+      <SmsReviewTemplates
+        title="SMS-Vorlagen: Bewertungen per Kurznachricht"
+        description="SMS haben 98% Oeffnungsrate – der effektivste Kanal fuer Bewertungsanfragen. Kopierfertig mit Zeichenzaehler."
+      />
+
       <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />
 
       <LeadGenerationCTA articleSlug="google-bewertungen-bekommen" position="end" variant="compact" />
