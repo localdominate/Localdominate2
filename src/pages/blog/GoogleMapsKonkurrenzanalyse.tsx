@@ -1,3 +1,4 @@
+import CompetitiveAnalysisFramework from "@/components/blog/CompetitiveAnalysisFramework";
 import { Link } from "react-router-dom";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
