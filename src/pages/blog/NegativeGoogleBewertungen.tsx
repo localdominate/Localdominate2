@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewResponseGenerator from "@/components/blog/ReviewResponseGenerator";
 import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
+import ReputationManagementStrategy from "@/components/blog/ReputationManagementStrategy";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import StepByStepProcess from "@/components/blog/StepByStepProcess";
 import { useLanguage } from "@/i18n/LanguageContext";
