@@ -7,6 +7,8 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
@@ -645,6 +647,7 @@ const LocalSeoHandwerker = () => {
         description="Kurze SMS-Templates nach Auftragsabschluss – direkt und effektiv."
       />
 
+      <IndustryRankingChallenges config={industryRankingConfigs.handwerker} />
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <RelatedIndustryGuides currentSlug="local-seo-handwerker" />

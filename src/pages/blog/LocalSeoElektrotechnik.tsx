@@ -5,6 +5,8 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
@@ -284,6 +286,7 @@ const LocalSeoElektrotechnik = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.elektrotechnik} />
       <HelpfulnessWidget articleSlug="local-seo-elektrotechnik" />
 
       <SourcesSection sources={[

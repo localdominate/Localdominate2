@@ -2,6 +2,8 @@ import React from 'react';
 import ArticleLayout from '@/components/blog/ArticleLayout';
 import { getArticleBySlug } from '@/data/blogArticles';
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -1224,6 +1226,7 @@ const LocalSeoFriseur: React.FC = () => {
         description="Kopierfertige Texte fuer Friseure: Nach dem Styling und per WhatsApp-Follow-up."
       />
 
+      <IndustryRankingChallenges config={industryRankingConfigs.friseur} />
       <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>
   );

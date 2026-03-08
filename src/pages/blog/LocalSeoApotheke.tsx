@@ -2,6 +2,8 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -205,6 +207,7 @@ const LocalSeoApotheke = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.apotheke} />
       <HelpfulnessWidget articleSlug="local-seo-apotheke" />
       <RelatedIndustryGuides currentSlug="local-seo-apotheken" />
       <SourcesSection sources={sources} />

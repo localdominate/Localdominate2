@@ -2,6 +2,8 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -209,6 +211,7 @@ const LocalSeoTattoo = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
       <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />

@@ -2,6 +2,8 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -316,6 +318,7 @@ const LocalSeoBackerei = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.baeckerei} />
       <HelpfulnessWidget articleSlug="local-seo-baeckerei" />
     </ArticleLayout>
   );

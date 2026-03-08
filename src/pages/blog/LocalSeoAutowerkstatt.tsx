@@ -3,6 +3,8 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -522,6 +524,7 @@ const LocalSeoAutowerkstatt = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.autowerkstatt} />
       <HelpfulnessWidget articleSlug="local-seo-autowerkstatt" />
 
       <BlogCTAABTest position="end" articleSlug="local-seo-autowerkstatt" />

@@ -6,6 +6,8 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
@@ -335,6 +337,7 @@ const LocalSeoRestaurant = () => {
         description="Kurze SMS-Templates fuer die Gastronomie – direkt nach dem Besuch oder als Erinnerung."
       />
 
+      <IndustryRankingChallenges config={industryRankingConfigs.restaurant} />
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />
 
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="end" />

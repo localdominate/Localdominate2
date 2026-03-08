@@ -2,6 +2,8 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
@@ -963,6 +965,7 @@ const LocalSeoHotels = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.hotels} />
       <HelpfulnessWidget articleSlug="local-seo-hotels" />
     </ArticleLayout>
   );

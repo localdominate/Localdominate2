@@ -5,6 +5,8 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
@@ -377,6 +379,7 @@ const LocalSeoAnwaelteKanzleien = () => {
         description="Kopierfertige Texte fuer Anwaelte: Nach Mandatsabschluss per E-Mail und Telefon. Mit Schweigepflicht-Hinweisen."
       />
 
+      <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
       <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 
       <SourcesSection sources={[

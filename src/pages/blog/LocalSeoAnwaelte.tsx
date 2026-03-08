@@ -4,6 +4,8 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -706,6 +708,7 @@ const LocalSeoAnwaelte = () => {
           </li>
         </ul>
 
+        <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
         <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />
 
         <BlogCTAABTest articleSlug="local-seo-anwaelte-kanzleien" position="end" />

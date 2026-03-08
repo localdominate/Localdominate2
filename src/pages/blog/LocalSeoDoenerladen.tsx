@@ -2,6 +2,8 @@ import React from 'react';
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import IndustryRankingChallenges from "@/components/blog/IndustryRankingChallenges";
+import { industryRankingConfigs } from "@/data/industryRankingData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
@@ -1142,6 +1144,7 @@ const LocalSeoDoenerladen = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.doener} />
       <HelpfulnessWidget articleSlug="local-seo-doener-kebab-imbiss" />
     </ArticleLayout>
   );
