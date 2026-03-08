@@ -99,7 +99,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         <h2 id="key-takeaways" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Ranking verschwunden: Die wichtigsten Erkenntnisse</h2>
         <KeyTakeawaysBox items={keyTakeaways} />
 
-        <h2 id="erste-schritte" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Erste Diagnose-Schritte</h2>
+        <h2 id="erste-schritte" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Erste Diagnose-Schritte bei Ranking-Verlust</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Bevor du in Panik gerätst, prüfe diese grundlegenden Punkte. Oft ist die Ursache schneller gefunden als gedacht:
