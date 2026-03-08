@@ -147,7 +147,7 @@ const ContentUpdateCalendar = () => {
     return <div className="min-h-screen flex items-center justify-center"><Clock className="h-8 w-8 animate-spin text-muted-foreground" /></div>;
   }
   if (!user) {
-    return <AdminLoginScreen onLogin={signIn} isLoading={false} />;
+    return <AdminLoginScreen onLogin={signIn} isLoading={false} error={authError || null} />;
   }
   if (!isAdmin) {
     return <AdminAccessDenied onSignOut={signOut} userEmail={user.email} />;
