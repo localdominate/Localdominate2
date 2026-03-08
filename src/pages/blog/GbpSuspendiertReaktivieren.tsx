@@ -7,7 +7,8 @@ import KeyTakeawaysBox from '@/components/blog/KeyTakeawaysBox';
 import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import SuspendierungsDiagnose from '@/components/blog/SuspendierungsDiagnose';
-import { AlertTriangle, CheckCircle, Clock, FileText, Shield, Phone, Mail, ArrowRight, XCircle, AlertCircle } from 'lucide-react';
+import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import { AlertTriangle, CheckCircle, Clock, FileText, Shield, Phone, Mail, ArrowRight, XCircle, AlertCircle, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const GbpSuspendiertReaktivieren: React.FC = () => {
