@@ -144,6 +144,7 @@ const AiSucheLokaleUnternehmen = lazy(() => import("./pages/blog/AiSucheLokaleUn
 const LocalLinkBuildingBlueprint = lazy(() => import("./pages/blog/LocalLinkBuildingBlueprint"));
 const LocalSeoChecklisteKomplett = lazy(() => import("./pages/blog/LocalSeoChecklisteKomplett"));
 const HubGoogleMapsSeo = lazy(() => import("./pages/blog/HubGoogleMapsSeo"));
+const WieGoogleMapsRankingFunktioniert = lazy(() => import("./pages/blog/WieGoogleMapsRankingFunktioniert"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -298,6 +299,7 @@ const App = () => (
                 <Route path="/blog/local-link-building-blueprint" element={<LocalLinkBuildingBlueprint />} />
                 <Route path="/blog/local-seo-checkliste-komplett" element={<LocalSeoChecklisteKomplett />} />
                 <Route path="/blog/google-maps-seo-hub" element={<HubGoogleMapsSeo />} />
+                <Route path="/blog/wie-google-maps-ranking-funktioniert" element={<WieGoogleMapsRankingFunktioniert />} />
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
