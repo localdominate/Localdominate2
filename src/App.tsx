@@ -94,6 +94,7 @@ const LocalSeoNotdienstKeywords = lazy(() => import("./pages/blog/LocalSeoNotdie
 const GoogleBusinessKategorienGuide = lazy(() => import("./pages/blog/GoogleBusinessKategorienGuide"));
 const LocalSeoZahnarzt = lazy(() => import("./pages/blog/LocalSeoZahnarzt"));
 const LokaleEventsMarketing = lazy(() => import("./pages/blog/LokaleEventsMarketing"));
+const LokaleInfluencerKooperationen = lazy(() => import("./pages/blog/LokaleInfluencerKooperationen"));
 const GoogleBusinessProdukteServices = lazy(() => import("./pages/blog/GoogleBusinessProdukteServices"));
 const LocalSeoOptiker = lazy(() => import("./pages/blog/LocalSeoOptiker"));
 const BewertungsAntwortenVorlagen = lazy(() => import("./pages/blog/BewertungsAntwortenVorlagen"));
@@ -260,6 +261,7 @@ const App = () => (
                 <Route path="/blog/google-business-kategorien-guide" element={<GoogleBusinessKategorienGuide />} />
                 <Route path="/blog/local-seo-zahnarzt" element={<LocalSeoZahnarzt />} />
                 <Route path="/blog/lokale-events-marketing" element={<LokaleEventsMarketing />} />
+                <Route path="/blog/lokale-influencer-kooperationen" element={<LokaleInfluencerKooperationen />} />
                 <Route path="/blog/google-business-produkte-services" element={<GoogleBusinessProdukteServices />} />
                 <Route path="/blog/local-seo-optiker" element={<LocalSeoOptiker />} />
                 <Route path="/blog/bewertungs-antworten-vorlagen" element={<BewertungsAntwortenVorlagen />} />
