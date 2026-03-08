@@ -473,19 +473,14 @@ const LocalSeoRoadmap = () => {
         </CardContent>
       </Card>
 
-      <BlogCTAABTest slug="local-seo-roadmap-90-tage" position="bottom" />
+      <BlogCTAABTest slug="local-seo-roadmap-90-tage" position="middle" />
 
-      <BlogFAQSection items={faqItems} />
+      <BlogFAQSection faqs={faqItems} />
       <SourcesSection sources={sources} />
 
-      <ArticleCTA
-        title="Roadmap umsetzen lassen?"
-        description="Wir setzen die 90-Tage-Roadmap für dich um — mit garantierten Ergebnissen."
-        buttonText="Jetzt starten"
-        buttonLink="/kontakt"
-      />
+      <ArticleCTA />
 
-      <HelpfulnessWidget slug="local-seo-roadmap-90-tage" />
+      <HelpfulnessWidget articleSlug="local-seo-roadmap-90-tage" />
     </ArticleLayout>
   );
 };
