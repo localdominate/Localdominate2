@@ -288,7 +288,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
               <p className="text-gray-600">Betroffene Seiten verbessern, neue Inhalte erstellen, interne Verlinkung stärken</p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Monat 2-3: Autorität aufbauen</h5>
+              <h4 className="font-bold">Monat 2-3: Domain-Autorität aufbauen</h4>
               <p className="text-gray-600">Backlinks aufbauen, lokale PR, mehr Bewertungen sammeln</p>
             </div>
             <div className="bg-white rounded-lg p-4">
