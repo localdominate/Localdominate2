@@ -1280,24 +1280,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-baeckerei-konditorei",
     de: {
-      title: "Local SEO für Bäckereien & Konditoreien",
-      metaTitle: "Local SEO für Bäckereien | Mehr Kunden 2026",
-      metaDescription: "Wie Bäckereien durch Local SEO mehr Kunden gewinnen. Frische-Keywords, Öffnungszeiten-Optimierung und lokale Traditionspositionierung.",
-      excerpt: "Der Guide für Bäckereien: So werden Sie zur Lieblingsbäckerei im Viertel.",
+      title: "Local SEO für Konditoreien & Tortenbetriebe: Spezialitäten vermarkten",
+      metaTitle: "Local SEO Konditoreien | Torten-Marketing 2026",
+      metaDescription: "Wie Konditoreien und Tortenbetriebe durch Local SEO mehr Bestellungen erhalten. Hochzeits-Keywords, Spezialitäten-Content und saisonale Kampagnen.",
+      excerpt: "Der Guide für Konditoreien: So werden Ihre Torten und Spezialitäten zur lokalen Attraktion.",
       category: "Branchen"
     },
     en: {
-      title: "Local SEO for Bakeries & Pastry Shops",
-      metaTitle: "Local SEO for Bakeries | More Customers 2026",
-      metaDescription: "How bakeries win more customers through Local SEO. Freshness keywords, opening hours optimization and local tradition positioning.",
-      excerpt: "The guide for bakeries: How to become the favorite bakery in the neighborhood.",
+      title: "Local SEO for Pastry Shops & Custom Cake Businesses: Marketing Specialties",
+      metaTitle: "Local SEO Pastry Shops | Cake Marketing 2026",
+      metaDescription: "How pastry shops and custom cake businesses gain more orders through Local SEO. Wedding keywords, specialty content and seasonal campaigns.",
+      excerpt: "The guide for pastry shops: How to make your cakes and specialties the local attraction.",
       category: "Industries"
     },
     readingTime: 11,
     publishedAt: "2026-03-22",
     updatedAt: "2026-03-22",
     icon: "🥖",
-    keywords: ["bäckerei seo", "konditorei marketing", "local seo bäckerei", "handwerksbäcker seo"],
+    keywords: ["konditorei seo", "tortenbetrieb marketing", "local seo konditorei", "hochzeitstorte keywords"],
     featured: false
   },
   {
