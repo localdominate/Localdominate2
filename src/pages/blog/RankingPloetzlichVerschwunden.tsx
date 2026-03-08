@@ -201,7 +201,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
           <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-3">⚠️ Häufige GBP-Ursachen</h4>
+            <h3 className="font-bold text-lg mb-3">⚠️ Häufige GBP-Probleme bei Ranking-Verlust</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• Profil wurde suspendiert</li>
               <li>• Verifizierung abgelaufen</li>
