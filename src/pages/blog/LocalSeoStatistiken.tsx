@@ -202,7 +202,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 4: Mobile */}
       <section id="mobile">
-        <h2>Mobile lokale Suche: Trends & Zahlen</h2>
+        <h2>Wie wichtig ist Mobile für lokale Suche?</h2>
         <p>
           Über 60% aller lokalen Suchen erfolgen mobil. „In der Nähe"-Suchen sind in den letzten 5 Jahren 
           um 400% gestiegen. Mobiloptimierung ist damit Pflicht für jedes lokale Unternehmen.
