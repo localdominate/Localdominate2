@@ -164,7 +164,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="featured-snippets">
-        <h2>Featured Snippets erobern</h2>
+        <h2>Wie eroberst du Featured Snippets für Voice Search?</h2>
         <AutoLexikonText>
           <p>
             Bei Sprachsuchen liest der Assistent oft nur ein Ergebnis vor – 
