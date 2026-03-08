@@ -1724,25 +1724,26 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "ai-overviews-local-seo",
+    primaryKeyword: "ai overviews auswirkungen local seo",
     de: {
-      title: "AI-Overviews & Local SEO: Wie KI die lokale Suche verändert",
-      metaTitle: "AI-Overviews Local SEO | KI-Suche 2026",
-      metaDescription: "Wie AI-Overviews (SGE) die lokale Suche verändern. Optimierungsstrategien für die KI-gesteuerte Suchergebnisseite.",
-      excerpt: "Die Zukunft der lokalen Suche: Was AI-Overviews für Ihr Unternehmen bedeuten.",
+      title: "AI-Overviews & Local Pack: Auswirkungen auf lokale Klickraten & Sichtbarkeit",
+      metaTitle: "AI-Overviews Auswirkungen Local Pack | CTR-Analyse 2026",
+      metaDescription: "Wie AI-Overviews die Klickraten im Local Pack verändern. CTR-Daten, Sichtbarkeits-Einfluss und Anpassungsstrategien für lokale Unternehmen.",
+      excerpt: "AI-Overviews verändern das Local Pack: Aktuelle CTR-Daten, Sichtbarkeits-Analysen und konkrete Anpassungsstrategien.",
       category: "Technik"
     },
     en: {
-      title: "AI Overviews & Local SEO: How AI is Changing Local Search",
-      metaTitle: "AI Overviews Local SEO | AI Search 2026",
-      metaDescription: "How AI Overviews (SGE) are changing local search. Optimization strategies for the AI-powered search results page.",
-      excerpt: "The future of local search: What AI Overviews mean for your business.",
+      title: "AI Overviews & Local Pack: Impact on Local Click Rates & Visibility",
+      metaTitle: "AI Overviews Impact on Local Pack | CTR Analysis 2026",
+      metaDescription: "How AI Overviews are changing click rates in the Local Pack. CTR data, visibility impact and adaptation strategies for local businesses.",
+      excerpt: "AI Overviews are changing the Local Pack: Current CTR data, visibility analysis and concrete adaptation strategies.",
       category: "Technical"
     },
     readingTime: 15,
     publishedAt: "2026-03-18",
     updatedAt: "2026-03-18",
     icon: "🤖",
-    keywords: ["ai overviews", "sge local seo", "ki suche", "google ai"],
+    keywords: ["ai overviews auswirkungen", "local pack ctr", "ki suche klickrate", "ai overviews sichtbarkeit"],
     featured: true
   },
   {
