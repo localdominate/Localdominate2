@@ -61,6 +61,11 @@ const ANCHOR_TEXT_MAP: Record<string, Omit<AnchorTextRecommendation, "slug" | "p
     variations: ["alle lokalen Ranking-Faktoren im Detail", "Ranking-Signale für Local SEO"],
     naturalAnchor: "unsere vollständige Ranking-Faktoren-Analyse",
   },
+  "ai-suche-lokale-unternehmen": {
+    primaryAnchor: "AI Search Optimization für lokale Unternehmen",
+    variations: ["AI-Suchoptimierung für lokale Betriebe", "GEO-Guide für lokale Unternehmen"],
+    naturalAnchor: "unser Guide zur AI-Sichtbarkeit für lokale Unternehmen",
+  },
 
   // === HUB PAGES ===
   "google-business-profil-hub": {
