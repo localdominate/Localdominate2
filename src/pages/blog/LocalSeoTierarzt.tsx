@@ -7,6 +7,8 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoTierarztImg from "@/assets/blog/local-seo-tierarzt.jpg";
 import { 
