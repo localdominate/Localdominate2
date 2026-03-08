@@ -587,7 +587,7 @@ const SeoLexikon = () => {
       "name": `Was ist ${term.term}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": term.fullDescription
+        "text": term.snippetDefinition || term.fullDescription
       }
     }))
   };
