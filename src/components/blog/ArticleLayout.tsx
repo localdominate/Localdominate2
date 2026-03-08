@@ -14,6 +14,7 @@ import MobileArticleCTA from "./MobileArticleCTA";
 import SocialShare from "./SocialShare";
 import ReadingProgress from "./ReadingProgress";
 import StickyTableOfContents from "./StickyTableOfContents";
+import LastReviewedBadge from "./LastReviewedBadge";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
@@ -238,6 +239,7 @@ const ArticleLayout = ({
     }),
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
+    ...(article.lastReviewedAt && { "lastReviewed": article.lastReviewedAt }),
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://localdominate.org/blog/${article.slug}`
@@ -454,8 +456,15 @@ const ArticleLayout = ({
             </span>
             {article.updatedAt !== article.publishedAt && (
               <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded">
-                {updatedText}
+                {updatedText}: {new Date(article.updatedAt).toLocaleDateString(dateLocale)}
               </span>
+            )}
+            {article.lastReviewedAt && (
+              <LastReviewedBadge 
+                reviewDate={article.lastReviewedAt} 
+                reviewerName={article.lastReviewedBy || "Local Dominator Team"}
+                variant="compact"
+              />
             )}
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">

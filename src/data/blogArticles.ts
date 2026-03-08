@@ -1,4 +1,5 @@
 import { Language } from "@/i18n/translations";
+import { getArticleReviewMeta } from "@/data/articleReviewDates";
 
 export interface BlogArticleContent {
   title: string;
@@ -34,6 +35,8 @@ export interface ResolvedBlogArticle {
   icon: string;
   keywords: string[];
   featured?: boolean;
+  lastReviewedAt?: string;
+  lastReviewedBy?: string;
 }
 
 export const blogArticles: BlogArticle[] = [
@@ -4059,6 +4062,7 @@ const getPublishedArticles = (): BlogArticle[] => {
 
 export const resolveArticle = (article: BlogArticle, language: Language): ResolvedBlogArticle => {
   const content = article[language];
+  const reviewMeta = getArticleReviewMeta(article.slug);
   return {
     slug: article.slug,
     title: content.title,
@@ -4072,6 +4076,8 @@ export const resolveArticle = (article: BlogArticle, language: Language): Resolv
     icon: article.icon,
     keywords: article.keywords,
     featured: article.featured,
+    lastReviewedAt: reviewMeta?.lastReviewedAt,
+    lastReviewedBy: reviewMeta?.lastReviewedBy,
   };
 };
 
