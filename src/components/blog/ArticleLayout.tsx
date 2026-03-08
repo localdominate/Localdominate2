@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import AuthorBox from "./AuthorBox";
+import ArticleContextLinks from "./ArticleContextLinks";
 import RelatedArticles from "./RelatedArticles";
 import MobileArticleCTA from "./MobileArticleCTA";
 import SocialShare from "./SocialShare";
