@@ -639,6 +639,12 @@ const LocalSeoHandwerker = () => {
         description="Professionelle E-Mail-Templates nach Auftragsabschluss und saisonale Aktionen."
       />
 
+      <SmsReviewTemplates
+        industries={["handwerker"]}
+        title="SMS-Vorlagen fuer Handwerker-Bewertungen"
+        description="Kurze SMS-Templates nach Auftragsabschluss – direkt und effektiv."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <RelatedIndustryGuides currentSlug="local-seo-handwerker" />

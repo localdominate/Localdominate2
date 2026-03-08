@@ -294,6 +294,12 @@ const LocalSeoZahnarzt = () => {
         description="Datenschutzkonforme E-Mail-Templates fuer Zahnarztpraxen – nach der Zahnreinigung oder Behandlung."
       />
 
+      <SmsReviewTemplates
+        industries={["zahnarzt"]}
+        title="SMS-Vorlagen fuer Zahnarzt-Bewertungen"
+        description="Datenschutzkonforme SMS-Templates fuer Zahnarztpraxen mit Zeichenzaehler."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />
 
       <SourcesSection sources={[
