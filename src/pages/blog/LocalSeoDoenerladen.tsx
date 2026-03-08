@@ -1144,6 +1144,7 @@ const LocalSeoDoenerladen = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.doener} />
       <HelpfulnessWidget articleSlug="local-seo-doener-kebab-imbiss" />
     </ArticleLayout>
   );

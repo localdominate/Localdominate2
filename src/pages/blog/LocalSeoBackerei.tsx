@@ -318,6 +318,7 @@ const LocalSeoBackerei = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.baeckerei} />
       <HelpfulnessWidget articleSlug="local-seo-baeckerei" />
     </ArticleLayout>
   );

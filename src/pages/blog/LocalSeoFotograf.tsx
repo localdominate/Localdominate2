@@ -398,6 +398,7 @@ const LocalSeoFotograf = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.fotograf} />
       <HelpfulnessWidget articleSlug="local-seo-fotograf" />
 
       <SourcesSection sources={[

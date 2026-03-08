@@ -212,6 +212,7 @@ const LocalSeoYoga = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.yoga} />
       <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
       <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />
       <SourcesSection sources={sources} />

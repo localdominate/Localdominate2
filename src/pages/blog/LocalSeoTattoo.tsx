@@ -211,6 +211,7 @@ const LocalSeoTattoo = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
       <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />

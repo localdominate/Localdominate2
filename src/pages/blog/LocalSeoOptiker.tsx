@@ -267,6 +267,7 @@ const LocalSeoOptiker = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.optiker} />
       <HelpfulnessWidget articleSlug="local-seo-optiker" />
 
       <SourcesSection sources={[

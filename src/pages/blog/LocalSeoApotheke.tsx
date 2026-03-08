@@ -207,6 +207,7 @@ const LocalSeoApotheke = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.apotheke} />
       <HelpfulnessWidget articleSlug="local-seo-apotheke" />
       <RelatedIndustryGuides currentSlug="local-seo-apotheken" />
       <SourcesSection sources={sources} />

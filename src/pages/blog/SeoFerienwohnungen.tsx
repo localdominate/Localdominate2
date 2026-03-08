@@ -320,6 +320,7 @@ const SeoFerienwohnungen = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.ferienwohnungen} />
       <HelpfulnessWidget articleSlug="seo-ferienwohnungen" />
     </ArticleLayout>
   );
