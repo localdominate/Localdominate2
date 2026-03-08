@@ -19,8 +19,9 @@ import {
   ArrowLeft, TrendingUp, TrendingDown, Target, MousePointerClick,
   Eye, Users, Zap, AlertTriangle, CheckCircle2, Lightbulb,
   ArrowRight, BarChart3, Clock, FileText, Smartphone, Monitor,
-  RefreshCw
+  RefreshCw, Save, History, Trash2, Download
 } from "lucide-react";
+import { toast } from "sonner";
 
 const COLORS = ["hsl(var(--primary))", "hsl(var(--destructive))", "#f59e0b", "#10b981", "#8b5cf6", "#06b6d4"];
 
@@ -79,21 +80,26 @@ const ConversionOptimizationReport = () => {
   const [engagement, setEngagement] = useState<EngagementRow[]>([]);
   const [sessionCount, setSessionCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [savedReports, setSavedReports] = useState<any[]>([]);
+  const [reportNotes, setReportNotes] = useState("");
 
   useEffect(() => {
     if (!isAdmin) return;
     const fetchData = async () => {
       setIsLoading(true);
-      const [convRes, leadRes, engRes, sessRes] = await Promise.all([
+      const [convRes, leadRes, engRes, sessRes, reportsRes] = await Promise.all([
         supabase.from("analytics_conversions").select("*").order("created_at", { ascending: false }).limit(1000),
         supabase.from("leads").select("*").order("created_at", { ascending: false }).limit(1000),
         supabase.from("ab_test_engagement").select("*").order("created_at", { ascending: false }).limit(1000),
         supabase.from("analytics_sessions").select("id", { count: "exact", head: true }),
+        supabase.from("conversion_reports").select("*").order("created_at", { ascending: false }).limit(50),
       ]);
       if (convRes.data) setConversions(convRes.data as ConversionRow[]);
       if (leadRes.data) setLeads(leadRes.data as LeadRow[]);
       if (engRes.data) setEngagement(engRes.data as EngagementRow[]);
       if (sessRes.count != null) setSessionCount(sessRes.count);
+      if (reportsRes.data) setSavedReports(reportsRes.data);
       setIsLoading(false);
     };
     fetchData();
@@ -294,6 +300,49 @@ const ConversionOptimizationReport = () => {
     });
   }, [metrics, topPages, engagement, sessionCount]);
 
+  const saveReport = async () => {
+    setIsSaving(true);
+    try {
+      const payload = {
+        total_sessions: sessionCount,
+        total_conversions: metrics.totalConversions,
+        total_leads: metrics.totalLeads,
+        conversion_rate: metrics.conversionRate,
+        lead_rate: metrics.leadRate,
+        cta_click_rate: metrics.ctaClickRate,
+        checkout_completion_rate: metrics.checkoutCompletionRate,
+        avg_engagement_score: metrics.avgEngagement,
+        avg_time_to_first_cta_seconds: metrics.avgTimeToFirstCta,
+        funnel_data: funnelData as any,
+        cta_by_location: ctaByLocation as any,
+        lead_sources: leadSources as any,
+        top_pages: topPages as any,
+        recommendations: recommendations as any,
+        notes: reportNotes || null,
+        created_by: user?.id,
+      };
+      const { data, error } = await supabase.from("conversion_reports").insert(payload).select().single();
+      if (error) throw error;
+      setSavedReports(prev => [data, ...prev]);
+      setReportNotes("");
+      toast.success("Report gespeichert!");
+    } catch (e: any) {
+      toast.error("Fehler beim Speichern: " + e.message);
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const deleteReport = async (id: string) => {
+    const { error } = await supabase.from("conversion_reports").delete().eq("id", id);
+    if (error) {
+      toast.error("Fehler beim Löschen");
+    } else {
+      setSavedReports(prev => prev.filter(r => r.id !== id));
+      toast.success("Report gelöscht");
+    }
+  };
+
   const severityColor = (s: string) =>
     s === "critical" ? "text-destructive bg-destructive/10" :
     s === "high" ? "text-orange-600 bg-orange-100" :
@@ -339,9 +388,14 @@ const ConversionOptimizationReport = () => {
               <p className="text-sm text-muted-foreground">CTA-Performance & Empfehlungen</p>
             </div>
           </div>
-          <Button variant="outline" size="sm" onClick={() => window.location.reload()}>
-            <RefreshCw className="h-4 w-4 mr-1" /> Aktualisieren
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" onClick={() => window.location.reload()}>
+              <RefreshCw className="h-4 w-4 mr-1" /> Aktualisieren
+            </Button>
+            <Button size="sm" onClick={saveReport} disabled={isSaving || isLoading}>
+              <Save className="h-4 w-4 mr-1" /> {isSaving ? "Speichert..." : "Report speichern"}
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -379,6 +433,7 @@ const ConversionOptimizationReport = () => {
                 <TabsTrigger value="funnel">🔄 Funnel</TabsTrigger>
                 <TabsTrigger value="cta-performance">📊 CTA-Performance</TabsTrigger>
                 <TabsTrigger value="trends">📈 Trends</TabsTrigger>
+                <TabsTrigger value="history">📁 Gespeicherte Reports ({savedReports.length})</TabsTrigger>
               </TabsList>
 
               {/* Recommendations Tab */}
@@ -594,6 +649,113 @@ const ConversionOptimizationReport = () => {
                     </ResponsiveContainer>
                   </CardContent>
                 </Card>
+              </TabsContent>
+
+              {/* Save & History Tab */}
+              <TabsContent value="history" className="space-y-4">
+                {/* Save current report */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base flex items-center gap-2"><Save className="h-4 w-4 text-primary" /> Aktuellen Report speichern</CardTitle>
+                    <CardDescription>Speichere einen Snapshot der aktuellen Metriken und Empfehlungen</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex gap-3">
+                      <input
+                        type="text"
+                        placeholder="Optionale Notiz zum Report..."
+                        value={reportNotes}
+                        onChange={e => setReportNotes(e.target.value)}
+                        className="flex-1 px-3 py-2 border rounded-lg text-sm bg-background text-foreground"
+                      />
+                      <Button onClick={saveReport} disabled={isSaving}>
+                        <Save className="h-4 w-4 mr-1" /> {isSaving ? "Speichert..." : "Speichern"}
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Saved reports list */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-base flex items-center gap-2"><History className="h-4 w-4 text-primary" /> Gespeicherte Reports</CardTitle>
+                    <CardDescription>{savedReports.length} Reports gespeichert</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    {savedReports.length === 0 ? (
+                      <p className="text-sm text-muted-foreground text-center py-8">Noch keine Reports gespeichert. Klicke oben auf "Report speichern".</p>
+                    ) : (
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead>Datum</TableHead>
+                            <TableHead>Sessions</TableHead>
+                            <TableHead>Conv. Rate</TableHead>
+                            <TableHead>Lead-Rate</TableHead>
+                            <TableHead>CTA-Klickrate</TableHead>
+                            <TableHead>Leads</TableHead>
+                            <TableHead>Notizen</TableHead>
+                            <TableHead className="text-right">Aktionen</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {savedReports.map(report => (
+                            <TableRow key={report.id}>
+                              <TableCell className="text-sm font-medium">
+                                {new Date(report.created_at).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
+                              </TableCell>
+                              <TableCell>{report.total_sessions?.toLocaleString()}</TableCell>
+                              <TableCell>
+                                <Badge variant="outline">{Number(report.conversion_rate || 0).toFixed(2)}%</Badge>
+                              </TableCell>
+                              <TableCell>
+                                <Badge variant="outline">{Number(report.lead_rate || 0).toFixed(2)}%</Badge>
+                              </TableCell>
+                              <TableCell>
+                                <Badge variant="outline">{Number(report.cta_click_rate || 0).toFixed(1)}%</Badge>
+                              </TableCell>
+                              <TableCell>{report.total_leads}</TableCell>
+                              <TableCell className="max-w-[200px] truncate text-sm text-muted-foreground">
+                                {report.notes || "—"}
+                              </TableCell>
+                              <TableCell className="text-right">
+                                <Button variant="ghost" size="sm" onClick={() => deleteReport(report.id)} className="text-destructive hover:text-destructive">
+                                  <Trash2 className="h-3 w-3" />
+                                </Button>
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    )}
+                  </CardContent>
+                </Card>
+
+                {/* Trend comparison from saved reports */}
+                {savedReports.length >= 2 && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-base">Historischer KPI-Verlauf</CardTitle>
+                      <CardDescription>Conversion Rate & Lead-Rate über gespeicherte Reports</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ResponsiveContainer width="100%" height={250}>
+                        <AreaChart data={[...savedReports].reverse().map(r => ({
+                          date: new Date(r.created_at).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" }),
+                          convRate: Number(r.conversion_rate || 0),
+                          leadRate: Number(r.lead_rate || 0),
+                          ctaRate: Number(r.cta_click_rate || 0),
+                        }))}>
+                          <XAxis dataKey="date" tick={{ fontSize: 10 }} />
+                          <YAxis tick={{ fontSize: 11 }} />
+                          <Tooltip />
+                          <Area type="monotone" dataKey="convRate" stroke="hsl(var(--primary))" fill="hsl(var(--primary))" fillOpacity={0.2} name="Conv. Rate %" />
+                          <Area type="monotone" dataKey="leadRate" stroke="#10b981" fill="#10b981" fillOpacity={0.15} name="Lead-Rate %" />
+                        </AreaChart>
+                      </ResponsiveContainer>
+                    </CardContent>
+                  </Card>
+                )}
               </TabsContent>
             </Tabs>
           </>
