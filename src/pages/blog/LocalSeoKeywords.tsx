@@ -1083,7 +1083,10 @@ const LocalSeoKeywords = () => {
         </p>
       </div>
 
-      <SourcesSection 
+      {/* Keyword Research Framework */}
+      <LocalKeywordFramework />
+
+      <SourcesSection
         sources={[
           { title: "Google Keyword Planner", url: "https://ads.google.com/home/tools/keyword-planner/", type: "tool", description: "Kostenloser Keyword-Recherche-Tool von Google" },
           { title: "MOZ Keyword Research Guide", url: "https://moz.com/beginners-guide-to-seo/keyword-research", type: "article", description: "Umfassender Leitfaden zur Keyword-Recherche" },

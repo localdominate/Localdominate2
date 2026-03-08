@@ -599,6 +599,9 @@ const LocalKeywordResearchTemplate = () => {
         </div>
       </section>
 
+      {/* Keyword Framework */}
+      <LocalKeywordFramework compact />
+
       {/* Related */}
       <Card className="mb-8 bg-muted/30">
         <CardContent className="pt-6">

@@ -279,6 +279,9 @@ const LocalSeoNeugruender = () => {
         </Accordion>
       </section>
 
+      {/* Keyword Framework */}
+      <LocalKeywordFramework compact />
+
       <HelpfulnessWidget articleSlug="lokale-seo-fuer-neugruender" />
 
       <SourcesSection sources={[
