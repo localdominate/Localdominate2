@@ -604,8 +604,8 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Entity SEO: How Search Engines Understand Entities",
-      metaTitle: "Entity SEO Guide | Knowledge Graph & Entity Optimization 2026",
-      metaDescription: "What is Entity SEO? How Google and AI search engines recognize entities. With Knowledge Graph strategies, Schema Markup, sameAs linking and practical checklist.",
+      metaTitle: "Entity SEO Guide | Knowledge Graph Optimization 2026",
+      metaDescription: "What is Entity SEO? How Google and AI search engines recognize entities. Knowledge Graph strategies, Schema Markup & checklist.",
       excerpt: "From keyword SEO to entity SEO: How to establish your business as an entity in the Knowledge Graph and maximize visibility in Google and AI search.",
       category: "AI & Future"
     },
