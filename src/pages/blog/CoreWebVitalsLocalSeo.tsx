@@ -312,7 +312,7 @@ const CoreWebVitalsLocalSeo = () => {
           </CardContent>
         </Card>
 
-        <h3 className="text-xl font-semibold mb-3">Häufige CLS-Ursachen und Lösungen</h3>
+        <h3 className="text-xl font-semibold mb-3">CLS-Ursachen und Lösungen für lokale Websites</h3>
         <div className="overflow-x-auto mb-6">
           <table className="w-full border-collapse">
             <thead>
