@@ -1866,6 +1866,29 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
   {
+    slug: "google-maps-seo-vs-organic-seo",
+    de: {
+      title: "Google Maps SEO vs. Organic SEO: Ranking-Faktoren, Strategien & ROI im Vergleich",
+      metaTitle: "Google Maps SEO vs Organic SEO | Vergleich 2026",
+      metaDescription: "Google Maps SEO vs. Organic SEO: Ranking-Faktoren, Kosten, ROI und die optimale Kombination für lokale Unternehmen. Mit Vergleichstabelle.",
+      excerpt: "Maps oder organische Suche? Ranking-Faktoren, Kosten und ROI im direkten Vergleich.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Google Maps SEO vs. Organic SEO: Ranking Factors, Strategies & ROI Compared",
+      metaTitle: "Google Maps SEO vs Organic SEO | Comparison 2026",
+      metaDescription: "Google Maps SEO vs. Organic SEO: ranking factors, costs, ROI and the optimal combination for local businesses. With comparison table.",
+      excerpt: "Maps or organic search? Ranking factors, costs and ROI in direct comparison.",
+      category: "Strategy"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🗺️",
+    keywords: ["google maps seo vs organic seo", "maps ranking faktoren", "organic seo vergleich", "local pack vs organic", "maps seo strategie", "seo vergleich"],
+    featured: false
+  },
+  {
     slug: "saisonales-local-seo",
     de: {
       title: "Saisonales Local SEO: Weihnachten, Sommer & Co.",
