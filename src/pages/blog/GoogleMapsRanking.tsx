@@ -150,7 +150,7 @@ const GoogleMapsRanking = () => {
         ]
       },
       section3: {
-        title: "Step-by-Step Optimization",
+        title: "How Do You Optimize Your Google Maps Ranking Step by Step?",
         step1: {
           title: "1. Complete Your Profile Fully",
           intro: "Go through every section of your Google Business Profile and fill out all fields. Especially important:",
