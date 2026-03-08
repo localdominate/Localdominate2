@@ -1,4 +1,4 @@
-import TopicHubLayout, { HubArticleGroup } from "@/components/blog/TopicHubLayout";
+import TopicHubLayout, { HubArticleGroup, HubSummary, HubComparisonTable, HubResource } from "@/components/blog/TopicHubLayout";
 import { Sparkles } from "lucide-react";
 
 const groups: HubArticleGroup[] = [
@@ -18,19 +18,46 @@ const groups: HubArticleGroup[] = [
     title: "KI-Tools für SEO",
     description: "AI-gestützte Tools und Workflows für lokales SEO",
     icon: "🛠️",
-    slugs: [
-      "ki-tools-local-seo",
-    ],
+    slugs: ["ki-tools-local-seo"],
   },
   {
     title: "Voice Search & neue Kanäle",
     description: "Sprachsuche, E-E-A-T und zukunftssichere SEO-Strategien",
     icon: "🎙️",
-    slugs: [
-      "local-seo-voice-search",
-      "e-e-a-t-lokale-unternehmen",
-    ],
+    slugs: ["local-seo-voice-search", "e-e-a-t-lokale-unternehmen"],
   },
+];
+
+const summary: HubSummary = {
+  text: "Die Suchlandschaft verändert sich rasant: Google AI Overviews erscheinen bereits bei 30 % der lokalen Suchanfragen, ChatGPT und Perplexity gewinnen Marktanteile, und Voice Search wächst bei mobilen lokalen Suchen um 25 % jährlich. Dieser Hub zeigt, wie du dein Local SEO für die KI-Zukunft aufstellst — ohne die bewährten Grundlagen zu vernachlässigen.",
+  stats: [
+    { label: "AI-Plattformen abgedeckt", value: "4+" },
+    { label: "AI Overview bei lokaler Suche", value: "30 %" },
+    { label: "Voice Search Wachstum/Jahr", value: "25 %" },
+    { label: "Zukunfts-Strategien", value: "8" },
+  ],
+};
+
+const comparisonTable: HubComparisonTable = {
+  title: "AI-Suchplattformen im Vergleich für lokale Unternehmen",
+  headers: ["Plattform", "Marktanteil", "Lokaler Fokus", "Optimierungs-Strategie", "Dringlichkeit"],
+  rows: [
+    { label: "Google AI Overviews", cells: ["~90 %", "Stark", "Schema, E-E-A-T, Fact-first", "🔴 Sofort"] },
+    { label: "ChatGPT Search", cells: ["~5 %", "Mittel", "Strukturierte Daten, llms.txt", "🟡 2026"] },
+    { label: "Apple Intelligence", cells: ["iOS-Nutzer", "Stark (Maps)", "Apple Business Connect", "🟡 2026"] },
+    { label: "Perplexity", cells: ["~2 %", "Gering", "Zitierbare Fakten, Quellen", "🟢 Beobachten"] },
+    { label: "Voice Assistants", cells: ["Wachsend", "Sehr stark", "Speakable Schema, FAQ", "🟡 2026"] },
+  ],
+  footnote: "Marktanteile basieren auf Schätzungen für den DACH-Raum, Stand Anfang 2026.",
+};
+
+const resources: HubResource[] = [
+  { label: "AI Search Optimization: Kompletter Guide", href: "/blog/ai-suche-lokale-unternehmen", type: "pillar" },
+  { label: "Ultimate Guide Local SEO", href: "/blog/ultimate-guide-local-seo", type: "pillar" },
+  { label: "Schema-Strategie-Dokument", href: "/blog/schema-strategie-dokument", type: "guide" },
+  { label: "LocalBusiness Schema implementieren", href: "/blog/localbusiness-schema-implementierung", type: "guide" },
+  { label: "E-E-A-T für lokale Unternehmen", href: "/blog/e-e-a-t-lokale-unternehmen", type: "guide" },
+  { label: "KI-Tools für Local SEO", href: "/blog/ki-tools-local-seo", type: "tool" },
 ];
 
 const HubAiZukunft = () => {
@@ -54,6 +81,9 @@ const HubAiZukunft = () => {
       heroDescription="Die Suchlandschaft verändert sich rasant. AI Overviews, ChatGPT und Voice Search stellen lokales SEO vor neue Herausforderungen. Hier findest du alle Strategien für die Zukunft."
       heroIcon={<Sparkles className="w-7 h-7 text-primary" />}
       groups={groups}
+      summary={summary}
+      comparisonTable={comparisonTable}
+      resources={resources}
       pillarLink={{ label: "Lokale SEO 2026", href: "/blog/lokale-suchmaschinenoptimierung-2026" }}
       relatedHubs={[
         { label: "⚙️ Technisches SEO", href: "/blog/technisches-seo-hub" },
