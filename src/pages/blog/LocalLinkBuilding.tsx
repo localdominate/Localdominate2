@@ -8,6 +8,7 @@ import LinkBuildingIdeaGenerator from "@/components/blog/LinkBuildingIdeaGenerat
 import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
 import GuestPostOutlines from "@/components/blog/GuestPostOutlines";
 import LinkBuildingOutreachTemplates from "@/components/blog/LinkBuildingOutreachTemplates";
+import EventSponsorshipStrategy from "@/components/blog/EventSponsorshipStrategy";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Link, Building2, Newspaper, Users, Search, Trophy, AlertTriangle, Lightbulb } from "lucide-react";
 
@@ -285,6 +286,8 @@ const LocalLinkBuilding = () => {
           </table>
         </div>
       </section>
+
+      <EventSponsorshipStrategy />
 
       <BlogCTAABTest articleSlug="local-link-building" position="middle" />
 

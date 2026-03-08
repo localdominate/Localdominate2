@@ -9,6 +9,7 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
 import GuestPostOutlines from "@/components/blog/GuestPostOutlines";
+import EventSponsorshipStrategy from "@/components/blog/EventSponsorshipStrategy";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -549,6 +550,8 @@ const LocalLinkBuildingBlueprint = () => {
           Alle Verzeichnisse im Detail: <Link to="/citation-verzeichnisse" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Citation-Verzeichnisse DACH</Link> | <Link to="/blog/nap-konsistenz-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">NAP-Konsistenz Guide</Link>.
         </p>
       </section>
+
+      <EventSponsorshipStrategy compact />
 
       {/* 90-Tage-Plan */}
       <section id="linkbuilding-plan">
