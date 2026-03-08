@@ -11,6 +11,8 @@ import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
 import { industryComparisonData } from "@/data/industryComparisonData";
+import IndustryBenchmarkTable from "@/components/blog/IndustryBenchmarkTable";
+import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -183,6 +185,8 @@ const LocalSeoTattoo = () => {
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
 
       <ImplementationRoadmap data={industryImplementationData.tattoo} />
+
+      <IndustryBenchmarkTable data={industryBenchmarkData.tattoo} />
 
       <IndustryComparisonTable data={industryComparisonData.tattoo} />
 

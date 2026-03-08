@@ -10,6 +10,8 @@ import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
 import { industryComparisonData } from "@/data/industryComparisonData";
+import IndustryBenchmarkTable from "@/components/blog/IndustryBenchmarkTable";
+import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -301,6 +303,8 @@ const SeoFerienwohnungen = () => {
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
 
       <ImplementationRoadmap data={industryImplementationData.ferienwohnungen} />
+
+      <IndustryBenchmarkTable data={industryBenchmarkData.ferienwohnungen} />
 
       <IndustryComparisonTable data={industryComparisonData.ferienwohnungen} />
 

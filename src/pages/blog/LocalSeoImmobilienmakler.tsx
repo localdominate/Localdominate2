@@ -12,6 +12,8 @@ import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
 import { industryComparisonData } from "@/data/industryComparisonData";
+import IndustryBenchmarkTable from "@/components/blog/IndustryBenchmarkTable";
+import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -722,6 +724,8 @@ Herzliche Grüße,
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
 
       <ImplementationRoadmap data={industryImplementationData.immobilienmakler} />
+
+      <IndustryBenchmarkTable data={industryBenchmarkData.immobilienmakler} />
 
       <IndustryComparisonTable data={industryComparisonData.immobilienmakler} />
 

@@ -16,6 +16,8 @@ import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
 import { industryComparisonData } from "@/data/industryComparisonData";
+import IndustryBenchmarkTable from "@/components/blog/IndustryBenchmarkTable";
+import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
@@ -583,6 +585,8 @@ const LocalSeoHandwerker = () => {
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
 
       <ImplementationRoadmap data={industryImplementationData.handwerker} />
+
+      <IndustryBenchmarkTable data={industryBenchmarkData.handwerker} />
 
       <IndustryComparisonTable data={industryComparisonData.handwerker} />
 

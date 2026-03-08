@@ -15,6 +15,8 @@ import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
 import { industryComparisonData } from "@/data/industryComparisonData";
+import IndustryBenchmarkTable from "@/components/blog/IndustryBenchmarkTable";
+import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
@@ -227,6 +229,8 @@ const LocalSeoZahnarzt = () => {
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
 
       <ImplementationRoadmap data={industryImplementationData.zahnarzt} />
+
+      <IndustryBenchmarkTable data={industryBenchmarkData.zahnarzt} />
 
       <IndustryComparisonTable data={industryComparisonData.zahnarzt} />
 

@@ -13,6 +13,8 @@ import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
 import { industryComparisonData } from "@/data/industryComparisonData";
+import IndustryBenchmarkTable from "@/components/blog/IndustryBenchmarkTable";
+import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import LastReviewedBadge from "@/components/blog/LastReviewedBadge";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -729,6 +731,8 @@ Herzliche Grüße,
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
 
       <ImplementationRoadmap data={industryImplementationData.steuerberater} />
+
+      <IndustryBenchmarkTable data={industryBenchmarkData.steuerberater} />
 
       <IndustryComparisonTable data={industryComparisonData.steuerberater} />
 
