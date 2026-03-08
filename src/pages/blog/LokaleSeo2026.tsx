@@ -180,6 +180,10 @@ const LokaleSeo2026 = () => {
           { q: "How do I prepare for AI search?", a: "Structure your content clearly, use Schema.org markup, and answer common questions directly on your website and in your Google profile." },
           { q: "Is Voice Search really that important?", a: "For local searches, yes. \"Near me\" and \"open now\" queries are often voice-based, especially on the go." },
           { q: "What is the most important SEO trend for 2026?", a: "User experience. Google measures more precisely whether customers find what they're looking for with you. Satisfied customers = better ranking." },
+          { q: "How do Google AI Overviews affect local businesses?", a: "AI Overviews display summaries above local search results. For transactional queries ('hairdresser near me'), the impact is minimal. For informational queries, click-through drops by up to 40%. Optimize with structured data and fact-first content to be cited as an AI source." },
+          { q: "Does my local business need an llms.txt file?", a: "Yes, llms.txt helps AI crawlers capture your business data in a structured way. Include your name, address, services, opening hours, and FAQs. The effort is minimal (30 minutes), but the potential benefit for AI visibility is significant." },
+          { q: "How do I prepare my website for Zero-Click Searches?", a: "Fully optimize your Google Business Profile, use FAQ schema for common questions, and ensure Google can display all relevant information (prices, hours, services) directly in SERPs. Goal: Be visible as an expert even without a click." },
+          { q: "Which tools help with local SEO optimization in 2026?", a: "Free: Google Business Profile, Google Search Console, PageSpeed Insights. Paid: BrightLocal (rankings & citations), Semrush (keyword research), Whitespark (citation audit). For AI monitoring: Google Search Console AI reports and referrer tracking for chatgpt.com and perplexity.ai." },
         ]
       }
     }

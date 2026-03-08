@@ -70,6 +70,14 @@ const LocalSeoRankingFaktorenErklaert = () => {
       question: "Spielen Social-Media-Signale eine Rolle für lokale Rankings?",
       answer: "Direkte Social-Media-Signale (Likes, Shares) sind kein bestätigter Google-Ranking-Faktor. Indirekt helfen sie jedoch durch: erhöhte Markenbekanntheit (mehr Branded Searches), Traffic-Signale und potenzielle Backlink-Generierung. Für Local SEO ist die Zeit besser in GBP-Posts und Bewertungen investiert."
     },
+    {
+      question: "Wie beeinflusst die Klickrate (CTR) mein lokales Ranking?",
+      answer: "Die Klickrate ist ein indirekter Ranking-Faktor. Einträge mit ansprechenden Fotos, vollständigen Informationen und guten Bewertungen erhalten mehr Klicks — was Google als Relevanzsignal wertet. Optimiere Titel, Kategorie und Beschreibung deines GBP für maximale CTR."
+    },
+    {
+      question: "Welche Ranking-Faktoren sind für das Local Pack vs. lokale organische Ergebnisse unterschiedlich?",
+      answer: "Im Local Pack zählen GBP-Signale (36 %), Bewertungen (17 %) und Proximity (14 %) am stärksten. In den organischen Ergebnissen dominieren On-Page-Faktoren (34 %) und Backlinks (31 %). Eine vollständige Local-SEO-Strategie muss beide Bereiche mit unterschiedlichen Schwerpunkten abdecken."
+    },
   ];
 
   const sources = [

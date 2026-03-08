@@ -77,6 +77,10 @@ const AiSucheLokaleUnternehmen = () => {
       question: "Reicht gutes SEO nicht aus, um in AI-Antworten zu erscheinen?",
       answer: "Gutes SEO ist die Basis, aber nicht ausreichend. AI-Systeme priorisieren zusätzlich: strukturierte Daten (Schema Markup), faktische Klarheit (Definitionen, Zahlen), Autorenschaftsnachweise (E-E-A-T) und maschinenlesbare Formate (llms.txt, speakable). SEO + GEO zusammen ergeben die optimale Strategie."
     },
+    {
+      question: "Wie optimiere ich für Google AI Overviews als lokales Unternehmen?",
+      answer: "Fokussiere auf klare Definitionen, Fakt-zuerst-Schreibstil, strukturierte Daten (LocalBusiness, FAQPage) und E-E-A-T-Signale. Beantworte häufige Fragen direkt im ersten Absatz. Seiten mit Schema Markup werden 40 % häufiger als AI-Quelle zitiert als Seiten ohne."
+    },
   ];
 
   const sources = [

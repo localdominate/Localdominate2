@@ -75,6 +75,14 @@ const UltimateGuideLocalSeo = () => {
       question: "Welche Rolle spielt KI im Local SEO 2026?",
       answer: "KI verändert Local SEO auf mehreren Ebenen: Google AI Overviews generieren Zusammenfassungen lokaler Suchergebnisse, Voice Search nutzt KI für natürliche Sprachverarbeitung, und KI-gestützte Tools automatisieren Keyword-Recherche und Content-Erstellung. Wer Local SEO 2026 betreibt, muss auch für KI-Systeme optimieren."
     },
+    {
+      question: "Kann ich Local SEO ohne Website machen?",
+      answer: "Ein Google Business Profil funktioniert auch ohne eigene Website und bringt dich ins Local Pack. Für nachhaltige Rankings empfehlen wir aber eine optimierte Website mit Standortseiten, da On-Page-Signale 34 % der organischen lokalen Ranking-Faktoren ausmachen."
+    },
+    {
+      question: "Welche lokalen Verzeichnisse sind 2026 noch relevant?",
+      answer: "Die wichtigsten sind Google Business Profil, Apple Business Connect, Bing Places, Yelp und branchenspezifische Portale (z. B. Jameda, TripAdvisor). Im DACH-Raum zusätzlich: Gelbe Seiten, Das Örtliche, local.ch (Schweiz) und Herold.at (Österreich). Qualität und NAP-Konsistenz schlagen Quantität."
+    },
   ];
 
   const sources = [
