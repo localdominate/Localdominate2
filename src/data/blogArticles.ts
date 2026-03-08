@@ -3843,6 +3843,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-spam-erkennen",
   "google-maps-konkurrenzanalyse",
   "google-maps-ranking-case-studies",
+  "google-maps-audit-template",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
