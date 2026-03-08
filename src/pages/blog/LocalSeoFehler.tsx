@@ -22,13 +22,13 @@ const LocalSeoFehler = () => {
 
   const tocItems = [
     { id: "intro", title: "Einführung" },
-    { id: "technische-fehler", title: "Technische Fehler (1-5)" },
-    { id: "google-business", title: "Google Business Fehler (6-10)" },
-    { id: "content-fehler", title: "Content-Fehler (11-13)" },
-    { id: "bewertungs-fehler", title: "Bewertungs-Fehler (14-15)" },
+    { id: "technische-fehler", title: "Welche technischen SEO-Fehler kosten dich Rankings?" },
+    { id: "google-business", title: "Welche Google Business Fehler schaden deiner Sichtbarkeit?" },
+    { id: "content-fehler", title: "Welche Content-Fehler schwächen dein Local SEO?" },
+    { id: "bewertungs-fehler", title: "Wie vermeidest du kritische Bewertungs-Fehler?" },
     { id: "quiz", title: "Fehler-Diagnose Quiz" },
-    { id: "checkliste", title: "Schnell-Checkliste" },
-    { id: "faq", title: "FAQ" }
+    { id: "checkliste", title: "Ist dein Local SEO fehlerfrei?" },
+    { id: "faq", title: "Häufig gestellte Fragen" }
   ];
 
   const faqItems = [
