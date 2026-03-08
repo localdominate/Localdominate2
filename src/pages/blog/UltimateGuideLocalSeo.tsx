@@ -585,7 +585,7 @@ const UltimateGuideLocalSeo = () => {
             <TableRow>
               <TableCell>GBP-Management</TableCell>
               <TableCell>Google Business Manager</TableCell>
-              <TableCell className="text-green-600">Kostenlos</TableCell>
+              <TableCell className="text-primary font-medium">Kostenlos</TableCell>
               <TableCell>Offizielles Tool, Multi-Standort-Verwaltung</TableCell>
             </TableRow>
             <TableRow>
@@ -603,7 +603,7 @@ const UltimateGuideLocalSeo = () => {
             <TableRow>
               <TableCell>Keyword-Recherche</TableCell>
               <TableCell>Google Keyword Planner / Ubersuggest</TableCell>
-              <TableCell className="text-green-600">Kostenlos/Freemium</TableCell>
+              <TableCell className="text-primary font-medium">Kostenlos/Freemium</TableCell>
               <TableCell>Lokale Suchvolumen, Wettbewerbsdaten</TableCell>
             </TableRow>
             <TableRow>
@@ -615,13 +615,13 @@ const UltimateGuideLocalSeo = () => {
             <TableRow>
               <TableCell>Technisches SEO</TableCell>
               <TableCell>Google Search Console / PageSpeed Insights</TableCell>
-              <TableCell className="text-green-600">Kostenlos</TableCell>
+              <TableCell className="text-primary font-medium">Kostenlos</TableCell>
               <TableCell>Core Web Vitals, Indexierung, Fehleranalyse</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Schema-Validierung</TableCell>
               <TableCell>Google Rich Results Test / Schema.org Validator</TableCell>
-              <TableCell className="text-green-600">Kostenlos</TableCell>
+              <TableCell className="text-primary font-medium">Kostenlos</TableCell>
               <TableCell>Strukturierte Daten prüfen und debuggen</TableCell>
             </TableRow>
           </TableBody>
