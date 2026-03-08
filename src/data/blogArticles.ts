@@ -37,6 +37,30 @@ export interface ResolvedBlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  // === PILLAR PAGE: ULTIMATE GUIDE LOCAL SEO ===
+  {
+    slug: "ultimate-guide-local-seo",
+    de: {
+      title: "Local SEO: Der ultimative Leitfaden für lokale Unternehmen 2026",
+      metaTitle: "Local SEO Guide 2026: Komplett-Anleitung für Top-Rankings",
+      metaDescription: "Der umfassendste Local-SEO-Guide im DACH-Raum: Ranking-Faktoren, Google Business Profil, Bewertungen, NAP, Schema Markup & 10-Schritte-Strategie. Mit Beispielen aus DE, AT & CH.",
+      excerpt: "Alles über Local SEO in einem Guide: Von Google Business über Ranking-Faktoren bis zur 10-Schritte-Strategie — mit Praxisbeispielen aus Deutschland, Österreich und der Schweiz.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO: The Ultimate Guide for Local Businesses 2026",
+      metaTitle: "Local SEO Guide 2026: Complete Guide for Top Rankings",
+      metaDescription: "The most comprehensive Local SEO guide for the DACH region: ranking factors, Google Business Profile, reviews, NAP, Schema Markup & 10-step strategy.",
+      excerpt: "Everything about Local SEO in one guide: From Google Business to ranking factors and a 10-step strategy — with examples from Germany, Austria and Switzerland.",
+      category: "Strategy"
+    },
+    readingTime: 25,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🏆",
+    keywords: ["local seo", "local seo guide", "lokale suchmaschinenoptimierung", "local seo strategie", "google business profil", "local seo ranking faktoren", "local seo dach"],
+    featured: true
+  },
   // === FEATURED: KOSTENLOSES SEO GUIDE ===
   {
     slug: "kostenloses-seo-guide",
