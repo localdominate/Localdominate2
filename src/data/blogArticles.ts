@@ -3299,7 +3299,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-citations-2025",
     de: {
       title: "Local Citations 2026: Die wichtigsten Branchenbücher & Verzeichnisse",
-      metaTitle: "Local Citations 2026: Top Branchenbücher & Verzeichnisse | Guide",
+      metaTitle: "Local Citations 2026 | Top Verzeichnisse DACH",
       metaDescription: "Welche Branchenbücher und Verzeichnisse sind 2026 noch relevant? Der komplette Guide zu Citations mit Priorisierung nach Branche.",
       excerpt: "Die wichtigsten Local Citations für 2026 mit branchenspezifischen Empfehlungen und Priorisierung.",
       category: "Local SEO"
