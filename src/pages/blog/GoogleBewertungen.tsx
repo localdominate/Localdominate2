@@ -106,7 +106,7 @@ const GoogleBewertungen = () => {
         text: "read online reviews before visiting a local business. Google reviews are the most important trust factor for potential customers. Here you'll learn how to get more authentic reviews – without violating Google's guidelines."
       },
       section1: {
-        title: "Why Reviews Are Customer Magnets",
+        title: "Why Are Google Reviews So Important?",
         text1: "Google reviews not only influence the trust of potential customers but also your ranking in local search results.",
         stats: [
           { stat: "88%", desc: "trust online reviews as much as personal recommendations" },
