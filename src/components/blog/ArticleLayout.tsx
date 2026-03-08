@@ -538,6 +538,7 @@ const ArticleLayout = ({
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
+          <PillarChecklistLinks articleSlug={article.slug} />
           <LocalSEOAuditCTA variant="standard" articleSlug={article.slug} />
           <ArticleConclusion slug={article.slug} />
         </article>
