@@ -468,7 +468,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Mobile Performance */}
       <section id="mobile">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Mobile Performance für lokale SEO optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Wie optimierst du die mobile Performance für lokale SEO?</h2>
         
         <p className="mb-4">
           Google verwendet <strong>Mobile-First-Indexing</strong>. Ihre mobilen Core Web Vitals sind entscheidend:
