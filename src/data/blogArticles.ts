@@ -547,6 +547,29 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["google maps spam", "spam melden", "fake bewertungen", "keyword stuffing", "google business spam", "spam erkennen"],
     featured: false
   },
+  {
+    slug: "google-maps-konkurrenzanalyse",
+    de: {
+      title: "Google Maps Konkurrenzanalyse: So analysierst du Top-Rankings",
+      metaTitle: "Google Maps Konkurrenzanalyse | Framework & Tools 2026",
+      metaDescription: "Systematische Google Maps Konkurrenzanalyse in 5 Schritten. Mit gewichtetem Vergleichs-Template, kostenlosen Tools und konkretem Aktionsplan.",
+      excerpt: "Lerne, wie du die Google Maps Rankings deiner Konkurrenten systematisch analysierst und gezielte Maßnahmen ableitest, um sie zu überholen.",
+      category: "Google Maps"
+    },
+    en: {
+      title: "Google Maps Competitor Analysis: How to Analyze Top Rankings",
+      metaTitle: "Google Maps Competitor Analysis | Framework & Tools 2026",
+      metaDescription: "Systematic Google Maps competitor analysis in 5 steps. With weighted comparison template, free tools, and concrete action plan.",
+      excerpt: "Learn how to systematically analyze your competitors' Google Maps rankings and derive targeted actions to outrank them.",
+      category: "Google Maps"
+    },
+    readingTime: 16,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🔍",
+    keywords: ["konkurrenzanalyse", "competitor analysis", "google maps", "local pack", "ranking analyse", "wettbewerber"],
+    featured: false
+  },
 
   // === NEUE ARTIKEL: STRATEGIE ===
   {
@@ -3725,6 +3748,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-seo-hub",
   "wie-google-maps-ranking-funktioniert",
   "google-maps-spam-erkennen",
+  "google-maps-konkurrenzanalyse",
 ]);
 
 // Get only published articles (with pages), deduplicated
