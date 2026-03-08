@@ -551,7 +551,7 @@ const LocalSeoFehler = () => {
       <section id="content-fehler" className="mb-12">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <FileText className="h-8 w-8 text-primary" />
-          Content-Fehler (11-13)
+          Welche Content-Fehler schwächen dein Local SEO?
         </h2>
 
         {/* Fehler 11 */}
