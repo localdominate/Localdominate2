@@ -232,7 +232,7 @@ const CoreWebVitalsLocalSeo = () => {
           <CardContent className="p-4">
             <h4 className="font-semibold mb-2 flex items-center gap-2">
               <CheckCircle2 className="h-5 w-5 text-primary" />
-              Praxis-Tipp: Hero-Bild preloaden
+              Praxis-Tipp: Hero-Bild für LCP preloaden
             </h4>
             <div className="bg-muted rounded p-3 text-sm font-mono">
               &lt;link rel="preload" as="image" href="/hero.webp" /&gt;
