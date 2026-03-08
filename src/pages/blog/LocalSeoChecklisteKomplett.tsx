@@ -441,6 +441,9 @@ const LocalSeoChecklisteKomplett = () => {
 
       <ArticleCTA variant="box" />
 
+      {/* Interaktiver Onboarding-Guide */}
+      <LocalSEOOnboardingGuide compact />
+
       {/* 90-Tage-Plan */}
       <section id="zeitplan" data-ai-summary="true">
         <h2>Der 90-Tage-Implementierungsplan</h2>

@@ -244,6 +244,9 @@ const LocalSeoNeugruender = () => {
         </ol>
       </section>
 
+      {/* Interaktiver Onboarding-Guide */}
+      <LocalSEOOnboardingGuide />
+
       {/* 90-Tage-Zeitplan */}
       <section id="zeitplan" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">

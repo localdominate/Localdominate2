@@ -619,6 +619,9 @@ const LocalSeoStrategieKleineUnternehmen = () => {
         </p>
       </section>
 
+      {/* Interaktiver Onboarding-Guide */}
+      <LocalSEOOnboardingGuide compact />
+
       {/* 90-Tage-Plan */}
       <section id="90-tage-plan">
         <h2>Der 90-Tage-Aktionsplan</h2>
