@@ -3866,8 +3866,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "wie-google-maps-ranking-funktioniert",
     de: {
       title: "Wie Google Maps Ranking funktioniert: Nähe, Relevanz & Bekanntheit erklärt",
-      metaTitle: "Wie Google Maps Ranking funktioniert | Proximity, Relevanz, Prominence 2026",
-      metaDescription: "So bestimmt Google dein Maps-Ranking: Die 3 Hauptfaktoren Nähe, Relevanz und Bekanntheit erklärt mit Praxis-Beispielen, Ranking-Signalen und Optimierungstipps.",
+      metaTitle: "Wie Google Maps Ranking funktioniert | 2026 Guide",
+      metaDescription: "So bestimmt Google dein Maps-Ranking: Nähe, Relevanz und Bekanntheit erklärt mit Praxis-Beispielen und Optimierungstipps.",
       excerpt: "Google Maps Rankings basieren auf 3 Faktoren: Nähe, Relevanz und Bekanntheit. Erfahre wie sie zusammenspielen — mit Praxis-Beispielen, Signaltabellen und konkretem Aktionsplan.",
       category: "Google Maps"
     },
