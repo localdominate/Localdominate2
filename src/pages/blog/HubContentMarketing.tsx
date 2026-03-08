@@ -9,6 +9,7 @@ const groups: HubArticleGroup[] = [
     slugs: [
       "local-content-marketing",
       "lokale-events-marketing",
+      "lokale-influencer-kooperationen",
       "e-e-a-t-lokale-unternehmen",
     ],
   },
