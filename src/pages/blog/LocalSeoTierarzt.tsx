@@ -9,6 +9,8 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import StatisticBox from "@/components/blog/StatisticBox";
+import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";

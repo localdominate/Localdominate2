@@ -42,6 +42,8 @@ import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer
 import ArticleCTA from '@/components/blog/ArticleCTA';
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import StatisticBox from "@/components/blog/StatisticBox";
+import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
