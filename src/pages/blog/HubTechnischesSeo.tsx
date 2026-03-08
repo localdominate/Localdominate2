@@ -1,5 +1,6 @@
 import TopicHubLayout, { HubArticleGroup, HubSummary, HubComparisonTable, HubResource } from "@/components/blog/TopicHubLayout";
 import { Settings } from "lucide-react";
+import TechnicalSeoAuditFramework, { technicalFoundationAudit, localSignalsAudit, reviewReputationAudit } from "@/components/blog/TechnicalSeoAuditFramework";
 
 const groups: HubArticleGroup[] = [
   {
@@ -78,24 +79,42 @@ const HubTechnischesSeo = () => {
   };
 
   return (
-    <TopicHubLayout
-      title="Technisches Local SEO Hub"
-      metaTitle="Technisches Local SEO Hub – Schema, Performance & mehr 2026"
-      metaDescription="Alle technischen SEO-Guides: Schema Markup, Core Web Vitals, NAP-Konsistenz, Citations und Ranking-Faktoren. 12+ Artikel."
-      heroDescription="Die technische Grundlage deiner lokalen Sichtbarkeit. Von strukturierten Daten über Ladezeiten bis hin zu NAP-Konsistenz – hier findest du alle technischen Guides."
-      heroIcon={<Settings className="w-7 h-7 text-primary" />}
-      groups={groups}
-      summary={summary}
-      comparisonTable={comparisonTable}
-      resources={resources}
-      pillarLink={{ label: "Technisches Local SEO Guide", href: "/blog/technisches-local-seo-guide" }}
-      relatedHubs={[
-        { label: "🏢 Google Business Profil", href: "/blog/google-business-profil-hub" },
-        { label: "⭐ Bewertungen & Reputation", href: "/blog/bewertungen-reputation-hub" },
-        { label: "🤖 AI & Zukunft", href: "/blog/ai-zukunft-hub" },
-      ]}
-      jsonLd={jsonLd}
-    />
+    <>
+      <TopicHubLayout
+        title="Technisches Local SEO Hub"
+        metaTitle="Technisches Local SEO Hub – Schema, Performance & mehr 2026"
+        metaDescription="Alle technischen SEO-Guides: Schema Markup, Core Web Vitals, NAP-Konsistenz, Citations und Ranking-Faktoren. 12+ Artikel."
+        heroDescription="Die technische Grundlage deiner lokalen Sichtbarkeit. Von strukturierten Daten über Ladezeiten bis hin zu NAP-Konsistenz – hier findest du alle technischen Guides."
+        heroIcon={<Settings className="w-7 h-7 text-primary" />}
+        groups={groups}
+        summary={summary}
+        comparisonTable={comparisonTable}
+        resources={resources}
+        pillarLink={{ label: "Technisches Local SEO Guide", href: "/blog/technisches-local-seo-guide" }}
+        relatedHubs={[
+          { label: "🏢 Google Business Profil", href: "/blog/google-business-profil-hub" },
+          { label: "⭐ Bewertungen & Reputation", href: "/blog/bewertungen-reputation-hub" },
+          { label: "🤖 AI & Zukunft", href: "/blog/ai-zukunft-hub" },
+        ]}
+        jsonLd={jsonLd}
+      />
+
+      {/* Audit Frameworks Section */}
+      <section className="max-w-4xl mx-auto px-4 pb-16">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+            Interaktive Audit Frameworks
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Nutze diese drei Audit-Frameworks, um dein technisches Local SEO systematisch zu bewerten. Hake Punkte ab und verfolge deinen Fortschritt.
+          </p>
+        </div>
+
+        <TechnicalSeoAuditFramework {...technicalFoundationAudit} />
+        <TechnicalSeoAuditFramework {...localSignalsAudit} />
+        <TechnicalSeoAuditFramework {...reviewReputationAudit} />
+      </section>
+    </>
   );
 };
 
