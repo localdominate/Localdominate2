@@ -284,9 +284,28 @@ const ArticleLayout = ({
     }))
   } : null;
 
+  // LocalBusiness reference schema - auto-generated for all articles
+  // Connects articles to the local business context they discuss
+  const localBusinessReferenceSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://localdominate.org/#localbusiness",
+    "name": "Local Dominator",
+    "description": "Local SEO Experten für lokale Unternehmen im DACH-Raum",
+    "url": "https://localdominate.org",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://twitter.com/localdominator",
+      "https://linkedin.com/company/localdominator"
+    ]
+  };
+
   // Combine all schemas, flatten arrays from additionalSchema
   const buildCombinedSchema = () => {
-    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema];
+    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema];
     
     if (faqSchema) baseSchemas.push(faqSchema);
     
