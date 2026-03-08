@@ -150,7 +150,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="post-typen">
-        <h2>Die 5 Post-Typen im Detail</h2>
+        <h2>Welche 5 Google Post-Typen gibt es?</h2>
         <AutoLexikonText>
           <p>
             Google bietet verschiedene Post-Formate für unterschiedliche Zwecke:
