@@ -3,6 +3,8 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import StatisticBox from "@/components/blog/StatisticBox";
+import RankingFactorChart from "@/components/blog/RankingFactorChart";
+import SeoFlowDiagram from "@/components/blog/SeoFlowDiagram";
 import {
   generalLocalSeoStats,
   googleBusinessStats,
@@ -257,6 +259,18 @@ const LocalSeoStatistiken = () => {
           zeigt diese Aufstellung die relative Gewichtung der wichtigsten Ranking-Faktoren für das Local Pack.
         </p>
 
+        {/* Visual bar chart */}
+        <RankingFactorChart
+          title="Ranking-Faktoren Gewichtung – Local Pack 2026"
+          factors={rankingFactors.map(rf => ({
+            label: rf.factor,
+            weight: parseInt(rf.weight),
+            trend: rf.trend === "steigend" ? "up" as const : rf.trend === "fallend" ? "down" as const : "stable" as const,
+          }))}
+          caption="Relative Gewichtung der Local-Pack-Ranking-Signale (Whitespark/Moz, eigene Analyse 2025/2026)"
+        />
+
+        {/* Detailed table */}
         <div className="not-prose my-6">
           <Card className="border-border/60 overflow-hidden">
             <div className="overflow-x-auto">
@@ -298,6 +312,37 @@ const LocalSeoStatistiken = () => {
             </div>
           </Card>
         </div>
+
+        {/* SEO Optimization Workflow */}
+        <h3>Local SEO Optimierungs-Workflow</h3>
+        <p>
+          Dieser Workflow zeigt den empfohlenen Ablauf einer vollständigen Local SEO Optimierung — 
+          von der Analyse über die Implementierung bis zum laufenden Monitoring.
+        </p>
+        <SeoFlowDiagram
+          title="Local SEO Implementierungs-Workflow"
+          steps={[
+            { label: "Audit & Analyse", icon: "🔍", description: "IST-Stand, Wettbewerber, Keywords" },
+            { label: "GBP-Optimierung", icon: "📍", description: "Profil, Fotos, Kategorien, Posts", highlight: true },
+            { label: "On-Page SEO", icon: "🌐", description: "NAP, Schema, lokale Seiten" },
+            { label: "Bewertungen", icon: "⭐", description: "Strategie, Antworten, Monitoring", highlight: true },
+            { label: "Monitoring", icon: "📊", description: "Rankings, Traffic, Conversions" },
+          ]}
+          caption="Empfohlener Workflow für die Local SEO Optimierung lokaler Unternehmen"
+        />
+
+        {/* Conversion Funnel */}
+        <SeoFlowDiagram
+          title="Lokaler Such-Conversion-Funnel"
+          steps={[
+            { label: "Google-Suche", icon: "🔎", description: "46% aller Suchen lokal" },
+            { label: "Local Pack / Maps", icon: "🗺️", description: "Top 3 erhalten 75% Klicks", highlight: true },
+            { label: "Profil ansehen", icon: "👁️", description: "Fotos, Bewertungen, Infos" },
+            { label: "Aktion", icon: "📞", description: "Anruf, Route, Website", highlight: true },
+            { label: "Kauf / Besuch", icon: "🏪", description: "28% Conversion-Rate" },
+          ]}
+          caption="Der typische Weg vom lokalen Suchbegriff zum Kundenbesuch (Google/Ipsos 2025)"
+        />
       </section>
 
       {/* Section 7: Trends */}
