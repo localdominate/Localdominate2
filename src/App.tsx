@@ -94,6 +94,7 @@ const LocalSeoPhysiotherapie = lazy(() => import("./pages/blog/LocalSeoPhysiothe
 const LocalSeoNotdienstKeywords = lazy(() => import("./pages/blog/LocalSeoNotdienstKeywords"));
 const GoogleBusinessKategorienGuide = lazy(() => import("./pages/blog/GoogleBusinessKategorienGuide"));
 const LocalSeoZahnarzt = lazy(() => import("./pages/blog/LocalSeoZahnarzt"));
+const LocalSeoSanitaerHeizung = lazy(() => import("./pages/blog/LocalSeoSanitaerHeizung"));
 const LokaleEventsMarketing = lazy(() => import("./pages/blog/LokaleEventsMarketing"));
 const LokaleInfluencerKooperationen = lazy(() => import("./pages/blog/LokaleInfluencerKooperationen"));
 const GoogleBusinessProdukteServices = lazy(() => import("./pages/blog/GoogleBusinessProdukteServices"));
