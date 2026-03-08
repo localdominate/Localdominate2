@@ -321,6 +321,7 @@ const App = () => (
                 <Route path="/blog/google-maps-ranking-case-studies" element={<GoogleMapsRankingCaseStudies />} />
                 <Route path="/blog/google-maps-audit-template" element={<GoogleMapsAuditTemplate />} />
                 <Route path="/blog/citation-tracking-template" element={<CitationTrackingTemplate />} />
+                <Route path="/blog/local-keyword-research-template" element={<LocalKeywordResearchTemplate />} />
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />

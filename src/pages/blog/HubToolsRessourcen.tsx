@@ -21,6 +21,7 @@ const groups: HubArticleGroup[] = [
       "bewertungs-antworten-vorlagen",
       "google-maps-audit-template",
       "citation-tracking-template",
+      "local-keyword-research-template",
     ],
   },
   {
