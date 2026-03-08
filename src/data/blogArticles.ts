@@ -3578,6 +3578,30 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["google maps seo", "google maps ranking", "maps optimierung", "google maps marketing", "lokale sichtbarkeit google maps"],
     featured: true
   },
+  // === ARTICLE: WIE GOOGLE MAPS RANKING FUNKTIONIERT ===
+  {
+    slug: "wie-google-maps-ranking-funktioniert",
+    de: {
+      title: "Wie Google Maps Ranking funktioniert: Nähe, Relevanz & Bekanntheit erklärt",
+      metaTitle: "Wie Google Maps Ranking funktioniert | Proximity, Relevanz, Prominence 2026",
+      metaDescription: "So bestimmt Google dein Maps-Ranking: Die 3 Hauptfaktoren Nähe, Relevanz und Bekanntheit erklärt mit Praxis-Beispielen, Ranking-Signalen und Optimierungstipps.",
+      excerpt: "Google Maps Rankings basieren auf 3 Faktoren: Nähe, Relevanz und Bekanntheit. Erfahre wie sie zusammenspielen — mit Praxis-Beispielen, Signaltabellen und konkretem Aktionsplan.",
+      category: "Google Maps"
+    },
+    en: {
+      title: "How Google Maps Ranking Works: Proximity, Relevance & Prominence Explained",
+      metaTitle: "How Google Maps Ranking Works | Proximity, Relevance, Prominence 2026",
+      metaDescription: "How Google determines your Maps ranking: The 3 main factors proximity, relevance and prominence explained with practical examples and optimization tips.",
+      excerpt: "Google Maps rankings are based on 3 factors: proximity, relevance and prominence. Learn how they interact — with practical examples and an action plan.",
+      category: "Google Maps"
+    },
+    readingTime: 18,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🗺️",
+    keywords: ["google maps ranking", "wie google maps ranking funktioniert", "proximity relevance prominence", "local pack ranking", "maps seo faktoren", "google maps algorithmus"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3676,6 +3700,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-link-building-blueprint",
   "local-seo-checkliste-komplett",
   "google-maps-seo-hub",
+  "wie-google-maps-ranking-funktioniert",
 ]);
 
 // Get only published articles (with pages), deduplicated
