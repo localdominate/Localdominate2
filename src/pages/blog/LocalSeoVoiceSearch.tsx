@@ -237,7 +237,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="technische-optimierung">
-        <h2>Technische Optimierung für Voice Search</h2>
+        <h2>Welche technischen Faktoren beeinflussen Voice Search?</h2>
         <AutoLexikonText>
           <h3>Speed ist entscheidend</h3>
           <p>
