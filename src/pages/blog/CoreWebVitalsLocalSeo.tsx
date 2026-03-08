@@ -294,7 +294,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* CLS */}
       <section id="cls">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">CLS: Cumulative Layout Shift optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Wie vermeidest du Layout-Verschiebungen (CLS)?</h2>
         
         <p className="mb-4">
           CLS misst, wie oft sich Elemente <strong>unerwartet verschieben</strong>, während die Seite lädt. Jeder hat es erlebt: Man will auf einen Link klicken, und plötzlich springt der Inhalt weg.
