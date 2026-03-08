@@ -260,7 +260,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </p>
 
         <div className="bg-red-100 border-l-4 border-red-600 p-6 my-8 rounded-r-lg">
-          <h4 className="font-bold text-red-800 mb-3">🔴 So prüfst du auf manuelle Maßnahmen:</h4>
+          <h3 className="font-bold text-red-800 mb-3">🔴 Google Search Console: Manuelle Maßnahmen prüfen</h3>
           <ol className="text-red-700 space-y-2">
             <li>1. Öffne Google Search Console</li>
             <li>2. Gehe zu "Sicherheit & manuelle Maßnahmen"</li>
