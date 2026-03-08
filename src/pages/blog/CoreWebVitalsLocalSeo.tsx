@@ -23,16 +23,16 @@ const CoreWebVitalsLocalSeo = () => {
   if (!article) return null;
 
   const tocItems = [
-    { id: "intro", title: "Einführung" },
+    { id: "intro", title: "Warum sind Core Web Vitals für lokale Unternehmen entscheidend?" },
     { id: "was-sind-cwv", title: "Was sind Core Web Vitals?" },
-    { id: "lcp", title: "LCP: Largest Contentful Paint" },
-    { id: "fid-inp", title: "FID/INP: Interaktivität" },
-    { id: "cls", title: "CLS: Cumulative Layout Shift" },
-    { id: "messen", title: "Core Web Vitals messen" },
-    { id: "optimierung", title: "Optimierungsstrategien" },
-    { id: "local-seo", title: "Bedeutung für Local SEO" },
-    { id: "mobile", title: "Mobile Performance" },
-    { id: "faq", title: "FAQ" }
+    { id: "lcp", title: "Wie optimierst du den LCP-Wert?" },
+    { id: "fid-inp", title: "Was ist INP und wie verbesserst du die Interaktivität?" },
+    { id: "cls", title: "Wie vermeidest du Layout-Verschiebungen (CLS)?" },
+    { id: "messen", title: "Wie misst du deine Core Web Vitals?" },
+    { id: "optimierung", title: "Welche Strategien verbessern deine Web Vitals?" },
+    { id: "local-seo", title: "Warum sind Core Web Vitals für Local SEO entscheidend?" },
+    { id: "mobile", title: "Wie optimierst du die mobile Performance?" },
+    { id: "faq", title: "Häufig gestellte Fragen" }
   ];
 
   const faqItems = [
