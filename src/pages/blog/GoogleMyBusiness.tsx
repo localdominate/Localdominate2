@@ -117,7 +117,7 @@ const GoogleMyBusiness = () => {
       ],
       intro: "Your <strong>Google Business Profile</strong> (formerly Google My Business) is your business's storefront in Google Search. A fully optimized profile can increase your local visibility by up to 70%. This guide shows you every step.",
       section1: {
-        title: "Basics: Setting Up and Verifying Your Profile",
+        title: "How Do You Set Up Your Google Business Profile?",
         text: "If you don't have a Google Business Profile yet, the first step is creation and verification.",
         stepsTitle: "Step-by-Step Creation:",
         steps: [
