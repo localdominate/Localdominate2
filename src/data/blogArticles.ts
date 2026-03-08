@@ -760,6 +760,30 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  {
+    slug: "local-seo-strategy-planner",
+    de: {
+      title: "Local SEO Strategy Planner: Der 7-Phasen-Plan für Top-Rankings",
+      metaTitle: "Local SEO Strategy Planner | 7-Phasen 90-Tage-Plan 2026",
+      metaDescription: "Kostenloser Local SEO Strategieplan mit 49 Aufgaben in 7 Phasen. Interaktive Checkliste, 90-Tage-Timeline, Budget-Planung und kopierbares Template.",
+      excerpt: "Systematischer 7-Phasen-Strategieplan für Local SEO: Vom Audit über Citations und Bewertungen bis zum laufenden Tracking — mit 90-Tage-Timeline.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Local SEO Strategy Planner: The 7-Phase Plan for Top Rankings",
+      metaTitle: "Local SEO Strategy Planner | 7-Phase 90-Day Plan 2026",
+      metaDescription: "Free local SEO strategy plan with 49 tasks in 7 phases. Interactive checklist, 90-day timeline, budget planning and copyable template.",
+      excerpt: "Systematic 7-phase strategy plan for local SEO: From audit to citations and reviews to ongoing tracking — with 90-day timeline.",
+      category: "Tools & Resources"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🎯",
+    keywords: ["local seo strategie", "seo strategy planner", "local seo plan", "90 tage plan", "local seo roadmap", "seo strategieplan"],
+    featured: false
+  },
+
   // === NEUE ARTIKEL: STRATEGIE ===
   {
     slug: "local-link-building",
