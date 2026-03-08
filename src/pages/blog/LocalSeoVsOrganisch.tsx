@@ -311,7 +311,7 @@ const LocalSeoVsOrganisch = () => {
           </div>
         </div>
 
-        <InsightCalloutBox variant="pro-tip" className="mt-6">
+        <InsightCalloutBox variant="pro-tip">
           <strong>Für die meisten lokalen Unternehmen:</strong> Investiere 60-70% deiner SEO-Ressourcen in 
           Local SEO (GBP, Bewertungen, Citations) und 30-40% in Organic SEO (Website-Content, lokale Landingpages).
         </InsightCalloutBox>
