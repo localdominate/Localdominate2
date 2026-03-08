@@ -8,6 +8,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
+import DefinitionBox from "@/components/blog/DefinitionBox";
 import { getArticleBySlug } from "@/data/blogArticles";
 import napKonsistenzImg from "@/assets/blog/nap-konsistenz.jpg";
 import { 
@@ -137,6 +138,16 @@ const NapKonsistenz = () => {
           <FileText className="h-6 w-6 text-primary" />
           Was ist NAP?
         </h2>
+
+        <DefinitionBox
+          term="NAP-Konsistenz"
+          definition="NAP steht für Name, Address, Phone – die drei wichtigsten Unternehmensdaten für lokale Suchmaschinenoptimierung. NAP-Konsistenz bedeutet, dass diese Daten überall im Internet exakt gleich geschrieben sind – auf der eigenen Website, im Google Business Profile und in allen Branchenverzeichnissen."
+          examples={[
+            'Name: Immer den offiziellen Geschäftsnamen verwenden (z.B. "Müller GmbH", nicht "Firma Müller")',
+            'Address: Einheitliches Format (z.B. "Str." vs. "Straße" konsistent halten)',
+            "Phone: Gleiche Schreibweise mit/ohne Vorwahl und Leerzeichen"
+          ]}
+        />
         
         <p className="text-muted-foreground mb-6">
           NAP ist die Abkürzung für die drei wichtigsten Unternehmensdaten:

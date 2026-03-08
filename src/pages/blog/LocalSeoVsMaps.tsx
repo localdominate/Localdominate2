@@ -7,6 +7,7 @@ import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
 import BlogImage from '../../components/blog/BlogImage';
+import DefinitionBox from '../../components/blog/DefinitionBox';
 import localVsMapsImage from '../../assets/blog/local-vs-maps-seo.jpg';
 
 const LocalSeoVsMaps: React.FC = () => {
@@ -99,6 +100,26 @@ const LocalSeoVsMaps: React.FC = () => {
             Bevor wir vergleichen, müssen wir beide Begriffe klar definieren:
           </AutoLexikonText>
         </p>
+
+        <DefinitionBox
+          term="Local SEO"
+          definition="Local SEO bezeichnet alle Maßnahmen zur Verbesserung der Sichtbarkeit eines Unternehmens in standortbezogenen Suchergebnissen. Es umfasst Website-Optimierung, Google Business Profile, lokale Backlinks, Citations und Bewertungsmanagement."
+          examples={[
+            'On-Page-Optimierung mit lokalen Keywords (z.B. "Zahnarzt Berlin Mitte")',
+            "Aufbau lokaler Backlinks von Branchenverzeichnissen und Partnern",
+            "Google Business Profile vollständig einrichten und pflegen"
+          ]}
+        />
+
+        <DefinitionBox
+          term="Google Maps SEO"
+          definition="Google Maps SEO ist ein Teilbereich von Local SEO, der sich speziell auf die Optimierung der Sichtbarkeit in Google Maps und im Local Pack (den 3 Karteneinträgen in der Google-Suche) konzentriert. Der Fokus liegt auf dem Google Business Profile, Bewertungen und NAP-Konsistenz."
+          examples={[
+            "Google Business Profile mit Fotos, Posts und korrekten Öffnungszeiten pflegen",
+            "Positive Bewertungen aktiv einsammeln und beantworten",
+            "NAP-Daten in allen Verzeichnissen konsistent halten"
+          ]}
+        />
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
           <div className="bg-blue-50 rounded-xl p-6">

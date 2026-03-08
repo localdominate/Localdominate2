@@ -5,6 +5,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
+import DefinitionBox from "@/components/blog/DefinitionBox";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, XCircle, MapPin, Star, TrendingUp, Building, Users, Globe, AlertTriangle, Award, Target, Zap, Shield } from "lucide-react";
@@ -111,6 +112,16 @@ const GoogleMapsRankingFaktoren = () => {
         Relevance (Relevanz) und Prominence (Bekanntheit). Wer diese Faktoren versteht 
         und optimiert, dominiert das Local Pack und gewinnt mehr Kunden.
       </p>
+
+      <DefinitionBox
+        term="Google Maps Ranking-Faktoren"
+        definition="Google Maps Ranking-Faktoren sind die Kriterien, anhand derer Google die Reihenfolge lokaler Unternehmen auf Google Maps und im Local Pack bestimmt. Die drei Hauptfaktoren sind Proximity (Entfernung zum Suchenden), Relevance (Übereinstimmung mit der Suchanfrage) und Prominence (Bekanntheit und Autorität des Unternehmens)."
+        examples={[
+          "Proximity: Physische Nähe des Unternehmens zum Suchenden – nicht direkt beeinflussbar",
+          "Relevance: Wie gut das Profil zur Suchanfrage passt (Kategorien, Keywords, Beschreibung)",
+          "Prominence: Bewertungen, Backlinks, NAP-Konsistenz und Online-Reputation"
+        ]}
+      />
 
       <KeyTakeawaysBox 
         items={[

@@ -4,6 +4,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
+import DefinitionBox from "@/components/blog/DefinitionBox";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -103,6 +104,17 @@ const UltimateGuideLocalSeo = () => {
       {/* Was ist Local SEO */}
       <section id="was-ist-local-seo" data-ai-summary="true">
         <h2>Was ist Local SEO? Definition und Grundlagen</h2>
+
+        <DefinitionBox
+          term="Local SEO"
+          definition="Local SEO (lokale Suchmaschinenoptimierung) bezeichnet alle Maßnahmen, die die Sichtbarkeit eines Unternehmens in standortbezogenen Suchergebnissen verbessern. Es umfasst die Optimierung des Google Business Profiles, lokaler Keywords, Citations, Bewertungen und strukturierter Daten für ein definiertes geografisches Einzugsgebiet."
+          examples={[
+            'Suchen wie "Bäcker in meiner Nähe", "Anwalt München" oder "Friseur Basel"',
+            "Sichtbarkeit im Local Pack (Top-3-Karteneinträge bei Google)",
+            "Ranking in Google Maps und organischen lokalen Ergebnissen"
+          ]}
+        />
+
         <p>
           <strong>Local SEO</strong> (lokale Suchmaschinenoptimierung) umfasst alle Maßnahmen, die dazu dienen, die Sichtbarkeit eines Unternehmens in standortbezogenen Suchergebnissen zu verbessern. Wenn ein Nutzer „Bäcker in meiner Nähe", „Anwalt München" oder „Friseur Basel" bei Google eingibt, greift Local SEO.
         </p>
