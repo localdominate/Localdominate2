@@ -94,9 +94,19 @@ const LocalCitations2025: React.FC = () => {
         <KeyTakeawaysBox items={keyTakeaways} />
 
         <h2 id="was-sind-citations" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Was sind Local Citations?</h2>
+
+        <DefinitionBox
+          term="Citations"
+          definition="Eine Local Citation ist jede Online-Erwähnung der Unternehmensdaten (Name, Adresse, Telefonnummer) – mit oder ohne Verlinkung. Citations helfen Google zu verifizieren, dass ein Unternehmen existiert und wo es sich befindet. Man unterscheidet strukturierte Citations (Branchenverzeichnisse) und unstrukturierte Citations (Presseartikel, Blogbeiträge)."
+          examples={[
+            "Strukturiert: Eintrag bei Gelbe Seiten, Yelp oder Das Örtliche",
+            "Unstrukturiert: Erwähnung in einem lokalen Zeitungsartikel",
+            "Social: Facebook-Seite, Instagram-Profil mit Adressdaten"
+          ]}
+        />
+
         <p className="text-lg mb-6">
           <AutoLexikonText>
-            Eine Citation ist jede Online-Erwähnung deiner Unternehmensdaten (NAP: Name, Adresse, Telefon). 
             Citations helfen Google zu verifizieren, dass dein Unternehmen existiert und wo es sich befindet.
           </AutoLexikonText>
         </p>
