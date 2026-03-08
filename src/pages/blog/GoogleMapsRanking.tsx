@@ -128,7 +128,7 @@ const GoogleMapsRanking = () => {
         text: "have local intent. If your business doesn't appear in the top 3 Google Maps results, you're losing potential customers to your competition every day. In this guide, I'll show you how to sustainably improve your Google Maps ranking."
       },
       section1: {
-        title: "Why Google Maps Matters More Than Your Website",
+        title: "Why Does Google Maps Matter More Than Your Website?",
         p1: "Most customers decide on a local business before ever visiting its website. The Google Maps listing is often the first and only point of contact.",
         tip: "Did you know?",
         tipText: "76% of users who search for a local business visit a store within 24 hours.",
