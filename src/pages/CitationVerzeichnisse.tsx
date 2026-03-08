@@ -94,9 +94,9 @@ const INDUSTRY_DIRS: IndustryDirectory[] = [
 
 const getPriorityBadge = (priority: Directory["priority"]) => {
   const styles = {
-    must: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
-    high: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
-    medium: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+    must: "bg-destructive/10 text-destructive",
+    high: "bg-accent text-accent-foreground",
+    medium: "bg-primary/10 text-primary",
     nice: "bg-muted text-muted-foreground",
   };
   const labels = { must: "Pflicht", high: "Hoch", medium: "Mittel", nice: "Optional" };
