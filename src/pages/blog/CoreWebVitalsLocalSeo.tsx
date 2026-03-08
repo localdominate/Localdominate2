@@ -216,7 +216,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card>
             <CardContent className="p-4">
               <Code className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Server & Code optimieren</h4>
+              <h4 className="font-semibold mb-2">Server & Code für besseren LCP optimieren</h4>
               <ul className="text-sm space-y-1 text-muted-foreground">
                 <li>• TTFB unter 800ms halten</li>
                 <li>• Kritisches CSS inline einbinden</li>
