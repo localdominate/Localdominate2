@@ -8,6 +8,7 @@ import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import SuspendierungsDiagnose from '@/components/blog/SuspendierungsDiagnose';
 import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
 import { AlertTriangle, CheckCircle, Clock, FileText, Shield, Phone, Mail, ArrowRight, XCircle, AlertCircle, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
