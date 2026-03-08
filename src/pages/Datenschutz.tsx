@@ -178,12 +178,7 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
       />
       <main className="min-h-screen bg-background py-12 px-4">
         <div className="container max-w-3xl">
-        <Link to="/">
-          <Button variant="ghost" className="mb-8 group">
-            <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            {t.back}
-          </Button>
-        </Link>
+        <SiteBreadcrumbs includeSchema />
 
         <h1 className="text-4xl font-bold text-foreground mb-8">{t.title}</h1>
 
