@@ -57,7 +57,7 @@ const GoogleMyBusiness = () => {
         ]
       },
       section3: {
-        title: "Kategorien richtig wählen",
+        title: "Wie wählst du die richtigen Kategorien?",
         text: "Die Kategorie-Auswahl bestimmt, für welche Suchanfragen du erscheinst. Wähle sorgfältig!",
         main: "Hauptkategorie",
         mainText: "Wähle die Kategorie, die dein Kerngeschäft am besten beschreibt. Beispiel: \"Zahnarzt\" statt \"Gesundheitswesen\".",
