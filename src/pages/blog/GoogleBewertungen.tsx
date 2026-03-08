@@ -69,7 +69,7 @@ const GoogleBewertungen = () => {
         tip: "Drucke den QR-Code auf Visitenkarten, Rechnungen, Kassenzettel und Aufsteller. Je sichtbarer, desto mehr Bewertungen."
       },
       section4: {
-        title: "Negative Bewertungen managen",
+        title: "Wie gehst du mit negativen Bewertungen um?",
         text1: "Negative Bewertungen gehören dazu – wichtig ist, wie du damit umgehst. Eine professionelle Antwort kann sogar Vertrauen aufbauen.",
         tips: [
           { title: "Schnell antworten:", desc: "Idealerweise innerhalb von 24 Stunden." },
