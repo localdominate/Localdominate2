@@ -323,6 +323,7 @@ const App = () => (
                 <Route path="/blog/tools-ressourcen-hub" element={<HubToolsRessourcen />} />
                 <Route path="/blog/ai-zukunft-hub" element={<HubAiZukunft />} />
                 <Route path="/blog/troubleshooting-hub" element={<HubTroubleshooting />} />
+                <Route path="/blog/case-studies-hub" element={<HubCaseStudies />} />
                 <Route path="/blog/entity-seo-guide" element={<EntitySeoGuide />} />
                 <Route path="/blog/semantic-seo-topical-authority" element={<SemanticSeoGuide />} />
                 <Route path="/blog/website-content-ai-suchmaschinen" element={<WebsiteContentAiSuchmaschinen />} />
