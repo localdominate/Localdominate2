@@ -61,6 +61,10 @@ const TableOfContents = ({ items }: TableOfContentsProps) => {
   // Count only main items for numbering
   let mainIndex = 0;
 
+  // Skip rendering if auto-TOC already exists on the page (from ArticleLayout)
+  const isAutoTocPresent = typeof document !== 'undefined' && document.getElementById('auto-toc-nav');
+  if (isAutoTocPresent) return null;
+
   return (
     <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8 xl:hidden">
       <div className="flex items-center gap-2 mb-4">

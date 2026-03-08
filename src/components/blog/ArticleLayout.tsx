@@ -5,6 +5,8 @@ import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import AuthorBox from "./AuthorBox";
+import { List } from "lucide-react";
+import { cn } from "@/lib/utils";
 import ArticleContextLinks from "./ArticleContextLinks";
 import RelatedArticles from "./RelatedArticles";
 import MobileArticleCTA from "./MobileArticleCTA";
