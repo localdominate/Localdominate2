@@ -255,6 +255,41 @@ const ANCHOR_TEXT_MAP: Record<string, Omit<AnchorTextRecommendation, "slug" | "p
     variations: ["Bewertungs-Schema einrichten", "Rich Snippets für Bewertungen"],
     naturalAnchor: "unser Review-Schema-Guide",
   },
+  "google-maps-audit-template": {
+    primaryAnchor: "Google Maps Audit Template",
+    variations: ["Maps-Audit-Vorlage", "Google Maps SEO-Audit durchführen"],
+    naturalAnchor: "unsere Google Maps Audit-Vorlage",
+  },
+  "citation-tracking-template": {
+    primaryAnchor: "Citation Tracking Template",
+    variations: ["Citations überwachen", "Verzeichnis-Tracking-Vorlage"],
+    naturalAnchor: "unsere Citation-Tracking-Vorlage",
+  },
+  "local-keyword-research-template": {
+    primaryAnchor: "Local Keyword Research Template",
+    variations: ["lokale Keyword-Recherche Vorlage", "Keywords für lokale Unternehmen finden"],
+    naturalAnchor: "unsere Keyword-Recherche-Vorlage",
+  },
+  "local-seo-monthly-checklist": {
+    primaryAnchor: "Local SEO Monthly Checklist",
+    variations: ["monatliche SEO-Checkliste", "SEO-Aufgaben jeden Monat"],
+    naturalAnchor: "unsere monatliche Local-SEO-Checkliste",
+  },
+  "google-maps-ranking-tracker": {
+    primaryAnchor: "Google Maps Ranking Tracker",
+    variations: ["Maps-Rankings überwachen", "Local-Ranking-Tracking-Tools"],
+    naturalAnchor: "unser Ranking-Tracker-Guide",
+  },
+  "local-seo-strategy-planner": {
+    primaryAnchor: "Local SEO Strategy Planner",
+    variations: ["7-Phasen SEO-Strategieplan", "SEO-Strategie für lokale Unternehmen"],
+    naturalAnchor: "unser interaktiver Strategie-Planner",
+  },
+  "local-seo-roadmap-90-tage": {
+    primaryAnchor: "Local SEO 90-Tage-Roadmap",
+    variations: ["90-Tage-Plan für lokales SEO", "SEO-Roadmap für lokale Unternehmen"],
+    naturalAnchor: "unsere 90-Tage Local-SEO-Roadmap",
+  },
 };
 
 /** Get SEO-optimized anchor text for a slug */
