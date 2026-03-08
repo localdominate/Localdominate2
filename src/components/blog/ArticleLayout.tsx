@@ -419,29 +419,12 @@ const ArticleLayout = ({
 
       <main className="container max-w-4xl py-8 px-4">
         {/* Breadcrumb */}
-        <Breadcrumb className="mb-6">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Home</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <ChevronRight className="h-4 w-4" />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/blog">Blog</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <ChevronRight className="h-4 w-4" />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbPage className="line-clamp-1">{article.title}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <SiteBreadcrumbs
+          items={[
+            { label: "Blog", href: "/blog" },
+            { label: article.title },
+          ]}
+        />
 
         {/* Article Header */}
         <header className="mb-8">
