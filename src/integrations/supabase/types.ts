@@ -527,6 +527,72 @@ export type Database = {
         }
         Relationships: []
       }
+      conversion_reports: {
+        Row: {
+          avg_engagement_score: number | null
+          avg_time_to_first_cta_seconds: number | null
+          checkout_completion_rate: number | null
+          conversion_rate: number | null
+          created_at: string
+          created_by: string | null
+          cta_by_location: Json | null
+          cta_click_rate: number | null
+          funnel_data: Json | null
+          id: string
+          lead_rate: number | null
+          lead_sources: Json | null
+          notes: string | null
+          recommendations: Json | null
+          report_date: string
+          top_pages: Json | null
+          total_conversions: number | null
+          total_leads: number | null
+          total_sessions: number | null
+        }
+        Insert: {
+          avg_engagement_score?: number | null
+          avg_time_to_first_cta_seconds?: number | null
+          checkout_completion_rate?: number | null
+          conversion_rate?: number | null
+          created_at?: string
+          created_by?: string | null
+          cta_by_location?: Json | null
+          cta_click_rate?: number | null
+          funnel_data?: Json | null
+          id?: string
+          lead_rate?: number | null
+          lead_sources?: Json | null
+          notes?: string | null
+          recommendations?: Json | null
+          report_date?: string
+          top_pages?: Json | null
+          total_conversions?: number | null
+          total_leads?: number | null
+          total_sessions?: number | null
+        }
+        Update: {
+          avg_engagement_score?: number | null
+          avg_time_to_first_cta_seconds?: number | null
+          checkout_completion_rate?: number | null
+          conversion_rate?: number | null
+          created_at?: string
+          created_by?: string | null
+          cta_by_location?: Json | null
+          cta_click_rate?: number | null
+          funnel_data?: Json | null
+          id?: string
+          lead_rate?: number | null
+          lead_sources?: Json | null
+          notes?: string | null
+          recommendations?: Json | null
+          report_date?: string
+          top_pages?: Json | null
+          total_conversions?: number | null
+          total_leads?: number | null
+          total_sessions?: number | null
+        }
+        Relationships: []
+      }
       customers: {
         Row: {
           address: string | null
