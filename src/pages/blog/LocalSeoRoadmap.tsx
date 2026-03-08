@@ -1,3 +1,4 @@
+import CompetitiveAnalysisFramework from "@/components/blog/CompetitiveAnalysisFramework";
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
@@ -255,6 +256,17 @@ const LocalSeoRoadmap = () => {
           </div>
         </CardContent>
       </Card>
+
+      {/* Competitive Baseline */}
+      <CompetitiveAnalysisFramework data={{
+        competitors: [
+          { name: "Dein Start", isYou: true, reviews: 8, rating: 4.0, citations: 5, gbpComplete: 40, backlinks: 10, responseRate: 20, photos: 3, postsPerMonth: 0 },
+          { name: "Local Pack #1", reviews: 95, rating: 4.7, citations: 55, gbpComplete: 100, backlinks: 150, responseRate: 95, photos: 40, postsPerMonth: 4 },
+          { name: "Local Pack #2", reviews: 65, rating: 4.5, citations: 40, gbpComplete: 90, backlinks: 90, responseRate: 80, photos: 25, postsPerMonth: 2 },
+          { name: "Local Pack #3", reviews: 40, rating: 4.3, citations: 30, gbpComplete: 75, backlinks: 45, responseRate: 65, photos: 18, postsPerMonth: 1 },
+        ],
+        insight: "Die Roadmap adressiert alle 8 Metriken systematisch: Wochen 1-2 schließen GBP-Lücken, Wochen 3-6 Citations, Wochen 7-8 Bewertungen, Wochen 9-12 Content und Backlinks.",
+      }} />
 
       {/* Visual Gantt-style Roadmap */}
       <section id="visual-roadmap" className="mb-10">

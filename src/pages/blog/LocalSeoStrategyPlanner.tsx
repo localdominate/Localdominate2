@@ -1,3 +1,5 @@
+import CompetitiveAnalysisFramework from "@/components/blog/CompetitiveAnalysisFramework";
+import type { CompetitiveFrameworkData } from "@/components/blog/CompetitiveAnalysisFramework";
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
@@ -332,6 +334,39 @@ const LocalSeoStrategyPlanner = () => {
 
       <TableOfContents items={tocItems} />
       <KeyTakeawaysBox title="Auf einen Blick" items={keyTakeaways} />
+
+      {/* Competitive Analysis Framework */}
+      <CompetitiveAnalysisFramework data={{
+        competitors: [
+          { name: "Dein Unternehmen", isYou: true, reviews: 12, rating: 4.2, citations: 15, gbpComplete: 65, backlinks: 20, responseRate: 50, photos: 5, postsPerMonth: 0 },
+          { name: "Konkurrent A", reviews: 85, rating: 4.6, citations: 45, gbpComplete: 95, backlinks: 120, responseRate: 90, photos: 35, postsPerMonth: 4 },
+          { name: "Konkurrent B", reviews: 60, rating: 4.4, citations: 38, gbpComplete: 85, backlinks: 80, responseRate: 75, photos: 22, postsPerMonth: 2 },
+          { name: "Konkurrent C", reviews: 35, rating: 4.3, citations: 30, gbpComplete: 70, backlinks: 50, responseRate: 60, photos: 15, postsPerMonth: 1 },
+        ],
+        swot: {
+          strengths: [
+            { text: "Echte lokale Verwurzelung und Stammkunden-Basis" },
+            { text: "Flexibilität bei Öffnungszeiten und Service" },
+            { text: "Persönlicher Kundenkontakt = authentische Bewertungen" },
+          ],
+          weaknesses: [
+            { text: "Wenige Bewertungen im Vergleich zu Top-Konkurrenten" },
+            { text: "GBP-Profil unvollständig (65%)" },
+            { text: "Keine regelmäßigen Google Posts" },
+          ],
+          opportunities: [
+            { text: "Konkurrent C hat ähnlich wenige Backlinks — überholbar" },
+            { text: "Kein Konkurrent nutzt Video-Content im GBP" },
+            { text: "Bewertungs-Lücke durch aktive Strategie schließbar (12 → 50 in 6 Monaten)" },
+          ],
+          threats: [
+            { text: "Konkurrent A investiert aktiv in Content und Linkbuilding" },
+            { text: "Neue Filialisten / Franchises im Einzugsgebiet" },
+            { text: "Google-Algorithmus-Updates können Karten neu mischen" },
+          ],
+        },
+        insight: "Fokussiere die ersten 4 Wochen auf GBP-Vollständigkeit (65% → 100%) und Bewertungen. Diese Quick-Wins schließen die größten Lücken zu Konkurrent B und C. Backlinks und Content folgen in Phase 5-6.",
+      }} />
 
       {/* Progress */}
       <Card className="mb-8 border-primary/20 bg-primary/5">
