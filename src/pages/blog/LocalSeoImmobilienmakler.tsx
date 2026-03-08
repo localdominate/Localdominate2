@@ -775,6 +775,13 @@ Herzliche Grüße,
         </Accordion>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Makler wird Stadtteil-Experte</h2>
+        {industryCaseStudies.immobilienmakler.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-immobilienmakler" />
 
       <ArticleCTA />

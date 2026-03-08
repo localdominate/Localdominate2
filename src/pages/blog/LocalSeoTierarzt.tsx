@@ -579,6 +579,13 @@ const LocalSeoTierarzt = () => {
         </div>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Tierarzt-Notdienst als Patientenmagnet</h2>
+        {industryCaseStudies.tierarzt.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-tierarzt" />
 
       <RelatedIndustryGuides currentSlug="local-seo-tierarzt" />

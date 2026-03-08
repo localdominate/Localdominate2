@@ -228,6 +228,13 @@ const LocalSeoPhysiotherapie = () => {
         </Accordion>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Physio-Praxis setzt auf Spezialisierung</h2>
+        {industryCaseStudies.physiotherapie.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-physiotherapie" />
 
       <SourcesSection sources={[
