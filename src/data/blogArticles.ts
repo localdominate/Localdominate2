@@ -3771,7 +3771,7 @@ export const blogArticles: BlogArticle[] = [
     de: {
       title: "AI Search Optimization für lokale Unternehmen: Der komplette Guide 2026",
       metaTitle: "AI Search Optimization für lokale Unternehmen | Guide 2026",
-      metaDescription: "Wie AI-Suchmaschinen Quellen auswählen und wie lokale Unternehmen in AI-Empfehlungen erscheinen. GEO-Strategien, Schema Markup, llms.txt & Praxis-Checkliste für den DACH-Raum.",
+      metaDescription: "Wie AI-Suchmaschinen Quellen auswählen und lokale Unternehmen in AI-Empfehlungen erscheinen. GEO-Strategien, Schema Markup & llms.txt.",
       excerpt: "Alles über AI Search Optimization für lokale Unternehmen: Wie ChatGPT, Google AI Overviews und Perplexity Quellen auswählen — und wie du dein Business dort sichtbar machst.",
       category: "AI & Zukunft"
     },
