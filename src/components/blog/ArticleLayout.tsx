@@ -239,6 +239,7 @@ const ArticleLayout = ({
     }),
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
+    ...(article.lastReviewedAt && { "lastReviewed": article.lastReviewedAt }),
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://localdominate.org/blog/${article.slug}`
