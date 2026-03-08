@@ -162,7 +162,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </p>
         </div>
 
-        <h2 id="technische-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Technische Website-Probleme</h2>
+        <h2 id="technische-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Technische Website-Probleme als Ranking-Killer</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Technische Fehler sind die häufigste und glücklicherweise am einfachsten zu behebende Ursache:
