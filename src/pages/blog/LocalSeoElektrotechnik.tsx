@@ -219,6 +219,10 @@ const LocalSeoElektrotechnik = () => {
         </AutoLexikonText>
       </section>
 
+      {miniSuccessStories.elektrotechnik?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
+
       <IndustryLandingCTA industry="handwerker" />
 
       {industryStats.elektrotechnik?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}

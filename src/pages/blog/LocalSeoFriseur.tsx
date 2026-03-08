@@ -41,6 +41,8 @@ import BookingPlatformTable from '@/components/blog/BookingPlatformTable';
 import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer';
 import ArticleCTA from '@/components/blog/ArticleCTA';
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";

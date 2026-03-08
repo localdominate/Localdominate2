@@ -217,6 +217,10 @@ const LocalSeoZahnarzt = () => {
         </AutoLexikonText>
       </section>
 
+      {miniSuccessStories.zahnarzt?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
+
       <IndustryLandingCTA industry="arztpraxis" />
 
       {industryStats.zahnarzt?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}

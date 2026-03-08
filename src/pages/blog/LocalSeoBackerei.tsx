@@ -279,6 +279,10 @@ const LocalSeoBackerei = () => {
         </div>
       </section>
 
+      {miniSuccessStories.baeckerei?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
+
       <BlogCTAABTest articleSlug="local-seo-baeckerei" position="end" />
 
       {industryStats.baeckerei?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}

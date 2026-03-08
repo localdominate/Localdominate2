@@ -231,6 +231,10 @@ const LocalSeoRestaurant = () => {
         <p>{t.section2.sub3Text}</p>
       </section>
 
+      {miniSuccessStories.restaurant?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
+
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="middle" />
 
       <section id="bilder" className="mb-12">

@@ -573,6 +573,10 @@ const LocalSeoHandwerker = () => {
         </ul>
       </section>
 
+      {miniSuccessStories.handwerker?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
+
       <IndustryLandingCTA industry="handwerker" />
 
       {industryStats.handwerker?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
