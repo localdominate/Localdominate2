@@ -103,6 +103,9 @@ const GoogleBusinessProdukteServices = lazy(() => import("./pages/blog/GoogleBus
 const LocalSeoOptiker = lazy(() => import("./pages/blog/LocalSeoOptiker"));
 const BewertungsAntwortenVorlagen = lazy(() => import("./pages/blog/BewertungsAntwortenVorlagen"));
 const LocalSeoElektrotechnik = lazy(() => import("./pages/blog/LocalSeoElektrotechnik"));
+const LocalSeoTrendsSchweiz = lazy(() => import("./pages/blog/LocalSeoTrendsSchweiz"));
+const LocalSeoTrendsDeutschland = lazy(() => import("./pages/blog/LocalSeoTrendsDeutschland"));
+const LocalSeoTrendsOesterreich = lazy(() => import("./pages/blog/LocalSeoTrendsOesterreich"));
 const GoogleBusinessInsightsVerstehen = lazy(() => import("./pages/blog/GoogleBusinessInsightsVerstehen"));
 const LocalSeoFotograf = lazy(() => import("./pages/blog/LocalSeoFotograf"));
 const LocalSeoVoiceSearch = lazy(() => import("./pages/blog/LocalSeoVoiceSearch"));
@@ -290,6 +293,9 @@ const App = () => (
                 <Route path="/blog/local-seo-optiker" element={<LocalSeoOptiker />} />
                 <Route path="/blog/bewertungs-antworten-vorlagen" element={<BewertungsAntwortenVorlagen />} />
                 <Route path="/blog/local-seo-elektrotechnik" element={<LocalSeoElektrotechnik />} />
+                <Route path="/blog/local-seo-trends-schweiz" element={<LocalSeoTrendsSchweiz />} />
+                <Route path="/blog/local-seo-trends-deutschland" element={<LocalSeoTrendsDeutschland />} />
+                <Route path="/blog/local-seo-trends-oesterreich" element={<LocalSeoTrendsOesterreich />} />
                 <Route path="/blog/google-business-insights-verstehen" element={<GoogleBusinessInsightsVerstehen />} />
                 <Route path="/blog/local-seo-fotograf" element={<LocalSeoFotograf />} />
                 <Route path="/blog/local-seo-voice-search" element={<LocalSeoVoiceSearch />} />

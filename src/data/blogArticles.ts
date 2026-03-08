@@ -363,6 +363,77 @@ export const blogArticles: BlogArticle[] = [
     featured: true
   },
 
+  // === REGIONALE TRENDS ===
+  {
+    slug: "local-seo-trends-schweiz",
+    de: {
+      title: "Local SEO Trends Schweiz 2026: Was KMU jetzt wissen müssen",
+      metaTitle: "Local SEO Trends Schweiz 2026 | DACH-Report",
+      metaDescription: "Die wichtigsten Local SEO Trends für den Schweizer Markt 2026. AI-Suche, Mehrsprachigkeit, kantonale Strategien und Branchen-Entwicklungen.",
+      excerpt: "Von AI-Search bis Kantons-SEO: Die Trends, die den Schweizer Local SEO Markt 2026 prägen.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Trends Switzerland 2026: What SMEs Need to Know",
+      metaTitle: "Local SEO Trends Switzerland 2026 | DACH Report",
+      metaDescription: "The most important Local SEO trends for the Swiss market 2026. AI search, multilingual strategies, cantonal optimization and industry developments.",
+      excerpt: "From AI search to cantonal SEO: The trends shaping the Swiss Local SEO market in 2026.",
+      category: "Regions"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🇨🇭",
+    keywords: ["local seo trends schweiz", "seo schweiz 2026", "local seo trends", "schweizer seo", "ai search schweiz"],
+    featured: true
+  },
+  {
+    slug: "local-seo-trends-deutschland",
+    de: {
+      title: "Local SEO Trends Deutschland 2026: Der grosse Trend-Report",
+      metaTitle: "Local SEO Trends Deutschland 2026 | Report",
+      metaDescription: "Die wichtigsten Local SEO Trends in Deutschland 2026. AI Search, regionale Unterschiede, Branchen-Wachstum und technische Entwicklungen.",
+      excerpt: "AI Search, Voice Search und regionale Unterschiede: Was deutsche KMU 2026 im Local SEO erwartet.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Trends Germany 2026: The Big Trend Report",
+      metaTitle: "Local SEO Trends Germany 2026 | Report",
+      metaDescription: "The most important Local SEO trends in Germany 2026. AI search, regional differences, industry growth and technical developments.",
+      excerpt: "AI search, voice search and regional differences: What German SMEs can expect in Local SEO 2026.",
+      category: "Regions"
+    },
+    readingTime: 16,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🇩🇪",
+    keywords: ["local seo trends deutschland", "seo deutschland 2026", "local seo trends", "google seo trends", "ai search deutschland"],
+    featured: true
+  },
+  {
+    slug: "local-seo-trends-oesterreich",
+    de: {
+      title: "Local SEO Trends Österreich 2026: Der AT-Markt im Wandel",
+      metaTitle: "Local SEO Trends Österreich 2026 | Report",
+      metaDescription: "Die wichtigsten Local SEO Trends für Österreich 2026. Bundesländer-Strategien, österreichisches Deutsch als SEO-Vorteil und Branchen-Wachstum.",
+      excerpt: "Von Wien bis Vorarlberg: Die Local SEO Trends, die österreichische Unternehmen 2026 kennen müssen.",
+      category: "Regionen"
+    },
+    en: {
+      title: "Local SEO Trends Austria 2026: The AT Market in Transition",
+      metaTitle: "Local SEO Trends Austria 2026 | Report",
+      metaDescription: "The most important Local SEO trends for Austria 2026. Federal state strategies, Austrian German as SEO advantage and industry growth.",
+      excerpt: "From Vienna to Vorarlberg: The Local SEO trends Austrian businesses need to know in 2026.",
+      category: "Regions"
+    },
+    readingTime: 15,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🇦🇹",
+    keywords: ["local seo trends österreich", "seo österreich 2026", "local seo trends", "google.at seo", "wahlarzt seo"],
+    featured: true
+  },
+
   // === NEUE ARTIKEL: BRANCHEN ===
   {
     slug: "local-seo-aerzte-praxen",
