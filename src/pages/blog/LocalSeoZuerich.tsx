@@ -214,7 +214,7 @@ const LocalSeoZuerich = () => {
 
         <Card className="bg-primary/5 border-primary/20 mt-6">
           <CardContent className="pt-6">
-            <h4 className="font-semibold mb-2">💡 Profi-Tipp: Stadtteil-Landingpages</h4>
+            <h3 className="font-semibold mb-2">💡 Profi-Tipp: Stadtteil-Landingpages für Zürcher Kreise</h3>
             <p className="text-sm">
               Erstellen Sie für jeden relevanten Stadtteil eine eigene Landingpage. 
               Beispiel: "Coiffeur Seefeld" oder "Restaurant Wiedikon". Dies ermöglicht 
