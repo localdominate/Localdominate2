@@ -796,6 +796,10 @@ Herzliche Grüße,
         </Accordion>
       </section>
 
+      {miniSuccessStories.steuerberater?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
+
       <section id="praxisbeispiel" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Steuerkanzlei gewinnt Mandanten online</h2>
         {industryCaseStudies.steuerberater.map((study, i) => (
