@@ -550,6 +550,9 @@ const DuplicateListingEntfernen: React.FC = () => {
           </div>
         </section>
 
+        {/* Ranking Monitoring after fixing duplicates */}
+        <RankingMonitoringStrategy compact />
+
         <SourcesSection sources={sources} />
 
         <div className="mt-8 p-4 bg-muted/50 rounded-lg text-sm text-muted-foreground">

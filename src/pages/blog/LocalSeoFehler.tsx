@@ -947,6 +947,9 @@ const LocalSeoFehler = () => {
         </div>
       </section>
 
+      {/* Ranking Monitoring Strategy */}
+      <RankingMonitoringStrategy compact />
+
       <HelpfulnessWidget articleSlug="local-seo-fehler" />
     </ArticleLayout>
   );
