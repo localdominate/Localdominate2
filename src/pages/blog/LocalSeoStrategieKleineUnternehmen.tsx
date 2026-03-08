@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
+import LocalCitationWorkflows from "@/components/blog/LocalCitationWorkflows";
 import { CheckCircle, AlertTriangle, Target, Wrench } from "lucide-react";
 import {
   Table,
@@ -373,6 +374,8 @@ const LocalSeoStrategieKleineUnternehmen = () => {
         <p>
           Detaillierte Listen aller relevanten Verzeichnisse findest du in unserem <Link to="/blog/nap-konsistenz-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">NAP-Konsistenz Guide</Link> und der <Link to="/citation-verzeichnisse" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Citation-Verzeichnisliste für DACH</Link>.
         </p>
+
+        <LocalCitationWorkflows compact />
       </section>
 
       {/* Schritt 4: Bewertungen */}

@@ -6,6 +6,7 @@ import AutoLexikonText from '../../components/blog/AutoLexikonText';
 import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
+import LocalCitationWorkflows from '../../components/blog/LocalCitationWorkflows';
 import BlogImage from '../../components/blog/BlogImage';
 import DefinitionBox from '../../components/blog/DefinitionBox';
 import localCitationsImage from '../../assets/blog/local-citations.jpg';
@@ -362,6 +363,8 @@ const LocalCitations2025: React.FC = () => {
 
         <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen</h2>
         <BlogFAQSection faqs={faqs} />
+
+        <LocalCitationWorkflows />
 
         <SourcesSection sources={sources} />
 
