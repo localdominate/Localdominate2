@@ -421,6 +421,31 @@ const LocalSeoFrankfurt = () => {
         </Accordion>
       </section>
 
+      <GeoTargetedKeywords config={{
+        city: 'Frankfurt',
+        country: 'DE',
+        districts: [
+          { district: 'Sachsenhausen', keywords: ['Apfelweinlokal Sachsenhausen', 'Restaurant Sachsenhausen', 'Friseur Sachsenhausen'], competition: 'Hoch', tip: 'Kneipenmeile Alt-Sachsenhausen gezielt ansprechen' },
+          { district: 'Nordend', keywords: ['Café Nordend', 'Kinderarzt Nordend', 'Yoga Nordend Frankfurt'], competition: 'Mittel', tip: 'Kreatives Viertel: nachhaltige und lokale Angebote betonen' },
+          { district: 'Bornheim', keywords: ['Friseur Bornheim', 'Restaurant Berger Straße', 'Zahnarzt Bornheim'], competition: 'Mittel', tip: 'Berger Straße als eigenes Keyword-Cluster nutzen' },
+          { district: 'Bockenheim', keywords: ['Uni Frankfurt Essen', 'Copyshop Bockenheim', 'WG-Zimmer Bockenheim'], competition: 'Niedrig', tip: 'Studentenviertel: günstige Angebote und junge Zielgruppe' },
+          { district: 'Westend', keywords: ['Steuerberater Westend Frankfurt', 'Anwalt Westend', 'Business Lunch Westend'], competition: 'Hoch', tip: 'Bankenviertel-Nähe: B2B-Keywords und Premium-Services' },
+        ],
+        topIndustryKeywords: [
+          { industry: 'Finanzen & Beratung', icon: '🏦', keywords: ['Steuerberater Frankfurt Expats', 'Finanzberater Frankfurt', 'Wirtschaftsprüfer Frankfurt', 'Vermögensberater Frankfurt'] },
+          { industry: 'Gastronomie', icon: '🍎', keywords: ['Apfelwein Frankfurt', 'Grüne Soße Frankfurt', 'Business Lunch Frankfurt', 'Brunch Frankfurt Sachsenhausen'] },
+          { industry: 'Immobilien', icon: '🏠', keywords: ['Makler Frankfurt', 'Wohnung mieten Frankfurt Nordend', 'Büro Frankfurt Innenstadt', 'Immobilienbewertung Frankfurt'] },
+          { industry: 'International', icon: '🌍', keywords: ['English speaking doctor Frankfurt', 'Rechtsanwalt Englisch Frankfurt', 'International school Frankfurt', 'Relocation service Frankfurt'] },
+        ],
+        seasonalKeywords: [
+          { event: 'Museumsuferfest', keywords: ['Museumsuferfest Frankfurt', 'Restaurant Museumsufer', 'Catering Museumsuferfest'], timing: 'Optimierung ab Juni' },
+          { event: 'Frankfurter Buchmesse', keywords: ['Hotel Buchmesse Frankfurt', 'Restaurant Messe Frankfurt', 'Catering Buchmesse'], timing: 'Optimierung ab Juli' },
+          { event: 'Weihnachtsmarkt Römer', keywords: ['Weihnachtsmarkt Römerberg', 'Weihnachtsfeier Frankfurt', 'Geschenke kaufen Frankfurt'], timing: 'Optimierung ab September' },
+        ],
+        localDirectories: ['frankfurt.de', 'journal-frankfurt.de', 'meinestadt.de/frankfurt'],
+        dialektTip: '"Ebbelwoi" statt "Apfelwein" und "Bembel" haben Nischen-Suchvolumen. Frankfurt-spezifische Begriffe wie "Zeil" (Einkaufsstraße) als Geo-Modifier nutzen.',
+      }} />
+
       <HelpfulnessWidget articleSlug="local-seo-frankfurt" />
 
       <BlogCTAABTest position="end" articleSlug="local-seo-frankfurt" />

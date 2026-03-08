@@ -515,6 +515,31 @@ const LocalSeoKoeln = () => {
         </div>
       </section>
 
+      <GeoTargetedKeywords config={{
+        city: 'Köln',
+        country: 'DE',
+        districts: [
+          { district: 'Ehrenfeld', keywords: ['Restaurant Ehrenfeld', 'Tattoo Ehrenfeld Köln', 'Café Ehrenfeld'], competition: 'Mittel', tip: 'Szene-Viertel: kreative und alternative Keywords testen' },
+          { district: 'Südstadt', keywords: ['Friseur Südstadt Köln', 'Brunch Südstadt', 'Yoga Südstadt Köln'], competition: 'Hoch', tip: 'Beliebtes Viertel: Chlodwigplatz als eigenen Geo-Modifier nutzen' },
+          { district: 'Nippes', keywords: ['Kinderarzt Nippes', 'Bäckerei Nippes Köln', 'Handwerker Nippes'], competition: 'Mittel', tip: 'Familien-Viertel: familienfreundliche Angebote hervorheben' },
+          { district: 'Deutz', keywords: ['Hotel Deutz Köln Messe', 'Restaurant Deutz', 'Parken Koelnmesse'], competition: 'Mittel', tip: 'Messe-Nähe: Geschäftsreisende und Event-Keywords nutzen' },
+          { district: 'Lindenthal', keywords: ['Zahnarzt Lindenthal', 'Steuerberater Lindenthal Köln', 'Uni Köln Essen'], competition: 'Niedrig', tip: 'Uni-Nähe + gehobenes Wohnviertel: beides ansprechen' },
+        ],
+        topIndustryKeywords: [
+          { industry: 'Gastronomie', icon: '🍺', keywords: ['Brauhaus Köln', 'Kölsch trinken Altstadt', 'Halver Hahn Köln', 'Brunch Köln Ehrenfeld'] },
+          { industry: 'Medien & Events', icon: '📺', keywords: ['Videoproduktion Köln', 'Werbeagentur Köln', 'Eventlocation Köln', 'Fotograf Köln Hochzeit'] },
+          { industry: 'Handwerk', icon: '🔧', keywords: ['Schlüsseldienst Köln Notdienst', 'Maler Köln Ehrenfeld', 'Elektriker Köln Südstadt', 'Sanitär Köln'] },
+          { industry: 'Gesundheit', icon: '⚕️', keywords: ['Hausarzt Köln ohne Termin', 'Zahnarzt Köln Angstpatienten', 'Physiotherapie Köln Nippes', 'Orthopäde Köln Lindenthal'] },
+        ],
+        seasonalKeywords: [
+          { event: 'Karneval', keywords: ['Kostüm kaufen Köln', 'Karnevalsparty Köln', 'Restaurant Karneval Köln', 'Hotel Karneval Köln'], timing: 'Optimierung ab November' },
+          { event: 'Weihnachtsmärkte', keywords: ['Weihnachtsmarkt Dom Köln', 'Weihnachtsfeier Köln Restaurant', 'Nikolausmarkt Köln'], timing: 'Optimierung ab September' },
+          { event: 'Gamescom', keywords: ['Hotel Gamescom Köln', 'Restaurant Messe Köln', 'Parken Gamescom'], timing: 'Optimierung ab Juni' },
+        ],
+        localDirectories: ['koeln.de', 'ksta.de', 'meinestadt.de/koeln'],
+        dialektTip: '"Kölsch" ist sowohl Dialekt als auch Bier — beides hat hohes Suchvolumen. "Veedel" statt "Viertel" wird von echten Kölnern gesucht. "Halver Hahn" und "Himmel un Ääd" sind eigene Food-Keywords.',
+      }} />
+
       <HelpfulnessWidget articleSlug="local-seo-koeln" />
 
       <RelatedCityGuides currentSlug="local-seo-koeln" />

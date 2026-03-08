@@ -520,6 +520,30 @@ const LocalSeoSchweiz = () => {
           Wir helfen Schweizer Unternehmen dabei, in ihrer Region gefunden zu werden. 
           Von Zürich bis Genf, von Basel bis Lugano.
         </p>
+        <GeoTargetedKeywords config={{
+          city: 'Schweiz (DACH)',
+          country: 'CH',
+          districts: [
+            { district: 'Zürich Kreis 1 (Altstadt)', keywords: ['Restaurant Niederdorf Zürich', 'Anwalt Bahnhofstrasse', 'Hotel Zürich Altstadt'], competition: 'Sehr hoch', tip: 'Tourismus + Business: Englische Keywords nicht vergessen' },
+            { district: 'Zürich Kreis 4 (Langstrasse)', keywords: ['Bar Langstrasse Zürich', 'Tattoo Zürich Kreis 4', 'Döner Langstrasse'], competition: 'Mittel', tip: 'Multikulti-Viertel: internationale Keywords testen' },
+            { district: 'Basel Altstadt', keywords: ['Restaurant Basel Altstadt', 'Zahnarzt Basel Innenstadt', 'Boutique Basel'], competition: 'Mittel', tip: 'Dreiländereck: auch französische und deutsche Suchende bedenken' },
+            { district: 'Bern Altstadt', keywords: ['Café Bern Altstadt', 'Anwalt Bern Innenstadt', 'Restaurant Bern Bundeshaus'], competition: 'Niedrig', tip: 'Hauptstadt: Regierungs-nahe B2B-Keywords mit wenig Konkurrenz' },
+            { district: 'Luzern Innenstadt', keywords: ['Restaurant Kapellbrücke Luzern', 'Hotel Luzern See', 'Zahnarzt Luzern'], competition: 'Niedrig', tip: 'Tourismus-Keywords dominant — auch in Englisch und Asiatisch denken' },
+          ],
+          topIndustryKeywords: [
+            { industry: 'Gastronomie', icon: '🧀', keywords: ['Fondue Restaurant Zürich', 'Raclette Basel', 'Brunch Bern', 'Beiz Zürich Kreis 5'] },
+            { industry: 'Finanzen', icon: '🏦', keywords: ['Treuhand Zürich', 'Steuerberater Schweiz KMU', 'Vermögensberatung Zürich', 'Buchhaltung Bern'] },
+            { industry: 'Gesundheit', icon: '⚕️', keywords: ['Zahnarzt Zürich Kreis 1', 'Hausarzt Basel', 'Physiotherapie Bern', 'Augenarzt Luzern'] },
+            { industry: 'Handwerk', icon: '🔧', keywords: ['Elektriker Zürich Notdienst', 'Sanitär Basel', 'Schreiner Bern', 'Maler Luzern'] },
+          ],
+          seasonalKeywords: [
+            { event: 'Sechseläuten (Zürich)', keywords: ['Sechseläuten Zürich Restaurant', 'Böögg Zürich', 'Frühlingsfest Zürich'], timing: 'Optimierung ab Februar' },
+            { event: 'Fasnacht (Basel)', keywords: ['Fasnacht Basel Hotel', 'Morgestraich Restaurant Basel', 'Fasnacht Laternen Basel'], timing: 'Optimierung ab Dezember' },
+            { event: 'Ski-Saison', keywords: ['Ski Service Zürich', 'Sportgeschäft Winterthur Ski', 'Skivermietung Luzern'], timing: 'Optimierung ab September' },
+          ],
+          localDirectories: ['local.ch', 'search.ch', 'gelbeseiten.ch'],
+          dialektTip: 'Schweizerdeutsch-Begriffe beachten: "Coiffeur" statt "Friseur", "Beiz" statt "Kneipe", "Velo" statt "Fahrrad", "Natel" statt "Handy". Google.ch priorisiert .ch-Domains.',
+        }} />
         <HelpfulnessWidget articleSlug="local-seo-schweiz" />
         <BlogCTAABTest articleSlug="local-seo-schweiz" position="end" />
       </div>

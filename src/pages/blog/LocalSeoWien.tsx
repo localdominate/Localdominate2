@@ -458,6 +458,31 @@ const LocalSeoWien = () => {
         </div>
       </section>
 
+      <GeoTargetedKeywords config={{
+        city: 'Wien',
+        country: 'AT',
+        districts: [
+          { district: '1. Bezirk (Innere Stadt)', keywords: ['Restaurant 1. Bezirk Wien', 'Anwalt Wien Innenstadt', 'Hotel Stephansplatz'], competition: 'Sehr hoch', tip: 'Tourismus-Keywords mitdenken: "near Stephansdom", englische Varianten' },
+          { district: 'Neubau (7. Bezirk)', keywords: ['Café Neubau Wien', 'Friseur 1070 Wien', 'Boutique Neubaugasse'], competition: 'Hoch', tip: 'Hipster-Viertel: Nachhaltigkeit und lokale Produktion betonen' },
+          { district: 'Josefstadt (8. Bezirk)', keywords: ['Theater Josefstadt Wien', 'Restaurant 1080', 'Zahnarzt Josefstadt'], competition: 'Mittel', tip: 'Kulturviertel: Kulturbezüge und Tradition nutzen' },
+          { district: 'Favoriten (10. Bezirk)', keywords: ['Döner Favoriten Wien', 'Handwerker 1100 Wien', 'Arzt Favoriten'], competition: 'Niedrig', tip: 'Größter Bezirk, wenig SEO-Wettbewerb — Multi-Kulti-Keywords testen' },
+          { district: 'Döbling (19. Bezirk)', keywords: ['Heuriger Döbling', 'Weinlokal Grinzing', 'Arzt Döbling Wien'], competition: 'Niedrig', tip: 'Heurigen-Keywords haben hohes Tourismus-Suchvolumen' },
+        ],
+        topIndustryKeywords: [
+          { industry: 'Gastronomie', icon: '☕', keywords: ['Kaffeehaus Wien', 'Wiener Schnitzel Restaurant', 'Heuriger Wien Grinzing', 'Brunch Wien 1070'] },
+          { industry: 'Gesundheit', icon: '⚕️', keywords: ['Wahlarzt Wien', 'Zahnarzt Wien ohne Wartezeit', 'Physiotherapie Wien 1030', 'Hausarzt Wien 1020'] },
+          { industry: 'Handwerk', icon: '🔧', keywords: ['Installateur Wien Notdienst', 'Elektriker Wien 1100', 'Tischler Wien', 'Maler Wien günstig'] },
+          { industry: 'Recht & Finanzen', icon: '⚖️', keywords: ['Rechtsanwalt Wien Mietrecht', 'Steuerberater Wien KMU', 'Notar Wien 1010', 'Scheidungsanwalt Wien'] },
+        ],
+        seasonalKeywords: [
+          { event: 'Wiener Christkindlmarkt', keywords: ['Christkindlmarkt Wien Rathausplatz', 'Weihnachtsfeier Wien Restaurant', 'Punsch Wien'], timing: 'Optimierung ab September' },
+          { event: 'Wiener Ballsaison', keywords: ['Ball Wien Kleid', 'Friseur Wien Hochsteckfrisur', 'Restaurant Opernball'], timing: 'Optimierung ab November' },
+          { event: 'Donauinselfest', keywords: ['Donauinselfest Wien Anfahrt', 'Restaurant Donauinsel', 'Catering Donauinselfest'], timing: 'Optimierung ab April' },
+        ],
+        localDirectories: ['wien.gv.at', 'herold.at', 'wko.at'],
+        dialektTip: 'Österreichische Begriffe beachten: "Ordinationsassistentin" statt "Sprechstundenhilfe", "Installateur" statt "Klempner", "Jause" statt "Brotzeit". Google unterscheidet .at-Suchen.',
+      }} />
+
       <HelpfulnessWidget articleSlug="local-seo-wien" />
 
       <RelatedCityGuides currentSlug="local-seo-wien" />

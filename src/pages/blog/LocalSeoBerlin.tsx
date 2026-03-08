@@ -798,6 +798,32 @@ Beispiel für Zahnarzt:
         </div>
       </section>
 
+      <GeoTargetedKeywords config={{
+        city: 'Berlin',
+        country: 'DE',
+        districts: [
+          { district: 'Kreuzberg', keywords: ['Friseur Kreuzberg', 'veganes Restaurant Kreuzberg', 'Tattoo Studio Kreuzberg'], competition: 'Hoch', tip: 'Multikulti-Kiez: Mehrsprachige Keywords (Türkisch, Englisch) testen' },
+          { district: 'Prenzlauer Berg', keywords: ['Kinderarzt Prenzlauer Berg', 'Bio-Laden Prenzlauer Berg', 'Yoga Prenzlauer Berg'], competition: 'Hoch', tip: 'Familien-Kiez: Eltern-Keywords und Familien-Services betonen' },
+          { district: 'Charlottenburg', keywords: ['Zahnarzt Charlottenburg', 'Steuerberater Charlottenburg', 'Restaurant Charlottenburg'], competition: 'Mittel', tip: 'Bürgerliches Viertel: Qualität und Tradition hervorheben' },
+          { district: 'Neukölln', keywords: ['Döner Neukölln', 'Handwerker Neukölln', 'Café Neukölln'], competition: 'Niedrig', tip: 'Aufsteigender Kiez: Wenig SEO-Konkurrenz, schnelle Ergebnisse möglich' },
+          { district: 'Mitte', keywords: ['Anwalt Berlin Mitte', 'Hotel Berlin Mitte', 'Coworking Berlin Mitte'], competition: 'Sehr hoch', tip: 'Höchster Wettbewerb — Long-Tail-Keywords und Nischen-Positionierung nötig' },
+          { district: 'Friedrichshain', keywords: ['Bar Friedrichshain', 'Fitnessstudio Friedrichshain', 'Physiotherapie Friedrichshain'], competition: 'Mittel', tip: 'Junges Publikum: Google Maps Bewertungen besonders wichtig' },
+        ],
+        topIndustryKeywords: [
+          { industry: 'Gastronomie', icon: '🍽️', keywords: ['Currywurst Berlin', 'Brunch Berlin Prenzlauer Berg', 'Lieferdienst Berlin Kreuzberg', 'Restaurant Spandauer Vorstadt'] },
+          { industry: 'Handwerk', icon: '🔧', keywords: ['Schlüsseldienst Berlin Notdienst', 'Elektriker Berlin Charlottenburg', 'Maler Berlin günstig', 'Sanitär Berlin Schöneberg'] },
+          { industry: 'Gesundheit', icon: '⚕️', keywords: ['Hausarzt Berlin ohne Termin', 'Zahnarzt Berlin Angstpatienten', 'Osteopath Berlin Mitte', 'Augenarzt Berlin Steglitz'] },
+          { industry: 'Kreativwirtschaft', icon: '🎨', keywords: ['Fotograf Berlin Hochzeit', 'Webdesign Berlin', 'Grafikdesigner Berlin Freelance', 'Tonstudio Berlin'] },
+        ],
+        seasonalKeywords: [
+          { event: 'Berlinale', keywords: ['Berlinale Restaurant Potsdamer Platz', 'Hotel Berlinale Berlin', 'Catering Filmbranche Berlin'], timing: 'Optimierung ab Dezember' },
+          { event: 'Weihnachtsmärkte', keywords: ['Weihnachtsmarkt Gendarmenmarkt', 'Weihnachtsfeier Berlin Restaurant', 'Geschenke kaufen Berlin'], timing: 'Optimierung ab September' },
+          { event: 'Festival of Lights', keywords: ['Festival of Lights Berlin Restaurant', 'Abendessen Brandenburger Tor', 'Stadtführung Berlin Lichterfest'], timing: 'Optimierung ab August' },
+        ],
+        localDirectories: ['berlin.de', 'meinestadt.de/berlin', 'tip-berlin.de'],
+        dialektTip: 'Berlinerisch hat weniger SEO-Relevanz als Bayerisch, aber "Kiez" statt "Viertel" und "Späti" statt "Kiosk" haben eigenes Suchvolumen.',
+      }} />
+
       <HelpfulnessWidget articleSlug="local-seo-berlin" />
     </ArticleLayout>
   );

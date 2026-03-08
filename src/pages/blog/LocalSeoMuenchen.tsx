@@ -814,6 +814,32 @@ const LocalSeoMuenchen = () => {
         </div>
       </section>
 
+      <GeoTargetedKeywords config={{
+        city: 'München',
+        country: 'DE',
+        districts: [
+          { district: 'Schwabing', keywords: ['Friseur Schwabing', 'Restaurant Schwabing', 'Yoga Schwabing'], competition: 'Hoch', tip: 'Szene-Viertel: Lifestyle- und Premium-Positionierung nutzen' },
+          { district: 'Sendling', keywords: ['Handwerker Sendling', 'Kinderarzt Sendling', 'Bäckerei Sendling'], competition: 'Mittel', tip: 'Familien-Stadtteil: familienfreundliche Angebote hervorheben' },
+          { district: 'Haidhausen', keywords: ['Café Haidhausen', 'Boutique Haidhausen', 'Zahnarzt Haidhausen'], competition: 'Hoch', tip: 'Gehobenes Viertel am Wiener Platz: Qualität betonen' },
+          { district: 'Bogenhausen', keywords: ['Steuerberater Bogenhausen', 'Arzt Bogenhausen', 'Restaurant Bogenhausen'], competition: 'Mittel', tip: 'Wohlhabendes Viertel: B2B und Premium-Services' },
+          { district: 'Giesing', keywords: ['Schlüsseldienst Giesing', 'Pizza Giesing', 'Friseur Giesing'], competition: 'Niedrig', tip: 'Aufsteigendes Viertel mit wenig SEO-Wettbewerb — früh positionieren' },
+          { district: 'Pasing', keywords: ['Optiker Pasing', 'Tierarzt Pasing', 'Maler Pasing'], competition: 'Niedrig', tip: 'Eigenständiges Zentrum im Westen: lokale Identität nutzen' },
+        ],
+        topIndustryKeywords: [
+          { industry: 'Gastronomie', icon: '🍺', keywords: ['Biergarten München', 'Wirtshaus Schwabing', 'Brunch München Süd', 'Lieferdienst München'] },
+          { industry: 'Handwerk', icon: '🔧', keywords: ['Elektriker München Notdienst', 'Schreiner München', 'Sanitär München Sendling', 'Maler München günstig'] },
+          { industry: 'Gesundheit', icon: '⚕️', keywords: ['Zahnarzt München Angstpatienten', 'HNO München Schwabing', 'Physiotherapie München Ost', 'Hausarzt München ohne Termin'] },
+          { industry: 'Recht & Finanzen', icon: '⚖️', keywords: ['Anwalt Mietrecht München', 'Steuerberater München Freelancer', 'Notar München Innenstadt', 'Scheidungsanwalt München'] },
+        ],
+        seasonalKeywords: [
+          { event: 'Oktoberfest / Wiesn', keywords: ['Restaurant Oktoberfest München', 'Tracht kaufen München', 'Wiesn Friseur München'], timing: 'Optimierung ab Juli' },
+          { event: 'Christkindlmarkt', keywords: ['Weihnachtsfeier München Restaurant', 'Geschenke kaufen München', 'Christkindlmarkt Schwabing'], timing: 'Optimierung ab September' },
+          { event: 'Starkbierfest', keywords: ['Starkbierfest München', 'Nockherberg Reservierung', 'Fastenzeit Brunch München'], timing: 'Optimierung ab Januar' },
+        ],
+        localDirectories: ['muenchen.de', 'meinestadt.de/muenchen', 'muenchner-merkur.de'],
+        dialektTip: 'Bayerische Begriffe wie "Wirtshaus", "Brotzeit", "Leberkäs" haben eigenes Suchvolumen. Nutze beide Varianten (Hochdeutsch + Dialekt) für maximale Abdeckung.',
+      }} />
+
       <HelpfulnessWidget articleSlug="local-seo-muenchen" />
     </ArticleLayout>
   );
