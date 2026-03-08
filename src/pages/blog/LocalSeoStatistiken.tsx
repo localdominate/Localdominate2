@@ -150,7 +150,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 1: General Local SEO Stats */}
       <section id="ueberblick">
-        <h2>Local SEO in Zahlen: Die wichtigsten Kennzahlen</h2>
+        <h2>Wie viele Suchen haben lokale Absicht?</h2>
         <p>
           Fast die Hälfte aller Google-Suchen hat eine lokale Kaufabsicht. Wer als lokales Unternehmen 
           nicht in den Top 3 der lokalen Ergebnisse erscheint, verliert den Großteil potenzieller Kunden. 
