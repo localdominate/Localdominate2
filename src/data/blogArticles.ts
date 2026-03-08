@@ -3981,6 +3981,48 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["local seo statistiken", "local seo daten", "local seo benchmarks", "ranking faktoren 2026", "bewertungsstatistiken", "lokale suche zahlen", "google business profil statistiken", "branchenspezifische seo daten"],
     featured: true,
   },
+  {
+    slug: "faq-hub",
+    de: { title: "FAQ Hub: Alle Local SEO Fragen beantwortet", metaTitle: "FAQ Hub Local SEO | 50+ Antworten", metaDescription: "50+ häufig gestellte Fragen zu Local SEO — von Grundlagen über Google Business Profil bis AI-Optimierung. Sofortige Antworten.", excerpt: "Alle FAQ zu Local SEO an einem Ort: Grundlagen, GBP, Bewertungen, Technik, AI und Content.", category: "Ressourcen" },
+    en: { title: "FAQ Hub: All Local SEO Questions Answered", metaTitle: "FAQ Hub Local SEO | 50+ Answers", metaDescription: "50+ frequently asked questions about Local SEO — from basics to AI optimization. Instant answers.", excerpt: "All Local SEO FAQs in one place: basics, GBP, reviews, tech, AI and content.", category: "Resources" },
+    readingTime: 15, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "❓", keywords: ["local seo faq", "local seo fragen", "google business profil faq", "bewertungen faq", "seo fragen antworten"], featured: false
+  },
+  {
+    slug: "faq-local-seo-grundlagen",
+    de: { title: "FAQ: Local SEO Grundlagen", metaTitle: "FAQ Local SEO Grundlagen | 10 Antworten", metaDescription: "Die 10 häufigsten Fragen zu Local SEO Grundlagen: Kosten, Dauer, Unterschiede und erste Schritte.", excerpt: "Grundlegende Fragen zu Local SEO beantwortet.", category: "Ressourcen" },
+    en: { title: "FAQ: Local SEO Basics", metaTitle: "FAQ Local SEO Basics | 10 Answers", metaDescription: "The 10 most common Local SEO basic questions answered.", excerpt: "Basic Local SEO questions answered.", category: "Resources" },
+    readingTime: 8, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "🏠", keywords: ["local seo grundlagen faq", "was ist local seo", "local seo kosten", "local seo dauer"], featured: false
+  },
+  {
+    slug: "faq-google-business-profil",
+    de: { title: "FAQ: Google Business Profil", metaTitle: "FAQ Google Business Profil | 10 Antworten", metaDescription: "10 häufig gestellte Fragen zum Google Business Profil: Einrichtung, Verifizierung, Kategorien und Troubleshooting.", excerpt: "Alles zu GBP: Einrichtung, Optimierung, Probleme.", category: "Ressourcen" },
+    en: { title: "FAQ: Google Business Profile", metaTitle: "FAQ Google Business Profile | 10 Answers", metaDescription: "10 frequently asked questions about Google Business Profile.", excerpt: "All about GBP: setup, optimization, troubleshooting.", category: "Resources" },
+    readingTime: 8, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "📍", keywords: ["google business profil faq", "gbp fragen", "google maps eintrag faq"], featured: false
+  },
+  {
+    slug: "faq-bewertungen-reputation",
+    de: { title: "FAQ: Bewertungen & Reputation", metaTitle: "FAQ Google Bewertungen | 8 Antworten", metaDescription: "8 häufig gestellte Fragen zu Google-Bewertungen: Mehr bekommen, negative managen, Ranking-Einfluss.", excerpt: "Bewertungen einholen, beantworten und managen.", category: "Ressourcen" },
+    en: { title: "FAQ: Reviews & Reputation", metaTitle: "FAQ Google Reviews | 8 Answers", metaDescription: "8 frequently asked questions about Google reviews.", excerpt: "Getting, responding to and managing reviews.", category: "Resources" },
+    readingTime: 6, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "⭐", keywords: ["google bewertungen faq", "bewertungen bekommen faq", "negative bewertungen faq"], featured: false
+  },
+  {
+    slug: "faq-technisches-seo",
+    de: { title: "FAQ: Technisches SEO", metaTitle: "FAQ Technisches Local SEO | 10 Antworten", metaDescription: "10 häufig gestellte Fragen zu Schema Markup, Core Web Vitals, NAP-Konsistenz und Mobile-First.", excerpt: "Schema, CWV, NAP, Mobile — technische Fragen beantwortet.", category: "Ressourcen" },
+    en: { title: "FAQ: Technical SEO", metaTitle: "FAQ Technical Local SEO | 10 Answers", metaDescription: "10 frequently asked questions about schema markup, core web vitals, NAP consistency.", excerpt: "Schema, CWV, NAP, mobile — technical questions answered.", category: "Resources" },
+    readingTime: 8, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "⚙️", keywords: ["technisches seo faq", "schema markup faq", "core web vitals faq", "nap konsistenz faq"], featured: false
+  },
+  {
+    slug: "faq-ai-zukunft-local-seo",
+    de: { title: "FAQ: AI & Zukunft im Local SEO", metaTitle: "FAQ AI Local SEO | 8 Antworten", metaDescription: "8 häufig gestellte Fragen zu AI Overviews, GEO, Voice Search und der Zukunft der lokalen Suche.", excerpt: "AI Overviews, GEO, Voice Search — Zukunftsfragen beantwortet.", category: "Ressourcen" },
+    en: { title: "FAQ: AI & Future of Local SEO", metaTitle: "FAQ AI Local SEO | 8 Answers", metaDescription: "8 frequently asked questions about AI Overviews, GEO, Voice Search.", excerpt: "AI Overviews, GEO, Voice Search — future questions answered.", category: "Resources" },
+    readingTime: 7, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "🤖", keywords: ["ai local seo faq", "google ai overviews faq", "geo optimierung faq", "voice search faq"], featured: false
+  },
+  {
+    slug: "faq-content-marketing-local-seo",
+    de: { title: "FAQ: Content & Marketing für Local SEO", metaTitle: "FAQ Content Marketing Local SEO | 8 Antworten", metaDescription: "8 häufig gestellte Fragen zu lokalem Content, Linkbuilding, Citations und Content-Strategien.", excerpt: "Content, Linkbuilding, Citations — Marketing-Fragen beantwortet.", category: "Ressourcen" },
+    en: { title: "FAQ: Content & Marketing for Local SEO", metaTitle: "FAQ Content Marketing Local SEO | 8 Answers", metaDescription: "8 frequently asked questions about local content, link building, citations.", excerpt: "Content, link building, citations — marketing questions answered.", category: "Resources" },
+    readingTime: 7, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "✍️", keywords: ["local content marketing faq", "lokales linkbuilding faq", "citations faq"], featured: false
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4097,6 +4139,13 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-vs-organisch",
   "google-maps-seo-vs-organic-seo",
   "ai-search-vs-traditional-search",
+  "faq-hub",
+  "faq-local-seo-grundlagen",
+  "faq-google-business-profil",
+  "faq-bewertungen-reputation",
+  "faq-technisches-seo",
+  "faq-ai-zukunft-local-seo",
+  "faq-content-marketing-local-seo",
 ]);
 
 // Get only published articles (with pages), deduplicated
