@@ -303,7 +303,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   physiotherapie: {
     industry: "Physiotherapie",
-    quickWin: "Behandlungsspezifische Keywords wie „Manuelle Therapie [Stadt]" konvertieren besser als generische Begriffe.",
+    quickWin: "Behandlungsspezifische Keywords wie 'Manuelle Therapie [Stadt]' konvertieren besser als generische Begriffe.",
     clusters: [
       {
         name: "Praxis + Standort",
