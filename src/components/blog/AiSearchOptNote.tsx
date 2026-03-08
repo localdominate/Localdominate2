@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Bot, Sparkles, Eye, MessageSquare, Mic, FileText, ArrowRight } from "lucide-react";
 
-export interface AiSearchNote {
-  slug: string;
+interface AiSearchNote {
   aiVisibilityTips: string[];
   speakableContent: string;
   llmOptimization: string;
