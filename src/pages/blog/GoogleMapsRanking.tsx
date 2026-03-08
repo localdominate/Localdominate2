@@ -38,7 +38,7 @@ const GoogleMapsRanking = () => {
         p2WithLinks: true
       },
       section2: {
-        title: "Die 7 entscheidenden Ranking-Faktoren",
+        title: "Welche 7 Faktoren bestimmen dein Google Maps Ranking?",
         intro: "Google bewertet lokale Unternehmen nach drei Hauptkriterien:",
         criteria: ["Relevanz", "Entfernung", "Bekanntheit"],
         criteriaEnd: "Diese setzen sich aus verschiedenen Faktoren zusammen:",
