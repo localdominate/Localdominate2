@@ -96,10 +96,10 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </AutoLexikonText>
         </p>
 
-        <h2 id="key-takeaways" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Die wichtigsten Erkenntnisse</h2>
+        <h2 id="key-takeaways" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Ranking verschwunden: Die wichtigsten Erkenntnisse</h2>
         <KeyTakeawaysBox items={keyTakeaways} />
 
-        <h2 id="erste-schritte" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Erste Diagnose-Schritte</h2>
+        <h2 id="erste-schritte" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Erste Diagnose-Schritte bei Ranking-Verlust</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Bevor du in Panik gerätst, prüfe diese grundlegenden Punkte. Oft ist die Ursache schneller gefunden als gedacht:
@@ -107,7 +107,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </p>
 
         <div className="bg-blue-50 rounded-xl p-6 my-8">
-          <h4 className="font-bold text-lg mb-4">🔍 Sofort-Diagnose Checkliste:</h4>
+          <h3 className="font-bold text-lg mb-4">🔍 Ranking-Verlust Sofort-Diagnose Checkliste</h3>
           <div className="space-y-3">
             {[
               "Ist die Website erreichbar? (Serverprobleme ausschließen)",
@@ -125,7 +125,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </div>
         </div>
 
-        <h2 id="algorithmus" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Algorithmus-Updates erkennen</h2>
+        <h2 id="algorithmus" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Algorithmus-Updates als Ranking-Ursache</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Google führt jährlich tausende kleine und mehrere große Updates durch. Große Core Updates werden 
@@ -135,7 +135,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <h4 className="font-bold text-lg mb-3 text-blue-600">📊 Update-Indikatoren</h4>
+            <h3 className="font-bold text-lg mb-3 text-blue-600">📊 Google Update-Indikatoren erkennen</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• Alle Keywords gleichzeitig betroffen</li>
               <li>• Viele Websites berichten ähnliche Probleme</li>
@@ -144,7 +144,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
             </ul>
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <h4 className="font-bold text-lg mb-3 text-green-600">🛠️ Prüftools</h4>
+            <h3 className="font-bold text-lg mb-3 text-green-600">🛠️ SEO-Tools zur Update-Erkennung</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• Moz Algorithm History</li>
               <li>• Semrush Sensor</li>
@@ -155,14 +155,14 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </div>
 
         <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8 rounded-r-lg">
-          <h4 className="font-bold text-yellow-800 mb-2">Nach einem Core Update</h4>
+          <h3 className="font-bold text-yellow-800 mb-2">Ranking nach einem Google Core Update stabilisieren</h3>
           <p className="text-yellow-700">
             Warte mindestens 2 Wochen ab, bevor du drastische Änderungen machst. Updates "rollen" oft über mehrere Wochen aus 
             und Rankings können sich von selbst stabilisieren.
           </p>
         </div>
 
-        <h2 id="technische-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Technische Website-Probleme</h2>
+        <h2 id="technische-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Technische Website-Probleme als Ranking-Killer</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Technische Fehler sind die häufigste und glücklicherweise am einfachsten zu behebende Ursache:
@@ -171,28 +171,28 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
 
         <div className="space-y-4 my-8">
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">🚫 Indexierungsprobleme</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">🚫 Indexierungsprobleme erkennen</h3>
             <p className="text-gray-700 mb-2">robots.txt blockiert Googlebot, noindex-Tags auf wichtigen Seiten, oder Seiten aus Sitemap entfernt.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Search Console → Abdeckung prüfen, robots.txt validieren</p>
           </div>
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">🐌 Ladezeit-Probleme</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">🐌 Ladezeit & Core Web Vitals Probleme</h3>
             <p className="text-gray-700 mb-2">Server langsam, große Bilder, zu viele Skripte. Core Web Vitals im roten Bereich.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> PageSpeed Insights prüfen, Bilder komprimieren, Caching aktivieren</p>
           </div>
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">🔗 Broken Redirects</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">🔗 Fehlerhafte Weiterleitungen & Redirect-Chains</h3>
             <p className="text-gray-700 mb-2">Nach Website-Migration fehlen Weiterleitungen oder Redirect-Chains entstanden.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Screaming Frog Crawl, alle 301-Redirects prüfen</p>
           </div>
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">📱 Mobile-Probleme</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">📱 Mobile-Usability Probleme</h3>
             <p className="text-gray-700 mb-2">Nach Design-Änderungen ist die mobile Version nicht mehr nutzbar.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Mobile-Friendly Test, auf echten Geräten testen</p>
           </div>
         </div>
 
-        <h2 id="gbp-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Business Profile Ursachen</h2>
+        <h2 id="gbp-probleme" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Business Profil als Ursache für Ranking-Verlust</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Für lokale Rankings ist dein Google Business Profile entscheidend. Diese GBP-Probleme führen zu sofortigem Ranking-Verlust:
@@ -201,7 +201,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-6 my-8">
           <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-3">⚠️ Häufige GBP-Ursachen</h4>
+            <h3 className="font-bold text-lg mb-3">⚠️ Häufige GBP-Probleme bei Ranking-Verlust</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• Profil wurde suspendiert</li>
               <li>• Verifizierung abgelaufen</li>
@@ -212,7 +212,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
             </ul>
           </div>
           <div className="bg-white border-2 border-green-200 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-3">✅ Sofortmaßnahmen</h4>
+            <h3 className="font-bold text-lg mb-3">✅ GBP-Sofortmaßnahmen bei Ranking-Einbruch</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• GBP-Dashboard auf Warnungen prüfen</li>
               <li>• Alle Informationen auf Aktualität prüfen</li>
@@ -223,7 +223,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </div>
         </div>
 
-        <h2 id="konkurrenz" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Konkurrenz-Analyse</h2>
+        <h2 id="konkurrenz" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Lokale Konkurrenz-Analyse bei Ranking-Verlust</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Manchmal hast du nichts falsch gemacht – deine Konkurrenz hat einfach aufgeholt oder dich überholt:
@@ -231,7 +231,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </p>
 
         <div className="bg-purple-50 rounded-xl p-6 my-8">
-          <h4 className="font-bold text-lg mb-4">Konkurrenz-Check Checkliste:</h4>
+          <h3 className="font-bold text-lg mb-4">SEO Konkurrenz-Check Checkliste</h3>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <span className="text-purple-600 font-bold">1.</span>
@@ -252,7 +252,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </ul>
         </div>
 
-        <h2 id="penalty" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Manuelle Abstrafung erkennen</h2>
+        <h2 id="penalty" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Penalty & manuelle Abstrafung erkennen</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Manuelle Penalties sind selten, aber schwerwiegend. So erkennst und behebst du sie:
@@ -260,7 +260,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </p>
 
         <div className="bg-red-100 border-l-4 border-red-600 p-6 my-8 rounded-r-lg">
-          <h4 className="font-bold text-red-800 mb-3">🔴 So prüfst du auf manuelle Maßnahmen:</h4>
+          <h3 className="font-bold text-red-800 mb-3">🔴 Google Search Console: Manuelle Maßnahmen prüfen</h3>
           <ol className="text-red-700 space-y-2">
             <li>1. Öffne Google Search Console</li>
             <li>2. Gehe zu "Sicherheit & manuelle Maßnahmen"</li>
@@ -269,7 +269,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </ol>
         </div>
 
-        <h2 id="wiederherstellung" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Ranking wiederherstellen</h2>
+        <h2 id="wiederherstellung" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Ranking Schritt für Schritt wiederherstellen</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Je nach identifizierter Ursache unterscheidet sich die Wiederherstellungsstrategie:
@@ -277,28 +277,28 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </p>
 
         <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 my-8">
-          <h4 className="font-bold text-lg mb-4">📈 Wiederherstellungs-Roadmap</h4>
+          <h3 className="font-bold text-lg mb-4">📈 Ranking-Wiederherstellung: 90-Tage-Roadmap</h3>
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Woche 1-2: Sofortmaßnahmen</h5>
+              <h4 className="font-bold">Woche 1-2: Technische Sofortmaßnahmen</h4>
               <p className="text-gray-600">Technische Fehler beheben, GBP aktualisieren, kritische Probleme lösen</p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Woche 3-4: Content-Optimierung</h5>
+              <h4 className="font-bold">Woche 3-4: SEO Content-Optimierung</h4>
               <p className="text-gray-600">Betroffene Seiten verbessern, neue Inhalte erstellen, interne Verlinkung stärken</p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Monat 2-3: Autorität aufbauen</h5>
+              <h4 className="font-bold">Monat 2-3: Domain-Autorität aufbauen</h4>
               <p className="text-gray-600">Backlinks aufbauen, lokale PR, mehr Bewertungen sammeln</p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Monat 4+: Monitoring</h5>
+              <h4 className="font-bold">Monat 4+: SEO-Monitoring & Erfolgskontrolle</h4>
               <p className="text-gray-600">Rankings tracken, kontinuierlich optimieren, Erfolge messen</p>
             </div>
           </div>
         </div>
 
-        <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen</h2>
+        <h2 id="faq" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Häufige Fragen zu Ranking-Verlusten</h2>
         <BlogFAQSection faqs={faqs} />
 
         <SourcesSection sources={sources} />

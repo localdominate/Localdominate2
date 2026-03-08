@@ -95,7 +95,7 @@ const LocalSeoDuesseldorf = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {stadtteile.map((stadtteil, index) => (
             <div key={index} className="bg-card border border-border rounded-lg p-4">
-              <h4 className="font-semibold text-foreground mb-2">{stadtteil.name}</h4>
+              <h3 className="font-semibold text-foreground mb-2">{stadtteil.name}</h3>
               <div className="flex flex-wrap gap-1">
                 {stadtteil.keywords.map((kw, i) => (
                   <span key={i} className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded">{kw}</span>
@@ -170,7 +170,7 @@ const LocalSeoDuesseldorf = () => {
       <BlogCTAABTest articleSlug="local-seo-duesseldorf" position="end" />
 
       <section id="faq" className="mb-12 scroll-mt-20">
-        <h2 className="text-2xl font-bold mb-6">Häufige Fragen zu Local SEO in Düsseldorf</h2>
+        <h2 className="text-2xl font-bold mb-6">FAQ: Local SEO in Düsseldorf</h2>
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((faq, index) => (
             <AccordionItem key={index} value={`faq-${index}`}>

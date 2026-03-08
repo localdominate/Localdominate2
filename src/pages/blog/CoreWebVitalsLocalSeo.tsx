@@ -153,7 +153,7 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-muted/50 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2">Wichtig zu wissen</h4>
+            <h3 className="font-semibold mb-2">Von FID zu INP: Der neue Interaktivitäts-Standard</h3>
             <p className="text-muted-foreground">
               Im März 2024 hat Google <strong>FID (First Input Delay) durch INP</strong> ersetzt. INP misst alle Interaktionen während des gesamten Besuchs, nicht nur die erste. Wenn Ihre alten Ressourcen noch von FID sprechen – INP ist der neue Standard.
             </p>
@@ -203,7 +203,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card>
             <CardContent className="p-4">
               <Image className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Bilder optimieren</h4>
+              <h4 className="font-semibold mb-2">Bilder für schnelleren LCP optimieren</h4>
               <ul className="text-sm space-y-1 text-muted-foreground">
                 <li>• WebP/AVIF-Format verwenden</li>
                 <li>• Bilder komprimieren (TinyPNG, ShortPixel)</li>
@@ -216,7 +216,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card>
             <CardContent className="p-4">
               <Code className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Server & Code optimieren</h4>
+              <h4 className="font-semibold mb-2">Server & Code für besseren LCP optimieren</h4>
               <ul className="text-sm space-y-1 text-muted-foreground">
                 <li>• TTFB unter 800ms halten</li>
                 <li>• Kritisches CSS inline einbinden</li>
@@ -232,7 +232,7 @@ const CoreWebVitalsLocalSeo = () => {
           <CardContent className="p-4">
             <h4 className="font-semibold mb-2 flex items-center gap-2">
               <CheckCircle2 className="h-5 w-5 text-primary" />
-              Praxis-Tipp: Hero-Bild preloaden
+              Praxis-Tipp: Hero-Bild für LCP preloaden
             </h4>
             <div className="bg-muted rounded p-3 text-sm font-mono">
               &lt;link rel="preload" as="image" href="/hero.webp" /&gt;
@@ -302,17 +302,17 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-orange-50 border-orange-200 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2 flex items-center gap-2">
+            <h3 className="font-semibold mb-2 flex items-center gap-2">
               <AlertTriangle className="h-5 w-5 text-orange-500" />
-              Typisches CLS-Problem
-            </h4>
+              Typisches CLS-Problem bei lokalen Websites
+            </h3>
             <p className="text-muted-foreground">
               Nutzer will auf "Termin buchen" klicken → Werbebanner lädt → Button springt nach unten → Nutzer klickt auf Werbung statt Button = Frustration und verlorene Conversion.
             </p>
           </CardContent>
         </Card>
 
-        <h3 className="text-xl font-semibold mb-3">Häufige CLS-Ursachen und Lösungen</h3>
+        <h3 className="text-xl font-semibold mb-3">CLS-Ursachen und Lösungen für lokale Websites</h3>
         <div className="overflow-x-auto mb-6">
           <table className="w-full border-collapse">
             <thead>
@@ -349,13 +349,13 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Messen */}
       <section id="messen">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Core Web Vitals messen</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Core Web Vitals messen & analysieren</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <Card>
             <CardContent className="p-4">
               <Gauge className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">PageSpeed Insights</h4>
+              <h3 className="font-semibold mb-2">PageSpeed Insights für Web Vitals</h3>
               <p className="text-sm text-muted-foreground mb-2">
                 Googles offizielles Tool zeigt Lab- und Field-Daten sowie konkrete Optimierungsvorschläge.
               </p>
@@ -365,7 +365,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card>
             <CardContent className="p-4">
               <Monitor className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Google Search Console</h4>
+              <h3 className="font-semibold mb-2">Google Search Console Web Vitals Report</h3>
               <p className="text-sm text-muted-foreground mb-2">
                 Zeigt Core Web Vitals für alle Ihre Seiten basierend auf echten Nutzerdaten (Field-Daten).
               </p>
@@ -376,7 +376,7 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-muted/50 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2">Lab-Daten vs. Field-Daten</h4>
+            <h3 className="font-semibold mb-2">Lab-Daten vs. Field-Daten: Was zählt für Rankings?</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="font-medium mb-1">Lab-Daten (Lighthouse)</p>
@@ -401,9 +401,9 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Optimierungsstrategien */}
       <section id="optimierung">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Ganzheitliche Optimierungsstrategien</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Ganzheitliche Core Web Vitals Optimierung</h2>
         
-        <h3 className="text-xl font-semibold mb-3">1. Hosting überprüfen</h3>
+        <h3 className="text-xl font-semibold mb-3">1. Web-Hosting für schnelle Ladezeiten</h3>
         <p className="mb-4">
           Günstiges Shared-Hosting ist oft der <strong>größte Bremser</strong>. Für lokale Unternehmen empfehlen wir:
         </p>
@@ -413,12 +413,12 @@ const CoreWebVitalsLocalSeo = () => {
           <li>TTFB (Time to First Byte) unter 800ms</li>
         </ul>
 
-        <h3 className="text-xl font-semibold mb-3">2. Caching aktivieren</h3>
+        <h3 className="text-xl font-semibold mb-3">2. Browser-Caching & Server-Caching aktivieren</h3>
         <p className="mb-4">
           Browser-Caching und Server-Caching reduzieren Ladezeiten für wiederkehrende Besucher drastisch.
         </p>
 
-        <h3 className="text-xl font-semibold mb-3">3. Kritischen Rendering-Pfad optimieren</h3>
+        <h3 className="text-xl font-semibold mb-3">3. Kritischen Rendering-Pfad für LCP optimieren</h3>
         <p className="mb-6">
           Alles, was für den ersten sichtbaren Bildschirminhalt nötig ist, sollte priorisiert laden. Alles andere kann warten.
         </p>
@@ -426,7 +426,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Bedeutung für Local SEO */}
       <section id="local-seo">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Bedeutung für Local SEO</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Core Web Vitals Bedeutung für Local SEO</h2>
         
         <p className="mb-4">
           Core Web Vitals sind für lokale Unternehmen <strong>besonders relevant</strong>:
@@ -436,7 +436,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card className="bg-primary/5">
             <CardContent className="p-4">
               <Smartphone className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Mobile-First</h4>
+              <h3 className="font-semibold mb-2">Mobile-First Indexing & lokale Suchen</h3>
               <p className="text-sm text-muted-foreground">
                 92% der lokalen Suchen kommen vom Smartphone. Mobile Core Web Vitals sind wichtiger als Desktop.
               </p>
@@ -445,7 +445,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card className="bg-primary/5">
             <CardContent className="p-4">
               <Clock className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Notfall-Suchen</h4>
+              <h3 className="font-semibold mb-2">Core Web Vitals bei Notfall-Suchen</h3>
               <p className="text-sm text-muted-foreground">
                 Bei "Zahnarzt Notdienst" oder "Autowerkstatt in der Nähe" zählt jede Sekunde. Langsame Seiten verlieren.
               </p>
@@ -455,10 +455,10 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-muted/50 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2 flex items-center gap-2">
+            <h3 className="font-semibold mb-2 flex items-center gap-2">
               <TrendingUp className="h-5 w-5 text-primary" />
-              Conversion-Impact
-            </h4>
+              Conversion-Impact schnellerer Ladezeiten
+            </h3>
             <p className="text-muted-foreground">
               <strong>1 Sekunde schnellere Ladezeit = 7% mehr Conversions.</strong> Für ein lokales Restaurant mit 1.000 monatlichen Website-Besuchern bedeutet das potenziell 70 zusätzliche Reservierungen pro Monat.
             </p>
@@ -468,7 +468,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* Mobile Performance */}
       <section id="mobile">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">Mobile Performance optimieren</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Mobile Performance für lokale SEO optimieren</h2>
         
         <p className="mb-4">
           Google verwendet <strong>Mobile-First-Indexing</strong>. Ihre mobilen Core Web Vitals sind entscheidend:
@@ -485,7 +485,7 @@ const CoreWebVitalsLocalSeo = () => {
 
       {/* FAQ Section */}
       <section id="faq" className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">Häufig gestellte Fragen</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">FAQ: Core Web Vitals & Local SEO</h2>
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((faq, index) => (
             <AccordionItem key={index} value={`faq-${index}`}>
