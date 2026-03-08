@@ -261,6 +261,7 @@ export const HUB_DEFINITIONS: HubDefinition[] = [
       "local-seo-voice-search",
       "e-e-a-t-lokale-unternehmen",
       "entity-seo-guide",
+      "semantic-seo-topical-authority",
     ],
   },
   {

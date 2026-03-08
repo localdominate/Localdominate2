@@ -11,6 +11,7 @@ const groups: HubArticleGroup[] = [
       "ai-search-optimization-2026",
       "website-content-ai-suchmaschinen",
       "entity-seo-guide",
+      "semantic-seo-topical-authority",
     ],
   },
   {
