@@ -9,6 +9,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
+import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -636,6 +637,12 @@ const LocalSeoHandwerker = () => {
         industries={["handwerker"]}
         title="E-Mail-Vorlagen fuer Handwerker-Bewertungen"
         description="Professionelle E-Mail-Templates nach Auftragsabschluss und saisonale Aktionen."
+      />
+
+      <SmsReviewTemplates
+        industries={["handwerker"]}
+        title="SMS-Vorlagen fuer Handwerker-Bewertungen"
+        description="Kurze SMS-Templates nach Auftragsabschluss – direkt und effektiv."
       />
 
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />

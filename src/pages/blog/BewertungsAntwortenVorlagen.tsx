@@ -8,6 +8,7 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
+import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -371,6 +372,11 @@ const BewertungsAntwortenVorlagen = () => {
       <ReviewEmailTemplates
         title="E-Mail-Vorlagen: Bewertungen aktiv anfragen"
         description="Proaktiv Bewertungen sammeln mit professionellen E-Mail-Templates. Betreffzeile + Text – einfach anpassen und versenden."
+      />
+
+      <SmsReviewTemplates
+        title="SMS-Vorlagen: Bewertungen per SMS anfragen"
+        description="Der schnellste Kanal mit 98% Oeffnungsrate. Kopierfertige SMS-Templates mit Zeichenzaehler."
       />
 
       <HelpfulnessWidget articleSlug="bewertungs-antworten-vorlagen" />
