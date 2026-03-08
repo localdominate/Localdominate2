@@ -787,24 +787,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-roadmap-90-tage",
     de: {
-      title: "Local SEO Roadmap: Dein 90-Tage-Plan für lokale Sichtbarkeit",
-      metaTitle: "Local SEO Roadmap | 90-Tage-Plan mit Gantt-Timeline 2026",
-      metaDescription: "Strukturierte 90-Tage-Roadmap für lokales SEO: 12 Wochen, 6 Phasen, 36+ Aufgaben. Visuelle Timeline, KPI-Meilensteine und kopierbares Template.",
-      excerpt: "Woche-für-Woche Roadmap für Local SEO: Von der Analyse über GBP-Optimierung bis zum messbaren Ergebnis in 90 Tagen.",
+      title: "Local SEO Wochenplan: 12-Wochen-Timeline mit Gantt-Diagramm & KPI-Meilensteinen",
+      metaTitle: "Local SEO 12-Wochen-Timeline | Gantt & KPIs 2026",
+      metaDescription: "Visueller 12-Wochen-Wochenplan für Local SEO: Gantt-Timeline, wöchentliche Meilensteine und KPI-Checkpoints für messbaren Fortschritt.",
+      excerpt: "Woche für Woche zum Ziel: Visueller 12-Wochen-Wochenplan mit Gantt-Diagramm und messbaren KPI-Meilensteinen.",
       category: "Tools & Ressourcen"
     },
     en: {
-      title: "Local SEO Roadmap: Your 90-Day Plan for Local Visibility",
-      metaTitle: "Local SEO Roadmap | 90-Day Plan with Gantt Timeline 2026",
-      metaDescription: "Structured 90-day roadmap for local SEO: 12 weeks, 6 phases, 36+ tasks. Visual timeline, KPI milestones and copyable template.",
-      excerpt: "Week-by-week roadmap for local SEO: From analysis to GBP optimization to measurable results in 90 days.",
+      title: "Local SEO Weekly Plan: 12-Week Timeline with Gantt Chart & KPI Milestones",
+      metaTitle: "Local SEO 12-Week Timeline | Gantt & KPIs 2026",
+      metaDescription: "Visual 12-week plan for local SEO: Gantt timeline, weekly milestones and KPI checkpoints for measurable progress.",
+      excerpt: "Week by week to the goal: Visual 12-week plan with Gantt chart and measurable KPI milestones.",
       category: "Tools & Resources"
     },
     readingTime: 12,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "🗺️",
-    keywords: ["local seo roadmap", "90 tage plan", "seo fahrplan", "local seo timeline", "seo wochenplan", "lokale seo roadmap"],
+    keywords: ["local seo wochenplan", "12 wochen timeline", "seo gantt diagramm", "local seo meilensteine", "seo kpi tracking"],
     featured: false
   },
 
