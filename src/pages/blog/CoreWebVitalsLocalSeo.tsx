@@ -413,7 +413,7 @@ const CoreWebVitalsLocalSeo = () => {
           <li>TTFB (Time to First Byte) unter 800ms</li>
         </ul>
 
-        <h3 className="text-xl font-semibold mb-3">2. Caching aktivieren</h3>
+        <h3 className="text-xl font-semibold mb-3">2. Browser-Caching & Server-Caching aktivieren</h3>
         <p className="mb-4">
           Browser-Caching und Server-Caching reduzieren Ladezeiten für wiederkehrende Besucher drastisch.
         </p>
