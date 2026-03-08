@@ -504,7 +504,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   doener: {
     industry: "Döner & Imbiss",
-    quickWin: "„Bester Döner [Stadt]" und „Döner Lieferservice [Stadt]" sind die wichtigsten Keywords für Imbissbetriebe.",
+    quickWin: "'Bester Döner [Stadt]' und 'Döner Lieferservice [Stadt]' sind die wichtigsten Keywords für Imbissbetriebe.",
     clusters: [
       {
         name: "Imbiss + Standort",
