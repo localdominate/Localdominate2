@@ -343,10 +343,10 @@ const ContentFormattingGuidelines = () => {
           {/* Pre-publish checklist */}
           <section className="mt-12">
             <div className="border border-border rounded-2xl overflow-hidden">
-              <div className="bg-gradient-to-r from-emerald-500/10 via-primary/5 to-cyan-500/10 border-b border-border px-6 py-4">
+              <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-accent/10 border-b border-border px-6 py-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/15 flex items-center justify-center">
-                    <Search className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                  <div className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center">
+                    <Search className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h2 className="font-bold text-foreground text-lg">
