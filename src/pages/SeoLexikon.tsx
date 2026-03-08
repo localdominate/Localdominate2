@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
