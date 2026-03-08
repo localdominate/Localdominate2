@@ -125,7 +125,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </div>
         </div>
 
-        <h2 id="algorithmus" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Algorithmus-Updates erkennen</h2>
+        <h2 id="algorithmus" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Algorithmus-Updates als Ranking-Ursache</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Google führt jährlich tausende kleine und mehrere große Updates durch. Große Core Updates werden 
