@@ -8,6 +8,7 @@ import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
+import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
