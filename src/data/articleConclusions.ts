@@ -2038,6 +2038,28 @@ export const articleConclusions: Record<string, ArticleConclusionData> = {
       ]
     }
   },
+  "ai-search-vs-traditional-search": {
+    de: {
+      summary: "AI-Suche und traditionelle Suche koexistieren — aber die Gewichte verschieben sich. Für lokale Unternehmen heißt das: Traditionelles SEO bleibt die Basis, aber GEO (Generative Engine Optimization) wird zum entscheidenden Differenzierungsfaktor. Wer beides beherrscht, dominiert die lokale Suche 2026 und darüber hinaus.",
+      nextSteps: [
+        "Implementiere LocalBusiness und FAQPage Schema Markup auf deiner Website",
+        "Erstelle eine llms.txt Datei mit Zitier-Anweisungen für AI-Crawler",
+        "Optimiere Content für AI: Fakten-erste Formulierung, klare Listen, zitierbare Aussagen",
+        "Stärke E-E-A-T: Autorenprofile, Quellenangaben und Expertise sichtbar machen",
+        "Lies unseren AI Search Optimization Guide für die komplette GEO-Strategie"
+      ]
+    },
+    en: {
+      summary: "AI search and traditional search coexist — but the balance is shifting. For local businesses, this means: traditional SEO remains the foundation, but GEO (Generative Engine Optimization) becomes the key differentiator. Mastering both means dominating local search in 2026 and beyond.",
+      nextSteps: [
+        "Implement LocalBusiness and FAQPage schema markup on your website",
+        "Create an llms.txt file with citation instructions for AI crawlers",
+        "Optimize content for AI: facts-first writing, clear lists, quotable statements",
+        "Strengthen E-E-A-T: make author profiles, sources and expertise visible",
+        "Read our AI Search Optimization Guide for the complete GEO strategy"
+      ]
+    }
+  },
 };
 
 /**

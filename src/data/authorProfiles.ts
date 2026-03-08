@@ -380,6 +380,7 @@ export const ARTICLE_AUTHORS: Record<string, AuthorId> = {
   "semantic-seo-topical-authority": "sarah-weber",
   "entity-seo-guide": "sarah-weber",
   "website-content-ai-suchmaschinen": "sarah-weber",
+  "ai-search-vs-traditional-search": "sarah-weber",
   "kostenloses-seo-guide": "sarah-weber",
   "lokale-seo-fuer-neugruender": "sarah-weber",
   "lokale-events-marketing": "sarah-weber",

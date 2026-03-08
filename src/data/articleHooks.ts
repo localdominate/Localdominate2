@@ -442,6 +442,10 @@ export const articleHooks: Record<string, ArticleHookData> = {
     de: "Das Local Pack erhält 42 % aller Klicks bei lokalen Suchen — doch die organischen Ergebnisse darunter bringen den langfristigen Traffic. Wer versteht, wie sich beide Kanäle ergänzen, maximiert seine lokale Sichtbarkeit.",
     en: "The Local Pack captures 42% of all clicks for local searches — yet organic results below bring long-term traffic. Understanding how both channels complement each other maximizes your local visibility."
   },
+  "ai-search-vs-traditional-search": {
+    de: "40 % der Google-Suchen zeigen bereits AI Overviews — und Nutzer klicken immer seltener auf Websites. Wer als lokales Unternehmen nur auf klassisches SEO setzt, verliert Sichtbarkeit an die neue AI-Suche.",
+    en: "40% of Google searches already show AI Overviews — and users click on websites less and less. Local businesses relying solely on traditional SEO are losing visibility to the new AI search."
+  },
 };
 
 /**
