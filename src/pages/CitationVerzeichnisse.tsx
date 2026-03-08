@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import {
   Table,
   TableHeader,
@@ -195,9 +196,7 @@ const CitationVerzeichnisse = () => {
         {/* Hero */}
         <section className="relative bg-gradient-to-br from-primary/5 via-background to-primary/10 py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-5xl">
-            <Link to="/blog/local-citations-2025" className="inline-flex items-center gap-1 text-sm text-primary hover:underline mb-4">
-              ← {isDE ? "Zurück zum Citations-Guide" : "Back to Citations Guide"}
-            </Link>
+            <SiteBreadcrumbs includeSchema />
             <div className="flex items-start gap-4 mb-6">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Globe className="w-7 h-7 text-primary" />

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight, BookOpen, Sparkles } from "lucide-react";
+import { BookOpen, Sparkles } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
@@ -8,14 +8,7 @@ import ArticleCard from "@/components/blog/ArticleCard";
 import CategoryFilter from "@/components/blog/CategoryFilter";
 import { getAllArticles, getCategories, getArticleCountByCategory } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 const Blog = () => {
   const { language } = useLanguage();
@@ -104,22 +97,7 @@ const Blog = () => {
       </header>
 
       <main className="container max-w-5xl py-8 px-4">
-        {/* Breadcrumb */}
-        <Breadcrumb className="mb-6">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Home</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <ChevronRight className="h-4 w-4" />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbPage>Blog</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <SiteBreadcrumbs includeSchema />
 
         {/* Hero */}
         <div className="text-center mb-10">

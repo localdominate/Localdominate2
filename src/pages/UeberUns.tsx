@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Award, Users, Target, TrendingUp, CheckCircle, MapPin, Star } from "lucide-react";
+import { Award, Users, Target, TrendingUp, CheckCircle, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 const UeberUns = () => {
   const { language } = useLanguage();
@@ -74,12 +75,7 @@ const UeberUns = () => {
         </header>
 
         <main className="container max-w-3xl py-12 px-4">
-          <Link to="/">
-            <Button variant="ghost" className="mb-8 group">
-              <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-              {language === "de" ? "Zurück zur Startseite" : "Back to Homepage"}
-            </Button>
-          </Link>
+          <SiteBreadcrumbs includeSchema />
 
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{title}</h1>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl">
