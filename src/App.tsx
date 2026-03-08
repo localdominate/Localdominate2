@@ -205,6 +205,7 @@ const App = () => (
                 <Route path="/admin/ab-test-zentrale" element={<ABTestZentrale />} />
                 <Route path="/admin/reset-password" element={<ResetPassword />} />
                 <Route path="/admin/update-password" element={<UpdatePassword />} />
+                <Route path="/admin/content-calendar" element={<ContentUpdateCalendar />} />
                 <Route path="/restaurant-marketing" element={<RestaurantMarketing />} />
                 <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
                 <Route path="/arztpraxis-marketing" element={<ArztpraxisMarketing />} />
