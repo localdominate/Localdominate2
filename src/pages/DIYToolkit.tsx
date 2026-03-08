@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import { 
   Download, 
   FileText, 
