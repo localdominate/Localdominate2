@@ -376,7 +376,7 @@ const WieGoogleMapsRankingFunktioniert = () => {
 
         <h3>Beispiel 1: Pizzeria in Munchen</h3>
         <div className="bg-muted/50 rounded-xl p-6 my-4">
-          <p className="text-sm text-muted-foreground mb-3">Suchanfrage: <strong>„beste Pizza Munchen Schwabing"</strong></p>
+          <p className="text-sm text-muted-foreground mb-3">Suchanfrage: <strong>&ldquo;beste Pizza Munchen Schwabing&rdquo;</strong></p>
           <Table>
             <TableHeader>
               <TableRow>
