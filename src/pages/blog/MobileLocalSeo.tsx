@@ -84,7 +84,7 @@ const MobileLocalSeo = () => {
 
       {/* Mobile-First Indexing */}
       <section id="mobile-first" className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">Mobile-First Indexing verstehen</h2>
+        <h2 className="text-3xl font-bold mb-6">Was bedeutet Mobile-First Indexing für dein Unternehmen?</h2>
         
         <p className="mb-6">
           Seit März 2021 verwendet Google ausschließlich <strong>Mobile-First Indexing</strong> für alle Websites. Das bedeutet: Google betrachtet primär die mobile Version deiner Website, um Ranking und Indexierung zu bestimmen. Die Desktop-Version ist nur noch sekundär relevant.
