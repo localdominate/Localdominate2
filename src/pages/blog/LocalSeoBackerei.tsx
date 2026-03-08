@@ -7,6 +7,8 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
+import StatisticBox from "@/components/blog/StatisticBox";
+import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
 import { industryImplementationData } from "@/data/industryImplementationData";
 import IndustryComparisonTable from "@/components/blog/IndustryComparisonTable";
@@ -276,6 +278,9 @@ const LocalSeoBackerei = () => {
       </section>
 
       <BlogCTAABTest articleSlug="local-seo-baeckerei" position="end" />
+
+      {industryStats.baeckerei?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
+      <StatisticBox data={generalLocalSeoStats} variant="compact" />
 
       <ImplementationRoadmap data={industryImplementationData.baeckerei} />
 

@@ -9,6 +9,7 @@ import LanguageSwitch from "@/components/LanguageSwitch";
 // Lazy load non-critical above-the-fold components
 const RankingComparison = lazy(() => import("@/components/RankingComparison"));
 const PainSection = lazy(() => import("@/components/PainSection"));
+const StatisticsBar = lazy(() => import("@/components/StatisticsBar"));
 
 // Lazy load below-the-fold components
 const ComparisonTable = lazy(() => import("@/components/ComparisonTable"));
@@ -78,6 +79,11 @@ const Index = () => {
       <AnnouncementBar />
       <LanguageSwitch />
       <HeroSection />
+      
+      {/* Statistics Bar - E-E-A-T data signals */}
+      <Suspense fallback={<NullFallback />}>
+        <StatisticsBar />
+      </Suspense>
       
       {/* Initialize tracking after critical content */}
       <TrackingInitializer />
