@@ -939,8 +939,8 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local SEO for Döner & Kebab Shops: The Ultimate Marketing Guide 2026",
-      metaTitle: "Local SEO for Döner Shops | The Ultimate Kebab Marketing Guide 2026",
-      metaDescription: "The longest SEO guide for Döner shops on the internet. Keywords, Google Business, reviews, delivery platforms, social media and more. With 3 interactive tools!",
+      metaTitle: "Local SEO for Döner Shops | Kebab Marketing 2026",
+      metaDescription: "Complete SEO guide for Döner shops: Keywords, Google Business, reviews, delivery platforms & social media. With 3 interactive tools!",
       excerpt: "From keywords to reviews to delivery platforms: Everything Döner shops need to be found on Google.",
       category: "Restaurants"
     },
