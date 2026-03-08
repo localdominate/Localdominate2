@@ -806,21 +806,23 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "ai-overviews-local-seo",
-    primaryKeyword: "ai overviews local seo",
-    secondaryKeywords: ["sge local seo", "ki suche lokal", "google ai lokal"],
-    lsiKeywords: ["ai gesteuerte suchergebnisse", "sge optimierung", "ai overviews vorbereitung"],
+    primaryKeyword: "ai overviews auswirkungen local pack",
+    secondaryKeywords: ["ai overviews klickrate", "local pack ctr ai", "ai overviews sichtbarkeit"],
+    lsiKeywords: ["ki suche klickraten daten", "ai overviews anpassung", "local pack veränderungen ai"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Impact/data focus — differentiated from google-ai-overviews (optimization strategies)"
   },
   {
     slug: "google-ai-overviews-local-seo",
-    primaryKeyword: "google ai overviews",
-    secondaryKeywords: ["ai overviews optimierung", "google sge", "ai suche google"],
-    lsiKeywords: ["ai overviews lokal", "google ai ergebnisse", "ki suche google"],
+    primaryKeyword: "google ai overviews optimieren",
+    secondaryKeywords: ["ai overviews optimierung strategie", "google ai suche vorbereitung", "ai overviews ranking"],
+    lsiKeywords: ["ai overviews lokal optimieren", "google ai ergebnisse strategie", "ki suche google optimierung"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Strategy/optimization focus — differentiated from ai-overviews-local-seo (impact analysis)"
   },
   {
     slug: "ki-tools-local-seo",
