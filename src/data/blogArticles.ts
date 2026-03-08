@@ -3885,6 +3885,29 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["google maps ranking", "wie google maps ranking funktioniert", "proximity relevance prominence", "local pack ranking", "maps seo faktoren", "google maps algorithmus"],
     featured: true
   },
+  // === SCHEMA STRATEGY DOCUMENT ===
+  {
+    slug: "schema-strategie-dokument",
+    de: {
+      title: "Schema-Strategie: Wann Article, FAQPage, HowTo & LocalBusiness einsetzen",
+      metaTitle: "Schema-Strategie: Article, FAQ, HowTo & LocalBusiness",
+      metaDescription: "Siteweite Schema-Strategie für lokale Websites: Entscheidungsmatrix, Implementierungsleitfaden und Fehler-Checkliste für Article, FAQPage, HowTo und LocalBusiness.",
+      excerpt: "Welches Schema Markup gehört auf welche Seite? Entscheidungsmatrix, Code-Beispiele und Implementierungsleitfaden für die 4 wichtigsten Schema-Typen im Local SEO.",
+      category: "Technisches SEO"
+    },
+    en: {
+      title: "Schema Strategy: When to Use Article, FAQPage, HowTo & LocalBusiness",
+      metaTitle: "Schema Strategy: Article, FAQ, HowTo & LocalBusiness",
+      metaDescription: "Sitewide schema strategy for local websites: decision matrix, implementation guide and error checklist for Article, FAQPage, HowTo and LocalBusiness schema.",
+      excerpt: "Which schema markup belongs on which page? Decision matrix, code examples and implementation guide for the 4 most important schema types in Local SEO.",
+      category: "Technical SEO"
+    },
+    readingTime: 14,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🏗️",
+    keywords: ["schema strategie", "structured data strategie", "article schema", "faqpage schema", "howto schema", "localbusiness schema", "schema markup guide", "json-ld strategie"],
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3996,6 +4019,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-roadmap-90-tage",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
+  "schema-strategie-dokument",
 ]);
 
 // Get only published articles (with pages), deduplicated
