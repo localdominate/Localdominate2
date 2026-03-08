@@ -520,9 +520,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-citations-2025",
-    primaryKeyword: "local citations 2026",
-    secondaryKeywords: ["branchenbücher 2026", "verzeichnisse lokal", "citations aufbauen"],
-    lsiKeywords: ["nap einträge", "top verzeichnisse dach", "citations nach branche"],
+    primaryKeyword: "top verzeichnisse dach 2026",
+    secondaryKeywords: ["branchenbücher relevanz 2026", "citation quellen branche", "verzeichnis ranking"],
+    lsiKeywords: ["nap einträge branche", "verzeichnis domain authority", "branchenspezifische citations"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
     contentType: "cluster"
