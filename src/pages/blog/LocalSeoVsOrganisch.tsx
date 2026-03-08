@@ -5,7 +5,7 @@ import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
-import ComparisonTable from "@/components/blog/ComparisonTable";
+import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
