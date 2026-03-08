@@ -21,12 +21,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { getSessionId } from "@/lib/sessionManager";
 import { useArticleEngagement } from "@/hooks/useArticleEngagement";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
-import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
-import { useLanguage } from "@/i18n/LanguageContext";
-import { supabase } from "@/integrations/supabase/client";
-import { getSessionId } from "@/lib/sessionManager";
-import { useArticleEngagement } from "@/hooks/useArticleEngagement";
-import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 interface TOCItem {
   id: string;
