@@ -11,6 +11,8 @@ import IndustryRankingChallenges from "@/components/blog/IndustryRankingChalleng
 import { industryRankingConfigs } from "@/data/industryRankingData";
 import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
+import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
+import { searchIntentConfigs } from "@/data/searchIntentData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
@@ -304,6 +306,7 @@ const LocalSeoZahnarzt = () => {
         description="Datenschutzkonforme SMS-Templates fuer Zahnarztpraxen mit Zeichenzaehler."
       />
 
+      <SearchIntentAnalysis config={searchIntentConfigs.zahnarzt} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.zahnarzt} />
       <IndustryRankingChallenges config={industryRankingConfigs.zahnarzt} />
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />

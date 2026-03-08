@@ -11,6 +11,8 @@ import IndustryRankingChallenges from "@/components/blog/IndustryRankingChalleng
 import { industryRankingConfigs } from "@/data/industryRankingData";
 import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
+import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
+import { searchIntentConfigs } from "@/data/searchIntentData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
@@ -649,6 +651,7 @@ const LocalSeoHandwerker = () => {
         description="Kurze SMS-Templates nach Auftragsabschluss – direkt und effektiv."
       />
 
+      <SearchIntentAnalysis config={searchIntentConfigs.handwerker} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.handwerker} />
       <IndustryRankingChallenges config={industryRankingConfigs.handwerker} />
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />

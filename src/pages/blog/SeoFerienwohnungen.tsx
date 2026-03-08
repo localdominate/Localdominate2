@@ -6,6 +6,8 @@ import IndustryRankingChallenges from "@/components/blog/IndustryRankingChalleng
 import { industryRankingConfigs } from "@/data/industryRankingData";
 import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
+import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
+import { searchIntentConfigs } from "@/data/searchIntentData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
@@ -322,6 +324,7 @@ const SeoFerienwohnungen = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.ferienwohnungen} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.ferienwohnungen} />
       <IndustryRankingChallenges config={industryRankingConfigs.ferienwohnungen} />
       <HelpfulnessWidget articleSlug="seo-ferienwohnungen" />

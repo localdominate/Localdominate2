@@ -9,6 +9,8 @@ import IndustryRankingChallenges from "@/components/blog/IndustryRankingChalleng
 import { industryRankingConfigs } from "@/data/industryRankingData";
 import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
+import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
+import { searchIntentConfigs } from "@/data/searchIntentData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
@@ -381,6 +383,7 @@ const LocalSeoAnwaelteKanzleien = () => {
         description="Kopierfertige Texte fuer Anwaelte: Nach Mandatsabschluss per E-Mail und Telefon. Mit Schweigepflicht-Hinweisen."
       />
 
+      <SearchIntentAnalysis config={searchIntentConfigs.anwaelte} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.anwaelte} />
       <IndustryRankingChallenges config={industryRankingConfigs.anwaelte} />
       <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />

@@ -6,6 +6,8 @@ import IndustryRankingChallenges from "@/components/blog/IndustryRankingChalleng
 import { industryRankingConfigs } from "@/data/industryRankingData";
 import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
+import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
+import { searchIntentConfigs } from "@/data/searchIntentData";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
@@ -967,6 +969,7 @@ const LocalSeoHotels = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.hotels} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.hotels} />
       <IndustryRankingChallenges config={industryRankingConfigs.hotels} />
       <HelpfulnessWidget articleSlug="local-seo-hotels" />

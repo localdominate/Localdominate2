@@ -6,6 +6,8 @@ import IndustryRankingChallenges from "@/components/blog/IndustryRankingChalleng
 import { industryRankingConfigs } from "@/data/industryRankingData";
 import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
+import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
+import { searchIntentConfigs } from "@/data/searchIntentData";
 import SourcesSection from "@/components/blog/SourcesSection";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -213,6 +215,7 @@ const LocalSeoTattoo = () => {
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.tattoo} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.tattoo} />
       <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />

@@ -7,6 +7,8 @@ import IndustryRankingChallenges from "@/components/blog/IndustryRankingChalleng
 import { industryRankingConfigs } from "@/data/industryRankingData";
 import IndustryKeywordOpportunities from "@/components/blog/IndustryKeywordOpportunities";
 import { industryKeywordConfigs } from "@/data/industryKeywordData";
+import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
+import { searchIntentConfigs } from "@/data/searchIntentData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -803,6 +805,7 @@ Herzliche Grüße,
         ))}
       </section>
 
+      <SearchIntentAnalysis config={searchIntentConfigs.immobilienmakler} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.immobilienmakler} />
       <IndustryRankingChallenges config={industryRankingConfigs.immobilienmakler} />
       <HelpfulnessWidget articleSlug="local-seo-immobilienmakler" />
