@@ -88,16 +88,18 @@ const ConversionOptimizationReport = () => {
     if (!isAdmin) return;
     const fetchData = async () => {
       setIsLoading(true);
-      const [convRes, leadRes, engRes, sessRes] = await Promise.all([
+      const [convRes, leadRes, engRes, sessRes, reportsRes] = await Promise.all([
         supabase.from("analytics_conversions").select("*").order("created_at", { ascending: false }).limit(1000),
         supabase.from("leads").select("*").order("created_at", { ascending: false }).limit(1000),
         supabase.from("ab_test_engagement").select("*").order("created_at", { ascending: false }).limit(1000),
         supabase.from("analytics_sessions").select("id", { count: "exact", head: true }),
+        supabase.from("conversion_reports").select("*").order("created_at", { ascending: false }).limit(50),
       ]);
       if (convRes.data) setConversions(convRes.data as ConversionRow[]);
       if (leadRes.data) setLeads(leadRes.data as LeadRow[]);
       if (engRes.data) setEngagement(engRes.data as EngagementRow[]);
       if (sessRes.count != null) setSessionCount(sessRes.count);
+      if (reportsRes.data) setSavedReports(reportsRes.data);
       setIsLoading(false);
     };
     fetchData();
