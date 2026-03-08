@@ -3588,7 +3588,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-seo-reporting-template",
     de: {
       title: "Local SEO Reporting Template: Monatlicher Report + KPI-Vorlage",
-      metaTitle: "Local SEO Reporting Template | Monatliche Vorlage + KPIs 2026",
+      metaTitle: "Local SEO Reporting Template | KPI-Vorlage 2026",
       metaDescription: "Kostenlose Local SEO Report-Vorlage mit 10 KPIs, wöchentlicher Checkliste und ROI-Berechnung. Monatlichen Report erstellen wie ein Profi.",
       excerpt: "Die komplette Vorlage für professionelles Local SEO Reporting: 10 KPIs, monatlicher Report-Aufbau, Wettbewerber-Vergleich und ROI-Berechnung.",
       category: "Strategie"
