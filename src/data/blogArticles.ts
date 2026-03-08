@@ -3818,24 +3818,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-checkliste-komplett",
     de: {
-      title: "Die komplette Local SEO Checkliste 2026: 80+ Punkte in 8 Phasen",
-      metaTitle: "Local SEO Checkliste 2026 | 80+ Punkte Schritt-für-Schritt",
-      metaDescription: "Die umfassendste Local SEO Checkliste: 80+ Punkte in 8 Phasen — GBP, Schema Markup, Citations, Bewertungen & Reporting. Mit 90-Tage-Plan.",
-      excerpt: "Die komplette Schritt-für-Schritt Local SEO Checkliste: 80+ Massnahmen in 8 Phasen systematisch abarbeiten — mit Prioritäten, Zeitplan und branchenspezifischen Empfehlungen.",
+      title: "Local SEO Implementierungs-Checkliste: 80+ Maßnahmen in 8 Phasen systematisch umsetzen",
+      metaTitle: "Local SEO Implementierungs-Checkliste | 80+ Maßnahmen 2026",
+      metaDescription: "Die systematische Local SEO Implementierung: 80+ Maßnahmen in 8 Phasen — von GBP-Setup über Schema Markup bis Reporting. Branchenspezifisch priorisiert.",
+      excerpt: "Systematische Local SEO Implementierung: 80+ Maßnahmen in 8 Phasen — mit branchenspezifischer Priorisierung und Zeitplan.",
       category: "Strategie"
     },
     en: {
-      title: "The Complete Local SEO Checklist 2026: 80+ Steps in 8 Phases",
-      metaTitle: "Local SEO Checklist 2026 | 80+ Steps Step-by-Step",
-      metaDescription: "The most comprehensive Local SEO checklist: 80+ steps in 8 phases — GBP, Schema Markup, citations, reviews & reporting. With 90-day plan.",
-      excerpt: "The complete step-by-step Local SEO checklist: 80+ actions in 8 phases systematically executed — with priorities, timeline and industry-specific recommendations.",
+      title: "Local SEO Implementation Checklist: 80+ Actions in 8 Phases Systematically Executed",
+      metaTitle: "Local SEO Implementation Checklist | 80+ Actions 2026",
+      metaDescription: "Systematic Local SEO implementation: 80+ actions in 8 phases — from GBP setup to Schema Markup to reporting. Industry-specifically prioritized.",
+      excerpt: "Systematic Local SEO implementation: 80+ actions in 8 phases — with industry-specific prioritization and timeline.",
       category: "Strategy"
     },
     readingTime: 20,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "📋",
-    keywords: ["local seo checkliste", "local seo checklist", "lokale seo checkliste", "local seo schritt für schritt", "local seo implementierung", "local seo anleitung", "local seo 2026"],
+    keywords: ["local seo implementierung", "local seo maßnahmen", "lokale seo umsetzung", "local seo schritt für schritt", "seo implementierungsplan", "local seo phasen"],
     featured: true
   },
   // === HUB PAGE: GOOGLE MAPS SEO ===
