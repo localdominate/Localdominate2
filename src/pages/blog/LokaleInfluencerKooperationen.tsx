@@ -329,6 +329,12 @@ const LokaleInfluencerKooperationen = () => {
         </Accordion>
       </section>
 
+      <LocalPartnershipOutreachTemplates
+        types={["influencer", "cross-promo"]}
+        title="Outreach-Vorlagen: Influencer & Cross-Promotion"
+        description="Kopierfertige E-Mail-Templates fuer Mikro-Influencer-Kooperationen und lokale Cross-Promotions."
+      />
+
       <HelpfulnessWidget articleSlug="lokale-influencer-kooperationen" />
 
       <SourcesSection sources={[

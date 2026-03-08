@@ -643,6 +643,12 @@ const LocalContentMarketing = () => {
         </Accordion>
       </section>
 
+      <LocalPartnershipOutreachTemplates
+        types={["cross-promo", "bundle", "referral"]}
+        title="Partnerschafts-Vorlagen: Content-Kooperationen starten"
+        description="Kopierfertige E-Mail-Templates fuer Cross-Promotions, Bundle-Angebote und Empfehlungs-Netzwerke."
+      />
+
       <HelpfulnessWidget articleSlug="local-content-marketing" />
     </ArticleLayout>
   );
