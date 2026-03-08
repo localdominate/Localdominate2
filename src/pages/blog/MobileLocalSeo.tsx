@@ -19,13 +19,13 @@ const MobileLocalSeo = () => {
 
   const tocItems = [
     { id: "intro", title: "Einführung" },
-    { id: "mobile-first", title: "Mobile-First Indexing" },
-    { id: "click-to-call", title: "Click-to-Call & Maps" },
-    { id: "page-speed", title: "Page Speed Optimierung" },
-    { id: "mobile-ux", title: "Mobile UX Best Practices" },
-    { id: "amp", title: "AMP für Local" },
-    { id: "checkliste", title: "Mobile SEO Checkliste" },
-    { id: "faq", title: "FAQ" }
+    { id: "mobile-first", title: "Was bedeutet Mobile-First Indexing für dein Unternehmen?" },
+    { id: "click-to-call", title: "Wie implementierst du Click-to-Call und Maps?" },
+    { id: "page-speed", title: "Wie verbesserst du die mobile Ladezeit?" },
+    { id: "mobile-ux", title: "Welche Mobile UX Best Practices steigern Conversions?" },
+    { id: "amp", title: "Brauchst du noch AMP für Local SEO?" },
+    { id: "checkliste", title: "Ist dein Mobile Local SEO komplett?" },
+    { id: "faq", title: "Häufig gestellte Fragen" }
   ];
 
   const faqItems = [
