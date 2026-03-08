@@ -264,7 +264,7 @@ const GoogleMapsAuditTemplate = () => {
 
       <KeyTakeawaysBox
         title="Auf einen Blick"
-        takeaways={keyTakeaways}
+        items={keyTakeaways}
       />
 
       {/* Progress Bar */}
