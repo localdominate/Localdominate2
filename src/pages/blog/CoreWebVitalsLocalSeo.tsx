@@ -355,7 +355,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card>
             <CardContent className="p-4">
               <Gauge className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">PageSpeed Insights</h4>
+              <h3 className="font-semibold mb-2">PageSpeed Insights für Web Vitals</h3>
               <p className="text-sm text-muted-foreground mb-2">
                 Googles offizielles Tool zeigt Lab- und Field-Daten sowie konkrete Optimierungsvorschläge.
               </p>
