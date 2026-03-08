@@ -3321,7 +3321,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "local-link-building",
     de: {
       title: "Local Link Building: Backlinks für lokale Unternehmen aufbauen (2026)",
-      metaTitle: "Local Link Building: Backlinks für lokale Unternehmen | Guide 2026",
+      metaTitle: "Local Link Building | Backlinks lokal aufbauen 2026",
       metaDescription: "Wie du als lokales Unternehmen hochwertige Backlinks aufbaust. Lokale Strategien, Sponsorings und Community-Links für bessere Rankings.",
       excerpt: "Der komplette Guide zum Aufbau lokaler Backlinks mit praktischen Strategien für kleine und mittlere Unternehmen.",
       category: "Local SEO"
