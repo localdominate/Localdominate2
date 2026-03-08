@@ -171,7 +171,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
 
         <div className="space-y-4 my-8">
           <div className="bg-red-50 rounded-xl p-6">
-            <h4 className="font-bold text-lg mb-2 text-red-700">🚫 Indexierungsprobleme</h4>
+            <h3 className="font-bold text-lg mb-2 text-red-700">🚫 Indexierungsprobleme erkennen</h3>
             <p className="text-gray-700 mb-2">robots.txt blockiert Googlebot, noindex-Tags auf wichtigen Seiten, oder Seiten aus Sitemap entfernt.</p>
             <p className="text-sm text-gray-500"><strong>Lösung:</strong> Search Console → Abdeckung prüfen, robots.txt validieren</p>
           </div>
