@@ -3438,7 +3438,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Local SEO for Opticians & Hearing Aid Specialists: More Customers Through Google (2026)",
-      metaTitle: "Local SEO for Opticians & Hearing Aid Specialists | Industry Guide 2026",
+      metaTitle: "Local SEO Opticians & Hearing Aids | Guide 2026",
       metaDescription: "How opticians and hearing aid specialists win more customers through local SEO. Industry-specific keywords, portals and Google Business tips.",
       excerpt: "The industry guide for opticians and hearing aid specialists with specific SEO strategies and portal lists.",
       category: "Industries"
