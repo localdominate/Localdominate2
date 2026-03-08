@@ -278,7 +278,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   hotels: {
     industry: "Hotels & Unterkünfte",
-    quickWin: "Long-Tail-Keywords wie „Hotel mit Pool [Stadt]" oder „Boutique Hotel [Stadt]" haben deutlich weniger Wettbewerb.",
+    quickWin: "Long-Tail-Keywords wie 'Hotel mit Pool [Stadt]' oder 'Boutique Hotel [Stadt]' haben deutlich weniger Wettbewerb.",
     clusters: [
       {
         name: "Hotel + Standort",
