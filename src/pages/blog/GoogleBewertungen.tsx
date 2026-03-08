@@ -15,6 +15,7 @@ import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle
 import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
+import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
@@ -398,6 +399,11 @@ const GoogleBewertungen = () => {
           { title: "BrightLocal Consumer Review Survey", url: "https://www.brightlocal.com/research/local-consumer-review-survey/", type: "study", description: language === "de" ? "Aktuelle Studie zum Bewertungsverhalten" : "Current study on review behavior" },
           { title: "MOZ Review Management Guide", url: "https://moz.com/learn/seo/review-management", type: "article", description: language === "de" ? "Leitfaden zum Bewertungsmanagement" : "Guide to review management" }
         ]}
+      />
+
+      <ReviewAcquisitionScripts
+        title="Bewertungs-Scripts: Alle Branchen & Kanaele"
+        description="Kopierfertige Texte fuer E-Mail, SMS, WhatsApp, Vor-Ort-Gespraeche und mehr. Waehle deine Branche und deinen Kanal."
       />
 
       <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />

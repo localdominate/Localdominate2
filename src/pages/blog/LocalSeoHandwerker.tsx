@@ -7,6 +7,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -623,6 +624,12 @@ const LocalSeoHandwerker = () => {
           <CaseStudyCard key={i} study={study} />
         ))}
       </section>
+
+      <ReviewAcquisitionScripts
+        industries={["handwerker"]}
+        title="Bewertungs-Scripts fuer Handwerksbetriebe"
+        description="Kopierfertige Texte fuer Handwerker: Bei Abnahme, per WhatsApp und in der Rechnung."
+      />
 
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 

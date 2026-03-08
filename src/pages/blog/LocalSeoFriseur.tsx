@@ -2,6 +2,7 @@ import React from 'react';
 import ArticleLayout from '@/components/blog/ArticleLayout';
 import { getArticleBySlug } from '@/data/blogArticles';
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
@@ -1216,6 +1217,12 @@ const LocalSeoFriseur: React.FC = () => {
           <CaseStudyCard key={i} study={study} />
         ))}
       </section>
+
+      <ReviewAcquisitionScripts
+        industries={["friseur"]}
+        title="Bewertungs-Scripts fuer Friseursalons"
+        description="Kopierfertige Texte fuer Friseure: Nach dem Styling und per WhatsApp-Follow-up."
+      />
 
       <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>
