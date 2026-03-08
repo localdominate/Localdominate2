@@ -111,6 +111,19 @@ const GbpNichtInSucheSichtbar: React.FC = () => {
         <h2 id="key-takeaways" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Die wichtigsten Erkenntnisse</h2>
         <KeyTakeawaysBox items={keyTakeaways} />
 
+        <SeoFlowDiagram
+          title="GBP-Sichtbarkeit: Diagnose-Workflow"
+          steps={[
+            { label: "Problem eingrenzen", icon: "🔍", description: "Was genau ist unsichtbar?" },
+            { label: "Verifizierung prüfen", icon: "✅", description: "Häufigste Ursache!", highlight: true },
+            { label: "Profil vervollständigen", icon: "📝", description: "Alle Felder ausfüllen" },
+            { label: "Fotos & Aktivität", icon: "📸", description: "Min. 10 Fotos, Posts, Antworten" },
+            { label: "Richtlinien checken", icon: "⚠️", description: "Keywords im Namen? Falsche Kategorie?" },
+            { label: "Indexierung abwarten", icon: "⏳", description: "1–3 Wochen für neue Profile" },
+          ]}
+          caption="Prüfe die Schritte von oben nach unten – die häufigsten Ursachen stehen zuerst"
+        />
+
         <h2 id="einfuehrung" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Das Problem verstehen</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>

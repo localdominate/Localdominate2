@@ -167,6 +167,19 @@ const GbpVerifizierungFehlgeschlagen: React.FC = () => {
 
         <KeyTakeawaysBox items={keyTakeaways} />
 
+        <SeoFlowDiagram
+          title="GBP-Verifizierung: Entscheidungs-Workflow"
+          steps={[
+            { label: "Profil erstellt", icon: "📝", description: "Daten vollständig eingeben" },
+            { label: "Methode wählen", icon: "🔀", description: "Postkarte, Telefon, Video, E-Mail", highlight: true },
+            { label: "Code anfordern", icon: "📬", description: "Daten nicht mehr ändern!" },
+            { label: "Code eingeben", icon: "🔑", description: "Innerhalb von 30 Tagen" },
+            { label: "Bei Fehler: Alternative", icon: "🔄", description: "Nach 2 Versuchen wechseln" },
+            { label: "Verifiziert", icon: "✅", description: "Profil ist live" },
+          ]}
+          caption="Verifizierungs-Ablauf mit Fallback-Strategie bei Problemen"
+        />
+
         {/* Section 1 */}
         <section id="warum-wichtig" className="scroll-mt-20 mt-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">

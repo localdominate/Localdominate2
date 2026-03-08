@@ -132,6 +132,19 @@ const GbpSuspendiertReaktivieren: React.FC = () => {
 
         <KeyTakeawaysBox items={keyTakeaways} />
 
+        <SeoFlowDiagram
+          title="GBP-Suspendierung: Reaktivierungs-Workflow"
+          steps={[
+            { label: "Suspendierung erkannt", icon: "🚨", description: "Profil nicht mehr sichtbar" },
+            { label: "Typ bestimmen", icon: "🔍", description: "Soft vs. Hard Suspension" },
+            { label: "Ursache analysieren", icon: "📋", description: "Richtlinienverstoß finden" },
+            { label: "Verstöße korrigieren", icon: "🔧", description: "Profil bereinigen" },
+            { label: "Appeal einreichen", icon: "📨", description: "Mit Nachweisen belegen", highlight: true },
+            { label: "Profil reaktiviert", icon: "✅", description: "3–7 Werktage Wartezeit" },
+          ]}
+          caption="Typischer Ablauf einer erfolgreichen GBP-Reaktivierung – Gesamtdauer: 1–3 Wochen"
+        />
+
         {/* Section 1 */}
         <section id="was-ist-suspendierung" className="scroll-mt-20 mt-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">

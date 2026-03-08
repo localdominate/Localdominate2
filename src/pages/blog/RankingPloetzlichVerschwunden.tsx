@@ -117,6 +117,19 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         <h2 id="key-takeaways" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Ranking verschwunden: Die wichtigsten Erkenntnisse</h2>
         <KeyTakeawaysBox items={keyTakeaways} />
 
+        <SeoFlowDiagram
+          title="Ranking-Verlust: Diagnose-Workflow"
+          steps={[
+            { label: "Einbruch bemerkt", icon: "📉", description: "Ranking-Monitoring prüfen" },
+            { label: "Google-Update?", icon: "🔄", description: "Status Dashboard checken" },
+            { label: "Search Console", icon: "🔎", description: "Penalties & Fehler prüfen" },
+            { label: "GBP-Status", icon: "🏢", description: "Suspendierung ausschließen", highlight: true },
+            { label: "Technik-Check", icon: "⚙️", description: "Ladezeit, SSL, Mobile" },
+            { label: "Maßnahmen umsetzen", icon: "✅", description: "Gezielte Korrektur starten" },
+          ]}
+          caption="Systematische Diagnose bei plötzlichem Ranking-Verlust – von allgemein nach spezifisch"
+        />
+
         <h2 id="erste-schritte" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Erste Diagnose-Schritte bei Ranking-Verlust</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>

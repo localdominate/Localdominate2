@@ -150,6 +150,19 @@ const DuplicateListingEntfernen: React.FC = () => {
 
         <KeyTakeawaysBox items={keyTakeaways} />
 
+        <SeoFlowDiagram
+          title="Duplicate Listing: Bereinungs-Workflow"
+          steps={[
+            { label: "Maps durchsuchen", icon: "🔍", description: "Firmenname + Adresse prüfen" },
+            { label: "Duplicates identifizieren", icon: "📋", description: "Typ bestimmen (exakt, Variante)" },
+            { label: "Eigentümerschaft klären", icon: "🏢", description: "Welcher Eintrag gehört dir?" },
+            { label: "Merge oder Löschen", icon: "⚖️", description: "Bewertungen berücksichtigen", highlight: true },
+            { label: "Bei Google melden", icon: "📨", description: "Änderung vorschlagen" },
+            { label: "Quartals-Audit", icon: "🔄", description: "Alle 3 Monate wiederholen" },
+          ]}
+          caption="Systematischer Ablauf zur Bereinigung doppelter Google Business Einträge"
+        />
+
         {/* Section 1 */}
         <section id="was-sind-duplicates" className="scroll-mt-20 mt-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
