@@ -716,6 +716,8 @@ Herzliche Grüße,
 
       <ImplementationRoadmap data={industryImplementationData.immobilienmakler} />
 
+      <IndustryComparisonTable data={industryComparisonData.immobilienmakler} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2>Häufige Fragen: Local SEO für Immobilienmakler</h2>

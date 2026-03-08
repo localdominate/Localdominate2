@@ -723,6 +723,8 @@ Herzliche Grüße,
 
       <ImplementationRoadmap data={industryImplementationData.steuerberater} />
 
+      <IndustryComparisonTable data={industryComparisonData.steuerberater} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2>Häufige Fragen: Local SEO für Steuerberater</h2>

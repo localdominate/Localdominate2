@@ -278,6 +278,8 @@ const LocalSeoRestaurant = () => {
 
       <ImplementationRoadmap data={industryImplementationData.restaurant} />
 
+      <IndustryComparisonTable data={industryComparisonData.restaurant} />
+
       <section id="faq" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6">{t.faq.title}</h2>
         <div className="space-y-6">

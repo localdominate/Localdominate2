@@ -217,6 +217,8 @@ const LocalSeoZahnarzt = () => {
 
       <ImplementationRoadmap data={industryImplementationData.zahnarzt} />
 
+      <IndustryComparisonTable data={industryComparisonData.zahnarzt} />
+
       <section id="faq">
         <h2>Häufige Fragen</h2>
         <Accordion type="single" collapsible className="w-full">

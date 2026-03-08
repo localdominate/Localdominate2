@@ -301,6 +301,8 @@ const LocalSeoAnwaelteKanzleien = () => {
 
       <ImplementationRoadmap data={industryImplementationData.anwaelte} />
 
+      <IndustryComparisonTable data={industryComparisonData.anwaelte} />
+
       {/* FAQ */}
       <section id="faq">
         <h2>Häufige Fragen</h2>
