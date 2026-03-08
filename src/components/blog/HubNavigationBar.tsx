@@ -10,16 +10,16 @@ interface HubNavItem {
 }
 
 const hubItems: HubNavItem[] = [
-  { label: "Google Business Profil", shortLabel: "GBP", href: "/blog/topic/google-business-profil", icon: <Building2 className="w-4 h-4" /> },
-  { label: "Branchen-Guides", shortLabel: "Branchen", href: "/blog/topic/branchen", icon: <Factory className="w-4 h-4" /> },
-  { label: "Städte-Guides", shortLabel: "Städte", href: "/blog/topic/staedte", icon: <MapPin className="w-4 h-4" /> },
-  { label: "Bewertungen", shortLabel: "Reviews", href: "/blog/topic/bewertungen-reputation", icon: <Star className="w-4 h-4" /> },
-  { label: "Technisches SEO", shortLabel: "Tech SEO", href: "/blog/topic/technisches-seo", icon: <Settings className="w-4 h-4" /> },
-  { label: "Content & Marketing", shortLabel: "Content", href: "/blog/topic/content-marketing", icon: <PenTool className="w-4 h-4" /> },
-  { label: "Tools & Ressourcen", shortLabel: "Tools", href: "/blog/topic/tools-ressourcen", icon: <Wrench className="w-4 h-4" /> },
-  { label: "AI & Zukunft", shortLabel: "AI", href: "/blog/topic/ai-zukunft", icon: <Sparkles className="w-4 h-4" /> },
-  { label: "Troubleshooting", shortLabel: "Hilfe", href: "/blog/topic/troubleshooting", icon: <AlertTriangle className="w-4 h-4" /> },
-  { label: "Google Maps SEO", shortLabel: "Maps", href: "/blog/topic/google-maps-seo", icon: <Map className="w-4 h-4" /> },
+  { label: "Google Business Profil", shortLabel: "GBP", href: "/blog/google-business-profil-hub", icon: <Building2 className="w-4 h-4" /> },
+  { label: "Branchen-Guides", shortLabel: "Branchen", href: "/blog/local-seo-branchen-hub", icon: <Factory className="w-4 h-4" /> },
+  { label: "Städte-Guides", shortLabel: "Städte", href: "/blog/local-seo-staedte-hub", icon: <MapPin className="w-4 h-4" /> },
+  { label: "Bewertungen", shortLabel: "Reviews", href: "/blog/bewertungen-reputation-hub", icon: <Star className="w-4 h-4" /> },
+  { label: "Technisches SEO", shortLabel: "Tech SEO", href: "/blog/technisches-seo-hub", icon: <Settings className="w-4 h-4" /> },
+  { label: "Content & Marketing", shortLabel: "Content", href: "/blog/content-marketing-hub", icon: <PenTool className="w-4 h-4" /> },
+  { label: "Tools & Ressourcen", shortLabel: "Tools", href: "/blog/tools-ressourcen-hub", icon: <Wrench className="w-4 h-4" /> },
+  { label: "AI & Zukunft", shortLabel: "AI", href: "/blog/ai-zukunft-hub", icon: <Sparkles className="w-4 h-4" /> },
+  { label: "Troubleshooting", shortLabel: "Hilfe", href: "/blog/troubleshooting-hub", icon: <AlertTriangle className="w-4 h-4" /> },
+  { label: "Google Maps SEO", shortLabel: "Maps", href: "/blog/google-maps-seo-hub", icon: <Map className="w-4 h-4" /> },
 ];
 
 const HubNavigationBar = () => {
