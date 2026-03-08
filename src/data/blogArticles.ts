@@ -3943,6 +3943,7 @@ const PUBLISHED_SLUGS = new Set([
   "citation-tracking-template",
   "local-keyword-research-template",
   "local-seo-monthly-checklist",
+  "google-maps-ranking-tracker",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
