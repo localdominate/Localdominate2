@@ -523,6 +523,20 @@ const LocalSeoChecklisteKomplett = () => {
 
       <BlogCTAABTest position="end" articleSlug="local-seo-checkliste-komplett" />
 
+      <InternalResourceBox
+        title="✅ Checklisten & Tools"
+        subtitle="Weitere interaktive Ressourcen für deine Local SEO"
+        variant="grid"
+        resources={[
+          { label: "Local SEO Audit Checkliste", href: "/blog/local-seo-audit-checkliste", type: "checklist", description: "Interaktiver Audit" },
+          { label: "Google Business Profil Checkliste", href: "/blog/google-business-profil-optimieren", type: "checklist", description: "GBP optimieren" },
+          { label: "90-Tage Local SEO Roadmap", href: "/blog/90-tage-local-seo-roadmap", type: "tool", description: "Zeitplan erstellen" },
+          { label: "Monatliche SEO-Wartung", href: "/blog/monatliche-local-seo-wartung", type: "checklist", description: "45+ Tasks" },
+          { label: "Tools & Ressourcen Hub", href: "/blog/tools-ressourcen-hub", type: "hub", description: "Alle Tools" },
+          { label: "Ultimate Guide Local SEO", href: "/blog/ultimate-guide-local-seo", type: "pillar", description: "Gesamtstrategie" },
+        ]}
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-checkliste-komplett" />
 
       {/* FAQ */}

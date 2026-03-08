@@ -665,6 +665,19 @@ Vielen Dank und beste Gruesse,
 
       <ArticleCTA variant="box" />
 
+      <InternalResourceBox
+        title="🔗 Linkbuilding Ressourcen"
+        variant="grid"
+        resources={[
+          { label: "NAP-Konsistenz Guide", href: "/blog/nap-konsistenz-local-seo", type: "guide", description: "Citations richtig aufbauen" },
+          { label: "Citation-Verzeichnisse DACH", href: "/citation-verzeichnisse", type: "tool", description: "Alle wichtigen Verzeichnisse" },
+          { label: "Lokale Events Marketing", href: "/blog/lokale-events-marketing", type: "guide", description: "Event-Links generieren" },
+          { label: "E-E-A-T Guide", href: "/blog/e-e-a-t-lokale-unternehmen", type: "guide", description: "Autorität aufbauen" },
+          { label: "Ranking-Faktoren erklärt", href: "/blog/local-seo-ranking-faktoren-erklaert", type: "pillar", description: "Link-Signale verstehen" },
+          { label: "Content & Marketing Hub", href: "/blog/content-marketing-hub", type: "hub", description: "Content-Strategien" },
+        ]}
+      />
+
       <HelpfulnessWidget articleSlug="local-link-building-blueprint" />
 
       {/* FAQ */}

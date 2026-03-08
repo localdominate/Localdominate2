@@ -731,6 +731,19 @@ Attribution-required: yes`}
 
       <ArticleCTA variant="box" />
 
+      <InternalResourceBox
+        title="🤖 Weitere AI & Zukunft Ressourcen"
+        variant="grid"
+        resources={[
+          { label: "Google AI Overviews Guide", href: "/blog/google-ai-overviews-local-seo", type: "guide", description: "AI in SERPs verstehen" },
+          { label: "E-E-A-T für lokale Unternehmen", href: "/blog/e-e-a-t-lokale-unternehmen", type: "guide", description: "Trust-Signale aufbauen" },
+          { label: "Schema Markup Local SEO", href: "/blog/schema-markup-local-seo", type: "guide", description: "Strukturierte Daten" },
+          { label: "Voice Search Local SEO", href: "/blog/local-seo-voice-search", type: "guide", description: "Sprachsuche optimieren" },
+          { label: "AI & Zukunft Hub", href: "/blog/ai-zukunft-hub", type: "hub", description: "Alle AI-Guides" },
+          { label: "Technisches Local SEO", href: "/blog/technisches-local-seo-guide", type: "pillar", description: "Technische Basis" },
+        ]}
+      />
+
       <HelpfulnessWidget articleSlug="ai-suche-lokale-unternehmen" />
 
       {/* FAQ */}

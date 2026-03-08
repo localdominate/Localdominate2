@@ -710,6 +710,20 @@ const UltimateGuideLocalSeo = () => {
         </p>
       </section>
 
+      <InternalResourceBox
+        title="📚 Weiterführende Ressourcen"
+        subtitle="Die wichtigsten Guides und Tools für deinen Local SEO Erfolg"
+        variant="grid"
+        resources={[
+          { label: "Local SEO Ranking-Faktoren erklärt", href: "/blog/local-seo-ranking-faktoren-erklaert", type: "pillar", description: "Alle Faktoren mit Gewichtung" },
+          { label: "90-Tage Local SEO Roadmap", href: "/blog/90-tage-local-seo-roadmap", type: "tool", description: "Interaktiver Zeitplan" },
+          { label: "Google Business Profil Checkliste", href: "/blog/google-business-profil-optimieren", type: "checklist", description: "75+ Punkte zum Abhaken" },
+          { label: "Local SEO Audit Checkliste", href: "/blog/local-seo-audit-checkliste", type: "checklist", description: "Interaktiver Audit" },
+          { label: "AI-Suche für lokale Unternehmen", href: "/blog/ai-suche-lokale-unternehmen", type: "guide", description: "Fit für AI Overviews" },
+          { label: "Technisches Local SEO Guide", href: "/blog/technisches-local-seo-guide", type: "pillar", description: "Schema, CWV, Mobile" },
+        ]}
+      />
+
       {/* FAQ */}
       <section id="faq">
         <h2>Häufig gestellte Fragen zu Local SEO</h2>

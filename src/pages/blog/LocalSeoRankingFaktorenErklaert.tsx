@@ -687,6 +687,19 @@ const LocalSeoRankingFaktorenErklaert = () => {
 
       <ArticleCTA variant="box" />
 
+      <InternalResourceBox
+        title="📚 Ressourcen zu den Ranking-Faktoren"
+        variant="grid"
+        resources={[
+          { label: "Google Business Profil optimieren", href: "/blog/google-business-profil-optimieren", type: "checklist", description: "GBP-Signale maximieren" },
+          { label: "Google Bewertungen bekommen", href: "/blog/google-bewertungen-bekommen", type: "guide", description: "Bewertungs-Strategie" },
+          { label: "Local Linkbuilding Blueprint", href: "/blog/local-link-building-blueprint", type: "pillar", description: "Link-Signale aufbauen" },
+          { label: "NAP-Konsistenz Guide", href: "/blog/nap-konsistenz-local-seo", type: "guide", description: "Citation-Signale" },
+          { label: "Schema Markup Guide", href: "/blog/schema-markup-local-seo", type: "guide", description: "Technische Signale" },
+          { label: "Local SEO Audit Checkliste", href: "/blog/local-seo-audit-checkliste", type: "tool", description: "Alle Faktoren prüfen" },
+        ]}
+      />
+
       {/* FAQ */}
       <section id="faq">
         <h2>Häufig gestellte Fragen</h2>
