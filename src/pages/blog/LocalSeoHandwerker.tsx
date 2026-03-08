@@ -592,6 +592,15 @@ const LocalSeoHandwerker = () => {
         ]}
       />
 
+      {/* Case Studies */}
+      <section id="praxisbeispiele" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-6">Praxisbeispiele: So haben Handwerker mit Local SEO gewonnen</h2>
+        <p className="text-muted-foreground mb-6">Diese anonymisierten Beispiele zeigen, was mit konsequenter Local SEO Umsetzung möglich ist:</p>
+        {industryCaseStudies.handwerker.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <RelatedIndustryGuides currentSlug="local-seo-handwerker" />

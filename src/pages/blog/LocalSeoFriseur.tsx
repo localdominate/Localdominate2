@@ -1187,6 +1187,13 @@ const LocalSeoFriseur: React.FC = () => {
         </div>
       </div>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Friseursalon verdreifacht Neukunden</h2>
+        {industryCaseStudies.friseur.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>
   );

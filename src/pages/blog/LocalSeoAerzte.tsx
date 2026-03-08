@@ -726,60 +726,12 @@ const LocalSeoAerzte = () => {
 
       {/* Case Study Section */}
       <section id="case-study" className="mb-12">
-        <h2>Erfolgsbeispiel: Zahnarztpraxis in München</h2>
-
-        <Card className="my-6">
-          <CardContent className="pt-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-bold mb-4">📍 Ausgangssituation</h4>
-                <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>• Etablierte Praxis seit 15 Jahren</li>
-                  <li>• Ranking: Platz 12 für "Zahnarzt München Schwabing"</li>
-                  <li>• Google Bewertung: 4,1 Sterne (23 Bewertungen)</li>
-                  <li>• Jameda: Basis-Profil, unvollständig</li>
-                  <li>• Website: Veraltet, nicht mobilfreundlich</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4">🎯 Maßnahmen (6 Monate)</h4>
-                <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>• Google Business komplett optimiert</li>
-                  <li>• Jameda Premium aktiviert, Profil vervollständigt</li>
-                  <li>• Neue YMYL-konforme Website</li>
-                  <li>• Systematisches Bewertungsmanagement</li>
-                  <li>• NAP-Konsistenz in allen Verzeichnissen</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t mt-6 pt-6">
-              <h4 className="font-bold mb-4 text-green-600">📈 Ergebnisse nach 6 Monaten</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">Platz 2</p>
-                  <p className="text-xs text-muted-foreground">Google Ranking</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">4,8★</p>
-                  <p className="text-xs text-muted-foreground">67 Bewertungen</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">+120%</p>
-                  <p className="text-xs text-muted-foreground">Terminanfragen</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-primary">+85%</p>
-                  <p className="text-xs text-muted-foreground">Website-Traffic</p>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <p className="text-muted-foreground italic">
-          * Anonymisiertes Beispiel basierend auf typischen Ergebnissen unserer Kunden. 
-          Individuelle Ergebnisse können variieren.
+        <h2>Erfolgsbeispiel: Arztpraxis mit Local SEO</h2>
+        {industryCaseStudies.aerzte.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+        <p className="text-muted-foreground italic text-sm mt-4">
+          * Anonymisiertes Beispiel basierend auf typischen Ergebnissen. Individuelle Ergebnisse können variieren.
         </p>
       </section>
 

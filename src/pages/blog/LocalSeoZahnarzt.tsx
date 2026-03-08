@@ -249,6 +249,13 @@ const LocalSeoZahnarzt = () => {
         </Accordion>
       </section>
 
+      <section id="praxisbeispiel" className="mb-12">
+        <h2>Praxisbeispiel: Zahnarztpraxis steigert Online-Sichtbarkeit</h2>
+        {industryCaseStudies.zahnarzt.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />
 
       <SourcesSection sources={[
