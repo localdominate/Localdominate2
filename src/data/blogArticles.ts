@@ -112,24 +112,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "google-maps-ranking-verbessern",
     de: {
-      title: "Google Maps Ranking verbessern: Der ultimative Guide 2026",
-      metaTitle: "Google Maps Ranking verbessern: Ultimativer Guide 2026",
-      metaDescription: "Verbessere dein Google Maps Ranking in 7 Schritten. Lokale SEO-Strategien, die wirklich funktionieren. Jetzt mehr Kunden gewinnen!",
-      excerpt: "Erfahre, wie du mit bewährten Strategien dein Google Maps Ranking verbesserst und mehr lokale Kunden gewinnst.",
+      title: "Google Maps Ranking verbessern: 7-Schritte-Aktionsplan 2026",
+      metaTitle: "Google Maps Ranking verbessern: 7-Schritte-Plan 2026",
+      metaDescription: "Verbessere dein Google Maps Ranking in 7 konkreten Schritten. Praxis-Aktionsplan mit GBP-Optimierung, Bewertungen und Citations.",
+      excerpt: "Der konkrete 7-Schritte-Aktionsplan zur Verbesserung deines Google Maps Rankings — mit Praxisbeispielen und Checkliste.",
       category: "Local SEO",
     },
     en: {
-      title: "Improve Google Maps Ranking: The Ultimate Guide 2026",
-      metaTitle: "Improve Google Maps Ranking: Ultimate Guide 2026",
-      metaDescription: "Improve your Google Maps ranking in 7 steps. Local SEO strategies that actually work. Get more customers now!",
-      excerpt: "Learn how to improve your Google Maps ranking with proven strategies and win more local customers.",
+      title: "Improve Google Maps Ranking: 7-Step Action Plan 2026",
+      metaTitle: "Improve Google Maps Ranking: 7-Step Plan 2026",
+      metaDescription: "Improve your Google Maps ranking with this concrete 7-step action plan. GBP optimization, reviews, citations and more.",
+      excerpt: "The concrete 7-step action plan to improve your Google Maps ranking — with practical examples and checklist.",
       category: "Local SEO",
     },
     readingTime: 8,
     publishedAt: "2026-01-07",
     updatedAt: "2026-01-07",
     icon: "📍",
-    keywords: ["google maps ranking", "local seo", "google maps optimization"],
+    keywords: ["google maps ranking verbessern", "maps ranking steigern", "google maps optimierung anleitung"],
     featured: true
   },
   {
