@@ -574,7 +574,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "google-maps-ranking-case-studies",
     de: {
       title: "Google Maps Ranking Case Studies: 6 Branchen, 6 Erfolge",
-      metaTitle: "Google Maps Case Studies | 6 Branchen-Erfolgsgeschichten 2026",
+      metaTitle: "Google Maps Case Studies | 6 Branchen-Erfolge 2026",
       metaDescription: "6 echte Google Maps Ranking Case Studies aus Gastronomie, Handwerk, Gesundheit, Recht, Beauty und Automotive. Mit konkreten Zahlen und Maßnahmen.",
       excerpt: "Von unsichtbar zu Platz 1: Wie Unternehmen aus 6 verschiedenen Branchen ihr Google Maps Ranking dramatisch verbessert haben.",
       category: "Google Maps"
