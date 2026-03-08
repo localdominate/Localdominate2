@@ -483,10 +483,10 @@ const GoogleMapsAuditTemplate = () => {
         </CardContent>
       </Card>
 
-      <BlogFAQSection items={faqItems} />
+      <BlogFAQSection faqs={faqItems} />
       <SourcesSection sources={sources} />
-      <ArticleCTA slug="google-maps-audit-template" />
-      <HelpfulnessWidget slug="google-maps-audit-template" />
+      <ArticleCTA />
+      <HelpfulnessWidget articleSlug="google-maps-audit-template" />
     </ArticleLayout>
   );
 };
