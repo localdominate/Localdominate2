@@ -3573,7 +3573,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "SEO for Vacation Rentals: Switzerland, Bavaria & Austria – Escape the OTA Trap",
-      metaTitle: "Vacation Rental SEO Switzerland, Bavaria & Austria | Direct Bookings",
+      metaTitle: "Vacation Rental SEO | Direct Bookings DACH 2026",
       metaDescription: "How vacation rentals save up to 13,500 CHF in OTA commissions through SEO. Google My Business, AI Search & regional strategies for St. Moritz, Zermatt, Bavaria.",
       excerpt: "15% OTA commission per booking? SEO for vacation rentals drives direct bookings, reduces dependency and boosts margins.",
       category: "Industry"
