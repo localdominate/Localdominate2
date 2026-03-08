@@ -147,10 +147,10 @@ const ContentUpdateCalendar = () => {
     return <div className="min-h-screen flex items-center justify-center"><Clock className="h-8 w-8 animate-spin text-muted-foreground" /></div>;
   }
   if (!user) {
-    return <AdminLoginScreen onSignIn={signIn} error={authError} />;
+    return <AdminLoginScreen onLogin={signIn} isLoading={false} />;
   }
   if (!isAdmin) {
-    return <AdminAccessDenied user={user} onSignOut={signOut} />;
+    return <AdminAccessDenied onSignOut={signOut} userEmail={user.email} />;
   }
 
   const prevMonth = () => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1));
