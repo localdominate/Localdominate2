@@ -19,6 +19,8 @@ import {
 import { Users, Star, Shield, Award, CheckCircle2, XCircle, AlertTriangle, FileText, Building2, MessageSquare } from "lucide-react";
 import MedicalPortalsTable from "@/components/blog/MedicalPortalsTable";
 import MedicalSpecialtySelector from "@/components/blog/MedicalSpecialtySelector";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 
 const LocalSeoAerzte = () => {
   const { language } = useLanguage();
