@@ -473,7 +473,7 @@ const LocalSeoRoadmap = () => {
         </CardContent>
       </Card>
 
-      <BlogCTAABTest slug="local-seo-roadmap-90-tage" position="middle" />
+      <BlogCTAABTest articleSlug="local-seo-roadmap-90-tage" position="middle" />
 
       <BlogFAQSection faqs={faqItems} />
       <SourcesSection sources={sources} />
