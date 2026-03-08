@@ -735,6 +735,9 @@ const GoogleMapsRankingCaseStudies = () => {
         ]}
       />
 
+      {/* Ranking Tracking Explainer */}
+      <GoogleMapsRankingExplainer compact />
+
       <HelpfulnessWidget articleSlug="google-maps-ranking-case-studies" />
     </ArticleLayout>
   );
