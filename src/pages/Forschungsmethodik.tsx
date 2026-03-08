@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, FlaskConical, BarChart3, Database, Globe, Eye, GitBranch, CheckCircle } from "lucide-react";
+import { FlaskConical, BarChart3, Database, Globe, Eye, GitBranch, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 const Forschungsmethodik = () => {
   const { language } = useLanguage();

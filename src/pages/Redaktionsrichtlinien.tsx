@@ -132,12 +132,7 @@ const Redaktionsrichtlinien = () => {
         </header>
 
         <main className="container max-w-3xl py-12 px-4">
-          <Link to="/">
-            <Button variant="ghost" className="mb-8 group">
-              <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-              {language === "de" ? "Zurück zur Startseite" : "Back to Homepage"}
-            </Button>
-          </Link>
+          <SiteBreadcrumbs includeSchema />
 
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 bg-primary/10 rounded-xl">
