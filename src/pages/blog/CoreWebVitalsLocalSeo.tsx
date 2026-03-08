@@ -302,10 +302,10 @@ const CoreWebVitalsLocalSeo = () => {
 
         <Card className="bg-orange-50 border-orange-200 mb-6">
           <CardContent className="p-4">
-            <h4 className="font-semibold mb-2 flex items-center gap-2">
+            <h3 className="font-semibold mb-2 flex items-center gap-2">
               <AlertTriangle className="h-5 w-5 text-orange-500" />
-              Typisches CLS-Problem
-            </h4>
+              Typisches CLS-Problem bei lokalen Websites
+            </h3>
             <p className="text-muted-foreground">
               Nutzer will auf "Termin buchen" klicken → Werbebanner lädt → Button springt nach unten → Nutzer klickt auf Werbung statt Button = Frustration und verlorene Conversion.
             </p>
