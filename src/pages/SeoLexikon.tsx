@@ -637,6 +637,7 @@ const SeoLexikon = () => {
         </header>
 
         <main className="container max-w-7xl mx-auto px-4 py-8 md:py-12">
+          <SiteBreadcrumbs includeSchema />
           {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

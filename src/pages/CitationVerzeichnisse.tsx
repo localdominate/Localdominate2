@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/i18n/LanguageContext";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import {
   Table,
   TableHeader,
