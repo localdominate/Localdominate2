@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import AuthorBox from "./AuthorBox";
+import ArticleContextLinks from "./ArticleContextLinks";
 import RelatedArticles from "./RelatedArticles";
 import MobileArticleCTA from "./MobileArticleCTA";
 import SocialShare from "./SocialShare";
@@ -398,6 +399,9 @@ const ArticleLayout = ({
         <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary prose-li:text-muted-foreground">
           {children}
         </article>
+
+        {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
+        <ArticleContextLinks articleSlug={article.slug} />
 
         {/* Social Share */}
         <div className="my-8 py-6 border-t border-b border-border">
