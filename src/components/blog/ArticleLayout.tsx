@@ -16,6 +16,7 @@ import ReadingProgress from "./ReadingProgress";
 import StickyTableOfContents from "./StickyTableOfContents";
 import LastReviewedBadge from "./LastReviewedBadge";
 import ArticleHook from "./ArticleHook";
+import ArticleConclusion from "./ArticleConclusion";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
@@ -535,6 +536,7 @@ const ArticleLayout = ({
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
+          <ArticleConclusion slug={article.slug} />
         </article>
 
         {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
