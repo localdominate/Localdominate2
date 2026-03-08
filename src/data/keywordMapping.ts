@@ -601,9 +601,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-mehrstufig-unternehmen",
-    primaryKeyword: "franchise local seo",
-    secondaryKeywords: ["multi location seo strategie", "filialunternehmen seo", "skalierung local seo"],
-    lsiKeywords: ["mehrere standorte optimieren", "franchise marketing", "zentrale seo steuerung"],
+    primaryKeyword: "franchise seo gbp management",
+    secondaryKeywords: ["gbp management filialen", "markenkonsistenz multi location", "franchise google business"],
+    lsiKeywords: ["zentrale gbp steuerung", "nap konsistenz franchise", "lokale autonomie filialen"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
     contentType: "cluster"
