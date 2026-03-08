@@ -3434,6 +3434,30 @@ export const blogArticles: BlogArticle[] = [
     icon: "🤖",
     keywords: ["ai suchmaschinen", "content struktur ai", "geo optimierung", "schema markup ai", "llms.txt", "website ai optimierung", "chatgpt seo", "perplexity optimierung"]
   },
+  // === PILLAR PAGE: LOCAL SEO STRATEGIE FÜR KLEINE UNTERNEHMEN ===
+  {
+    slug: "local-seo-strategie-kleine-unternehmen",
+    de: {
+      title: "Local SEO Strategie für kleine Unternehmen: Der komplette Aktionsplan 2026",
+      metaTitle: "Local SEO Strategie für kleine Unternehmen | Aktionsplan 2026",
+      metaDescription: "Die komplette Local-SEO-Strategie für KMU im DACH-Raum: 90-Tage-Plan, Checklisten, Tools & Branchenbeispiele. Kostenlos umsetzbar — ohne Agentur.",
+      excerpt: "Schritt-für-Schritt Local-SEO-Strategie für kleine Unternehmen: Google Business Profil, Bewertungen, Citations, Content & Linkbuilding — mit 90-Tage-Aktionsplan für den DACH-Markt.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO Strategy for Small Businesses: Complete Action Plan 2026",
+      metaTitle: "Local SEO Strategy for Small Businesses | Action Plan 2026",
+      metaDescription: "The complete Local SEO strategy for SMBs in the DACH region: 90-day plan, checklists, tools & industry examples. Free to implement — no agency needed.",
+      excerpt: "Step-by-step Local SEO strategy for small businesses: Google Business Profile, reviews, citations, content & link building — with a 90-day action plan for the DACH market.",
+      category: "Strategy"
+    },
+    readingTime: 22,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🏪",
+    keywords: ["local seo strategie", "local seo kleine unternehmen", "local seo kmu", "lokale seo strategie", "local seo aktionsplan", "local seo dach", "local seo kostenlos", "seo für kleine unternehmen"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3526,6 +3550,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-staedte-hub",
   "bewertungen-reputation-hub",
   "website-content-ai-suchmaschinen",
+  "local-seo-strategie-kleine-unternehmen",
 ]);
 
 // Get only published articles (with pages), deduplicated
