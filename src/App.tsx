@@ -39,6 +39,7 @@ const InternalLinkingDashboard = lazy(() => import("./pages/InternalLinkingDashb
 const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
 const ContentUpdateCalendar = lazy(() => import("./pages/ContentUpdateCalendar"));
+const ContentFormattingGuidelines = lazy(() => import("./pages/ContentFormattingGuidelines"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -228,6 +229,7 @@ const App = () => (
                 <Route path="/agb" element={<AGB />} />
                 <Route path="/redaktionsrichtlinien" element={<Redaktionsrichtlinien />} />
                 <Route path="/forschungsmethodik" element={<Forschungsmethodik />} />
+                <Route path="/content-formatting-guidelines" element={<ContentFormattingGuidelines />} />
                 <Route path="/ueber-uns" element={<UeberUns />} />
                 <Route path="/seo-lexikon" element={<SeoLexikon />} />
                 <Route path="/blog" element={<Blog />} />
