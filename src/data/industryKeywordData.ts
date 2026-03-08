@@ -353,7 +353,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   optiker: {
     industry: "Optiker",
-    quickWin: "Marken-Keywords wie „Ray-Ban [Stadt]" oder „Gleitsichtbrille [Stadt]" haben oft geringe Konkurrenz.",
+    quickWin: "Marken-Keywords wie 'Ray-Ban [Stadt]' oder 'Gleitsichtbrille [Stadt]' haben oft geringe Konkurrenz.",
     clusters: [
       {
         name: "Optiker + Standort",
