@@ -5,6 +5,8 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, MapPin, Star, Clock, Camera, TrendingUp, Users, Wheat, Cake, Coffee } from "lucide-react";
 import {
