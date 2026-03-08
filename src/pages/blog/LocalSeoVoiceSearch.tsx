@@ -272,7 +272,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="lokale-fragen">
-        <h2>Lokale Fragen beantworten</h2>
+        <h2>Wie beantwortest du lokale Fragen für Voice Search?</h2>
         <AutoLexikonText>
           <h3>FAQ-Seite für Voice Search</h3>
           <p>
