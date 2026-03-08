@@ -4060,7 +4060,7 @@ export const getAllArticles = (language: Language = "de"): ResolvedBlogArticle[]
   return getPublishedArticles().map(a => resolveArticle(a, language));
 };
 
-export const getRelatedArticles = (currentSlug: string, count: number = 3, language: Language = "de"): ResolvedBlogArticle[] => {
+export const getRelatedArticles = (currentSlug: string, count: number = 5, language: Language = "de"): ResolvedBlogArticle[] => {
   const published = getPublishedArticles();
   const current = published.find(a => a.slug === currentSlug);
   if (!current) {
@@ -4068,15 +4068,25 @@ export const getRelatedArticles = (currentSlug: string, count: number = 3, langu
   }
   
   const currentCategory = current[language].category;
+  const currentKeywords = new Set(current.keywords.map(k => k.toLowerCase()));
   
-  const sameCategory = published.filter(
-    a => a.slug !== currentSlug && a[language].category === currentCategory
-  );
-  const otherCategory = published.filter(
-    a => a.slug !== currentSlug && a[language].category !== currentCategory
-  );
+  // Score each article by relevance: keyword overlap + category match
+  const scored = published
+    .filter(a => a.slug !== currentSlug)
+    .map(a => {
+      let score = 0;
+      // Keyword overlap (strongest signal)
+      const overlap = a.keywords.filter(k => currentKeywords.has(k.toLowerCase())).length;
+      score += overlap * 3;
+      // Same category
+      if (a[language].category === currentCategory) score += 2;
+      // Featured articles get a small boost
+      if (a.featured) score += 1;
+      return { article: a, score };
+    })
+    .sort((a, b) => b.score - a.score);
   
-  return [...sameCategory, ...otherCategory].slice(0, count).map(a => resolveArticle(a, language));
+  return scored.slice(0, count).map(s => resolveArticle(s.article, language));
 };
 
 export const getCategories = (language: Language = "de"): string[] => {

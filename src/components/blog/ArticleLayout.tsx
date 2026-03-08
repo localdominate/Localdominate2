@@ -63,7 +63,7 @@ const ArticleLayout = ({
   articleType = 'standard'
 }: ArticleLayoutProps) => {
   const { language } = useLanguage();
-  const relatedArticles = getRelatedArticles(article.slug, 3, language);
+  const relatedArticles = getRelatedArticles(article.slug, 6, language);
   const hasTrackedView = useRef(false);
   const [viewId, setViewId] = useState<string | null>(null);
   
