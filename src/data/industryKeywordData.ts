@@ -605,7 +605,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   ferienwohnungen: {
     industry: "Ferienwohnungen",
-    quickWin: "Saison-Keywords und Aktivitäts-basierte Suchen wie „Ferienwohnung Wandern [Region]" konvertieren überdurchschnittlich.",
+    quickWin: "Saison-Keywords und Aktivitäts-basierte Suchen wie 'Ferienwohnung Wandern [Region]' konvertieren überdurchschnittlich.",
     clusters: [
       {
         name: "Unterkunft + Region",
