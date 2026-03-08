@@ -35,6 +35,7 @@ const ArticleFeedbackDashboard = lazy(() => import("./pages/ArticleFeedbackDashb
 const BlogAnalytics = lazy(() => import("./pages/BlogAnalytics"));
 const ContentPerformanceDashboard = lazy(() => import("./pages/ContentPerformanceDashboard"));
 const ConversionOptimizationReport = lazy(() => import("./pages/ConversionOptimizationReport"));
+const InternalLinkingDashboard = lazy(() => import("./pages/InternalLinkingDashboard"));
 const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
 
