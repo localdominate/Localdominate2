@@ -383,6 +383,15 @@ const LocalSeoVsOrganisch = () => {
         </div>
       </section>
 
+      {/* Case Studies */}
+      <section id="praxisbeispiele" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-2">Praxisbeispiele: Local SEO + Organic SEO in Aktion</h2>
+        <p className="text-muted-foreground mb-6">Hypothetische Fallstudien, die zeigen, wie Unternehmen durch die richtige Strategie-Kombination ihre Sichtbarkeit steigern.</p>
+        {industryCaseStudies["local-seo-vs-organisch"]?.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       {/* Internal Links */}
       <section className="mb-12 p-6 bg-muted/30 rounded-xl">
         <h3 className="font-bold text-foreground mb-4">Weiterführende Artikel</h3>

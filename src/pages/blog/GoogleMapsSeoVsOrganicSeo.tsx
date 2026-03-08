@@ -433,6 +433,15 @@ const GoogleMapsSeoVsOrganicSeo = () => {
         </div>
       </section>
 
+      {/* Case Studies */}
+      <section id="praxisbeispiele" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-2">Praxisbeispiele: Maps SEO vs. Organic SEO</h2>
+        <p className="text-muted-foreground mb-6">Hypothetische Fallstudien zeigen, wie Unternehmen mit der richtigen Kanal-Strategie mehr Kunden gewinnen.</p>
+        {industryCaseStudies["google-maps-seo-vs-organic-seo"]?.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
+
       {/* Internal Links */}
       <section className="mb-12 p-6 bg-muted/30 rounded-xl">
         <h3 className="font-bold text-foreground mb-4">Weiterführende Artikel</h3>

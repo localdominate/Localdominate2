@@ -514,4 +514,140 @@ export const industryCaseStudies: Record<string, CaseStudyData[]> = {
       result: "Saison 2026 war bereits im Februar ausgebucht. Der Durchschnittspreis pro Hochzeit stieg um 133%."
     }
   ],
+
+  // === COMPARISON ARTICLE CASE STUDIES ===
+  "local-seo-vs-organisch": [
+    {
+      title: "Café Sonnenschein – Local SEO schlägt reine Content-Strategie",
+      industry: "Gastronomie",
+      location: "Freiburg",
+      duration: "4 Monate",
+      challenge: "Das Café investierte 12 Monate in Blog-Content und organisches SEO, bekam aber kaum lokale Laufkundschaft über Google.",
+      measures: [
+        "Google Business Profil vollständig optimiert mit Speisekarte & Fotos",
+        "Local Citations in 35 Branchenverzeichnissen aufgebaut",
+        "Bewertungskampagne: 60 Google-Bewertungen in 3 Monaten",
+        "Lokale Landing-Pages für 'Café Freiburg Altstadt' erstellt",
+        "Organische Blog-Artikel mit lokalem Fokus umgeschrieben"
+      ],
+      metrics: [
+        { label: "Google Maps Sichtbarkeit", before: "Nicht im Local Pack", after: "Platz 1", change: "Top 3" },
+        { label: "Organische Besucher/Monat", before: "1.200", after: "2.800", change: "+133%" },
+        { label: "Laufkunden über Google", before: "~5/Woche", after: "~28/Woche", change: "+460%" },
+      ],
+      quote: { text: "Wir haben jahrelang nur Bloggen versucht. Erst die Kombination aus Local SEO und Content hat uns wirklich nach vorne gebracht.", author: "Lisa K.", role: "Inhaberin" },
+      result: "Umsatz stieg um 35%. Die Kombination beider Strategien brachte 5x mehr Neukunden als rein organisches SEO allein."
+    },
+    {
+      title: "Rechtsanwalt Weber – Vom nationalen Blog zum lokalen Marktführer",
+      industry: "Rechtsberatung",
+      location: "Düsseldorf",
+      duration: "6 Monate",
+      challenge: "Die Kanzlei hatte 200+ organische Blog-Artikel, aber keine lokale Sichtbarkeit für 'Anwalt Düsseldorf'.",
+      measures: [
+        "Google Business Profil mit allen Fachgebieten & Fotos eingerichtet",
+        "Lokale Landingpages: 'Arbeitsrecht Düsseldorf', 'Mietrecht Düsseldorf'",
+        "NAP-Konsistenz auf 50+ Verzeichnissen hergestellt",
+        "Bestehende Blog-Artikel um lokale Keywords ergänzt",
+        "Schema Markup für Anwalt & lokale Geschäftstätigkeit implementiert"
+      ],
+      metrics: [
+        { label: "Local Pack Ranking", before: "Nicht sichtbar", after: "Platz 2", change: "Top 3" },
+        { label: "Mandatsanfragen/Monat", before: "8", after: "32", change: "+300%" },
+        { label: "Organischer Traffic", before: "3.500", after: "5.200", change: "+49%" },
+      ],
+      quote: { text: "Unser Blog brachte Leser aus ganz Deutschland – aber keine Mandanten. Local SEO hat das komplett geändert.", author: "Dr. Martin W.", role: "Kanzleiinhaber" },
+      result: "Mandatsanfragen vervierfacht. 70% der neuen Mandanten kommen jetzt über lokale Google-Suchen."
+    }
+  ],
+
+  "google-maps-seo-vs-organic-seo": [
+    {
+      title: "Pizzeria Da Marco – Maps-Optimierung verdreifacht Walk-Ins",
+      industry: "Gastronomie",
+      location: "München",
+      duration: "3 Monate",
+      challenge: "Trotz guter Website mit SEO-optimierten Texten war die Pizzeria auf Google Maps kaum sichtbar. Walk-In-Kunden blieben aus.",
+      measures: [
+        "Google Business Profil komplett überarbeitet mit 40+ Fotos",
+        "Kategorie-Optimierung: Pizzeria + Italienisches Restaurant",
+        "Bewertungsstrategie: QR-Code auf jeder Rechnung",
+        "Google Posts 3x/Woche mit Tagesangeboten",
+        "Lokale Backlinks von Food-Blogs und Stadtmagazin"
+      ],
+      metrics: [
+        { label: "Google Maps Position", before: "Position 12", after: "Platz 2", change: "Top 3" },
+        { label: "Maps-Aufrufe/Monat", before: "180", after: "1.400", change: "+678%" },
+        { label: "Walk-In Neukunden/Woche", before: "~8", after: "~25", change: "+213%" },
+      ],
+      quote: { text: "Unsere Website war schon gut, aber die Leute suchen 'Pizza in der Nähe' – da zählt nur Maps.", author: "Marco R.", role: "Inhaber" },
+      result: "Umsatz +45% in 3 Monaten. Google Maps bringt jetzt 3x mehr Neukunden als die organische Suche."
+    },
+    {
+      title: "IT-Beratung Schneider – Organic SEO für B2B, Maps für lokale Leads",
+      industry: "IT-Dienstleistung",
+      location: "Hamburg",
+      duration: "5 Monate",
+      challenge: "B2B IT-Beratung mit guter Maps-Präsenz, aber ohne organischen Content. Konkurrenz dominierte bei 'IT Beratung' + Fachthemen.",
+      measures: [
+        "Fach-Blog mit 15 Artikeln zu IT-Sicherheit, Cloud-Migration, Digitalisierung",
+        "Pillar-Page: 'IT-Beratung Hamburg – Ihr Partner für Digitalisierung'",
+        "Technische SEO: Core Web Vitals optimiert, Schema Markup",
+        "Google Business weiter gepflegt mit Case-Study-Posts",
+        "Interne Verlinkung zwischen Blog und lokalen Landingpages"
+      ],
+      metrics: [
+        { label: "Organischer Traffic", before: "120/Monat", after: "2.100/Monat", change: "+1.650%" },
+        { label: "Qualifizierte Leads/Monat", before: "3", after: "14", change: "+367%" },
+        { label: "Ø Auftragswert", before: "5.000€", after: "12.000€", change: "+140%" },
+      ],
+      quote: { text: "Maps brachte uns lokale Anfragen, aber erst der Fach-Content hat uns als Experten positioniert – und die großen Aufträge gebracht.", author: "Stefan S.", role: "Geschäftsführer" },
+      result: "Jahresumsatz +120%. Die Kombination aus Maps-Präsenz und organischem Content erzeugt einen Vertrauens-Funnel, der größere Projekte anzieht."
+    }
+  ],
+
+  "ai-search-vs-traditional-search": [
+    {
+      title: "Bäckerei Mühlenstein – Von AI Overview zitiert werden",
+      industry: "Bäckerei / Gastronomie",
+      location: "Berlin",
+      duration: "4 Monate",
+      challenge: "Die Bäckerei war gut in der traditionellen Suche positioniert, aber AI Overviews zeigten Konkurrenten als empfohlene Quelle.",
+      measures: [
+        "FAQ-Schema auf Website implementiert mit 25+ lokalen Fragen",
+        "Strukturierte Daten: Öffnungszeiten, Produkte, Bewertungen",
+        "Conversational Content: 'Welche Bäckerei in Berlin hat sonntags offen?'",
+        "Google Business mit detaillierten Produktbeschreibungen ergänzt",
+        "Autoritative Erwähnungen in lokalen Food-Blogs aufgebaut"
+      ],
+      metrics: [
+        { label: "AI Overview Erwähnungen", before: "0", after: "12/Monat", change: "Neu" },
+        { label: "Voice Search Anfragen", before: "~3/Woche", after: "~18/Woche", change: "+500%" },
+        { label: "Website-Traffic", before: "800/Monat", after: "1.900/Monat", change: "+138%" },
+      ],
+      quote: { text: "Seit Google AI uns als Antwort zeigt, kommen Kunden und sagen: 'Google hat mir empfohlen, zu euch zu gehen.'", author: "Hans M.", role: "Bäckermeister" },
+      result: "Trotz Zero-Click-Trend stieg der Traffic um 138%. Die AI-Erwähnungen wirken wie kostenlose Empfehlungen."
+    },
+    {
+      title: "Yoga Studio Harmonie – Doppelstrategie für AI + traditionelle Suche",
+      industry: "Fitness & Wellness",
+      location: "Köln",
+      duration: "5 Monate",
+      challenge: "AI-Chatbots empfahlen Konkurrenz-Studios. Traditionelle Rankings allein reichten nicht mehr für Neukunden-Gewinnung.",
+      measures: [
+        "Umfassende 'Yoga in Köln'-Pillar-Page mit E-E-A-T-Signalen",
+        "Trainer-Profile mit Zertifikaten und Expertise veröffentlicht",
+        "Strukturierte FAQ-Sektion: 'Bestes Yoga-Studio Köln für Anfänger?'",
+        "Bewertungen aktiv auf Google, Yelp und Trustpilot gesammelt",
+        "Content-Cluster: Yoga-Stile, Preise, Standort-Vorteile"
+      ],
+      metrics: [
+        { label: "ChatGPT/Perplexity Erwähnungen", before: "0", after: "8/Monat", change: "Neu" },
+        { label: "Probestunden-Buchungen", before: "15/Monat", after: "42/Monat", change: "+180%" },
+        { label: "Google Ranking 'Yoga Köln'", before: "Platz 9", after: "Platz 2", change: "+7 Plätze" },
+      ],
+      quote: { text: "Wenn jemand ChatGPT fragt 'Welches Yoga-Studio in Köln?' und unser Name fällt – das ist unbezahlbar.", author: "Nina H.", role: "Studio-Inhaberin" },
+      result: "Probestunden fast verdreifacht. 25% der Neukunden geben an, über AI-Empfehlungen auf das Studio aufmerksam geworden zu sein."
+    }
+  ],
 };
