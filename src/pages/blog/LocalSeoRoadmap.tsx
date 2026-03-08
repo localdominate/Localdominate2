@@ -1,3 +1,4 @@
+import CompetitiveAnalysisFramework from "@/components/blog/CompetitiveAnalysisFramework";
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
