@@ -570,6 +570,29 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["konkurrenzanalyse", "competitor analysis", "google maps", "local pack", "ranking analyse", "wettbewerber"],
     featured: false
   },
+  {
+    slug: "google-maps-ranking-case-studies",
+    de: {
+      title: "Google Maps Ranking Case Studies: 6 Branchen, 6 Erfolge",
+      metaTitle: "Google Maps Case Studies | 6 Branchen-Erfolgsgeschichten 2026",
+      metaDescription: "6 echte Google Maps Ranking Case Studies aus Gastronomie, Handwerk, Gesundheit, Recht, Beauty und Automotive. Mit konkreten Zahlen und Maßnahmen.",
+      excerpt: "Von unsichtbar zu Platz 1: Wie Unternehmen aus 6 verschiedenen Branchen ihr Google Maps Ranking dramatisch verbessert haben.",
+      category: "Google Maps"
+    },
+    en: {
+      title: "Google Maps Ranking Case Studies: 6 Industries, 6 Success Stories",
+      metaTitle: "Google Maps Case Studies | 6 Industry Success Stories 2026",
+      metaDescription: "6 real Google Maps ranking case studies from gastronomy, trades, healthcare, legal, beauty, and automotive. With concrete numbers and measures.",
+      excerpt: "From invisible to #1: How businesses from 6 different industries dramatically improved their Google Maps ranking.",
+      category: "Google Maps"
+    },
+    readingTime: 18,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🏆",
+    keywords: ["case study", "google maps ranking", "local seo erfolg", "ranking verbessern", "fallstudie", "branchenvergleich"],
+    featured: true
+  },
 
   // === NEUE ARTIKEL: STRATEGIE ===
   {
@@ -3749,6 +3772,7 @@ const PUBLISHED_SLUGS = new Set([
   "wie-google-maps-ranking-funktioniert",
   "google-maps-spam-erkennen",
   "google-maps-konkurrenzanalyse",
+  "google-maps-ranking-case-studies",
 ]);
 
 // Get only published articles (with pages), deduplicated

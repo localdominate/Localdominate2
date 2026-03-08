@@ -81,6 +81,7 @@ export const HUB_DEFINITIONS: HubDefinition[] = [
       "ranking-ploetzlich-verschwunden",
       "google-maps-spam-erkennen",
       "google-maps-konkurrenzanalyse",
+      "google-maps-ranking-case-studies",
     ],
   },
   {
