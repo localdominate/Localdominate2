@@ -188,7 +188,26 @@ const LocalSeoVsOrganisch = () => {
       {/* Vergleichstabelle */}
       <section id="vergleich" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6">Vergleichstabelle: Local vs. Organic SEO</h2>
-        <ComparisonTable headers={comparisonData.headers} rows={comparisonData.rows} />
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border border-border rounded-xl overflow-hidden">
+            <thead>
+              <tr className="bg-muted">
+                {comparisonData.headers.map((h, i) => (
+                  <th key={i} className="p-3 text-left font-semibold text-foreground border-b border-border">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonData.rows.map((row, i) => (
+                <tr key={i} className={i % 2 === 0 ? "bg-background" : "bg-muted/30"}>
+                  {row.map((cell, j) => (
+                    <td key={j} className={`p-3 border-b border-border ${j === 0 ? "font-medium text-foreground" : "text-muted-foreground"}`}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <BlogCTAABTest articleSlug="local-seo-vs-organisch" position="middle" />
