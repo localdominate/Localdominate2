@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Award, Users, Target, TrendingUp, CheckCircle, MapPin, Star } from "lucide-react";
+import { Award, Users, Target, TrendingUp, CheckCircle, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
 const UeberUns = () => {
   const { language } = useLanguage();
