@@ -414,9 +414,17 @@ const ArticleLayout = ({
           </h1>
         </header>
 
-        {/* Article Content */}
-        <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary prose-li:text-muted-foreground">
-          {children}
+        {/* Article Content - AI-optimized wrapper */}
+        <article 
+          className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary prose-li:text-muted-foreground"
+          data-article-slug={article.slug}
+          data-ai-content="true"
+          itemScope
+          itemType="https://schema.org/Article"
+        >
+          <div className="article-intro" data-speakable="true" data-ai-summary="true">
+            {children}
+          </div>
         </article>
 
         {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
