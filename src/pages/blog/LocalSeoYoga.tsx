@@ -180,6 +180,8 @@ const LocalSeoYoga = () => {
 
       <ImplementationRoadmap data={industryImplementationData.yoga} />
 
+      <IndustryComparisonTable data={industryComparisonData.yoga} />
+
       <section id="faq" className="mb-12 scroll-mt-20">
         <h2 className="text-2xl font-bold mb-6">Häufige Fragen zu Local SEO für Yoga-Studios</h2>
         <Accordion type="single" collapsible className="w-full">

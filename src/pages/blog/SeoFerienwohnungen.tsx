@@ -297,6 +297,8 @@ const SeoFerienwohnungen = () => {
 
       <ImplementationRoadmap data={industryImplementationData.ferienwohnungen} />
 
+      <IndustryComparisonTable data={industryComparisonData.ferienwohnungen} />
+
       <h2 id="faq">Häufige Fragen zu SEO für Ferienwohnungen</h2>
 
       <BlogCTAABTest position="end" articleSlug="seo-ferienwohnungen" />

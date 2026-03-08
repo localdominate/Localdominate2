@@ -219,6 +219,8 @@ const LocalSeoElektrotechnik = () => {
 
       <ImplementationRoadmap data={industryImplementationData.elektrotechnik} />
 
+      <IndustryComparisonTable data={industryComparisonData.elektrotechnik} />
+
       <section id="faq">
         <h2>Häufige Fragen</h2>
         <Accordion type="single" collapsible className="w-full">

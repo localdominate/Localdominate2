@@ -324,6 +324,8 @@ const LocalSeoFotograf = () => {
 
       <ImplementationRoadmap data={industryImplementationData.fotograf} />
 
+      <IndustryComparisonTable data={industryComparisonData.fotograf} />
+
       <section id="faq">
         <h2>Häufige Fragen</h2>
         <Accordion type="single" collapsible className="w-full">
