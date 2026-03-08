@@ -153,7 +153,7 @@ const LocalSeoHannover = () => {
           ].map((item, i) => (
             <Card key={i} className="border-primary/10">
               <CardContent className="p-4">
-                <h4 className="font-semibold mb-1">{item.title}</h4>
+                <h3 className="font-semibold mb-1">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.examples}</p>
               </CardContent>
             </Card>

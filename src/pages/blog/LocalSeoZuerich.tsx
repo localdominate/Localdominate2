@@ -332,7 +332,7 @@ const LocalSeoZuerich = () => {
 
         <Card className="bg-primary/5 border-primary/20 mt-6">
           <CardContent className="pt-6">
-            <h4 className="font-semibold mb-2">⚠️ Wichtig: Kein "ß" in der Schweiz!</h4>
+            <h3 className="font-semibold mb-2">⚠️ Schweizer SEO: Kein "ß" verwenden!</h3>
             <p className="text-sm">
               In der Schweiz gibt es kein "ß" – stattdessen wird immer "ss" verwendet. 
               "Strasse" statt "Straße", "Fussball" statt "Fußball". Achten Sie darauf, 
