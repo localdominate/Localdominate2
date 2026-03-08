@@ -169,6 +169,7 @@ const LocalSeoMonthlyChecklist = lazy(() => import("./pages/blog/LocalSeoMonthly
 const GoogleMapsRankingTracker = lazy(() => import("./pages/blog/GoogleMapsRankingTracker"));
 const LocalSeoStrategyPlanner = lazy(() => import("./pages/blog/LocalSeoStrategyPlanner"));
 const LocalSeoRoadmap = lazy(() => import("./pages/blog/LocalSeoRoadmap"));
+const AiVisibilityChecklist = lazy(() => import("./pages/blog/AiVisibilityChecklist"));
 const SchemaStrategieDokument = lazy(() => import("./pages/blog/SchemaStrategieDokument"));
 const LocalSeoStatistiken = lazy(() => import("./pages/blog/LocalSeoStatistiken"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
@@ -353,6 +354,7 @@ const App = () => (
                 <Route path="/blog/google-maps-ranking-tracker" element={<GoogleMapsRankingTracker />} />
                 <Route path="/blog/local-seo-strategy-planner" element={<LocalSeoStrategyPlanner />} />
                 <Route path="/blog/local-seo-roadmap-90-tage" element={<LocalSeoRoadmap />} />
+                <Route path="/blog/ai-visibility-checklist" element={<AiVisibilityChecklist />} />
                 <Route path="/blog/schema-strategie-dokument" element={<SchemaStrategieDokument />} />
                 <Route path="/blog/local-seo-statistiken-daten" element={<LocalSeoStatistiken />} />
                 <Route path="/blog/faq-hub" element={<FaqHub />} />

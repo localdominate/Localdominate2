@@ -811,6 +811,30 @@ export const blogArticles: BlogArticle[] = [
   },
 
   {
+    slug: "ai-visibility-checklist",
+    de: {
+      title: "AI Visibility Checklist: Ist deine Website bereit für AI-Suche?",
+      metaTitle: "AI Visibility Checklist | AI-Sichtbarkeit prüfen 2026",
+      metaDescription: "Interaktive AI-Sichtbarkeits-Checkliste mit 57+ Prüfpunkten. Schema Markup, Voice Search, LLM-Optimierung, AI Overviews — mit Score und Vorlage.",
+      excerpt: "Prüfe deine Website auf AI-Sichtbarkeit: 57+ Punkte in 8 Bereichen mit AI-Impact-Score, Fortschrittsspeicherung und kopierbarer Audit-Vorlage.",
+      category: "AI & Zukunft"
+    },
+    en: {
+      title: "AI Visibility Checklist: Is Your Website Ready for AI Search?",
+      metaTitle: "AI Visibility Checklist | Check AI Readiness 2026",
+      metaDescription: "Interactive AI visibility checklist with 57+ checkpoints. Schema markup, voice search, LLM optimization, AI Overviews — with score and template.",
+      excerpt: "Check your website for AI visibility: 57+ points across 8 areas with AI impact score, progress saving and copyable audit template.",
+      category: "AI & Future"
+    },
+    readingTime: 12,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🤖",
+    keywords: ["ai visibility", "ai sichtbarkeit", "ai checklist", "ai overviews optimierung", "llm optimierung", "voice search checklist", "ai search optimization"],
+    featured: false
+  },
+
+  {
     slug: "google-maps-ranking-tracker",
     de: {
       title: "Google Maps Ranking Tracker: So trackst du deine lokalen Rankings",
@@ -4207,6 +4231,7 @@ const PUBLISHED_SLUGS = new Set([
   "semantic-seo-topical-authority",
   "schema-strategie-dokument",
   "local-seo-statistiken-daten",
+  "ai-visibility-checklist",
   "local-seo-vs-organisch",
   "google-maps-seo-vs-organic-seo",
   "ai-search-vs-traditional-search",
