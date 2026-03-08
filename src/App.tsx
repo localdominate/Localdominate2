@@ -125,6 +125,7 @@ const LocalCitations2025 = lazy(() => import("./pages/blog/LocalCitations2025"))
 const LocalSeoBackerei = lazy(() => import("./pages/blog/LocalSeoBackerei"));
 const LocalSeoHannover = lazy(() => import("./pages/blog/LocalSeoHannover"));
 const AiSearchOptimization2026 = lazy(() => import("./pages/blog/AiSearchOptimization2026"));
+const AiSearchVsTraditionalSearch = lazy(() => import("./pages/blog/AiSearchVsTraditionalSearch"));
 const SeoFerienwohnungen = lazy(() => import("./pages/blog/SeoFerienwohnungen"));
 const TechnischesLocalSeoGuide = lazy(() => import("./pages/blog/TechnischesLocalSeoGuide"));
 const LocalBusinessSchemaImplementierung = lazy(() => import("./pages/blog/LocalBusinessSchemaImplementierung"));
