@@ -5,6 +5,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import LocalKeywordFramework from "@/components/blog/LocalKeywordFramework";
 import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
 import NinetyDayImplementationPlan from "@/components/blog/NinetyDayImplementationPlan";
 import { getArticleBySlug } from "@/data/blogArticles";
