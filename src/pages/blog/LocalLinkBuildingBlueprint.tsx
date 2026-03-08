@@ -627,6 +627,12 @@ const LocalLinkBuildingBlueprint = () => {
         ]}
       />
 
+      <PressOutreachTemplates
+        types={["opening", "award", "expert", "trend", "followup"]}
+        title="Presse-Vorlagen: PR-gesteuerte Backlinks gewinnen"
+        description="Kopierfertige E-Mail-Templates fuer lokale Journalisten – ideal fuer Pressemitteilungen mit Link-Potenzial."
+      />
+
       <HelpfulnessWidget articleSlug="local-link-building-blueprint" />
 
       {/* FAQ */}

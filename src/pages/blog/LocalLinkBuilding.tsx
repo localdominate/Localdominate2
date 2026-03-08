@@ -676,6 +676,11 @@ Beste Grüße
         description="Kopierfertige E-Mail-Templates fuer jede Link-Building-Strategie – von Partnerschaften bis Pressearbeit."
       />
 
+      <PressOutreachTemplates
+        title="Presse-Vorlagen: Lokale Medien kontaktieren"
+        description="Kopierfertige E-Mail-Templates fuer die lokale Pressearbeit – fuer Eroeffnungen, Events, Auszeichnungen und mehr."
+      />
+
       <HelpfulnessWidget articleSlug="local-link-building" />
     </ArticleLayout>
   );

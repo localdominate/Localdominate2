@@ -239,6 +239,12 @@ const LokaleEventsMarketing = () => {
         description="Kopierfertige E-Mail-Templates fuer gemeinsame Events, Cross-Promotions und Charity-Aktionen mit lokalen Partnern."
       />
 
+      <PressOutreachTemplates
+        types={["event", "charity", "followup"]}
+        title="Presse-Vorlagen: Events in die lokale Presse bringen"
+        description="Kopierfertige E-Mail-Templates fuer lokale Medien – Events ankuendigen, Charity-Aktionen pitchen und nachfassen."
+      />
+
       <HelpfulnessWidget articleSlug="lokale-events-marketing" />
 
       <SourcesSection sources={[
