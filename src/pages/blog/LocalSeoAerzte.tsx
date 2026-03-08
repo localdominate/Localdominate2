@@ -739,6 +739,8 @@ const LocalSeoAerzte = () => {
 
       <ArticleCTA />
 
+      <ImplementationRoadmap data={industryImplementationData.aerzte} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2>Häufig gestellte Fragen</h2>

@@ -215,6 +215,8 @@ const LocalSeoElektrotechnik = () => {
 
       <IndustryLandingCTA industry="handwerker" />
 
+      <ImplementationRoadmap data={industryImplementationData.elektrotechnik} />
+
       <section id="faq">
         <h2>Häufige Fragen</h2>
         <Accordion type="single" collapsible className="w-full">

@@ -569,6 +569,8 @@ const LocalSeoHandwerker = () => {
 
       <IndustryLandingCTA industry="handwerker" />
 
+      <ImplementationRoadmap data={industryImplementationData.handwerker} />
+
       {/* FAQ Section */}
       <section id="faq" className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6">

@@ -297,6 +297,8 @@ const LocalSeoAnwaelteKanzleien = () => {
         </AutoLexikonText>
       </section>
 
+      <ImplementationRoadmap data={industryImplementationData.anwaelte} />
+
       {/* FAQ */}
       <section id="faq">
         <h2>Häufige Fragen</h2>
