@@ -6,6 +6,7 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LinkBuildingIdeaGenerator from "@/components/blog/LinkBuildingIdeaGenerator";
 import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
+import GuestPostOutlines from "@/components/blog/GuestPostOutlines";
 import LinkBuildingOutreachTemplates from "@/components/blog/LinkBuildingOutreachTemplates";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Link, Building2, Newspaper, Users, Search, Trophy, AlertTriangle, Lightbulb } from "lucide-react";
