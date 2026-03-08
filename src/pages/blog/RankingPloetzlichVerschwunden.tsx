@@ -269,7 +269,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           </ol>
         </div>
 
-        <h2 id="wiederherstellung" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Ranking wiederherstellen</h2>
+        <h2 id="wiederherstellung" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Google Ranking Schritt für Schritt wiederherstellen</h2>
         <p className="text-lg mb-6">
           <AutoLexikonText>
             Je nach identifizierter Ursache unterscheidet sich die Wiederherstellungsstrategie:
