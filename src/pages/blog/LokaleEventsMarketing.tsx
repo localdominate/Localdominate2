@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
+import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -236,6 +237,12 @@ const LokaleEventsMarketing = () => {
         types={["joint-event", "cross-promo", "charity"]}
         title="Outreach-Vorlagen: Event-Partnerschaften starten"
         description="Kopierfertige E-Mail-Templates fuer gemeinsame Events, Cross-Promotions und Charity-Aktionen mit lokalen Partnern."
+      />
+
+      <PressOutreachTemplates
+        types={["event", "charity", "followup"]}
+        title="Presse-Vorlagen: Events in die lokale Presse bringen"
+        description="Kopierfertige E-Mail-Templates fuer lokale Medien – Events ankuendigen, Charity-Aktionen pitchen und nachfassen."
       />
 
       <HelpfulnessWidget articleSlug="lokale-events-marketing" />

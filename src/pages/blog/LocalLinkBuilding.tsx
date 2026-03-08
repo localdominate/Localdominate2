@@ -5,6 +5,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LinkBuildingIdeaGenerator from "@/components/blog/LinkBuildingIdeaGenerator";
+import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
 import LinkBuildingOutreachTemplates from "@/components/blog/LinkBuildingOutreachTemplates";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Link, Building2, Newspaper, Users, Search, Trophy, AlertTriangle, Lightbulb } from "lucide-react";
@@ -673,6 +674,11 @@ Beste Grüße
       <LinkBuildingOutreachTemplates
         title="Outreach-Vorlagen: Lokale Links aufbauen"
         description="Kopierfertige E-Mail-Templates fuer jede Link-Building-Strategie – von Partnerschaften bis Pressearbeit."
+      />
+
+      <PressOutreachTemplates
+        title="Presse-Vorlagen: Lokale Medien kontaktieren"
+        description="Kopierfertige E-Mail-Templates fuer die lokale Pressearbeit – fuer Eroeffnungen, Events, Auszeichnungen und mehr."
       />
 
       <HelpfulnessWidget articleSlug="local-link-building" />

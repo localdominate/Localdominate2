@@ -7,6 +7,7 @@ import BlogFAQSection from "@/components/blog/BlogFAQSection";
 import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -624,6 +625,12 @@ const LocalLinkBuildingBlueprint = () => {
           { label: "Ranking-Faktoren erklärt", href: "/blog/local-seo-ranking-faktoren-erklaert", type: "pillar", description: "Link-Signale verstehen" },
           { label: "Content & Marketing Hub", href: "/blog/content-marketing-hub", type: "hub", description: "Content-Strategien" },
         ]}
+      />
+
+      <PressOutreachTemplates
+        types={["opening", "award", "expert", "trend", "followup"]}
+        title="Presse-Vorlagen: PR-gesteuerte Backlinks gewinnen"
+        description="Kopierfertige E-Mail-Templates fuer lokale Journalisten – ideal fuer Pressemitteilungen mit Link-Potenzial."
       />
 
       <HelpfulnessWidget articleSlug="local-link-building-blueprint" />
