@@ -156,6 +156,7 @@ const SemanticSeoGuide = lazy(() => import("./pages/blog/SemanticSeoGuide"));
 const GoogleMapsAuditTemplate = lazy(() => import("./pages/blog/GoogleMapsAuditTemplate"));
 const CitationTrackingTemplate = lazy(() => import("./pages/blog/CitationTrackingTemplate"));
 const LocalKeywordResearchTemplate = lazy(() => import("./pages/blog/LocalKeywordResearchTemplate"));
+const LocalSeoMonthlyChecklist = lazy(() => import("./pages/blog/LocalSeoMonthlyChecklist"));
 const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
