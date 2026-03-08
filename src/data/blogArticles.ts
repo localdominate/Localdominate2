@@ -3458,6 +3458,30 @@ export const blogArticles: BlogArticle[] = [
     keywords: ["local seo strategie", "local seo kleine unternehmen", "local seo kmu", "lokale seo strategie", "local seo aktionsplan", "local seo dach", "local seo kostenlos", "seo für kleine unternehmen"],
     featured: true
   },
+  // === PILLAR PAGE: LOCAL SEO RANKING-FAKTOREN ERKLÄRT ===
+  {
+    slug: "local-seo-ranking-faktoren-erklaert",
+    de: {
+      title: "Local SEO Ranking-Faktoren erklärt: Alle Signale im Detail 2026",
+      metaTitle: "Local SEO Ranking-Faktoren 2026: Vollständige Analyse & Vergleich",
+      metaDescription: "Alle Local SEO Ranking-Faktoren erklärt: GBP-Signale (36 %), On-Page (18 %), Bewertungen (17 %), Links (13 %), Citations (7 %). Mit Vergleichstabellen & Aktionsplan.",
+      excerpt: "Die vollständige Analyse aller lokalen Ranking-Faktoren: Google Business Profil, On-Page, Bewertungen, Links, Citations und Verhaltens-Signale — mit Gewichtung und Vergleichstabellen.",
+      category: "Strategie"
+    },
+    en: {
+      title: "Local SEO Ranking Factors Explained: All Signals in Detail 2026",
+      metaTitle: "Local SEO Ranking Factors 2026: Complete Analysis & Comparison",
+      metaDescription: "All Local SEO ranking factors explained: GBP signals (36%), on-page (18%), reviews (17%), links (13%), citations (7%). With comparison tables & action plan.",
+      excerpt: "Complete analysis of all local ranking factors: Google Business Profile, on-page, reviews, links, citations and behavioral signals — with weighting and comparison tables.",
+      category: "Strategy"
+    },
+    readingTime: 20,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "📊",
+    keywords: ["local seo ranking faktoren", "lokale ranking faktoren", "google local ranking", "local pack ranking faktoren", "local seo signale", "ranking faktoren local seo 2026", "gbp ranking faktoren"],
+    featured: true
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -3551,6 +3575,7 @@ const PUBLISHED_SLUGS = new Set([
   "bewertungen-reputation-hub",
   "website-content-ai-suchmaschinen",
   "local-seo-strategie-kleine-unternehmen",
+  "local-seo-ranking-faktoren-erklaert",
 ]);
 
 // Get only published articles (with pages), deduplicated
