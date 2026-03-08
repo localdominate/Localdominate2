@@ -19,6 +19,8 @@ import ArticleHook from "./ArticleHook";
 import ArticleConclusion from "./ArticleConclusion";
 import LlmFriendlySummary from "./LlmFriendlySummary";
 import SectionAiSummary from "./SectionAiSummary";
+import InlineDefinitionBox from "./InlineDefinitionBox";
+import ArticleGlossary from "./ArticleGlossary";
 import LocalSEOAuditCTA from "./LocalSEOAuditCTA";
 import PillarChecklistLinks from "./PillarChecklistLinks";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
@@ -538,12 +540,14 @@ const ArticleLayout = ({
         >
           <ArticleHook slug={article.slug} />
           <SectionAiSummary slug={article.slug} />
+          <InlineDefinitionBox slug={article.slug} />
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
           <PillarChecklistLinks articleSlug={article.slug} />
           <LocalSEOAuditCTA variant="standard" articleSlug={article.slug} />
           <ArticleConclusion slug={article.slug} />
+          <ArticleGlossary slug={article.slug} />
           <LlmFriendlySummary slug={article.slug} />
         </article>
 
