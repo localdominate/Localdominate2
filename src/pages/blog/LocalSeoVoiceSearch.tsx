@@ -202,7 +202,7 @@ const LocalSeoVoiceSearch = () => {
       </section>
 
       <section id="google-business">
-        <h2>Google Business für Voice Search optimieren</h2>
+        <h2>Wie optimierst du Google Business für Sprachsuche?</h2>
         <AutoLexikonText>
           <p>
             Google Assistant bezieht lokale Informationen primär aus 
