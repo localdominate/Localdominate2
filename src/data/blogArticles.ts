@@ -3566,7 +3566,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "seo-ferienwohnungen",
     de: {
       title: "SEO für Ferienwohnungen: Schweiz, Bayern & Österreich – Raus aus der OTA-Falle",
-      metaTitle: "SEO Ferienwohnungen Schweiz, Bayern & Österreich | Direktbuchungen statt OTA",
+      metaTitle: "SEO Ferienwohnungen | Direktbuchungen DACH 2026",
       metaDescription: "Wie Ferienwohnungen durch SEO bis zu 13.500 CHF OTA-Provisionen sparen. Google My Business, AI Search & regionale Strategien für St. Moritz, Zermatt, Bayern.",
       excerpt: "15 % OTA-Provision bei jeder Buchung? SEO für Ferienwohnungen bringt Direktbuchungen, reduziert Abhängigkeit und steigert die Marge.",
       category: "Branche"
