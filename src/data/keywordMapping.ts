@@ -83,9 +83,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-checkliste-komplett",
-    primaryKeyword: "local seo checkliste",
-    secondaryKeywords: ["local seo checklist", "lokale seo checkliste", "local seo schritt für schritt"],
-    lsiKeywords: ["local seo implementierung", "local seo anleitung", "local seo 2026", "seo punkte abarbeiten"],
+    primaryKeyword: "local seo implementierung",
+    secondaryKeywords: ["local seo maßnahmen", "lokale seo umsetzung", "local seo schritt für schritt"],
+    lsiKeywords: ["seo implementierungsplan", "local seo phasen", "seo maßnahmen priorisiert"],
     searchIntent: "informational",
     targetSearchVolume: "high",
     contentType: "pillar"
@@ -146,29 +146,32 @@ export const keywordMapping: KeywordAssignment[] = [
   {
     slug: "google-maps-ranking-verbessern",
     primaryKeyword: "google maps ranking verbessern",
-    secondaryKeywords: ["google maps optimierung", "local seo google maps", "maps ranking steigern"],
-    lsiKeywords: ["google maps platz 1", "local pack ranking", "maps sichtbarkeit erhöhen", "google maps tipps"],
+    secondaryKeywords: ["maps ranking steigern", "google maps optimierung anleitung", "maps ranking aktionsplan"],
+    lsiKeywords: ["google maps platz 1", "7 schritte maps ranking", "maps sichtbarkeit erhöhen"],
     searchIntent: "informational",
     targetSearchVolume: "high",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Actionable how-to — differentiated from ranking-faktoren (theory) and algorithmus (explanation)"
   },
   {
     slug: "google-maps-seo-ranking-faktoren",
-    primaryKeyword: "google maps ranking faktoren",
-    secondaryKeywords: ["ranking faktoren maps", "local pack faktoren", "maps seo signale"],
-    lsiKeywords: ["proximity relevance prominence", "maps ranking algorithmus", "google maps 2026"],
+    primaryKeyword: "google maps ranking signale gewichtung",
+    secondaryKeywords: ["ranking signale maps", "local pack signale prozent", "maps seo 2026 gewichtung"],
+    lsiKeywords: ["gbp signale 32 prozent", "bewertungen gewichtung", "citations einfluss maps"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Signal weighting deep-dive — differentiated from algorithmus (concept) and verbessern (action)"
   },
   {
     slug: "wie-google-maps-ranking-funktioniert",
-    primaryKeyword: "wie google maps ranking funktioniert",
-    secondaryKeywords: ["google maps algorithmus", "proximity relevance prominence", "local pack ranking"],
-    lsiKeywords: ["maps ranking erklärung", "google maps seo faktoren", "maps ranking verstehen"],
+    primaryKeyword: "google maps algorithmus erklärt",
+    secondaryKeywords: ["maps algorithmus proximity relevance prominence", "local pack algorithmus", "wie google maps funktioniert"],
+    lsiKeywords: ["maps ranking erklärung", "drei säulen google maps", "algorithmus verständnis"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Conceptual explainer — differentiated from signale (data) and verbessern (action)"
   },
   {
     slug: "google-maps-spam-erkennen",
@@ -467,12 +470,13 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "multi-location-seo",
-    primaryKeyword: "multi location seo",
-    secondaryKeywords: ["filialen seo", "franchise seo", "mehrere standorte seo"],
-    lsiKeywords: ["multi location strategie", "standort seiten skalieren", "franchise local seo"],
+    primaryKeyword: "multi location website architektur",
+    secondaryKeywords: ["standortseiten url struktur", "multi location schema markup", "mehrere standorte website"],
+    lsiKeywords: ["multi location template", "standort seiten skalieren", "url struktur filialen"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Technical/architecture focus — differentiated from mehrstufig (strategy/GBP management)"
   },
 
   // =============================================
@@ -516,9 +520,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-citations-2025",
-    primaryKeyword: "local citations 2026",
-    secondaryKeywords: ["branchenbücher 2026", "verzeichnisse lokal", "citations aufbauen"],
-    lsiKeywords: ["nap einträge", "top verzeichnisse dach", "citations nach branche"],
+    primaryKeyword: "top verzeichnisse dach 2026",
+    secondaryKeywords: ["branchenbücher relevanz 2026", "citation quellen branche", "verzeichnis ranking"],
+    lsiKeywords: ["nap einträge branche", "verzeichnis domain authority", "branchenspezifische citations"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
     contentType: "cluster"
@@ -534,9 +538,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-audit-checkliste",
-    primaryKeyword: "local seo audit",
-    secondaryKeywords: ["seo audit checkliste", "local seo analyse", "seo prüfung lokal"],
-    lsiKeywords: ["local seo check kostenlos", "website audit lokal", "gbp audit"],
+    primaryKeyword: "local seo audit diagnose",
+    secondaryKeywords: ["seo ist-analyse", "local seo scoring", "seo diagnose tool"],
+    lsiKeywords: ["local seo check", "website audit lokal", "gbp audit scoring"],
     searchIntent: "informational",
     targetSearchVolume: "high",
     contentType: "cluster"
@@ -597,9 +601,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-mehrstufig-unternehmen",
-    primaryKeyword: "franchise local seo",
-    secondaryKeywords: ["multi location seo strategie", "filialunternehmen seo", "skalierung local seo"],
-    lsiKeywords: ["mehrere standorte optimieren", "franchise marketing", "zentrale seo steuerung"],
+    primaryKeyword: "franchise seo gbp management",
+    secondaryKeywords: ["gbp management filialen", "markenkonsistenz multi location", "franchise google business"],
+    lsiKeywords: ["zentrale gbp steuerung", "nap konsistenz franchise", "lokale autonomie filialen"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
     contentType: "cluster"
@@ -700,9 +704,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-strategy-planner",
-    primaryKeyword: "local seo strategieplan",
-    secondaryKeywords: ["seo strategy planner", "local seo plan", "90 tage seo plan"],
-    lsiKeywords: ["local seo roadmap", "seo strategieplan vorlage", "seo phasen plan"],
+    primaryKeyword: "local seo aufgabenplan",
+    secondaryKeywords: ["seo strategy planner", "seo aufgaben checkliste", "local seo budget planung"],
+    lsiKeywords: ["seo phasen plan", "49 aufgaben seo", "seo budget schätzung"],
     searchIntent: "informational",
     targetSearchVolume: "low",
     contentType: "cluster"
@@ -803,21 +807,23 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "ai-overviews-local-seo",
-    primaryKeyword: "ai overviews local seo",
-    secondaryKeywords: ["sge local seo", "ki suche lokal", "google ai lokal"],
-    lsiKeywords: ["ai gesteuerte suchergebnisse", "sge optimierung", "ai overviews vorbereitung"],
+    primaryKeyword: "ai overviews auswirkungen local pack",
+    secondaryKeywords: ["ai overviews klickrate", "local pack ctr ai", "ai overviews sichtbarkeit"],
+    lsiKeywords: ["ki suche klickraten daten", "ai overviews anpassung", "local pack veränderungen ai"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Impact/data focus — differentiated from google-ai-overviews (optimization strategies)"
   },
   {
     slug: "google-ai-overviews-local-seo",
-    primaryKeyword: "google ai overviews",
-    secondaryKeywords: ["ai overviews optimierung", "google sge", "ai suche google"],
-    lsiKeywords: ["ai overviews lokal", "google ai ergebnisse", "ki suche google"],
+    primaryKeyword: "google ai overviews optimieren",
+    secondaryKeywords: ["ai overviews optimierung strategie", "google ai suche vorbereitung", "ai overviews ranking"],
+    lsiKeywords: ["ai overviews lokal optimieren", "google ai ergebnisse strategie", "ki suche google optimierung"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Strategy/optimization focus — differentiated from ai-overviews-local-seo (impact analysis)"
   },
   {
     slug: "ki-tools-local-seo",
@@ -852,9 +858,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "google-sge-lokale-suche",
-    primaryKeyword: "google sge lokale suche",
-    secondaryKeywords: ["search generative experience", "ai suche lokal", "sge optimierung"],
-    lsiKeywords: ["generative search", "local seo ai", "sge vorbereitung"],
+    primaryKeyword: "google sge prognose vorbereitung",
+    secondaryKeywords: ["search generative experience prognose", "sge zeitleiste", "sge vorbereitung lokal"],
+    lsiKeywords: ["generative search zukunft", "local seo sge readiness", "sge kmu vorbereitung"],
     searchIntent: "informational",
     targetSearchVolume: "low",
     contentType: "cluster"
@@ -1099,9 +1105,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-baeckerei-konditorei",
-    primaryKeyword: "local seo bäckerei",
-    secondaryKeywords: ["bäcker marketing", "konditorei seo", "handwerksbäcker seo"],
-    lsiKeywords: ["frische keywords", "öffnungszeiten bäckerei", "bäckerei google maps"],
+    primaryKeyword: "local seo konditorei",
+    secondaryKeywords: ["konditorei marketing", "tortenbetrieb seo", "hochzeitstorte keywords"],
+    lsiKeywords: ["spezialitäten marketing", "konditorei google maps", "torten bestellungen seo"],
     searchIntent: "informational",
     targetSearchVolume: "low",
     contentType: "cluster"

@@ -112,24 +112,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "google-maps-ranking-verbessern",
     de: {
-      title: "Google Maps Ranking verbessern: Der ultimative Guide 2026",
-      metaTitle: "Google Maps Ranking verbessern: Ultimativer Guide 2026",
-      metaDescription: "Verbessere dein Google Maps Ranking in 7 Schritten. Lokale SEO-Strategien, die wirklich funktionieren. Jetzt mehr Kunden gewinnen!",
-      excerpt: "Erfahre, wie du mit bewährten Strategien dein Google Maps Ranking verbesserst und mehr lokale Kunden gewinnst.",
+      title: "Google Maps Ranking verbessern: 7-Schritte-Aktionsplan 2026",
+      metaTitle: "Google Maps Ranking verbessern: 7-Schritte-Plan 2026",
+      metaDescription: "Verbessere dein Google Maps Ranking in 7 konkreten Schritten. Praxis-Aktionsplan mit GBP-Optimierung, Bewertungen und Citations.",
+      excerpt: "Der konkrete 7-Schritte-Aktionsplan zur Verbesserung deines Google Maps Rankings — mit Praxisbeispielen und Checkliste.",
       category: "Local SEO",
     },
     en: {
-      title: "Improve Google Maps Ranking: The Ultimate Guide 2026",
-      metaTitle: "Improve Google Maps Ranking: Ultimate Guide 2026",
-      metaDescription: "Improve your Google Maps ranking in 7 steps. Local SEO strategies that actually work. Get more customers now!",
-      excerpt: "Learn how to improve your Google Maps ranking with proven strategies and win more local customers.",
+      title: "Improve Google Maps Ranking: 7-Step Action Plan 2026",
+      metaTitle: "Improve Google Maps Ranking: 7-Step Plan 2026",
+      metaDescription: "Improve your Google Maps ranking with this concrete 7-step action plan. GBP optimization, reviews, citations and more.",
+      excerpt: "The concrete 7-step action plan to improve your Google Maps ranking — with practical examples and checklist.",
       category: "Local SEO",
     },
     readingTime: 8,
     publishedAt: "2026-01-07",
     updatedAt: "2026-01-07",
     icon: "📍",
-    keywords: ["google maps ranking", "local seo", "google maps optimization"],
+    keywords: ["google maps ranking verbessern", "maps ranking steigern", "google maps optimierung anleitung"],
     featured: true
   },
   {
@@ -268,24 +268,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-audit-checkliste",
     de: {
-      title: "Local SEO Audit Checkliste: 50+ Punkte für mehr Sichtbarkeit",
-      metaTitle: "Local SEO Audit Checkliste 2026: 50+ Prüfpunkte",
-      metaDescription: "Komplette Local SEO Audit Checkliste mit 50+ Punkten. Google Business, Website, Citations, Bewertungen - alles prüfen!",
-      excerpt: "Die ultimative Checkliste für dein Local SEO Audit. Prüfe alle wichtigen Faktoren für maximale lokale Sichtbarkeit.",
+      title: "Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring",
+      metaTitle: "Local SEO Audit: Ist-Analyse & Diagnose | 2026",
+      metaDescription: "Local SEO Audit durchführen: 50+ Diagnose-Punkte mit Scoring-System. GBP, Website, Citations und Bewertungen systematisch analysieren.",
+      excerpt: "Führe eine professionelle Local SEO Ist-Analyse durch: 50+ Diagnose-Punkte mit Scoring und Handlungsempfehlungen.",
       category: "Strategie",
     },
     en: {
-      title: "Local SEO Audit Checklist: 50+ Points for More Visibility",
-      metaTitle: "Local SEO Audit Checklist 2026: 50+ Check Points",
-      metaDescription: "Complete Local SEO audit checklist with 50+ points. Google Business, website, citations, reviews - check everything!",
-      excerpt: "The ultimate checklist for your Local SEO audit. Check all important factors for maximum local visibility.",
+      title: "Local SEO Audit: Status Analysis with 50+ Diagnostic Points & Scoring",
+      metaTitle: "Local SEO Audit: Status Analysis & Diagnosis | 2026",
+      metaDescription: "Conduct a Local SEO audit: 50+ diagnostic points with scoring system. Systematically analyze GBP, website, citations and reviews.",
+      excerpt: "Conduct a professional Local SEO status analysis: 50+ diagnostic points with scoring and action recommendations.",
       category: "Strategy",
     },
     readingTime: 15,
     publishedAt: "2026-01-07",
     updatedAt: "2026-01-07",
     icon: "✅",
-    keywords: ["local seo audit", "seo checklist", "local seo analysis"],
+    keywords: ["local seo audit", "seo diagnose", "local seo analyse", "seo scoring"],
     featured: true
   },
 
@@ -504,24 +504,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "google-maps-seo-ranking-faktoren",
     de: {
-      title: "Google Maps SEO 2026: Die 20 wichtigsten Ranking-Faktoren",
-      metaTitle: "Google Maps Ranking-Faktoren | SEO 2026",
-      metaDescription: "Die 20 wichtigsten Ranking-Faktoren für Google Maps im Detail erklärt. Proximity, Relevance, Prominence und alle Signale, die zählen.",
-      excerpt: "Verstehe genau, welche Faktoren dein Google Maps Ranking beeinflussen und wie du sie optimierst.",
+      title: "Google Maps SEO 2026: Alle 20 Ranking-Signale mit Gewichtung",
+      metaTitle: "Google Maps 20 Ranking-Signale & Gewichtung | 2026",
+      metaDescription: "Alle 20 Google Maps Ranking-Signale mit Gewichtung: GBP-Signale (32 %), Bewertungen (16 %), Citations (11 %) und mehr. Vollständige Signal-Tabelle.",
+      excerpt: "Die vollständige Übersicht aller 20 Google Maps Ranking-Signale mit prozentualer Gewichtung und Optimierungspriorität.",
       category: "Local SEO"
     },
     en: {
-      title: "Google Maps SEO 2026: The 20 Most Important Ranking Factors",
-      metaTitle: "Google Maps Ranking Factors | SEO 2026",
-      metaDescription: "The 20 most important ranking factors for Google Maps explained in detail. Proximity, Relevance, Prominence and all the signals that matter.",
-      excerpt: "Understand exactly which factors influence your Google Maps ranking and how to optimize them.",
+      title: "Google Maps SEO 2026: All 20 Ranking Signals with Weighting",
+      metaTitle: "Google Maps 20 Ranking Signals & Weighting | 2026",
+      metaDescription: "All 20 Google Maps ranking signals with weighting: GBP signals (32%), reviews (16%), citations (11%) and more. Complete signal table.",
+      excerpt: "The complete overview of all 20 Google Maps ranking signals with percentage weighting and optimization priority.",
       category: "Local SEO"
     },
     readingTime: 18,
     publishedAt: "2026-01-28",
     updatedAt: "2026-01-28",
     icon: "🗺️",
-    keywords: ["google maps ranking", "ranking faktoren", "local pack", "maps seo", "proximity relevance prominence"],
+    keywords: ["google maps ranking signale", "ranking faktoren gewichtung", "local pack signale", "maps seo 2026", "proximity relevance prominence gewichtung"],
     featured: true
   },
   {
@@ -763,48 +763,48 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-strategy-planner",
     de: {
-      title: "Local SEO Strategy Planner: Der 7-Phasen-Plan für Top-Rankings",
-      metaTitle: "Local SEO Strategy Planner | 7-Phasen 90-Tage-Plan 2026",
-      metaDescription: "Kostenloser Local SEO Strategieplan mit 49 Aufgaben in 7 Phasen. Interaktive Checkliste, 90-Tage-Timeline, Budget-Planung und kopierbares Template.",
-      excerpt: "Systematischer 7-Phasen-Strategieplan für Local SEO: Vom Audit über Citations und Bewertungen bis zum laufenden Tracking — mit 90-Tage-Timeline.",
+      title: "Local SEO Strategy Planner: 7-Phasen-Aufgabenplan mit Budget & Checkliste",
+      metaTitle: "Local SEO Strategy Planner | 7-Phasen Aufgabenplan 2026",
+      metaDescription: "Kostenloser Local SEO Strategieplan mit 49 Aufgaben in 7 Phasen. Interaktive Aufgaben-Checkliste, Budget-Planung und kopierbares Template.",
+      excerpt: "Systematischer 7-Phasen-Aufgabenplan für Local SEO: 49 konkrete Aufgaben mit Budget-Schätzung und Priorität — als interaktive Checkliste.",
       category: "Tools & Ressourcen"
     },
     en: {
-      title: "Local SEO Strategy Planner: The 7-Phase Plan for Top Rankings",
-      metaTitle: "Local SEO Strategy Planner | 7-Phase 90-Day Plan 2026",
-      metaDescription: "Free local SEO strategy plan with 49 tasks in 7 phases. Interactive checklist, 90-day timeline, budget planning and copyable template.",
-      excerpt: "Systematic 7-phase strategy plan for local SEO: From audit to citations and reviews to ongoing tracking — with 90-day timeline.",
+      title: "Local SEO Strategy Planner: 7-Phase Task Plan with Budget & Checklist",
+      metaTitle: "Local SEO Strategy Planner | 7-Phase Task Plan 2026",
+      metaDescription: "Free local SEO strategy plan with 49 tasks in 7 phases. Interactive task checklist, budget planning and copyable template.",
+      excerpt: "Systematic 7-phase task plan for local SEO: 49 concrete tasks with budget estimates and priorities — as interactive checklist.",
       category: "Tools & Resources"
     },
     readingTime: 14,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "🎯",
-    keywords: ["local seo strategie", "seo strategy planner", "local seo plan", "90 tage plan", "local seo roadmap", "seo strategieplan"],
+    keywords: ["local seo aufgabenplan", "seo strategy planner", "seo aufgaben checkliste", "local seo budget planung", "seo phasen plan"],
     featured: false
   },
 
   {
     slug: "local-seo-roadmap-90-tage",
     de: {
-      title: "Local SEO Roadmap: Dein 90-Tage-Plan für lokale Sichtbarkeit",
-      metaTitle: "Local SEO Roadmap | 90-Tage-Plan mit Gantt-Timeline 2026",
-      metaDescription: "Strukturierte 90-Tage-Roadmap für lokales SEO: 12 Wochen, 6 Phasen, 36+ Aufgaben. Visuelle Timeline, KPI-Meilensteine und kopierbares Template.",
-      excerpt: "Woche-für-Woche Roadmap für Local SEO: Von der Analyse über GBP-Optimierung bis zum messbaren Ergebnis in 90 Tagen.",
+      title: "Local SEO Wochenplan: 12-Wochen-Timeline mit Gantt-Diagramm & KPI-Meilensteinen",
+      metaTitle: "Local SEO 12-Wochen-Timeline | Gantt & KPIs 2026",
+      metaDescription: "Visueller 12-Wochen-Wochenplan für Local SEO: Gantt-Timeline, wöchentliche Meilensteine und KPI-Checkpoints für messbaren Fortschritt.",
+      excerpt: "Woche für Woche zum Ziel: Visueller 12-Wochen-Wochenplan mit Gantt-Diagramm und messbaren KPI-Meilensteinen.",
       category: "Tools & Ressourcen"
     },
     en: {
-      title: "Local SEO Roadmap: Your 90-Day Plan for Local Visibility",
-      metaTitle: "Local SEO Roadmap | 90-Day Plan with Gantt Timeline 2026",
-      metaDescription: "Structured 90-day roadmap for local SEO: 12 weeks, 6 phases, 36+ tasks. Visual timeline, KPI milestones and copyable template.",
-      excerpt: "Week-by-week roadmap for local SEO: From analysis to GBP optimization to measurable results in 90 days.",
+      title: "Local SEO Weekly Plan: 12-Week Timeline with Gantt Chart & KPI Milestones",
+      metaTitle: "Local SEO 12-Week Timeline | Gantt & KPIs 2026",
+      metaDescription: "Visual 12-week plan for local SEO: Gantt timeline, weekly milestones and KPI checkpoints for measurable progress.",
+      excerpt: "Week by week to the goal: Visual 12-week plan with Gantt chart and measurable KPI milestones.",
       category: "Tools & Resources"
     },
     readingTime: 12,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "🗺️",
-    keywords: ["local seo roadmap", "90 tage plan", "seo fahrplan", "local seo timeline", "seo wochenplan", "lokale seo roadmap"],
+    keywords: ["local seo wochenplan", "12 wochen timeline", "seo gantt diagramm", "local seo meilensteine", "seo kpi tracking"],
     featured: false
   },
 
@@ -1280,24 +1280,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-baeckerei-konditorei",
     de: {
-      title: "Local SEO für Bäckereien & Konditoreien",
-      metaTitle: "Local SEO für Bäckereien | Mehr Kunden 2026",
-      metaDescription: "Wie Bäckereien durch Local SEO mehr Kunden gewinnen. Frische-Keywords, Öffnungszeiten-Optimierung und lokale Traditionspositionierung.",
-      excerpt: "Der Guide für Bäckereien: So werden Sie zur Lieblingsbäckerei im Viertel.",
+      title: "Local SEO für Konditoreien & Tortenbetriebe: Spezialitäten vermarkten",
+      metaTitle: "Local SEO Konditoreien | Torten-Marketing 2026",
+      metaDescription: "Wie Konditoreien und Tortenbetriebe durch Local SEO mehr Bestellungen erhalten. Hochzeits-Keywords, Spezialitäten-Content und saisonale Kampagnen.",
+      excerpt: "Der Guide für Konditoreien: So werden Ihre Torten und Spezialitäten zur lokalen Attraktion.",
       category: "Branchen"
     },
     en: {
-      title: "Local SEO for Bakeries & Pastry Shops",
-      metaTitle: "Local SEO for Bakeries | More Customers 2026",
-      metaDescription: "How bakeries win more customers through Local SEO. Freshness keywords, opening hours optimization and local tradition positioning.",
-      excerpt: "The guide for bakeries: How to become the favorite bakery in the neighborhood.",
+      title: "Local SEO for Pastry Shops & Custom Cake Businesses: Marketing Specialties",
+      metaTitle: "Local SEO Pastry Shops | Cake Marketing 2026",
+      metaDescription: "How pastry shops and custom cake businesses gain more orders through Local SEO. Wedding keywords, specialty content and seasonal campaigns.",
+      excerpt: "The guide for pastry shops: How to make your cakes and specialties the local attraction.",
       category: "Industries"
     },
     readingTime: 11,
     publishedAt: "2026-03-22",
     updatedAt: "2026-03-22",
     icon: "🥖",
-    keywords: ["bäckerei seo", "konditorei marketing", "local seo bäckerei", "handwerksbäcker seo"],
+    keywords: ["konditorei seo", "tortenbetrieb marketing", "local seo konditorei", "hochzeitstorte keywords"],
     featured: false
   },
   {
@@ -1679,24 +1679,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "multi-location-seo",
     de: {
-      title: "Multi-Location SEO: Mehrere Standorte richtig optimieren",
-      metaTitle: "Multi-Location SEO | Filial-Marketing 2026",
-      metaDescription: "Wie Unternehmen mit mehreren Standorten ihre Local SEO skalieren. Zentrale vs. dezentrale Strategien und Best Practices.",
-      excerpt: "Der Guide für Unternehmen mit 2 bis 200 Standorten.",
+      title: "Multi-Location SEO Technik: Website-Architektur für mehrere Standorte",
+      metaTitle: "Multi-Location Website-Architektur | Technischer Guide 2026",
+      metaDescription: "Die technische Seite von Multi-Location SEO: URL-Struktur, hreflang, Schema Markup und Seitenarchitektur für 2–200 Standorte.",
+      excerpt: "Website-Architektur für Multi-Location: URL-Struktur, Standortseiten-Templates und Schema Markup richtig umsetzen.",
       category: "Technik"
     },
     en: {
-      title: "Multi-Location SEO: Properly Optimizing Multiple Locations",
-      metaTitle: "Multi-Location SEO | Branch Marketing 2026",
-      metaDescription: "How businesses with multiple locations scale their Local SEO. Central vs. decentralized strategies and best practices.",
-      excerpt: "The guide for businesses with 2 to 200 locations.",
+      title: "Multi-Location SEO Tech: Website Architecture for Multiple Locations",
+      metaTitle: "Multi-Location Website Architecture | Technical Guide 2026",
+      metaDescription: "The technical side of multi-location SEO: URL structure, hreflang, Schema Markup and site architecture for 2-200 locations.",
+      excerpt: "Website architecture for multi-location: URL structure, location page templates and Schema Markup done right.",
       category: "Technical"
     },
     readingTime: 18,
     publishedAt: "2026-02-22",
     updatedAt: "2026-02-22",
     icon: "📍",
-    keywords: ["multi location seo", "filialen seo", "franchise seo", "mehrere standorte"],
+    keywords: ["multi location website architektur", "standortseiten url struktur", "multi location schema markup", "mehrere standorte website"],
     featured: false
   },
   {
@@ -1725,24 +1725,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "ai-overviews-local-seo",
     de: {
-      title: "AI-Overviews & Local SEO: Wie KI die lokale Suche verändert",
-      metaTitle: "AI-Overviews Local SEO | KI-Suche 2026",
-      metaDescription: "Wie AI-Overviews (SGE) die lokale Suche verändern. Optimierungsstrategien für die KI-gesteuerte Suchergebnisseite.",
-      excerpt: "Die Zukunft der lokalen Suche: Was AI-Overviews für Ihr Unternehmen bedeuten.",
+      title: "AI-Overviews & Local Pack: Auswirkungen auf lokale Klickraten & Sichtbarkeit",
+      metaTitle: "AI-Overviews Auswirkungen Local Pack | CTR-Analyse 2026",
+      metaDescription: "Wie AI-Overviews die Klickraten im Local Pack verändern. CTR-Daten, Sichtbarkeits-Einfluss und Anpassungsstrategien für lokale Unternehmen.",
+      excerpt: "AI-Overviews verändern das Local Pack: Aktuelle CTR-Daten, Sichtbarkeits-Analysen und konkrete Anpassungsstrategien.",
       category: "Technik"
     },
     en: {
-      title: "AI Overviews & Local SEO: How AI is Changing Local Search",
-      metaTitle: "AI Overviews Local SEO | AI Search 2026",
-      metaDescription: "How AI Overviews (SGE) are changing local search. Optimization strategies for the AI-powered search results page.",
-      excerpt: "The future of local search: What AI Overviews mean for your business.",
+      title: "AI Overviews & Local Pack: Impact on Local Click Rates & Visibility",
+      metaTitle: "AI Overviews Impact on Local Pack | CTR Analysis 2026",
+      metaDescription: "How AI Overviews are changing click rates in the Local Pack. CTR data, visibility impact and adaptation strategies for local businesses.",
+      excerpt: "AI Overviews are changing the Local Pack: Current CTR data, visibility analysis and concrete adaptation strategies.",
       category: "Technical"
     },
     readingTime: 15,
     publishedAt: "2026-03-18",
     updatedAt: "2026-03-18",
     icon: "🤖",
-    keywords: ["ai overviews", "sge local seo", "ki suche", "google ai"],
+    keywords: ["ai overviews auswirkungen", "local pack ctr", "ki suche klickrate", "ai overviews sichtbarkeit"],
     featured: true
   },
   {
@@ -2308,24 +2308,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "google-sge-lokale-suche",
     de: {
-      title: "Google SGE & lokale Suche: Wie AI die SERPs verändert",
-      metaTitle: "Google SGE Local SEO | AI-Suche 2026",
-      metaDescription: "Wie Googles Search Generative Experience die lokale Suche revolutioniert. Vorbereitung auf die AI-Ära der Suche.",
-      excerpt: "Die AI-Revolution in der Suche: Was lokale Unternehmen wissen müssen.",
+      title: "Googles Search Generative Experience: Prognose & Vorbereitung für lokale Unternehmen",
+      metaTitle: "Google SGE Prognose | Vorbereitung für lokale KMUs 2026",
+      metaDescription: "Was Googles Search Generative Experience für lokale KMUs bedeutet. Prognose, Zeitleiste und 5 Vorbereitungsschritte für die AI-SERP.",
+      excerpt: "SGE kommt — bist du vorbereitet? Prognose, Zeitleiste und 5 konkrete Schritte zur Vorbereitung.",
       category: "Trends"
     },
     en: {
-      title: "Google SGE & Local Search: How AI is Changing SERPs",
-      metaTitle: "Google SGE Local SEO | AI Search 2026",
-      metaDescription: "How Google's Search Generative Experience is revolutionizing local search. Preparing for the AI era of search.",
-      excerpt: "The AI revolution in search: What local businesses need to know.",
+      title: "Google's Search Generative Experience: Forecast & Preparation for Local Businesses",
+      metaTitle: "Google SGE Forecast | Preparation for Local SMBs 2026",
+      metaDescription: "What Google's Search Generative Experience means for local SMBs. Forecast, timeline and 5 preparation steps for the AI SERP.",
+      excerpt: "SGE is coming — are you prepared? Forecast, timeline and 5 concrete preparation steps.",
       category: "Trends"
     },
     readingTime: 15,
     publishedAt: "2026-04-22",
     updatedAt: "2026-04-22",
     icon: "🧠",
-    keywords: ["google sge", "ai suche", "generative search", "local seo ai"],
+    keywords: ["google sge vorbereitung", "sge prognose", "generative search lokal", "ai serp vorbereitung"],
     featured: true
   },
 
@@ -2663,24 +2663,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-mehrstufig-unternehmen",
     de: {
-      title: "Local SEO für Franchise & Filialunternehmen: Multi-Location Guide",
-      metaTitle: "Local SEO Multi-Location | Franchise & Filialen 2026",
-      metaDescription: "Wie Franchise-Unternehmen und Filialisten Local SEO skalieren. Multi-Location-Strategie, Konsistenz und zentrale Steuerung.",
-      excerpt: "Der Guide für Unternehmen mit mehreren Standorten zur lokalen Suchmaschinenoptimierung.",
+      title: "Franchise-SEO Strategie: GBP-Management & Markenkonsistenz bei mehreren Standorten",
+      metaTitle: "Franchise SEO | GBP-Management & Markenkonsistenz 2026",
+      metaDescription: "Wie Franchise-Unternehmen GBP-Profile zentral steuern, Markenkonsistenz sichern und lokale Autonomie ermöglichen. Strategie-Guide.",
+      excerpt: "Der Strategie-Guide für Franchise und Filialketten: Zentrale GBP-Steuerung, NAP-Konsistenz und lokale Anpassung.",
       category: "Strategie"
     },
     en: {
-      title: "Local SEO for Franchise & Multi-Location Businesses: Complete Guide",
-      metaTitle: "Local SEO Multi-Location | Franchise Guide 2026",
-      metaDescription: "How franchise and multi-location businesses scale Local SEO. Multi-location strategy, consistency and central management.",
-      excerpt: "The guide for multi-location businesses on local search engine optimization.",
+      title: "Franchise SEO Strategy: GBP Management & Brand Consistency Across Locations",
+      metaTitle: "Franchise SEO | GBP Management & Brand Consistency 2026",
+      metaDescription: "How franchise businesses centrally manage GBP profiles, ensure brand consistency and enable local autonomy. Strategy guide.",
+      excerpt: "The strategy guide for franchise and chain businesses: Central GBP management, NAP consistency and local adaptation.",
       category: "Strategy"
     },
     readingTime: 16,
     publishedAt: "2026-01-14",
     updatedAt: "2026-01-14",
     icon: "🏢",
-    keywords: ["franchise seo", "multi location seo", "filialunternehmen", "mehrere standorte", "skalierung local seo"],
+    keywords: ["franchise seo strategie", "gbp management filialen", "markenkonsistenz multi location", "franchise google business"],
     featured: false
   },
   {
@@ -3298,24 +3298,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-citations-2025",
     de: {
-      title: "Local Citations 2026: Die wichtigsten Branchenbücher & Verzeichnisse",
-      metaTitle: "Local Citations 2026 | Top Verzeichnisse DACH",
-      metaDescription: "Welche Branchenbücher und Verzeichnisse sind 2026 noch relevant? Der komplette Guide zu Citations mit Priorisierung nach Branche.",
-      excerpt: "Die wichtigsten Local Citations für 2026 mit branchenspezifischen Empfehlungen und Priorisierung.",
+      title: "Top-Verzeichnisse DACH 2026: Branchenspezifische Citation-Quellen nach Relevanz sortiert",
+      metaTitle: "Top Verzeichnisse DACH 2026 | Branchenspezifisch sortiert",
+      metaDescription: "Welche Branchenbücher sind 2026 noch relevant? Nach Branche sortierte Verzeichnisliste mit Relevanz-Score und DA-Werten für DACH.",
+      excerpt: "Branchenspezifisch priorisierte Verzeichnisliste für DACH: Relevanz-Score, Domain Authority und Eintragungstipps.",
       category: "Local SEO"
     },
     en: {
-      title: "Local Citations 2026: The Most Important Directories & Listings",
-      metaTitle: "Local Citations 2026: Top Directories & Listings | Guide",
-      metaDescription: "Which business directories and listings are still relevant in 2026? The complete guide to citations with prioritization by industry.",
-      excerpt: "The most important Local Citations for 2026 with industry-specific recommendations and prioritization.",
+      title: "Top DACH Directories 2026: Industry-Specific Citation Sources Ranked by Relevance",
+      metaTitle: "Top DACH Directories 2026 | Industry-Specific Rankings",
+      metaDescription: "Which business directories are still relevant in 2026? Industry-sorted directory list with relevance scores and DA values for DACH.",
+      excerpt: "Industry-specifically prioritized directory list for DACH: relevance scores, domain authority and listing tips.",
       category: "Local SEO"
     },
     readingTime: 14,
     publishedAt: "2025-01-10",
     updatedAt: "2026-02-08",
     icon: "📚",
-    keywords: ["local citations", "branchenbücher", "verzeichnisse", "citations aufbauen", "nap einträge"]
+    keywords: ["top verzeichnisse dach", "branchenbücher 2026", "citation quellen", "verzeichnis relevanz", "nap einträge branche"]
   },
   {
     slug: "local-link-building",
@@ -3817,24 +3817,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-checkliste-komplett",
     de: {
-      title: "Die komplette Local SEO Checkliste 2026: 80+ Punkte in 8 Phasen",
-      metaTitle: "Local SEO Checkliste 2026 | 80+ Punkte Schritt-für-Schritt",
-      metaDescription: "Die umfassendste Local SEO Checkliste: 80+ Punkte in 8 Phasen — GBP, Schema Markup, Citations, Bewertungen & Reporting. Mit 90-Tage-Plan.",
-      excerpt: "Die komplette Schritt-für-Schritt Local SEO Checkliste: 80+ Massnahmen in 8 Phasen systematisch abarbeiten — mit Prioritäten, Zeitplan und branchenspezifischen Empfehlungen.",
+      title: "Local SEO Implementierungs-Checkliste: 80+ Maßnahmen in 8 Phasen systematisch umsetzen",
+      metaTitle: "Local SEO Implementierungs-Checkliste | 80+ Maßnahmen 2026",
+      metaDescription: "Die systematische Local SEO Implementierung: 80+ Maßnahmen in 8 Phasen — von GBP-Setup über Schema Markup bis Reporting. Branchenspezifisch priorisiert.",
+      excerpt: "Systematische Local SEO Implementierung: 80+ Maßnahmen in 8 Phasen — mit branchenspezifischer Priorisierung und Zeitplan.",
       category: "Strategie"
     },
     en: {
-      title: "The Complete Local SEO Checklist 2026: 80+ Steps in 8 Phases",
-      metaTitle: "Local SEO Checklist 2026 | 80+ Steps Step-by-Step",
-      metaDescription: "The most comprehensive Local SEO checklist: 80+ steps in 8 phases — GBP, Schema Markup, citations, reviews & reporting. With 90-day plan.",
-      excerpt: "The complete step-by-step Local SEO checklist: 80+ actions in 8 phases systematically executed — with priorities, timeline and industry-specific recommendations.",
+      title: "Local SEO Implementation Checklist: 80+ Actions in 8 Phases Systematically Executed",
+      metaTitle: "Local SEO Implementation Checklist | 80+ Actions 2026",
+      metaDescription: "Systematic Local SEO implementation: 80+ actions in 8 phases — from GBP setup to Schema Markup to reporting. Industry-specifically prioritized.",
+      excerpt: "Systematic Local SEO implementation: 80+ actions in 8 phases — with industry-specific prioritization and timeline.",
       category: "Strategy"
     },
     readingTime: 20,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "📋",
-    keywords: ["local seo checkliste", "local seo checklist", "lokale seo checkliste", "local seo schritt für schritt", "local seo implementierung", "local seo anleitung", "local seo 2026"],
+    keywords: ["local seo implementierung", "local seo maßnahmen", "lokale seo umsetzung", "local seo schritt für schritt", "seo implementierungsplan", "local seo phasen"],
     featured: true
   },
   // === HUB PAGE: GOOGLE MAPS SEO ===
@@ -3865,24 +3865,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "wie-google-maps-ranking-funktioniert",
     de: {
-      title: "Wie Google Maps Ranking funktioniert: Nähe, Relevanz & Bekanntheit erklärt",
-      metaTitle: "Wie Google Maps Ranking funktioniert | 2026 Guide",
-      metaDescription: "So bestimmt Google dein Maps-Ranking: Nähe, Relevanz und Bekanntheit erklärt mit Praxis-Beispielen und Optimierungstipps.",
-      excerpt: "Google Maps Rankings basieren auf 3 Faktoren: Nähe, Relevanz und Bekanntheit. Erfahre wie sie zusammenspielen — mit Praxis-Beispielen, Signaltabellen und konkretem Aktionsplan.",
+      title: "Google Maps Algorithmus erklärt: Nähe, Relevanz & Bekanntheit im Detail",
+      metaTitle: "Google Maps Algorithmus erklärt | Nähe, Relevanz, Bekanntheit",
+      metaDescription: "So funktioniert der Google Maps Algorithmus: Die 3 Säulen Nähe, Relevanz und Bekanntheit mit Praxis-Beispielen und Einflussfaktoren-Diagramm.",
+      excerpt: "Der Google Maps Algorithmus basiert auf 3 Säulen: Nähe, Relevanz und Bekanntheit. So spielen sie zusammen — mit Diagrammen und Branchenbeispielen.",
       category: "Google Maps"
     },
     en: {
-      title: "How Google Maps Ranking Works: Proximity, Relevance & Prominence Explained",
-      metaTitle: "How Google Maps Ranking Works | Guide 2026",
-      metaDescription: "How Google determines your Maps ranking: Proximity, relevance and prominence explained with practical examples and optimization tips.",
-      excerpt: "Google Maps rankings are based on 3 factors: proximity, relevance and prominence. Learn how they interact — with practical examples and an action plan.",
+      title: "Google Maps Algorithm Explained: Proximity, Relevance & Prominence in Detail",
+      metaTitle: "Google Maps Algorithm Explained | Proximity, Relevance, Prominence",
+      metaDescription: "How the Google Maps algorithm works: The 3 pillars proximity, relevance and prominence with practical examples and influence factor diagrams.",
+      excerpt: "The Google Maps algorithm is based on 3 pillars: proximity, relevance and prominence. How they interact — with diagrams and industry examples.",
       category: "Google Maps"
     },
     readingTime: 18,
     publishedAt: "2026-03-08",
     updatedAt: "2026-03-08",
     icon: "🗺️",
-    keywords: ["google maps ranking", "wie google maps ranking funktioniert", "proximity relevance prominence", "local pack ranking", "maps seo faktoren", "google maps algorithmus"],
+    keywords: ["google maps algorithmus", "maps algorithmus erklärt", "proximity relevance prominence", "wie google maps funktioniert", "local pack algorithmus"],
     featured: true
   },
   // === SCHEMA STRATEGY DOCUMENT ===
