@@ -187,7 +187,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 3: Reviews */}
       <section id="bewertungen">
-        <h2>Die Macht der Bewertungen: Statistiken 2026</h2>
+        <h2>Wie stark beeinflussen Bewertungen das Ranking?</h2>
         <p>
           Online-Bewertungen sind der zweitwichtigste Ranking-Faktor und der wichtigste Vertrauens-Builder 
           für lokale Unternehmen. Diese Zahlen belegen den direkten Zusammenhang zwischen Bewertungen und Umsatz.
