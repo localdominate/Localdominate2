@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
 import { toast } from "sonner";
+import LocalKeywordFramework from "@/components/blog/LocalKeywordFramework";
 
 const STORAGE_KEY = "keyword-research-template-progress";
 
@@ -597,6 +598,9 @@ const LocalKeywordResearchTemplate = () => {
           </Card>
         </div>
       </section>
+
+      {/* Keyword Framework */}
+      <LocalKeywordFramework compact />
 
       {/* Related */}
       <Card className="mb-8 bg-muted/30">
