@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import { DonutChart, ProcessFlow, GradientBarChart } from "@/components/blog/PillarVisuals";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
@@ -216,6 +217,20 @@ const UltimateGuideLocalSeo = () => {
           Diese drei Faktoren wirken zusammen. Ein Restaurant direkt neben dem Suchenden mit nur 5 Bewertungen wird möglicherweise von einem weiter entfernten Restaurant mit 300 Bewertungen und vollständigem Profil überholt. Die Kunst von Local SEO ist es, alle drei Faktoren gleichzeitig zu optimieren.
         </p>
       </section>
+
+      <DonutChart
+        title="Local Pack Ranking-Faktoren Verteilung (Whitespark 2024)"
+        data={[
+          { name: "Google Business Profil", value: 32 },
+          { name: "On-Page SEO", value: 19 },
+          { name: "Bewertungen", value: 16 },
+          { name: "Link-Signale", value: 11 },
+          { name: "Verhaltens-Signale", value: 8 },
+          { name: "Citations", value: 7 },
+          { name: "Personalisierung", value: 7 },
+        ]}
+        centerLabel="Basierend auf Whitespark Local Search Ranking Factors 2024"
+      />
 
       {/* Google Business Profil */}
       <section id="google-business-profil" data-ai-summary="true">

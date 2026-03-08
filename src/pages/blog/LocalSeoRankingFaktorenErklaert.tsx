@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import { RankingFactorChart, ComparisonRadar, GradientBarChart } from "@/components/blog/PillarVisuals";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
@@ -153,6 +154,35 @@ const LocalSeoRankingFaktorenErklaert = () => {
           </p>
         </div>
       </section>
+
+      <RankingFactorChart
+        title="Local Pack Ranking-Faktoren nach Gewichtung"
+        data={[
+          { name: "Google Business Profil", value: 36 },
+          { name: "On-Page SEO", value: 18 },
+          { name: "Bewertungen", value: 17 },
+          { name: "Link-Signale", value: 13 },
+          { name: "Citation-Signale", value: 7 },
+          { name: "Verhaltens-Signale", value: 6 },
+          { name: "Personalisierung", value: 3 },
+        ]}
+        source="Whitespark Local Search Ranking Factors 2024"
+      />
+
+      <ComparisonRadar
+        title="Local Pack vs. Organische Ranking-Faktoren"
+        labelA="Local Pack"
+        labelB="Organisch"
+        data={[
+          { subject: "GBP-Signale", A: 36, B: 6 },
+          { subject: "On-Page SEO", A: 18, B: 34 },
+          { subject: "Bewertungen", A: 17, B: 5 },
+          { subject: "Backlinks", A: 13, B: 31 },
+          { subject: "Citations", A: 7, B: 8 },
+          { subject: "Verhalten", A: 6, B: 11 },
+          { subject: "Personalisierung", A: 3, B: 5 },
+        ]}
+      />
 
       {/* GBP Signale */}
       <section id="gbp-signale" data-ai-summary="true">

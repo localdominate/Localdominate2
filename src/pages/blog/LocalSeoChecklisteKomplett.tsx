@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import { DonutChart, ProcessFlow } from "@/components/blog/PillarVisuals";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
@@ -104,6 +105,21 @@ const LocalSeoChecklisteKomplett = () => {
           </Card>
         ))}
       </div>
+
+      <DonutChart
+        title="Local SEO Checkliste: Punkte nach Phase"
+        data={[
+          { name: "Google Business Profil", value: 20 },
+          { name: "Website-Grundlagen", value: 15 },
+          { name: "Technisches SEO", value: 12 },
+          { name: "Content & On-Page", value: 15 },
+          { name: "Citations & NAP", value: 10 },
+          { name: "Bewertungen", value: 10 },
+          { name: "Linkbuilding", value: 10 },
+          { name: "Tracking & Analyse", value: 8 },
+        ]}
+        centerLabel="80+ Checklisten-Punkte in 8 Phasen"
+      />
 
       {/* Ueberblick */}
       <section id="ueberblick" data-ai-summary="true">

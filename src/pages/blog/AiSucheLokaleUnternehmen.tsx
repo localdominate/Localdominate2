@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import { ComparisonRadar, GradientBarChart, ProcessFlow } from "@/components/blog/PillarVisuals";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
@@ -148,6 +149,33 @@ const AiSucheLokaleUnternehmen = () => {
           Für einen tieferen Einstieg in AI Search insgesamt: <Link to="/blog/ai-search-optimization-2026" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">AI Search Optimization 2026</Link>. Wie sich AI-Suche von der klassischen Suche unterscheidet: <Link to="/blog/ai-search-vs-traditional-search" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">AI-Suche vs. Traditionelle Suche</Link>. Die Grundlagen von Local SEO: <Link to="/blog/ultimate-guide-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Ultimate Guide Local SEO</Link>.
         </p>
       </section>
+
+      <ComparisonRadar
+        title="AI Source Selection: SEO vs. GEO Faktoren"
+        labelA="Traditionelles SEO"
+        labelB="GEO (AI-Optimierung)"
+        data={[
+          { subject: "Backlinks", A: 90, B: 30 },
+          { subject: "Schema Markup", A: 40, B: 95 },
+          { subject: "E-E-A-T", A: 70, B: 90 },
+          { subject: "Content-Länge", A: 80, B: 40 },
+          { subject: "Aktualität", A: 50, B: 85 },
+          { subject: "Zitierbarkeit", A: 20, B: 95 },
+          { subject: "Keyword-Dichte", A: 75, B: 25 },
+          { subject: "Semantik/Struktur", A: 60, B: 90 },
+        ]}
+      />
+
+      <GradientBarChart
+        title="AI-Plattformen: Marktanteil bei lokalen Suchen (2026)"
+        items={[
+          { label: "Google AI Overviews", value: 88 },
+          { label: "ChatGPT Search", value: 5 },
+          { label: "Apple Intelligence", value: 3 },
+          { label: "Perplexity", value: 2 },
+          { label: "Bing Copilot", value: 2 },
+        ]}
+      />
 
       {/* Wie AI Quellen auswählt */}
       <section id="wie-ai-quellen-waehlt" data-ai-summary="true">

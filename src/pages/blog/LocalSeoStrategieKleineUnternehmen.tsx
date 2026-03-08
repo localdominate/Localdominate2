@@ -1,4 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import { ProcessFlow, GradientBarChart } from "@/components/blog/PillarVisuals";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
@@ -169,6 +170,31 @@ const LocalSeoStrategieKleineUnternehmen = () => {
           </p>
         </div>
       </section>
+
+      <ProcessFlow
+        title="Local SEO Strategie: Die 7 Schritte im Überblick"
+        steps={[
+          { number: 1, title: "Google Business Profil einrichten", description: "Profil erstellen, verifizieren und vollständig ausfüllen — der wichtigste Einzelschritt.", timeframe: "Tag 1–2" },
+          { number: 2, title: "Website lokal optimieren", description: "Lokale Keywords in Title, H1, Meta Description. Standortseite mit NAP-Daten erstellen.", timeframe: "Tag 3–5" },
+          { number: 3, title: "NAP & Citations aufbauen", description: "Name, Adresse, Telefon konsistent in 20+ Verzeichnissen eintragen.", timeframe: "Tag 5–7" },
+          { number: 4, title: "Bewertungs-Strategie entwickeln", description: "Systematisch Bewertungen einholen. QR-Code, E-Mail-Vorlage, persönliche Bitte.", timeframe: "Woche 2–4" },
+          { number: 5, title: "Lokalen Content erstellen", description: "Blog-Artikel, FAQ-Seiten und Ratgeber mit lokalem Bezug veröffentlichen.", timeframe: "Woche 3–8" },
+          { number: 6, title: "Lokales Linkbuilding", description: "IHK, Vereine, Sponsoring, lokale PR. 5–10 hochwertige lokale Backlinks aufbauen.", timeframe: "Monat 2–3" },
+          { number: 7, title: "Technisches SEO prüfen", description: "Mobile-First, Core Web Vitals, Schema Markup, Sitemap. Technische Basis sichern.", timeframe: "Laufend" },
+        ]}
+      />
+
+      <GradientBarChart
+        title="ROI-Vergleich: Local SEO vs. andere Marketing-Kanäle für KMU"
+        items={[
+          { label: "Local SEO (organisch)", value: 92 },
+          { label: "Google Ads (lokal)", value: 68 },
+          { label: "Social Media Marketing", value: 45 },
+          { label: "Print-Werbung lokal", value: 22 },
+          { label: "Flyerverteilung", value: 12 },
+        ]}
+        unit="% ROI-Index"
+      />
 
       {/* Grundlagen-Checkliste */}
       <section id="grundlagen-checkliste">
