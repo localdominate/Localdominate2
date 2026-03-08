@@ -597,8 +597,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "entity-seo-guide",
     de: {
       title: "Entity SEO: Wie Suchmaschinen Entitäten verstehen & nutzen",
-      metaTitle: "Entity SEO Guide | Knowledge Graph & Entitäts-Optimierung 2026",
-      metaDescription: "Was ist Entity SEO? Wie Google und AI-Suchmaschinen Entitäten erkennen. Mit Knowledge-Graph-Strategien, Schema Markup, sameAs-Verknüpfung und Praxis-Checkliste.",
+      metaTitle: "Entity SEO Guide | Knowledge Graph optimieren 2026",
+      metaDescription: "Was ist Entity SEO? Wie Google Entitäten erkennt. Knowledge-Graph-Strategien, Schema Markup, sameAs & Praxis-Checkliste.",
       excerpt: "Von Keyword-SEO zu Entity SEO: Wie du dein Unternehmen als Entität im Knowledge Graph etablierst und deine Sichtbarkeit in Google und AI-Suche maximierst.",
       category: "AI & Zukunft"
     },
