@@ -436,7 +436,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card className="bg-primary/5">
             <CardContent className="p-4">
               <Smartphone className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Mobile-First</h4>
+              <h3 className="font-semibold mb-2">Mobile-First Indexing & lokale Suchen</h3>
               <p className="text-sm text-muted-foreground">
                 92% der lokalen Suchen kommen vom Smartphone. Mobile Core Web Vitals sind wichtiger als Desktop.
               </p>
