@@ -470,12 +470,13 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "multi-location-seo",
-    primaryKeyword: "multi location seo",
-    secondaryKeywords: ["filialen seo", "franchise seo", "mehrere standorte seo"],
-    lsiKeywords: ["multi location strategie", "standort seiten skalieren", "franchise local seo"],
+    primaryKeyword: "multi location website architektur",
+    secondaryKeywords: ["standortseiten url struktur", "multi location schema markup", "mehrere standorte website"],
+    lsiKeywords: ["multi location template", "standort seiten skalieren", "url struktur filialen"],
     searchIntent: "informational",
     targetSearchVolume: "medium",
-    contentType: "cluster"
+    contentType: "cluster",
+    notes: "Technical/architecture focus — differentiated from mehrstufig (strategy/GBP management)"
   },
 
   // =============================================
