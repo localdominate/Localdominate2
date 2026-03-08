@@ -280,7 +280,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
           <h3 className="font-bold text-lg mb-4">📈 Ranking-Wiederherstellung: 90-Tage-Roadmap</h3>
           <div className="space-y-4">
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Woche 1-2: Sofortmaßnahmen</h5>
+              <h4 className="font-bold">Woche 1-2: Technische Sofortmaßnahmen</h4>
               <p className="text-gray-600">Technische Fehler beheben, GBP aktualisieren, kritische Probleme lösen</p>
             </div>
             <div className="bg-white rounded-lg p-4">
