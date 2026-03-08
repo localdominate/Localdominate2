@@ -82,8 +82,25 @@ const GbpBewertungLoeschenAnleitung: React.FC = () => {
     "bewertungs-antworten-vorlagen"
   ];
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Unfaire Google Bewertung melden und löschen lassen",
+    description: "Anleitung zum Entfernen von Fake-Bewertungen, Verleumdungen und richtlinienwidrigen Rezensionen auf Google Business Profile.",
+    totalTime: "P21D",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
+    step: [
+      { "@type": "HowToStep", position: 1, name: "Richtlinienverstoß identifizieren", text: "Prüfe ob die Bewertung gegen Google-Richtlinien verstößt: Spam, Fake, Beleidigung, Interessenkonflikt oder irrelevanter Inhalt." },
+      { "@type": "HowToStep", position: 2, name: "Bewertung bei Google melden", text: "Klicke auf die drei Punkte neben der Bewertung und wähle 'Melden'. Wähle den passenden Verstoßgrund aus." },
+      { "@type": "HowToStep", position: 3, name: "Beweise dokumentieren", text: "Sammle Screenshots, Kundenlisten-Abgleich und weitere Beweise, die belegen dass die Bewertung gefälscht oder richtlinienwidrig ist." },
+      { "@type": "HowToStep", position: 4, name: "Auf Googles Prüfung warten", text: "Google prüft gemeldete Bewertungen innerhalb von 5-20 Werktagen. Wiederholte Meldungen beschleunigen den Prozess nicht." },
+      { "@type": "HowToStep", position: 5, name: "Bei Ablehnung eskalieren", text: "Kontaktiere den Google Business Support via Twitter (@GoogleMyBiz) oder das offizielle Support-Formular mit deinen Beweisen." },
+      { "@type": "HowToStep", position: 6, name: "Rechtliche Optionen prüfen", text: "Bei nachweisbarer Verleumdung kann eine anwaltliche Abmahnung (500-1.500€) oder eine einstweilige Verfügung erwirkt werden." },
+    ],
+  };
+
   return (
-    <ArticleLayout article={articleData} faqItems={faqs}>
+    <ArticleLayout article={articleData} faqItems={faqs} additionalSchema={howToSchema}>
       <div className="max-w-4xl mx-auto">
         <TableOfContents items={toc} />
 
