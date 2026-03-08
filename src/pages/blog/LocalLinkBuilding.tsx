@@ -670,6 +670,11 @@ Beste Grüße
         </Accordion>
       </section>
 
+      <LinkBuildingOutreachTemplates
+        title="Outreach-Vorlagen: Lokale Links aufbauen"
+        description="Kopierfertige E-Mail-Templates fuer jede Link-Building-Strategie – von Partnerschaften bis Pressearbeit."
+      />
+
       <HelpfulnessWidget articleSlug="local-link-building" />
     </ArticleLayout>
   );
