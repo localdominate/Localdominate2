@@ -664,6 +664,30 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  {
+    slug: "citation-tracking-template",
+    de: {
+      title: "Citation Tracking Spreadsheet Template: Alle Verzeichnisse im Griff",
+      metaTitle: "Citation Tracking Template | Spreadsheet-Vorlage für DACH 2026",
+      metaDescription: "Kostenloses Citation Tracking Template mit 22+ Verzeichnissen für DACH. Interaktive Checkliste, Copy-ready Spreadsheet und Quartals-Audit Workflow.",
+      excerpt: "Systematisches Citation-Tracking mit interaktiver Checkliste, kopierbarer Spreadsheet-Vorlage und Quartals-Audit-Workflow für den DACH-Markt.",
+      category: "Tools & Ressourcen"
+    },
+    en: {
+      title: "Citation Tracking Spreadsheet Template: Manage All Directories",
+      metaTitle: "Citation Tracking Template | Spreadsheet for DACH 2026",
+      metaDescription: "Free citation tracking template with 22+ directories for DACH market. Interactive checklist, copy-ready spreadsheet and quarterly audit workflow.",
+      excerpt: "Systematic citation tracking with interactive checklist, copyable spreadsheet template and quarterly audit workflow for the DACH market.",
+      category: "Tools & Resources"
+    },
+    readingTime: 10,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "📊",
+    keywords: ["citation tracking", "citation spreadsheet", "nap tracking", "verzeichnis tracking", "citation audit", "local citations template"],
+    featured: false
+  },
+
   // === NEUE ARTIKEL: STRATEGIE ===
   {
     slug: "local-link-building",
@@ -3844,6 +3868,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-maps-konkurrenzanalyse",
   "google-maps-ranking-case-studies",
   "google-maps-audit-template",
+  "citation-tracking-template",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);
