@@ -2374,10 +2374,416 @@ export const seoLexikonData: SEOTerm[] = [
       { slug: "lokale-seo-2026", title: "Lokale SEO Trends 2026" },
       { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
     ]
+  },
+  // === NEW LOCAL SEO TERMS ===
+  {
+    letter: "D",
+    term: "Duplicate Listing",
+    shortDescription: "Ein Duplicate Listing ist ein doppelter Google Business Profile Eintrag, der die lokalen Rankings verwässert.",
+    snippetDefinition: "Ein Duplicate Listing ist ein ungewollter doppelter Eintrag eines Unternehmens auf Google Maps oder in Branchenverzeichnissen. Duplicate Listings verwässern Bewertungen und Citations, verwirren Google und schaden dem lokalen Ranking. Etwa 56 % aller Unternehmen haben mindestens ein Duplicate Listing, das zusammengeführt oder gelöscht werden sollte.",
+    fullDescription: "Duplicate Listings entstehen, wenn ein Unternehmen mehrfach auf Google Maps oder in Verzeichnissen eingetragen ist – oft durch frühere Inhaber, automatische Einträge oder Umzüge. Sie verwässern Bewertungen und NAP-Signale und müssen zusammengeführt oder gelöscht werden.",
+    features: [
+      "Entstehen durch Umzüge, Inhaberwechsel oder automatische Einträge",
+      "Verwässern Bewertungen und Citation-Signale",
+      "Können über Google Business Profile gemeldet werden",
+      "Tools wie Moz Local helfen bei der Erkennung"
+    ],
+    statistics: [
+      { label: "Unternehmen mit Duplicates", value: "56%", icon: "percent" },
+      { label: "Ranking-Verlust möglich", value: "bis 30%", icon: "trending" }
+    ],
+    benefits: [
+      "Bereinigung stärkt das Hauptprofil",
+      "Bewertungen werden konsolidiert",
+      "Klarere NAP-Signale für Google"
+    ],
+    relatedTerms: ["Google Business Profile", "NAP", "Citations", "Local Pack"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "duplicate-listing-entfernen", title: "Duplicate Listings finden & entfernen" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ]
+  },
+  {
+    letter: "G",
+    term: "Geo-Grid Ranking",
+    shortDescription: "Geo-Grid Ranking zeigt die lokale Sichtbarkeit eines Unternehmens über ein Raster verschiedener Standortpunkte in einem Gebiet.",
+    snippetDefinition: "Geo-Grid Ranking ist eine Analysemethode, bei der die lokale Sichtbarkeit eines Unternehmens über ein Raster (Grid) verschiedener Standortpunkte in einem definierten Gebiet gemessen wird. Statt eines einzelnen Rankings zeigt ein Geo-Grid, wie sich die Position je nach Entfernung und Richtung verändert. Tools wie Local Falcon oder Local Viking nutzen diese Methode.",
+    fullDescription: "Geo-Grid Ranking misst die lokale Sichtbarkeit über ein Raster verschiedener Punkte in einem Gebiet. Es zeigt, wie sich das Ranking je nach Entfernung und Himmelsrichtung verändert – wichtig für Unternehmen, die verstehen wollen, in welchem Radius sie sichtbar sind.",
+    features: [
+      "Visualisiert Rankings auf einer Karte als Heatmap",
+      "Zeigt Ranking-Radius und Schwachstellen",
+      "Tools: Local Falcon, Local Viking, BrightLocal",
+      "Hilft bei der Konkurrenzanalyse"
+    ],
+    statistics: [
+      { label: "Typische Grid-Größe", value: "5x5 bis 15x15", icon: "chart" },
+      { label: "Radius pro Punkt", value: "0.5-3 km", icon: "search" }
+    ],
+    benefits: [
+      "Erkennt lokale Ranking-Schwachstellen",
+      "Zeigt den tatsächlichen Sichtbarkeitsradius",
+      "Misst Fortschritte nach Optimierungen"
+    ],
+    relatedTerms: ["Local Pack", "Proximity (Entfernung)", "Google Maps", "Local SEO"],
+    difficulty: "experte",
+    importance: 3,
+    relatedArticles: [
+      { slug: "google-maps-seo-ranking-faktoren", title: "Google Maps Ranking-Faktoren" }
+    ]
+  },
+  {
+    letter: "G",
+    term: "Google Posts",
+    shortDescription: "Google Posts sind kurze Beiträge im Google Business Profile, die Angebote, Events und Neuigkeiten direkt in der Suche zeigen.",
+    snippetDefinition: "Google Posts sind kurze Beiträge (bis 1.500 Zeichen), die direkt im Google Business Profile veröffentlicht werden und in der Google-Suche sowie auf Google Maps erscheinen. Es gibt vier Post-Typen: Updates, Angebote, Events und Produkte. Unternehmen mit aktiven Google Posts erhalten laut Studien bis zu 7 % mehr Klicks auf ihr Profil.",
+    fullDescription: "Google Posts ermöglichen es Unternehmen, kurze Beiträge direkt im Google Business Profile zu veröffentlichen. Die Posts erscheinen in der Google-Suche und auf Maps und sind ein indirekter Ranking-Faktor.",
+    features: [
+      "Vier Typen: Updates, Angebote, Events, Produkte",
+      "Bis zu 1.500 Zeichen pro Post",
+      "Automatisches Ablaufdatum nach 7 Tagen (außer Events)",
+      "Können Bilder und Call-to-Action-Buttons enthalten"
+    ],
+    statistics: [
+      { label: "Mehr Klicks", value: "+7%", icon: "trending" },
+      { label: "Post-Lebensdauer", value: "7 Tage", icon: "clock" },
+      { label: "Zeichenlimit", value: "1.500", icon: "chart" }
+    ],
+    benefits: [
+      "Erhöht die Sichtbarkeit in der Suche",
+      "Zeigt Aktualität und Aktivität",
+      "Kostenlose Werbefläche direkt bei Google"
+    ],
+    relatedTerms: ["Google Business Profile", "Local Pack", "Google Maps", "Local SEO"],
+    difficulty: "anfänger",
+    importance: 3,
+    relatedArticles: [
+      { slug: "google-posts-als-ranking-faktor", title: "Google Posts als Ranking-Faktor" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ]
+  },
+  {
+    letter: "L",
+    term: "Local Finder",
+    shortDescription: "Der Local Finder ist die erweiterte Listenansicht auf Google Maps, die alle lokalen Ergebnisse über das Local Pack hinaus zeigt.",
+    snippetDefinition: "Der Local Finder ist die vollständige Listenansicht lokaler Unternehmen auf Google Maps, die erscheint, wenn man im Local Pack auf 'Alle anzeigen' klickt. Während das Local Pack nur 3 Ergebnisse zeigt, listet der Local Finder 20+ Unternehmen mit Details wie Bewertungen, Öffnungszeiten und Entfernung. Er ist besonders relevant für Unternehmen, die nicht im Top-3-Pack ranken.",
+    fullDescription: "Der Local Finder zeigt die vollständige Liste lokaler Ergebnisse, die über das 3er-Pack hinausgehen. Er ist erreichbar über den 'Alle anzeigen'-Link im Local Pack und zeigt 20+ Ergebnisse mit Karte.",
+    features: [
+      "Zeigt 20+ Ergebnisse statt nur 3",
+      "Erreichbar über 'Alle anzeigen' im Local Pack",
+      "Enthält Filteroptionen (Bewertung, Öffnungszeiten)",
+      "Eigene Ranking-Algorithmen"
+    ],
+    statistics: [
+      { label: "Ergebnisse angezeigt", value: "20+", icon: "chart" },
+      { label: "Nutzer die klicken", value: "~8%", icon: "percent" }
+    ],
+    benefits: [
+      "Chance auch ohne Top-3-Ranking sichtbar zu sein",
+      "Nutzer mit hoher Kaufabsicht klicken sich durch",
+      "Filterfunktionen bevorzugen gut gepflegte Profile"
+    ],
+    relatedTerms: ["Local Pack", "Google Maps", "Google Business Profile", "Proximity (Entfernung)"],
+    difficulty: "fortgeschritten",
+    importance: 3,
+    relatedArticles: [
+      { slug: "google-maps-seo-ranking-faktoren", title: "Google Maps Ranking-Faktoren" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ]
+  },
+  {
+    letter: "L",
+    term: "Lokale Backlinks",
+    shortDescription: "Lokale Backlinks sind eingehende Links von regionalen Websites, Zeitungen und Organisationen, die die lokale Autorität stärken.",
+    snippetDefinition: "Lokale Backlinks sind eingehende Verlinkungen von Websites mit regionalem Bezug – lokale Zeitungen, Handelskammern, Sportvereine, Stadtportale oder regionale Blogs. Sie sind für Local SEO besonders wertvoll, weil sie Google sowohl die thematische als auch die geografische Relevanz eines Unternehmens signalisieren. Lokale Backlinks machen etwa 29 % der Local-Pack-Ranking-Faktoren aus.",
+    fullDescription: "Lokale Backlinks sind Links von Websites mit regionalem Bezug. Sie signalisieren Google sowohl thematische als auch geografische Relevanz und sind einer der stärksten Local-SEO-Faktoren.",
+    features: [
+      "Links von lokalen Zeitungen und Portalen",
+      "Sponsoring von Vereinen und Events",
+      "Mitgliedschaft in Handelskammern und Verbänden",
+      "Gastbeiträge auf regionalen Blogs"
+    ],
+    statistics: [
+      { label: "Anteil an Local Ranking", value: "~29%", icon: "percent" },
+      { label: "Sichtbarkeits-Boost", value: "bis +67%", icon: "trending" }
+    ],
+    benefits: [
+      "Stärkster beeinflussbarer Ranking-Faktor",
+      "Bringt auch direkten Referral-Traffic",
+      "Langfristiger SEO-Wert"
+    ],
+    relatedTerms: ["Backlinks", "Local SEO", "Domain Authority", "Link Building"],
+    difficulty: "fortgeschritten",
+    importance: 5,
+    relatedArticles: [
+      { slug: "lokale-backlinks-aufbauen", title: "Lokale Backlinks aufbauen" },
+      { slug: "ultimate-guide-local-seo", title: "Ultimate Guide: Local SEO" }
+    ]
+  },
+  {
+    letter: "P",
+    term: "Prominence (Bekanntheit)",
+    shortDescription: "Prominence ist einer der drei Google-Maps-Hauptfaktoren und misst die Bekanntheit und Online-Autorität eines Unternehmens.",
+    snippetDefinition: "Prominence (Bekanntheit) ist einer der drei Hauptfaktoren für das Google-Maps-Ranking neben Proximity und Relevance. Google bewertet, wie bekannt und etabliert ein Unternehmen ist – basierend auf Bewertungen, Backlinks, Citations, Erwähnungen in Medien und der allgemeinen Online-Präsenz. Im Gegensatz zu Proximity kann Prominence aktiv beeinflusst werden.",
+    fullDescription: "Prominence misst die Bekanntheit und Autorität eines Unternehmens im Internet. Google nutzt Bewertungen, Backlinks, Citations und Medienerwähnungen, um die Bekanntheit zu bewerten. Es ist der am stärksten beeinflussbare der drei Hauptfaktoren.",
+    features: [
+      "Basiert auf Bewertungen, Backlinks und Citations",
+      "Berücksichtigt auch Offline-Bekanntheit (z.B. bekannte Marken)",
+      "Kann aktiv verbessert werden",
+      "Kompensiert teilweise schlechte Proximity"
+    ],
+    statistics: [
+      { label: "Anteil am Maps-Ranking", value: "~25%", icon: "percent" },
+      { label: "Beeinflussbar", value: "Ja", icon: "trending" }
+    ],
+    benefits: [
+      "Stärkster beeinflussbarer Maps-Faktor",
+      "Kann schwache Proximity ausgleichen",
+      "Langfristig aufbaubar"
+    ],
+    relatedTerms: ["Proximity (Entfernung)", "Relevance (Relevanz)", "Google Maps", "Local Pack"],
+    difficulty: "fortgeschritten",
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-maps-seo-ranking-faktoren", title: "Google Maps Ranking-Faktoren" },
+      { slug: "google-maps-ranking-verbessern", title: "Google Maps Ranking verbessern" }
+    ]
+  },
+  {
+    letter: "R",
+    term: "Relevance (Relevanz)",
+    shortDescription: "Relevance ist einer der drei Google-Maps-Hauptfaktoren und misst, wie gut ein Unternehmensprofil zur Suchanfrage passt.",
+    snippetDefinition: "Relevance (Relevanz) ist einer der drei Hauptfaktoren für das Google-Maps-Ranking. Google bewertet, wie gut ein Unternehmensprofil zur Suchanfrage des Nutzers passt. Entscheidend sind die primäre und sekundäre Kategorie, Keywords in der Geschäftsbeschreibung, angebotene Dienstleistungen und die Vollständigkeit des Profils. Relevance kann durch Profil-Optimierung stark verbessert werden.",
+    fullDescription: "Relevance misst, wie gut ein Google Business Profile zur Suchanfrage passt. Google wertet Kategorien, Beschreibungstexte, Dienstleistungen und Produkte aus, um die Relevanz zu bestimmen.",
+    features: [
+      "Primäre und sekundäre Geschäftskategorien",
+      "Keywords in der Unternehmensbeschreibung",
+      "Angebotene Dienstleistungen und Produkte",
+      "Vollständigkeit des Profils"
+    ],
+    statistics: [
+      { label: "Anteil am Maps-Ranking", value: "~25%", icon: "percent" },
+      { label: "Beeinflussbar", value: "Ja", icon: "trending" }
+    ],
+    benefits: [
+      "Direkt über Profil-Optimierung steuerbar",
+      "Bestimmt bei welchen Suchen man erscheint",
+      "Schnell umsetzbare Verbesserungen"
+    ],
+    relatedTerms: ["Proximity (Entfernung)", "Prominence (Bekanntheit)", "Google Business Profile", "Google Maps"],
+    difficulty: "anfänger",
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-maps-seo-ranking-faktoren", title: "Google Maps Ranking-Faktoren" },
+      { slug: "google-business-kategorien-guide", title: "Google Business Kategorien Guide" }
+    ]
+  },
+  {
+    letter: "R",
+    term: "Review Management",
+    shortDescription: "Review Management umfasst alle Strategien zum aktiven Sammeln, Beantworten und Optimieren von Online-Bewertungen.",
+    snippetDefinition: "Review Management bezeichnet die systematische Strategie zum Sammeln, Beantworten und Optimieren von Online-Bewertungen auf Google, Facebook und Branchenportalen. Es umfasst das aktive Einholen neuer Bewertungen, das professionelle Beantworten (auch negativer Reviews) und die Analyse von Bewertungstrends. 93 % der Verbraucher lesen Bewertungen vor einem Kauf.",
+    fullDescription: "Review Management ist der systematische Umgang mit Online-Bewertungen. Es umfasst das Einholen neuer Bewertungen, das Beantworten aller Reviews und die Analyse von Trends. Aktives Review Management ist ein entscheidender Local-SEO-Faktor.",
+    features: [
+      "Strategisches Einholen neuer Bewertungen",
+      "Professionelles Beantworten aller Reviews",
+      "Umgang mit negativen Bewertungen",
+      "Monitoring über mehrere Plattformen"
+    ],
+    statistics: [
+      { label: "Lesen Reviews vor Kauf", value: "93%", icon: "users" },
+      { label: "Ranking-Einfluss Reviews", value: "~17%", icon: "percent" },
+      { label: "Vertrauen wie persönl. Empfehlung", value: "88%", icon: "users" }
+    ],
+    benefits: [
+      "Stärkt Vertrauen und Conversion",
+      "Direkter Local-SEO-Ranking-Faktor",
+      "Wertvolles Kundenfeedback"
+    ],
+    relatedTerms: ["Reviews (Bewertungen)", "Google Business Profile", "Local SEO", "Prominence (Bekanntheit)"],
+    difficulty: "anfänger",
+    importance: 5,
+    relatedArticles: [
+      { slug: "google-bewertungen-bekommen", title: "Mehr Google Bewertungen bekommen" },
+      { slug: "negative-bewertung-loeschen", title: "Negative Bewertung löschen" }
+    ]
+  },
+  {
+    letter: "S",
+    term: "Service Area Business",
+    shortDescription: "Ein Service Area Business ist ein Unternehmen ohne festen Kundenstandort, das Kunden in einem definierten Gebiet bedient.",
+    snippetDefinition: "Ein Service Area Business (SAB) ist ein Unternehmen, das seine Dienstleistungen beim Kunden vor Ort erbringt, statt Kunden an einem festen Standort zu empfangen. Beispiele sind Handwerker, mobile Friseure oder Schlüsseldienste. Im Google Business Profile wird statt einer Adresse ein Einzugsgebiet angegeben. SABs erscheinen nicht mit einer Stecknadel auf Google Maps, können aber im Local Pack ranken.",
+    fullDescription: "Service Area Businesses (SABs) sind Unternehmen, die Kunden in einem definierten Gebiet bedienen, ohne dass Kunden den Standort besuchen. Im Google Business Profile wird ein Servicegebiet statt einer festen Adresse angegeben.",
+    features: [
+      "Servicegebiet statt fester Adresse im GBP",
+      "Keine Stecknadel auf Google Maps",
+      "Bis zu 20 Servicegebiete definierbar",
+      "Hybrid-Modell möglich (Standort + Servicegebiet)"
+    ],
+    statistics: [
+      { label: "SAB-Unternehmen in DE", value: "~35%", icon: "percent" },
+      { label: "Max. Servicegebiete", value: "20", icon: "chart" }
+    ],
+    benefits: [
+      "Ranking ohne feste Geschäftsadresse möglich",
+      "Breiteres Einzugsgebiet abdeckbar",
+      "Keine Kundenbesuche am Standort nötig"
+    ],
+    relatedTerms: ["Google Business Profile", "Local Pack", "Proximity (Entfernung)", "Local SEO"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "local-seo-handwerker", title: "Local SEO für Handwerker" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ]
+  },
+  {
+    letter: "G",
+    term: "GBP-Suspendierung",
+    shortDescription: "Eine GBP-Suspendierung ist die vorübergehende Deaktivierung eines Google Business Profiles wegen Richtlinienverstößen.",
+    snippetDefinition: "Eine GBP-Suspendierung ist die vorübergehende Deaktivierung eines Google Business Profiles durch Google wegen vermuteter oder tatsächlicher Richtlinienverstöße. Häufige Gründe sind Keyword-Stuffing im Geschäftsnamen, falsche Adressen oder verdächtige Aktivitäten. Die Reaktivierung erfolgt über einen Einspruch im GBP-Dashboard und dauert durchschnittlich 3 bis 14 Tage.",
+    fullDescription: "Eine GBP-Suspendierung bedeutet, dass Google ein Business Profile wegen Richtlinienverstößen deaktiviert hat. Das Profil verschwindet aus Google Maps und der Suche. Die Reaktivierung erfordert einen Einspruch mit Nachweis der Richtlinienkonformität.",
+    features: [
+      "Soft Suspension: Profil sichtbar, aber nicht editierbar",
+      "Hard Suspension: Profil komplett unsichtbar",
+      "Häufigste Gründe: Keyword-Stuffing, falsche Adresse",
+      "Einspruch über GBP-Dashboard möglich"
+    ],
+    statistics: [
+      { label: "Durchschnittl. Reaktivierung", value: "3-14 Tage", icon: "clock" },
+      { label: "Erfolgsquote Einspruch", value: "~70%", icon: "percent" }
+    ],
+    benefits: [
+      "Verständnis der Richtlinien verhindert Suspendierung",
+      "Schnelles Handeln minimiert Umsatzverlust",
+      "Proaktive Compliance schützt das Profil"
+    ],
+    relatedTerms: ["Google Business Profile", "Google Maps", "Local Pack", "NAP"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "gbp-suspendiert-reaktivieren", title: "GBP suspendiert: So reaktivierst du dein Profil" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ]
+  },
+  {
+    letter: "L",
+    term: "Local Landing Page",
+    shortDescription: "Eine Local Landing Page ist eine standortspezifische Unterseite, die für lokale Keywords in einer bestimmten Stadt oder Region optimiert ist.",
+    snippetDefinition: "Eine Local Landing Page ist eine speziell für einen geografischen Standort optimierte Unterseite einer Website. Sie zielt auf lokale Keywords wie 'Zahnarzt München Schwabing' ab und enthält standortspezifische Inhalte wie Adresse, Anfahrt, lokale Referenzen und Bewertungen. Local Landing Pages sind besonders effektiv für Unternehmen mit mehreren Standorten oder großem Servicegebiet.",
+    fullDescription: "Local Landing Pages sind standortspezifische Unterseiten, die für lokale Keywords in bestimmten Städten oder Stadtteilen optimiert sind. Sie helfen Unternehmen, für verschiedene Standorte organisch zu ranken.",
+    features: [
+      "Einzigartige Inhalte pro Standort (kein Duplicate Content)",
+      "Lokale Keywords in Titeln und Texten",
+      "Eingebettete Google Maps Karte",
+      "Standortspezifische Testimonials und Referenzen"
+    ],
+    statistics: [
+      { label: "Organischer Traffic-Boost", value: "bis +150%", icon: "trending" },
+      { label: "Conversion-Rate lokal", value: "2-5x höher", icon: "percent" }
+    ],
+    benefits: [
+      "Rankt für standortspezifische Keywords",
+      "Skalierbar für mehrere Standorte",
+      "Stärkt die lokale Autorität"
+    ],
+    relatedTerms: ["Local SEO", "Geo-Targeting", "Local Pack", "NAP"],
+    difficulty: "fortgeschritten",
+    importance: 4,
+    relatedArticles: [
+      { slug: "ultimate-guide-local-seo", title: "Ultimate Guide: Local SEO" },
+      { slug: "local-seo-keyword-strategie", title: "Local SEO Keyword-Strategie" }
+    ]
+  },
+  {
+    letter: "L",
+    term: "Local Schema Markup",
+    shortDescription: "Local Schema Markup ist strukturierter Code (JSON-LD), der Suchmaschinen detaillierte Unternehmensdaten maschinenlesbar übermittelt.",
+    snippetDefinition: "Local Schema Markup ist strukturierter Code im JSON-LD-Format, der Suchmaschinen detaillierte Informationen über ein lokales Unternehmen maschinenlesbar übermittelt. Es umfasst Daten wie Firmenname, Adresse, Öffnungszeiten, Bewertungen und angebotene Dienstleistungen. Korrekt implementiertes LocalBusiness-Schema erhöht die Chance auf Rich Snippets in den Suchergebnissen um bis zu 30 %.",
+    fullDescription: "Local Schema Markup ist strukturierter Code, der Google detaillierte Unternehmensdaten maschinenlesbar bereitstellt. Es verbessert die Chance auf Rich Snippets und hilft bei der Validierung von NAP-Daten.",
+    features: [
+      "LocalBusiness Schema als Basis",
+      "Spezialisierte Typen: Restaurant, MedicalBusiness, LegalService",
+      "Öffnungszeiten, Preisklasse, Zahlungsmethoden",
+      "FAQ-, Review- und Event-Schema als Ergänzung"
+    ],
+    statistics: [
+      { label: "Mehr Rich Snippets", value: "+30%", icon: "trending" },
+      { label: "Seiten ohne Schema", value: "~70%", icon: "percent" }
+    ],
+    benefits: [
+      "Erhöht Sichtbarkeit durch Rich Snippets",
+      "Verbessert Verständnis durch Suchmaschinen",
+      "Stärkt E-E-A-T-Signale"
+    ],
+    relatedTerms: ["Schema Markup", "Local SEO", "Google Business Profile", "NAP"],
+    difficulty: "experte",
+    importance: 4,
+    relatedArticles: [
+      { slug: "localbusiness-schema-implementierung", title: "LocalBusiness Schema implementieren" },
+      { slug: "technisches-local-seo", title: "Technisches Local SEO" }
+    ]
+  },
+  {
+    letter: "N",
+    term: "NAP-Audit",
+    shortDescription: "Ein NAP-Audit ist die systematische Überprüfung aller Online-Einträge auf konsistente Geschäftsdaten (Name, Adresse, Telefon).",
+    snippetDefinition: "Ein NAP-Audit ist die systematische Überprüfung und Bereinigung aller Online-Erwähnungen eines Unternehmens auf konsistente Name-, Adress- und Telefondaten. Dabei werden Branchenverzeichnisse, Social-Media-Profile und Bewertungsportale geprüft und inkonsistente Einträge korrigiert. Regelmäßige NAP-Audits (alle 3-6 Monate) sind essenziell, da 73 % der Unternehmen inkonsistente Daten haben.",
+    fullDescription: "Ein NAP-Audit prüft systematisch alle Online-Einträge eines Unternehmens auf konsistente Daten. Inkonsistenzen werden identifiziert und korrigiert – ein essenzieller Prozess für gutes lokales Ranking.",
+    features: [
+      "Alle Verzeichnisse und Profile systematisch prüfen",
+      "Inkonsistenzen dokumentieren und korrigieren",
+      "Tools wie Moz Local, BrightLocal oder Semrush",
+      "Empfohlener Rhythmus: alle 3-6 Monate"
+    ],
+    statistics: [
+      { label: "Unternehmen mit Fehlern", value: "73%", icon: "percent" },
+      { label: "Empfohlener Rhythmus", value: "3-6 Monate", icon: "clock" }
+    ],
+    benefits: [
+      "Verbessert lokale Rankings messbar",
+      "Verhindert Verwirrung bei Google",
+      "Stärkt Vertrauen bei Kunden"
+    ],
+    relatedTerms: ["NAP", "Citations", "Local SEO", "Branchenverzeichnis"],
+    difficulty: "anfänger",
+    importance: 4,
+    relatedArticles: [
+      { slug: "nap-konsistenz-local-seo", title: "NAP-Konsistenz für Local SEO" },
+      { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste" }
+    ]
+  },
+  {
+    letter: "V",
+    term: "Verifizierung (GBP)",
+    shortDescription: "Die GBP-Verifizierung ist der Prozess, mit dem Google die Identität und den Standort eines Unternehmens bestätigt.",
+    snippetDefinition: "Die GBP-Verifizierung ist der Prozess, durch den Google die Echtheit eines Unternehmens und seines Standorts bestätigt. Übliche Methoden sind Postkarte, Telefon, E-Mail oder Video-Verifizierung. Ohne Verifizierung kann ein Google Business Profile nicht vollständig verwaltet werden und erscheint möglicherweise nicht in den lokalen Suchergebnissen. Die Verifizierung dauert je nach Methode 1 bis 14 Tage.",
+    fullDescription: "Die Verifizierung bestätigt Google, dass ein Unternehmen echt ist und am angegebenen Standort existiert. Ohne Verifizierung kann das Google Business Profile nicht verwaltet werden und rankt nicht.",
+    features: [
+      "Methoden: Postkarte, Telefon, E-Mail, Video",
+      "Postkarte dauert 5-14 Tage",
+      "Video-Verifizierung für sofortige Bestätigung",
+      "Bulk-Verifizierung für Ketten (10+ Standorte)"
+    ],
+    statistics: [
+      { label: "Postkarte Dauer", value: "5-14 Tage", icon: "clock" },
+      { label: "Nicht-verifizierte Profile", value: "~20%", icon: "percent" }
+    ],
+    benefits: [
+      "Grundvoraussetzung für Maps-Ranking",
+      "Volle Kontrolle über das Profil",
+      "Schutz vor unbefugten Änderungen"
+    ],
+    relatedTerms: ["Google Business Profile", "GBP-Suspendierung", "Google Maps", "Local Pack"],
+    difficulty: "anfänger",
+    importance: 5,
+    relatedArticles: [
+      { slug: "verifizierung-probleme-loesen", title: "Verifizierungsprobleme lösen" },
+      { slug: "google-my-business-optimieren", title: "Google Business Profile optimieren" }
+    ]
   }
 ];
-
-// Utility functions
 export const getAllLetters = (): string[] => {
   const letters = [...new Set(seoLexikonData.map(term => term.letter))];
   return letters.sort();
