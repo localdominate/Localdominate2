@@ -736,6 +736,30 @@ export const blogArticles: BlogArticle[] = [
     featured: false
   },
 
+  {
+    slug: "google-maps-ranking-tracker",
+    de: {
+      title: "Google Maps Ranking Tracker: So trackst du deine lokalen Rankings",
+      metaTitle: "Google Maps Ranking Tracker | Grid-Tracking & Tools 2026",
+      metaDescription: "Wie du Google Maps Rankings systematisch trackst. Grid-Tracking erklärt, 7 Tools im Vergleich, kostenlose Tracker-Vorlage und Aktionsplan bei Ranking-Verlust.",
+      excerpt: "Konzept-Guide zum Maps Ranking Tracking: Grid-Tracking, Tool-Vergleich, Interpretation und kostenlose Vorlage für systematisches lokales Ranking-Monitoring.",
+      category: "Google Maps"
+    },
+    en: {
+      title: "Google Maps Ranking Tracker: How to Track Your Local Rankings",
+      metaTitle: "Google Maps Ranking Tracker | Grid Tracking & Tools 2026",
+      metaDescription: "How to systematically track Google Maps rankings. Grid tracking explained, 7 tools compared, free tracker template and action plan for ranking loss.",
+      excerpt: "Concept guide for Maps ranking tracking: grid tracking, tool comparison, interpretation and free template for systematic local ranking monitoring.",
+      category: "Google Maps"
+    },
+    readingTime: 13,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "📈",
+    keywords: ["ranking tracker", "google maps ranking", "local rank tracking", "grid tracking", "geo grid", "maps position tracken"],
+    featured: false
+  },
+
   // === NEUE ARTIKEL: STRATEGIE ===
   {
     slug: "local-link-building",
@@ -3919,6 +3943,7 @@ const PUBLISHED_SLUGS = new Set([
   "citation-tracking-template",
   "local-keyword-research-template",
   "local-seo-monthly-checklist",
+  "google-maps-ranking-tracker",
   "entity-seo-guide",
   "semantic-seo-topical-authority",
 ]);

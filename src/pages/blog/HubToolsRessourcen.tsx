@@ -9,6 +9,7 @@ const groups: HubArticleGroup[] = [
     slugs: [
       "seo-toolbox-kostenlose-ressourcen",
       "ki-tools-local-seo",
+      "google-maps-ranking-tracker",
     ],
   },
   {
