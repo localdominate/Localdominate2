@@ -349,6 +349,13 @@ const App = () => (
                 <Route path="/blog/local-seo-roadmap-90-tage" element={<LocalSeoRoadmap />} />
                 <Route path="/blog/schema-strategie-dokument" element={<SchemaStrategieDokument />} />
                 <Route path="/blog/local-seo-statistiken-daten" element={<LocalSeoStatistiken />} />
+                <Route path="/blog/faq-hub" element={<FaqHub />} />
+                <Route path="/blog/faq-local-seo-grundlagen" element={<FaqSubHub />} />
+                <Route path="/blog/faq-google-business-profil" element={<FaqSubHub />} />
+                <Route path="/blog/faq-bewertungen-reputation" element={<FaqSubHub />} />
+                <Route path="/blog/faq-technisches-seo" element={<FaqSubHub />} />
+                <Route path="/blog/faq-ai-zukunft-local-seo" element={<FaqSubHub />} />
+                <Route path="/blog/faq-content-marketing-local-seo" element={<FaqSubHub />} />
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
