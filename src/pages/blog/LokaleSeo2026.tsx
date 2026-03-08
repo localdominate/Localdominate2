@@ -96,6 +96,10 @@ const LokaleSeo2026 = () => {
           { q: "Wie bereite ich mich auf KI-Suche vor?", a: "Strukturiere deine Inhalte klar, nutze Schema.org Markup und beantworte häufige Fragen direkt auf deiner Website und im Google Profil." },
           { q: "Ist Voice Search wirklich so wichtig?", a: "Für lokale Suchen ja. \"In der Nähe\" und \"jetzt geöffnet\" Anfragen erfolgen oft per Sprache, besonders unterwegs." },
           { q: "Was ist der wichtigste SEO-Trend 2026?", a: "Nutzererfahrung. Google misst immer genauer, ob Kunden bei dir finden, was sie suchen. Zufriedene Kunden = besseres Ranking." },
+          { q: "Wie wirken sich Google AI Overviews auf lokale Unternehmen aus?", a: "AI Overviews zeigen Zusammenfassungen über lokalen Suchergebnissen. Für transaktionale Suchen ('Friseur in der Nähe') ist der Einfluss gering. Für informationelle Suchen sinkt der Click-Through um bis zu 40 %. Optimiere mit strukturierten Daten und Fact-first-Content, um als AI-Quelle zitiert zu werden." },
+          { q: "Brauche ich als lokales Unternehmen eine llms.txt-Datei?", a: "Ja, llms.txt hilft AI-Crawlern, deine Unternehmensdaten strukturiert zu erfassen. Trage dort Name, Adresse, Leistungen, Öffnungszeiten und FAQs ein. Der Aufwand ist minimal (30 Minuten), der potenzielle Nutzen für AI-Sichtbarkeit aber erheblich." },
+          { q: "Wie bereite ich meine Website auf Zero-Click-Searches vor?", a: "Optimiere dein Google Business Profil vollständig, nutze FAQ-Schema für häufige Fragen und stelle sicher, dass Google alle relevanten Informationen (Preise, Öffnungszeiten, Services) direkt in den SERPs anzeigen kann. Ziel: Auch ohne Klick als Experte sichtbar sein." },
+          { q: "Welche Tools helfen bei der lokalen SEO-Optimierung 2026?", a: "Kostenlos: Google Business Profil, Google Search Console, PageSpeed Insights. Bezahlt: BrightLocal (Rankings & Citations), Semrush (Keyword-Recherche), Whitespark (Citation-Audit). Für AI-Monitoring: Google Search Console AI-Berichte und Referrer-Tracking für chatgpt.com und perplexity.ai." },
         ]
       }
     },
@@ -176,6 +180,10 @@ const LokaleSeo2026 = () => {
           { q: "How do I prepare for AI search?", a: "Structure your content clearly, use Schema.org markup, and answer common questions directly on your website and in your Google profile." },
           { q: "Is Voice Search really that important?", a: "For local searches, yes. \"Near me\" and \"open now\" queries are often voice-based, especially on the go." },
           { q: "What is the most important SEO trend for 2026?", a: "User experience. Google measures more precisely whether customers find what they're looking for with you. Satisfied customers = better ranking." },
+          { q: "How do Google AI Overviews affect local businesses?", a: "AI Overviews display summaries above local search results. For transactional queries ('hairdresser near me'), the impact is minimal. For informational queries, click-through drops by up to 40%. Optimize with structured data and fact-first content to be cited as an AI source." },
+          { q: "Does my local business need an llms.txt file?", a: "Yes, llms.txt helps AI crawlers capture your business data in a structured way. Include your name, address, services, opening hours, and FAQs. The effort is minimal (30 minutes), but the potential benefit for AI visibility is significant." },
+          { q: "How do I prepare my website for Zero-Click Searches?", a: "Fully optimize your Google Business Profile, use FAQ schema for common questions, and ensure Google can display all relevant information (prices, hours, services) directly in SERPs. Goal: Be visible as an expert even without a click." },
+          { q: "Which tools help with local SEO optimization in 2026?", a: "Free: Google Business Profile, Google Search Console, PageSpeed Insights. Paid: BrightLocal (rankings & citations), Semrush (keyword research), Whitespark (citation audit). For AI monitoring: Google Search Console AI reports and referrer tracking for chatgpt.com and perplexity.ai." },
         ]
       }
     }

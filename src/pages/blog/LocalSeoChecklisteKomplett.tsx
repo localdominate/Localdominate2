@@ -60,6 +60,8 @@ const LocalSeoChecklisteKomplett = () => {
     { question: "Wie oft sollte ich die Checkliste durchgehen?", answer: "Fuehre quartalsweise ein vollstandiges Audit durch. GBP-Daten und Bewertungen sollten monatlich geprueft werden. Technische Checks (Core Web Vitals, Broken Links) am besten monatlich automatisiert." },
     { question: "Kann ich die Checkliste als PDF herunterladen?", answer: "Nutze unsere interaktive Audit-Checkliste unter /blog/local-seo-audit-checkliste — dort kannst du Punkte abhaken und deinen Fortschritt speichern. Alternativ kannst du diese Seite als PDF drucken (Strg+P)." },
     { question: "Was unterscheidet diese Checkliste von der Audit-Checkliste?", answer: "Die Audit-Checkliste prueft den Ist-Zustand (Was fehlt?). Diese Implementierungs-Checkliste ist ein Schritt-fur-Schritt-Aktionsplan (Was tun, in welcher Reihenfolge?). Idealerweise nutzt du beide zusammen." },
+    { question: "Muss ich alle 80+ Punkte umsetzen, um im Local Pack zu ranken?", answer: "Nein. Die Top-20-Punkte (GBP, NAP, Bewertungen, Schema) bringen 80 % der Wirkung. Viele Unternehmen ranken bereits mit 40-50 % Umsetzung im Local Pack. Die restlichen Punkte sichern dein Ranking gegen Wettbewerber ab und machen es langfristig stabiler." },
+    { question: "Gilt diese Checkliste auch fur Unternehmen in Oesterreich und der Schweiz?", answer: "Ja, die Grundprinzipien gelten fur den gesamten DACH-Raum. Unterschiede: In der Schweiz sind local.ch und search.ch wichtige Verzeichnisse, in Oesterreich Herold.at. Die Google-Business-Optimierung ist identisch. Sprachliche Anpassungen (z. B. Hochdeutsch vs. Schweizer Schreibweise) sollten beachtet werden." },
   ];
 
   const sources = [

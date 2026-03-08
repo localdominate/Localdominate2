@@ -78,6 +78,10 @@ const LocalLinkBuildingBlueprint = () => {
       question: "Wie finde ich Unlinked Brand Mentions?",
       answer: "Nutze Google Alerts fur deinen Firmennamen, Google-Suche mit 'Firmenname -site:deinewebsite.de' oder Tools wie Ahrefs Content Explorer. Kontaktiere Website-Betreiber hoflich und bitte um Verlinkung - die Erfolgsquote liegt bei 30-40 %."
     },
+    {
+      question: "Zahlen NoFollow-Links fur lokales SEO?",
+      answer: "NoFollow-Links vererben keinen direkten PageRank, sind aber trotzdem wertvoll. Sie diversifizieren dein Linkprofil, bringen Traffic und Markenbekanntheit. Ein NoFollow-Link von einer lokalen Tageszeitung oder einem IHK-Portal ist oft wertvoller als ein DoFollow-Link von einem unbekannten Blog."
+    },
   ];
 
   const sources = [

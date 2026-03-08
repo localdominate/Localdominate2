@@ -76,6 +76,10 @@ const LocalSeoStrategieKleineUnternehmen = () => {
       question: "Wie messe ich den Erfolg meiner Local-SEO-Strategie?",
       answer: "Die wichtigsten KPIs sind: Google Business Profil Impressionen und Aktionen (Anrufe, Routenanfragen), Local Pack Rankings für 5–10 Kern-Keywords, organischer Traffic aus der Zielregion und Anzahl + Durchschnitt der Google-Bewertungen. Google Business Insights liefert diese Daten kostenlos."
     },
+    {
+      question: "Wie konkurriere ich als kleines Unternehmen gegen große Ketten?",
+      answer: "Kleine Unternehmen haben Vorteile bei Local SEO: persönliche Google-Bewertungen, lokale Relevanz und Nischenkompetenz. Fokussiere auf Long-Tail-Keywords mit Stadtteil-Bezug (z. B. 'Bio-Bäckerei Altstadt'), sammle authentische Bewertungen und erstelle hyper-lokalen Content. Ketten können das nicht für jeden Standort leisten."
+    },
   ];
 
   const sources = [
