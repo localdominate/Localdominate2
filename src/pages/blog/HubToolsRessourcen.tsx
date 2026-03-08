@@ -24,6 +24,7 @@ const groups: HubArticleGroup[] = [
       "citation-tracking-template",
       "local-keyword-research-template",
       "local-seo-monthly-checklist",
+      "local-seo-strategy-planner",
     ],
   },
   {
