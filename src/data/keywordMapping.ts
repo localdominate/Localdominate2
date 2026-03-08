@@ -538,9 +538,9 @@ export const keywordMapping: KeywordAssignment[] = [
   },
   {
     slug: "local-seo-audit-checkliste",
-    primaryKeyword: "local seo audit",
-    secondaryKeywords: ["seo audit checkliste", "local seo analyse", "seo prüfung lokal"],
-    lsiKeywords: ["local seo check kostenlos", "website audit lokal", "gbp audit"],
+    primaryKeyword: "local seo audit diagnose",
+    secondaryKeywords: ["seo ist-analyse", "local seo scoring", "seo diagnose tool"],
+    lsiKeywords: ["local seo check", "website audit lokal", "gbp audit scoring"],
     searchIntent: "informational",
     targetSearchVolume: "high",
     contentType: "cluster"
