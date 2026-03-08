@@ -422,6 +422,32 @@ const LocalSeoFrankfurt = () => {
         </Accordion>
       </section>
 
+      <LocalBusinessEcosystem config={{
+        city: 'Frankfurt',
+        population: '760.000',
+        businesses: '~75.000',
+        avgSearchVolume: '28.000',
+        economicFacts: [
+          { label: 'Kaufkraftindex', value: '120%', trend: 'up', insight: 'Finanzsektor treibt überdurchschnittliche Kaufkraft' },
+          { label: 'Expat-Anteil', value: '30%', trend: 'up', insight: 'Höchster Anteil internationaler Fachkräfte in DE' },
+          { label: 'Messe-Besucher/Jahr', value: '2,5 Mio.', trend: 'stable', insight: 'Messe-Keywords für Gastro, Hotels und Services' },
+          { label: 'Pendler/Tag', value: '380.000', trend: 'up', insight: 'Mehr Pendler als Einwohner = hohes Mittagessen-Suchvolumen' },
+        ],
+        industryClusters: [
+          { name: 'Finanzen & Beratung', icon: '🏦', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '50 im Pack', avgRating: '4.2', avgReviews: '15', gap: 'Wenige nutzen lokale SEO trotz hoher Wettbewerbsdichte', strategy: 'Spezialisierungs-Keywords (Expat-Steuer, Startup-Beratung) + englische Varianten' },
+          { name: 'Gastronomie', icon: '🍎', saturation: 'Hoch', opportunity: 'Mittel', avgCompetitors: '65 im Pack', avgRating: '4.2', avgReviews: '75', gap: 'Business-Lunch-Keywords werden kaum gezielt optimiert', strategy: 'Mittagstisch-Keywords + Messe-Nähe + Sachsenhausen Apfelwein-Nische' },
+          { name: 'Immobilien', icon: '🏠', saturation: 'Mittel', opportunity: 'Hoch', avgCompetitors: '20 im Pack', avgRating: '4.0', avgReviews: '12', gap: 'Expat-Relocation-Services fast ohne Local SEO', strategy: 'Englische Keywords + Stadtteil-Spezialisierung + Google Posts mit Objekten' },
+          { name: 'International Services', icon: '🌍', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '8 im Pack', avgRating: '4.3', avgReviews: '10', gap: 'Riesige Nachfrage nach englischsprachigen lokalen Services', strategy: 'Englische Landingpages + Expat-Community-Verzeichnisse + Google Reviews auf Englisch' },
+          { name: 'Handwerk', icon: '🔧', saturation: 'Niedrig', opportunity: 'Sehr hoch', avgCompetitors: '20 im Pack', avgRating: '3.8', avgReviews: '12', gap: 'Fast keine lokale Online-Präsenz trotz extremer Nachfrage', strategy: 'Stadtteil-Abdeckung + Notdienst + mehrsprachige GBP-Beschreibungen' },
+        ],
+        underservedNiches: [
+          { niche: 'Expat-Services (Englisch)', reason: '30% internationale Bevölkerung, kaum English Local SEO', potentialKeywords: ['English doctor Frankfurt', 'tax advisor expats Frankfurt', 'English kindergarten Frankfurt'] },
+          { niche: 'Messe-Services', reason: '2,5 Mio. Messebesucher/Jahr, temporäre lokale Nachfrage', potentialKeywords: ['Hotel near Messe Frankfurt', 'Restaurant Messegelände', 'Taxi Messe Frankfurt'] },
+          { niche: 'EZB-Viertel Services', reason: 'Neues Geschäftsviertel im Ostend mit wachsender Nachfrage', potentialKeywords: ['Lunch EZB Frankfurt', 'Café Ostend Frankfurt', 'Friseur Ostend'] },
+        ],
+        strategicInsight: 'Frankfurt ist zweigeteilt: Finanz-Elite mit höchsten Ansprüchen und internationale Community die englische Services sucht. Wer beide bedient (DE + EN), hat einen enormen Vorteil. Der Pendler-Überschuss macht Mittagessen- und Service-Keywords besonders wertvoll.',
+      }} />
+
       <GeoTargetedKeywords config={{
         city: 'Frankfurt',
         country: 'DE',
