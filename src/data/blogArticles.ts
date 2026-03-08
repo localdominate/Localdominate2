@@ -3130,7 +3130,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Delete Duplicate Google Listings – Duplicate Listing Guide (2026)",
-      metaTitle: "Remove Duplicate Listing: Delete Duplicate Google Listings | 2026",
+      metaTitle: "Remove Duplicate Google Listings | Guide 2026",
       metaDescription: "Do you have multiple Google Business listings for the same location? Learn how to find duplicates, properly remove them and prevent future duplications.",
       excerpt: "The complete guide to finding and removing duplicate Google Business listings with interactive checklist.",
       category: "Troubleshooting"
