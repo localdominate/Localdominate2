@@ -433,6 +433,7 @@ const ConversionOptimizationReport = () => {
                 <TabsTrigger value="funnel">🔄 Funnel</TabsTrigger>
                 <TabsTrigger value="cta-performance">📊 CTA-Performance</TabsTrigger>
                 <TabsTrigger value="trends">📈 Trends</TabsTrigger>
+                <TabsTrigger value="history">📁 Gespeicherte Reports ({savedReports.length})</TabsTrigger>
               </TabsList>
 
               {/* Recommendations Tab */}
