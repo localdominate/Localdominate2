@@ -64,7 +64,7 @@ const LocalSeoTrendsSchweiz = () => {
         </div>
       </div>
 
-      <BlogCTAABTest position="start" articleSlug="local-seo-trends-schweiz" />
+      <BlogCTAABTest position="intro" articleSlug="local-seo-trends-schweiz" />
 
       {/* AI Search Section */}
       <h2 id="ai-suche" className="text-2xl font-bold mt-12 mb-6">Wie verändert AI Search das lokale Suchverhalten in der Schweiz?</h2>

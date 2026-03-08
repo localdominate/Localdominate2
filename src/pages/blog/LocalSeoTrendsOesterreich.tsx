@@ -63,7 +63,7 @@ const LocalSeoTrendsOesterreich = () => {
         </div>
       </div>
 
-      <BlogCTAABTest position="start" articleSlug="local-seo-trends-oesterreich" />
+      <BlogCTAABTest position="intro" articleSlug="local-seo-trends-oesterreich" />
 
       {/* AI Search */}
       <h2 id="ai-suche" className="text-2xl font-bold mt-12 mb-6">Wie verändert AI Search den österreichischen Markt?</h2>

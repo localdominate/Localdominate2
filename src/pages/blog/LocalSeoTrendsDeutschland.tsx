@@ -63,7 +63,7 @@ const LocalSeoTrendsDeutschland = () => {
         </div>
       </div>
 
-      <BlogCTAABTest position="start" articleSlug="local-seo-trends-deutschland" />
+      <BlogCTAABTest position="intro" articleSlug="local-seo-trends-deutschland" />
 
       {/* AI Search */}
       <h2 id="ai-suche" className="text-2xl font-bold mt-12 mb-6">Wie verändert AI Search die lokale Suche in Deutschland?</h2>
