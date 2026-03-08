@@ -378,7 +378,7 @@ const GoogleMapsAuditTemplate = () => {
         );
       })}
 
-      <BlogCTAABTest slug="google-maps-audit-template" position="middle" />
+      <BlogCTAABTest articleSlug="google-maps-audit-template" position="middle" />
 
       {/* Scoring */}
       <section id="scoring" className="mb-10">
