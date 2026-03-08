@@ -365,7 +365,7 @@ const CoreWebVitalsLocalSeo = () => {
           <Card>
             <CardContent className="p-4">
               <Monitor className="h-6 w-6 text-primary mb-2" />
-              <h4 className="font-semibold mb-2">Google Search Console</h4>
+              <h3 className="font-semibold mb-2">Google Search Console Web Vitals Report</h3>
               <p className="text-sm text-muted-foreground mb-2">
                 Zeigt Core Web Vitals für alle Ihre Seiten basierend auf echten Nutzerdaten (Field-Daten).
               </p>
