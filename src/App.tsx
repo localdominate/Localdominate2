@@ -263,6 +263,7 @@ const App = () => (
                 <Route path="/blog/local-seo-notdienst-keywords" element={<LocalSeoNotdienstKeywords />} />
                 <Route path="/blog/google-business-kategorien-guide" element={<GoogleBusinessKategorienGuide />} />
                 <Route path="/blog/local-seo-zahnarzt" element={<LocalSeoZahnarzt />} />
+                <Route path="/blog/local-seo-sanitaer-heizung" element={<LocalSeoSanitaerHeizung />} />
                 <Route path="/blog/lokale-events-marketing" element={<LokaleEventsMarketing />} />
                 <Route path="/blog/lokale-influencer-kooperationen" element={<LokaleInfluencerKooperationen />} />
                 <Route path="/blog/google-business-produkte-services" element={<GoogleBusinessProdukteServices />} />
