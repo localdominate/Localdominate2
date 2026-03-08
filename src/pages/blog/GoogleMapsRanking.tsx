@@ -182,7 +182,7 @@ const GoogleMapsRanking = () => {
         }
       },
       section4: {
-        title: "Common Mistakes to Avoid",
+        title: "What Mistakes Should You Avoid in Google Maps Ranking?",
         mistakes: [
           { title: "Keyword Stuffing in Name", desc: "Don't add keywords to your business name – this violates Google's guidelines." },
           { title: "Inconsistent NAP Data", desc: "Different addresses on different platforms confuse Google." },
