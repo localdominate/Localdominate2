@@ -293,6 +293,9 @@ const App = () => (
                 <Route path="/blog/local-seo-optiker" element={<LocalSeoOptiker />} />
                 <Route path="/blog/bewertungs-antworten-vorlagen" element={<BewertungsAntwortenVorlagen />} />
                 <Route path="/blog/local-seo-elektrotechnik" element={<LocalSeoElektrotechnik />} />
+                <Route path="/blog/local-seo-trends-schweiz" element={<LocalSeoTrendsSchweiz />} />
+                <Route path="/blog/local-seo-trends-deutschland" element={<LocalSeoTrendsDeutschland />} />
+                <Route path="/blog/local-seo-trends-oesterreich" element={<LocalSeoTrendsOesterreich />} />
                 <Route path="/blog/google-business-insights-verstehen" element={<GoogleBusinessInsightsVerstehen />} />
                 <Route path="/blog/local-seo-fotograf" element={<LocalSeoFotograf />} />
                 <Route path="/blog/local-seo-voice-search" element={<LocalSeoVoiceSearch />} />
