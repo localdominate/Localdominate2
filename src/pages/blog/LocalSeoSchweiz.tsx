@@ -2,6 +2,7 @@ import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SwissCantonSelector from "@/components/blog/SwissCantonSelector";
