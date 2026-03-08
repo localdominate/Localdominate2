@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Clock, ExternalLink, FileText, CheckSquare, Lightbulb } from "lucide-react";
+import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import { Card, CardContent } from "@/components/ui/card";
 import SEOHead from "@/components/SEOHead";
 import StickyHeader from "@/components/StickyHeader";
