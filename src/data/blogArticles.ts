@@ -34,6 +34,8 @@ export interface ResolvedBlogArticle {
   icon: string;
   keywords: string[];
   featured?: boolean;
+  lastReviewedAt?: string;
+  lastReviewedBy?: string;
 }
 
 export const blogArticles: BlogArticle[] = [
