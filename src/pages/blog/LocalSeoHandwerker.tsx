@@ -8,6 +8,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
+import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
