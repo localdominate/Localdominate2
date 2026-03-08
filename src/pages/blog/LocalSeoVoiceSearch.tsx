@@ -81,7 +81,7 @@ const LocalSeoVoiceSearch = () => {
       <KeyTakeawaysBox items={keyTakeaways} />
 
       <section id="voice-search-verstehen">
-        <h2>Voice Search verstehen</h2>
+        <h2>Was ist Voice Search und warum ist es wichtig?</h2>
         <AutoLexikonText>
           <p>
             "Hey Google, wo ist der nächste Zahnarzt?" – Sprachsuchen sind 
