@@ -322,6 +322,12 @@ const LocalSeoRestaurant = () => {
         description="Kopierfertige Texte fuer die Gastronomie: Vor Ort, per E-Mail und SMS."
       />
 
+      <ReviewEmailTemplates
+        industries={["restaurant"]}
+        title="E-Mail-Vorlagen fuer Restaurant-Bewertungen"
+        description="Professionelle E-Mail-Templates speziell fuer die Gastronomie – nach dem Besuch oder als Follow-up."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />
 
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="end" />

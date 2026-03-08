@@ -287,6 +287,12 @@ const LocalSeoZahnarzt = () => {
         description="Kopierfertige Texte fuer Zahnaerzte: Am Empfang und per SMS nach der Prophylaxe."
       />
 
+      <ReviewEmailTemplates
+        industries={["zahnarzt"]}
+        title="E-Mail-Vorlagen fuer Zahnarzt-Bewertungen"
+        description="Datenschutzkonforme E-Mail-Templates fuer Zahnarztpraxen – nach der Zahnreinigung oder Behandlung."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />
 
       <SourcesSection sources={[

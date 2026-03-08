@@ -632,6 +632,12 @@ const LocalSeoHandwerker = () => {
         description="Kopierfertige Texte fuer Handwerker: Bei Abnahme, per WhatsApp und in der Rechnung."
       />
 
+      <ReviewEmailTemplates
+        industries={["handwerker"]}
+        title="E-Mail-Vorlagen fuer Handwerker-Bewertungen"
+        description="Professionelle E-Mail-Templates nach Auftragsabschluss und saisonale Aktionen."
+      />
+
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <RelatedIndustryGuides currentSlug="local-seo-handwerker" />
