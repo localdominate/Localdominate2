@@ -418,7 +418,7 @@ const CoreWebVitalsLocalSeo = () => {
           Browser-Caching und Server-Caching reduzieren Ladezeiten für wiederkehrende Besucher drastisch.
         </p>
 
-        <h3 className="text-xl font-semibold mb-3">3. Kritischen Rendering-Pfad optimieren</h3>
+        <h3 className="text-xl font-semibold mb-3">3. Kritischen Rendering-Pfad für LCP optimieren</h3>
         <p className="mb-6">
           Alles, was für den ersten sichtbaren Bildschirminhalt nötig ist, sollte priorisiert laden. Alles andere kann warten.
         </p>
