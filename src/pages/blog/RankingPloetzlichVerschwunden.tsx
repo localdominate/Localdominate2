@@ -231,7 +231,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
         </p>
 
         <div className="bg-purple-50 rounded-xl p-6 my-8">
-          <h4 className="font-bold text-lg mb-4">Konkurrenz-Check Checkliste:</h4>
+          <h3 className="font-bold text-lg mb-4">SEO Konkurrenz-Check Checkliste</h3>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <span className="text-purple-600 font-bold">1.</span>
