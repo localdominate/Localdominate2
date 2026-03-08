@@ -15,6 +15,7 @@ import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle
 import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
+import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
