@@ -373,6 +373,8 @@ const CitationVerzeichnisse = () => {
             </div>
           </section>
 
+          <DirectorySubmissionStrategy compact={false} />
+
           {/* Internal Links */}
           <section className="border-t border-border pt-12">
             <h2 className="text-xl font-bold text-foreground mb-4">
