@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
@@ -617,6 +618,31 @@ const LocalSeoHamburg = () => {
           </AccordionItem>
         </Accordion>
       </section>
+
+      <GeoTargetedKeywords config={{
+        city: 'Hamburg',
+        country: 'DE',
+        districts: [
+          { district: 'Altona', keywords: ['Friseur Altona', 'Restaurant Ottensen', 'Kinderarzt Altona'], competition: 'Hoch', tip: 'Trendviertel Ottensen mitdenken — eigene Keywords für Ottensen lohnen sich' },
+          { district: 'Eimsbüttel', keywords: ['Zahnarzt Eimsbüttel', 'Yoga Eimsbüttel', 'Bio-Laden Eimsbüttel'], competition: 'Mittel', tip: 'Studenten + junge Familien: günstige Angebote und Online-Buchung betonen' },
+          { district: 'Winterhude', keywords: ['Steuerberater Winterhude', 'Café Winterhude', 'Physiotherapie Winterhude'], competition: 'Mittel', tip: 'Gehobenes Viertel am Stadtpark: Premium-Positionierung' },
+          { district: 'St. Pauli', keywords: ['Tattoo St. Pauli', 'Bar St. Pauli', 'Friseur Schanzenviertel'], competition: 'Hoch', tip: 'Schanze separat targeten — hat eigene Suchidentität' },
+          { district: 'Harburg', keywords: ['Handwerker Harburg', 'Rechtsanwalt Harburg', 'Autowerkstatt Harburg'], competition: 'Niedrig', tip: 'Südlich der Elbe: Wenig SEO-Konkurrenz, hohe lokale Nachfrage' },
+        ],
+        topIndustryKeywords: [
+          { industry: 'Maritime Wirtschaft', icon: '⚓', keywords: ['Schiffsmakler Hamburg', 'Logistik Hamburg Hafen', 'Import Export Hamburg', 'Zollberater Hamburg'] },
+          { industry: 'Gastronomie', icon: '🐟', keywords: ['Fischrestaurant Hamburg', 'Brunch Eppendorf', 'Labskaus Hamburg', 'Franzbrötchen Hamburg'] },
+          { industry: 'Handwerk', icon: '🔧', keywords: ['Tischler Hamburg', 'Elektriker Hamburg Notdienst', 'Maler Hamburg Altona', 'Sanitär Hamburg Eimsbüttel'] },
+          { industry: 'Medien & Kreativ', icon: '📺', keywords: ['Werbeagentur Hamburg', 'Fotograf Hamburg', 'Videoproduktion Hamburg', 'PR-Agentur Hamburg'] },
+        ],
+        seasonalKeywords: [
+          { event: 'Hafengeburtstag', keywords: ['Hafengeburtstag Hamburg Restaurant', 'Catering Hafengeburtstag', 'Hotel Hafengeburtstag Hamburg'], timing: 'Optimierung ab März' },
+          { event: 'Hamburger DOM', keywords: ['DOM Hamburg Anfahrt', 'Restaurant DOM Hamburg', 'Parken DOM Hamburg'], timing: 'Optimierung 2 Monate vorher (3× jährlich)' },
+          { event: 'Weihnachtsmärkte', keywords: ['Weihnachtsmarkt Rathausplatz Hamburg', 'Weihnachtsfeier Hamburg', 'Glühwein Jungfernstieg'], timing: 'Optimierung ab September' },
+        ],
+        localDirectories: ['hamburg.de', 'meinestadt.de/hamburg', 'abendblatt.de'],
+        dialektTip: '"Moin" und plattdeutsche Begriffe haben begrenztes Suchvolumen, aber "Schanze" statt "Sternschanze" und "Kiez" statt "St. Pauli" werden häufig gesucht.',
+      }} />
 
       <HelpfulnessWidget articleSlug="local-seo-hamburg" />
 
