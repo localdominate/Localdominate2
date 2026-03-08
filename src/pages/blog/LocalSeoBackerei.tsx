@@ -6,6 +6,8 @@ import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
+import { miniSuccessStories } from "@/data/miniSuccessStories";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
