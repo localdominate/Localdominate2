@@ -6,6 +6,7 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LinkBuildingIdeaGenerator from "@/components/blog/LinkBuildingIdeaGenerator";
 import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
+import GuestPostOutlines from "@/components/blog/GuestPostOutlines";
 import LinkBuildingOutreachTemplates from "@/components/blog/LinkBuildingOutreachTemplates";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Link, Building2, Newspaper, Users, Search, Trophy, AlertTriangle, Lightbulb } from "lucide-react";
@@ -679,6 +680,11 @@ Beste Grüße
       <PressOutreachTemplates
         title="Presse-Vorlagen: Lokale Medien kontaktieren"
         description="Kopierfertige E-Mail-Templates fuer die lokale Pressearbeit – fuer Eroeffnungen, Events, Auszeichnungen und mehr."
+      />
+
+      <GuestPostOutlines
+        title="Gastbeitrag-Outlines: Artikel-Gliederungen nach Branche"
+        description="Fertige Content-Strukturen fuer Gastbeitraege auf lokalen Blogs und Stadtmagazinen – mit SEO-Hinweisen und Profi-Tipps."
       />
 
       <HelpfulnessWidget articleSlug="local-link-building" />

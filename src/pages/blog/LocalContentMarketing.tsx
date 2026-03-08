@@ -5,6 +5,7 @@ import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
+import GuestPostOutlines from "@/components/blog/GuestPostOutlines";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, FileText, MapPin, Calendar, Users, Repeat, Download, Lightbulb, AlertTriangle, TrendingUp } from "lucide-react";
 
@@ -647,6 +648,12 @@ const LocalContentMarketing = () => {
         types={["cross-promo", "bundle", "referral"]}
         title="Partnerschafts-Vorlagen: Content-Kooperationen starten"
         description="Kopierfertige E-Mail-Templates fuer Cross-Promotions, Bundle-Angebote und Empfehlungs-Netzwerke."
+      />
+
+      <GuestPostOutlines
+        categories={["general", "gastronomy", "retail"]}
+        title="Gastbeitrag-Outlines: Content-Ideen fuer lokale Medien"
+        description="Fertige Artikel-Gliederungen fuer Gastbeitraege – perfekt als Content-Marketing-Strategie fuer lokale Sichtbarkeit."
       />
 
       <HelpfulnessWidget articleSlug="local-content-marketing" />

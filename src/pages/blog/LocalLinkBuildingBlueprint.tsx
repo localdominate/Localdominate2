@@ -8,6 +8,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import ArticleCTA from "@/components/blog/ArticleCTA";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import PressOutreachTemplates from "@/components/blog/PressOutreachTemplates";
+import GuestPostOutlines from "@/components/blog/GuestPostOutlines";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -631,6 +632,12 @@ const LocalLinkBuildingBlueprint = () => {
         types={["opening", "award", "expert", "trend", "followup"]}
         title="Presse-Vorlagen: PR-gesteuerte Backlinks gewinnen"
         description="Kopierfertige E-Mail-Templates fuer lokale Journalisten – ideal fuer Pressemitteilungen mit Link-Potenzial."
+      />
+
+      <GuestPostOutlines
+        categories={["general", "craft", "legal"]}
+        title="Gastbeitrag-Outlines: Content-Vorlagen fuer Link-Kampagnen"
+        description="Fertige Artikel-Gliederungen mit SEO-Hinweisen – ideal fuer systematisches Gastbeitrag-Linkbuilding."
       />
 
       <HelpfulnessWidget articleSlug="local-link-building-blueprint" />
