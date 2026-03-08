@@ -300,6 +300,48 @@ const ConversionOptimizationReport = () => {
     });
   }, [metrics, topPages, engagement, sessionCount]);
 
+  const saveReport = async () => {
+    setIsSaving(true);
+    try {
+      const { data, error } = await supabase.from("conversion_reports").insert({
+        total_sessions: sessionCount,
+        total_conversions: metrics.totalConversions,
+        total_leads: metrics.totalLeads,
+        conversion_rate: metrics.conversionRate,
+        lead_rate: metrics.leadRate,
+        cta_click_rate: metrics.ctaClickRate,
+        checkout_completion_rate: metrics.checkoutCompletionRate,
+        avg_engagement_score: metrics.avgEngagement,
+        avg_time_to_first_cta_seconds: metrics.avgTimeToFirstCta,
+        funnel_data: funnelData,
+        cta_by_location: ctaByLocation,
+        lead_sources: leadSources,
+        top_pages: topPages,
+        recommendations: recommendations,
+        notes: reportNotes || null,
+        created_by: user?.id,
+      }).select().single();
+      if (error) throw error;
+      setSavedReports(prev => [data, ...prev]);
+      setReportNotes("");
+      toast.success("Report gespeichert!");
+    } catch (e: any) {
+      toast.error("Fehler beim Speichern: " + e.message);
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const deleteReport = async (id: string) => {
+    const { error } = await supabase.from("conversion_reports").delete().eq("id", id);
+    if (error) {
+      toast.error("Fehler beim Löschen");
+    } else {
+      setSavedReports(prev => prev.filter(r => r.id !== id));
+      toast.success("Report gelöscht");
+    }
+  };
+
   const severityColor = (s: string) =>
     s === "critical" ? "text-destructive bg-destructive/10" :
     s === "high" ? "text-orange-600 bg-orange-100" :
