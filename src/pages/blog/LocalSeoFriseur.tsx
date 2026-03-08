@@ -1202,6 +1202,10 @@ const LocalSeoFriseur: React.FC = () => {
         </div>
       </div>
 
+      {miniSuccessStories.friseur?.map((story, i) => (
+        <MiniSuccessStory key={i} story={story} />
+      ))}
+
       <section id="praxisbeispiel" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Friseursalon verdreifacht Neukunden</h2>
         {industryCaseStudies.friseur.map((study, i) => (
