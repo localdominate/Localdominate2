@@ -46,7 +46,7 @@ const LocalSeoAnwaelteKanzleien = () => {
 
       <KeyTakeawaysBox items={keyTakeaways} />
 
-      <IndustryLandingCTA industry="legal" />
+      <IndustryLandingCTA industry="anwalt" />
 
       {/* Warum Local SEO */}
       <section id="warum-local-seo">
