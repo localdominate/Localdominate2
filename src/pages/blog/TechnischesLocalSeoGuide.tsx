@@ -1,5 +1,6 @@
 import { getArticleBySlug } from "@/data/blogArticles";
 import { GradientBarChart, ProcessFlow } from "@/components/blog/PillarVisuals";
+import { InternalResourceBox } from "@/components/blog/InternalResourceBox";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
@@ -874,6 +875,19 @@ Sitemap: https://example.de/sitemap.xml`}
           </Link>
         </div>
       </section>
+
+      <InternalResourceBox
+        title="⚙️ Technische Ressourcen"
+        variant="grid"
+        resources={[
+          { label: "Schema Markup Guide", href: "/blog/schema-markup-local-seo", type: "guide", description: "Alle Schema-Typen" },
+          { label: "Core Web Vitals optimieren", href: "/blog/core-web-vitals-local-seo", type: "guide", description: "LCP, INP, CLS" },
+          { label: "Mobile-First Local SEO", href: "/blog/mobile-first-local-seo", type: "guide", description: "Mobile Optimierung" },
+          { label: "Technisches SEO Hub", href: "/blog/technisches-seo-hub", type: "hub", description: "Alle technischen Guides" },
+          { label: "Local SEO Audit Checkliste", href: "/blog/local-seo-audit-checkliste", type: "tool", description: "Technischen Status prüfen" },
+          { label: "AI-Suche Guide", href: "/blog/ai-suche-lokale-unternehmen", type: "pillar", description: "Schema für AI" },
+        ]}
+      />
 
       <HelpfulnessWidget articleSlug="technisches-local-seo-guide" />
 

@@ -1,5 +1,6 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { DonutChart, ProcessFlow, GradientBarChart } from "@/components/blog/PillarVisuals";
+import { InternalResourceBox } from "@/components/blog/InternalResourceBox";
 import TableOfContents from "@/components/blog/TableOfContents";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import BlogFAQSection from "@/components/blog/BlogFAQSection";
@@ -708,6 +709,20 @@ const UltimateGuideLocalSeo = () => {
           Für einen umfassenden Überblick über aktuelle Entwicklungen empfehlen wir unseren Guide zur <Link to="/blog/lokale-suchmaschinenoptimierung-2026" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Lokalen Suchmaschinenoptimierung 2026</Link>.
         </p>
       </section>
+
+      <InternalResourceBox
+        title="📚 Weiterführende Ressourcen"
+        subtitle="Die wichtigsten Guides und Tools für deinen Local SEO Erfolg"
+        variant="grid"
+        resources={[
+          { label: "Local SEO Ranking-Faktoren erklärt", href: "/blog/local-seo-ranking-faktoren-erklaert", type: "pillar", description: "Alle Faktoren mit Gewichtung" },
+          { label: "90-Tage Local SEO Roadmap", href: "/blog/90-tage-local-seo-roadmap", type: "tool", description: "Interaktiver Zeitplan" },
+          { label: "Google Business Profil Checkliste", href: "/blog/google-business-profil-optimieren", type: "checklist", description: "75+ Punkte zum Abhaken" },
+          { label: "Local SEO Audit Checkliste", href: "/blog/local-seo-audit-checkliste", type: "checklist", description: "Interaktiver Audit" },
+          { label: "AI-Suche für lokale Unternehmen", href: "/blog/ai-suche-lokale-unternehmen", type: "guide", description: "Fit für AI Overviews" },
+          { label: "Technisches Local SEO Guide", href: "/blog/technisches-local-seo-guide", type: "pillar", description: "Schema, CWV, Mobile" },
+        ]}
+      />
 
       {/* FAQ */}
       <section id="faq">
