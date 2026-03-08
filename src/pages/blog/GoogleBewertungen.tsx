@@ -35,7 +35,7 @@ const GoogleBewertungen = () => {
         text: "lesen Online-Bewertungen, bevor sie ein lokales Unternehmen besuchen. Google Bewertungen sind der wichtigste Vertrauensfaktor für potenzielle Kunden. Hier erfährst du, wie du mehr authentische Bewertungen bekommst – ohne gegen Googles Richtlinien zu verstoßen."
       },
       section1: {
-        title: "Warum Bewertungen Kunden-Magnete sind",
+        title: "Warum sind Google Bewertungen so wichtig?",
         text1: "Google Bewertungen beeinflussen nicht nur das Vertrauen potenzieller Kunden, sondern auch dein Ranking in den lokalen Suchergebnissen.",
         stats: [
           { stat: "88%", desc: "vertrauen Online-Bewertungen wie persönlichen Empfehlungen" },
