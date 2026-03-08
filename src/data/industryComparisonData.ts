@@ -262,7 +262,7 @@ const industryInsights: Record<string, string> = {
   apotheke: "Apotheken haben den niedrigsten Wettbewerb und den schnellsten ROI. Notdienst-Informationen und Öffnungszeiten sind die wichtigsten Ranking-Faktoren.",
   autowerkstatt: "Autowerkstätten profitieren wie Handwerker von Notdienst-Keywords. Marken-Spezialisierung (BMW, VW etc.) bietet zusätzliches Keyword-Potenzial.",
   elektrotechnik: "Elektrotechniker haben einen der niedrigsten Wettbewerbsgrade. Frühes Local SEO sichert hier langfristige Dominanz im Einzugsgebiet.",
-  baeckerei: "Bäckereien haben einen extrem lokalen Radius. „In der Nähe"-Suchen machen über 80 % des mobilen Traffics aus.",
+  baeckerei: "Bäckereien haben einen extrem lokalen Radius. 'In der Nähe'-Suchen machen über 80 % des mobilen Traffics aus.",
   doener: "Döner & Imbiss profitieren von sehr hohem Suchvolumen bei gleichzeitig hohem Wettbewerb – qualitative Fotos und Menü-Markup sind entscheidend.",
   hotels: "Hotels konkurrieren mit OTAs (Booking, HRS). Direktbuchungsrate steigern durch eigene Google-Präsenz ist der größte Hebel.",
   ferienwohnungen: "Ferienwohnungen sind die einzige Branche, in der saisonale Optimierung den größten Einzelfaktor darstellt.",
