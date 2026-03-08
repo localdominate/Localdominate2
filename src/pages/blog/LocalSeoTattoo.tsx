@@ -3,6 +3,8 @@ import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -181,6 +183,13 @@ const LocalSeoTattoo = () => {
             </AccordionItem>
           ))}
         </Accordion>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Tattoo-Studio verdreifacht Anfragen</h2>
+        {industryCaseStudies.tattoo.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />

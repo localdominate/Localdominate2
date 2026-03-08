@@ -4,6 +4,8 @@ import ArticleCTA from "@/components/blog/ArticleCTA";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -771,6 +773,13 @@ Herzliche Grüße,
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Makler wird Stadtteil-Experte</h2>
+        {industryCaseStudies.immobilienmakler.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-immobilienmakler" />

@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -341,6 +343,14 @@ const LocalSeoAnwaelteKanzleien = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </section>
+
+      {/* Case Study */}
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Kanzlei-Erfolg durch Local SEO</h2>
+        {industryCaseStudies.anwaelte.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-anwaelte-kanzleien" />

@@ -2,6 +2,8 @@ import React from 'react';
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -1114,6 +1116,13 @@ const LocalSeoDoenerladen = () => {
         <p className="text-lg">
           <strong>Der wichtigste Tipp zum Schluss:</strong> Fang heute an. Nicht morgen, nicht nächste Woche. Jeder Tag, den du wartest, ist ein Tag, an dem die Konkurrenz an dir vorbeizieht. Die Tools in diesem Artikel machen den Start einfach – nutze sie!
         </p>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Döner-Imbiss wird Lieferando-unabhängig</h2>
+        {industryCaseStudies.doener.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-doener-kebab-imbiss" />

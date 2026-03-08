@@ -6,6 +6,8 @@ import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -250,6 +252,13 @@ const LocalSeoElektrotechnik = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Smart Home als Nische für Elektriker</h2>
+        {industryCaseStudies.elektrotechnik.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-elektrotechnik" />

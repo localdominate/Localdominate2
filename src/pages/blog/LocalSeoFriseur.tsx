@@ -40,6 +40,8 @@ import BeautyKeywordGenerator from '@/components/blog/BeautyKeywordGenerator';
 import BookingPlatformTable from '@/components/blog/BookingPlatformTable';
 import BeautyPortfolioOptimizer from '@/components/blog/BeautyPortfolioOptimizer';
 import ArticleCTA from '@/components/blog/ArticleCTA';
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 
 const LocalSeoFriseur: React.FC = () => {
   const { language } = useLanguage();
@@ -1184,6 +1186,13 @@ const LocalSeoFriseur: React.FC = () => {
           </a>
         </div>
       </div>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Friseursalon verdreifacht Neukunden</h2>
+        {industryCaseStudies.friseur.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
 
       <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>

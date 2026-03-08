@@ -5,6 +5,8 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
@@ -245,6 +247,13 @@ const LocalSeoZahnarzt = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2>Praxisbeispiel: Zahnarztpraxis steigert Online-Sichtbarkeit</h2>
+        {industryCaseStudies.zahnarzt.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />

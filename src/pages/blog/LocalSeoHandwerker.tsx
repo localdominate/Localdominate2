@@ -8,6 +8,8 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
@@ -589,6 +591,15 @@ const LocalSeoHandwerker = () => {
           { title: "MyHammer für Handwerker", url: "https://www.myhammer.de/", type: "tool", description: "Plattform zur Auftragsgewinnung" }
         ]}
       />
+
+      {/* Case Studies */}
+      <section id="praxisbeispiele" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-6">Praxisbeispiele: So haben Handwerker mit Local SEO gewonnen</h2>
+        <p className="text-muted-foreground mb-6">Diese anonymisierten Beispiele zeigen, was mit konsequenter Local SEO Umsetzung möglich ist:</p>
+        {industryCaseStudies.handwerker.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
+      </section>
 
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 

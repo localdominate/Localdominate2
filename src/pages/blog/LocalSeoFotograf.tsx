@@ -5,6 +5,8 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import SourcesSection from "@/components/blog/SourcesSection";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -368,6 +370,13 @@ const LocalSeoFotograf = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Hochzeitsfotograf dominiert lokal</h2>
+        {industryCaseStudies.fotograf.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-fotograf" />

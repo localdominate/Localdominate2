@@ -5,6 +5,8 @@ import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { UtensilsCrossed, Camera, Clock, MapPin, Star, Lightbulb } from "lucide-react";
@@ -280,6 +282,13 @@ const LocalSeoRestaurant = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold text-foreground mb-6">Praxisbeispiel: Restaurant steigert Auslastung durch Google</h2>
+        {industryCaseStudies.restaurant.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />

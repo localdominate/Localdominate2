@@ -5,6 +5,8 @@ import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
+import CaseStudyCard from "@/components/blog/CaseStudyCard";
+import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, MapPin, Star, Clock, Camera, TrendingUp, Users, Wheat, Cake, Coffee } from "lucide-react";
 import {
@@ -282,6 +284,13 @@ const LocalSeoBackerei = () => {
             </AccordionItem>
           ))}
         </Accordion>
+      </section>
+
+      <section id="praxisbeispiel" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Traditionsbäckerei gegen Ketten</h2>
+        {industryCaseStudies.baeckerei.map((study, i) => (
+          <CaseStudyCard key={i} study={study} />
+        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-baeckerei" />
