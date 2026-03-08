@@ -8,6 +8,7 @@ import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import DuplicateFinderCheckliste from '@/components/blog/DuplicateFinderCheckliste';
 import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
 import { Copy, Search, Trash2, GitMerge, AlertTriangle, CheckCircle, Clock, ArrowRight, MapPin, Building, Star, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
