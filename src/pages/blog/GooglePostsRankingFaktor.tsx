@@ -250,7 +250,7 @@ const GooglePostsRankingFaktor = () => {
       </section>
 
       <section id="frequenz">
-        <h2>Die richtige Posting-Frequenz</h2>
+        <h2>Wie oft solltest du Google Posts veröffentlichen?</h2>
         <AutoLexikonText>
           <h3>Empfohlene Frequenz</h3>
           <ul>
