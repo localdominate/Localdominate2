@@ -292,7 +292,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
               <p className="text-gray-600">Backlinks aufbauen, lokale PR, mehr Bewertungen sammeln</p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Monat 4+: Monitoring</h5>
+              <h4 className="font-bold">Monat 4+: SEO-Monitoring & Erfolgskontrolle</h4>
               <p className="text-gray-600">Rankings tracken, kontinuierlich optimieren, Erfolge messen</p>
             </div>
           </div>
