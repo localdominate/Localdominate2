@@ -5,6 +5,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
 import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
+import CityRankingChallenges from "@/components/blog/CityRankingChallenges";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
@@ -471,6 +472,69 @@ const LocalSeoFrankfurt = () => {
         ],
         localDirectories: ['frankfurt.de', 'journal-frankfurt.de', 'meinestadt.de/frankfurt'],
         dialektTip: '"Ebbelwoi" statt "Apfelwein" und "Bembel" haben Nischen-Suchvolumen. Frankfurt-spezifische Begriffe wie "Zeil" (Einkaufsstraße) als Geo-Modifier nutzen.',
+      }} />
+
+      <CityRankingChallenges config={{
+        city: 'Frankfurt',
+        overallDifficulty: 'Hoch',
+        challenges: [
+          {
+            title: 'Duale Zielgruppe: Banker vs. Bürger',
+            difficulty: 'Hoch',
+            description: 'Frankfurt spaltet sich in die Business-Welt (Bankenviertel, Westend) und das authentische Frankfurt (Sachsenhausen, Bornheim). Beide suchen komplett unterschiedlich.',
+            impact: 'Business-Keywords haben 2× höhere Conversion-Werte aber 3× mehr Wettbewerb',
+            strategies: [
+              'Separate Content-Strategien für B2B (Bankenviertel) und B2C (Wohnviertel)',
+              'Premium-Positionierung für Business-Zielgruppe, Authentizität für Bürger',
+              'Englische Keywords für internationale Business-Community'
+            ],
+            quickWin: 'Google Business Kategorie und Beschreibung an Hauptzielgruppe anpassen'
+          },
+          {
+            title: 'Messe-Saisonalität dominiert',
+            difficulty: 'Hoch',
+            description: 'Buchmesse, Automesse, Ambiente — Frankfurts Messen verschieben das Suchvolumen massiv. Außerhalb der Messe-Zeiten sinkt die Nachfrage deutlich.',
+            impact: 'Messe-Wochen bringen bis zu 400% mehr Suchanfragen für Hotel/Gastro-Keywords',
+            strategies: [
+              'Messe-Kalender als Content-Strategie nutzen',
+              'Dauerhafte Messe-Landing-Pages mit jährlicher Aktualisierung',
+              'Google Ads Budget auf Messe-Zeiten konzentrieren'
+            ],
+            quickWin: 'Nächste 3 Messen als Google Business Events eintragen'
+          },
+          {
+            title: 'Hoher Expat-Anteil erfordert Mehrsprachigkeit',
+            difficulty: 'Mittel',
+            description: 'Frankfurt hat den höchsten Expat-Anteil Deutschlands. Viele Suchanfragen erfolgen auf Englisch, besonders im Bereich Services und Gastronomie.',
+            impact: '30% der lokalen Suchanfragen in Frankfurt erfolgen auf Englisch',
+            strategies: [
+              'Bilinguale Website mit hreflang-Tags',
+              'Google Business auf Deutsch und Englisch optimieren',
+              'Expat-Portale (Internations, toytown) für Backlinks nutzen'
+            ],
+            quickWin: 'Google Business Services-Liste auf Englisch ergänzen'
+          },
+          {
+            title: 'Pendlerstadt mit Rhein-Main-Einzugsgebiet',
+            difficulty: 'Mittel',
+            description: 'Über 350.000 Pendler kommen täglich nach Frankfurt. Sie suchen oft "Frankfurt" obwohl sie in Offenbach, Darmstadt oder Wiesbaden wohnen.',
+            impact: 'Pendler-Keywords (z.B. "in der Nähe Hauptbahnhof") haben hohes ungenutztes Potenzial',
+            strategies: [
+              'Pendler-Hubs (Hbf, Konstablerwache) als Geo-Modifier nutzen',
+              'Umland-Städte als sekundäre Keywords abdecken',
+              'Öffnungszeiten an Pendler-Rhythmus anpassen und kommunizieren'
+            ],
+            quickWin: '"Nähe Hauptbahnhof/Konstablerwache" in Google Business aufnehmen'
+          }
+        ],
+        marketInsights: [
+          { label: 'Wettbewerb', value: '8.5/10', trend: 'up' },
+          { label: 'Expat-Anteil', value: '~30%', trend: 'up' },
+          { label: 'Messe-Impact', value: 'Sehr hoch', trend: 'stable' },
+          { label: 'Pendler/Tag', value: '350k+', trend: 'up' }
+        ],
+        topStrategy: 'Dual-Language-Strategie mit Messe-Kalender — wer DE+EN Content mit saisonaler Messe-Optimierung kombiniert, erreicht beide Zielgruppen.',
+        localAdvantage: 'Frankfurt ist klein genug, dass lokale Vernetzung (IHK, Wirtschaftsförderung) einen echten SEO-Vorteil durch hochwertige lokale Backlinks bringt.'
       }} />
 
       <HelpfulnessWidget articleSlug="local-seo-frankfurt" />

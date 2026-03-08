@@ -5,6 +5,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
 import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
+import CityRankingChallenges from "@/components/blog/CityRankingChallenges";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
@@ -669,6 +670,69 @@ const LocalSeoHamburg = () => {
         ],
         localDirectories: ['hamburg.de', 'meinestadt.de/hamburg', 'abendblatt.de'],
         dialektTip: '"Moin" und plattdeutsche Begriffe haben begrenztes Suchvolumen, aber "Schanze" statt "Sternschanze" und "Kiez" statt "St. Pauli" werden häufig gesucht.',
+      }} />
+
+      <CityRankingChallenges config={{
+        city: 'Hamburg',
+        overallDifficulty: 'Hoch',
+        challenges: [
+          {
+            title: 'Elb-Nord/Süd-Gefälle im Suchverhalten',
+            difficulty: 'Hoch',
+            description: 'Hamburg ist durch die Elbe in zwei komplett unterschiedliche Märkte geteilt. Nördlich der Elbe (Eppendorf, Winterhude) sucht anders als südlich (Harburg, Wilhelmsburg).',
+            impact: 'Keywords die nördlich der Elbe ranken, können südlich komplett irrelevant sein',
+            strategies: [
+              'Getrennte Stadtteil-Strategien für Nord- und Süd-Hamburg',
+              'Lokale Verzeichnisse wie hamburg.de gezielt für beide Hälften nutzen',
+              'Google Business Servicegebiet präzise auf relevante Stadtteile eingrenzen'
+            ],
+            quickWin: 'Separate FAQ-Abschnitte für Nord- und Süd-Hamburg erstellen'
+          },
+          {
+            title: 'Maritime Keywords und Hafenwirtschaft',
+            difficulty: 'Mittel',
+            description: 'Hamburgs Identität als Hafenstadt beeinflusst das Suchverhalten. Maritime Begriffe und Hafen-bezogene Keywords haben überproportionales Volumen.',
+            impact: 'Maritime Keywords haben 20% weniger Wettbewerb bei gleichem Suchvolumen',
+            strategies: [
+              'Maritime Begriffe als Content-Themen nutzen (Speicherstadt, Hafen)',
+              'Tourismus-Keywords rund um Elbphilharmonie und HafenCity abdecken',
+              'Saisonale Maritime Events (Hafengeburtstag) frühzeitig optimieren'
+            ],
+            quickWin: 'Fotos mit Hafen-Bezug auf Google Business hochladen — höhere Klickrate'
+          },
+          {
+            title: 'Schanzenviertel & St. Pauli als Suchvolumen-Magneten',
+            difficulty: 'Sehr hoch',
+            description: 'Die Schanze und St. Pauli ziehen überproportional viel Suchvolumen an. Wer hier ranken will, konkurriert mit hunderten Gastro- und Nightlife-Betrieben.',
+            impact: 'Top-3 in der Schanze = äquivalent zu Top-10 in ganz Hamburg',
+            strategies: [
+              'Nischen-Spezialisierung statt generischer Keywords',
+              'Bewertungs-Strategie mit mindestens 50+ Google Reviews',
+              'Instagram-Integration für Social Signals nutzen'
+            ],
+            quickWin: 'Auf "Schanze" statt "Sternschanze" optimieren — höheres Suchvolumen'
+          },
+          {
+            title: 'Pendler-Suchverhalten aus dem Umland',
+            difficulty: 'Mittel',
+            description: 'Viele Hamburger pendeln aus Norderstedt, Pinneberg oder Ahrensburg. Diese suchen "in der Nähe" mit Hamburg als Bezugspunkt.',
+            impact: 'Umland-Pendler machen bis zu 25% der werktäglichen lokalen Suchanfragen aus',
+            strategies: [
+              'Umland-Gemeinden als sekundäre Keywords abdecken',
+              'Gute HVV-Anbindung in Google Business hervorheben',
+              'Pendler-freundliche Öffnungszeiten prominent kommunizieren'
+            ],
+            quickWin: '"Gut erreichbar mit S-Bahn/U-Bahn" in Google Business Beschreibung aufnehmen'
+          }
+        ],
+        marketInsights: [
+          { label: 'Wettbewerb', value: '8.1/10', trend: 'up' },
+          { label: 'Kaufkraft-Index', value: '113', trend: 'stable' },
+          { label: 'Tourismus-Anteil', value: 'Hoch', trend: 'up' },
+          { label: 'Mobil-Anteil', value: '76%', trend: 'up' }
+        ],
+        topStrategy: 'Stadtteil-Identität als SEO-Hebel nutzen — Hamburger identifizieren sich stark mit ihrem Viertel. Zeige deine lokale Verwurzelung.',
+        localAdvantage: 'Hamburger sind zurückhaltend aber loyal. Einmal gewonnenes Vertrauen führt zu stabilen Rankings durch konsistente Bewertungen.'
       }} />
 
       <HelpfulnessWidget articleSlug="local-seo-hamburg" />

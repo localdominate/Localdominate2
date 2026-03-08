@@ -8,6 +8,7 @@ import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
 import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
+import CityRankingChallenges from "@/components/blog/CityRankingChallenges";
 import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { getArticleBySlug } from "@/data/blogArticles";
 import localSeoWienImg from "@/assets/blog/local-seo-wien.jpg";
@@ -508,6 +509,70 @@ const LocalSeoWien = () => {
         ],
         localDirectories: ['wien.gv.at', 'herold.at', 'wko.at'],
         dialektTip: 'Österreichische Begriffe beachten: "Ordinationsassistentin" statt "Sprechstundenhilfe", "Installateur" statt "Klempner", "Jause" statt "Brotzeit". Google unterscheidet .at-Suchen.',
+      }} />
+
+      <CityRankingChallenges config={{
+        city: 'Wien',
+        overallDifficulty: 'Hoch',
+        challenges: [
+          {
+            title: 'Google.at vs. Google.de Ranking-Unterschiede',
+            difficulty: 'Hoch',
+            description: 'Österreichische Suchergebnisse unterscheiden sich signifikant von deutschen. Was auf google.de rankt, muss auf google.at nicht funktionieren.',
+            impact: '.at-Domain und österreichische Signale können Rankings um 2-3 Positionen verbessern',
+            strategies: [
+              '.at-Domain oder .at-Subdomain verwenden',
+              'Österreichische Backlinks gezielt aufbauen (herold.at, WKO)',
+              'Österreichische Terminologie konsequent verwenden',
+              'Google Search Console auf Österreich als Zielland einstellen'
+            ],
+            quickWin: 'Adresse in Google Business mit korrekter österreichischer PLZ-Formatierung prüfen'
+          },
+          {
+            title: 'Bezirks-System erfordert granulare Strategie',
+            difficulty: 'Hoch',
+            description: 'Wiener suchen nach Bezirksnummern (1010, 1020) und Bezirksnamen (Leopoldstadt, Favoriten). Beide Varianten müssen abgedeckt werden.',
+            impact: 'Bezirksnummern als Keywords haben in Wien 40% mehr Suchvolumen als Bezirksnamen',
+            strategies: [
+              'Sowohl Bezirksnummer als auch -name als Keywords abdecken',
+              'Bezirks-spezifische Landing Pages mit lokalen Referenzen',
+              'Nachbar-Bezirke als sekundäre Keywords einbeziehen'
+            ],
+            quickWin: 'PLZ und Bezirksnummer in Title-Tag und H1 aufnehmen'
+          },
+          {
+            title: 'Österreichisches Deutsch vs. Bundesdeutsches Deutsch',
+            difficulty: 'Mittel',
+            description: '"Ordination" statt "Praxis", "Greißler" statt "Tante-Emma-Laden", "Fleischhauer" statt "Metzger" — Österreichische Begriffe haben eigenes Suchvolumen.',
+            impact: '20-30% zusätzliches Suchvolumen durch konsequente AT-Terminologie',
+            strategies: [
+              'Österreichische Begriffe als Primär-Keywords verwenden',
+              'Deutsche Äquivalente als Sekundär-Keywords für Zugezogene abdecken',
+              'FAQ-Bereich mit beiden Varianten erstellen'
+            ],
+            quickWin: 'Meta-Descriptions mit österreichischen Begriffen umschreiben'
+          },
+          {
+            title: 'Tourismus-Überlagerung verzerrt Suchvolumen',
+            difficulty: 'Mittel',
+            description: 'Millionen Touristen suchen nach Wiener Sehenswürdigkeiten. Das überlagert lokale Suchanfragen, besonders in den Bezirken 1-9.',
+            impact: 'In der Inneren Stadt sind 60% der Suchanfragen touristisch — Lokale müssen sich abheben',
+            strategies: [
+              '"Für Wiener" oder "Stammlokal" als Differenzierung nutzen',
+              'Bewertungen von Einheimischen gezielt fördern',
+              'Content auf Alltagsbedürfnisse statt Tourismus ausrichten'
+            ],
+            quickWin: 'Google Business Attribute "Beliebt bei Einheimischen" aktivieren'
+          }
+        ],
+        marketInsights: [
+          { label: 'Wettbewerb', value: '7.8/10', trend: 'up' },
+          { label: 'Touristen/Jahr', value: '8.5 Mio', trend: 'up' },
+          { label: 'AT-Suchanteil', value: '85%', trend: 'stable' },
+          { label: 'Mobil-Anteil', value: '74%', trend: 'up' }
+        ],
+        topStrategy: 'Austria-first SEO mit Bezirks-Granularität — konsequent österreichische Sprache, .at-Signale und Bezirks-spezifischer Content.',
+        localAdvantage: 'Wien hat eine starke "Grätzel"-Kultur. Wer im Grätzel verwurzelt ist und das zeigt, gewinnt loyale Stammkunden und konsistente Bewertungen.'
       }} />
 
       <HelpfulnessWidget articleSlug="local-seo-wien" />

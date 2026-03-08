@@ -4,6 +4,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import GeoTargetedKeywords from "@/components/blog/GeoTargetedKeywords";
 import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
+import CityRankingChallenges from "@/components/blog/CityRankingChallenges";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SwissCantonSelector from "@/components/blog/SwissCantonSelector";
@@ -570,6 +571,71 @@ const LocalSeoSchweiz = () => {
           localDirectories: ['local.ch', 'search.ch', 'gelbeseiten.ch'],
           dialektTip: 'Schweizerdeutsch-Begriffe beachten: "Coiffeur" statt "Friseur", "Beiz" statt "Kneipe", "Velo" statt "Fahrrad", "Natel" statt "Handy". Google.ch priorisiert .ch-Domains.',
         }} />
+
+        <CityRankingChallenges config={{
+          city: 'Schweiz',
+          overallDifficulty: 'Hoch',
+          challenges: [
+            {
+              title: 'Viersprachigkeit fragmentiert den Markt',
+              difficulty: 'Sehr hoch',
+              description: 'Die Schweiz hat 4 Landessprachen. Google.ch liefert unterschiedliche Ergebnisse je nach Spracheinstellung. Ein Zürcher sieht andere Ergebnisse als ein Genfer.',
+              impact: 'Jede Sprachregion ist ein eigenständiger SEO-Markt mit separater Strategie',
+              strategies: [
+                'Hreflang-Tags für DE-CH, FR-CH, IT-CH implementieren',
+                'Separate Content-Strategien pro Sprachregion',
+                '.ch-Domain als Vertrauenssignal nutzen',
+                'Schweizerdeutsche Begriffe in der Deutschschweiz verwenden'
+              ],
+              quickWin: 'Google Search Console Zielland auf "Schweiz" einstellen und .ch-Domain prüfen'
+            },
+            {
+              title: 'Kantone als SEO-Grenzen',
+              difficulty: 'Hoch',
+              description: 'Schweizer denken in Kantonen, nicht in Regionen. Jeder Kanton hat eigene Verzeichnisse, eigene Medien und eigene Suchpatterns.',
+              impact: 'Kantons-spezifische Keywords haben 30% weniger Wettbewerb als Stadt-Keywords',
+              strategies: [
+                'Kantons-spezifische Landing Pages erstellen',
+                'Kantonale Verzeichnisse und Handelsregister als Backlink-Quellen',
+                'Kantonale Medien für PR-Backlinks nutzen'
+              ],
+              quickWin: 'Kantons-Kürzel (ZH, BE, BS) als Keywords testen'
+            },
+            {
+              title: 'Schweizerdeutsch vs. Hochdeutsch',
+              difficulty: 'Mittel',
+              description: '"Coiffeur" statt "Friseur", "Velo" statt "Fahrrad", "Beiz" statt "Kneipe" — Schweizer Begriffe haben eigenes Suchvolumen, das von deutschen Wettbewerbern ignoriert wird.',
+              impact: '25-40% zusätzliches Suchvolumen durch konsequente CH-Terminologie',
+              strategies: [
+                'Schweizerdeutsche Primär-Keywords mit hochdeutschen Sekundär-Keywords',
+                'FAQ-Bereich mit beiden Sprachvarianten',
+                'Local.ch und Search.ch Einträge optimieren'
+              ],
+              quickWin: 'Alle Meta-Descriptions auf Schweizer Begriffe umstellen'
+            },
+            {
+              title: 'Hohe Qualitätserwartung & Vertrauenssignale',
+              difficulty: 'Hoch',
+              description: 'Schweizer Konsumenten haben extrem hohe Qualitätsansprüche. Bewertungen unter 4.5 Sternen werden kritisch betrachtet, Vertrauenssignale sind entscheidend.',
+              impact: 'Google Business Profile mit <4.5 Sternen verlieren bis zu 50% der Klicks',
+              strategies: [
+                'Aktive Bewertungs-Strategie mit Ziel 4.7+ Sterne',
+                'Zertifizierungen und Gütesiegel prominent anzeigen',
+                'Qualitäts-Signale (ISO, SwissMade) in Structured Data aufnehmen'
+              ],
+              quickWin: 'Bestehende Zertifizierungen als Google Business Attribute hinzufügen'
+            }
+          ],
+          marketInsights: [
+            { label: 'Wettbewerb', value: '7.5/10', trend: 'up' },
+            { label: 'Sprachregionen', value: '4', trend: 'stable' },
+            { label: 'Qualitäts-Erw.', value: 'Sehr hoch', trend: 'stable' },
+            { label: 'Mobil-Anteil', value: '73%', trend: 'up' }
+          ],
+          topStrategy: 'Swiss-first mit Kantons-Granularität — .ch-Domain, Schweizer Begriffe, kantonale Backlinks und höchste Qualitätsstandards.',
+          localAdvantage: 'Die Schweiz ist klein genug, dass persönliche Netzwerke und Empfehlungen einen enormen SEO-Effekt durch natürliche Backlinks haben.'
+        }} />
+
         <HelpfulnessWidget articleSlug="local-seo-schweiz" />
         <BlogCTAABTest articleSlug="local-seo-schweiz" position="end" />
       </div>
