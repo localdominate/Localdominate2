@@ -116,7 +116,7 @@ const GoogleBewertungen = () => {
         text2: "More reviews mean more visibility, more trust, and ultimately more revenue."
       },
       section2: {
-        title: "7 Ethical Strategies for More Reviews",
+        title: "How Do You Get More Google Reviews?",
         strategies: [
           { title: "1. Ask Right After Purchase", desc: "The best time is right after a positive experience. Simply say: \"I'm glad you're satisfied. Would you support us with a Google review?\"" },
           { title: "2. QR Code on Invoices", desc: "Place a QR code on your invoice that leads directly to the review page. This reduces the barrier to a minimum." },
