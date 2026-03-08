@@ -2664,24 +2664,24 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-mehrstufig-unternehmen",
     de: {
-      title: "Local SEO für Franchise & Filialunternehmen: Multi-Location Guide",
-      metaTitle: "Local SEO Multi-Location | Franchise & Filialen 2026",
-      metaDescription: "Wie Franchise-Unternehmen und Filialisten Local SEO skalieren. Multi-Location-Strategie, Konsistenz und zentrale Steuerung.",
-      excerpt: "Der Guide für Unternehmen mit mehreren Standorten zur lokalen Suchmaschinenoptimierung.",
+      title: "Franchise-SEO Strategie: GBP-Management & Markenkonsistenz bei mehreren Standorten",
+      metaTitle: "Franchise SEO | GBP-Management & Markenkonsistenz 2026",
+      metaDescription: "Wie Franchise-Unternehmen GBP-Profile zentral steuern, Markenkonsistenz sichern und lokale Autonomie ermöglichen. Strategie-Guide.",
+      excerpt: "Der Strategie-Guide für Franchise und Filialketten: Zentrale GBP-Steuerung, NAP-Konsistenz und lokale Anpassung.",
       category: "Strategie"
     },
     en: {
-      title: "Local SEO for Franchise & Multi-Location Businesses: Complete Guide",
-      metaTitle: "Local SEO Multi-Location | Franchise Guide 2026",
-      metaDescription: "How franchise and multi-location businesses scale Local SEO. Multi-location strategy, consistency and central management.",
-      excerpt: "The guide for multi-location businesses on local search engine optimization.",
+      title: "Franchise SEO Strategy: GBP Management & Brand Consistency Across Locations",
+      metaTitle: "Franchise SEO | GBP Management & Brand Consistency 2026",
+      metaDescription: "How franchise businesses centrally manage GBP profiles, ensure brand consistency and enable local autonomy. Strategy guide.",
+      excerpt: "The strategy guide for franchise and chain businesses: Central GBP management, NAP consistency and local adaptation.",
       category: "Strategy"
     },
     readingTime: 16,
     publishedAt: "2026-01-14",
     updatedAt: "2026-01-14",
     icon: "🏢",
-    keywords: ["franchise seo", "multi location seo", "filialunternehmen", "mehrere standorte", "skalierung local seo"],
+    keywords: ["franchise seo strategie", "gbp management filialen", "markenkonsistenz multi location", "franchise google business"],
     featured: false
   },
   {
