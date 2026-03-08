@@ -284,7 +284,7 @@ const RankingPloetzlichVerschwunden: React.FC = () => {
               <p className="text-gray-600">Technische Fehler beheben, GBP aktualisieren, kritische Probleme lösen</p>
             </div>
             <div className="bg-white rounded-lg p-4">
-              <h5 className="font-bold">Woche 3-4: Content-Optimierung</h5>
+              <h4 className="font-bold">Woche 3-4: SEO Content-Optimierung</h4>
               <p className="text-gray-600">Betroffene Seiten verbessern, neue Inhalte erstellen, interne Verlinkung stärken</p>
             </div>
             <div className="bg-white rounded-lg p-4">
