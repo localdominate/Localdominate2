@@ -3262,7 +3262,7 @@ export const blogArticles: BlogArticle[] = [
     },
     en: {
       title: "Using Google Business Attributes Correctly – All Options Explained (2026)",
-      metaTitle: "Using GBP Attributes Correctly | All Options Explained 2026",
+      metaTitle: "GBP Attributes Guide | All Options Explained 2026",
       metaDescription: "From LGBTQ+-friendly to wheelchair access: What Google Business attributes exist and how to use them for more visibility.",
       excerpt: "The complete overview of all Google Business attributes and how they improve your ranking and customer appeal.",
       category: "Google Business"
