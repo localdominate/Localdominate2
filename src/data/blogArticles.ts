@@ -1515,8 +1515,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "technisches-local-seo-guide",
     de: {
       title: "Technisches Local SEO: Der komplette Guide für lokale Unternehmen 2026",
-      metaTitle: "Technisches Local SEO Guide | Schema, Speed, Mobile & Indexierung 2026",
-      metaDescription: "Der umfassendste Technical-Local-SEO-Guide: LocalBusiness Schema, Geo-Markup, Core Web Vitals, Mobile-First, interne Verlinkung & Indexierung. Mit 40-Punkte-Checkliste & Code-Beispielen.",
+      metaTitle: "Technisches Local SEO | Komplett-Guide 2026",
+      metaDescription: "Technical Local SEO Guide: LocalBusiness Schema, Core Web Vitals, Mobile-First, interne Verlinkung & Indexierung. Mit 40-Punkte-Checkliste.",
       excerpt: "Alles über technisches Local SEO: Von LocalBusiness Schema und Geo-Markup über Core Web Vitals und Mobile-Optimierung bis zu interner Verlinkung und Indexierungsstrategien — mit 40-Punkte-Checkliste.",
       category: "Technik"
     },
