@@ -799,6 +799,7 @@ Herzliche Grüße,
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.immobilienmakler} />
       <HelpfulnessWidget articleSlug="local-seo-immobilienmakler" />
 
       <ArticleCTA />

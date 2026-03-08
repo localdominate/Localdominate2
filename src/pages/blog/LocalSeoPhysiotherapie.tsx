@@ -252,6 +252,7 @@ const LocalSeoPhysiotherapie = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.physiotherapie} />
       <HelpfulnessWidget articleSlug="local-seo-physiotherapie" />
 
       <SourcesSection sources={[

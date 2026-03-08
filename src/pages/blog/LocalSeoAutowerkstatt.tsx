@@ -522,6 +522,7 @@ const LocalSeoAutowerkstatt = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.autowerkstatt} />
       <HelpfulnessWidget articleSlug="local-seo-autowerkstatt" />
 
       <BlogCTAABTest position="end" articleSlug="local-seo-autowerkstatt" />

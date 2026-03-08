@@ -300,6 +300,7 @@ const LocalSeoZahnarzt = () => {
         description="Datenschutzkonforme SMS-Templates fuer Zahnarztpraxen mit Zeichenzaehler."
       />
 
+      <IndustryRankingChallenges config={industryRankingConfigs.zahnarzt} />
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />
 
       <SourcesSection sources={[

@@ -340,6 +340,7 @@ const LocalSeoSanitaerHeizung = () => {
         </Accordion>
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.sanitaer} />
       <HelpfulnessWidget articleSlug="local-seo-sanitaer-heizung" />
 
       <SourcesSection sources={[

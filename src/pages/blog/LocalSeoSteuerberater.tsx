@@ -811,6 +811,7 @@ Herzliche Grüße,
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.steuerberater} />
       <HelpfulnessWidget articleSlug="local-seo-steuerberater" />
 
       <ArticleCTA />

@@ -284,6 +284,7 @@ const LocalSeoElektrotechnik = () => {
         ))}
       </section>
 
+      <IndustryRankingChallenges config={industryRankingConfigs.elektrotechnik} />
       <HelpfulnessWidget articleSlug="local-seo-elektrotechnik" />
 
       <SourcesSection sources={[
