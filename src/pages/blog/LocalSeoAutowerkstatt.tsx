@@ -531,6 +531,7 @@ const LocalSeoAutowerkstatt = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.autowerkstatt} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.autowerkstatt} />
       <IndustryRankingChallenges config={industryRankingConfigs.autowerkstatt} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.autowerkstatt} />
       <HelpfulnessWidget articleSlug="local-seo-autowerkstatt" />
 
       <BlogCTAABTest position="end" articleSlug="local-seo-autowerkstatt" />

@@ -309,6 +309,7 @@ const LocalSeoZahnarzt = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.zahnarzt} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.zahnarzt} />
       <IndustryRankingChallenges config={industryRankingConfigs.zahnarzt} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.zahnarzt} />
       <HelpfulnessWidget articleSlug="local-seo-zahnarzt" />
 
       <SourcesSection sources={[

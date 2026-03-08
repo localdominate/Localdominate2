@@ -972,6 +972,7 @@ const LocalSeoHotels = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.hotels} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.hotels} />
       <IndustryRankingChallenges config={industryRankingConfigs.hotels} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.hotels} />
       <HelpfulnessWidget articleSlug="local-seo-hotels" />
     </ArticleLayout>
   );

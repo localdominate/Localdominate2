@@ -656,6 +656,7 @@ const LocalSeoHandwerker = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.handwerker} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.handwerker} />
       <IndustryRankingChallenges config={industryRankingConfigs.handwerker} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.handwerker} />
       <HelpfulnessWidget articleSlug="local-seo-handwerker" />
 
       <RelatedIndustryGuides currentSlug="local-seo-handwerker" />

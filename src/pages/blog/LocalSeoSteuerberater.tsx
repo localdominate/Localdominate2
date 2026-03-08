@@ -820,6 +820,7 @@ Herzliche Grüße,
       <SearchIntentAnalysis config={searchIntentConfigs.steuerberater} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.steuerberater} />
       <IndustryRankingChallenges config={industryRankingConfigs.steuerberater} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.steuerberater} />
       <HelpfulnessWidget articleSlug="local-seo-steuerberater" />
 
       <ArticleCTA />

@@ -219,6 +219,7 @@ const LocalSeoYoga = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.yoga} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.yoga} />
       <IndustryRankingChallenges config={industryRankingConfigs.yoga} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.yoga} />
       <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
       <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />
       <SourcesSection sources={sources} />

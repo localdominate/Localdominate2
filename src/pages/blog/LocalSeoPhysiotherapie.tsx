@@ -261,6 +261,7 @@ const LocalSeoPhysiotherapie = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.physiotherapie} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.physiotherapie} />
       <IndustryRankingChallenges config={industryRankingConfigs.physiotherapie} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.physiotherapie} />
       <HelpfulnessWidget articleSlug="local-seo-physiotherapie" />
 
       <SourcesSection sources={[

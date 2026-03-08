@@ -218,6 +218,7 @@ const LocalSeoTattoo = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.tattoo} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.tattoo} />
       <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.tattoo} />
       <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
       <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />

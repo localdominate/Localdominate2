@@ -880,6 +880,7 @@ const LocalSeoFitness = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.fitness} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.fitness} />
       <IndustryRankingChallenges config={industryRankingConfigs.fitness} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.fitness} />
       <HelpfulnessWidget articleSlug="local-seo-fitnessstudio-gym" />
     </ArticleLayout>
   );

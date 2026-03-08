@@ -808,6 +808,7 @@ Herzliche Grüße,
       <SearchIntentAnalysis config={searchIntentConfigs.immobilienmakler} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.immobilienmakler} />
       <IndustryRankingChallenges config={industryRankingConfigs.immobilienmakler} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.immobilienmakler} />
       <HelpfulnessWidget articleSlug="local-seo-immobilienmakler" />
 
       <ArticleCTA />

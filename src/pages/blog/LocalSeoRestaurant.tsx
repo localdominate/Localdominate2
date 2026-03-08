@@ -344,6 +344,7 @@ const LocalSeoRestaurant = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.restaurant} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.restaurant} />
       <IndustryRankingChallenges config={industryRankingConfigs.restaurant} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.restaurant} />
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />
 
       <BlogCTAABTest articleSlug="local-seo-fuer-restaurants" position="end" />

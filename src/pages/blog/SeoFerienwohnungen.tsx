@@ -327,6 +327,7 @@ const SeoFerienwohnungen = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.ferienwohnungen} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.ferienwohnungen} />
       <IndustryRankingChallenges config={industryRankingConfigs.ferienwohnungen} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.ferienwohnungen} />
       <HelpfulnessWidget articleSlug="seo-ferienwohnungen" />
     </ArticleLayout>
   );

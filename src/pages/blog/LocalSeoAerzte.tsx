@@ -935,6 +935,7 @@ const LocalSeoAerzte = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.aerzte} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.aerzte} />
       <IndustryRankingChallenges config={industryRankingConfigs.aerzte} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.aerzte} />
       <HelpfulnessWidget articleSlug="local-seo-aerzte-praxen" />
     </ArticleLayout>
   );

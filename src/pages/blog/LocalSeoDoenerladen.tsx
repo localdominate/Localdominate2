@@ -1151,6 +1151,7 @@ const LocalSeoDoenerladen = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.doener} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.doener} />
       <IndustryRankingChallenges config={industryRankingConfigs.doener} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.doenerladen} />
       <HelpfulnessWidget articleSlug="local-seo-doener-kebab-imbiss" />
     </ArticleLayout>
   );

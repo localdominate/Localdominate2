@@ -349,6 +349,7 @@ const LocalSeoSanitaerHeizung = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.sanitaer} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.sanitaer} />
       <IndustryRankingChallenges config={industryRankingConfigs.sanitaer} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.sanitaer} />
       <HelpfulnessWidget articleSlug="local-seo-sanitaer-heizung" />
 
       <SourcesSection sources={[

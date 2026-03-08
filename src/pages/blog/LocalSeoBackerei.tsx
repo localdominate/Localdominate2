@@ -325,6 +325,7 @@ const LocalSeoBackerei = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.baeckerei} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.baeckerei} />
       <IndustryRankingChallenges config={industryRankingConfigs.baeckerei} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.baeckerei} />
       <HelpfulnessWidget articleSlug="local-seo-baeckerei" />
     </ArticleLayout>
   );

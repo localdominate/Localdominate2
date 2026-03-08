@@ -1233,6 +1233,7 @@ const LocalSeoFriseur: React.FC = () => {
       <SearchIntentAnalysis config={searchIntentConfigs.friseur} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.friseur} />
       <IndustryRankingChallenges config={industryRankingConfigs.friseur} />
+      <ContentUpgradeSection config={contentUpgradeConfigs.friseur} />
       <HelpfulnessWidget articleSlug="local-seo-friseur" />
     </ArticleLayout>
   );
