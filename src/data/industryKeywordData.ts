@@ -378,7 +378,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   apotheke: {
     industry: "Apotheken",
-    quickWin: "„Apotheke Notdienst [Stadt]" und „Apotheke Sonntagsdienst [Stadt]" bringen regelmäßig Neukunden.",
+    quickWin: "'Apotheke Notdienst [Stadt]' und 'Apotheke Sonntagsdienst [Stadt]' bringen regelmässig Neukunden.",
     clusters: [
       {
         name: "Apotheke + Standort",
