@@ -1,4 +1,4 @@
-import TopicHubLayout, { HubArticleGroup } from "@/components/blog/TopicHubLayout";
+import TopicHubLayout, { HubArticleGroup, HubSummary, HubComparisonTable, HubResource } from "@/components/blog/TopicHubLayout";
 import { Settings } from "lucide-react";
 
 const groups: HubArticleGroup[] = [
@@ -6,42 +6,62 @@ const groups: HubArticleGroup[] = [
     title: "Schema Markup & Strukturierte Daten",
     description: "JSON-LD, LocalBusiness Schema und Rich Snippets für lokale Unternehmen",
     icon: "🏷️",
-    slugs: [
-      "schema-markup-local-seo",
-      "localbusiness-schema-implementierung",
-      "review-schema-implementierung",
-    ],
+    slugs: ["schema-markup-local-seo", "localbusiness-schema-implementierung", "review-schema-implementierung"],
   },
   {
     title: "Core Web Vitals & Performance",
     description: "Ladegeschwindigkeit, mobile Optimierung und technische SEO-Grundlagen",
     icon: "⚡",
-    slugs: [
-      "core-web-vitals-local-seo",
-      "mobile-local-seo",
-    ],
+    slugs: ["core-web-vitals-local-seo", "mobile-local-seo"],
   },
   {
     title: "Lokale Ranking-Faktoren",
     description: "NAP-Konsistenz, Citations und Maps-Optimierung",
     icon: "📍",
-    slugs: [
-      "nap-konsistenz-local-seo",
-      "local-citations-2025",
-      "local-seo-vs-maps-seo",
-      "google-maps-seo-ranking-faktoren",
-    ],
+    slugs: ["nap-konsistenz-local-seo", "local-citations-2025", "local-seo-vs-maps-seo", "google-maps-seo-ranking-faktoren"],
   },
   {
     title: "Analyse & Reporting",
     description: "Audits, Reports und Keyword-Recherche",
     icon: "📊",
-    slugs: [
-      "local-seo-audit-checkliste",
-      "local-seo-reporting-template",
-      "local-seo-keywords-finden",
-    ],
+    slugs: ["local-seo-audit-checkliste", "local-seo-reporting-template", "local-seo-keywords-finden"],
   },
+];
+
+const summary: HubSummary = {
+  text: "Technisches SEO bildet das Fundament deiner lokalen Sichtbarkeit. Seiten mit strukturierten Daten werden 40 % häufiger in Rich Results angezeigt, gute Core Web Vitals senken die Absprungrate um 24 %, und korrekte NAP-Konsistenz ist Voraussetzung für Google-Vertrauen. Dieser Hub umfasst alle technischen Aspekte von Schema Markup bis Performance-Optimierung.",
+  stats: [
+    { label: "Schema-Guides", value: "3" },
+    { label: "Performance-Guides", value: "2" },
+    { label: "Ranking-Faktor-Artikel", value: "4" },
+    { label: "Audit & Report Tools", value: "3" },
+  ],
+};
+
+const comparisonTable: HubComparisonTable = {
+  title: "Technische SEO-Maßnahmen: Impact vs. Aufwand",
+  headers: ["Maßnahme", "Ranking-Impact", "Umsetzung", "Zeitbedarf", "Priorität"],
+  rows: [
+    { label: "LocalBusiness Schema", cells: ["Hoch", "Einfach (JSON-LD)", "30–60 Min.", "🔴 Kritisch"] },
+    { label: "NAP-Konsistenz prüfen", cells: ["Sehr hoch", "Manuell/Tool", "2–4 Stunden", "🔴 Kritisch"] },
+    { label: "Core Web Vitals (LCP)", cells: ["Mittel-hoch", "Technisch", "2–8 Stunden", "🟡 Hoch"] },
+    { label: "Mobile Responsive", cells: ["Sehr hoch", "Technisch", "Variabel", "🔴 Kritisch"] },
+    { label: "HTTPS/SSL einrichten", cells: ["Mittel", "Einfach", "30 Min.", "🔴 Kritisch"] },
+    { label: "FAQ Schema (FAQPage)", cells: ["Mittel", "Einfach", "15–30 Min.", "🟡 Hoch"] },
+    { label: "Review Schema", cells: ["Mittel", "Einfach", "30 Min.", "🟡 Hoch"] },
+    { label: "XML-Sitemap + robots.txt", cells: ["Gering-mittel", "Einfach", "15 Min.", "🟢 Empfohlen"] },
+    { label: "Interne Verlinkung", cells: ["Mittel-hoch", "Strategie", "Laufend", "🟡 Hoch"] },
+  ],
+  footnote: "Impact-Bewertung basiert auf Whitespark Local Search Ranking Factors 2024.",
+};
+
+const resources: HubResource[] = [
+  { label: "Technisches Local SEO: Kompletter Guide", href: "/blog/technisches-local-seo-guide", type: "pillar" },
+  { label: "Local SEO Ranking-Faktoren erklärt", href: "/blog/local-seo-ranking-faktoren-erklaert", type: "pillar" },
+  { label: "Schema-Strategie-Dokument", href: "/blog/schema-strategie-dokument", type: "guide" },
+  { label: "Google Maps Audit Template", href: "/blog/google-maps-audit-template", type: "tool" },
+  { label: "Local SEO Checkliste (80+ Punkte)", href: "/blog/local-seo-checkliste-komplett", type: "checklist" },
+  { label: "Local SEO Audit Checkliste", href: "/blog/local-seo-audit-checkliste", type: "checklist" },
 ];
 
 const HubTechnischesSeo = () => {
@@ -65,6 +85,9 @@ const HubTechnischesSeo = () => {
       heroDescription="Die technische Grundlage deiner lokalen Sichtbarkeit. Von strukturierten Daten über Ladezeiten bis hin zu NAP-Konsistenz – hier findest du alle technischen Guides."
       heroIcon={<Settings className="w-7 h-7 text-primary" />}
       groups={groups}
+      summary={summary}
+      comparisonTable={comparisonTable}
+      resources={resources}
       pillarLink={{ label: "Technisches Local SEO Guide", href: "/blog/technisches-local-seo-guide" }}
       relatedHubs={[
         { label: "🏢 Google Business Profil", href: "/blog/google-business-profil-hub" },
