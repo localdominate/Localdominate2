@@ -103,6 +103,9 @@ const GoogleBusinessProdukteServices = lazy(() => import("./pages/blog/GoogleBus
 const LocalSeoOptiker = lazy(() => import("./pages/blog/LocalSeoOptiker"));
 const BewertungsAntwortenVorlagen = lazy(() => import("./pages/blog/BewertungsAntwortenVorlagen"));
 const LocalSeoElektrotechnik = lazy(() => import("./pages/blog/LocalSeoElektrotechnik"));
+const LocalSeoTrendsSchweiz = lazy(() => import("./pages/blog/LocalSeoTrendsSchweiz"));
+const LocalSeoTrendsDeutschland = lazy(() => import("./pages/blog/LocalSeoTrendsDeutschland"));
+const LocalSeoTrendsOesterreich = lazy(() => import("./pages/blog/LocalSeoTrendsOesterreich"));
 const GoogleBusinessInsightsVerstehen = lazy(() => import("./pages/blog/GoogleBusinessInsightsVerstehen"));
 const LocalSeoFotograf = lazy(() => import("./pages/blog/LocalSeoFotograf"));
 const LocalSeoVoiceSearch = lazy(() => import("./pages/blog/LocalSeoVoiceSearch"));
