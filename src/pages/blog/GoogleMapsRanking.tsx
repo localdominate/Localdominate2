@@ -30,7 +30,7 @@ const GoogleMapsRanking = () => {
         text: "haben eine lokale Absicht. Wenn dein Unternehmen nicht in den Top 3 der Google Maps Ergebnisse erscheint, verlierst du täglich potenzielle Kunden an deine Konkurrenz. In diesem Guide zeige ich dir, wie du dein Google Maps Ranking nachhaltig verbesserst."
       },
       section1: {
-        title: "Warum Google Maps wichtiger ist als deine Website",
+        title: "Warum ist Google Maps wichtiger als deine Website?",
         p1: "Die meisten Kunden entscheiden sich für ein lokales Unternehmen, bevor sie jemals dessen Website besuchen. Der Google Maps Eintrag ist oft der erste und einzige Kontaktpunkt.",
         tip: "Wusstest du?",
         tipText: "76% der Nutzer, die nach einem lokalen Unternehmen suchen, besuchen innerhalb von 24 Stunden ein Geschäft.",
