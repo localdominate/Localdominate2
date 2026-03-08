@@ -580,7 +580,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   elektrotechnik: {
     industry: "Elektrotechnik",
-    quickWin: "E-Mobilität Keywords wie „Wallbox Installation [Stadt]" sind ein schnell wachsendes Segment mit wenig Wettbewerb.",
+    quickWin: "E-Mobilität Keywords wie 'Wallbox Installation [Stadt]' sind ein schnell wachsendes Segment mit wenig Wettbewerb.",
     clusters: [
       {
         name: "Elektriker + Standort",
