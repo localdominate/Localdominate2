@@ -6,6 +6,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
+import NinetyDayImplementationPlan from "@/components/blog/NinetyDayImplementationPlan";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { 
   Rocket, 
@@ -254,26 +255,7 @@ const LocalSeoNeugruender = () => {
           90-Tage-Zeitplan
         </h2>
 
-        <div className="space-y-4 mb-6">
-          {zeitplan.map((phase, index) => (
-            <div key={index} className="bg-card border border-border rounded-lg p-4">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                  {phase.phase}
-                </span>
-                <span className="font-semibold text-foreground">{phase.titel}</span>
-              </div>
-              <ul className="space-y-1">
-                {phase.aufgaben.map((aufgabe, i) => (
-                  <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500" />
-                    {aufgabe}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <NinetyDayImplementationPlan compact />
       </section>
 
       {/* FAQ */}

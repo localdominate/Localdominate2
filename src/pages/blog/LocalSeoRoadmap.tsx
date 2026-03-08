@@ -1,3 +1,4 @@
+import NinetyDayImplementationPlan from "@/components/blog/NinetyDayImplementationPlan";
 import CompetitiveAnalysisFramework from "@/components/blog/CompetitiveAnalysisFramework";
 import { getArticleBySlug } from "@/data/blogArticles";
 import ArticleLayout from "@/components/blog/ArticleLayout";
@@ -430,6 +431,9 @@ const LocalSeoRoadmap = () => {
           })}
         </div>
       </section>
+
+      {/* Interactive Implementation Plan */}
+      <NinetyDayImplementationPlan />
 
       {/* Copy Template */}
       <section id="template" className="mb-10">

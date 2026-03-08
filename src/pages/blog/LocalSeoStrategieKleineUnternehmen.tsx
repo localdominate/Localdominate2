@@ -13,6 +13,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import LocalPartnershipOutreachTemplates from "@/components/blog/LocalPartnershipOutreachTemplates";
 import LocalCitationWorkflows from "@/components/blog/LocalCitationWorkflows";
 import LocalSEOOnboardingGuide from "@/components/blog/LocalSEOOnboardingGuide";
+import NinetyDayImplementationPlan from "@/components/blog/NinetyDayImplementationPlan";
 import { CheckCircle, AlertTriangle, Target, Wrench } from "lucide-react";
 import {
   Table,
@@ -629,38 +630,7 @@ const LocalSeoStrategieKleineUnternehmen = () => {
           Dieser Plan ist für kleine Unternehmen konzipiert, die Local SEO <strong>ohne Agentur</strong> umsetzen möchten. Investiere 2–3 Stunden pro Woche:
         </p>
 
-        <h3>Woche 1–2: Fundament legen</h3>
-        <ul className="list-disc pl-6 space-y-2 my-4">
-          <li>Google Business Profil erstellen, verifizieren, vollständig ausfüllen</li>
-          <li>NAP-Daten standardisieren (ein Format für überall)</li>
-          <li>Website-Title und Meta Descriptions mit lokalen Keywords optimieren</li>
-          <li>LocalBusiness Schema Markup implementieren</li>
-          <li>Google Search Console einrichten</li>
-        </ul>
-
-        <h3>Woche 3–4: Citations & Bewertungen</h3>
-        <ul className="list-disc pl-6 space-y-2 my-4">
-          <li>In die 10 wichtigsten DACH-Verzeichnisse eintragen</li>
-          <li>Erste 10 Kunden aktiv um Google-Bewertung bitten</li>
-          <li>Auf alle bestehenden Bewertungen antworten</li>
-          <li>Bewertungs-Link erstellen und in E-Mail-Signatur integrieren</li>
-        </ul>
-
-        <h3>Woche 5–8: Content & Optimierung</h3>
-        <ul className="list-disc pl-6 space-y-2 my-4">
-          <li>2–3 lokale Service-Seiten erstellen (Service + Stadt/Stadtteil)</li>
-          <li>1 lokalen Blog-Artikel pro Woche veröffentlichen</li>
-          <li>Wöchentlich Google Posts erstellen</li>
-          <li>Fotos im GBP aktualisieren (min. 2 neue pro Woche)</li>
-        </ul>
-
-        <h3>Woche 9–12: Skalieren & Messen</h3>
-        <ul className="list-disc pl-6 space-y-2 my-4">
-          <li>Lokale Backlinks aufbauen (IHK, Presse, Kooperationen)</li>
-          <li>GBP Insights analysieren und Strategie anpassen</li>
-          <li>Ranking-Monitoring für 10 Kern-Keywords einrichten</li>
-          <li>Conversion-Tracking (Anrufe, Routenanfragen) auswerten</li>
-        </ul>
+        <NinetyDayImplementationPlan compact />
 
         <p>
           Für die Erfolgsmessung nutze unser <Link to="/blog/local-seo-reporting-template" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Reporting Template</Link> und den <Link to="/blog/google-business-insights-verstehen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Google Business Insights Guide</Link>.
