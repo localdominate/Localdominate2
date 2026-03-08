@@ -7,6 +7,7 @@ import BlogImage from "@/components/blog/BlogImage";
 import LexikonLink from "@/components/blog/LexikonLink";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
+import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
@@ -319,6 +320,12 @@ const LocalSeoRestaurant = () => {
         industries={["restaurant"]}
         title="Bewertungs-Scripts fuer Restaurants"
         description="Kopierfertige Texte fuer die Gastronomie: Vor Ort, per E-Mail und SMS."
+      />
+
+      <ReviewEmailTemplates
+        industries={["restaurant"]}
+        title="E-Mail-Vorlagen fuer Restaurant-Bewertungen"
+        description="Professionelle E-Mail-Templates speziell fuer die Gastronomie – nach dem Besuch oder als Follow-up."
       />
 
       <HelpfulnessWidget articleSlug="local-seo-fuer-restaurants" />

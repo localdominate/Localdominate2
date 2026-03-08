@@ -16,6 +16,7 @@ import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
+import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 
 const GoogleBewertungen = () => {
   const { language } = useLanguage();
@@ -404,6 +405,11 @@ const GoogleBewertungen = () => {
       <ReviewAcquisitionScripts
         title="Bewertungs-Scripts: Alle Branchen & Kanaele"
         description="Kopierfertige Texte fuer E-Mail, SMS, WhatsApp, Vor-Ort-Gespraeche und mehr. Waehle deine Branche und deinen Kanal."
+      />
+
+      <ReviewEmailTemplates
+        title="E-Mail-Vorlagen: Bewertungen professionell anfragen"
+        description="Kopierfertige E-Mail-Templates mit Betreffzeile und Textkoerper. Waehle Branche und Zeitpunkt – anpassen und versenden."
       />
 
       <HelpfulnessWidget articleSlug="google-bewertungen-bekommen" />
