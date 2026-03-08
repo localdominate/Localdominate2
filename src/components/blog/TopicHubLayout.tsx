@@ -110,14 +110,13 @@ const TopicHubLayout = ({
         {/* Hero */}
         <section className="relative bg-gradient-to-br from-primary/5 via-background to-primary/10 py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-5xl">
-            {pillarLink && (
-              <Link
-                to={pillarLink.href}
-                className="inline-flex items-center gap-1 text-sm text-primary hover:underline mb-4"
-              >
-                ← {pillarLink.label}
-              </Link>
-            )}
+            <SiteBreadcrumbs
+              items={[
+                { label: "Blog", href: "/blog" },
+                { label: title },
+              ]}
+              includeSchema
+            />
             <div className="flex items-start gap-4 mb-6">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 {heroIcon}
