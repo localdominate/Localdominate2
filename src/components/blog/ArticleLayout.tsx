@@ -536,6 +536,7 @@ const ArticleLayout = ({
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
           </div>
+          <ArticleConclusion slug={article.slug} />
         </article>
 
         {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
