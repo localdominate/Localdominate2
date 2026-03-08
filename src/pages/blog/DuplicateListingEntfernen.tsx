@@ -8,6 +8,7 @@ import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import DuplicateFinderCheckliste from '@/components/blog/DuplicateFinderCheckliste';
 import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
 import { Copy, Search, Trash2, GitMerge, AlertTriangle, CheckCircle, Clock, ArrowRight, MapPin, Building, Star, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -148,6 +149,19 @@ const DuplicateListingEntfernen: React.FC = () => {
         </p>
 
         <KeyTakeawaysBox items={keyTakeaways} />
+
+        <SeoFlowDiagram
+          title="Duplicate Listing: Bereinungs-Workflow"
+          steps={[
+            { label: "Maps durchsuchen", icon: "🔍", description: "Firmenname + Adresse prüfen" },
+            { label: "Duplicates identifizieren", icon: "📋", description: "Typ bestimmen (exakt, Variante)" },
+            { label: "Eigentümerschaft klären", icon: "🏢", description: "Welcher Eintrag gehört dir?" },
+            { label: "Merge oder Löschen", icon: "⚖️", description: "Bewertungen berücksichtigen", highlight: true },
+            { label: "Bei Google melden", icon: "📨", description: "Änderung vorschlagen" },
+            { label: "Quartals-Audit", icon: "🔄", description: "Alle 3 Monate wiederholen" },
+          ]}
+          caption="Systematischer Ablauf zur Bereinigung doppelter Google Business Einträge"
+        />
 
         {/* Section 1 */}
         <section id="was-sind-duplicates" className="scroll-mt-20 mt-12">

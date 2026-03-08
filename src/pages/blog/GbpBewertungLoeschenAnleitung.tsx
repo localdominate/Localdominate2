@@ -1,4 +1,5 @@
 import React from 'react';
+import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
 import ArticleLayout from '../../components/blog/ArticleLayout';
 import TableOfContents from '../../components/blog/TableOfContents';
 import KeyTakeawaysBox from '../../components/blog/KeyTakeawaysBox';
@@ -114,6 +115,19 @@ const GbpBewertungLoeschenAnleitung: React.FC = () => {
 
         <h2 id="key-takeaways" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Die wichtigsten Erkenntnisse</h2>
         <KeyTakeawaysBox items={keyTakeaways} />
+
+        <SeoFlowDiagram
+          title="Google Bewertung löschen: Eskalations-Workflow"
+          steps={[
+            { label: "Verstoß prüfen", icon: "🔍", description: "Gegen Richtlinien?" },
+            { label: "Bei Google melden", icon: "🚩", description: "Passenden Grund wählen" },
+            { label: "Beweise sammeln", icon: "📸", description: "Screenshots & Nachweise" },
+            { label: "5–20 Tage warten", icon: "⏳", description: "Google prüft die Meldung" },
+            { label: "Eskalieren", icon: "📢", description: "Twitter / Support-Formular", highlight: true },
+            { label: "Rechtlich vorgehen", icon: "⚖️", description: "Anwalt bei Verleumdung" },
+          ]}
+          caption="Eskalationspfad: Jede Stufe nur nutzen, wenn die vorherige erfolglos war"
+        />
 
         <h2 id="einfuehrung" className="text-3xl font-bold mt-10 mb-6 text-gray-800">Wann kann eine Bewertung gelöscht werden?</h2>
         <p className="text-lg mb-6">

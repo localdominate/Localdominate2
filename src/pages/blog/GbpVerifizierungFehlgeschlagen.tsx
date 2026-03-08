@@ -8,6 +8,7 @@ import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import VerifizierungsProblemWizard from '@/components/blog/VerifizierungsProblemWizard';
 import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
 import { Mail, Phone, Video, MapPin, CheckCircle, Clock, AlertCircle, ArrowRight, FileText, Camera, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -165,6 +166,19 @@ const GbpVerifizierungFehlgeschlagen: React.FC = () => {
         </p>
 
         <KeyTakeawaysBox items={keyTakeaways} />
+
+        <SeoFlowDiagram
+          title="GBP-Verifizierung: Entscheidungs-Workflow"
+          steps={[
+            { label: "Profil erstellt", icon: "📝", description: "Daten vollständig eingeben" },
+            { label: "Methode wählen", icon: "🔀", description: "Postkarte, Telefon, Video, E-Mail", highlight: true },
+            { label: "Code anfordern", icon: "📬", description: "Daten nicht mehr ändern!" },
+            { label: "Code eingeben", icon: "🔑", description: "Innerhalb von 30 Tagen" },
+            { label: "Bei Fehler: Alternative", icon: "🔄", description: "Nach 2 Versuchen wechseln" },
+            { label: "Verifiziert", icon: "✅", description: "Profil ist live" },
+          ]}
+          caption="Verifizierungs-Ablauf mit Fallback-Strategie bei Problemen"
+        />
 
         {/* Section 1 */}
         <section id="warum-wichtig" className="scroll-mt-20 mt-12">

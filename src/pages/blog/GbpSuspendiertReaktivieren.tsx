@@ -8,6 +8,7 @@ import AutoLexikonText from '@/components/blog/AutoLexikonText';
 import SourcesSection from '@/components/blog/SourcesSection';
 import SuspendierungsDiagnose from '@/components/blog/SuspendierungsDiagnose';
 import StepByStepProcess from '@/components/blog/StepByStepProcess';
+import SeoFlowDiagram from '@/components/blog/SeoFlowDiagram';
 import { AlertTriangle, CheckCircle, Clock, FileText, Shield, Phone, Mail, ArrowRight, XCircle, AlertCircle, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -130,6 +131,19 @@ const GbpSuspendiertReaktivieren: React.FC = () => {
         </p>
 
         <KeyTakeawaysBox items={keyTakeaways} />
+
+        <SeoFlowDiagram
+          title="GBP-Suspendierung: Reaktivierungs-Workflow"
+          steps={[
+            { label: "Suspendierung erkannt", icon: "🚨", description: "Profil nicht mehr sichtbar" },
+            { label: "Typ bestimmen", icon: "🔍", description: "Soft vs. Hard Suspension" },
+            { label: "Ursache analysieren", icon: "📋", description: "Richtlinienverstoß finden" },
+            { label: "Verstöße korrigieren", icon: "🔧", description: "Profil bereinigen" },
+            { label: "Appeal einreichen", icon: "📨", description: "Mit Nachweisen belegen", highlight: true },
+            { label: "Profil reaktiviert", icon: "✅", description: "3–7 Werktage Wartezeit" },
+          ]}
+          caption="Typischer Ablauf einer erfolgreichen GBP-Reaktivierung – Gesamtdauer: 1–3 Wochen"
+        />
 
         {/* Section 1 */}
         <section id="was-ist-suspendierung" className="scroll-mt-20 mt-12">
