@@ -432,6 +432,9 @@ const LocalSeoRoadmap = () => {
         </div>
       </section>
 
+      {/* Interactive Implementation Plan */}
+      <NinetyDayImplementationPlan />
+
       {/* Copy Template */}
       <section id="template" className="mb-10">
         <h2 className="text-2xl font-bold text-foreground mb-4">Roadmap Template kopieren</h2>
