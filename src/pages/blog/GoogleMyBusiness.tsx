@@ -88,7 +88,7 @@ const GoogleMyBusiness = () => {
         ]
       },
       section5: {
-        title: "Insights verstehen und nutzen",
+        title: "Was verraten dir die Google Business Insights?",
         text: "Google liefert wertvolle Daten darüber, wie Kunden mit deinem Profil interagieren. Nutze diese für Optimierungen.",
         items: [
           { title: "Suchanfragen", desc: "Zeigt, mit welchen Keywords Kunden dich finden. Nutze beliebte Begriffe in deiner Beschreibung und Posts." },
