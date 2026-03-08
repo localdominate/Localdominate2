@@ -120,6 +120,7 @@ const GbpOeffnungszeitenSondertage = lazy(() => import("./pages/blog/GbpOeffnung
 const GbpAttributeRichtigNutzen = lazy(() => import("./pages/blog/GbpAttributeRichtigNutzen"));
 const LocalSeoVsMaps = lazy(() => import("./pages/blog/LocalSeoVsMaps"));
 const LocalSeoVsOrganisch = lazy(() => import("./pages/blog/LocalSeoVsOrganisch"));
+const GoogleMapsSeoVsOrganicSeo = lazy(() => import("./pages/blog/GoogleMapsSeoVsOrganicSeo"));
 const LocalCitations2025 = lazy(() => import("./pages/blog/LocalCitations2025"));
 const LocalSeoBackerei = lazy(() => import("./pages/blog/LocalSeoBackerei"));
 const LocalSeoHannover = lazy(() => import("./pages/blog/LocalSeoHannover"));
