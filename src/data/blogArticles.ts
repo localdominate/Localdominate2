@@ -3589,6 +3589,29 @@ export const blogArticles: BlogArticle[] = [
     featured: true
   },
   {
+    slug: "ai-search-vs-traditional-search",
+    de: {
+      title: "AI-Suche vs. Traditionelle Suche: Der komplette Vergleich für lokale Unternehmen",
+      metaTitle: "AI-Suche vs Traditionelle Suche | Vergleich 2026",
+      metaDescription: "AI-Suche vs. traditionelle Google-Suche: Zero-Click, GEO-Strategien, Ranking-Faktoren und was lokale Unternehmen jetzt tun müssen. Mit Vergleichstabelle.",
+      excerpt: "ChatGPT, AI Overviews und Perplexity vs. 10 blaue Links: Wie sich die Suche verändert und was lokale Unternehmen tun sollten.",
+      category: "AI & Zukunft"
+    },
+    en: {
+      title: "AI Search vs. Traditional Search: The Complete Comparison for Local Businesses",
+      metaTitle: "AI Search vs Traditional Search | Comparison 2026",
+      metaDescription: "AI search vs. traditional Google search: zero-click, GEO strategies, ranking factors and what local businesses need to do now. With comparison table.",
+      excerpt: "ChatGPT, AI Overviews and Perplexity vs. 10 blue links: How search is changing and what local businesses should do.",
+      category: "AI & Future"
+    },
+    readingTime: 16,
+    publishedAt: "2026-03-08",
+    updatedAt: "2026-03-08",
+    icon: "🤖",
+    keywords: ["ai suche vs traditionelle suche", "ai search vs traditional search", "google ai overviews", "zero click search", "geo optimierung", "chatgpt local seo", "ai suchmaschinen vergleich"],
+    featured: false
+  },
+  {
     slug: "seo-ferienwohnungen",
     de: {
       title: "SEO für Ferienwohnungen: Schweiz, Bayern & Österreich – Raus aus der OTA-Falle",
@@ -4073,6 +4096,7 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-statistiken-daten",
   "local-seo-vs-organisch",
   "google-maps-seo-vs-organic-seo",
+  "ai-search-vs-traditional-search",
 ]);
 
 // Get only published articles (with pages), deduplicated

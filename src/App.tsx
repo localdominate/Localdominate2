@@ -125,6 +125,7 @@ const LocalCitations2025 = lazy(() => import("./pages/blog/LocalCitations2025"))
 const LocalSeoBackerei = lazy(() => import("./pages/blog/LocalSeoBackerei"));
 const LocalSeoHannover = lazy(() => import("./pages/blog/LocalSeoHannover"));
 const AiSearchOptimization2026 = lazy(() => import("./pages/blog/AiSearchOptimization2026"));
+const AiSearchVsTraditionalSearch = lazy(() => import("./pages/blog/AiSearchVsTraditionalSearch"));
 const SeoFerienwohnungen = lazy(() => import("./pages/blog/SeoFerienwohnungen"));
 const TechnischesLocalSeoGuide = lazy(() => import("./pages/blog/TechnischesLocalSeoGuide"));
 const LocalBusinessSchemaImplementierung = lazy(() => import("./pages/blog/LocalBusinessSchemaImplementierung"));
@@ -306,6 +307,7 @@ const App = () => (
                 <Route path="/blog/local-seo-baeckerei" element={<LocalSeoBackerei />} />
                 <Route path="/blog/local-seo-hannover" element={<LocalSeoHannover />} />
                 <Route path="/blog/ai-search-optimization-2026" element={<AiSearchOptimization2026 />} />
+                <Route path="/blog/ai-search-vs-traditional-search" element={<AiSearchVsTraditionalSearch />} />
                 <Route path="/blog/seo-ferienwohnungen" element={<SeoFerienwohnungen />} />
                 <Route path="/blog/technisches-local-seo-guide" element={<TechnischesLocalSeoGuide />} />
                 <Route path="/blog/localbusiness-schema-implementierung" element={<LocalBusinessSchemaImplementierung />} />

@@ -145,7 +145,7 @@ const AiSucheLokaleUnternehmen = () => {
         </Table>
 
         <p>
-          Für einen tieferen Einstieg in AI Search insgesamt: <Link to="/blog/ai-search-optimization-2026" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">AI Search Optimization 2026</Link>. Die Grundlagen von Local SEO: <Link to="/blog/ultimate-guide-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Ultimate Guide Local SEO</Link>.
+          Für einen tieferen Einstieg in AI Search insgesamt: <Link to="/blog/ai-search-optimization-2026" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">AI Search Optimization 2026</Link>. Wie sich AI-Suche von der klassischen Suche unterscheidet: <Link to="/blog/ai-search-vs-traditional-search" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">AI-Suche vs. Traditionelle Suche</Link>. Die Grundlagen von Local SEO: <Link to="/blog/ultimate-guide-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Ultimate Guide Local SEO</Link>.
         </p>
       </section>
 
