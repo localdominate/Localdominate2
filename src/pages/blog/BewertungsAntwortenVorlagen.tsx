@@ -6,6 +6,7 @@ import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import SourcesSection from "@/components/blog/SourcesSection";
+import ReviewResponseTemplates from "@/components/blog/ReviewResponseTemplates";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
