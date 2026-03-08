@@ -98,6 +98,32 @@ const LocalLinkBuildingBlueprint = () => {
       <TableOfContents items={tocItems} />
       <KeyTakeawaysBox items={keyTakeaways} />
 
+      <RankingFactorChart
+        title="Link-Wert nach Quelltyp (Local SEO)"
+        data={[
+          { name: "Lokale Tageszeitungen", value: 92 },
+          { name: "IHK / Kammern", value: 85 },
+          { name: "Stadtportale / .de/.at/.ch", value: 78 },
+          { name: "Branchenverbände", value: 72 },
+          { name: "Lokale Sponsoring-Seiten", value: 65 },
+          { name: "Regionale Blogs", value: 55 },
+          { name: "Allgemeine Verzeichnisse", value: 30 },
+        ]}
+        source="Einschätzung basierend auf Moz & Whitespark Link-Studien"
+      />
+
+      <ProcessFlow
+        title="90-Tage Linkbuilding-Plan: Übersicht"
+        steps={[
+          { number: 1, title: "Audit & Bestandsaufnahme", description: "Vorhandene Backlinks analysieren, Unlinked Mentions finden, Wettbewerber-Links prüfen.", timeframe: "Woche 1–2" },
+          { number: 2, title: "Quick Wins: Verzeichnisse & IHK", description: "In alle relevanten lokalen Verzeichnisse eintragen. IHK/Kammer-Profile vervollständigen.", timeframe: "Woche 2–3" },
+          { number: 3, title: "Partnerschaften & Sponsoring", description: "Lokale Kooperationspartner kontaktieren, Vereinssponsoring abschließen.", timeframe: "Woche 3–6" },
+          { number: 4, title: "Lokale PR & Events", description: "Pressemitteilungen an lokale Medien, Events organisieren oder sponsern.", timeframe: "Woche 4–8" },
+          { number: 5, title: "Content-Linkbait", description: "Lokale Studien, Statistiken oder Guides veröffentlichen, die natürlich verlinkt werden.", timeframe: "Woche 6–10" },
+          { number: 6, title: "Outreach & Nachverfolgung", description: "Systematisches Outreach, Unlinked Mentions konvertieren, Beziehungen pflegen.", timeframe: "Woche 8–12" },
+        ]}
+      />
+
       {/* Warum lokale Links */}
       <section id="warum-lokale-links" data-ai-summary="true">
         <h2>Warum lokale Backlinks so wertvoll sind</h2>

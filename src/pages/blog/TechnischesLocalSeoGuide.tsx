@@ -130,6 +130,33 @@ const TechnischesLocalSeoGuide = () => {
         </Card>
       </div>
 
+      <GradientBarChart
+        title="Technische SEO-Faktoren: Einfluss auf lokale Rankings"
+        items={[
+          { label: "Schema Markup (LocalBusiness)", value: 95 },
+          { label: "Mobile Performance (CWV)", value: 88 },
+          { label: "HTTPS / Sicherheit", value: 82 },
+          { label: "Interne Verlinkung", value: 75 },
+          { label: "Crawlability (Sitemap/robots)", value: 70 },
+          { label: "Geo-Markup & Hreflang", value: 65 },
+          { label: "Structured Data (FAQ, Review)", value: 60 },
+        ]}
+        unit=" Einfluss"
+      />
+
+      <ProcessFlow
+        title="Technisches Local SEO: Implementierungs-Reihenfolge"
+        steps={[
+          { number: 1, title: "HTTPS & Sicherheit", description: "SSL-Zertifikat installieren, Mixed Content beheben, HSTS aktivieren.", timeframe: "Tag 1" },
+          { number: 2, title: "Mobile-First Optimierung", description: "Responsive Design, Touch-Targets, Viewport, Mobile CWV optimieren.", timeframe: "Tag 1–3" },
+          { number: 3, title: "Schema Markup", description: "LocalBusiness JSON-LD, FAQPage, AggregateRating implementieren.", timeframe: "Tag 3–5" },
+          { number: 4, title: "Indexierungssteuerung", description: "XML-Sitemap, robots.txt, Canonical Tags, Hreflang einrichten.", timeframe: "Tag 5–7" },
+          { number: 5, title: "Core Web Vitals", description: "LCP < 2.5s, INP < 200ms, CLS < 0.1 — Bilder, JS, CSS optimieren.", timeframe: "Woche 2" },
+          { number: 6, title: "Interne Verlinkung", description: "Hub-Spoke-Struktur, lokale Ankertexte, Breadcrumbs implementieren.", timeframe: "Woche 2–3" },
+          { number: 7, title: "Monitoring & Testing", description: "Search Console, PageSpeed Insights, Schema-Validierung einrichten.", timeframe: "Laufend" },
+        ]}
+      />
+
       {/* Warum Technical SEO */}
       <section id="warum-technical-seo" data-ai-summary="true">
         <h2>Warum technisches SEO fur lokale Unternehmen entscheidend ist</h2>
