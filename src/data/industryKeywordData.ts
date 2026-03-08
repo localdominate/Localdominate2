@@ -147,7 +147,7 @@ export const industryKeywordConfigs: Record<string, IndustryKeywordConfig> = {
 
   friseur: {
     industry: "Friseure & Salons",
-    quickWin: "„Friseur [Stadtteil]" rankt oft leichter als „Friseur [Stadt]" – nutze hyper-lokale Keywords.",
+    quickWin: "'Friseur [Stadtteil]' rankt oft leichter als 'Friseur [Stadt]' - nutze hyper-lokale Keywords.",
     clusters: [
       {
         name: "Salon + Standort",
