@@ -347,7 +347,7 @@ const LocalSeoStatistiken = () => {
 
       {/* Section 7: Trends */}
       <section id="trends">
-        <h2>Local SEO Trends & Prognosen 2026</h2>
+        <h2>Welche Local SEO Trends prägen 2026?</h2>
         <p>
           Diese Entwicklungen werden die lokale Suche in den kommenden 12–24 Monaten am stärksten 
           beeinflussen. Frühzeitige Anpassung sichert Wettbewerbsvorteile.
