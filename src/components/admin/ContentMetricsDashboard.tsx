@@ -614,13 +614,7 @@ const ContentMetricsDashboard = () => {
                       <XAxis dataKey="zone" angle={-25} textAnchor="end" tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }} />
                       <YAxis allowDecimals={false} tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
                       <Tooltip content={<CustomTooltip />} />
-                      <Bar dataKey="count" name="Artikel" radius={[4, 4, 0, 0]}>
-                        {[
-                          "hsl(0, 70%, 60%)", "hsl(45, 85%, 55%)", "hsl(142, 70%, 45%)", "hsl(142, 70%, 35%)"
-                        ].map((color, i) => (
-                          <rect key={i} fill={color} />
-                        ))}
-                      </Bar>
+                      <Bar dataKey="count" name="Artikel" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
