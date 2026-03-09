@@ -22,6 +22,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
+import ContentMetricsDashboard from "@/components/admin/ContentMetricsDashboard";
 
 interface ArticleStats {
   article_slug: string;
