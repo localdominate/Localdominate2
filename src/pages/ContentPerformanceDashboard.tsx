@@ -412,6 +412,17 @@ const ContentPerformanceDashboard = () => {
       </header>
 
       <main className="container py-8">
+
+        {/* ── NEW: Full Metrics Dashboard with charts & SEO interpretation ── */}
+        <div className="mb-10">
+          <ContentMetricsDashboard />
+        </div>
+
+        <div className="border-t border-border pt-8 mb-6">
+          <h2 className="text-lg font-bold mb-1">Artikel-Analyse: Optimierungspotenziale</h2>
+          <p className="text-sm text-muted-foreground mb-6">Detaillierte Handlungsempfehlungen je Artikel</p>
+        </div>
+
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <SummaryCard
@@ -423,6 +434,32 @@ const ContentPerformanceDashboard = () => {
             description="Exzellentes Engagement"
           />
           <SummaryCard
+            title="Verbesserungspotenzial"
+            count={categorizedArticles.needsImprovement.length}
+            icon={<AlertTriangle className="h-6 w-6" />}
+            color="text-yellow-600"
+            bgColor="bg-yellow-50"
+            description="Optimierung möglich"
+          />
+          <SummaryCard
+            title="Unterperformer"
+            count={categorizedArticles.underperforming.length}
+            icon={<XCircle className="h-6 w-6" />}
+            color="text-red-600"
+            bgColor="bg-red-50"
+            description="Dringend überarbeiten"
+          />
+        </div>
+
+        {categorizedArticles.all.length === 0 ? (
+          <Card>
+            <CardContent className="py-12 text-center">
+              <p className="text-muted-foreground">
+                Noch nicht genügend Daten für eine Analyse. Artikel benötigen mindestens 3 Views.
+              </p>
+            </CardContent>
+          </Card>
+        ) : (
             title="Verbesserungspotenzial"
             count={categorizedArticles.needsImprovement.length}
             icon={<AlertTriangle className="h-6 w-6" />}
