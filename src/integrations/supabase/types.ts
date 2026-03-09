@@ -692,6 +692,69 @@ export type Database = {
         }
         Relationships: []
       }
+      internal_linking_audits: {
+        Row: {
+          article_slug: string
+          article_title: string
+          audit_date: string
+          audit_score: number
+          created_at: string
+          has_pillar_link: boolean
+          hub_category: string | null
+          id: string
+          is_orphan_page: boolean
+          link_density: number | null
+          missing_pillar_links: Json | null
+          missing_sibling_links: Json | null
+          pillar_link_count: number
+          primary_hub: string | null
+          recommendations: Json | null
+          sibling_links_count: number
+          total_outbound_links: number
+          updated_at: string
+        }
+        Insert: {
+          article_slug: string
+          article_title: string
+          audit_date?: string
+          audit_score?: number
+          created_at?: string
+          has_pillar_link?: boolean
+          hub_category?: string | null
+          id?: string
+          is_orphan_page?: boolean
+          link_density?: number | null
+          missing_pillar_links?: Json | null
+          missing_sibling_links?: Json | null
+          pillar_link_count?: number
+          primary_hub?: string | null
+          recommendations?: Json | null
+          sibling_links_count?: number
+          total_outbound_links?: number
+          updated_at?: string
+        }
+        Update: {
+          article_slug?: string
+          article_title?: string
+          audit_date?: string
+          audit_score?: number
+          created_at?: string
+          has_pillar_link?: boolean
+          hub_category?: string | null
+          id?: string
+          is_orphan_page?: boolean
+          link_density?: number | null
+          missing_pillar_links?: Json | null
+          missing_sibling_links?: Json | null
+          pillar_link_count?: number
+          primary_hub?: string | null
+          recommendations?: Json | null
+          sibling_links_count?: number
+          total_outbound_links?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
       keyword_performance: {
         Row: {
           avg_scroll_depth: number | null
@@ -1065,6 +1128,29 @@ export type Database = {
           views_month: number | null
           views_today: number | null
           views_week: number | null
+        }
+        Relationships: []
+      }
+      latest_internal_linking_audits: {
+        Row: {
+          article_slug: string | null
+          article_title: string | null
+          audit_date: string | null
+          audit_score: number | null
+          created_at: string | null
+          has_pillar_link: boolean | null
+          hub_category: string | null
+          id: string | null
+          is_orphan_page: boolean | null
+          link_density: number | null
+          missing_pillar_links: Json | null
+          missing_sibling_links: Json | null
+          pillar_link_count: number | null
+          primary_hub: string | null
+          recommendations: Json | null
+          sibling_links_count: number | null
+          total_outbound_links: number | null
+          updated_at: string | null
         }
         Relationships: []
       }
