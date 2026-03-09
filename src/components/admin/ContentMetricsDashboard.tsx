@@ -603,10 +603,10 @@ const ContentMetricsDashboard = () => {
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                       data={[
-                        { zone: "0–30 (schwach)", count: enriched.filter(a => (a.avg_engagement_score || 0) < 30).length, fill: "hsl(0, 70%, 60%)" },
-                        { zone: "30–60 (mittel)", count: enriched.filter(a => (a.avg_engagement_score || 0) >= 30 && (a.avg_engagement_score || 0) < 60).length, fill: "hsl(45, 85%, 55%)" },
-                        { zone: "60–80 (gut)", count: enriched.filter(a => (a.avg_engagement_score || 0) >= 60 && (a.avg_engagement_score || 0) < 80).length, fill: "hsl(142, 70%, 45%)" },
-                        { zone: "80+ (sehr gut)", count: enriched.filter(a => (a.avg_engagement_score || 0) >= 80).length, fill: "hsl(142, 70%, 35%)" },
+        { zone: "0–30 (schwach)", count: enriched.filter(a => (a.avg_engagement_score || 0) < 30).length },
+                        { zone: "30–60 (mittel)", count: enriched.filter(a => (a.avg_engagement_score || 0) >= 30 && (a.avg_engagement_score || 0) < 60).length },
+                        { zone: "60–80 (gut)", count: enriched.filter(a => (a.avg_engagement_score || 0) >= 60 && (a.avg_engagement_score || 0) < 80).length },
+                        { zone: "80+ (sehr gut)", count: enriched.filter(a => (a.avg_engagement_score || 0) >= 80).length },
                       ]}
                       margin={{ top: 5, right: 10, bottom: 40, left: 0 }}
                     >
