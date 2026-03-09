@@ -460,32 +460,6 @@ const ContentPerformanceDashboard = () => {
             </CardContent>
           </Card>
         ) : (
-            title="Verbesserungspotenzial"
-            count={categorizedArticles.needsImprovement.length}
-            icon={<AlertTriangle className="h-6 w-6" />}
-            color="text-yellow-600"
-            bgColor="bg-yellow-50"
-            description="Optimierung möglich"
-          />
-          <SummaryCard
-            title="Unterperformer"
-            count={categorizedArticles.underperforming.length}
-            icon={<XCircle className="h-6 w-6" />}
-            color="text-red-600"
-            bgColor="bg-red-50"
-            description="Dringend überarbeiten"
-          />
-        </div>
-
-        {categorizedArticles.all.length === 0 ? (
-          <Card>
-            <CardContent className="py-12 text-center">
-              <p className="text-muted-foreground">
-                Noch nicht genügend Daten für eine Analyse. Artikel benötigen mindestens 3 Views.
-              </p>
-            </CardContent>
-          </Card>
-        ) : (
           <Tabs defaultValue="underperforming" className="space-y-4">
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="underperforming" className="flex items-center gap-2">
