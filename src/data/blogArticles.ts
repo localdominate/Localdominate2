@@ -4242,6 +4242,13 @@ const PUBLISHED_SLUGS = new Set([
   "faq-technisches-seo",
   "faq-ai-zukunft-local-seo",
   "faq-content-marketing-local-seo",
+  "ultimate-guide-local-seo",
+  "technisches-seo-hub",
+  "content-marketing-hub",
+  "tools-ressourcen-hub",
+  "ai-zukunft-hub",
+  "troubleshooting-hub",
+  "case-studies-hub",
 ]);
 
 // Get only published articles (with pages), deduplicated
