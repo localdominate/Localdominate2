@@ -3,582 +3,853 @@
   <!-- Main Pages -->
   <url>
     <loc>https://localdominate.org/</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://localdominate.org/restaurant-marketing</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://localdominate.org/handwerker-marketing</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://localdominate.org/arztpraxis-marketing</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://localdominate.org/anwalt-marketing</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://localdominate.org/diy-toolkit</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/partner</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localdominate.org/seo-lexikon</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://localdominate.org/citation-verzeichnisse</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-  <!-- Blog Articles - Google & Maps -->
+  <!-- ===== PILLAR PAGES ===== -->
+  <url>
+    <loc>https://localdominate.org/blog/ultimate-guide-local-seo</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/kostenloses-seo-guide</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/technisches-local-seo-guide</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-strategie-kleine-unternehmen</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-ranking-faktoren-erklaert</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-checkliste-komplett</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/entity-seo-guide</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/semantic-seo-topical-authority</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-link-building-blueprint</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ===== TOPIC HUBS ===== -->
+  <url>
+    <loc>https://localdominate.org/blog/google-business-profil-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-seo-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-branchen-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-staedte-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/bewertungen-reputation-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/technisches-seo-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/content-marketing-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/tools-ressourcen-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/ai-zukunft-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/troubleshooting-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/case-studies-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/faq-hub</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ===== GOOGLE & MAPS ===== -->
   <url>
     <loc>https://localdominate.org/blog/google-maps-ranking-verbessern</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-maps-seo-ranking-faktoren</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/wie-google-maps-ranking-funktioniert</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-spam-erkennen</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-konkurrenzanalyse</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-ranking-case-studies</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-seo-vs-organic-seo</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-bewertungen-bekommen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/negative-google-bewertungen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-my-business-optimieren</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-ai-overviews-local-seo</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-business-kategorien-guide</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-business-produkte-services</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-business-insights-verstehen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-business-messaging</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/gbp-fotos-optimieren</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/google-posts-ranking-faktor</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Bewertungen -->
+  <!-- Bewertungen -->
   <url>
     <loc>https://localdominate.org/blog/bewertungs-antworten-vorlagen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Local SEO Grundlagen -->
+  <!-- Local SEO Grundlagen -->
   <url>
     <loc>https://localdominate.org/blog/lokale-suchmaschinenoptimierung-2026</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/nap-konsistenz-local-seo</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-keywords-finden</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-audit-checkliste</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/schema-markup-local-seo</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/mobile-local-seo</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-link-building</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-content-marketing</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-fehler</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-notdienst-keywords</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/lokale-events-marketing</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/eeat-lokale-unternehmen</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-seo-neugruender</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-seo-mehrstufig-unternehmen</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-citations-2025</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-seo-vs-maps-seo</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-seo-voice-search</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/e-e-a-t-lokale-unternehmen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/lokale-seo-fuer-neugruender</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-mehrstufig-unternehmen</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-citations-2025</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-vs-maps-seo</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-voice-search</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-vs-organisch</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/ai-search-vs-traditional-search</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-statistiken-daten</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/website-content-ai-suchmaschinen</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/schema-strategie-dokument</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Technisch (Pillar) -->
-  <url>
-    <loc>https://localdominate.org/blog/technisches-local-seo-guide</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Blog Articles - Technisch -->
+  <!-- Technisch -->
   <url>
     <loc>https://localdominate.org/blog/localbusiness-schema-implementierung</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/review-schema-implementierung</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  <url>
-    <loc>https://localdominate.org/blog/core-web-vitals-local-seo</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog/core-web-vitals-local-seo</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI & KI -->
+  <url>
     <loc>https://localdominate.org/blog/ki-tools-local-seo</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/ai-search-optimization-2026</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/ai-suche-lokale-unternehmen</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/ai-visibility-checklist</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Branchen -->
+  <!-- Tools & Templates -->
+  <url>
+    <loc>https://localdominate.org/blog/seo-toolbox-kostenlose-ressourcen</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-reporting-template</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-audit-template</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/citation-tracking-template</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-keyword-research-template</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-monthly-checklist</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-ranking-tracker</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-strategy-planner</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-roadmap-90-tage</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Branchen -->
   <url>
     <loc>https://localdominate.org/blog/local-seo-fuer-restaurants</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-handwerker</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-aerzte-praxen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-anwaelte-kanzleien</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-hotels</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-fitness</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-friseursalon-beauty</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-doener-kebab-imbiss</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-autowerkstatt</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-immobilienmakler</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-steuerberater</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-physiotherapie</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-zahnarzt</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-optiker</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-elektrotechnik</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-apotheken</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-tattoo-studios</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-tierarzt</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-yoga-studios</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-baeckerei</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-fotograf</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/seo-ferienwohnungen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Regionen Deutschland -->
+  <!-- Regionen Deutschland -->
   <url>
     <loc>https://localdominate.org/blog/local-seo-muenchen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-berlin</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-hamburg</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-frankfurt</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-koeln</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-duesseldorf</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-stuttgart</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-hannover</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Regionen Schweiz -->
+  <!-- Regionen Schweiz -->
   <url>
     <loc>https://localdominate.org/blog/local-seo-schweiz</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-zuerich</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/local-seo-basel</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Regionen Österreich -->
+  <!-- Regionen Österreich -->
   <url>
     <loc>https://localdominate.org/blog/local-seo-wien</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Case Studies -->
+  <!-- Case Studies -->
   <url>
     <loc>https://localdominate.org/blog/local-seo-case-study-baecker</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Articles - Strategie -->
-  <url>
-    <loc>https://localdominate.org/blog/kostenloses-seo-guide</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/seo-toolbox-kostenlose-ressourcen</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Articles - Troubleshooting / GBP -->
+  <!-- Troubleshooting / GBP -->
   <url>
     <loc>https://localdominate.org/blog/gbp-suspendiert-reaktivieren</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/gbp-verifizierung-fehlgeschlagen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/duplicate-listing-entfernen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/gbp-bewertung-loeschen-anleitung</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/ranking-ploetzlich-verschwunden</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/gbp-nicht-in-suche-sichtbar</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/gbp-mehrere-standorte</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/gbp-oeffnungszeiten-sondertage</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://localdominate.org/blog/gbp-attribute-richtig-nutzen</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ Sub-Hubs -->
+  <url>
+    <loc>https://localdominate.org/blog/faq-local-seo-grundlagen</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/faq-google-business-profil</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/faq-bewertungen-reputation</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/faq-technisches-seo</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/faq-ai-zukunft-local-seo</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog/faq-content-marketing-local-seo</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -586,56 +857,20 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://localdominate.org/impressum</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://localdominate.org/datenschutz</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://localdominate.org/agb</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-seo-reporting-template</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/google-business-profil-hub</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-seo-branchen-hub</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/local-seo-staedte-hub</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/bewertungen-reputation-hub</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://localdominate.org/blog/website-content-ai-suchmaschinen</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
