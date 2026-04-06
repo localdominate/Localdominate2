@@ -654,6 +654,127 @@ const ContentMetricsDashboard = () => {
 
         {/* Tab 4: SEO Interpretation */}
         <TabsContent value="seo-interpretation" className="space-y-5">
+
+          {/* Per-Article SEO Diagnostics */}
+          <Card>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-base flex items-center gap-2">
+                <AlertTriangle className="h-4 w-4 text-yellow-500" />
+                Artikel-SEO-Diagnose
+              </CardTitle>
+              <CardDescription>Individuelle Performance-Bewertung pro Artikel mit konkreten Handlungsempfehlungen</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3 max-h-[500px] overflow-y-auto pr-1">
+                {enriched.slice(0, 15).map(article => {
+                  const scroll = article.avg_scroll_depth || 0;
+                  const engagement = article.avg_engagement_score || 0;
+                  const completion = article.completion_rate || 0;
+                  const readTime = article.avg_reading_time || 0;
+                  
+                  const issues: { text: string; severity: "critical" | "warning" }[] = [];
+                  if (scroll < 30) issues.push({ text: "Scroll < 30% → Suchintention prüfen", severity: "critical" });
+                  else if (scroll < 50) issues.push({ text: "Scroll < 50% → Einstieg optimieren", severity: "warning" });
+                  if (completion < 10) issues.push({ text: "Abschluss < 10% → Content kürzen/aufteilen", severity: "critical" });
+                  else if (completion < 20) issues.push({ text: "Abschluss < 20% → Mid-CTAs ergänzen", severity: "warning" });
+                  if (engagement < 25) issues.push({ text: "Engagement < 25 → Interaktive Elemente fehlen", severity: "critical" });
+                  else if (engagement < 40) issues.push({ text: "Engagement < 40 → Mehr interne Links/Medien", severity: "warning" });
+                  if (readTime < 45) issues.push({ text: "Lesezeit < 45s → Thin Content Risiko", severity: "critical" });
+                  
+                  const status = issues.some(i => i.severity === "critical") ? "critical" : issues.length > 0 ? "warning" : "success";
+                  const statusColors = { critical: "border-red-500/30 bg-red-500/5", warning: "border-yellow-500/30 bg-yellow-500/5", success: "border-green-500/30 bg-green-500/5" };
+                  const statusBadge = { critical: "destructive" as const, warning: "secondary" as const, success: "default" as const };
+                  const statusLabel = { critical: "Kritisch", warning: "Optimierbar", success: "Stark" };
+
+                  return (
+                    <div key={article.article_slug} className={`rounded-xl border p-4 ${statusColors[status]}`}>
+                      <div className="flex items-start justify-between gap-3 mb-2">
+                        <h4 className="font-semibold text-sm text-foreground line-clamp-1">{article.article_title || article.article_slug}</h4>
+                        <Badge variant={statusBadge[status]} className="flex-shrink-0 text-xs">{statusLabel[status]}</Badge>
+                      </div>
+                      <div className="grid grid-cols-4 gap-2 text-xs text-muted-foreground mb-2">
+                        <span>Scroll: <strong className="text-foreground">{scroll}%</strong></span>
+                        <span>Engagement: <strong className="text-foreground">{engagement}</strong></span>
+                        <span>Abschluss: <strong className="text-foreground">{completion}%</strong></span>
+                        <span>Lesezeit: <strong className="text-foreground">{formatReadingTime(readTime)}</strong></span>
+                      </div>
+                      {issues.length > 0 ? (
+                        <div className="space-y-1">
+                          {issues.map((issue, i) => (
+                            <p key={i} className={`text-xs ${issue.severity === "critical" ? "text-red-600" : "text-yellow-600"}`}>
+                              {issue.severity === "critical" ? "✗" : "⚠"} {issue.text}
+                            </p>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-xs text-green-600">✓ Alle Metriken im grünen Bereich – Top-Performer!</p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Content Opportunity Matrix */}
+          <Card>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-base flex items-center gap-2">
+                <Target className="h-4 w-4 text-primary" />
+                Content-Opportunity-Matrix
+              </CardTitle>
+              <CardDescription>Artikel nach Traffic vs. Engagement-Qualität kategorisiert</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  {
+                    title: "⭐ Stars (Hoher Traffic + Hohes Engagement)",
+                    desc: "Deine besten Artikel. Nutze sie als Vorlagen, verlinke von hier auf Conversion-Seiten.",
+                    items: enriched.filter(a => a.total_views >= (overallStats.totalViews / enriched.length) && (a.avg_engagement_score || 0) >= 40),
+                    color: "border-green-500/30 bg-green-500/5"
+                  },
+                  {
+                    title: "📈 Potenzial (Hoher Traffic + Niedriges Engagement)",
+                    desc: "Traffic vorhanden, aber Nutzer interagieren kaum. Engagement-Optimierung hat höchsten ROI.",
+                    items: enriched.filter(a => a.total_views >= (overallStats.totalViews / enriched.length) && (a.avg_engagement_score || 0) < 40),
+                    color: "border-yellow-500/30 bg-yellow-500/5"
+                  },
+                  {
+                    title: "💎 Hidden Gems (Niedriger Traffic + Hohes Engagement)",
+                    desc: "Qualitativ stark, aber schlecht auffindbar. SEO-Optimierung & Promotion priorisieren.",
+                    items: enriched.filter(a => a.total_views < (overallStats.totalViews / enriched.length) && (a.avg_engagement_score || 0) >= 40),
+                    color: "border-blue-500/30 bg-blue-500/5"
+                  },
+                  {
+                    title: "🔧 Überarbeiten (Niedriger Traffic + Niedriges Engagement)",
+                    desc: "Grundlegende Überarbeitung nötig: Suchintention, Qualität und technische SEO prüfen.",
+                    items: enriched.filter(a => a.total_views < (overallStats.totalViews / enriched.length) && (a.avg_engagement_score || 0) < 40),
+                    color: "border-red-500/30 bg-red-500/5"
+                  },
+                ].map(quadrant => (
+                  <div key={quadrant.title} className={`rounded-xl border p-4 ${quadrant.color}`}>
+                    <h4 className="font-semibold text-sm mb-1">{quadrant.title}</h4>
+                    <p className="text-xs text-muted-foreground mb-3">{quadrant.desc}</p>
+                    <div className="space-y-1 max-h-32 overflow-y-auto">
+                      {quadrant.items.length === 0 ? (
+                        <p className="text-xs text-muted-foreground italic">Keine Artikel in dieser Kategorie</p>
+                      ) : quadrant.items.slice(0, 5).map(a => (
+                        <p key={a.article_slug} className="text-xs text-foreground truncate">
+                          • {a.article_title || a.article_slug} <span className="text-muted-foreground">({a.total_views} Views)</span>
+                        </p>
+                      ))}
+                      {quadrant.items.length > 5 && (
+                        <p className="text-xs text-muted-foreground">+ {quadrant.items.length - 5} weitere</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Original metric explanations + performance evaluation */}
           <div className="grid md:grid-cols-2 gap-4">
             <Card>
               <CardHeader className="pb-3">
