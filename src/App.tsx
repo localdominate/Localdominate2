@@ -40,6 +40,7 @@ const ResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const UpdatePassword = lazy(() => import("./pages/admin/UpdatePassword"));
 const ContentUpdateCalendar = lazy(() => import("./pages/ContentUpdateCalendar"));
 const ContentFormattingGuidelines = lazy(() => import("./pages/ContentFormattingGuidelines"));
+const Admin = lazy(() => import("./pages/Admin"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -206,6 +207,7 @@ const App = () => (
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/ab-test" element={<ABTestDashboard />} />
                 <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
+                <Route path="/admin" element={<Admin />} />
                 <Route path="/admin/content-plan" element={<ContentPlanDashboard />} />
                 <Route path="/admin/kunden" element={<MeineKunden />} />
                 <Route path="/admin/article-feedback" element={<ArticleFeedbackDashboard />} />
