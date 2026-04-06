@@ -8,7 +8,7 @@ const StarAnimation = () => {
   const [showQR, setShowQR] = useState(false);
 
   useEffect(() => {
-    const timers: NodeJS.Timeout[] = [];
+    const timers: ReturnType<typeof setTimeout>[] = [];
     
     // Animate stars filling
     [1, 2, 3, 4, 5].forEach((star, index) => {

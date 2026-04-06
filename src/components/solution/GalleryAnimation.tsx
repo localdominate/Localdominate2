@@ -6,7 +6,7 @@ const GalleryAnimation = () => {
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    const timers: NodeJS.Timeout[] = [];
+    const timers: ReturnType<typeof setTimeout>[] = [];
     
     // Staggered image reveal
     [0, 1, 2, 3, 4, 5].forEach((index) => {
