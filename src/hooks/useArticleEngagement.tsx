@@ -28,7 +28,7 @@ export const useArticleEngagement = (
   const lastUpdateRef = useRef<number>(Date.now());
   const isVisibleRef = useRef<boolean>(true);
   const hasUpdatedRef = useRef<boolean>(false);
-  const throttleRef = useRef<NodeJS.Timeout | null>(null);
+  const throttleRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const calculateEngagementScore = useCallback((scrollDepth: number, readingTimeSeconds: number) => {
     const expectedReadingTimeSeconds = expectedReadingTimeMinutes * 60;
