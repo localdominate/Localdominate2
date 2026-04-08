@@ -44,8 +44,24 @@ const buildJsonLd = (c: NicheConfig) => [
     "@id": `${BASE_URL}/${c.slug}#business`,
     "name": `Local Dominator – ${c.niche} Marketing ${c.city}`,
     "description": c.metaDescription,
-    "areaServed": { "@type": "City", "name": c.city },
-    "url": `${BASE_URL}/${c.slug}`
+    "url": `${BASE_URL}/${c.slug}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": c.city,
+      "addressRegion": "Bavaria",
+      "addressCountry": "DE"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": c.city,
+      "sameAs": `https://en.wikipedia.org/wiki/${c.city}`
+    },
+    "priceRange": "€€",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.582 },
+      "geoRadius": "25000"
+    }
   },
   {
     "@type": "Service",
