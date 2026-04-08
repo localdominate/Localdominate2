@@ -126,8 +126,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
               {c.heroH1}{" "}
               <span className="text-gradient">{c.heroH1Highlight}</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-2 leading-relaxed">
               {c.heroSubheadline}
+            </p>
+            <p className="text-sm text-primary font-medium mb-4">
+              More visibility. More bookings. Less uncertainty.
             </p>
             <p className="text-sm text-muted-foreground mb-4">
               Trusted by {c.nicheLabel.toLowerCase()} across {c.city} · Powered by{" "}
@@ -201,9 +204,10 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <section className="px-4 py-16 md:py-24">
             <div className="container max-w-4xl text-center">
               <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">How It Works</p>
-              <h2 className="text-2xl md:text-4xl font-bold mb-12">
-                We bring clients directly to your {c.service}
+              <h2 className="text-2xl md:text-4xl font-bold mb-4">
+                We make sure your {c.service} stays visible – and gets booked
               </h2>
+              <p className="text-muted-foreground mb-12">So you can plan your weeks with more certainty.</p>
               <div className="grid md:grid-cols-3 gap-8">
                 {c.solutionSteps.map((step, i) => {
                   const icons = [MapPin, Star, Users];
@@ -291,35 +295,42 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <section id="demo-section" className="bg-primary/5 px-4 py-16 md:py-24">
             <div className="container max-w-4xl text-center">
               <h2 className="text-2xl md:text-4xl font-bold mb-4">
-                See your {c.service}'s potential <span className="text-primary">(free)</span>
+                See what's currently missing – <span className="text-primary">for free</span>
               </h2>
               <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-                Get a personalized report showing exactly how your {c.service} in {c.city} can attract more clients.
+                We show you where you lose clients today, how other {c.nicheLabel.toLowerCase()} in {c.city} get booked, and what can be improved immediately.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
-                {["Missed client opportunities", "Competitor comparison", "Custom growth plan"].map((item, i) => (
+                {["Where you lose clients today", `How other ${c.nicheLabel.toLowerCase()} in ${c.city} get booked`, "What can be improved immediately"].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 bg-card rounded-xl p-3 border border-border/50">
                     <Check className="w-4 h-4 text-[hsl(var(--success))] flex-shrink-0" />
                     <span className="text-sm font-medium">{item}</span>
                   </div>
                 ))}
               </div>
-              <NicheLeadForm slug={c.slug} ctaText={c.demoCta} city={c.city} />
+              <NicheLeadForm slug={c.slug} ctaText={`Get your free ${c.service} check`} city={c.city} />
             </div>
           </section>
         </SectionFadeIn>
 
-        {/* 7. PRICING */}
+        {/* 7. GUARANTEE / PRICING */}
         <SectionFadeIn>
           <section className="px-4 py-16 md:py-24">
             <div className="container max-w-3xl text-center">
-              <h2 className="text-2xl md:text-4xl font-bold mb-4">Simple pricing</h2>
-              <p className="text-lg text-muted-foreground mb-2">Fixed monthly price. Cancel anytime.</p>
-              <p className="text-muted-foreground mb-8">Only pay if you get results.</p>
+              <h2 className="text-2xl md:text-4xl font-bold mb-4">Simple. Transparent. No risk.</h2>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
+                You invest in your {c.service} – and you should feel safe doing it.
+              </p>
               <div className="bg-card border-2 border-primary/30 rounded-2xl p-6 md:p-10 max-w-md mx-auto">
                 <div className="text-sm text-primary font-semibold uppercase tracking-widest mb-2">{c.pricingPackageName}</div>
                 <div className="text-4xl md:text-5xl font-bold mb-1">€299</div>
                 <div className="text-muted-foreground text-sm mb-6">one-time setup</div>
+                <div className="bg-primary/5 rounded-xl p-5 mb-6 text-left">
+                  <p className="text-sm leading-relaxed text-foreground">
+                    That's why we offer a simple guarantee: <strong>If you're not satisfied within the first 30 days, you get your money back.</strong>
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-2">No questions asked.</p>
+                </div>
                 <div className="space-y-3 text-left mb-8">
                   {[
                     "Full Google Maps optimization",
@@ -338,9 +349,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <p className="text-xs text-muted-foreground mt-3">
-                  <Clock className="w-3 h-3 inline mr-1" />
-                  One extra client per day pays for this.
+                <p className="text-xs text-muted-foreground mt-4">
+                  You only continue if you truly see the value.
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Most {c.nicheLabel.toLowerCase()} recover the investment with just a few new clients.
                 </p>
               </div>
             </div>
