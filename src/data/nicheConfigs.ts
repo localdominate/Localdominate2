@@ -56,16 +56,24 @@ export interface NicheConfig {
 
 const defaultFaqs = [
   {
+    q: "I've tried marketing before – it didn't work",
+    a: "That's exactly why we keep it simple and measurable. You see what happens – and you decide if it's worth it."
+  },
+  {
+    q: "I don't want long-term contracts",
+    a: "You stay because it works – not because you're locked in. No contracts, no commitments."
+  },
+  {
+    q: "I'm not sure if this is worth it",
+    a: "That's why we give you 30 days to decide – completely risk-free. If you're not satisfied, you get your money back."
+  },
+  {
     q: "I don't understand marketing – can I still use this?",
     a: "Absolutely. You don't need to understand marketing at all. We handle everything for you – from setup to optimization. You just focus on your clients."
   },
   {
-    q: "I don't have time for this – how much effort is needed?",
-    a: "Zero effort from your side. We do all the work. The initial setup takes about 15 minutes of your time, and after that, you'll just see more clients coming in."
-  },
-  {
-    q: "What if it doesn't work?",
-    a: "There's no risk. We offer a 30-day satisfaction guarantee. If you don't see results, you get your money back."
+    q: "How much effort is needed from my side?",
+    a: "Almost none. The initial setup takes about 15 minutes of your time. After that, we do all the work."
   }
 ];
 
