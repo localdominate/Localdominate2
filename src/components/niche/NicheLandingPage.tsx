@@ -152,6 +152,24 @@ const NicheLandingPage = ({ config: c }: Props) => {
           </div>
         </section>
 
+        {/* 1.5 OUTREACH BRIDGE */}
+        <SectionFadeIn>
+          <section className="px-4 py-12 md:py-16 border-b border-border/30">
+            <div className="container max-w-3xl text-center">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+                We found something interesting about your {c.service}
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
+                We analyzed {c.nicheLabel.toLowerCase()} in {c.city} and found that many are missing easy opportunities to get more clients from Google.
+              </p>
+              <Button variant="cta" size="lg" className="group" onClick={scrollToDemo}>
+                See your free analysis
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </section>
+        </SectionFadeIn>
+
         {/* 2. PROBLEM */}
         <SectionFadeIn>
           <section className="bg-[hsl(var(--pain-bg))] text-[hsl(var(--pain-fg))] px-4 py-16 md:py-24">
