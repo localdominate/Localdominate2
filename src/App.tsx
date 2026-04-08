@@ -228,6 +228,10 @@ const App = () => (
                 <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
                 <Route path="/arztpraxis-marketing" element={<ArztpraxisMarketing />} />
                 <Route path="/hairdressers-munich" element={<HairdressersMunich />} />
+                <Route path="/dentists-munich" element={<DentistsMunich />} />
+                <Route path="/gyms-munich" element={<GymsMunich />} />
+                <Route path="/restaurants-munich" element={<RestaurantsMunich />} />
+                <Route path="/barbers-munich" element={<BarbersMunich />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
                 <Route path="/danke" element={<Danke />} />
