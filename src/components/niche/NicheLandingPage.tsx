@@ -372,6 +372,9 @@ const NicheLandingPage = ({ config: c }: Props) => {
               <span className="flex items-center gap-1"><Check className="w-4 h-4" /> No risk</span>
               <span className="flex items-center gap-1"><Check className="w-4 h-4" /> Results first</span>
             </div>
+            <p className="mt-6 text-xs opacity-50">
+              <Link to="/" className="hover:underline">Local Dominator</Link> · Marketing for {c.nicheLabel.toLowerCase()} in {c.city}
+            </p>
           </div>
         </section>
       </div>
