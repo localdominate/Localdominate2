@@ -295,20 +295,20 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <section id="demo-section" className="bg-primary/5 px-4 py-16 md:py-24">
             <div className="container max-w-4xl text-center">
               <h2 className="text-2xl md:text-4xl font-bold mb-4">
-                See your {c.service}'s potential <span className="text-primary">(free)</span>
+                See what's currently missing – <span className="text-primary">for free</span>
               </h2>
               <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-                Get a personalized report showing exactly how your {c.service} in {c.city} can attract more clients.
+                We show you where you lose clients today, how other {c.nicheLabel.toLowerCase()} in {c.city} get booked, and what can be improved immediately.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
-                {["Missed client opportunities", "Competitor comparison", "Custom growth plan"].map((item, i) => (
+                {["Where you lose clients today", `How other ${c.nicheLabel.toLowerCase()} in ${c.city} get booked`, "What can be improved immediately"].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 bg-card rounded-xl p-3 border border-border/50">
                     <Check className="w-4 h-4 text-[hsl(var(--success))] flex-shrink-0" />
                     <span className="text-sm font-medium">{item}</span>
                   </div>
                 ))}
               </div>
-              <NicheLeadForm slug={c.slug} ctaText={c.demoCta} city={c.city} />
+              <NicheLeadForm slug={c.slug} ctaText={`Get your free ${c.service} check`} city={c.city} />
             </div>
           </section>
         </SectionFadeIn>
