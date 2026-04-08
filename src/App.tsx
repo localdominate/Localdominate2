@@ -42,6 +42,10 @@ const ContentUpdateCalendar = lazy(() => import("./pages/ContentUpdateCalendar")
 const ContentFormattingGuidelines = lazy(() => import("./pages/ContentFormattingGuidelines"));
 const Admin = lazy(() => import("./pages/Admin"));
 const HairdressersMunich = lazy(() => import("./pages/HairdressersMunich"));
+const DentistsMunich = lazy(() => import("./pages/DentistsMunich"));
+const GymsMunich = lazy(() => import("./pages/GymsMunich"));
+const RestaurantsMunich = lazy(() => import("./pages/RestaurantsMunich"));
+const BarbersMunich = lazy(() => import("./pages/BarbersMunich"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -224,6 +228,10 @@ const App = () => (
                 <Route path="/handwerker-marketing" element={<HandwerkerMarketing />} />
                 <Route path="/arztpraxis-marketing" element={<ArztpraxisMarketing />} />
                 <Route path="/hairdressers-munich" element={<HairdressersMunich />} />
+                <Route path="/dentists-munich" element={<DentistsMunich />} />
+                <Route path="/gyms-munich" element={<GymsMunich />} />
+                <Route path="/restaurants-munich" element={<RestaurantsMunich />} />
+                <Route path="/barbers-munich" element={<BarbersMunich />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
                 <Route path="/danke" element={<Danke />} />
