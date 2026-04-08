@@ -85,15 +85,13 @@ const HairdressersMunich = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Hairdresser Marketing Munich | Get More Clients for Your Salon</title>
-        <meta name="description" content="Get more clients for your hair salon in Munich. Fully done-for-you system. No effort needed. Free demo available." />
-        <link rel="canonical" href="https://ejdhisidjs.lovable.app/hairdressers-munich" />
-        <meta property="og:title" content="Hairdresser Marketing Munich | Get More Clients" />
-        <meta property="og:description" content="Get more clients for your hair salon in Munich. Fully done-for-you system." />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <SEOHead
+        title="Hairdresser Marketing Munich | Get More Clients for Your Salon"
+        description="Get more clients for your hair salon in Munich. Fully done-for-you system. No effort needed. Free demo available."
+        canonicalUrl="https://ejdhisidjs.lovable.app/hairdressers-munich"
+        lang="en"
+        jsonLd={jsonLd["@graph"]}
+      />
 
       <div className="bg-background text-foreground">
         {/* ===== 1. HERO ===== */}
