@@ -19,6 +19,8 @@ import GoogleMapsMockup from "./GoogleMapsMockup";
 import NicheLeadForm from "./NicheLeadForm";
 import SectionFadeIn from "./SectionFadeIn";
 import InlineCTA from "./InlineCTA";
+import NicheTransformationSection from "./NicheTransformationSection";
+import NicheWebsiteAddon from "./NicheWebsiteAddon";
 
 const BASE_URL = "https://ejdhisidjs.lovable.app";
 
