@@ -129,6 +129,10 @@ const NicheLandingPage = ({ config: c }: Props) => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
               {c.heroSubheadline}
             </p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Trusted by {c.nicheLabel.toLowerCase()} across {c.city} · Powered by{" "}
+              <Link to="/" className="text-primary hover:underline">Local Dominator</Link>
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
               <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto" onClick={() => trackCta("hero")}>
                 Get Free Demo
