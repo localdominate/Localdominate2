@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Loader2 } from "lucide-react";
+import { ArrowRight, Loader2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
@@ -46,24 +46,25 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
 
   if (submitted) {
     return (
-      <div className="bg-card border-2 border-primary/30 rounded-2xl p-8 max-w-md mx-auto text-center animate-scale-in">
-        <div className="w-14 h-14 rounded-full bg-[hsl(var(--success))]/10 flex items-center justify-center mx-auto mb-4">
-          <ArrowRight className="w-6 h-6 text-[hsl(var(--success))]" />
+      <div className="bg-card border-2 border-[hsl(var(--success))]/30 rounded-2xl p-8 md:p-10 max-w-md mx-auto text-center animate-scale-in">
+        <div className="w-16 h-16 rounded-full bg-[hsl(var(--success))]/10 flex items-center justify-center mx-auto mb-5">
+          <ShieldCheck className="w-8 h-8 text-[hsl(var(--success))]" />
         </div>
         <h3 className="text-xl font-bold mb-2">Vielen Dank!</h3>
-        <p className="text-muted-foreground">Wir melden uns innerhalb von 24 Stunden mit deiner kostenlosen Analyse.</p>
+        <p className="text-muted-foreground leading-relaxed">Wir melden uns innerhalb von 24 Stunden mit deiner kostenlosen Analyse.</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-card border border-border/50 rounded-2xl p-6 max-w-md mx-auto space-y-3">
+    <form onSubmit={handleSubmit} className="bg-card border border-border/50 rounded-2xl p-6 md:p-8 max-w-md mx-auto space-y-4 shadow-sm">
       <Input
         placeholder="Dein Name"
         value={form.name}
         onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))}
         maxLength={100}
         required
+        className="h-12"
       />
       <Input
         placeholder="Name deines Salons"
@@ -71,6 +72,7 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
         onChange={(e) => setForm(f => ({ ...f, business: e.target.value }))}
         maxLength={100}
         required
+        className="h-12"
       />
       <Input
         placeholder="Telefonnummer"
@@ -79,6 +81,7 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
         onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))}
         maxLength={20}
         required
+        className="h-12"
       />
       <Button variant="cta" size="ctaLarge" className="w-full group" type="submit" disabled={loading}>
         {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : (
@@ -88,9 +91,12 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
           </>
         )}
       </Button>
-      <p className="text-xs text-muted-foreground text-center">
-        Kostenlos & unverbindlich. Nur für {city}.
-      </p>
+      <div className="flex items-center justify-center gap-2 pt-1">
+        <ShieldCheck className="w-3.5 h-3.5 text-muted-foreground" />
+        <p className="text-xs text-muted-foreground">
+          Kostenlos & unverbindlich · Nur für {city}
+        </p>
+      </div>
     </form>
   );
 };
