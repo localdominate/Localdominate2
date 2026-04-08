@@ -42,6 +42,10 @@ const ContentUpdateCalendar = lazy(() => import("./pages/ContentUpdateCalendar")
 const ContentFormattingGuidelines = lazy(() => import("./pages/ContentFormattingGuidelines"));
 const Admin = lazy(() => import("./pages/Admin"));
 const HairdressersMunich = lazy(() => import("./pages/HairdressersMunich"));
+const DentistsMunich = lazy(() => import("./pages/DentistsMunich"));
+const GymsMunich = lazy(() => import("./pages/GymsMunich"));
+const RestaurantsMunich = lazy(() => import("./pages/RestaurantsMunich"));
+const BarbersMunich = lazy(() => import("./pages/BarbersMunich"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
