@@ -276,7 +276,7 @@ const NicheLandingPage = ({ config: c }: Props) => {
                 See your {c.service}'s potential <span className="text-primary">(free)</span>
               </h2>
               <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-                Get a personalized report showing exactly how to get more clients.
+                Get a personalized report showing exactly how your {c.service} in {c.city} can attract more clients.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
                 {["Missed client opportunities", "Competitor comparison", "Custom growth plan"].map((item, i) => (
