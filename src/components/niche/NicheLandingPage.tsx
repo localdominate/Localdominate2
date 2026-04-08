@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import { ArrowRight, Check, Star, MapPin, Camera, BarChart3, Users, Clock, ShieldCheck, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { trackButtonClick, trackScrollDepth } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
 import {
