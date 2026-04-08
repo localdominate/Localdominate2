@@ -313,17 +313,24 @@ const NicheLandingPage = ({ config: c }: Props) => {
           </section>
         </SectionFadeIn>
 
-        {/* 7. PRICING */}
+        {/* 7. GUARANTEE / PRICING */}
         <SectionFadeIn>
           <section className="px-4 py-16 md:py-24">
             <div className="container max-w-3xl text-center">
-              <h2 className="text-2xl md:text-4xl font-bold mb-4">Simple pricing</h2>
-              <p className="text-lg text-muted-foreground mb-2">Fixed monthly price. Cancel anytime.</p>
-              <p className="text-muted-foreground mb-8">Only pay if you get results.</p>
+              <h2 className="text-2xl md:text-4xl font-bold mb-4">Simple. Transparent. No risk.</h2>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
+                You invest in your {c.service} – and you should feel safe doing it.
+              </p>
               <div className="bg-card border-2 border-primary/30 rounded-2xl p-6 md:p-10 max-w-md mx-auto">
                 <div className="text-sm text-primary font-semibold uppercase tracking-widest mb-2">{c.pricingPackageName}</div>
                 <div className="text-4xl md:text-5xl font-bold mb-1">€299</div>
                 <div className="text-muted-foreground text-sm mb-6">one-time setup</div>
+                <div className="bg-primary/5 rounded-xl p-5 mb-6 text-left">
+                  <p className="text-sm leading-relaxed text-foreground">
+                    That's why we offer a simple guarantee: <strong>If you're not satisfied within the first 30 days, you get your money back.</strong>
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-2">No questions asked.</p>
+                </div>
                 <div className="space-y-3 text-left mb-8">
                   {[
                     "Full Google Maps optimization",
@@ -342,9 +349,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <p className="text-xs text-muted-foreground mt-3">
-                  <Clock className="w-3 h-3 inline mr-1" />
-                  One extra client per day pays for this.
+                <p className="text-xs text-muted-foreground mt-4">
+                  You only continue if you truly see the value.
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Most {c.nicheLabel.toLowerCase()} recover the investment with just a few new clients.
                 </p>
               </div>
             </div>
