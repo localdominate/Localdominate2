@@ -20,7 +20,7 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.business.trim() || !form.phone.trim()) {
-      toast.error("Please fill in all fields");
+      toast.error("Bitte fülle alle Felder aus");
       return;
     }
     setLoading(true);
@@ -36,9 +36,9 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
         lead_type: "niche_landing",
       });
       setSubmitted(true);
-      toast.success("We'll contact you shortly!");
+      toast.success("Wir melden uns bei dir!");
     } catch {
-      toast.error("Something went wrong. Please try again.");
+      toast.error("Etwas ist schiefgelaufen. Bitte versuche es erneut.");
     } finally {
       setLoading(false);
     }
@@ -50,8 +50,8 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
         <div className="w-14 h-14 rounded-full bg-[hsl(var(--success))]/10 flex items-center justify-center mx-auto mb-4">
           <ArrowRight className="w-6 h-6 text-[hsl(var(--success))]" />
         </div>
-        <h3 className="text-xl font-bold mb-2">Thank you!</h3>
-        <p className="text-muted-foreground">We'll reach out within 24 hours with your free analysis.</p>
+        <h3 className="text-xl font-bold mb-2">Vielen Dank!</h3>
+        <p className="text-muted-foreground">Wir melden uns innerhalb von 24 Stunden mit deiner kostenlosen Analyse.</p>
       </div>
     );
   }
@@ -59,21 +59,21 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
   return (
     <form onSubmit={handleSubmit} className="bg-card border border-border/50 rounded-2xl p-6 max-w-md mx-auto space-y-3">
       <Input
-        placeholder="Your name"
+        placeholder="Dein Name"
         value={form.name}
         onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))}
         maxLength={100}
         required
       />
       <Input
-        placeholder="Business name"
+        placeholder="Name deines Salons"
         value={form.business}
         onChange={(e) => setForm(f => ({ ...f, business: e.target.value }))}
         maxLength={100}
         required
       />
       <Input
-        placeholder="Phone number"
+        placeholder="Telefonnummer"
         type="tel"
         value={form.phone}
         onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))}
@@ -89,7 +89,7 @@ const NicheLeadForm = ({ slug, ctaText, city }: Props) => {
         )}
       </Button>
       <p className="text-xs text-muted-foreground text-center">
-        Free & no commitment. Only {city}.
+        Kostenlos & unverbindlich. Nur für {city}.
       </p>
     </form>
   );
