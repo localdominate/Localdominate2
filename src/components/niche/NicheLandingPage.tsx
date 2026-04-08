@@ -21,6 +21,8 @@ import SectionFadeIn from "./SectionFadeIn";
 import InlineCTA from "./InlineCTA";
 import NicheTransformationSection from "./NicheTransformationSection";
 import NicheWebsiteAddon from "./NicheWebsiteAddon";
+import NicheHeroImage from "./NicheHeroImage";
+import NicheImageShowcase from "./NicheImageShowcase";
 
 const BASE_URL = "https://ejdhisidjs.lovable.app";
 
@@ -153,6 +155,7 @@ const NicheLandingPage = ({ config: c }: Props) => {
               Keine Verträge. Kein Risiko. Erst Ergebnisse.
             </p>
             <MicroTrustBadge city={c.city} />
+            <NicheHeroImage alt={`Moderner ${c.service} in ${c.city} – professioneller Salon-Auftritt`} />
             <GoogleMapsMockup serviceName={c.service} city={c.city} />
           </div>
         </section>
@@ -237,6 +240,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
         {/* 4. VISUAL TRANSFORMATION */}
         <SectionFadeIn>
           <NicheTransformationSection service={c.service} onCtaClick={() => trackCta("transformation")} />
+        </SectionFadeIn>
+
+        {/* 4.5 IMAGE SHOWCASE */}
+        <SectionFadeIn>
+          <NicheImageShowcase service={c.service} city={c.city} />
         </SectionFadeIn>
 
         {/* 5. LEISTUNGEN */}
