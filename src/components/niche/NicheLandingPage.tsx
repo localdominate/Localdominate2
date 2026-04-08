@@ -204,9 +204,10 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <section className="px-4 py-16 md:py-24">
             <div className="container max-w-4xl text-center">
               <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">How It Works</p>
-              <h2 className="text-2xl md:text-4xl font-bold mb-12">
-                We bring clients directly to your {c.service}
+              <h2 className="text-2xl md:text-4xl font-bold mb-4">
+                We make sure your {c.service} stays visible – and gets booked
               </h2>
+              <p className="text-muted-foreground mb-12">So you can plan your weeks with more certainty.</p>
               <div className="grid md:grid-cols-3 gap-8">
                 {c.solutionSteps.map((step, i) => {
                   const icons = [MapPin, Star, Users];
