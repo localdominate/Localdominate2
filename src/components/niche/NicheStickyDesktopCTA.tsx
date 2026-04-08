@@ -6,9 +6,10 @@ interface Props {
   ctaText: string;
   onCtaClick: () => void;
   whatsappNumber?: string;
+  urgencyText?: string;
 }
 
-const NicheStickyDesktopCTA = ({ ctaText, onCtaClick, whatsappNumber = "4915678123456" }: Props) => {
+const NicheStickyDesktopCTA = ({ ctaText, onCtaClick, whatsappNumber = "4915678123456", urgencyText = "Begrenzte Plätze in München" }: Props) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const NicheStickyDesktopCTA = ({ ctaText, onCtaClick, whatsappNumber = "49156781
         px-5 py-2.5 rounded-full bg-background/95 backdrop-blur-md border border-border/50 shadow-lg
         transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`}
     >
-      <span className="text-sm font-medium text-muted-foreground">Limited spots in Munich</span>
+      <span className="text-sm font-medium text-muted-foreground">{urgencyText}</span>
       <Button variant="cta" size="sm" className="group" onClick={onCtaClick}>
         {ctaText}
         <ArrowRight className="ml-1.5 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />

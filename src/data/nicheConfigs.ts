@@ -56,71 +56,63 @@ export interface NicheConfig {
 
 const defaultFaqs = [
   {
-    q: "I've tried marketing before – it didn't work",
-    a: "That's exactly why we keep it simple and measurable. You see what happens – and you decide if it's worth it."
+    q: "Ich habe keine Zeit für Marketing",
+    a: "Musst du auch nicht. Wir übernehmen alles für dich."
   },
   {
-    q: "I don't want long-term contracts",
-    a: "You stay because it works – not because you're locked in. No contracts, no commitments."
+    q: "Ich hatte schon schlechte Erfahrungen",
+    a: "Deshalb arbeiten wir transparent und nachvollziehbar. Du siehst jederzeit, was passiert."
   },
   {
-    q: "I'm not sure if this is worth it",
-    a: "That's why we give you 30 days to decide – completely risk-free. If you're not satisfied, you get your money back."
-  },
-  {
-    q: "I don't understand marketing – can I still use this?",
-    a: "Absolutely. You don't need to understand marketing at all. We handle everything for you – from setup to optimization. You just focus on your clients."
-  },
-  {
-    q: "How much effort is needed from my side?",
-    a: "Almost none. The initial setup takes about 15 minutes of your time. After that, we do all the work."
+    q: "Ich bin mir unsicher",
+    a: "Du hast 30 Tage Zeit, es in Ruhe zu testen – komplett risikofrei."
   }
 ];
 
 export const NICHE_CONFIGS: Record<string, NicheConfig> = {
   "hairdressers-munich": {
     slug: "hairdressers-munich",
-    city: "Munich",
-    niche: "Hairdresser",
-    nicheLabel: "Hair Salons",
-    keyword: "hairdresser Munich",
-    service: "salon",
+    city: "München",
+    niche: "Friseur",
+    nicheLabel: "Friseursalons",
+    keyword: "Friseur München",
+    service: "Salon",
     icon: Scissors,
-    metaTitle: "Hairdresser Marketing Munich | Get More Clients for Your Salon",
-    metaDescription: "Get more clients for your hair salon in Munich. Fully done-for-you system. No effort needed. Free demo available.",
-    heroEyebrow: "For Hair Salons in Munich",
-    heroH1: "Get More Clients for Your Salon in Munich –",
-    heroH1Highlight: "Without Doing Anything Yourself",
-    heroSubheadline: "We help hair salons in Munich stay fully booked – even when costs rise and clients become more selective.",
-    problemHeadline: "Keeping your salon fully booked is getting harder –",
-    problemHighlight: "and it shows",
+    metaTitle: "Friseur München mehr Kunden | Mehr Buchungen für deinen Salon",
+    metaDescription: "Mehr Kunden für deinen Friseursalon in München. Einfaches System, komplett umgesetzt für dich. Jetzt kostenlose Analyse sichern.",
+    heroEyebrow: "Für Friseursalons in München",
+    heroH1: "Mehr Kunden für deinen Friseursalon in München –",
+    heroH1Highlight: "ohne Mehraufwand",
+    heroSubheadline: "Wir sorgen dafür, dass dein Salon online besser gefunden wird und regelmäßig neue Kunden gewinnt.",
+    problemHeadline: "Volle Termine sind heute keine Selbstverständlichkeit mehr –",
+    problemHighlight: "und das merkt man",
     problemBullets: [
-      "Costs are rising, but prices can't always follow",
-      "Clients book less frequently or compare more",
-      "Competitors show up stronger on Google",
-      "Empty slots become more noticeable"
+      "Kosten steigen, aber Preise lassen sich nicht beliebig erhöhen",
+      "Kunden vergleichen mehr und buchen bewusster",
+      "Andere Salons werden online besser gefunden",
+      "Leere Termine fallen schneller auf"
     ],
-    problemClosing: "In today's market, visibility decides who gets booked – and who doesn't.",
+    problemClosing: "Wer online nicht sichtbar ist, wird nicht gebucht.",
     solutionSteps: [
-      { title: "We make your salon easy to find", desc: "Your salon appears when people in Munich search for a hairdresser." },
-      { title: "We build trust before the first visit", desc: "Better reviews, better photos, a stronger first impression." },
-      { title: "We bring clients who are ready to book", desc: "People find you, trust you, and schedule an appointment." }
+      { title: "Wir verbessern deine Sichtbarkeit bei Google", desc: "Dein Salon erscheint, wenn Kunden in München nach einem Friseur suchen." },
+      { title: "Wir optimieren deinen Salon-Auftritt", desc: "Bessere Bewertungen, bessere Fotos, ein stärkerer erster Eindruck." },
+      { title: "Wir bringen dir buchungsbereite Kunden", desc: "Menschen finden dich, vertrauen dir und vereinbaren einen Termin." }
     ],
-    solutionCta: "See your salon potential",
-    whatYouGetClosingPrefix: "You cut hair.",
-    whatYouGetClosingSuffix: "We bring clients.",
-    visibilityLabel: "More visibility in Munich",
+    solutionCta: "Kostenlose Analyse ansehen",
+    whatYouGetClosingPrefix: "Du konzentrierst dich auf deinen Salon –",
+    whatYouGetClosingSuffix: "wir kümmern uns um den Rest.",
+    visibilityLabel: "Mehr Sichtbarkeit in München",
     proofStats: [
-      { value: "+40%", label: "More bookings" },
+      { value: "+40%", label: "Mehr Buchungen" },
       { value: "Top 3", label: "Google Maps" },
-      { value: "100%", label: "Weekends booked" }
+      { value: "100%", label: "Wochenenden ausgebucht" }
     ],
-    proofTestimonial: "We finally have consistent new clients every week.",
-    proofAuthor: "Salon Owner, Munich",
-    demoCta: "Get Free Salon Analysis",
-    pricingPackageName: "Salon Growth Package",
-    finalHeadline: "Let's fill your chairs",
-    finalCta: "Get My Free Salon Demo",
+    proofTestimonial: "Wir sind endlich wieder konstant ausgelastet.",
+    proofAuthor: "Saloninhaber, München",
+    demoCta: "Kostenlose Salon-Analyse",
+    pricingPackageName: "Salon Sichtbarkeits-Paket",
+    finalHeadline: "Lass uns deinen Salon wieder voll auslasten",
+    finalCta: "Kostenlose Analyse starten",
     faqs: defaultFaqs
   },
 
