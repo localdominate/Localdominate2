@@ -155,6 +155,7 @@ const NicheLandingPage = ({ config: c }: Props) => {
               Keine Verträge. Kein Risiko. Erst Ergebnisse.
             </p>
             <MicroTrustBadge city={c.city} />
+            <NicheHeroImage alt={`Moderner ${c.service} in ${c.city} – professioneller Salon-Auftritt`} />
             <GoogleMapsMockup serviceName={c.service} city={c.city} />
           </div>
         </section>
