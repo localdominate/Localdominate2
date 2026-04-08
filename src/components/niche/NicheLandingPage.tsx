@@ -234,6 +234,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
           </section>
         </SectionFadeIn>
 
+        {/* 3.5 TRANSFORMATION BEFORE/AFTER */}
+        <SectionFadeIn>
+          <NicheTransformationSection service={c.service} onCtaClick={() => trackCta("transformation")} />
+        </SectionFadeIn>
+
         {/* 4. WHAT YOU GET */}
         <SectionFadeIn>
           <section className="bg-background-alt px-4 py-16 md:py-24">
