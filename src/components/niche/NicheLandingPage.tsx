@@ -242,6 +242,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <NicheTransformationSection service={c.service} onCtaClick={() => trackCta("transformation")} />
         </SectionFadeIn>
 
+        {/* 4.5 IMAGE SHOWCASE */}
+        <SectionFadeIn>
+          <NicheImageShowcase service={c.service} city={c.city} />
+        </SectionFadeIn>
+
         {/* 5. LEISTUNGEN */}
         <SectionFadeIn>
           <section className="bg-background-alt px-4 py-16 md:py-24">
