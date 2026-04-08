@@ -246,7 +246,7 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <section className="px-4 py-16 md:py-24">
             <div className="container max-w-4xl text-center">
               <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Proven Results</p>
-              <h2 className="text-2xl md:text-4xl font-bold mb-10">Real results for local businesses</h2>
+              <h2 className="text-2xl md:text-4xl font-bold mb-10">Real results for {c.nicheLabel.toLowerCase()} in {c.city}</h2>
               <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto mb-10">
                 {c.proofStats.map((stat, i) => (
                   <div key={i} className="p-4 md:p-6 bg-card border border-border/50 rounded-2xl">
