@@ -21,6 +21,8 @@ import SectionFadeIn from "./SectionFadeIn";
 import InlineCTA from "./InlineCTA";
 import NicheTransformationSection from "./NicheTransformationSection";
 import NicheWebsiteAddon from "./NicheWebsiteAddon";
+import NicheHeroImage from "./NicheHeroImage";
+import NicheImageShowcase from "./NicheImageShowcase";
 
 const BASE_URL = "https://ejdhisidjs.lovable.app";
 
