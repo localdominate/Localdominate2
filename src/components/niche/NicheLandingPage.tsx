@@ -19,6 +19,8 @@ import GoogleMapsMockup from "./GoogleMapsMockup";
 import NicheLeadForm from "./NicheLeadForm";
 import SectionFadeIn from "./SectionFadeIn";
 import InlineCTA from "./InlineCTA";
+import NicheTransformationSection from "./NicheTransformationSection";
+import NicheWebsiteAddon from "./NicheWebsiteAddon";
 
 const BASE_URL = "https://ejdhisidjs.lovable.app";
 
@@ -232,6 +234,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
           </section>
         </SectionFadeIn>
 
+        {/* 3.5 TRANSFORMATION BEFORE/AFTER */}
+        <SectionFadeIn>
+          <NicheTransformationSection service={c.service} onCtaClick={() => trackCta("transformation")} />
+        </SectionFadeIn>
+
         {/* 4. WHAT YOU GET */}
         <SectionFadeIn>
           <section className="bg-background-alt px-4 py-16 md:py-24">
@@ -385,7 +392,12 @@ const NicheLandingPage = ({ config: c }: Props) => {
           </section>
         </SectionFadeIn>
 
-        {/* 9. FINAL CTA */}
+        {/* 9. WEBSITE ADD-ON */}
+        <SectionFadeIn>
+          <NicheWebsiteAddon service={c.service} nicheLabel={c.nicheLabel} onRequestClick={() => trackCta("website_addon")} />
+        </SectionFadeIn>
+
+        {/* 10. FINAL CTA */}
         <section className="bg-[hsl(var(--pain-bg))] text-[hsl(var(--pain-fg))] px-4 py-16 md:py-24">
           <div className="container max-w-3xl text-center">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6">{c.finalHeadline}</h2>
