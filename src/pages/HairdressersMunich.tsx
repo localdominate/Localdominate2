@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 import { ArrowRight, Check, Scissors, Star, MapPin, Camera, BarChart3, Users, Clock, ShieldCheck, ChevronRight } from "lucide-react";
 import { trackButtonClick, trackScrollDepth } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
