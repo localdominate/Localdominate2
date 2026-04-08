@@ -126,8 +126,11 @@ const NicheLandingPage = ({ config: c }: Props) => {
               {c.heroH1}{" "}
               <span className="text-gradient">{c.heroH1Highlight}</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-2 leading-relaxed">
               {c.heroSubheadline}
+            </p>
+            <p className="text-sm text-primary font-medium mb-4">
+              More visibility. More bookings. Less uncertainty.
             </p>
             <p className="text-sm text-muted-foreground mb-4">
               Trusted by {c.nicheLabel.toLowerCase()} across {c.city} · Powered by{" "}
