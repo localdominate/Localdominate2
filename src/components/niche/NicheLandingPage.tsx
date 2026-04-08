@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import { ArrowRight, Check, Star, MapPin, Camera, BarChart3, Users, Clock, ShieldCheck, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { trackButtonClick, trackScrollDepth } from "@/lib/dataLayer";
 import { openStripeCheckout } from "@/lib/stripe";
 import {
@@ -44,8 +45,24 @@ const buildJsonLd = (c: NicheConfig) => [
     "@id": `${BASE_URL}/${c.slug}#business`,
     "name": `Local Dominator – ${c.niche} Marketing ${c.city}`,
     "description": c.metaDescription,
-    "areaServed": { "@type": "City", "name": c.city },
-    "url": `${BASE_URL}/${c.slug}`
+    "url": `${BASE_URL}/${c.slug}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": c.city,
+      "addressRegion": "Bavaria",
+      "addressCountry": "DE"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": c.city,
+      "sameAs": `https://en.wikipedia.org/wiki/${c.city}`
+    },
+    "priceRange": "€€",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.582 },
+      "geoRadius": "25000"
+    }
   },
   {
     "@type": "Service",
@@ -111,6 +128,10 @@ const NicheLandingPage = ({ config: c }: Props) => {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
               {c.heroSubheadline}
+            </p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Trusted by {c.nicheLabel.toLowerCase()} across {c.city} · Powered by{" "}
+              <Link to="/" className="text-primary hover:underline">Local Dominator</Link>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
               <Button variant="cta" size="ctaLarge" className="group w-full sm:w-auto" onClick={() => trackCta("hero")}>
@@ -225,7 +246,7 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <section className="px-4 py-16 md:py-24">
             <div className="container max-w-4xl text-center">
               <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Proven Results</p>
-              <h2 className="text-2xl md:text-4xl font-bold mb-10">Real results for local businesses</h2>
+              <h2 className="text-2xl md:text-4xl font-bold mb-10">Real results for {c.nicheLabel.toLowerCase()} in {c.city}</h2>
               <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto mb-10">
                 {c.proofStats.map((stat, i) => (
                   <div key={i} className="p-4 md:p-6 bg-card border border-border/50 rounded-2xl">
@@ -255,7 +276,7 @@ const NicheLandingPage = ({ config: c }: Props) => {
                 See your {c.service}'s potential <span className="text-primary">(free)</span>
               </h2>
               <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-                Get a personalized report showing exactly how to get more clients.
+                Get a personalized report showing exactly how your {c.service} in {c.city} can attract more clients.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
                 {["Missed client opportunities", "Competitor comparison", "Custom growth plan"].map((item, i) => (
@@ -351,6 +372,9 @@ const NicheLandingPage = ({ config: c }: Props) => {
               <span className="flex items-center gap-1"><Check className="w-4 h-4" /> No risk</span>
               <span className="flex items-center gap-1"><Check className="w-4 h-4" /> Results first</span>
             </div>
+            <p className="mt-6 text-xs opacity-50">
+              <Link to="/" className="hover:underline">Local Dominator</Link> · Marketing for {c.nicheLabel.toLowerCase()} in {c.city}
+            </p>
           </div>
         </section>
       </div>
