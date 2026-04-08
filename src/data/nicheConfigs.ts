@@ -91,20 +91,20 @@ export const NICHE_CONFIGS: Record<string, NicheConfig> = {
     heroEyebrow: "For Hair Salons in Munich",
     heroH1: "Get More Clients for Your Salon in Munich –",
     heroH1Highlight: "Without Doing Anything Yourself",
-    heroSubheadline: "We help hair salons appear on Google, attract new clients, and fill empty chairs – fully done for you.",
-    problemHeadline: "Empty chairs cost you money –",
-    problemHighlight: "every single day",
+    heroSubheadline: "We help hair salons in Munich stay fully booked – even when costs rise and clients become more selective.",
+    problemHeadline: "Keeping your salon fully booked is getting harder –",
+    problemHighlight: "and it shows",
     problemBullets: [
-      "You rely on walk-ins or old clients",
-      "New clients go to competitors on Google",
-      "Your salon is not visible online",
-      "You don't have time for marketing"
+      "Costs are rising, but prices can't always follow",
+      "Clients book less frequently or compare more",
+      "Competitors show up stronger on Google",
+      "Empty slots become more noticeable"
     ],
-    problemClosing: "If people can't find you, they won't book.",
+    problemClosing: "In today's market, visibility decides who gets booked – and who doesn't.",
     solutionSteps: [
-      { title: "We put your salon on top of Google", desc: "Your salon appears when people search for hairdressers in Munich." },
-      { title: "We make you look better than competitors", desc: "More reviews, better photos, stronger first impression." },
-      { title: "We send you ready-to-book clients", desc: "People find you, trust you, and book an appointment." }
+      { title: "We make your salon easy to find", desc: "Your salon appears when people in Munich search for a hairdresser." },
+      { title: "We build trust before the first visit", desc: "Better reviews, better photos, a stronger first impression." },
+      { title: "We bring clients who are ready to book", desc: "People find you, trust you, and schedule an appointment." }
     ],
     solutionCta: "See your salon potential",
     whatYouGetClosingPrefix: "You cut hair.",
