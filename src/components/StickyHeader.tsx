@@ -83,9 +83,27 @@ const StickyHeader = () => {
         { path: "/anwalt-marketing", label: "Legal", icon: Scale },
       ],
     },
+    ar: {
+      brand: "Local Dominator",
+      cta: "ابدأ الآن",
+      menu: {
+        offer: "العرض",
+        blog: "المدونة والأدلة",
+        lexikon: "معجم SEO",
+        industries: "القطاعات",
+        partner: "كن شريكًا",
+        contact: "اتصل بنا",
+      },
+      industries: [
+        { path: "/restaurant-marketing", label: "مطعم", icon: Utensils },
+        { path: "/handwerker-marketing", label: "حرفيون", icon: Wrench },
+        { path: "/arztpraxis-marketing", label: "عيادة", icon: Stethoscope },
+        { path: "/anwalt-marketing", label: "محاماة", icon: Scale },
+      ],
+    },
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   const handleCtaClick = () => {
     trackButtonClick("sticky_header_cta", "sticky_header", 299);
