@@ -198,21 +198,21 @@ const OfferSection = () => {
                 <div className="w-full mb-4 p-3 bg-success/10 border border-success/30 rounded-lg">
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-muted-foreground">
-                      {language === 'de' ? 'Basispaket' : 'Base package'}
+                      {language === 'de' ? 'Basispaket' : language === 'ar' ? 'الباقة الأساسية' : 'Base package'}
                     </span>
-                    <span className="font-medium">{basePrice}€</span>
+                    <span className="font-medium">{formatPrice(basePrice, language)}</span>
                   </div>
                   <div className="flex justify-between items-center text-sm mt-1">
                     <span className="text-muted-foreground">
-                      {selectedAddOns.length} Add-On{selectedAddOns.length > 1 ? 's' : ''}
+                      {selectedAddOns.length} {language === 'ar' ? 'إضافة' : 'Add-On'}{selectedAddOns.length > 1 && language !== 'ar' ? 's' : ''}
                     </span>
-                    <span className="font-medium text-success">+{totalPrice - basePrice}€</span>
+                    <span className="font-medium text-success">+{formatPrice(totalPrice - basePrice, language)}</span>
                   </div>
                   <div className="border-t border-success/30 mt-2 pt-2 flex justify-between items-center">
                     <span className="font-semibold text-foreground">
-                      {language === 'de' ? 'Gesamt' : 'Total'}
+                      {language === 'de' ? 'Gesamt' : language === 'ar' ? 'الإجمالي' : 'Total'}
                     </span>
-                    <span className="font-bold text-lg text-primary">{totalPrice}€</span>
+                    <span className="font-bold text-lg text-primary">{formatPrice(totalPrice, language)}</span>
                   </div>
                 </div>
               )}
@@ -226,7 +226,7 @@ const OfferSection = () => {
                 onMouseLeave={ctaHoverProps.onMouseLeave}
               >
                 {selectedAddOns.length > 0 
-                  ? `${language === 'de' ? 'Jetzt kaufen' : 'Buy now'} (${totalPrice}€)`
+                  ? `${language === 'de' ? 'Jetzt kaufen' : language === 'ar' ? 'اشترِ الآن' : 'Buy now'} (${formatPrice(totalPrice, language)})`
                   : ctaText
                 }
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
