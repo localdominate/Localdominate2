@@ -8,11 +8,12 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 
 const FAQSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
+  const isRTL = language === "ar";
 
   return (
-    <section className="bg-background-alt section-padding px-4">
+    <section className="bg-background-alt section-padding px-4" dir={isRTL ? "rtl" : "ltr"}>
       <div ref={ref} className="container max-w-3xl">
         {/* Section header */}
         <div className={`text-center mb-12 reveal ${isVisible ? 'visible' : ''}`}>
@@ -32,10 +33,10 @@ const FAQSection = () => {
               value={`item-${index}`}
               className={`bg-card border border-border/50 rounded-xl px-4 md:px-6 data-[state=open]:border-primary/50 data-[state=open]:shadow-md transition-all reveal reveal-delay-${Math.min(index + 1, 5)} ${isVisible ? 'visible' : ''}`}
             >
-              <AccordionTrigger className="text-left text-base md:text-lg font-semibold hover:no-underline hover:text-primary py-4 md:py-5 min-h-[56px]">
+              <AccordionTrigger className={`${isRTL ? 'text-right' : 'text-left'} text-base md:text-lg font-semibold hover:no-underline hover:text-primary py-4 md:py-5 min-h-[56px]`}>
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-sm md:text-base leading-relaxed pb-4 md:pb-5">
+              <AccordionContent className={`text-muted-foreground text-sm md:text-base leading-relaxed pb-4 md:pb-5 ${isRTL ? 'text-right' : ''}`}>
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
