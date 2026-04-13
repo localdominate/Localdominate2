@@ -2067,7 +2067,7 @@ export const articleConclusions: Record<string, ArticleConclusionData> = {
  */
 export const getArticleConclusion = (
   slug: string,
-  language: "de" | "en" = "de"
+  language: string = "de"
 ): { summary: string; nextSteps: string[] } | null => {
   const data = articleConclusions[slug];
   if (!data) return null;

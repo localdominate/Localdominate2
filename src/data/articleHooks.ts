@@ -452,7 +452,7 @@ export const articleHooks: Record<string, ArticleHookData> = {
  * Get the hook for a given article slug and language.
  * Returns null if no hook is defined for the slug.
  */
-export const getArticleHook = (slug: string, language: "de" | "en" = "de"): string | null => {
+export const getArticleHook = (slug: string, language: string = "de"): string | null => {
   const hook = articleHooks[slug];
   if (!hook) return null;
   return hook[language] || hook.de;
