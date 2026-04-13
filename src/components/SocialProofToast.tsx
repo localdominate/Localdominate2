@@ -22,13 +22,23 @@ const englishCities = [
   "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Seattle"
 ];
 
+const arabicNames = [
+  "أحمد", "محمد", "خالد", "عمر", "فاطمة", "سارة", "نورة", "ليلى",
+  "يوسف", "علي", "حسن", "مريم", "ريم", "دانا", "لينا", "هدى"
+];
+
+const arabicCities = [
+  "دبي", "الرياض", "جدة", "أبوظبي", "الدوحة", "الكويت", "مسقط",
+  "عمّان", "بيروت", "القاهرة", "الدار البيضاء", "تونس"
+];
+
 const SocialProofToast = () => {
   const [notification, setNotification] = useState<{ name: string; city: string } | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const { language } = useLanguage();
 
-  const names = language === "de" ? germanNames : englishNames;
-  const cities = language === "de" ? germanCities : englishCities;
+  const names = language === "ar" ? arabicNames : language === "de" ? germanNames : englishNames;
+  const cities = language === "ar" ? arabicCities : language === "de" ? germanCities : englishCities;
 
   useEffect(() => {
     // Don't show on mobile
@@ -63,10 +73,13 @@ const SocialProofToast = () => {
     },
     en: {
       action: "just purchased"
+    },
+    ar: {
+      action: "اشترى للتو"
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   if (!notification) return null;
 
