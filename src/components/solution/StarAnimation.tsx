@@ -1,7 +1,58 @@
 import { useEffect, useState } from "react";
 import { Star, MessageSquare, QrCode } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
+
+const translations: Record<string, {
+  googleRating: string;
+  excellent: string;
+  optimizing: string;
+  reviewLink: string;
+  scanForStars: string;
+  reviews: { name: string; text: string }[];
+}> = {
+  de: {
+    googleRating: "Google Bewertung",
+    excellent: "Exzellent!",
+    optimizing: "Wird optimiert...",
+    reviewLink: "Bewertungs-Link",
+    scanForStars: "Scannen für 5-Sterne",
+    reviews: [
+      { name: "Maria S.", text: "Sehr professionell!" },
+      { name: "Thomas K.", text: "Top Service! ⭐⭐⭐⭐⭐" },
+      { name: "Lisa M.", text: "Absolut empfehlenswert" },
+    ],
+  },
+  en: {
+    googleRating: "Google Rating",
+    excellent: "Excellent!",
+    optimizing: "Optimizing...",
+    reviewLink: "Review Link",
+    scanForStars: "Scan for 5 Stars",
+    reviews: [
+      { name: "Maria S.", text: "Very professional!" },
+      { name: "Thomas K.", text: "Top Service! ⭐⭐⭐⭐⭐" },
+      { name: "Lisa M.", text: "Highly recommended" },
+    ],
+  },
+  ar: {
+    googleRating: "تقييم Google",
+    excellent: "ممتاز!",
+    optimizing: "جارٍ التحسين...",
+    reviewLink: "رابط التقييم",
+    scanForStars: "امسح للحصول على 5 نجوم",
+    reviews: [
+      { name: "سارة م.", text: "!احترافية عالية" },
+      { name: "أحمد ك.", text: "خدمة ممتازة! ⭐⭐⭐⭐⭐" },
+      { name: "ليلى ع.", text: "أنصح به بشدة" },
+    ],
+  },
+};
 
 const StarAnimation = () => {
+  const { language } = useLanguage();
+  const t = translations[language] || translations.de;
+  const isRTL = language === 'ar';
+  
   const [filledStars, setFilledStars] = useState(0);
   const [rating, setRating] = useState(3.2);
   const [reviews, setReviews] = useState<number[]>([]);
@@ -10,7 +61,6 @@ const StarAnimation = () => {
   useEffect(() => {
     const timers: ReturnType<typeof setTimeout>[] = [];
     
-    // Animate stars filling
     [1, 2, 3, 4, 5].forEach((star, index) => {
       timers.push(
         setTimeout(() => {
@@ -20,47 +70,21 @@ const StarAnimation = () => {
       );
     });
     
-    // Add reviews
     [0, 1, 2].forEach((review, index) => {
-      timers.push(
-        setTimeout(() => {
-          setReviews((prev) => [...prev, review]);
-        }, 2500 + index * 300)
-      );
+      timers.push(setTimeout(() => setReviews((prev) => [...prev, review]), 2500 + index * 300));
     });
     
-    // Show QR code
-    timers.push(
-      setTimeout(() => {
-        setShowQR(true);
-      }, 3500)
-    );
-    
-    // Reset and loop
-    timers.push(
-      setTimeout(() => {
-        setFilledStars(0);
-        setRating(3.2);
-        setReviews([]);
-        setShowQR(false);
-      }, 6000)
-    );
+    timers.push(setTimeout(() => setShowQR(true), 3500));
+    timers.push(setTimeout(() => { setFilledStars(0); setRating(3.2); setReviews([]); setShowQR(false); }, 6000));
 
     return () => timers.forEach(clearTimeout);
   }, [filledStars === 0]);
 
-  const reviewTexts = [
-    { name: "Maria S.", text: "Sehr professionell!" },
-    { name: "Thomas K.", text: "Top Service! ⭐⭐⭐⭐⭐" },
-    { name: "Lisa M.", text: "Absolut empfehlenswert" },
-  ];
-
   return (
-    <div className="relative w-full max-w-sm mx-auto">
+    <div className="relative w-full max-w-sm mx-auto" dir={isRTL ? 'rtl' : 'ltr'}>
       <div className="bg-card rounded-2xl border border-border shadow-lg p-4 space-y-4">
-        {/* Header with Rating */}
         <div className="text-center space-y-2">
-          <div className="flex justify-center gap-1">
+          <div className="flex justify-center gap-1" dir="ltr">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star
                 key={star}
@@ -76,19 +100,18 @@ const StarAnimation = () => {
             ))}
           </div>
           <div className="flex items-center justify-center gap-2">
-            <span className="text-3xl font-bold text-foreground">
+            <span className="text-3xl font-bold text-foreground" dir="ltr">
               {rating.toFixed(1)}
             </span>
-            <div className="text-left">
-              <div className="text-xs text-muted-foreground">Google Bewertung</div>
+            <div className={isRTL ? 'text-right' : 'text-left'}>
+              <div className="text-xs text-muted-foreground">{t.googleRating}</div>
               <div className="text-xs text-primary font-medium">
-                {filledStars === 5 ? "Exzellent!" : "Wird optimiert..."}
+                {filledStars === 5 ? t.excellent : t.optimizing}
               </div>
             </div>
           </div>
         </div>
         
-        {/* Mini Reviews */}
         <div className="space-y-2 min-h-[100px]">
           {reviews.map((reviewIndex) => (
             <div
@@ -100,17 +123,16 @@ const StarAnimation = () => {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-xs font-medium text-foreground">
-                  {reviewTexts[reviewIndex].name}
+                  {t.reviews[reviewIndex].name}
                 </div>
                 <div className="text-xs text-muted-foreground truncate">
-                  {reviewTexts[reviewIndex].text}
+                  {t.reviews[reviewIndex].text}
                 </div>
               </div>
             </div>
           ))}
         </div>
         
-        {/* QR Code */}
         <div className={`transition-all duration-500 ${showQR ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <div className="flex items-center gap-3 bg-primary/5 border border-primary/20 rounded-xl p-3">
             <div className="w-12 h-12 bg-background rounded-lg flex items-center justify-center border border-border relative overflow-hidden">
@@ -118,14 +140,13 @@ const StarAnimation = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-shimmer" />
             </div>
             <div className="flex-1">
-              <div className="text-xs font-medium text-foreground">Bewertungs-Link</div>
-              <div className="text-xs text-primary">Scannen für 5-Sterne</div>
+              <div className="text-xs font-medium text-foreground">{t.reviewLink}</div>
+              <div className="text-xs text-primary">{t.scanForStars}</div>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Decorative Glow */}
       <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-xl -z-10" />
     </div>
   );
