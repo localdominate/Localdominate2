@@ -37,10 +37,13 @@ const CountdownTimer = () => {
     },
     en: {
       label: "Offer ends in:"
+    },
+    ar: {
+      label: "ينتهي العرض خلال:"
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   return (
     <div className="flex items-center justify-center gap-3 bg-destructive/10 border border-destructive/30 rounded-xl px-4 py-3">

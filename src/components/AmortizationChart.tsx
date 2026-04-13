@@ -52,9 +52,18 @@ const AmortizationChart = ({
       after90: "After 90 days",
       profitLabel: "Profit",
     },
+    ar: {
+      title: "استثمارك عبر الزمن",
+      day: "يوم",
+      profit: "الربح التراكمي",
+      investment: "الاستثمار",
+      breakeven: "نقطة التعادل",
+      after90: "بعد 90 يوم",
+      profitLabel: "الربح",
+    },
   };
 
-  const t = translations[language];
+  const t = translations[language] || translations.de;
 
   // Generate chart data points
   const generateChartData = (): ChartDataPoint[] => {
