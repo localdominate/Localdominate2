@@ -14,15 +14,18 @@ const AGB = () => {
     en: {
       title: "Terms and Conditions",
       description: "Terms and conditions of Local Dominator - Our general terms for Google Maps optimization services."
+    },
+    ar: {
+      title: "الشروط والأحكام العامة",
+      description: "الشروط والأحكام العامة لـ Local Dominator - شروطنا العامة لخدمات تحسين خرائط Google."
     }
   };
 
-  const seo = seoContent[language];
+  const seo = seoContent[language] || seoContent.de;
 
   const content = {
     de: {
       title: "Allgemeine Geschäftsbedingungen",
-      back: "Zurück zur Startseite",
       sections: [
         {
           title: "§ 1 Geltungsbereich",
@@ -91,7 +94,6 @@ Mit dem Beginn der Ausführung des Vertrages vor Ablauf der Widerrufsfrist erkl�
     },
     en: {
       title: "Terms and Conditions",
-      back: "Back to Homepage",
       sections: [
         {
           title: "§ 1 Scope",
@@ -157,10 +159,78 @@ By agreeing to the start of contract execution before the expiry of the withdraw
 (3) Should individual provisions be invalid, the validity of the remaining provisions remains unaffected.`
         }
       ]
+    },
+    ar: {
+      title: "الشروط والأحكام العامة",
+      sections: [
+        {
+          title: "§ 1 نطاق التطبيق",
+          content: `(1) تنطبق هذه الشروط والأحكام العامة (المشار إليها فيما بعد بـ "الشروط") على جميع العقود المبرمة بين [اسم شركتك] (المشار إليه فيما بعد بـ "المزود") والعميل (المشار إليه فيما بعد بـ "العميل") عبر الموقع الإلكتروني.
+
+(2) لا يُعترف بالشروط المخالفة للعميل ما لم يوافق المزود صراحةً وكتابياً على صلاحيتها.`
+        },
+        {
+          title: "§ 2 إبرام العقد",
+          content: `(1) عرض المنتجات في المتجر الإلكتروني لا يشكل عرضاً ملزماً قانونياً، بل دعوة للطلب.
+
+(2) بالنقر على زر "طلب مع التزام بالدفع"، يقدم العميل عرضاً ملزماً.
+
+(3) يتم إبرام العقد عندما يقبل المزود عرض العميل من خلال تأكيد الطلب عبر البريد الإلكتروني.`
+        },
+        {
+          title: "§ 3 الأسعار وشروط الدفع",
+          content: `(1) الأسعار المعروضة هي أسعار نهائية وتشمل ضريبة القيمة المضافة القانونية.
+
+(2) يستحق سعر الشراء فوراً عند إبرام العقد.
+
+(3) تُعرض خيارات الدفع للعميل أثناء عملية الطلب.`
+        },
+        {
+          title: "§ 4 التسليم / تقديم الخدمة",
+          content: `(1) يتم تسليم المحتوى الرقمي عبر التنزيل أو البريد الإلكتروني.
+
+(2) تبدأ الخدمات خلال 48 ساعة من استلام الدفع.
+
+(3) يحتفظ المزود بالحق في عدم تقديم الخدمة إذا لم يكن ذلك ممكناً لسبب مهم.`
+        },
+        {
+          title: "§ 5 حق الانسحاب",
+          content: `يتمتع المستهلكون بحق انسحاب لمدة 14 يوماً. تفاصيل حق الانسحاب موجودة في سياسة الانسحاب.
+
+بالموافقة على بدء تنفيذ العقد قبل انتهاء فترة الانسحاب، يوافق المستهلك صراحةً ويؤكد علمه بأنه يفقد حق الانسحاب عند الوفاء الكامل بالعقد.`
+        },
+        {
+          title: "§ 6 الضمان والكفالة",
+          content: `(1) تنطبق حقوق الضمان القانونية.
+
+(2) يقدم المزود ضمان استرداد الأموال لمدة 30 يوماً بالشروط التالية:
+- نفّذ العميل جميع التحسينات وفقاً للتعليمات
+- منح العميل المزود فرصة لإجراء التحسينات
+- لم تُلاحظ زيادة قابلة للقياس في الاستفسارات
+
+(3) لا ينطبق الضمان في حالة الاستخدام غير السليم أو التغييرات المستقلة من قبل العميل.`
+        },
+        {
+          title: "§ 7 المسؤولية",
+          content: `(1) يتحمل المزود المسؤولية بدون قيود عن العمد والإهمال الجسيم.
+
+(2) في حالة الإهمال الطفيف، يتحمل المزود المسؤولية فقط عن انتهاك الالتزامات التعاقدية الجوهرية.
+
+(3) لا يضمن المزود مراتب ترتيب محددة في محركات البحث.`
+        },
+        {
+          title: "§ 8 أحكام ختامية",
+          content: `(1) ينطبق قانون جمهورية ألمانيا الاتحادية باستثناء اتفاقية الأمم المتحدة بشأن عقود البيع الدولي للبضائع.
+
+(2) مكان الاختصاص القضائي هو مقر عمل المزود، بشرط أن يكون العميل تاجراً.
+
+(3) في حالة بطلان أي من الأحكام الفردية، تظل صلاحية الأحكام المتبقية غير متأثرة.`
+        }
+      ]
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   return (
     <>
@@ -169,7 +239,7 @@ By agreeing to the start of contract execution before the expiry of the withdraw
         description={seo.description}
         noindex={true}
         lang={language}
-        canonicalUrl={`https://localdominator.de/agb`}
+        canonicalUrl={`https://localdominate.org/agb`}
       />
       <main className="min-h-screen bg-background py-12 px-4">
         <div className="container max-w-3xl">
@@ -189,10 +259,6 @@ By agreeing to the start of contract execution before the expiry of the withdraw
             </div>
           ))}
         </div>
-
-        <p className="text-sm text-muted-foreground mt-12 text-center">
-          ⚠️ Bitte ersetze die Platzhalter mit deinen echten Daten
-        </p>
       </div>
     </main>
     </>

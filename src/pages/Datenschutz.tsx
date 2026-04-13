@@ -14,15 +14,18 @@ const Datenschutz = () => {
     en: {
       title: "Privacy Policy",
       description: "Privacy policy of Local Dominator - Information about how we handle your personal data."
+    },
+    ar: {
+      title: "سياسة الخصوصية",
+      description: "سياسة الخصوصية لـ Local Dominator - معلومات حول كيفية تعاملنا مع بياناتك الشخصية."
     }
   };
 
-  const seo = seoContent[language];
+  const seo = seoContent[language] || seoContent.de;
 
   const content = {
     de: {
       title: "Datenschutzerklärung",
-      back: "Zurück zur Startseite",
       sections: [
         {
           title: "1. Datenschutz auf einen Blick",
@@ -92,7 +95,6 @@ Google Analytics verwendet so genannte „Cookies". Das sind Textdateien, die au
     },
     en: {
       title: "Privacy Policy",
-      back: "Back to Homepage",
       sections: [
         {
           title: "1. Privacy at a Glance",
@@ -159,10 +161,79 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
 • Revoke consent given`
         }
       ]
+    },
+    ar: {
+      title: "سياسة الخصوصية",
+      sections: [
+        {
+          title: "1. الخصوصية في لمحة",
+          content: `معلومات عامة
+
+توفر الملاحظات التالية نظرة عامة بسيطة على ما يحدث لبياناتك الشخصية عند زيارة هذا الموقع. البيانات الشخصية هي أي بيانات يمكن استخدامها للتعرف عليك شخصياً.
+
+جمع البيانات على هذا الموقع
+
+من المسؤول عن جمع البيانات على هذا الموقع؟
+تتم معالجة البيانات على هذا الموقع بواسطة مشغل الموقع. يمكنك العثور على بيانات الاتصال الخاصة بهم في البيانات القانونية لهذا الموقع.`
+        },
+        {
+          title: "2. الاستضافة",
+          content: `نستضيف محتوى موقعنا لدى المزود التالي:
+
+استضافة خارجية
+
+يتم استضافة هذا الموقع خارجياً. يتم تخزين البيانات الشخصية المجمعة على هذا الموقع على خوادم المضيف.`
+        },
+        {
+          title: "3. معلومات عامة وإلزامية",
+          content: `حماية البيانات
+
+يأخذ مشغلو هذا الموقع حماية بياناتك الشخصية على محمل الجد. نتعامل مع بياناتك الشخصية بسرية ووفقاً للوائح حماية البيانات القانونية وسياسة الخصوصية هذه.
+
+معلومات عن الجهة المسؤولة
+
+الجهة المسؤولة عن معالجة البيانات على هذا الموقع هي:
+
+[اسم شركتك]
+[عنوانك]
+[بريدك الإلكتروني]
+[رقم هاتفك]`
+        },
+        {
+          title: "4. جمع البيانات على هذا الموقع",
+          content: `ملفات تعريف الارتباط (Cookies)
+
+تستخدم مواقعنا ما يُسمى "ملفات تعريف الارتباط". وهي حزم بيانات صغيرة لا تسبب أي ضرر لجهازك. يتم تخزينها إما مؤقتاً لمدة الجلسة أو بشكل دائم على جهازك.
+
+ملفات سجل الخادم
+
+يقوم مزود الصفحات تلقائياً بجمع وتخزين المعلومات في ما يُسمى ملفات سجل الخادم، التي يرسلها متصفحك إلينا تلقائياً.`
+        },
+        {
+          title: "5. أدوات التحليل والإعلان",
+          content: `Google Analytics
+
+يستخدم هذا الموقع وظائف خدمة تحليل الويب Google Analytics. المزود هو Google Ireland Limited ("Google")، Gordon House, Barrow Street, Dublin 4, أيرلندا.
+
+يستخدم Google Analytics ما يُسمى "ملفات تعريف الارتباط". وهي ملفات نصية يتم تخزينها على جهاز الكمبيوتر الخاص بك وتمكّن من تحليل استخدامك للموقع.`
+        },
+        {
+          title: "6. حقوقك",
+          content: `لديك الحق في أي وقت في:
+
+• الحصول على معلومات حول بياناتك المخزنة لدينا
+• طلب تصحيح البيانات غير الصحيحة
+• طلب حذف بياناتك
+• طلب تقييد المعالجة
+• طلب نقل البيانات
+• الاعتراض على المعالجة
+• إلغاء الموافقة الممنوحة`
+        }
+      ]
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   return (
     <>
@@ -171,7 +242,7 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
         description={seo.description}
         noindex={true}
         lang={language}
-        canonicalUrl={`https://localdominator.de/datenschutz`}
+        canonicalUrl={`https://localdominate.org/datenschutz`}
       />
       <main className="min-h-screen bg-background py-12 px-4">
         <div className="container max-w-3xl">
@@ -191,10 +262,6 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
             </div>
           ))}
         </div>
-
-        <p className="text-sm text-muted-foreground mt-12 text-center">
-          ⚠️ Bitte ersetze die Platzhalter mit deinen echten Daten
-        </p>
       </div>
     </main>
     </>
