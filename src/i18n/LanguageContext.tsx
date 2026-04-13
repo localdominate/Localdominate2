@@ -11,22 +11,20 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const RTL_LANGUAGES: Language[] = ["ar"];
+
 const getInitialLanguage = (): Language => {
   if (typeof window === "undefined") return "de";
   
-  // 1. Gespeicherte Präferenz hat Vorrang
   const saved = localStorage.getItem("language") as Language;
-  if (saved === "en" || saved === "de") {
+  if (saved === "en" || saved === "de" || saved === "ar") {
     return saved;
   }
   
-  // 2. Browser-Sprache erkennen (für neue Besucher)
   const browserLang = navigator.language?.toLowerCase() || "";
-  if (browserLang.startsWith("en")) {
-    return "en";
-  }
+  if (browserLang.startsWith("en")) return "en";
+  if (browserLang.startsWith("ar")) return "ar";
   
-  // 3. Fallback: Deutsch
   return "de";
 };
 
@@ -37,10 +35,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     setLanguageState(lang);
     localStorage.setItem("language", lang);
     document.documentElement.lang = lang;
+    document.documentElement.dir = RTL_LANGUAGES.includes(lang) ? "rtl" : "ltr";
   };
 
   useEffect(() => {
     document.documentElement.lang = language;
+    document.documentElement.dir = RTL_LANGUAGES.includes(language) ? "rtl" : "ltr";
   }, [language]);
 
   const t = translations[language];

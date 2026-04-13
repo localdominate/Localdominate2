@@ -32,26 +32,19 @@ const LanguageSwitch = ({ variant = "fixed", showBlogLink = true }: LanguageSwit
           </Link>
         )}
         <div className="flex items-center bg-background/95 backdrop-blur-md border border-border rounded-full overflow-hidden shadow-lg">
-          <button
-            onClick={() => setLanguage("de")}
-            className={`px-3 py-1.5 text-sm font-semibold transition-all ${
-              language === "de"
-                ? "bg-primary text-primary-foreground"
-                : "text-foreground/70 hover:text-foreground"
-            }`}
-          >
-            DE
-          </button>
-          <button
-            onClick={() => setLanguage("en")}
-            className={`px-3 py-1.5 text-sm font-semibold transition-all ${
-              language === "en"
-                ? "bg-primary text-primary-foreground"
-                : "text-foreground/70 hover:text-foreground"
-            }`}
-          >
-            EN
-          </button>
+          {(["de", "en", "ar"] as const).map((lang) => (
+            <button
+              key={lang}
+              onClick={() => setLanguage(lang)}
+              className={`px-3 py-1.5 text-sm font-semibold transition-all ${
+                language === lang
+                  ? "bg-primary text-primary-foreground"
+                  : "text-foreground/70 hover:text-foreground"
+              }`}
+            >
+              {lang.toUpperCase()}
+            </button>
+          ))}
         </div>
       </div>
     </div>
