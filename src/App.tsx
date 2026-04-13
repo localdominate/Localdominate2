@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./i18n/LanguageContext";  
 import { ABTestProvider } from "@/hooks/useABTest";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 // Critical pages loaded immediately
 import Index from "./pages/Index";
@@ -196,17 +197,18 @@ const PageFallback = () => (
 );
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ABTestProvider>
-      <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <Suspense fallback={null}>
-            <CoreWebVitalsTracker trackToDatabase={false} />
-          </Suspense>
-          <BrowserRouter>
-            <Suspense fallback={<PageFallback />}>
+  <ErrorBoundary>
+    <QueryClientProvider client={queryClient}>
+      <ABTestProvider>
+        <LanguageProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <Suspense fallback={null}>
+              <CoreWebVitalsTracker trackToDatabase={false} />
+            </Suspense>
+            <BrowserRouter>
+              <Suspense fallback={<PageFallback />}>
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/analytics" element={<Analytics />} />
@@ -390,6 +392,7 @@ const App = () => (
       </LanguageProvider>
     </ABTestProvider>
   </QueryClientProvider>
+  </ErrorBoundary>
 );
 
 export default App;

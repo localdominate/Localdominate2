@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import { initDataLayer, trackPageView } from "@/lib/dataLayer";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 // Critical components loaded immediately
 import AnnouncementBar from "@/components/AnnouncementBar";
@@ -96,81 +97,82 @@ const Index = () => {
         <SocialProofToast />
       </Suspense>
       
-      {/* Below-the-fold content - Lazy loaded with providers */}
-      <Suspense fallback={<SectionFallback />}>
-        <AutoOptimizerProvider>
-          <AdvancedTrackingProvider>
-            <Suspense fallback={<SectionFallback />}>
-              <RankingComparison />
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <TrackedSection sectionName="pain">
-                <PainSection />
-              </TrackedSection>
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <ComparisonTable />
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <TrackedSection sectionName="solution">
-                <SolutionSection />
-              </TrackedSection>
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <ROICalculator />
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <TrackedSection sectionName="testimonials">
-                <TestimonialsSection />
-              </TrackedSection>
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <ValueStackSection />
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <TrackedSection sectionName="offer">
-                <OfferSection />
-              </TrackedSection>
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <GuaranteeSection />
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <ExpertSection />
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <TrackedSection sectionName="faq">
-                <FAQSection />
-              </TrackedSection>
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <TrackedSection sectionName="cta">
-                <FinalCTASection />
-              </TrackedSection>
-            </Suspense>
-            
-            <Suspense fallback={<SectionFallback />}>
-              <Footer />
-            </Suspense>
-            
-            {/* Mobile/Bottom Components inside provider - MobileStickyBar needs AutoOptimizerContext */}
-            <Suspense fallback={<NullFallback />}>
-              <MobileStickyBar />
-            </Suspense>
-          </AdvancedTrackingProvider>
-        </AutoOptimizerProvider>
-      </Suspense>
+      <ErrorBoundary fallback={<SectionFallback />}>
+        <Suspense fallback={<SectionFallback />}>
+          <AutoOptimizerProvider>
+            <AdvancedTrackingProvider>
+              <Suspense fallback={<SectionFallback />}>
+                <RankingComparison />
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <TrackedSection sectionName="pain">
+                  <PainSection />
+                </TrackedSection>
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <ComparisonTable />
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <TrackedSection sectionName="solution">
+                  <SolutionSection />
+                </TrackedSection>
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <ROICalculator />
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <TrackedSection sectionName="testimonials">
+                  <TestimonialsSection />
+                </TrackedSection>
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <ValueStackSection />
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <TrackedSection sectionName="offer">
+                  <OfferSection />
+                </TrackedSection>
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <GuaranteeSection />
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <ExpertSection />
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <TrackedSection sectionName="faq">
+                  <FAQSection />
+                </TrackedSection>
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <TrackedSection sectionName="cta">
+                  <FinalCTASection />
+                </TrackedSection>
+              </Suspense>
+              
+              <Suspense fallback={<SectionFallback />}>
+                <Footer />
+              </Suspense>
+              
+              {/* Mobile/Bottom Components inside provider - MobileStickyBar needs AutoOptimizerContext */}
+              <Suspense fallback={<NullFallback />}>
+                <MobileStickyBar />
+              </Suspense>
+            </AdvancedTrackingProvider>
+          </AutoOptimizerProvider>
+        </Suspense>
+      </ErrorBoundary>
       
       {/* Components that don't need AutoOptimizerContext */}
       <Suspense fallback={<NullFallback />}>
