@@ -49,7 +49,13 @@ const GoogleMapsMockup = ({ serviceName, city }: Props) => {
       <div className="grid grid-cols-2 gap-3">
         {/* Before */}
         <div className="bg-card border border-border/50 rounded-xl p-4 opacity-60">
-          <div className="text-xs text-muted-foreground mb-2" dir="ltr">Google Maps</div>
+          <div className="flex items-center gap-1 mb-2" dir="ltr">
+            <svg viewBox="0 0 24 24" className="w-3 h-3 flex-shrink-0">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#EA4335"/>
+              <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+            </svg>
+            <span className="text-xs text-muted-foreground">Google Maps</span>
+          </div>
           <div className="space-y-2">
             {[t.competitorA, t.competitorB, t.competitorC].map((name, i) => (
               <div key={i} className="flex items-center gap-2">
@@ -65,7 +71,13 @@ const GoogleMapsMockup = ({ serviceName, city }: Props) => {
         </div>
         {/* After */}
         <div className="bg-card border-2 border-primary/30 rounded-xl p-4">
-          <div className="text-xs text-primary font-semibold mb-2" dir="ltr">Google Maps</div>
+          <div className="flex items-center gap-1 mb-2" dir="ltr">
+            <svg viewBox="0 0 24 24" className="w-3 h-3 flex-shrink-0">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#EA4335"/>
+              <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+            </svg>
+            <span className="text-xs text-primary font-semibold">Google Maps</span>
+          </div>
           <div className="space-y-2">
             <div className={`flex items-center gap-2 bg-primary/5 rounded-lg p-1.5 -mx-1.5`}>
               <MapPin className="w-3 h-3 text-primary flex-shrink-0" />
