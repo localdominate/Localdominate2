@@ -15,6 +15,7 @@ import { useABTestConversion } from "@/hooks/useABTestConversion";
 import useCtaHoverTracking from "@/hooks/useCtaHoverTracking";
 import usePriceHoverTracking from "@/hooks/usePriceHoverTracking";
 import { useAdvancedTrackingContext } from "@/components/AdvancedTrackingProvider";
+import { convertPrice, getCurrencyPrefix, getCurrencySuffix, formatPrice } from "@/lib/currency";
 
 const OfferSection = () => {
   const { language, t } = useLanguage();
@@ -36,9 +37,16 @@ const OfferSection = () => {
     );
   };
   
-  // Calculate total price
+  // Calculate total price (in EUR base)
   const basePrice = 299;
   const totalPrice = calculateTotalPrice("standard", selectedAddOns);
+  
+  // Currency-aware prices
+  const displayBasePrice = convertPrice(basePrice, language);
+  const displayTotalPrice = convertPrice(totalPrice, language);
+  const displayAnchorPrice = convertPrice(1500, language);
+  const currencyPrefix = getCurrencyPrefix(language);
+  const currencySuffix = getCurrencySuffix(language);
   
   // Get optimized values
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
@@ -68,119 +76,81 @@ const OfferSection = () => {
 
   // Render price section based on variant
   const renderPriceSection = () => {
+    const dailyText = language === 'de' ? 'pro Tag für ein Jahr' : language === 'ar' ? 'يومياً لمدة سنة' : 'per day for a year';
+    const agencyLabel = language === 'de' ? 'Agentur' : language === 'ar' ? 'وكالة' : 'Agency';
+    
     switch (priceDisplay) {
       case 'daily':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
-              {priceDisplayText}
-            </p>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">{priceDisplayText}</p>
             <p className="text-5xl md:text-6xl font-bold text-foreground mb-2">
-              &lt;1€
+              {language === 'ar' ? '<$1' : '<1€'}
             </p>
-            <p className="text-muted-foreground mb-6">
-              {language === 'de' ? 'pro Tag für ein Jahr' : 'per day for a year'}
-            </p>
+            <p className="text-muted-foreground mb-6">{dailyText}</p>
           </div>
         );
       case 'savings':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-2">
-              {priceDisplayText}
-            </p>
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-2">{priceDisplayText}</p>
             <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayBasePrice} duration={2000} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-muted-foreground mb-6">
-              {t.offer.oneTime}
-            </p>
+            <p className="text-muted-foreground mb-6">{t.offer.oneTime}</p>
           </div>
         );
       case 'comparison':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
-              {priceDisplayText}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">{priceDisplayText}</p>
             <div className="flex items-center gap-4 mb-4">
               <div className="text-center">
-                <p className="text-2xl text-muted-foreground/50 line-through">1.500€+</p>
-                <p className="text-xs text-muted-foreground">{language === 'de' ? 'Agentur' : 'Agency'}</p>
+                <p className="text-2xl text-muted-foreground/50 line-through">{formatPrice(1500, language)}+</p>
+                <p className="text-xs text-muted-foreground">{agencyLabel}</p>
               </div>
               <span className="text-2xl">→</span>
               <div className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-foreground">299€</p>
+                <p className="text-4xl md:text-5xl font-bold text-foreground">{formatPrice(299, language)}</p>
                 <p className="text-xs text-primary font-semibold">Local Dominator</p>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6">
-              {t.offer.oneTime}
-            </p>
+            <p className="text-muted-foreground mb-6">{t.offer.oneTime}</p>
           </div>
         );
       case 'roi':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
             <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayBasePrice} duration={2000} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-6">
-              {priceDisplayText}
-            </p>
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-6">{priceDisplayText}</p>
           </div>
         );
       default: // 'standard'
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
-              {t.offer.yourPrice}
-            </p>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">{t.offer.yourPrice}</p>
             <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayBasePrice} duration={2000} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-muted-foreground mb-6">
-              {t.offer.oneTime}
-            </p>
+            <p className="text-muted-foreground mb-6">{t.offer.oneTime}</p>
           </div>
         );
     }
@@ -228,21 +198,21 @@ const OfferSection = () => {
                 <div className="w-full mb-4 p-3 bg-success/10 border border-success/30 rounded-lg">
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-muted-foreground">
-                      {language === 'de' ? 'Basispaket' : 'Base package'}
+                      {language === 'de' ? 'Basispaket' : language === 'ar' ? 'الباقة الأساسية' : 'Base package'}
                     </span>
-                    <span className="font-medium">{basePrice}€</span>
+                    <span className="font-medium">{formatPrice(basePrice, language)}</span>
                   </div>
                   <div className="flex justify-between items-center text-sm mt-1">
                     <span className="text-muted-foreground">
-                      {selectedAddOns.length} Add-On{selectedAddOns.length > 1 ? 's' : ''}
+                      {selectedAddOns.length} {language === 'ar' ? 'إضافة' : 'Add-On'}{selectedAddOns.length > 1 && language !== 'ar' ? 's' : ''}
                     </span>
-                    <span className="font-medium text-success">+{totalPrice - basePrice}€</span>
+                    <span className="font-medium text-success">+{formatPrice(totalPrice - basePrice, language)}</span>
                   </div>
                   <div className="border-t border-success/30 mt-2 pt-2 flex justify-between items-center">
                     <span className="font-semibold text-foreground">
-                      {language === 'de' ? 'Gesamt' : 'Total'}
+                      {language === 'de' ? 'Gesamt' : language === 'ar' ? 'الإجمالي' : 'Total'}
                     </span>
-                    <span className="font-bold text-lg text-primary">{totalPrice}€</span>
+                    <span className="font-bold text-lg text-primary">{formatPrice(totalPrice, language)}</span>
                   </div>
                 </div>
               )}
@@ -256,7 +226,7 @@ const OfferSection = () => {
                 onMouseLeave={ctaHoverProps.onMouseLeave}
               >
                 {selectedAddOns.length > 0 
-                  ? `${language === 'de' ? 'Jetzt kaufen' : 'Buy now'} (${totalPrice}€)`
+                  ? `${language === 'de' ? 'Jetzt kaufen' : language === 'ar' ? 'اشترِ الآن' : 'Buy now'} (${formatPrice(totalPrice, language)})`
                   : ctaText
                 }
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
