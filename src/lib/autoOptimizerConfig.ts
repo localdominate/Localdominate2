@@ -123,26 +123,31 @@ export const PRICE_DISPLAY_VARIANTS: Record<string, { de: string; en: string; ar
 };
 
 // Urgency type variants
-export const URGENCY_VARIANTS: Record<string, { de: string; en: string }> = {
+export const URGENCY_VARIANTS: Record<string, { de: string; en: string; ar: string }> = {
   countdown: {
     de: '⏰ Angebot endet in',
-    en: '⏰ Offer ends in'
+    en: '⏰ Offer ends in',
+    ar: '⏰ ينتهي العرض خلال'
   },
   spots: {
     de: '🔥 NUR NOCH 7 PLÄTZE DIESEN MONAT',
-    en: '🔥 ONLY 7 SPOTS LEFT THIS MONTH'
+    en: '🔥 ONLY 7 SPOTS LEFT THIS MONTH',
+    ar: '🔥 فقط 7 أماكن متبقية هذا الشهر'
   },
   time_limited: {
     de: '⚡ Limitiertes Angebot – nur noch heute',
-    en: '⚡ Limited offer – today only'
+    en: '⚡ Limited offer – today only',
+    ar: '⚡ عرض محدود – اليوم فقط'
   },
   social: {
     de: '👥 12 Kunden haben heute gebucht',
-    en: '👥 12 customers booked today'
+    en: '👥 12 customers booked today',
+    ar: '👥 ١٢ عميلاً حجزوا اليوم'
   },
   none: {
     de: '',
-    en: ''
+    en: '',
+    ar: ''
   }
 };
 
