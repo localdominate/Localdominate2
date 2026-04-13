@@ -63,10 +63,13 @@ const SocialProofToast = () => {
     },
     en: {
       action: "just purchased"
+    },
+    ar: {
+      action: "اشترى للتو"
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   if (!notification) return null;
 
