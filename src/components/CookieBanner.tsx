@@ -98,10 +98,18 @@ const CookieBanner = () => {
       essentialOnly: "Essential Only",
       privacyLink: "Privacy Policy",
       moreInfo: "Learn more"
+    },
+    ar: {
+      title: "إعدادات ملفات تعريف الارتباط",
+      text: "نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بموافقتك، نستخدم أيضًا Google Analytics لتحسين الموقع.",
+      acceptAll: "قبول الكل",
+      essentialOnly: "الضرورية فقط",
+      privacyLink: "سياسة الخصوصية",
+      moreInfo: "اعرف المزيد"
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   if (!isVisible) return null;
 
@@ -173,7 +181,7 @@ export const CookieSettingsButton = () => {
       className="text-pain-foreground/60 hover:text-primary transition-colors text-sm flex items-center gap-1"
     >
       <Settings className="w-3 h-3" />
-      {language === "de" ? "Cookie-Einstellungen" : "Cookie Settings"}
+      {language === "ar" ? "إعدادات ملفات تعريف الارتباط" : language === "de" ? "Cookie-Einstellungen" : "Cookie Settings"}
     </button>
   );
 };
