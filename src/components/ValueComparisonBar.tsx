@@ -22,9 +22,14 @@ const ValueComparisonBar = ({ totalValue, yourPrice }: ValueComparisonBarProps) 
       yourPrice: "Your Price",
       savings: "You Save",
     },
+    ar: {
+      totalValue: "القيمة الإجمالية",
+      yourPrice: "سعرك",
+      savings: "توفيرك",
+    },
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
   const savings = totalValue - yourPrice;
   const pricePercentage = (yourPrice / totalValue) * 100;
 

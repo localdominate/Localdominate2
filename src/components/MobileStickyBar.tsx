@@ -20,7 +20,8 @@ const MobileStickyBar = () => {
   const t = {
     de: { home: "Start", blog: "Blog", offer: "Angebot", cta: "Starten" },
     en: { home: "Home", blog: "Blog", offer: "Offer", cta: "Start" },
-  }[language];
+    ar: { home: "الرئيسية", blog: "المدونة", offer: "العرض", cta: "ابدأ" },
+  }[language] || { home: "Start", blog: "Blog", offer: "Angebot", cta: "Starten" };
 
   const handleCtaClick = () => {
     trackButtonClick("mobile_bottom_nav_cta", "mobile_bottom_nav", 299);
