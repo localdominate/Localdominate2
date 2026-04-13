@@ -392,6 +392,7 @@ const App = () => (
       </LanguageProvider>
     </ABTestProvider>
   </QueryClientProvider>
+  </ErrorBoundary>
 );
 
 export default App;
