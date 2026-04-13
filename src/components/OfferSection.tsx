@@ -76,119 +76,81 @@ const OfferSection = () => {
 
   // Render price section based on variant
   const renderPriceSection = () => {
+    const dailyText = language === 'de' ? 'pro Tag für ein Jahr' : language === 'ar' ? 'يومياً لمدة سنة' : 'per day for a year';
+    const agencyLabel = language === 'de' ? 'Agentur' : language === 'ar' ? 'وكالة' : 'Agency';
+    
     switch (priceDisplay) {
       case 'daily':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
-              {priceDisplayText}
-            </p>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">{priceDisplayText}</p>
             <p className="text-5xl md:text-6xl font-bold text-foreground mb-2">
-              &lt;1€
+              {language === 'ar' ? '<$1' : '<1€'}
             </p>
-            <p className="text-muted-foreground mb-6">
-              {language === 'de' ? 'pro Tag für ein Jahr' : 'per day for a year'}
-            </p>
+            <p className="text-muted-foreground mb-6">{dailyText}</p>
           </div>
         );
       case 'savings':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-2">
-              {priceDisplayText}
-            </p>
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-2">{priceDisplayText}</p>
             <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayBasePrice} duration={2000} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-muted-foreground mb-6">
-              {t.offer.oneTime}
-            </p>
+            <p className="text-muted-foreground mb-6">{t.offer.oneTime}</p>
           </div>
         );
       case 'comparison':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
-              {priceDisplayText}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">{priceDisplayText}</p>
             <div className="flex items-center gap-4 mb-4">
               <div className="text-center">
-                <p className="text-2xl text-muted-foreground/50 line-through">1.500€+</p>
-                <p className="text-xs text-muted-foreground">{language === 'de' ? 'Agentur' : 'Agency'}</p>
+                <p className="text-2xl text-muted-foreground/50 line-through">{formatPrice(1500, language)}+</p>
+                <p className="text-xs text-muted-foreground">{agencyLabel}</p>
               </div>
               <span className="text-2xl">→</span>
               <div className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-foreground">299€</p>
+                <p className="text-4xl md:text-5xl font-bold text-foreground">{formatPrice(299, language)}</p>
                 <p className="text-xs text-primary font-semibold">Local Dominator</p>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6">
-              {t.offer.oneTime}
-            </p>
+            <p className="text-muted-foreground mb-6">{t.offer.oneTime}</p>
           </div>
         );
       case 'roi':
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
             <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayBasePrice} duration={2000} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-6">
-              {priceDisplayText}
-            </p>
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-6">{priceDisplayText}</p>
           </div>
         );
       default: // 'standard'
         return (
-          <div 
-            onMouseEnter={priceHoverProps.onMouseEnter}
-            onMouseLeave={priceHoverProps.onMouseLeave}
-          >
-            <p className="text-muted-foreground text-sm mb-2">
-              {t.offer.agencyPrice}
-            </p>
+          <div onMouseEnter={priceHoverProps.onMouseEnter} onMouseLeave={priceHoverProps.onMouseLeave}>
+            <p className="text-muted-foreground text-sm mb-2">{t.offer.agencyPrice}</p>
             <p className="text-3xl text-muted-foreground/50 line-through mb-4">
-              <AnimatedPriceCounter from={1500} to={1500} duration={0} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayAnchorPrice} duration={0} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
-              {t.offer.yourPrice}
-            </p>
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">{t.offer.yourPrice}</p>
             <p className="text-6xl md:text-7xl font-bold text-foreground mb-2">
-              <AnimatedPriceCounter from={1500} to={299} duration={2000} />
+              <AnimatedPriceCounter from={displayAnchorPrice} to={displayBasePrice} duration={2000} prefix={currencyPrefix} suffix={currencySuffix} />
             </p>
-            <p className="text-muted-foreground mb-6">
-              {t.offer.oneTime}
-            </p>
+            <p className="text-muted-foreground mb-6">{t.offer.oneTime}</p>
           </div>
         );
     }
