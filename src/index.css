@@ -1615,3 +1615,39 @@
     display: none;
   }
 }
+
+/* RTL Support for Arabic */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .md\:text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .group-hover\:translate-x-1:hover {
+  --tw-translate-x: -0.25rem;
+}
+
+[dir="rtl"] .md\:order-1 {
+  order: 2;
+}
+
+[dir="rtl"] .md\:order-2 {
+  order: 1;
+}

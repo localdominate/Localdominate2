@@ -12,7 +12,7 @@ interface ArticleHookProps {
  */
 const ArticleHook = ({ slug }: ArticleHookProps) => {
   const { language } = useLanguage();
-  const hook = getArticleHook(slug, language as "de" | "en");
+  const hook = getArticleHook(slug, language);
 
   if (!hook) return null;
 

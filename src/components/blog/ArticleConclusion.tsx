@@ -12,7 +12,7 @@ interface ArticleConclusionProps {
  */
 const ArticleConclusion = ({ slug }: ArticleConclusionProps) => {
   const { language } = useLanguage();
-  const conclusion = getArticleConclusion(slug, language as "de" | "en");
+  const conclusion = getArticleConclusion(slug, language);
 
   if (!conclusion) return null;
 

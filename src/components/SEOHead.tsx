@@ -8,7 +8,7 @@ interface SEOHeadProps {
   ogType?: string;
   keywords?: string;
   noindex?: boolean;
-  lang?: "de" | "en";
+  lang?: string;
   jsonLd?: object | object[];
   articlePublishedTime?: string;
   articleModifiedTime?: string;
