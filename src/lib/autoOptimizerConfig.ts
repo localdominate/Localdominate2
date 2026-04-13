@@ -94,26 +94,31 @@ export const HEADLINE_VARIANTS: Record<string, { de: string; en: string }> = {
 };
 
 // Price display variants
-export const PRICE_DISPLAY_VARIANTS: Record<string, { de: string; en: string }> = {
+export const PRICE_DISPLAY_VARIANTS: Record<string, { de: string; en: string; ar: string }> = {
   standard: {
     de: '299€ (einmalig)',
-    en: '€299 (one-time)'
+    en: '€299 (one-time)',
+    ar: '$329 (دفعة واحدة)'
   },
   daily: {
     de: 'Unter 1€ pro Tag',
-    en: 'Less than €1 per day'
+    en: 'Less than €1 per day',
+    ar: 'أقل من $1 يومياً'
   },
   savings: {
     de: 'Du sparst 1.201€',
-    en: 'You save €1,201'
+    en: 'You save €1,201',
+    ar: 'توفر $1,321'
   },
   comparison: {
     de: '6x günstiger als Agentur',
-    en: '6x cheaper than agency'
+    en: '6x cheaper than agency',
+    ar: '6 أضعاف أرخص من الوكالات'
   },
   roi: {
     de: 'ROI innerhalb 30 Tagen',
-    en: 'ROI within 30 days'
+    en: 'ROI within 30 days',
+    ar: 'عائد الاستثمار خلال 30 يوم'
   }
 };
 

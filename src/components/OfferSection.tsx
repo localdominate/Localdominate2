@@ -15,6 +15,7 @@ import { useABTestConversion } from "@/hooks/useABTestConversion";
 import useCtaHoverTracking from "@/hooks/useCtaHoverTracking";
 import usePriceHoverTracking from "@/hooks/usePriceHoverTracking";
 import { useAdvancedTrackingContext } from "@/components/AdvancedTrackingProvider";
+import { convertPrice, getCurrencyPrefix, getCurrencySuffix, formatPrice } from "@/lib/currency";
 
 const OfferSection = () => {
   const { language, t } = useLanguage();
@@ -36,9 +37,16 @@ const OfferSection = () => {
     );
   };
   
-  // Calculate total price
+  // Calculate total price (in EUR base)
   const basePrice = 299;
   const totalPrice = calculateTotalPrice("standard", selectedAddOns);
+  
+  // Currency-aware prices
+  const displayBasePrice = convertPrice(basePrice, language);
+  const displayTotalPrice = convertPrice(totalPrice, language);
+  const displayAnchorPrice = convertPrice(1500, language);
+  const currencyPrefix = getCurrencyPrefix(language);
+  const currencySuffix = getCurrencySuffix(language);
   
   // Get optimized values
   const ctaColor = getEffectiveValue('cta_color', 'all_ctas', 'primary');
