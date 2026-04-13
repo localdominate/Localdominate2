@@ -14,10 +14,14 @@ const Impressum = () => {
     en: {
       title: "Legal Notice",
       description: "Legal notice and imprint of Local Dominator - Your partner for Google Maps optimization."
+    },
+    ar: {
+      title: "البيانات القانونية",
+      description: "البيانات القانونية لـ Local Dominator - شريكك في تحسين خرائط Google."
     }
   };
 
-  const seo = seoContent[language];
+  const seo = seoContent[language] || seoContent.de;
 
   const content = {
     de: {
@@ -54,6 +58,7 @@ const Impressum = () => {
       jurisdictionText: "Sofern nicht gesetzlich anders vorgeschrieben, unterliegen alle Streitigkeiten dem Recht von Deutschland. Die ausschließliche Zuständigkeit liegt bei den zuständigen Gerichten in München.",
       privacy: "8. Datenschutz",
       privacyText: "Informationen zur Erhebung und Verarbeitung personenbezogener Daten finden Sie in unserer Datenschutzerklärung.",
+      privacyLink: "Datenschutzerklärung",
       legalContact: "9. Kontakt für rechtliche Mitteilungen",
       legalContactText: "Rechtliche Anfragen können gesendet werden an:"
     },
@@ -91,12 +96,51 @@ const Impressum = () => {
       jurisdictionText: "Unless legally required otherwise, all disputes shall be governed by the laws of Germany. Exclusive jurisdiction lies with the competent courts of Munich.",
       privacy: "8. Data Protection & Privacy",
       privacyText: "Information regarding the collection and processing of personal data is detailed in our Privacy Policy.",
+      privacyLink: "Privacy Policy",
       legalContact: "9. Contact for Legal Notices",
       legalContactText: "Legal inquiries can be sent to:"
+    },
+    ar: {
+      title: "البيانات القانونية",
+      back: "العودة للصفحة الرئيسية",
+      operatedBy: "تديره:",
+      contact: "التواصل",
+      responsibleForContent: "المسؤول عن المحتوى:",
+      representedBy: "يُمثَّل بواسطة:",
+      corporateInfo: "1. معلومات الشركة",
+      legalForm: "الشكل القانوني:",
+      independentNote: "يُدار هذا الموقع بشكل مستقل وليس تابعاً لأي جهة حكومية أو هيئة سياحية أو مؤسسة رسمية ما لم يُذكر صراحةً.",
+      disclaimer: "2. إخلاء المسؤولية العام",
+      disclaimerText: "يقدم Local Dominator المعلومات والخدمات لأغراض إعلامية عامة فقط.",
+      noGuarantee: "لا نضمن:",
+      guaranteeItems: ["الدقة", "الاكتمال", "الموثوقية", "التوفر", "الملاءمة", "الحداثة"],
+      userRisk: "استخدام جميع المعلومات يكون على مسؤولية المستخدم.",
+      thirdParty: "3. مواقع الطرف الثالث والروابط الخارجية",
+      thirdPartyText: "يحتوي Local Dominator على روابط لمواقع ومنصات خارجية تابعة لأطراف ثالثة. ليس لدينا سيطرة على محتوى أو دقة أو أمان هذه المواقع.",
+      thirdPartyDisclaimer: [
+        "نخلي مسؤوليتنا عن محتوى الأطراف الثالثة",
+        "نخلي مسؤوليتنا عن أي معاملات أو إجراءات على مواقع الأطراف الثالثة",
+        "لا يمكننا ضمان قانونية أو توفر أو سلامة الروابط الخارجية"
+      ],
+      thirdPartyNote: "مشغلو المواقع المرتبطة هم وحدهم المسؤولون عن محتواها.",
+      intellectualProperty: "4. الملكية الفكرية وحقوق النشر",
+      intellectualPropertyText: "ما لم يُذكر خلاف ذلك، فإن جميع المحتويات على Local Dominator — بما في ذلك على سبيل المثال لا الحصر النصوص والصور والرسومات والفيديوهات والتصاميم وعناصر العلامة التجارية والشعارات والأصول الرقمية والأدلة والمقالات — محمية بموجب قوانين حقوق النشر الدولية.",
+      intellectualPropertyWarning: "يُمنع منعاً باتاً إعادة الإنتاج أو التوزيع أو النسخ أو الاستخراج دون إذن كتابي. قد يؤدي الاستخدام غير المصرح به إلى إجراءات قانونية.",
+      limitation: "5. تحديد المسؤولية",
+      limitationText: "إلى أقصى حد يسمح به القانون، لا يتحمل Local Dominator ومشغلوه المسؤولية عن الأضرار غير المباشرة أو العرضية أو التبعية، أو خسارة الأرباح، أو فقدان البيانات، أو انقطاع الأعمال، أو عدم دقة معلومات الأطراف الثالثة.",
+      availability: "6. توفر الموقع",
+      availabilityText: "لا نضمن التوفر المستمر أو العمل الخالي من الأخطاء أو التشغيل الخالي من الفيروسات أو أمان نقل البيانات. قد نوقف أو نقيد أو ننهي الوصول في أي وقت دون إشعار.",
+      jurisdiction: "7. الاختصاص القضائي والقانون المعمول به",
+      jurisdictionText: "ما لم يُطلب قانونياً خلاف ذلك، تخضع جميع النزاعات لقوانين ألمانيا. يقع الاختصاص الحصري لدى المحاكم المختصة في ميونخ.",
+      privacy: "8. حماية البيانات والخصوصية",
+      privacyText: "معلومات حول جمع ومعالجة البيانات الشخصية مفصلة في سياسة الخصوصية الخاصة بنا.",
+      privacyLink: "سياسة الخصوصية",
+      legalContact: "9. التواصل للإشعارات القانونية",
+      legalContactText: "يمكن إرسال الاستفسارات القانونية إلى:"
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content.de;
 
   return (
     <>
@@ -201,7 +245,7 @@ const Impressum = () => {
               <p className="text-muted-foreground">
                 {t.privacyText}{" "}
                 <Link to="/datenschutz" className="text-primary hover:underline">
-                  {language === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy'}
+                  {t.privacyLink}
                 </Link>
               </p>
             </div>
