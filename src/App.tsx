@@ -48,6 +48,11 @@ const GymsMunich = lazy(() => import("./pages/GymsMunich"));
 const RestaurantsMunich = lazy(() => import("./pages/RestaurantsMunich"));
 const BarbersMunich = lazy(() => import("./pages/BarbersMunich"));
 const AIVisibilityAudit = lazy(() => import("./pages/AIVisibilityAudit"));
+const PlumbersBerlin = lazy(() => import("./pages/PlumbersBerlin"));
+const LawyersHamburg = lazy(() => import("./pages/LawyersHamburg"));
+const PhysiotherapyVienna = lazy(() => import("./pages/PhysiotherapyVienna"));
+const DentistsZurich = lazy(() => import("./pages/DentistsZurich"));
+const BakeriesCologne = lazy(() => import("./pages/BakeriesCologne"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -235,6 +240,11 @@ const App = () => (
                 <Route path="/gyms-munich" element={<GymsMunich />} />
                 <Route path="/restaurants-munich" element={<RestaurantsMunich />} />
                 <Route path="/barbers-munich" element={<BarbersMunich />} />
+                <Route path="/plumbers-berlin" element={<PlumbersBerlin />} />
+                <Route path="/lawyers-hamburg" element={<LawyersHamburg />} />
+                <Route path="/physiotherapy-vienna" element={<PhysiotherapyVienna />} />
+                <Route path="/dentists-zurich" element={<DentistsZurich />} />
+                <Route path="/bakeries-cologne" element={<BakeriesCologne />} />
                 <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
