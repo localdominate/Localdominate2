@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import { trackButtonClick } from "@/lib/dataLayer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface FormState {
   business: string;
@@ -102,6 +103,9 @@ const AIVisibilityAudit = () => {
   const [form, setForm] = useState<FormState>(initial);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ScoreResult | null>(null);
+  const [report, setReport] = useState<string | null>(null);
+  const [reportLoading, setReportLoading] = useState(false);
+  const { language } = useLanguage();
 
   const totalSteps = 5;
   const progress = Math.round(((step + 1) / (totalSteps + 1)) * 100);
@@ -136,6 +140,32 @@ const AIVisibilityAudit = () => {
       });
       setResult(score);
       setStep(totalSteps);
+
+      // Phase 7: generate AI narrative report (non-blocking UX)
+      setReportLoading(true);
+      supabase.functions
+        .invoke("generate-ai-audit-report", {
+          body: {
+            business: form.business.trim(),
+            city: form.city.trim(),
+            category: form.category.trim(),
+            website: form.website.trim() || undefined,
+            hasGbp: form.hasGbp,
+            reviewCount: form.reviewCount,
+            hasSchema: form.hasSchema,
+            publishesContent: form.publishesContent,
+            score,
+            language,
+          },
+        })
+        .then(({ data, error }) => {
+          if (error) {
+            console.error("[audit] report error", error);
+            return;
+          }
+          if (data?.report) setReport(data.report);
+        })
+        .finally(() => setReportLoading(false));
     } catch {
       toast.error("Etwas ist schiefgelaufen. Bitte versuche es erneut.");
     } finally {
