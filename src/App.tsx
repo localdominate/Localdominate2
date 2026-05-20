@@ -53,6 +53,11 @@ const LawyersHamburg = lazy(() => import("./pages/LawyersHamburg"));
 const PhysiotherapyVienna = lazy(() => import("./pages/PhysiotherapyVienna"));
 const DentistsZurich = lazy(() => import("./pages/DentistsZurich"));
 const BakeriesCologne = lazy(() => import("./pages/BakeriesCologne"));
+const WasIstGeo = lazy(() => import("./pages/blog/WasIstGeo"));
+const ChatgptZitiertLokaleUnternehmen = lazy(() => import("./pages/blog/ChatgptZitiertLokaleUnternehmen"));
+const AiVisibilityIndexLocalSeoMetrik = lazy(() => import("./pages/blog/AiVisibilityIndexLocalSeoMetrik"));
+const SchemaStrategieAiRetrieval = lazy(() => import("./pages/blog/SchemaStrategieAiRetrieval"));
+const PerplexityClaudeLokaleSichtbarkeit = lazy(() => import("./pages/blog/PerplexityClaudeLokaleSichtbarkeit"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -245,6 +250,11 @@ const App = () => (
                 <Route path="/physiotherapy-vienna" element={<PhysiotherapyVienna />} />
                 <Route path="/dentists-zurich" element={<DentistsZurich />} />
                 <Route path="/bakeries-cologne" element={<BakeriesCologne />} />
+                <Route path="/blog/was-ist-geo-generative-engine-optimization" element={<WasIstGeo />} />
+                <Route path="/blog/chatgpt-zitiert-lokale-unternehmen" element={<ChatgptZitiertLokaleUnternehmen />} />
+                <Route path="/blog/ai-visibility-index-local-seo-metrik" element={<AiVisibilityIndexLocalSeoMetrik />} />
+                <Route path="/blog/schema-strategie-ai-retrieval" element={<SchemaStrategieAiRetrieval />} />
+                <Route path="/blog/perplexity-claude-lokale-sichtbarkeit" element={<PerplexityClaudeLokaleSichtbarkeit />} />
                 <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
