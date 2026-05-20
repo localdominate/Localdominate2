@@ -1,4 +1,4 @@
-import { LucideIcon, Scissors, Dumbbell, UtensilsCrossed, Stethoscope, Sparkles } from "lucide-react";
+import { LucideIcon, Scissors, Dumbbell, UtensilsCrossed, Stethoscope, Sparkles, Wrench, Scale, HeartPulse, Croissant } from "lucide-react";
 
 export interface NicheConfig {
   // Core variables
@@ -52,6 +52,14 @@ export interface NicheConfig {
 
   // FAQ overrides (optional)
   faqs?: { q: string; a: string }[];
+
+  // AI Visibility / GEO layer (Phase 4 — optional)
+  aiSearch?: {
+    queries: string[];           // Natural-language queries users ask AI assistants
+    localEntities: string[];     // Districts, landmarks, neighborhoods for semantic grounding
+    aiOverviewAnswer: string;    // Curated 40-60 word answer LLMs can quote verbatim
+    benchmarks: { label: string; value: string }[]; // Local market benchmarks
+  };
 }
 
 const defaultFaqs = [
