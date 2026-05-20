@@ -12,6 +12,10 @@ const RankingComparison = lazy(() => import("@/components/RankingComparison"));
 const PainSection = lazy(() => import("@/components/PainSection"));
 const StatisticsBar = lazy(() => import("@/components/StatisticsBar"));
 
+// AI Visibility (GEO) sections
+const AISearchPreviewSection = lazy(() => import("@/components/ai/AISearchPreviewSection"));
+const AIVisibilityIndexSection = lazy(() => import("@/components/ai/AIVisibilityIndexSection"));
+
 // Lazy load below-the-fold components
 const ComparisonTable = lazy(() => import("@/components/ComparisonTable"));
 const SolutionSection = lazy(() => import("@/components/SolutionSection"));
@@ -84,6 +88,16 @@ const Index = () => {
       {/* Statistics Bar - E-E-A-T data signals */}
       <Suspense fallback={<NullFallback />}>
         <StatisticsBar />
+      </Suspense>
+
+      {/* AI Search Preview — GEO repositioning */}
+      <Suspense fallback={<SectionFallback />}>
+        <AISearchPreviewSection />
+      </Suspense>
+
+      {/* AI Visibility Index™ scorecard */}
+      <Suspense fallback={<SectionFallback />}>
+        <AIVisibilityIndexSection />
       </Suspense>
       
       {/* Initialize tracking after critical content */}
