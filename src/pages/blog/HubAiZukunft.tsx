@@ -7,6 +7,11 @@ const groups: HubArticleGroup[] = [
     description: "Wie AI Overviews, ChatGPT und Perplexity lokale Suche verändern",
     icon: "🤖",
     slugs: [
+      "was-ist-geo-generative-engine-optimization",
+      "chatgpt-zitiert-lokale-unternehmen",
+      "ai-visibility-index-local-seo-metrik",
+      "schema-strategie-ai-retrieval",
+      "perplexity-claude-lokale-sichtbarkeit",
       "google-ai-overviews-local-seo",
       "ai-search-optimization-2026",
       "website-content-ai-suchmaschinen",
