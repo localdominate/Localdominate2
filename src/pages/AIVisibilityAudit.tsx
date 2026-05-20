@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import { trackButtonClick } from "@/lib/dataLayer";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface FormState {
   business: string;
@@ -102,6 +103,9 @@ const AIVisibilityAudit = () => {
   const [form, setForm] = useState<FormState>(initial);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ScoreResult | null>(null);
+  const [report, setReport] = useState<string | null>(null);
+  const [reportLoading, setReportLoading] = useState(false);
+  const { language } = useLanguage();
 
   const totalSteps = 5;
   const progress = Math.round(((step + 1) / (totalSteps + 1)) * 100);
@@ -136,6 +140,32 @@ const AIVisibilityAudit = () => {
       });
       setResult(score);
       setStep(totalSteps);
+
+      // Phase 7: generate AI narrative report (non-blocking UX)
+      setReportLoading(true);
+      supabase.functions
+        .invoke("generate-ai-audit-report", {
+          body: {
+            business: form.business.trim(),
+            city: form.city.trim(),
+            category: form.category.trim(),
+            website: form.website.trim() || undefined,
+            hasGbp: form.hasGbp,
+            reviewCount: form.reviewCount,
+            hasSchema: form.hasSchema,
+            publishesContent: form.publishesContent,
+            score,
+            language,
+          },
+        })
+        .then(({ data, error }) => {
+          if (error) {
+            console.error("[audit] report error", error);
+            return;
+          }
+          if (data?.report) setReport(data.report);
+        })
+        .finally(() => setReportLoading(false));
     } catch {
       toast.error("Etwas ist schiefgelaufen. Bitte versuche es erneut.");
     } finally {
@@ -254,6 +284,30 @@ const AIVisibilityAudit = () => {
                   <ScoreBar label="Review Velocity" value={result.reviewVelocity} icon={Star} />
                   <ScoreBar label="Schema Coverage" value={result.schemaCoverage} icon={Database} />
                   <ScoreBar label="AI Retrievability" value={result.aiRetrievability} icon={Search} />
+                </div>
+
+                {/* Phase 7: Narrative report */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Sparkles className="w-4 h-4 text-primary" />
+                    <h3 className="font-semibold text-lg">Strategischer Report</h3>
+                  </div>
+                  {reportLoading && !report && (
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Analyse läuft – kontextspezifische Empfehlungen werden generiert…
+                    </div>
+                  )}
+                  {report && (
+                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap leading-relaxed">
+                      {report}
+                    </div>
+                  )}
+                  {!reportLoading && !report && (
+                    <p className="text-sm text-muted-foreground">
+                      Dein detaillierter Report wurde dir per E-Mail zugesendet.
+                    </p>
+                  )}
                 </div>
 
                 <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center">
