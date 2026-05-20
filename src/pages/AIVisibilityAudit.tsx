@@ -286,6 +286,30 @@ const AIVisibilityAudit = () => {
                   <ScoreBar label="AI Retrievability" value={result.aiRetrievability} icon={Search} />
                 </div>
 
+                {/* Phase 7: Narrative report */}
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Sparkles className="w-4 h-4 text-primary" />
+                    <h3 className="font-semibold text-lg">Strategischer Report</h3>
+                  </div>
+                  {reportLoading && !report && (
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Analyse läuft – kontextspezifische Empfehlungen werden generiert…
+                    </div>
+                  )}
+                  {report && (
+                    <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap leading-relaxed">
+                      {report}
+                    </div>
+                  )}
+                  {!reportLoading && !report && (
+                    <p className="text-sm text-muted-foreground">
+                      Dein detaillierter Report wurde dir per E-Mail zugesendet.
+                    </p>
+                  )}
+                </div>
+
                 <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center">
                   <h3 className="font-semibold text-lg mb-2">Bereit für Kategorie-Dominanz?</h3>
                   <p className="text-muted-foreground mb-4">Wir bauen deine AI Visibility Infrastructure auf – mit dem 5-Sterne-Automatismus™ und Keyword-Injektion™.</p>
