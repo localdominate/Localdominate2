@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { ArrowRight, ArrowLeft, Loader2, ShieldCheck, Sparkles, Bot, MapPin, Star, Database, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +8,7 @@ import { toast } from "sonner";
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
+import SEOHead from "@/components/SEOHead";
 import { trackButtonClick } from "@/lib/dataLayer";
 
 interface FormState {
@@ -145,13 +145,11 @@ const AIVisibilityAudit = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Helmet>
-        <title>Kostenloser AI-Sichtbarkeits-Audit | LocalDominate</title>
-        <meta name="description" content="Berechne deinen AI Visibility Index™ in 2 Minuten. Sieh wie sichtbar dein Unternehmen in ChatGPT, Gemini, Perplexity & Google AI Overviews ist." />
-        <link rel="canonical" href="https://localdominate.org/ai-visibility-audit" />
-        <meta property="og:title" content="Kostenloser AI-Sichtbarkeits-Audit" />
-        <meta property="og:description" content="In 2 Minuten zum AI Visibility Index™ für dein lokales Unternehmen." />
-      </Helmet>
+      <SEOHead
+        title="Kostenloser AI-Sichtbarkeits-Audit | LocalDominate"
+        description="Berechne deinen AI Visibility Index™ in 2 Minuten. Sieh wie sichtbar dein Unternehmen in ChatGPT, Gemini, Perplexity & Google AI Overviews ist."
+        canonicalUrl="https://localdominate.org/ai-visibility-audit"
+      />
       <StickyHeader />
       <main className="flex-1">
         <div className="container mx-auto px-4 pt-24 pb-12">
