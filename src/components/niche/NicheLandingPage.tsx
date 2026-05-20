@@ -25,6 +25,7 @@ import NicheHeroImage from "./NicheHeroImage";
 import NicheImageShowcase from "./NicheImageShowcase";
 import NicheTrustBar from "./NicheTrustBar";
 import NicheCredibilitySection from "./NicheCredibilitySection";
+import NicheAISearchSection from "./NicheAISearchSection";
 
 const BASE_URL = "https://ejdhisidjs.lovable.app";
 
@@ -79,11 +80,20 @@ const buildJsonLd = (c: NicheConfig) => [
   },
   {
     "@type": "FAQPage",
-    "mainEntity": (c.faqs || []).map(f => ({
-      "@type": "Question",
-      "name": f.q,
-      "acceptedAnswer": { "@type": "Answer", "text": f.a }
-    }))
+    "mainEntity": [
+      ...(c.aiSearch
+        ? [{
+            "@type": "Question",
+            "name": `Wie ranken ${c.nicheLabel} in ${c.city} in AI-Suchergebnissen?`,
+            "acceptedAnswer": { "@type": "Answer", "text": c.aiSearch.aiOverviewAnswer }
+          }]
+        : []),
+      ...(c.faqs || []).map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    ]
   }
 ];
 
@@ -257,6 +267,9 @@ const NicheLandingPage = ({ config: c }: Props) => {
         <SectionFadeIn>
           <NicheTransformationSection service={c.service} onCtaClick={() => trackCta("transformation")} />
         </SectionFadeIn>
+
+        {/* 4.2 AI VISIBILITY / GEO — only if config provides aiSearch data */}
+        <NicheAISearchSection config={c} />
 
         {/* 4.5 IMAGE SHOWCASE */}
         <SectionFadeIn>
