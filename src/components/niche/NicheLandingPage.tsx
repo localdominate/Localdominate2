@@ -268,6 +268,9 @@ const NicheLandingPage = ({ config: c }: Props) => {
           <NicheTransformationSection service={c.service} onCtaClick={() => trackCta("transformation")} />
         </SectionFadeIn>
 
+        {/* 4.2 AI VISIBILITY / GEO — only if config provides aiSearch data */}
+        <NicheAISearchSection config={c} />
+
         {/* 4.5 IMAGE SHOWCASE */}
         <SectionFadeIn>
           <NicheImageShowcase service={c.service} city={c.city} />
