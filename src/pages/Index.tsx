@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
-import HeroSection from "@/components/HeroSection";
+import HeroAIVisibility from "@/components/HeroAIVisibility";
 import { initDataLayer, trackPageView } from "@/lib/dataLayer";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
@@ -83,7 +83,7 @@ const Index = () => {
       {/* Critical Above-the-Fold Content - No Suspense wrapping */}
       <AnnouncementBar />
       <LanguageSwitch />
-      <HeroSection />
+      <HeroAIVisibility />
       
       {/* Statistics Bar - E-E-A-T data signals */}
       <Suspense fallback={<NullFallback />}>
