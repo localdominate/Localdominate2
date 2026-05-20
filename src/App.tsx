@@ -47,6 +47,7 @@ const DentistsMunich = lazy(() => import("./pages/DentistsMunich"));
 const GymsMunich = lazy(() => import("./pages/GymsMunich"));
 const RestaurantsMunich = lazy(() => import("./pages/RestaurantsMunich"));
 const BarbersMunich = lazy(() => import("./pages/BarbersMunich"));
+const AIVisibilityAudit = lazy(() => import("./pages/AIVisibilityAudit"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -234,6 +235,7 @@ const App = () => (
                 <Route path="/gyms-munich" element={<GymsMunich />} />
                 <Route path="/restaurants-munich" element={<RestaurantsMunich />} />
                 <Route path="/barbers-munich" element={<BarbersMunich />} />
+                <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
                 <Route path="/danke" element={<Danke />} />
