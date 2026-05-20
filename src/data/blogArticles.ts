@@ -4118,6 +4118,38 @@ export const blogArticles: BlogArticle[] = [
     en: { title: "FAQ: Content & Marketing for Local SEO", metaTitle: "FAQ Content Marketing Local SEO | 8 Answers", metaDescription: "8 frequently asked questions about local content, link building, citations.", excerpt: "Content, link building, citations — marketing questions answered.", category: "Resources" },
     readingTime: 7, publishedAt: "2026-03-08", updatedAt: "2026-03-08", icon: "✍️", keywords: ["local content marketing faq", "lokales linkbuilding faq", "citations faq"], featured: false
   },
+
+  // === GEO CLUSTER (Phase 5 — AI Search & Generative Engine Optimization) ===
+  {
+    slug: "was-ist-geo-generative-engine-optimization",
+    de: { title: "Was ist GEO? Generative Engine Optimization erklärt", metaTitle: "GEO erklärt: Generative Engine Optimization 2026 | Guide", metaDescription: "GEO (Generative Engine Optimization) ist die Disziplin, deine Inhalte für AI-Suchmaschinen wie ChatGPT, Gemini und Google AI Overviews zu optimieren. Hier erfährst du, wie es funktioniert.", excerpt: "Was GEO ist, wie es sich von klassischem SEO unterscheidet und welche konkreten Maßnahmen lokale Unternehmen 2026 ergreifen sollten.", category: "AI & Zukunft" },
+    en: { title: "What is GEO? Generative Engine Optimization explained", metaTitle: "GEO Explained: Generative Engine Optimization 2026 | Guide", metaDescription: "GEO (Generative Engine Optimization) is the discipline of optimizing content for AI search engines like ChatGPT, Gemini and Google AI Overviews.", excerpt: "What GEO is, how it differs from classic SEO, and what concrete steps local businesses should take in 2026.", category: "AI & Future" },
+    readingTime: 9, publishedAt: "2026-05-20", updatedAt: "2026-05-20", icon: "🤖", keywords: ["geo", "generative engine optimization", "ai seo", "geo vs seo", "ai search optimization"], featured: true
+  },
+  {
+    slug: "chatgpt-zitiert-lokale-unternehmen",
+    de: { title: "Wie zitiert ChatGPT lokale Unternehmen?", metaTitle: "Wie zitiert ChatGPT lokale Unternehmen? | Guide 2026", metaDescription: "Welche Signale ChatGPT nutzt, um lokale Unternehmen zu empfehlen — und wie du in seinen Antworten zitiert wirst. Mit konkreten Optimierungs-Schritten.", excerpt: "ChatGPT empfiehlt täglich Millionen lokaler Unternehmen. Hier erfährst du, wie das Modell entscheidet — und wie du in seinen Antworten landest.", category: "AI & Zukunft" },
+    en: { title: "How does ChatGPT cite local businesses?", metaTitle: "How ChatGPT Cites Local Businesses | Guide 2026", metaDescription: "Which signals ChatGPT uses to recommend local businesses — and how to get cited. With concrete optimization steps.", excerpt: "ChatGPT recommends millions of local businesses daily. Here's how the model decides — and how to land in its answers.", category: "AI & Future" },
+    readingTime: 8, publishedAt: "2026-05-20", updatedAt: "2026-05-20", icon: "💬", keywords: ["chatgpt local business", "chatgpt citations", "ai zitierfähigkeit", "chatgpt seo", "llm visibility"], featured: true
+  },
+  {
+    slug: "ai-visibility-index-local-seo-metrik",
+    de: { title: "AI Visibility Index – die neue Local-SEO-Metrik 2026", metaTitle: "AI Visibility Index 2026: Neue Local-SEO-Metrik | Guide", metaDescription: "Der AI Visibility Index misst, wie sichtbar dein Unternehmen in AI-Suchergebnissen ist. So setzt er sich zusammen und so verbesserst du ihn.", excerpt: "Klassisches Ranking reicht nicht mehr. Der AI Visibility Index misst Sichtbarkeit über Google, ChatGPT, Gemini, Perplexity und Co. — auf einer Skala.", category: "AI & Zukunft" },
+    en: { title: "AI Visibility Index – the new Local SEO metric 2026", metaTitle: "AI Visibility Index 2026: New Local SEO Metric | Guide", metaDescription: "The AI Visibility Index measures how visible your business is in AI search results across ChatGPT, Gemini, Perplexity and Google AI Overviews.", excerpt: "Classic ranking is no longer enough. The AI Visibility Index measures visibility across all major AI search engines on a single scale.", category: "AI & Future" },
+    readingTime: 8, publishedAt: "2026-05-20", updatedAt: "2026-05-20", icon: "📊", keywords: ["ai visibility index", "ai sichtbarkeit messen", "neue seo metriken", "ai retrievability", "geo metrics"], featured: false
+  },
+  {
+    slug: "schema-strategie-ai-retrieval",
+    de: { title: "Schema-Strategie für AI-Retrieval: So wirst du von LLMs gelesen", metaTitle: "Schema für AI Retrieval 2026: Komplette Strategie | Guide", metaDescription: "Welche Schema-Markups AI-Suchmaschinen wie ChatGPT, Gemini und Perplexity bevorzugen — mit Copy-Paste-JSON-LD für lokale Unternehmen.", excerpt: "AI-Suchmaschinen lesen strukturierte Daten anders als Google. Hier ist die komplette Schema-Strategie für maximale AI-Retrievability.", category: "AI & Zukunft" },
+    en: { title: "Schema Strategy for AI Retrieval: How to be read by LLMs", metaTitle: "Schema for AI Retrieval 2026: Complete Strategy | Guide", metaDescription: "Which schema markups AI search engines prefer — with copy-paste JSON-LD for local businesses.", excerpt: "AI search engines read structured data differently than Google. Here's the complete schema strategy for maximum AI retrievability.", category: "AI & Future" },
+    readingTime: 10, publishedAt: "2026-05-20", updatedAt: "2026-05-20", icon: "🧬", keywords: ["schema ai retrieval", "jsonld llm", "schema markup ai", "ai friendly schema", "geo schema"], featured: false
+  },
+  {
+    slug: "perplexity-claude-lokale-sichtbarkeit",
+    de: { title: "Perplexity & Claude für lokale Sichtbarkeit nutzen", metaTitle: "Perplexity & Claude für Local SEO 2026 | Guide", metaDescription: "Wie Perplexity und Claude lokale Unternehmen zitieren — und wie du auf beiden Plattformen optimal sichtbar wirst.", excerpt: "Neben ChatGPT und Gemini werden Perplexity und Claude immer wichtiger für lokale Suche. Hier ist die konkrete Optimierungs-Strategie.", category: "AI & Zukunft" },
+    en: { title: "Using Perplexity & Claude for local visibility", metaTitle: "Perplexity & Claude for Local SEO 2026 | Guide", metaDescription: "How Perplexity and Claude cite local businesses — and how to become optimally visible on both platforms.", excerpt: "Besides ChatGPT and Gemini, Perplexity and Claude are becoming increasingly important for local search.", category: "AI & Future" },
+    readingTime: 8, publishedAt: "2026-05-20", updatedAt: "2026-05-20", icon: "🔮", keywords: ["perplexity local seo", "claude ai seo", "ai assistants local business", "llm zitate", "perplexity citations"], featured: false
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4249,6 +4281,11 @@ const PUBLISHED_SLUGS = new Set([
   "ai-zukunft-hub",
   "troubleshooting-hub",
   "case-studies-hub",
+  "was-ist-geo-generative-engine-optimization",
+  "chatgpt-zitiert-lokale-unternehmen",
+  "ai-visibility-index-local-seo-metrik",
+  "schema-strategie-ai-retrieval",
+  "perplexity-claude-lokale-sichtbarkeit",
 ]);
 
 // Get only published articles (with pages), deduplicated
