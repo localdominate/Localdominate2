@@ -11,7 +11,7 @@ import LocalBusinessEcosystem from "@/components/blog/LocalBusinessEcosystem";
 import CityRankingChallenges from "@/components/blog/CityRankingChallenges";
 import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoKoelnImg from "@/assets/blog/local-seo-koeln.jpg";
+import localSeoKoelnImg from "@/assets/blog/local-seo-koeln.webp";
 import { 
   CheckCircle, 
   MapPin,

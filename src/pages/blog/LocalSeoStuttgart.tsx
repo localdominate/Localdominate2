@@ -7,7 +7,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoStuttgartImg from "@/assets/blog/local-seo-stuttgart.jpg";
+import localSeoStuttgartImg from "@/assets/blog/local-seo-stuttgart.webp";
 import { MapPin, Building2, TrendingUp, Target, Car, Lightbulb, Users, Star, CheckCircle, Globe, Calendar } from "lucide-react";
 
 const LocalSeoStuttgart = () => {

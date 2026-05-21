@@ -12,7 +12,7 @@ import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Star, MessageSquare, QrCode, Mail, Users, Gift, ThumbsUp, AlertTriangle } from "lucide-react";
-import googleBewertungenImg from "@/assets/blog/google-bewertungen.jpg";
+import googleBewertungenImg from "@/assets/blog/google-bewertungen.webp";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import ReviewWorkflowChecklist from "@/components/blog/ReviewWorkflowChecklist";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";

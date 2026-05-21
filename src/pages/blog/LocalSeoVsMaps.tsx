@@ -9,7 +9,7 @@ import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
 import BlogImage from '../../components/blog/BlogImage';
 import DefinitionBox from '../../components/blog/DefinitionBox';
-import localVsMapsImage from '../../assets/blog/local-vs-maps-seo.jpg';
+import localVsMapsImage from '../../assets/blog/local-vs-maps-seo.webp';
 
 const LocalSeoVsMaps: React.FC = () => {
   const articleData = {

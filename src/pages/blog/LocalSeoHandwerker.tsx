@@ -34,7 +34,7 @@ import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.jpg";
+import localSeoHandwerkerImg from "@/assets/blog/local-seo-handwerker.webp";
 import { 
   CheckCircle, 
   AlertTriangle, 

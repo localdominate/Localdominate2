@@ -14,7 +14,7 @@ import {
   Sparkles, Target, Type, Zap, Globe, BookOpen, Code, CheckCircle, XCircle
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import websiteAiImg from "@/assets/blog/website-content-ai-suchmaschinen.jpg";
+import websiteAiImg from "@/assets/blog/website-content-ai-suchmaschinen.webp";
 
 const WebsiteContentAiSuchmaschinen = () => {
   const { language } = useLanguage();

@@ -7,7 +7,7 @@ import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
 import BlogImage from '../../components/blog/BlogImage';
-import gbpOeffnungszeitenImage from '../../assets/blog/gbp-oeffnungszeiten.jpg';
+import gbpOeffnungszeitenImage from '../../assets/blog/gbp-oeffnungszeiten.webp';
 
 const GbpOeffnungszeitenSondertage: React.FC = () => {
   const articleData = {

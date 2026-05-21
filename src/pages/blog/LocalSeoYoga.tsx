@@ -25,7 +25,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoYogaImg from "@/assets/blog/local-seo-yoga.jpg";
+import localSeoYogaImg from "@/assets/blog/local-seo-yoga.webp";
 import { Heart, Calendar, Star, Image, Users, TrendingUp, CheckCircle, Lightbulb, MapPin, Clock } from "lucide-react";
 
 const LocalSeoYoga = () => {

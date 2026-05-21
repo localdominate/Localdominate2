@@ -7,7 +7,7 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import { getArticleBySlug } from "@/data/blogArticles";
-import kiToolsLocalSeoImg from "@/assets/blog/ki-tools-local-seo.jpg";
+import kiToolsLocalSeoImg from "@/assets/blog/ki-tools-local-seo.webp";
 import { 
   CheckCircle, 
   Bot,

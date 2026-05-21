@@ -13,7 +13,7 @@ import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Sparkles, Mic, Search, Smartphone, TrendingUp, Lightbulb, ArrowRight } from "lucide-react";
-import lokaleSeo2026Img from "@/assets/blog/lokale-seo-2026.jpg";
+import lokaleSeo2026Img from "@/assets/blog/lokale-seo-2026.webp";
 
 const LokaleSeo2026 = () => {
   const { language } = useLanguage();
