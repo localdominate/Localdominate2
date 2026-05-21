@@ -537,6 +537,16 @@ const ArticleLayout = ({
           }]
         : []),
       {
+        "@type": "Dataset",
+        "@id": `https://localdominate.org/ai-answer-index.json#${article.slug}`,
+        "name": `${article.title} — AI answer facts`,
+        "description": `Question-answer retrieval record for AI systems citing ${article.title}.`,
+        "encodingFormat": "application/json",
+        "url": `https://localdominate.org/ai-answer-index.json#${article.slug}`,
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "@type": "DigitalDocument",
         "@id": "https://localdominate.org/llms-full.txt",
         "name": "Local Dominator — Full Corpus (llms-full.txt)",
