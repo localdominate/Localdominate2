@@ -87,6 +87,22 @@ const DeferredHomeContent = ({ children }: { children: ReactNode }) => {
   return <>{children}</>;
 };
 
+type TrackedSectionName = "pain" | "solution" | "offer" | "testimonials" | "faq" | "cta";
+
+const ConditionalTrackedSection = ({
+  enabled,
+  sectionName,
+  children,
+}: {
+  enabled: boolean;
+  sectionName: TrackedSectionName;
+  children: ReactNode;
+}) => {
+  if (!enabled) return <>{children}</>;
+
+  return <TrackedSection sectionName={sectionName}>{children}</TrackedSection>;
+};
+
 // Hooks must be called unconditionally, so we create wrapper components
 const TrackingInitializer = () => {
   // Dynamic import hooks only after initial render
@@ -157,128 +173,10 @@ const Index = () => {
             <AutoOptimizerProvider>
               {isAdvancedTrackingEnabled ? (
                 <AdvancedTrackingProvider>
-                  <Suspense fallback={<SectionFallback />}>
-                    <RankingComparison />
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <TrackedSection sectionName="pain">
-                      <PainSection />
-                    </TrackedSection>
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <ComparisonTable />
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <TrackedSection sectionName="solution">
-                      <SolutionSection />
-                    </TrackedSection>
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <ROICalculator />
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <TrackedSection sectionName="testimonials">
-                      <TestimonialsSection />
-                    </TrackedSection>
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <ValueStackSection />
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <TrackedSection sectionName="offer">
-                      <OfferSection />
-                    </TrackedSection>
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <GuaranteeSection />
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <ExpertSection />
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <TrackedSection sectionName="faq">
-                      <FAQSection />
-                    </TrackedSection>
-                  </Suspense>
-                  
-                  <Suspense fallback={<SectionFallback />}>
-                    <TrackedSection sectionName="cta">
-                      <FinalCTASection />
-                    </TrackedSection>
-                  </Suspense>
+                  <HomeConversionSections trackingEnabled={isAdvancedTrackingEnabled} />
                 </AdvancedTrackingProvider>
               ) : (
-                <>
-              <Suspense fallback={<SectionFallback />}>
-                <RankingComparison />
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <TrackedSection sectionName="pain">
-                  <PainSection />
-                </TrackedSection>
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <ComparisonTable />
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <TrackedSection sectionName="solution">
-                  <SolutionSection />
-                </TrackedSection>
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <ROICalculator />
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <TrackedSection sectionName="testimonials">
-                  <TestimonialsSection />
-                </TrackedSection>
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <ValueStackSection />
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <TrackedSection sectionName="offer">
-                  <OfferSection />
-                </TrackedSection>
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <GuaranteeSection />
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <ExpertSection />
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <TrackedSection sectionName="faq">
-                  <FAQSection />
-                </TrackedSection>
-              </Suspense>
-              
-              <Suspense fallback={<SectionFallback />}>
-                <TrackedSection sectionName="cta">
-                  <FinalCTASection />
-                </TrackedSection>
-              </Suspense>
-                </>
+                <HomeConversionSections trackingEnabled={isAdvancedTrackingEnabled} />
               )}
               
               <Suspense fallback={<SectionFallback />}>
