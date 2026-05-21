@@ -1,6 +1,6 @@
-import salonService from "@/assets/niche/salon-service.jpg";
-import salonTeam from "@/assets/niche/salon-team.jpg";
-import googleResults from "@/assets/niche/google-results.jpg";
+import salonService from "@/assets/niche/salon-service.webp";
+import salonTeam from "@/assets/niche/salon-team.webp";
+import googleResults from "@/assets/niche/google-results.webp";
 import { Star, TrendingUp, Users } from "lucide-react";
 
 interface Props {
