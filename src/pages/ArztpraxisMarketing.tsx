@@ -210,23 +210,31 @@ const ArztpraxisMarketing = () => {
 
   const content = t[language];
 
-  const arztpraxisJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Praxis Pro - Local SEO für Arztpraxen",
-    "description": "Professionelles Google Maps Marketing für Arztpraxen. Mehr Patienten durch Top-Rankings in der lokalen Suche. DSGVO-konform und YMYL-optimiert.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Local Dominator"
+  const arztpraxisJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Praxis Pro - Local SEO für Arztpraxen",
+      "description": "Professionelles Google Maps Marketing für Arztpraxen. Mehr Patienten durch Top-Rankings in der lokalen Suche. DSGVO-konform und YMYL-optimiert.",
+      "provider": { "@type": "Organization", "name": "Local Dominator" },
+      "offers": {
+        "@type": "Offer",
+        "price": "399",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2026-12-31"
+      },
+      "serviceType": "Arztpraxis Marketing"
     },
-    "offers": {
-      "@type": "Offer",
-      "price": "399",
-      "priceCurrency": "EUR",
-      "priceValidUntil": "2026-12-31"
-    },
-    "serviceType": "Arztpraxis Marketing"
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": content.faq.items.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
