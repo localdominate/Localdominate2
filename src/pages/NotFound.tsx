@@ -78,6 +78,10 @@ const NotFound = () => {
               src="/logo.png" 
               alt="Local Dominator Logo" 
               className="h-12 mx-auto"
+              width={120}
+              height={48}
+              loading="eager"
+              decoding="async"
             />
           </Link>
 

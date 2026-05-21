@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="Local Dominator Logo" className="h-12 w-auto" />
+            <img src="/logo.png" alt="Local Dominator Logo" className="h-12 w-auto" width={120} height={48} loading="lazy" decoding="async" />
           </Link>
         </div>
         {/* Links */}

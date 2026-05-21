@@ -90,6 +90,10 @@ const TestimonialsSection = () => {
                   src={img} 
                   alt={`Zufriedener Local Dominator Kunde ${i + 1} - Google Maps Top 3 Ranking erreicht`}
                   className="w-8 h-8 rounded-full border-2 border-background"
+                  loading="lazy"
+                  decoding="async"
+                  width={32}
+                  height={32}
                 />
               ))}
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold border-2 border-background">
