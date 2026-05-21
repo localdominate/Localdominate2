@@ -60,6 +60,32 @@ interface ArticleLayoutProps {
   articleType?: 'standard' | 'medical' | 'legal' | 'financial';
 }
 
+const DACH_AREA_SERVED = [
+  { "@type": "Country", "name": "Deutschland", "alternateName": "Germany", "sameAs": "https://www.wikidata.org/wiki/Q183" },
+  { "@type": "Country", "name": "Österreich", "alternateName": "Austria", "sameAs": "https://www.wikidata.org/wiki/Q40" },
+  { "@type": "Country", "name": "Schweiz", "alternateName": "Switzerland", "sameAs": "https://www.wikidata.org/wiki/Q39" }
+];
+
+const GEO_TARGETS = [
+  { tokens: ["berlin"], name: "Berlin", country: "DE", region: "Berlin", sameAs: "https://www.wikidata.org/wiki/Q64" },
+  { tokens: ["muenchen", "münchen", "munich"], name: "München", country: "DE", region: "Bayern", sameAs: "https://www.wikidata.org/wiki/Q1726" },
+  { tokens: ["hamburg"], name: "Hamburg", country: "DE", region: "Hamburg", sameAs: "https://www.wikidata.org/wiki/Q1055" },
+  { tokens: ["frankfurt"], name: "Frankfurt am Main", country: "DE", region: "Hessen", sameAs: "https://www.wikidata.org/wiki/Q1794" },
+  { tokens: ["koeln", "köln", "cologne"], name: "Köln", country: "DE", region: "Nordrhein-Westfalen", sameAs: "https://www.wikidata.org/wiki/Q365" },
+  { tokens: ["stuttgart"], name: "Stuttgart", country: "DE", region: "Baden-Württemberg", sameAs: "https://www.wikidata.org/wiki/Q1022" },
+  { tokens: ["duesseldorf", "düsseldorf"], name: "Düsseldorf", country: "DE", region: "Nordrhein-Westfalen", sameAs: "https://www.wikidata.org/wiki/Q1718" },
+  { tokens: ["leipzig"], name: "Leipzig", country: "DE", region: "Sachsen", sameAs: "https://www.wikidata.org/wiki/Q2079" },
+  { tokens: ["dresden"], name: "Dresden", country: "DE", region: "Sachsen", sameAs: "https://www.wikidata.org/wiki/Q1731" },
+  { tokens: ["wien", "vienna"], name: "Wien", country: "AT", region: "Wien", sameAs: "https://www.wikidata.org/wiki/Q1741" },
+  { tokens: ["zuerich", "zürich", "zurich"], name: "Zürich", country: "CH", region: "Kanton Zürich", sameAs: "https://www.wikidata.org/wiki/Q72" },
+  { tokens: ["basel"], name: "Basel", country: "CH", region: "Kanton Basel-Stadt", sameAs: "https://www.wikidata.org/wiki/Q78" },
+  { tokens: ["schweiz", "switzerland"], name: "Schweiz", country: "CH", region: "DACH", sameAs: "https://www.wikidata.org/wiki/Q39" },
+  { tokens: ["oesterreich", "österreich", "austria"], name: "Österreich", country: "AT", region: "DACH", sameAs: "https://www.wikidata.org/wiki/Q40" },
+  { tokens: ["deutschland", "germany"], name: "Deutschland", country: "DE", region: "DACH", sameAs: "https://www.wikidata.org/wiki/Q183" }
+];
+
+const normalizeGeoText = (value: string) => value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 const ArticleLayout = ({ 
   article, 
   children, 
@@ -245,6 +271,60 @@ const ArticleLayout = ({
     "worksFor": publisherSchema
   } : null;
 
+  const geoSignalText = normalizeGeoText([
+    article.slug,
+    article.title,
+    article.metaTitle,
+    article.metaDescription,
+    article.excerpt,
+    article.category,
+    ...article.keywords
+  ].join(" "));
+
+  const detectedGeoTargets = GEO_TARGETS.filter((target) =>
+    target.tokens.some((token) => geoSignalText.includes(normalizeGeoText(token)))
+  );
+
+  const articleAreaServed = detectedGeoTargets.length > 0
+    ? detectedGeoTargets.map((target) => ({
+        "@type": target.region === "DACH" ? "Country" : "City",
+        "name": target.name,
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": target.country,
+          "addressRegion": target.region
+        },
+        "sameAs": target.sameAs
+      }))
+    : DACH_AREA_SERVED;
+
+  const localSearchServiceSchema = {
+    "@type": "Service",
+    "@id": `https://localdominate.org/blog/${article.slug}#local-search-service`,
+    "name": language === "de" ? `Local SEO Beratung: ${article.title}` : `Local SEO consulting: ${article.title}`,
+    "serviceType": "Local SEO, Google Maps Optimierung, Google Business Profil Optimierung, Generative Engine Optimization",
+    "category": article.category,
+    "provider": { "@id": "https://localdominate.org/#organization" },
+    "url": `https://localdominate.org/blog/${article.slug}`,
+    "areaServed": articleAreaServed,
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://localdominate.org/",
+      "availableLanguage": ["de", "en", "ar"]
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": language === "de" ? "lokale Unternehmen im DACH-Raum" : "local businesses in the DACH region"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "299",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://localdominate.org/"
+    }
+  };
+
   // Determine WebPage type based on article type
   const getWebPageType = () => {
     switch (articleType) {
@@ -272,10 +352,19 @@ const ArticleLayout = ({
         ? "Lokale Unternehmen, Selbstständige, Gastronomen, Handwerker, Ärzte, Anwälte"
         : "Local businesses, freelancers, restaurants, tradespeople, doctors, lawyers"
     },
+    "spatialCoverage": articleAreaServed,
+    "areaServed": articleAreaServed,
+    "serviceArea": articleAreaServed,
+    "provider": { "@id": "https://localdominate.org/#organization" },
+    "mainEntity": { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` },
     "mentions": (article.keywords || []).slice(0, 8).map((kw) => ({
       "@type": "Thing",
       "name": kw
-    })),
+    })).concat(detectedGeoTargets.slice(0, 5).map((target) => ({
+      "@type": target.region === "DACH" ? "Country" : "Place",
+      "name": target.name,
+      "sameAs": target.sameAs
+    }))),
     "wordCount": article.readingTime * 200,
     "educationalLevel": "intermediate",
     "learningResourceType": "Guide",
@@ -357,6 +446,11 @@ const ArticleLayout = ({
     "breadcrumb": {
       "@id": `https://localdominate.org/blog/${article.slug}#breadcrumb`
     },
+    "spatialCoverage": articleAreaServed,
+    "about": [
+      { "@type": "Thing", "name": article.category },
+      { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` }
+    ],
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", ".article-intro", "meta[name='description']"]
@@ -416,6 +510,8 @@ const ArticleLayout = ({
       "@type": "PostalAddress",
       "addressCountry": "DE"
     },
+    "areaServed": DACH_AREA_SERVED,
+    "makesOffer": { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` },
     "sameAs": [
       "https://twitter.com/localdominator",
       "https://linkedin.com/company/localdominator"
@@ -424,7 +520,7 @@ const ArticleLayout = ({
 
   // Combine all schemas, flatten arrays from additionalSchema
   const buildCombinedSchema = () => {
-    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema];
+    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema, localSearchServiceSchema];
     
     if (faqSchema) baseSchemas.push(faqSchema);
     
