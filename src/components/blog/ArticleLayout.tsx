@@ -182,8 +182,51 @@ const ArticleLayout = ({
     }
     const previous = link.getAttribute("href");
     link.setAttribute("href", href);
+
+    // Additional GEO/AI discovery signals: explicit meta + JSON manifest
+    // pointer so non-JS AI crawlers can find the canonical full-text
+    // version and the structured citation entry for this article.
+    const upsertMeta = (name: string, content: string) => {
+      let m = document.querySelector(
+        `meta[name="${name}"]`
+      ) as HTMLMetaElement | null;
+      if (!m) {
+        m = document.createElement("meta");
+        m.setAttribute("name", name);
+        document.head.appendChild(m);
+      }
+      m.setAttribute("content", content);
+      return m;
+    };
+    const aiMd = upsertMeta("ai-markdown-url", href);
+    const aiCit = upsertMeta(
+      "ai-citation-manifest",
+      "https://localdominate.org/ai-citation-manifest.json"
+    );
+    const aiFt = upsertMeta("citation_fulltext_world_readable", href);
+
+    let manifestLink = document.querySelector(
+      'link[rel="alternate"][type="application/json"][data-ai-manifest]'
+    ) as HTMLLinkElement | null;
+    if (!manifestLink) {
+      manifestLink = document.createElement("link");
+      manifestLink.setAttribute("rel", "alternate");
+      manifestLink.setAttribute("type", "application/json");
+      manifestLink.setAttribute("title", "AI citation manifest");
+      manifestLink.setAttribute("data-ai-manifest", "true");
+      document.head.appendChild(manifestLink);
+    }
+    manifestLink.setAttribute(
+      "href",
+      `https://localdominate.org/ai-citation-manifest.json#${article.slug}`
+    );
+
     return () => {
       if (previous) link?.setAttribute("href", previous);
+      aiMd?.remove();
+      aiCit?.remove();
+      aiFt?.remove();
+      manifestLink?.remove();
     };
   }, [article.slug]);
 
