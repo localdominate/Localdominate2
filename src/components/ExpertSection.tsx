@@ -1,6 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
-import expertProfile from "@/assets/expert-profile.png";
+import expertProfile from "@/assets/expert-profile.webp";
 
 const ExpertSection = () => {
   const { t } = useLanguage();
