@@ -20,6 +20,7 @@ import ArticleConclusion from "./ArticleConclusion";
 import LlmFriendlySummary from "./LlmFriendlySummary";
 import SectionAiSummary from "./SectionAiSummary";
 import InlineDefinitionBox from "./InlineDefinitionBox";
+import QuickAnswerBox from "./QuickAnswerBox";
 import ArticleGlossary from "./ArticleGlossary";
 import LocalSEOAuditCTA from "./LocalSEOAuditCTA";
 import PillarChecklistLinks from "./PillarChecklistLinks";
@@ -238,6 +239,18 @@ const ArticleLayout = ({
     "name": article.title,
     "description": article.metaDescription,
     "articleBody": article.excerpt,
+    "abstract": article.excerpt,
+    "isAccessibleForFree": true,
+    "audience": {
+      "@type": "Audience",
+      "audienceType": language === "de"
+        ? "Lokale Unternehmen, Selbstständige, Gastronomen, Handwerker, Ärzte, Anwälte"
+        : "Local businesses, freelancers, restaurants, tradespeople, doctors, lawyers"
+    },
+    "mentions": (article.keywords || []).slice(0, 8).map((kw) => ({
+      "@type": "Thing",
+      "name": kw
+    })),
     "wordCount": article.readingTime * 200,
     "author": authorSchema,
     "publisher": publisherSchema,
@@ -540,6 +553,7 @@ const ArticleLayout = ({
         >
           <ArticleHook slug={article.slug} />
           <SectionAiSummary slug={article.slug} />
+          <QuickAnswerBox answer={article.excerpt} topic={article.title} />
           <InlineDefinitionBox slug={article.slug} />
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
