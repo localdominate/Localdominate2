@@ -17,7 +17,6 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     target: "es2020",
-    cssMinify: "lightningcss" as any,
     minify: "esbuild",
     rollupOptions: {
       output: {
