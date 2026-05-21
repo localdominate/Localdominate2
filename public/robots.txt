@@ -41,6 +41,7 @@ Crawl-delay: 10
 # AI Crawler erlauben (für LLM-Training/Indexierung)
 User-agent: GPTBot
 Allow: /blog/
+Allow: /blog-md/
 Allow: /seo-lexikon/
 Allow: /llms.txt
 Allow: /llms-full.txt
@@ -64,6 +65,7 @@ Allow: /
 
 User-agent: Bytespider
 Allow: /blog/
+Allow: /blog-md/
 Allow: /seo-lexikon/
 
 # Alle anderen Crawler
@@ -91,6 +93,7 @@ Disallow: /onboarding
 Sitemap: https://localdominate.org/sitemap-index.xml
 Sitemap: https://localdominate.org/sitemap.xml
 Sitemap: https://localdominate.org/sitemap-blog.xml
+Sitemap: https://localdominate.org/sitemap-ai.xml
 Sitemap: https://localdominate.org/sitemap-images.xml
 Sitemap: https://localdominate.org/sitemap-lexikon.xml
 
