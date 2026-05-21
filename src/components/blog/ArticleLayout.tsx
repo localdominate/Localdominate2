@@ -453,6 +453,32 @@ const ArticleLayout = ({
         "@type": "CreativeWork",
         "name": keyword
       }))
+    ],
+    // Explicit pointer to the plain-text / Markdown copy of this article so
+    // AI crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) can
+    // discover and cite the canonical machine-readable version without
+    // executing JS.
+    "subjectOf": [
+      ...(BLOG_MARKDOWN_SLUGS.has(article.slug)
+        ? [{
+            "@type": "DigitalDocument",
+            "@id": `https://localdominate.org/blog-md/${article.slug}.md`,
+            "name": `${article.title} — Markdown (AI-readable)`,
+            "encodingFormat": "text/markdown",
+            "inLanguage": language === "de" ? "de-DE" : "en-US",
+            "url": `https://localdominate.org/blog-md/${article.slug}.md`,
+            "isAccessibleForFree": true,
+            "license": "https://creativecommons.org/licenses/by/4.0/"
+          }]
+        : []),
+      {
+        "@type": "DigitalDocument",
+        "@id": "https://localdominate.org/llms-full.txt",
+        "name": "Local Dominator — Full Corpus (llms-full.txt)",
+        "encodingFormat": "text/plain",
+        "url": "https://localdominate.org/llms-full.txt",
+        "isAccessibleForFree": true
+      }
     ]
   };
 
