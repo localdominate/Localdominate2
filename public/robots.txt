@@ -45,6 +45,7 @@ Allow: /blog-md/
 Allow: /seo-lexikon/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /ai-citation-manifest.json
 Allow: /.well-known/ai.txt
 Disallow: /admin/
 
