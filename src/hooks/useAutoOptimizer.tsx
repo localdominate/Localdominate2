@@ -244,6 +244,10 @@ export function useAutoOptimizer() {
 
   // Track a view for the current test - uses central session manager
   const trackTestView = useCallback(async (elementType: string, elementId: string) => {
+    if (typeof window !== "undefined" && localStorage.getItem("cookieConsent") !== "all") {
+      return;
+    }
+
     const runningTest = testQueue.find(
       t => t.status === 'testing' && t.element_type === elementType && t.element_id === elementId
     );
