@@ -352,10 +352,19 @@ const ArticleLayout = ({
         ? "Lokale Unternehmen, Selbstständige, Gastronomen, Handwerker, Ärzte, Anwälte"
         : "Local businesses, freelancers, restaurants, tradespeople, doctors, lawyers"
     },
+    "spatialCoverage": articleAreaServed,
+    "areaServed": articleAreaServed,
+    "serviceArea": articleAreaServed,
+    "provider": { "@id": "https://localdominate.org/#organization" },
+    "mainEntity": { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` },
     "mentions": (article.keywords || []).slice(0, 8).map((kw) => ({
       "@type": "Thing",
       "name": kw
-    })),
+    })).concat(detectedGeoTargets.slice(0, 5).map((target) => ({
+      "@type": target.region === "DACH" ? "Country" : "Place",
+      "name": target.name,
+      "sameAs": target.sameAs
+    }))),
     "wordCount": article.readingTime * 200,
     "educationalLevel": "intermediate",
     "learningResourceType": "Guide",
@@ -437,6 +446,11 @@ const ArticleLayout = ({
     "breadcrumb": {
       "@id": `https://localdominate.org/blog/${article.slug}#breadcrumb`
     },
+    "spatialCoverage": articleAreaServed,
+    "about": [
+      { "@type": "Thing", "name": article.category },
+      { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` }
+    ],
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", ".article-intro", "meta[name='description']"]
@@ -496,6 +510,8 @@ const ArticleLayout = ({
       "@type": "PostalAddress",
       "addressCountry": "DE"
     },
+    "areaServed": DACH_AREA_SERVED,
+    "makesOffer": { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` },
     "sameAs": [
       "https://twitter.com/localdominator",
       "https://linkedin.com/company/localdominator"
@@ -504,7 +520,7 @@ const ArticleLayout = ({
 
   // Combine all schemas, flatten arrays from additionalSchema
   const buildCombinedSchema = () => {
-    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema];
+    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema, localSearchServiceSchema];
     
     if (faqSchema) baseSchemas.push(faqSchema);
     
