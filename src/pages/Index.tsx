@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import HeroAIVisibility from "@/components/HeroAIVisibility";
 import { initDataLayer, trackPageView } from "@/lib/dataLayer";
 import ErrorBoundary from "@/components/ErrorBoundary";
@@ -54,22 +55,22 @@ const TrackedSection = lazy(() =>
 const SectionFallback = () => <div className="min-h-[100px]" />;
 const NullFallback = () => null;
 
-const DeferredHomeContent = ({ children }: { children: React.ReactNode }) => {
+const DeferredHomeContent = ({ children }: { children: ReactNode }) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const showContent = () => setIsReady(true);
-    const idleId = "requestIdleCallback" in window
-      ? window.requestIdleCallback(showContent, { timeout: 1200 })
-      : window.setTimeout(showContent, 900);
+    if ("requestIdleCallback" in window && "cancelIdleCallback" in window) {
+      const idleWindow = window as Window & {
+        requestIdleCallback: (callback: () => void, options?: { timeout: number }) => number;
+        cancelIdleCallback: (id: number) => void;
+      };
+      const idleId = idleWindow.requestIdleCallback(showContent, { timeout: 1200 });
+      return () => idleWindow.cancelIdleCallback(idleId);
+    }
 
-    return () => {
-      if ("cancelIdleCallback" in window && typeof idleId === "number") {
-        window.cancelIdleCallback(idleId);
-      } else {
-        window.clearTimeout(idleId as number);
-      }
-    };
+    const timeoutId = globalThis.setTimeout(showContent, 900);
+    return () => globalThis.clearTimeout(timeoutId);
   }, []);
 
   if (!isReady) return null;
