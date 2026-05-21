@@ -156,24 +156,6 @@ const HomeConversionSections = ({ trackingEnabled }: { trackingEnabled: boolean 
   </>
 );
 
-// Hooks must be called unconditionally, so we create wrapper components
-const TrackingInitializer = () => {
-  // Dynamic import hooks only after initial render
-  useEffect(() => {
-    // Defer non-critical tracking initialization
-    const initTracking = async () => {
-      const { default: useScrollDepthTracking } = await import("@/hooks/useScrollDepthTracking");
-      const { default: useAnalyticsSession } = await import("@/hooks/useAnalyticsSession");
-    };
-    
-    // Delay tracking initialization by 2 seconds for better FCP
-    const timer = setTimeout(initTracking, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-  
-  return null;
-};
-
 const Index = () => {
   const [isHeatmapEnabled] = useState(shouldLoadHeatmap);
   const [isAdvancedTrackingEnabled] = useState(shouldLoadAdvancedTracking);
@@ -206,9 +188,6 @@ const Index = () => {
           <AIVisibilityIndexSection />
         </Suspense>
       </DeferredHomeContent>
-      
-      {/* Initialize tracking after critical content */}
-      <TrackingInitializer />
       
       <DeferredHomeContent>
         {/* Lazy-loaded Global UI Components - Deferred */}
