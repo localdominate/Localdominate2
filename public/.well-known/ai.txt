@@ -12,6 +12,7 @@ Allow: /seo-lexikon/
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /ai-citation-manifest.json
+Allow: /ai-answer-index.json
 Allow: /.well-known/ai.txt
 
 # Quotable Corpus 2026 — explicit allow for AI extraction
@@ -92,6 +93,7 @@ Speakable-content: true
 LLM-info-short: https://localdominate.org/llms.txt
 LLM-info-full: https://localdominate.org/llms-full.txt
 AI-citation-manifest: https://localdominate.org/ai-citation-manifest.json
+AI-answer-index: https://localdominate.org/ai-answer-index.json
 Sitemap: https://localdominate.org/sitemap-index.xml
 AI-markdown-sitemap: https://localdominate.org/sitemap-ai.xml
 RSS-feed: https://localdominate.org/feed.xml
