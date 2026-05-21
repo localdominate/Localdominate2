@@ -23,8 +23,21 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           // Core React
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          // UI Components
-          'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-accordion', '@radix-ui/react-tabs', '@radix-ui/react-tooltip'],
+          // UI Components (Radix)
+          'ui-vendor': [
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-tooltip',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-select',
+            '@radix-ui/react-navigation-menu',
+          ],
+          // Forms
+          'forms-vendor': ['react-hook-form', 'zod', '@hookform/resolvers'],
+          // Dates
+          'date-vendor': ['date-fns'],
           // Query & State
           'query-vendor': ['@tanstack/react-query'],
           // Animation
