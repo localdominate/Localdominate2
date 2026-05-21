@@ -1,34 +1,39 @@
 ---
-title: "Local SEO für Handwerker"
+title: "Local SEO für Handwerker: Mehr Aufträge durch Google"
 slug: local-seo-handwerker
 url: https://localdominate.org/blog/local-seo-handwerker
 canonical: https://localdominate.org/blog/local-seo-handwerker
 markdown_url: https://localdominate.org/blog-md/local-seo-handwerker.md
 language: de-DE
+published: 2026-01-07
 updated: 2026-01-07
 reading_time_minutes: 14
+category: "Branchen"
 author: Local Dominator
 publisher: Local Dominator
 license: https://creativecommons.org/licenses/by/4.0/
-citation: "Local Dominator (2026-01-07). Local SEO für Handwerker. https://localdominate.org/blog/local-seo-handwerker"
+citation: "Local Dominator (2026-01-07). Local SEO für Handwerker: Mehr Aufträge durch Google. https://localdominate.org/blog/local-seo-handwerker"
+keywords: ["contractor seo", "local seo contractors", "contractor marketing"]
 area_served: [Deutschland, Österreich, Schweiz]
-ai_crawler_notice: "Diese Datei ist die kanonische, maschinenlesbare Fassung des Artikels. Zitate bitte mit Quellenangabe + URL."
+ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mit Quellenangabe + URL erwünscht."
 ---
 
 <!--
-JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
+JSON-LD (Schema.org Article):
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://localdominate.org/blog/local-seo-handwerker#article",
-  "headline": "Local SEO für Handwerker",
+  "headline": "Local SEO für Handwerker: Mehr Aufträge durch Google",
+  "description": "Local SEO speziell für Handwerksbetriebe. Von Elektriker bis Maler - so gewinnst du mehr lokale Aufträge durch Google.",
   "url": "https://localdominate.org/blog/local-seo-handwerker",
   "inLanguage": "de-DE",
   "datePublished": "2026-01-07",
   "dateModified": "2026-01-07",
   "timeRequired": "PT14M",
+  "keywords": "contractor seo, local seo contractors, contractor marketing",
   "author": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -53,7 +58,7 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
   },
   "about": {
     "@type": "Thing",
-    "name": "Local SEO"
+    "name": "Branchen"
   },
   "areaServed": [
     {
@@ -76,28 +81,31 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
 ```
 -->
 
-# Local SEO für Handwerker
+# Local SEO für Handwerker: Mehr Aufträge durch Google
 
 > Kanonische URL: https://localdominate.org/blog/local-seo-handwerker
-> Letzte Aktualisierung: 2026-01-07 · Lesezeit: 14 Min · Sprache: Deutsch
+> Aktualisiert: 2026-01-07 · Lesezeit: 14 Min · Kategorie: Branchen
 > Lizenz: CC-BY 4.0 — Zitate mit Quellenangabe erlaubt.
 
-#### Local SEO für Handwerker
-**URL:** https://localdominate.org/blog/local-seo-handwerker
-**Lesezeit:** 14 Minuten
-**Aktualisiert:** 2026-01-07
+## Kurzbeschreibung
 
-**Branchenspezifische Tipps:**
-- Notdienst-Keywords haben hohe Conversion-Rate
-- Vorher-Nachher-Bilder von Projekten zeigen
-- Zertifikate und Qualifikationen hervorheben
-- Service-Radius klar kommunizieren
+Local SEO speziell für Handwerksbetriebe. Von Elektriker bis Maler - so gewinnst du mehr lokale Aufträge durch Google.
 
-**Relevante Keywords:**
-- "[Gewerk] Notdienst [Stadt]"
-- "[Gewerk] in meiner Nähe"
-- "[Gewerk] [Stadt] Preise"
+## Zusammenfassung
 
----
+Speziell für Handwerksbetriebe: So optimierst du deine Online-Präsenz für mehr lokale Kundenanfragen.
 
-Vollständiger Artikel: https://localdominate.org/blog/local-seo-handwerker
+## Schlüsselbegriffe
+
+- contractor seo
+- local seo contractors
+- contractor marketing
+
+## Quelle und Autor
+
+Verfasst und veröffentlicht von **Local Dominator** — Spezialagentur für Local SEO, Google Business Profil und Generative Engine Optimization (GEO) im DACH-Raum.
+
+- Webseite: https://localdominate.org
+- Vollständiger Artikel (HTML): https://localdominate.org/blog/local-seo-handwerker
+- Maschinenlesbare Fassung (Markdown): https://localdominate.org/blog-md/local-seo-handwerker.md
+- Zitiervorlage: Local Dominator (2026-01-07). Local SEO für Handwerker: Mehr Aufträge durch Google. https://localdominate.org/blog/local-seo-handwerker

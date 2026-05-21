@@ -1,34 +1,39 @@
 ---
-title: "NAP-Konsistenz"
+title: "NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten"
 slug: nap-konsistenz-local-seo
 url: https://localdominate.org/blog/nap-konsistenz-local-seo
 canonical: https://localdominate.org/blog/nap-konsistenz-local-seo
 markdown_url: https://localdominate.org/blog-md/nap-konsistenz-local-seo.md
 language: de-DE
+published: 2026-01-07
 updated: 2026-01-07
 reading_time_minutes: 12
+category: "Local SEO"
 author: Local Dominator
 publisher: Local Dominator
 license: https://creativecommons.org/licenses/by/4.0/
-citation: "Local Dominator (2026-01-07). NAP-Konsistenz. https://localdominate.org/blog/nap-konsistenz-local-seo"
+citation: "Local Dominator (2026-01-07). NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten. https://localdominate.org/blog/nap-konsistenz-local-seo"
+keywords: ["nap consistency", "citations", "business directories", "local seo"]
 area_served: [Deutschland, Österreich, Schweiz]
-ai_crawler_notice: "Diese Datei ist die kanonische, maschinenlesbare Fassung des Artikels. Zitate bitte mit Quellenangabe + URL."
+ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mit Quellenangabe + URL erwünscht."
 ---
 
 <!--
-JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
+JSON-LD (Schema.org Article):
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://localdominate.org/blog/nap-konsistenz-local-seo#article",
-  "headline": "NAP-Konsistenz",
+  "headline": "NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten",
+  "description": "NAP (Name, Adresse, Telefon) konsistent halten für bessere Rankings. Kompletter Guide mit Checkliste und 15+ FAQ.",
   "url": "https://localdominate.org/blog/nap-konsistenz-local-seo",
   "inLanguage": "de-DE",
   "datePublished": "2026-01-07",
   "dateModified": "2026-01-07",
   "timeRequired": "PT12M",
+  "keywords": "nap consistency, citations, business directories, local seo",
   "author": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -76,28 +81,32 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
 ```
 -->
 
-# NAP-Konsistenz
+# NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten
 
 > Kanonische URL: https://localdominate.org/blog/nap-konsistenz-local-seo
-> Letzte Aktualisierung: 2026-01-07 · Lesezeit: 12 Min · Sprache: Deutsch
+> Aktualisiert: 2026-01-07 · Lesezeit: 12 Min · Kategorie: Local SEO
 > Lizenz: CC-BY 4.0 — Zitate mit Quellenangabe erlaubt.
 
-#### NAP-Konsistenz
-**URL:** https://localdominate.org/blog/nap-konsistenz-local-seo
-**Lesezeit:** 12 Minuten
-**Aktualisiert:** 2026-01-07
+## Kurzbeschreibung
 
-**Kernaussagen:**
-- NAP steht für Name, Address, Phone (Name, Adresse, Telefonnummer)
-- Inkonsistente Daten verwirren Google und Kunden
-- Alle Verzeichniseinträge müssen identisch formatiert sein
-- Regelmäßige Überprüfung aller Online-Präsenzen notwendig
+NAP (Name, Adresse, Telefon) konsistent halten für bessere Rankings. Kompletter Guide mit Checkliste und 15+ FAQ.
 
-**Best Practices:**
-- Einheitliche Schreibweise des Firmennamens
-- Gleiche Telefonnummer überall (mit oder ohne Ländervorwahl)
-- Adressformat standardisieren (z.B. "Straße" vs "Str.")
+## Zusammenfassung
 
----
+Erfahre, warum einheitliche Unternehmensdaten (NAP) für dein lokales Ranking entscheidend sind.
 
-Vollständiger Artikel: https://localdominate.org/blog/nap-konsistenz-local-seo
+## Schlüsselbegriffe
+
+- nap consistency
+- citations
+- business directories
+- local seo
+
+## Quelle und Autor
+
+Verfasst und veröffentlicht von **Local Dominator** — Spezialagentur für Local SEO, Google Business Profil und Generative Engine Optimization (GEO) im DACH-Raum.
+
+- Webseite: https://localdominate.org
+- Vollständiger Artikel (HTML): https://localdominate.org/blog/nap-konsistenz-local-seo
+- Maschinenlesbare Fassung (Markdown): https://localdominate.org/blog-md/nap-konsistenz-local-seo.md
+- Zitiervorlage: Local Dominator (2026-01-07). NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten. https://localdominate.org/blog/nap-konsistenz-local-seo

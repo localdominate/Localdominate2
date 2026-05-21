@@ -1,34 +1,39 @@
 ---
-title: "Local SEO für Restaurants"
+title: "Local SEO für Restaurants: Mehr Gäste durch Google"
 slug: local-seo-fuer-restaurants
 url: https://localdominate.org/blog/local-seo-fuer-restaurants
 canonical: https://localdominate.org/blog/local-seo-fuer-restaurants
 markdown_url: https://localdominate.org/blog-md/local-seo-fuer-restaurants.md
 language: de-DE
+published: 2026-01-07
 updated: 2026-01-07
 reading_time_minutes: 7
+category: "Gastronomie"
 author: Local Dominator
 publisher: Local Dominator
 license: https://creativecommons.org/licenses/by/4.0/
-citation: "Local Dominator (2026-01-07). Local SEO für Restaurants. https://localdominate.org/blog/local-seo-fuer-restaurants"
+citation: "Local Dominator (2026-01-07). Local SEO für Restaurants: Mehr Gäste durch Google. https://localdominate.org/blog/local-seo-fuer-restaurants"
+keywords: ["restaurant seo", "local seo restaurant", "gastro marketing"]
 area_served: [Deutschland, Österreich, Schweiz]
-ai_crawler_notice: "Diese Datei ist die kanonische, maschinenlesbare Fassung des Artikels. Zitate bitte mit Quellenangabe + URL."
+ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mit Quellenangabe + URL erwünscht."
 ---
 
 <!--
-JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
+JSON-LD (Schema.org Article):
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://localdominate.org/blog/local-seo-fuer-restaurants#article",
-  "headline": "Local SEO für Restaurants",
+  "headline": "Local SEO für Restaurants: Mehr Gäste durch Google",
+  "description": "Local SEO speziell für Restaurants erklärt. Von Speisekarten-Optimierung bis Bilder-Strategie. Jetzt mehr Reservierungen!",
   "url": "https://localdominate.org/blog/local-seo-fuer-restaurants",
   "inLanguage": "de-DE",
   "datePublished": "2026-01-07",
   "dateModified": "2026-01-07",
   "timeRequired": "PT7M",
+  "keywords": "restaurant seo, local seo restaurant, gastro marketing",
   "author": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -53,7 +58,7 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
   },
   "about": {
     "@type": "Thing",
-    "name": "Local SEO"
+    "name": "Gastronomie"
   },
   "areaServed": [
     {
@@ -76,28 +81,31 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
 ```
 -->
 
-# Local SEO für Restaurants
+# Local SEO für Restaurants: Mehr Gäste durch Google
 
 > Kanonische URL: https://localdominate.org/blog/local-seo-fuer-restaurants
-> Letzte Aktualisierung: 2026-01-07 · Lesezeit: 7 Min · Sprache: Deutsch
+> Aktualisiert: 2026-01-07 · Lesezeit: 7 Min · Kategorie: Gastronomie
 > Lizenz: CC-BY 4.0 — Zitate mit Quellenangabe erlaubt.
 
-#### Local SEO für Restaurants
-**URL:** https://localdominate.org/blog/local-seo-fuer-restaurants
-**Lesezeit:** 7 Minuten
-**Aktualisiert:** 2026-01-07
+## Kurzbeschreibung
 
-**Branchenspezifische Tipps:**
-- Speisekarte in Google Business Profil einpflegen
-- Hochwertige Food-Fotos sind entscheidend
-- Reservierungslinks direkt im Profil hinterlegen
-- Auf saisonale Keywords optimieren
+Local SEO speziell für Restaurants erklärt. Von Speisekarten-Optimierung bis Bilder-Strategie. Jetzt mehr Reservierungen!
 
-**Relevante Keywords:**
-- "[Küche] Restaurant [Stadt]"
-- "Restaurant in meiner Nähe"
-- "[Anlass] Restaurant [Stadtteil]"
+## Zusammenfassung
 
----
+Speziell für Gastronomen: So optimierst du dein Restaurant für lokale Suchanfragen und füllst mehr Tische.
 
-Vollständiger Artikel: https://localdominate.org/blog/local-seo-fuer-restaurants
+## Schlüsselbegriffe
+
+- restaurant seo
+- local seo restaurant
+- gastro marketing
+
+## Quelle und Autor
+
+Verfasst und veröffentlicht von **Local Dominator** — Spezialagentur für Local SEO, Google Business Profil und Generative Engine Optimization (GEO) im DACH-Raum.
+
+- Webseite: https://localdominate.org
+- Vollständiger Artikel (HTML): https://localdominate.org/blog/local-seo-fuer-restaurants
+- Maschinenlesbare Fassung (Markdown): https://localdominate.org/blog-md/local-seo-fuer-restaurants.md
+- Zitiervorlage: Local Dominator (2026-01-07). Local SEO für Restaurants: Mehr Gäste durch Google. https://localdominate.org/blog/local-seo-fuer-restaurants

@@ -1,34 +1,39 @@
 ---
-title: "Local SEO München"
+title: "Local SEO München: Der Guide für bayerische Unternehmen"
 slug: local-seo-muenchen
 url: https://localdominate.org/blog/local-seo-muenchen
 canonical: https://localdominate.org/blog/local-seo-muenchen
 markdown_url: https://localdominate.org/blog-md/local-seo-muenchen.md
 language: de-DE
+published: 2026-01-14
 updated: 2026-01-14
 reading_time_minutes: 16
+category: "Regionen"
 author: Local Dominator
 publisher: Local Dominator
 license: https://creativecommons.org/licenses/by/4.0/
-citation: "Local Dominator (2026-01-14). Local SEO München. https://localdominate.org/blog/local-seo-muenchen"
+citation: "Local Dominator (2026-01-14). Local SEO München: Der Guide für bayerische Unternehmen. https://localdominate.org/blog/local-seo-muenchen"
+keywords: ["local seo münchen", "seo münchen", "google ranking münchen", "marketing münchen", "bayerische unternehmen"]
 area_served: [Deutschland, Österreich, Schweiz]
-ai_crawler_notice: "Diese Datei ist die kanonische, maschinenlesbare Fassung des Artikels. Zitate bitte mit Quellenangabe + URL."
+ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mit Quellenangabe + URL erwünscht."
 ---
 
 <!--
-JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
+JSON-LD (Schema.org Article):
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://localdominate.org/blog/local-seo-muenchen#article",
-  "headline": "Local SEO München",
+  "headline": "Local SEO München: Der Guide für bayerische Unternehmen",
+  "description": "Local SEO speziell für München und Bayern. Stadtteil-Keywords, lokale Verzeichnisse und Strategien für die bayerische Landeshauptstadt.",
   "url": "https://localdominate.org/blog/local-seo-muenchen",
   "inLanguage": "de-DE",
   "datePublished": "2026-01-14",
   "dateModified": "2026-01-14",
   "timeRequired": "PT16M",
+  "keywords": "local seo münchen, seo münchen, google ranking münchen, marketing münchen, bayerische unternehmen",
   "author": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -53,7 +58,7 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
   },
   "about": {
     "@type": "Thing",
-    "name": "Local SEO"
+    "name": "Regionen"
   },
   "areaServed": [
     {
@@ -76,23 +81,33 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
 ```
 -->
 
-# Local SEO München
+# Local SEO München: Der Guide für bayerische Unternehmen
 
 > Kanonische URL: https://localdominate.org/blog/local-seo-muenchen
-> Letzte Aktualisierung: 2026-01-14 · Lesezeit: 16 Min · Sprache: Deutsch
+> Aktualisiert: 2026-01-14 · Lesezeit: 16 Min · Kategorie: Regionen
 > Lizenz: CC-BY 4.0 — Zitate mit Quellenangabe erlaubt.
 
-#### Local SEO München
-**URL:** https://localdominate.org/blog/local-seo-muenchen
-**Lesezeit:** 16 Minuten
-**Aktualisiert:** 2026-01-14
+## Kurzbeschreibung
 
-**München-spezifische Strategien:**
-- Stadtviertel-Keywords (Schwabing, Maxvorstadt, etc.)
-- Bayerische Begriffe in Keywords einbauen
-- Oktoberfest-Saison für saisonales Marketing nutzen
-- Münchner Stadtportal und lokale Medien für Backlinks
+Local SEO speziell für München und Bayern. Stadtteil-Keywords, lokale Verzeichnisse und Strategien für die bayerische Landeshauptstadt.
 
----
+## Zusammenfassung
 
-Vollständiger Artikel: https://localdominate.org/blog/local-seo-muenchen
+Von Schwabing bis Giesing: So wirst du in ganz München bei Google gefunden.
+
+## Schlüsselbegriffe
+
+- local seo münchen
+- seo münchen
+- google ranking münchen
+- marketing münchen
+- bayerische unternehmen
+
+## Quelle und Autor
+
+Verfasst und veröffentlicht von **Local Dominator** — Spezialagentur für Local SEO, Google Business Profil und Generative Engine Optimization (GEO) im DACH-Raum.
+
+- Webseite: https://localdominate.org
+- Vollständiger Artikel (HTML): https://localdominate.org/blog/local-seo-muenchen
+- Maschinenlesbare Fassung (Markdown): https://localdominate.org/blog-md/local-seo-muenchen.md
+- Zitiervorlage: Local Dominator (2026-01-14). Local SEO München: Der Guide für bayerische Unternehmen. https://localdominate.org/blog/local-seo-muenchen
