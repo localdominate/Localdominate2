@@ -1,4 +1,4 @@
-import salonHero from "@/assets/niche/salon-hero.jpg";
+import salonHero from "@/assets/niche/salon-hero.webp";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 interface Props {
