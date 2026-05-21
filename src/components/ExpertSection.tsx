@@ -17,6 +17,10 @@ const ExpertSection = () => {
                 src={expertProfile} 
                 alt="Local SEO Experte"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width={160}
+                height={160}
               />
             </div>
           </div>
