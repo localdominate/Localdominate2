@@ -8,6 +8,7 @@ interface OptimizedElement {
   element_type: string;
   element_id: string;
   winning_value: string;
+  test_history?: unknown[];
 }
 
 interface TestQueueItem {
@@ -348,7 +349,7 @@ export function useAutoOptimizer() {
         test_history: [
           ...((optimizedElements.find(
             e => e.element_type === runningTest.element_type && e.element_id === runningTest.element_id
-          ) as any)?.test_history || []),
+          )?.test_history || []),
           {
             variant_a: runningTest.current_variant_a,
             variant_b: runningTest.current_variant_b,
