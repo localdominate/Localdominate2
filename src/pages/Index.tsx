@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import HeroAIVisibility from "@/components/HeroAIVisibility";
 import { initDataLayer, trackPageView } from "@/lib/dataLayer";
 import ErrorBoundary from "@/components/ErrorBoundary";
@@ -54,6 +54,28 @@ const TrackedSection = lazy(() =>
 const SectionFallback = () => <div className="min-h-[100px]" />;
 const NullFallback = () => null;
 
+const DeferredHomeContent = ({ children }: { children: React.ReactNode }) => {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const showContent = () => setIsReady(true);
+    const idleId = "requestIdleCallback" in window
+      ? window.requestIdleCallback(showContent, { timeout: 1200 })
+      : window.setTimeout(showContent, 900);
+
+    return () => {
+      if ("cancelIdleCallback" in window && typeof idleId === "number") {
+        window.cancelIdleCallback(idleId);
+      } else {
+        window.clearTimeout(idleId as number);
+      }
+    };
+  }, []);
+
+  if (!isReady) return null;
+  return <>{children}</>;
+};
+
 // Hooks must be called unconditionally, so we create wrapper components
 const TrackingInitializer = () => {
   // Dynamic import hooks only after initial render
@@ -85,36 +107,41 @@ const Index = () => {
       <LanguageSwitch />
       <HeroAIVisibility />
       
-      {/* Statistics Bar - E-E-A-T data signals */}
-      <Suspense fallback={<NullFallback />}>
-        <StatisticsBar />
-      </Suspense>
+      <DeferredHomeContent>
+        {/* Statistics Bar - E-E-A-T data signals */}
+        <Suspense fallback={<NullFallback />}>
+          <StatisticsBar />
+        </Suspense>
 
-      {/* AI Search Preview — GEO repositioning */}
-      <Suspense fallback={<SectionFallback />}>
-        <AISearchPreviewSection />
-      </Suspense>
+        {/* AI Search Preview — GEO repositioning */}
+        <Suspense fallback={<SectionFallback />}>
+          <AISearchPreviewSection />
+        </Suspense>
 
-      {/* AI Visibility Index™ scorecard */}
-      <Suspense fallback={<SectionFallback />}>
-        <AIVisibilityIndexSection />
-      </Suspense>
+        {/* AI Visibility Index™ scorecard */}
+        <Suspense fallback={<SectionFallback />}>
+          <AIVisibilityIndexSection />
+        </Suspense>
+      </DeferredHomeContent>
       
       {/* Initialize tracking after critical content */}
       <TrackingInitializer />
       
-      {/* Lazy-loaded Global UI Components - Deferred */}
-      <Suspense fallback={<NullFallback />}>
-        <ScrollProgress />
-        <StickyHeader />
-        {/* <ExitIntentPopup /> */}
-        <SocialProofToast />
-      </Suspense>
+      <DeferredHomeContent>
+        {/* Lazy-loaded Global UI Components - Deferred */}
+        <Suspense fallback={<NullFallback />}>
+          <ScrollProgress />
+          <StickyHeader />
+          {/* <ExitIntentPopup /> */}
+          <SocialProofToast />
+        </Suspense>
+      </DeferredHomeContent>
       
-      <ErrorBoundary fallback={<SectionFallback />}>
-        <Suspense fallback={<SectionFallback />}>
-          <AutoOptimizerProvider>
-            <AdvancedTrackingProvider>
+      <DeferredHomeContent>
+        <ErrorBoundary fallback={<SectionFallback />}>
+          <Suspense fallback={<SectionFallback />}>
+            <AutoOptimizerProvider>
+              <AdvancedTrackingProvider>
               <Suspense fallback={<SectionFallback />}>
                 <RankingComparison />
               </Suspense>
@@ -183,17 +210,20 @@ const Index = () => {
               <Suspense fallback={<NullFallback />}>
                 <MobileStickyBar />
               </Suspense>
-            </AdvancedTrackingProvider>
-          </AutoOptimizerProvider>
-        </Suspense>
-      </ErrorBoundary>
+              </AdvancedTrackingProvider>
+            </AutoOptimizerProvider>
+          </Suspense>
+        </ErrorBoundary>
+      </DeferredHomeContent>
       
-      {/* Components that don't need AutoOptimizerContext */}
-      <Suspense fallback={<NullFallback />}>
-        <BackToTop />
-        <CookieBanner />
-        <HeatmapTracker enabled={true} />
-      </Suspense>
+      <DeferredHomeContent>
+        {/* Components that don't need AutoOptimizerContext */}
+        <Suspense fallback={<NullFallback />}>
+          <BackToTop />
+          <CookieBanner />
+          <HeatmapTracker enabled={true} />
+        </Suspense>
+      </DeferredHomeContent>
     </main>
   );
 };
