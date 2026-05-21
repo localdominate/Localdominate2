@@ -252,6 +252,11 @@ const ArticleLayout = ({
       "name": kw
     })),
     "wordCount": article.readingTime * 200,
+    "educationalLevel": "intermediate",
+    "learningResourceType": "Guide",
+    "disambiguatingDescription": language === "de"
+      ? `Praxis-Guide aus dem Local Dominator Blog zum Thema ${article.category}. Verfasst von ${articleAuthor.name}, zuletzt aktualisiert ${article.updatedAt}.`
+      : `Practical guide from the Local Dominator blog on ${article.category}. Written by ${articleAuthor.name}, last updated ${article.updatedAt}.`,
     "author": authorSchema,
     "publisher": publisherSchema,
     ...(reviewerSchema && {

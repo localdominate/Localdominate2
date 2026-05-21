@@ -157,6 +157,18 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
       updateHreflang("x-default", deUrl);
     }
 
+    // Markdown alternate for AI crawlers (GPTBot, PerplexityBot, ClaudeBot)
+    // Points to the full plain-text corpus so AI can ingest content without JS.
+    let mdAlt = document.querySelector('link[rel="alternate"][type="text/markdown"]') as HTMLLinkElement | null;
+    if (!mdAlt) {
+      mdAlt = document.createElement("link");
+      mdAlt.setAttribute("rel", "alternate");
+      mdAlt.setAttribute("type", "text/markdown");
+      mdAlt.setAttribute("title", "Plain-text version for AI / LLMs");
+      document.head.appendChild(mdAlt);
+    }
+    mdAlt.setAttribute("href", "https://localdominate.org/llms-full.txt");
+
     // JSON-LD - Handle single object or array
     const existingJsonLd = document.querySelectorAll('script[data-seo-jsonld]');
     existingJsonLd.forEach(el => el.remove());
