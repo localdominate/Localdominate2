@@ -21,6 +21,7 @@ import LlmFriendlySummary from "./LlmFriendlySummary";
 import SectionAiSummary from "./SectionAiSummary";
 import InlineDefinitionBox from "./InlineDefinitionBox";
 import QuickAnswerBox from "./QuickAnswerBox";
+import KeyFactsBlock from "./KeyFactsBlock";
 import ArticleGlossary from "./ArticleGlossary";
 import LocalSEOAuditCTA from "./LocalSEOAuditCTA";
 import PillarChecklistLinks from "./PillarChecklistLinks";
@@ -680,6 +681,15 @@ const ArticleLayout = ({
           <ArticleHook slug={article.slug} />
           <SectionAiSummary slug={article.slug} />
           <QuickAnswerBox answer={article.excerpt} topic={article.title} />
+          <KeyFactsBlock
+            topic={article.title}
+            category={article.category}
+            author={articleAuthor.name}
+            updatedAt={article.updatedAt}
+            readingTime={article.readingTime}
+            language={(language === "en" || language === "ar" ? language : "de") as "de" | "en" | "ar"}
+            areaServed={detectedGeoTargets.map((t) => t.name).slice(0, 3).join(", ") || undefined}
+          />
           <InlineDefinitionBox slug={article.slug} />
           <div className="article-intro" data-speakable="true" data-ai-summary="true">
             {children}
