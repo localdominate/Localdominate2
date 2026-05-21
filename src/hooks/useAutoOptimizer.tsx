@@ -8,6 +8,7 @@ interface OptimizedElement {
   element_type: string;
   element_id: string;
   winning_value: string;
+  test_history?: unknown;
 }
 
 interface TestQueueItem {
@@ -244,6 +245,10 @@ export function useAutoOptimizer() {
 
   // Track a view for the current test - uses central session manager
   const trackTestView = useCallback(async (elementType: string, elementId: string) => {
+    if (typeof window !== "undefined" && localStorage.getItem("cookieConsent") !== "all") {
+      return;
+    }
+
     const runningTest = testQueue.find(
       t => t.status === 'testing' && t.element_type === elementType && t.element_id === elementId
     );
@@ -333,6 +338,10 @@ export function useAutoOptimizer() {
     const winningValue = winner === 'A' 
       ? runningTest.current_variant_a 
       : runningTest.current_variant_b;
+    const previousHistoryRaw = optimizedElements.find(
+      e => e.element_type === runningTest.element_type && e.element_id === runningTest.element_id
+    )?.test_history;
+    const previousHistory = Array.isArray(previousHistoryRaw) ? previousHistoryRaw : [];
 
     // Update optimized_elements
     await supabase
@@ -342,9 +351,7 @@ export function useAutoOptimizer() {
         element_id: runningTest.element_id,
         winning_value: winningValue,
         test_history: [
-          ...((optimizedElements.find(
-            e => e.element_type === runningTest.element_type && e.element_id === runningTest.element_id
-          ) as any)?.test_history || []),
+          ...previousHistory,
           {
             variant_a: runningTest.current_variant_a,
             variant_b: runningTest.current_variant_b,
