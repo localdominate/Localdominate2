@@ -7,6 +7,7 @@
 User-agent: *
 Allow: /
 Allow: /blog/
+Allow: /blog-md/
 Allow: /seo-lexikon/
 Allow: /llms.txt
 Allow: /llms-full.txt
@@ -90,6 +91,7 @@ Speakable-content: true
 LLM-info-short: https://localdominate.org/llms.txt
 LLM-info-full: https://localdominate.org/llms-full.txt
 Sitemap: https://localdominate.org/sitemap-index.xml
+AI-markdown-sitemap: https://localdominate.org/sitemap-ai.xml
 RSS-feed: https://localdominate.org/feed.xml
 
 # Topics Covered

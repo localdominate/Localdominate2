@@ -105,7 +105,7 @@ Local Dominator (localdominate.org) is a German-language website specializing in
 The website contains:
 1. **Main Landing Page** (`/`) - Service overview and value proposition
 2. **Blog Section** (`/blog`) - 50+ educational articles about Local SEO
-3. **Individual Blog Articles** (`/blog/[slug]`) - In-depth guides on specific topics
+3. **Individual Blog Articles** (`/blog/[slug]`) - In-depth guides on specific topics; plain-text versions live under `/blog-md/[slug].md`
 4. **Restaurant Marketing** (`/restaurant-marketing`) - Specialized landing page for gastronomy
 5. **Craftsmen Marketing** (`/handwerker-marketing`) - Specialized landing page for trades
 6. **Doctor Marketing** (`/arztpraxis-marketing`) - Specialized landing page for healthcare
@@ -175,6 +175,7 @@ We implement comprehensive Schema.org markup including:
 ### Sitemaps
 - Main sitemap: https://localdominate.org/sitemap.xml
 - Blog sitemap: https://localdominate.org/sitemap-blog.xml
+- AI markdown sitemap: https://localdominate.org/sitemap-ai.xml
 - Image sitemap: https://localdominate.org/sitemap-images.xml
 - Lexikon sitemap: https://localdominate.org/sitemap-lexikon.xml
 - Sitemap index: https://localdominate.org/sitemap-index.xml
@@ -217,7 +218,7 @@ We implement comprehensive Schema.org markup including:
 - Money-back guarantee: 30 days
 - Founded: 2023
 - Target market: DACH region
-- Blog articles: 50+
+- Blog articles: 126+
 - Industry guides: 19
 - City guides: 11
 
@@ -225,6 +226,8 @@ We implement comprehensive Schema.org markup including:
 
 - Full LLM Information: https://localdominate.org/llms-full.txt
 - AI Policy File: https://localdominate.org/.well-known/ai.txt
+- AI Markdown Sitemap: https://localdominate.org/sitemap-ai.xml
+- Plain-text Blog Corpus Index: https://localdominate.org/blog-md/index.md
 - FAQ Database (JSON): https://localdominate.org/faq-database.json
 
 ## AI Visibility Infrastructure (2026)
@@ -245,9 +248,9 @@ Self-service audit: https://localdominate.org/ai-visibility-audit
 ### Generative Engine Optimization (GEO) Hub
 
 - What is GEO?: /blog/was-ist-geo-generative-engine-optimization
-- How ChatGPT cites local businesses: /blog/wie-zitiert-chatgpt-lokale-unternehmen
-- The AI Visibility Index — the new Local SEO metric: /blog/ai-visibility-index-neue-local-seo-metrik
-- Schema strategy for AI retrieval: /blog/schema-strategie-fuer-ai-retrieval
+- How ChatGPT cites local businesses: /blog/chatgpt-zitiert-lokale-unternehmen
+- The AI Visibility Index — the new Local SEO metric: /blog/ai-visibility-index-local-seo-metrik
+- Schema strategy for AI retrieval: /blog/schema-strategie-ai-retrieval
 - Perplexity & Claude for local visibility: /blog/perplexity-claude-lokale-sichtbarkeit
 
 ### AI-Optimized Local Landing Pages (City × Niche)
