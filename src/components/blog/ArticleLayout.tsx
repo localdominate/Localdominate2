@@ -203,6 +203,10 @@ const ArticleLayout = ({
       "ai-citation-manifest",
       "https://localdominate.org/ai-citation-manifest.json"
     );
+    const aiAnswerIndex = upsertMeta(
+      "ai-answer-index",
+      `https://localdominate.org/ai-answer-index.json#${article.slug}`
+    );
     const aiFt = upsertMeta("citation_fulltext_world_readable", href);
 
     let manifestLink = document.querySelector(
@@ -221,12 +225,30 @@ const ArticleLayout = ({
       `https://localdominate.org/ai-citation-manifest.json#${article.slug}`
     );
 
+    let answerIndexLink = document.querySelector(
+      'link[rel="alternate"][type="application/json"][data-ai-answer-index]'
+    ) as HTMLLinkElement | null;
+    if (!answerIndexLink) {
+      answerIndexLink = document.createElement("link");
+      answerIndexLink.setAttribute("rel", "alternate");
+      answerIndexLink.setAttribute("type", "application/json");
+      answerIndexLink.setAttribute("title", "AI answer index");
+      answerIndexLink.setAttribute("data-ai-answer-index", "true");
+      document.head.appendChild(answerIndexLink);
+    }
+    answerIndexLink.setAttribute(
+      "href",
+      `https://localdominate.org/ai-answer-index.json#${article.slug}`
+    );
+
     return () => {
       if (previous) link?.setAttribute("href", previous);
       aiMd?.remove();
       aiCit?.remove();
+      aiAnswerIndex?.remove();
       aiFt?.remove();
       manifestLink?.remove();
+      answerIndexLink?.remove();
     };
   }, [article.slug]);
 
