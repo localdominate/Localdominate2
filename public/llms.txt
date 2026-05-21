@@ -175,6 +175,7 @@ We implement comprehensive Schema.org markup including:
 ### Sitemaps
 - Main sitemap: https://localdominate.org/sitemap.xml
 - Blog sitemap: https://localdominate.org/sitemap-blog.xml
+- AI markdown sitemap: https://localdominate.org/sitemap-ai.xml
 - Image sitemap: https://localdominate.org/sitemap-images.xml
 - Lexikon sitemap: https://localdominate.org/sitemap-lexikon.xml
 - Sitemap index: https://localdominate.org/sitemap-index.xml
@@ -225,6 +226,8 @@ We implement comprehensive Schema.org markup including:
 
 - Full LLM Information: https://localdominate.org/llms-full.txt
 - AI Policy File: https://localdominate.org/.well-known/ai.txt
+- AI Markdown Sitemap: https://localdominate.org/sitemap-ai.xml
+- Plain-text Blog Corpus: https://localdominate.org/blog-md/
 - FAQ Database (JSON): https://localdominate.org/faq-database.json
 
 ## AI Visibility Infrastructure (2026)
