@@ -40,6 +40,11 @@ const SocialProofToast = lazy(() => import("@/components/SocialProofToast"));
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 const HeatmapTracker = lazy(() => import("@/components/HeatmapTracker"));
 
+const shouldLoadHeatmap = () => {
+  if (typeof window === "undefined") return false;
+  return new URLSearchParams(window.location.search).get("heatmap") === "true";
+};
+
 // Lazy load providers (defer DB calls)
 const AutoOptimizerProvider = lazy(() => 
   import("@/components/AutoOptimizerProvider").then(m => ({ default: m.AutoOptimizerProvider }))
@@ -96,6 +101,8 @@ const TrackingInitializer = () => {
 };
 
 const Index = () => {
+  const [isHeatmapEnabled] = useState(shouldLoadHeatmap);
+
   useEffect(() => {
     initDataLayer();
     trackPageView("/", "Local Dominator - Home");
@@ -222,7 +229,7 @@ const Index = () => {
         <Suspense fallback={<NullFallback />}>
           <BackToTop />
           <CookieBanner />
-          <HeatmapTracker enabled={true} />
+          {isHeatmapEnabled && <HeatmapTracker enabled showOverlay />}
         </Suspense>
       </DeferredHomeContent>
     </main>
