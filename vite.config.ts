@@ -30,9 +30,7 @@ export default defineConfig(({ mode }) => ({
             '@radix-ui/react-accordion',
             '@radix-ui/react-tabs',
             '@radix-ui/react-tooltip',
-            '@radix-ui/react-popover',
             '@radix-ui/react-select',
-            '@radix-ui/react-navigation-menu',
           ],
           // Forms
           'forms-vendor': ['react-hook-form', 'zod', '@hookform/resolvers'],
