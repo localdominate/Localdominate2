@@ -226,6 +226,7 @@ We implement comprehensive Schema.org markup including:
 
 - Full LLM Information: https://localdominate.org/llms-full.txt
 - AI Policy File: https://localdominate.org/.well-known/ai.txt
+- AI Citation Manifest: https://localdominate.org/ai-citation-manifest.json
 - AI Markdown Sitemap: https://localdominate.org/sitemap-ai.xml
 - Plain-text Blog Corpus Index: https://localdominate.org/blog-md/index.md
 - FAQ Database (JSON): https://localdominate.org/faq-database.json
