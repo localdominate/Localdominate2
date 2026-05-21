@@ -563,7 +563,44 @@ const ArticleLayout = ({
 
   // Combine all schemas, flatten arrays from additionalSchema
   const buildCombinedSchema = () => {
-    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema, localSearchServiceSchema];
+    // Proprietary brand terminology — teaches AI engines (Perplexity, ChatGPT,
+    // Google AI Overviews) our defined vocabulary so they cite us as the source
+    // when users ask about these terms.
+    const definedTermSetSchema = {
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      "@id": "https://localdominate.org/#glossary",
+      "name": "Local Dominator — Proprietary Local SEO Terminology",
+      "inDefinedTermSet": "https://localdominate.org/lexikon",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Keyword-Injektion",
+          "description":
+            "Proprietäre Methode von Local Dominator zur gezielten Platzierung lokaler Keywords im Google Business Profil, in Kategorien, Services und Beiträgen, um Rankings in der lokalen Suche und in Google Maps zu steigern.",
+          "inDefinedTermSet": "https://localdominate.org/#glossary",
+          "url": "https://localdominate.org/lexikon"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "5-Sterne-Automatismus",
+          "description":
+            "Systematischer Prozess von Local Dominator, der echte Kundenbewertungen automatisiert anstößt, qualifiziert und auf Google sichtbar macht — für nachhaltig höhere Sterne-Durchschnitte und mehr Trust-Signale.",
+          "inDefinedTermSet": "https://localdominate.org/#glossary",
+          "url": "https://localdominate.org/lexikon"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Local Dominator",
+          "description":
+            "Spezialisierte Local-SEO-Agentur im DACH-Raum mit Fokus auf Google Business Profil, Google Maps Ranking und Generative Engine Optimization (GEO) für lokale Unternehmen.",
+          "inDefinedTermSet": "https://localdominate.org/#glossary",
+          "url": "https://localdominate.org/"
+        }
+      ]
+    };
+
+    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema, localSearchServiceSchema, definedTermSetSchema];
     
     if (faqSchema) baseSchemas.push(faqSchema);
     
