@@ -275,6 +275,34 @@ For long-form, AI-extractable definitions and answers — including 40–60-word
 
 This file is maintained and updated with each significant content change. For the most current information about our content and services, please visit https://localdominate.org directly.
 
+## Pages
+
+- [Startseite](/): Google Maps Optimierung zum Festpreis 299€ – Top 3 Ranking für lokale Unternehmen
+- [Über uns](/ueber-uns): Team, Mission und Methodik hinter Local Dominator
+- [Blog](/blog): Local-SEO-Strategien, Google-Maps-Ranking und AI-Visibility-Guides
+- [SEO Lexikon](/seo-lexikon): Glossar mit 40–60-Wort-Definitionen für AI-Snippets
+- [Handwerker Marketing](/handwerker-marketing): Local SEO Paket für Handwerksbetriebe
+- [Arztpraxis Marketing](/arztpraxis-marketing): DSGVO-konformes Local SEO für Arztpraxen
+- [Anwalt Marketing](/anwalt-marketing): Local SEO für Kanzleien und Anwälte
+- [Restaurant Marketing](/restaurant-marketing): Online-Marketing-Paket für Gastronomie
+- [AI Visibility Audit](/ai-visibility-audit): Audit der Sichtbarkeit in ChatGPT, Gemini, Perplexity
+- [DIY Toolkit](/diy-toolkit): Self-Service Toolkit für lokale SEO-Optimierung
+- [Plumbers in Berlin](/plumbers-berlin): Local SEO Landing Page für Klempner in Berlin
+- [Lawyers in Hamburg](/lawyers-hamburg): Local SEO Landing Page für Anwälte in Hamburg
+- [Physiotherapy in Vienna](/physiotherapy-vienna): Local SEO Landing Page für Physiotherapie in Wien
+- [Dentists in Zurich](/dentists-zurich): Local SEO Landing Page für Zahnärzte in Zürich
+- [Bakeries in Cologne](/bakeries-cologne): Local SEO Landing Page für Bäckereien in Köln
+- [Hairdressers in Munich](/hairdressers-munich): Local SEO Landing Page für Friseure in München
+- [Dentists in Munich](/dentists-munich): Local SEO Landing Page für Zahnärzte in München
+- [Gyms in Munich](/gyms-munich): Local SEO Landing Page für Fitnessstudios in München
+- [Restaurants in Munich](/restaurants-munich): Local SEO Landing Page für Restaurants in München
+- [Barbers in Munich](/barbers-munich): Local SEO Landing Page für Barbiere in München
+- [Redaktionsrichtlinien](/redaktionsrichtlinien): Editorial Standards für E-E-A-T und Faktentreue
+- [Forschungsmethodik](/forschungsmethodik): Forschungs- und Quellenmethodik
+- [Impressum](/impressum): Rechtliche Angaben gemäß TMG
+- [Datenschutz](/datenschutz): Datenschutzerklärung nach DSGVO
+- [AGB](/agb): Allgemeine Geschäftsbedingungen
+
 ---
 # End of llms.txt
 # Last modified: 2026-05-20
