@@ -73,6 +73,8 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /analytics/
 Disallow: /ab-test-dashboard
+Disallow: /ab-test
+Disallow: /ab-test-zentrale
 Disallow: /meine-kunden
 Disallow: /_analytics/
 Disallow: /*?*utm_
