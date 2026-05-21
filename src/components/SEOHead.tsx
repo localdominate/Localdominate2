@@ -36,9 +36,17 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
   articleSection,
   alternateUrls,
 }, _ref) => {
-  const fullTitle = title.includes("Local Dominator") 
-    ? title 
-    : `${title} | Local Dominator`;
+  // Build SEO title, ensuring total length stays ≤60 chars
+  const SUFFIX = " | Local Dominator";
+  const MAX = 60;
+  let fullTitle: string;
+  if (title.includes("Local Dominator")) {
+    fullTitle = title.length > MAX ? title.slice(0, MAX - 1).trimEnd() + "…" : title;
+  } else if (title.length + SUFFIX.length <= MAX) {
+    fullTitle = title + SUFFIX;
+  } else {
+    fullTitle = title.length > MAX ? title.slice(0, MAX - 1).trimEnd() + "…" : title;
+  }
 
   useEffect(() => {
     // Update document title
