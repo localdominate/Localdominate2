@@ -74,7 +74,8 @@
         "AI Search Optimization",
         "AI Search Optimization Local Dominator",
         "AI Search Optimization DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ai-search-optimization-2026#article\", \"headline\": \"AI Search Optimization 2026: So wirst du in der KI-Suche gefunden\", \"description\": \"Wie du dein Unternehmen für Google AI O…"
     },
     {
       "@type": "Article",
@@ -121,7 +122,8 @@
         "AI-Suche vs. Traditionelle Suche",
         "AI-Suche vs. Traditionelle Suche Local Dominator",
         "AI-Suche vs. Traditionelle Suche DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ai-search-vs-traditional-search#article\", \"headline\": \"AI-Suche vs. Traditionelle Suche: Der komplette Vergleich für lokale Unternehmen\", \"description\": \"AI-Suche vs. traditi…"
     },
     {
       "@type": "Article",
@@ -169,7 +171,8 @@
         "AI Search Optimization für lokale Unternehmen",
         "AI Search Optimization für lokale Unternehmen Local Dominator",
         "AI Search Optimization für lokale Unternehmen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ai-suche-lokale-unternehmen#article\", \"headline\": \"AI Search Optimization für lokale Unternehmen: Der komplette Guide 2026\", \"description\": \"Wie AI-Suchmaschinen Quellen ausw…"
     },
     {
       "@type": "Article",
@@ -216,7 +219,8 @@
         "AI Visibility Checklist",
         "AI Visibility Checklist Local Dominator",
         "AI Visibility Checklist DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ai-visibility-checklist#article\", \"headline\": \"AI Visibility Checklist: Ist deine Website bereit für AI-Suche?\", \"description\": \"Interaktive AI-Sichtbarkeits-Checkliste mit 5…"
     },
     {
       "@type": "Article",
@@ -261,7 +265,8 @@
         "AI Visibility Index – die neue Local-SEO-Metrik",
         "AI Visibility Index – die neue Local-SEO-Metrik Local Dominator",
         "AI Visibility Index – die neue Local-SEO-Metrik DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ai-visibility-index-local-seo-metrik#article\", \"headline\": \"AI Visibility Index – die neue Local-SEO-Metrik 2026\", \"description\": \"Der AI Visibility Index misst, wie sichtbar…"
     },
     {
       "@type": "Article",
@@ -306,7 +311,8 @@
         "Bewertungen & Reputation Hub – Alle Guides",
         "Bewertungen & Reputation Hub – Alle Guides Local Dominator",
         "Bewertungen & Reputation Hub – Alle Guides DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/bewertungen-reputation-hub#article\", \"headline\": \"Bewertungen & Reputation Hub – Alle Guides\", \"description\": \"Alle Guides zu Google Bewertungen: Generierung, Antwort-Vorlage…"
     },
     {
       "@type": "Article",
@@ -351,7 +357,8 @@
         "Bewertungs-Antworten",
         "Bewertungs-Antworten Local Dominator",
         "Bewertungs-Antworten DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/bewertungs-antworten-vorlagen#article\", \"headline\": \"Bewertungs-Antworten: 50 Vorlagen für jede Situation\", \"description\": \"50 Vorlagen für professionelle Antworten auf Googl…"
     },
     {
       "@type": "Article",
@@ -396,7 +403,8 @@
         "Wie zitiert ChatGPT lokale Unternehmen?",
         "Wie zitiert ChatGPT lokale Unternehmen? Local Dominator",
         "Wie zitiert ChatGPT lokale Unternehmen? DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/chatgpt-zitiert-lokale-unternehmen#article\", \"headline\": \"Wie zitiert ChatGPT lokale Unternehmen?\", \"description\": \"Welche Signale ChatGPT nutzt, um lokale Unternehmen zu emp…"
     },
     {
       "@type": "Article",
@@ -442,7 +450,8 @@
         "Citation Tracking Spreadsheet Template",
         "Citation Tracking Spreadsheet Template Local Dominator",
         "Citation Tracking Spreadsheet Template DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/citation-tracking-template#article\", \"headline\": \"Citation Tracking Spreadsheet Template: Alle Verzeichnisse im Griff\", \"description\": \"Kostenloses Citation Tracking Template…"
     },
     {
       "@type": "Article",
@@ -486,7 +495,8 @@
         "Core Web Vitals für lokale Websites",
         "Core Web Vitals für lokale Websites Local Dominator",
         "Core Web Vitals für lokale Websites DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/core-web-vitals-local-seo#article\", \"headline\": \"Core Web Vitals für lokale Websites: Performance-Guide\", \"description\": \"Wie lokale Unternehmen ihre Core Web Vitals optimier…"
     },
     {
       "@type": "Article",
@@ -531,7 +541,8 @@
         "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026)",
         "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026) Local Dominator",
         "Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/duplicate-listing-entfernen#article\", \"headline\": \"Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026)\", \"description\": \"Hast du mehrere Google Business Ein…"
     },
     {
       "@type": "Article",
@@ -577,7 +588,8 @@
         "E-E-A-T für lokale Unternehmen",
         "E-E-A-T für lokale Unternehmen Local Dominator",
         "E-E-A-T für lokale Unternehmen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/e-e-a-t-lokale-unternehmen#article\", \"headline\": \"E-E-A-T für lokale Unternehmen: Expertise beweisen & Vertrauen aufbauen\", \"description\": \"Wie lokale Unternehmen E-E-A-T (Ex…"
     },
     {
       "@type": "Article",
@@ -624,7 +636,8 @@
         "Entity SEO",
         "Entity SEO Local Dominator",
         "Entity SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/entity-seo-guide#article\", \"headline\": \"Entity SEO: Wie Suchmaschinen Entitäten verstehen & nutzen\", \"description\": \"Was ist Entity SEO? Wie Google Entitäten erkennt. Knowled…"
     },
     {
       "@type": "Article",
@@ -668,7 +681,8 @@
         "FAQ",
         "FAQ Local Dominator",
         "FAQ DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/faq-ai-zukunft-local-seo#article\", \"headline\": \"FAQ: AI & Zukunft im Local SEO\", \"description\": \"8 häufig gestellte Fragen zu AI Overviews, GEO, Voice Search und der Zukunft…"
     },
     {
       "@type": "Article",
@@ -711,7 +725,8 @@
         "FAQ",
         "FAQ Local Dominator",
         "FAQ DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/faq-bewertungen-reputation#article\", \"headline\": \"FAQ: Bewertungen & Reputation\", \"description\": \"8 häufig gestellte Fragen zu Google-Bewertungen: Mehr bekommen, negative man…"
     },
     {
       "@type": "Article",
@@ -754,7 +769,8 @@
         "FAQ",
         "FAQ Local Dominator",
         "FAQ DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/faq-content-marketing-local-seo#article\", \"headline\": \"FAQ: Content & Marketing für Local SEO\", \"description\": \"8 häufig gestellte Fragen zu lokalem Content, Linkbuilding, Ci…"
     },
     {
       "@type": "Article",
@@ -797,7 +813,8 @@
         "FAQ",
         "FAQ Local Dominator",
         "FAQ DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/faq-google-business-profil#article\", \"headline\": \"FAQ: Google Business Profil\", \"description\": \"10 häufig gestellte Fragen zum Google Business Profil: Einrichtung, Verifizier…"
     },
     {
       "@type": "Article",
@@ -842,7 +859,8 @@
         "FAQ Hub",
         "FAQ Hub Local Dominator",
         "FAQ Hub DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/faq-hub#article\", \"headline\": \"FAQ Hub: Alle Local SEO Fragen beantwortet\", \"description\": \"50+ häufig gestellte Fragen zu Local SEO — von Grundlagen über Google Business Pro…"
     },
     {
       "@type": "Article",
@@ -886,7 +904,8 @@
         "FAQ",
         "FAQ Local Dominator",
         "FAQ DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/faq-local-seo-grundlagen#article\", \"headline\": \"FAQ: Local SEO Grundlagen\", \"description\": \"Die 10 häufigsten Fragen zu Local SEO Grundlagen: Kosten, Dauer, Unterschiede und…"
     },
     {
       "@type": "Article",
@@ -930,7 +949,8 @@
         "FAQ",
         "FAQ Local Dominator",
         "FAQ DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/faq-technisches-seo#article\", \"headline\": \"FAQ: Technisches SEO\", \"description\": \"10 häufig gestellte Fragen zu Schema Markup, Core Web Vitals, NAP-Konsistenz und Mobile-Firs…"
     },
     {
       "@type": "Article",
@@ -975,7 +995,8 @@
         "Google Business Attribute richtig nutzen – Alle Optionen erklärt (2026)",
         "Google Business Attribute richtig nutzen – Alle Optionen erklärt (2026) Local Dominator",
         "Google Business Attribute richtig nutzen – Alle Optionen erklärt (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-attribute-richtig-nutzen#article\", \"headline\": \"Google Business Attribute richtig nutzen – Alle Optionen erklärt (2026)\", \"description\": \"Von LGBTQ+-freundlich bis Rollst…"
     },
     {
       "@type": "Article",
@@ -1020,7 +1041,8 @@
         "Google Bewertung löschen lassen – Schritt-für-Schritt Anleitung (2026)",
         "Google Bewertung löschen lassen – Schritt-für-Schritt Anleitung (2026) Local Dominator",
         "Google Bewertung löschen lassen – Schritt-für-Schritt Anleitung (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-bewertung-loeschen-anleitung#article\", \"headline\": \"Google Bewertung löschen lassen – Schritt-für-Schritt Anleitung (2026)\", \"description\": \"Fake-Bewertung oder Verleumdu…"
     },
     {
       "@type": "Article",
@@ -1065,7 +1087,8 @@
         "Google Business Fotos optimieren",
         "Google Business Fotos optimieren Local Dominator",
         "Google Business Fotos optimieren DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-fotos-optimieren#article\", \"headline\": \"Google Business Fotos optimieren: Der komplette Bilder-Guide\", \"description\": \"So optimierst du Fotos für dein Google Business Pro…"
     },
     {
       "@type": "Article",
@@ -1110,7 +1133,8 @@
         "Google Business für mehrere Standorte verwalten – Der Multi-Location Guide (2026)",
         "Google Business für mehrere Standorte verwalten – Der Multi-Location Guide (2026) Local Dominator",
         "Google Business für mehrere Standorte verwalten – Der Multi-Location Guide (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-mehrere-standorte#article\", \"headline\": \"Google Business für mehrere Standorte verwalten – Der Multi-Location Guide (2026)\", \"description\": \"Wie du mehrere Google Busines…"
     },
     {
       "@type": "Article",
@@ -1155,7 +1179,8 @@
         "Google Business Profil nicht in Suche sichtbar – 12 Lösungen (2026)",
         "Google Business Profil nicht in Suche sichtbar – 12 Lösungen (2026) Local Dominator",
         "Google Business Profil nicht in Suche sichtbar – 12 Lösungen (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-nicht-in-suche-sichtbar#article\", \"headline\": \"Google Business Profil nicht in Suche sichtbar – 12 Lösungen (2026)\", \"description\": \"Dein Google Business Profil taucht ni…"
     },
     {
       "@type": "Article",
@@ -1200,7 +1225,8 @@
         "Google Business Öffnungszeiten & Sondertage richtig einstellen (2026)",
         "Google Business Öffnungszeiten & Sondertage richtig einstellen (2026) Local Dominator",
         "Google Business Öffnungszeiten & Sondertage richtig einstellen (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-oeffnungszeiten-sondertage#article\", \"headline\": \"Google Business Öffnungszeiten & Sondertage richtig einstellen (2026)\", \"description\": \"Wie du Öffnungszeiten, Feiertage…"
     },
     {
       "@type": "Article",
@@ -1245,7 +1271,8 @@
         "Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung)",
         "Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung) Local Dominator",
         "Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-suspendiert-reaktivieren#article\", \"headline\": \"Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung)\", \"description\": \"Google Business Profil…"
     },
     {
       "@type": "Article",
@@ -1290,7 +1317,8 @@
         "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026)",
         "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026) Local Dominator",
         "Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/gbp-verifizierung-fehlgeschlagen#article\", \"headline\": \"Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026)\", \"description\": \"Google Business Ver…"
     },
     {
       "@type": "Article",
@@ -1335,7 +1363,8 @@
         "Google AI Overviews & Local SEO",
         "Google AI Overviews & Local SEO Local Dominator",
         "Google AI Overviews & Local SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-ai-overviews-local-seo#article\", \"headline\": \"Google AI Overviews & Local SEO: Was sich ändert\", \"description\": \"Wie Google AI Overviews die lokale Suche verändern. St…"
     },
     {
       "@type": "Article",
@@ -1378,7 +1407,8 @@
         "Google Bewertungen bekommen",
         "Google Bewertungen bekommen Local Dominator",
         "Google Bewertungen bekommen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-bewertungen-bekommen#article\", \"headline\": \"Google Bewertungen bekommen: 7 bewährte Strategien\", \"description\": \"So bekommst du mehr Google Bewertungen! 7 ethische Str…"
     },
     {
       "@type": "Article",
@@ -1423,7 +1453,8 @@
         "Google Business Insights richtig verstehen & nutzen",
         "Google Business Insights richtig verstehen & nutzen Local Dominator",
         "Google Business Insights richtig verstehen & nutzen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-business-insights-verstehen#article\", \"headline\": \"Google Business Insights richtig verstehen & nutzen\", \"description\": \"So interpretierst du Google Business Insights…"
     },
     {
       "@type": "Article",
@@ -1468,7 +1499,8 @@
         "Google Business Kategorien",
         "Google Business Kategorien Local Dominator",
         "Google Business Kategorien DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-business-kategorien-guide#article\", \"headline\": \"Google Business Kategorien: Welche passt zu deinem Unternehmen?\", \"description\": \"Die richtige Google Business Kategor…"
     },
     {
       "@type": "Article",
@@ -1513,7 +1545,8 @@
         "Google Business Messaging",
         "Google Business Messaging Local Dominator",
         "Google Business Messaging DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-business-messaging#article\", \"headline\": \"Google Business Messaging: Kundenkommunikation optimal nutzen\", \"description\": \"So nutzt du Google Business Messaging für bes…"
     },
     {
       "@type": "Article",
@@ -1558,7 +1591,8 @@
         "Google Business Produkte & Services optimal präsentieren",
         "Google Business Produkte & Services optimal präsentieren Local Dominator",
         "Google Business Produkte & Services optimal präsentieren DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-business-produkte-services#article\", \"headline\": \"Google Business Produkte & Services optimal präsentieren\", \"description\": \"So nutzt du Produkte und Services in deine…"
     },
     {
       "@type": "Article",
@@ -1602,7 +1636,8 @@
         "Google Business Profil Hub – Alle Guides & Anleitungen",
         "Google Business Profil Hub – Alle Guides & Anleitungen Local Dominator",
         "Google Business Profil Hub – Alle Guides & Anleitungen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-business-profil-hub#article\", \"headline\": \"Google Business Profil Hub – Alle Guides & Anleitungen\", \"description\": \"Komplette Sammlung aller Google Business Profil Gui…"
     },
     {
       "@type": "Article",
@@ -1648,7 +1683,8 @@
         "Google Maps Audit Template",
         "Google Maps Audit Template Local Dominator",
         "Google Maps Audit Template DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-audit-template#article\", \"headline\": \"Google Maps Audit Template: Vollständige Checkliste mit 75+ Punkten\", \"description\": \"Kostenloses Google Maps Audit Template…"
     },
     {
       "@type": "Article",
@@ -1694,7 +1730,8 @@
         "Google Maps Konkurrenzanalyse",
         "Google Maps Konkurrenzanalyse Local Dominator",
         "Google Maps Konkurrenzanalyse DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-konkurrenzanalyse#article\", \"headline\": \"Google Maps Konkurrenzanalyse: So analysierst du Top-Rankings\", \"description\": \"Systematische Google Maps Konkurrenzanaly…"
     },
     {
       "@type": "Article",
@@ -1740,7 +1777,8 @@
         "Google Maps Ranking Case Studies",
         "Google Maps Ranking Case Studies Local Dominator",
         "Google Maps Ranking Case Studies DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-ranking-case-studies#article\", \"headline\": \"Google Maps Ranking Case Studies: 6 Branchen, 6 Erfolge\", \"description\": \"6 echte Google Maps Ranking Case Studies aus…"
     },
     {
       "@type": "Article",
@@ -1786,7 +1824,8 @@
         "Google Maps Ranking Tracker",
         "Google Maps Ranking Tracker Local Dominator",
         "Google Maps Ranking Tracker DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-ranking-tracker#article\", \"headline\": \"Google Maps Ranking Tracker: So trackst du deine lokalen Rankings\", \"description\": \"Wie du Google Maps Rankings systematisc…"
     },
     {
       "@type": "Article",
@@ -1829,7 +1868,8 @@
         "Google Maps Ranking verbessern",
         "Google Maps Ranking verbessern Local Dominator",
         "Google Maps Ranking verbessern DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-ranking-verbessern#article\", \"headline\": \"Google Maps Ranking verbessern: 7-Schritte-Aktionsplan 2026\", \"description\": \"Verbessere dein Google Maps Ranking in 7 k…"
     },
     {
       "@type": "Article",
@@ -1874,7 +1914,8 @@
         "Google Maps SEO Hub",
         "Google Maps SEO Hub Local Dominator",
         "Google Maps SEO Hub DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-seo-hub#article\", \"headline\": \"Google Maps SEO Hub: Alle Guides für lokale Sichtbarkeit\", \"description\": \"Das umfassendste Google Maps SEO Hub: Rankings verbesser…"
     },
     {
       "@type": "Article",
@@ -1919,7 +1960,8 @@
         "Google Maps SEO",
         "Google Maps SEO Local Dominator",
         "Google Maps SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-seo-ranking-faktoren#article\", \"headline\": \"Google Maps SEO 2026: Alle 20 Ranking-Signale mit Gewichtung\", \"description\": \"Alle 20 Google Maps Ranking-Signale mit…"
     },
     {
       "@type": "Article",
@@ -1965,7 +2007,8 @@
         "Google Maps SEO vs. Organic SEO",
         "Google Maps SEO vs. Organic SEO Local Dominator",
         "Google Maps SEO vs. Organic SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-seo-vs-organic-seo#article\", \"headline\": \"Google Maps SEO vs. Organic SEO: Ranking-Faktoren, Strategien & ROI im Vergleich\", \"description\": \"Google Maps SEO vs. O…"
     },
     {
       "@type": "Article",
@@ -2011,7 +2054,8 @@
         "Google Maps Spam erkennen & melden",
         "Google Maps Spam erkennen & melden Local Dominator",
         "Google Maps Spam erkennen & melden DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-maps-spam-erkennen#article\", \"headline\": \"Google Maps Spam erkennen & melden: Der komplette Guide\", \"description\": \"Lerne die 8 häufigsten Spam-Arten auf Google Maps z…"
     },
     {
       "@type": "Article",
@@ -2054,7 +2098,8 @@
         "Google My Business optimieren",
         "Google My Business optimieren Local Dominator",
         "Google My Business optimieren DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-my-business-optimieren#article\", \"headline\": \"Google My Business optimieren: Schritt-für-Schritt Anleitung\", \"description\": \"Google My Business Profil optimieren in 10…"
     },
     {
       "@type": "Article",
@@ -2098,7 +2143,8 @@
         "Google Posts optimal nutzen",
         "Google Posts optimal nutzen Local Dominator",
         "Google Posts optimal nutzen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/google-posts-ranking-faktor#article\", \"headline\": \"Google Posts optimal nutzen: Der unterschätzte Ranking-Faktor\", \"description\": \"Wie Google Posts Ihr lokales Ranking verbes…"
     },
     {
       "@type": "Article",
@@ -2143,7 +2189,8 @@
         "KI-Tools für Local SEO",
         "KI-Tools für Local SEO Local Dominator",
         "KI-Tools für Local SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ki-tools-local-seo#article\", \"headline\": \"KI-Tools für Local SEO: Die besten AI-Helfer 2026\", \"description\": \"Die besten KI-Tools für lokale Suchmaschinenoptimierung. Von Cha…"
     },
     {
       "@type": "Article",
@@ -2189,7 +2236,8 @@
         "Kostenloses SEO",
         "Kostenloses SEO Local Dominator",
         "Kostenloses SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/kostenloses-seo-guide#article\", \"headline\": \"Kostenloses SEO: Der ultimative Guide für Einsteiger 2026\", \"description\": \"Lerne SEO komplett kostenlos! 50+ Gratis-Tools, Schri…"
     },
     {
       "@type": "Article",
@@ -2234,7 +2282,8 @@
         "Top-Verzeichnisse DACH",
         "Top-Verzeichnisse DACH Local Dominator",
         "Top-Verzeichnisse DACH DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-citations-2025#article\", \"headline\": \"Top-Verzeichnisse DACH 2026: Branchenspezifische Citation-Quellen nach Relevanz sortiert\", \"description\": \"Welche Branchenbücher s…"
     },
     {
       "@type": "Article",
@@ -2279,7 +2328,8 @@
         "Local Content Marketing",
         "Local Content Marketing Local Dominator",
         "Local Content Marketing DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-content-marketing#article\", \"headline\": \"Local Content Marketing: Content-Strategie für lokale Unternehmen\", \"description\": \"Wie lokale Unternehmen durch gezieltes Cont…"
     },
     {
       "@type": "Article",
@@ -2325,7 +2375,8 @@
         "Local Keyword Research Template",
         "Local Keyword Research Template Local Dominator",
         "Local Keyword Research Template DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-keyword-research-template#article\", \"headline\": \"Local Keyword Research Template: Systematische Keyword-Recherche für lokale Unternehmen\", \"description\": \"Kostenloses K…"
     },
     {
       "@type": "Article",
@@ -2373,7 +2424,8 @@
         "Local Link Building Blueprint",
         "Local Link Building Blueprint Local Dominator",
         "Local Link Building Blueprint DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-link-building-blueprint#article\", \"headline\": \"Local Link Building Blueprint: Der komplette Leitfaden für lokale Backlinks 2026\", \"description\": \"Local-Linkbuilding-Gui…"
     },
     {
       "@type": "Article",
@@ -2418,7 +2470,8 @@
         "Local Link Building",
         "Local Link Building Local Dominator",
         "Local Link Building DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-link-building#article\", \"headline\": \"Local Link Building: Backlinks für lokale Unternehmen aufbauen\", \"description\": \"Wie lokale Unternehmen qualitative Backlinks aufba…"
     },
     {
       "@type": "Article",
@@ -2466,7 +2519,8 @@
         "Local SEO für Ärzte & Praxen Local Dominator",
         "Local SEO für Ärzte & Praxen DACH",
         "Local SEO Ärzte / Praxen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-aerzte-praxen#article\", \"headline\": \"Local SEO für Ärzte & Praxen: Patientengewinnung durch Google\", \"description\": \"Wie Arztpraxen durch Local SEO mehr Patienten g…"
     },
     {
       "@type": "Article",
@@ -2514,7 +2568,8 @@
         "Local SEO für Anwälte & Kanzleien Local Dominator",
         "Local SEO für Anwälte & Kanzleien DACH",
         "Local SEO Anwälte / Kanzleien DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-anwaelte-kanzleien#article\", \"headline\": \"Local SEO für Anwälte & Kanzleien: Mandanten durch Google gewinnen\", \"description\": \"Wie Anwaltskanzleien durch Local SEO…"
     },
     {
       "@type": "Article",
@@ -2561,7 +2616,8 @@
         "Local SEO für Apotheken Local Dominator",
         "Local SEO für Apotheken DACH",
         "Local SEO Apotheken DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-apotheken#article\", \"headline\": \"Local SEO für Apotheken: Lokale Gesundheitsversorgung\", \"description\": \"Wie Apotheken durch Local SEO mehr Kunden gewinnen. Notdien…"
     },
     {
       "@type": "Article",
@@ -2605,7 +2661,8 @@
         "Local SEO Audit",
         "Local SEO Audit Local Dominator",
         "Local SEO Audit DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-audit-checkliste#article\", \"headline\": \"Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring\", \"description\": \"Local SEO Audit durchführen: 50+ Diagnose-…"
     },
     {
       "@type": "Article",
@@ -2652,7 +2709,8 @@
         "Local SEO für Autowerkstätten & KFZ-Betriebe Local Dominator",
         "Local SEO für Autowerkstätten & KFZ-Betriebe DACH",
         "Local SEO Autowerkstatt DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-autowerkstatt#article\", \"headline\": \"Local SEO für Autowerkstätten & KFZ-Betriebe\", \"description\": \"Wie Autowerkstätten durch Local SEO mehr Kunden gewinnen. Notfal…"
     },
     {
       "@type": "Article",
@@ -2700,7 +2758,8 @@
         "Local SEO für Bäckereien Local Dominator",
         "Local SEO für Bäckereien DACH",
         "Local SEO Bäckerei DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-baeckerei#article\", \"headline\": \"Local SEO für Bäckereien: Mehr Kunden durch Google (2026)\", \"description\": \"Wie Bäckereien durch Local SEO mehr Kunden gewinnen. Öf…"
     },
     {
       "@type": "Article",
@@ -2741,7 +2800,8 @@
         "Local SEO Basel DACH",
         "Local SEO Basel Basel",
         "Local SEO Basel Schweiz"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-basel#article\", \"headline\": \"Local SEO Basel: Grenzregion Schweiz-Deutschland-Frankreich\", \"description\": \"Local SEO für Basel und das Dreiländereck. Mehrsprachige…"
     },
     {
       "@type": "Article",
@@ -2776,7 +2836,8 @@
         "Local SEO Berlin Local Dominator",
         "Local SEO Berlin DACH",
         "Local SEO Berlin Berlin"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-berlin#article\", \"headline\": \"Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen\", \"description\": \"Local SEO speziell für Berlin. Kiez-Keywords, Bezirks-Strateg…"
     },
     {
       "@type": "Article",
@@ -2820,7 +2881,8 @@
         "Local SEO Branchen-Guides – 22+ Branchen im Überblick",
         "Local SEO Branchen-Guides – 22+ Branchen im Überblick Local Dominator",
         "Local SEO Branchen-Guides – 22+ Branchen im Überblick DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-branchen-hub#article\", \"headline\": \"Local SEO Branchen-Guides – 22+ Branchen im Überblick\", \"description\": \"Branchenspezifische Local SEO Anleitungen für Gastronomi…"
     },
     {
       "@type": "Article",
@@ -2865,7 +2927,8 @@
         "Local SEO Case Study",
         "Local SEO Case Study Local Dominator",
         "Local SEO Case Study DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-case-study-baecker#article\", \"headline\": \"Local SEO Case Study: Wie ein Bäcker 200% mehr Kunden gewann\", \"description\": \"Echte Case Study: Wie eine traditionelle Bä…"
     },
     {
       "@type": "Article",
@@ -2911,7 +2974,8 @@
         "Local SEO Implementierungs-Checkliste",
         "Local SEO Implementierungs-Checkliste Local Dominator",
         "Local SEO Implementierungs-Checkliste DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-checkliste-komplett#article\", \"headline\": \"Local SEO Implementierungs-Checkliste: 80+ Maßnahmen in 8 Phasen systematisch umsetzen\", \"description\": \"Die systematisch…"
     },
     {
       "@type": "Article",
@@ -2963,7 +3027,8 @@
         "Local SEO für Döner & Kebab-Imbisse DACH",
         "Local SEO Restaurant / Gastronomie DACH",
         "Local SEO Döner / Imbiss DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-doener-kebab-imbiss#article\", \"headline\": \"Local SEO für Döner & Kebab-Imbisse: Der ultimative Marketing-Guide 2026\", \"description\": \"Der komplette SEO-Guide für Dö…"
     },
     {
       "@type": "Article",
@@ -2998,7 +3063,8 @@
         "Local SEO Düsseldorf Local Dominator",
         "Local SEO Düsseldorf DACH",
         "Local SEO Düsseldorf Düsseldorf"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-duesseldorf#article\", \"headline\": \"Local SEO Düsseldorf: Mode, Messe & mehr Kunden\", \"description\": \"Local SEO speziell für Düsseldorf. Fashion-Keywords, Messe-Stra…"
     },
     {
       "@type": "Article",
@@ -3046,7 +3112,8 @@
         "Local SEO für Elektriker & Elektrotechniker Local Dominator",
         "Local SEO für Elektriker & Elektrotechniker DACH",
         "Local SEO Elektrotechnik DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-elektrotechnik#article\", \"headline\": \"Local SEO für Elektriker & Elektrotechniker: Mehr Aufträge\", \"description\": \"Local SEO speziell für Elektriker und Elektrotech…"
     },
     {
       "@type": "Article",
@@ -3091,7 +3158,8 @@
         "Local SEO Fehler",
         "Local SEO Fehler Local Dominator",
         "Local SEO Fehler DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-fehler#article\", \"headline\": \"Local SEO Fehler: 15 Gründe warum du nicht gefunden wirst\", \"description\": \"Die 15 häufigsten Local SEO Fehler und wie du sie vermeide…"
     },
     {
       "@type": "Article",
@@ -3138,7 +3206,8 @@
         "Local SEO für Fitnessstudios & Personal Trainer Local Dominator",
         "Local SEO für Fitnessstudios & Personal Trainer DACH",
         "Local SEO Fitnessstudio DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-fitness#article\", \"headline\": \"Local SEO für Fitnessstudios & Personal Trainer\", \"description\": \"Wie Fitnessstudios und Personal Trainer durch Local SEO mehr Mitgli…"
     },
     {
       "@type": "Article",
@@ -3185,7 +3254,8 @@
         "Local SEO für Fotografen Local Dominator",
         "Local SEO für Fotografen DACH",
         "Local SEO Fotografie DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-fotograf#article\", \"headline\": \"Local SEO für Fotografen: Mehr Buchungen durch Google\", \"description\": \"Wie Fotografen durch Local SEO mehr Buchungen generieren. Po…"
     },
     {
       "@type": "Article",
@@ -3220,7 +3290,8 @@
         "Local SEO Frankfurt Local Dominator",
         "Local SEO Frankfurt DACH",
         "Local SEO Frankfurt Frankfurt am Main"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-frankfurt#article\", \"headline\": \"Local SEO Frankfurt: Finanzmetropole richtig nutzen\", \"description\": \"Local SEO speziell für Frankfurt am Main. B2B-Keywords, Finan…"
     },
     {
       "@type": "Article",
@@ -3269,7 +3340,8 @@
         "Local SEO für Friseursalons & Beauty-Studios Local Dominator",
         "Local SEO für Friseursalons & Beauty-Studios DACH",
         "Local SEO Friseur / Beauty DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-friseursalon-beauty#article\", \"headline\": \"Local SEO für Friseursalons & Beauty-Studios: Der ultimative Guide mit Buchungsintegration 2026\", \"description\": \"Der län…"
     },
     {
       "@type": "Article",
@@ -3315,7 +3387,8 @@
         "Local SEO für Restaurants Local Dominator",
         "Local SEO für Restaurants DACH",
         "Local SEO Restaurant / Gastronomie DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-fuer-restaurants#article\", \"headline\": \"Local SEO für Restaurants: Mehr Gäste durch Google\", \"description\": \"Local SEO speziell für Restaurants erklärt. Von Speisek…"
     },
     {
       "@type": "Article",
@@ -3350,7 +3423,8 @@
         "Local SEO Hamburg Local Dominator",
         "Local SEO Hamburg DACH",
         "Local SEO Hamburg Hamburg"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-hamburg#article\", \"headline\": \"Local SEO Hamburg: Der Hanseatische Marketing-Guide\", \"description\": \"Local SEO speziell für Hamburg. Stadtteil-Keywords von Altona b…"
     },
     {
       "@type": "Article",
@@ -3396,7 +3470,8 @@
         "Local SEO für Handwerker Local Dominator",
         "Local SEO für Handwerker DACH",
         "Local SEO Handwerk DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-handwerker#article\", \"headline\": \"Local SEO für Handwerker: Mehr Aufträge durch Google\", \"description\": \"Local SEO speziell für Handwerksbetriebe. Von Elektriker bi…"
     },
     {
       "@type": "Article",
@@ -3432,7 +3507,8 @@
         "Local SEO Hannover Local Dominator",
         "Local SEO Hannover DACH",
         "Local SEO Hannover Hannover"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-hannover#article\", \"headline\": \"Local SEO Hannover: Der Guide für niedersächsische Unternehmen\", \"description\": \"Local SEO speziell für Hannover und Region. Stadtte…"
     },
     {
       "@type": "Article",
@@ -3480,7 +3556,8 @@
         "Local SEO für Hotels & Unterkünfte Local Dominator",
         "Local SEO für Hotels & Unterkünfte DACH",
         "Local SEO Hotel / Hospitality DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-hotels#article\", \"headline\": \"Local SEO für Hotels & Unterkünfte: Direktbuchungen steigern\", \"description\": \"Wie Hotels durch Local SEO mehr Direktbuchungen generie…"
     },
     {
       "@type": "Article",
@@ -3527,7 +3604,8 @@
         "Local SEO für Immobilienmakler Local Dominator",
         "Local SEO für Immobilienmakler DACH",
         "Local SEO Immobilienmakler DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-immobilienmakler#article\", \"headline\": \"Local SEO für Immobilienmakler: Objektanfragen durch Google\", \"description\": \"Wie Immobilienmakler durch Local SEO mehr Obje…"
     },
     {
       "@type": "Article",
@@ -3570,7 +3648,8 @@
         "Local SEO Keywords finden",
         "Local SEO Keywords finden Local Dominator",
         "Local SEO Keywords finden DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-keywords-finden#article\", \"headline\": \"Local SEO Keywords finden: Der komplette Keyword-Recherche Guide 2026\", \"description\": \"Finde die perfekten lokalen Keywords…"
     },
     {
       "@type": "Article",
@@ -3605,7 +3684,8 @@
         "Local SEO Köln Local Dominator",
         "Local SEO Köln DACH",
         "Local SEO Köln Köln"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-koeln#article\", \"headline\": \"Local SEO Köln: Rheinland-Marketing für lokale Unternehmen\", \"description\": \"Local SEO speziell für Köln und das Rheinland. Kölsche Key…"
     },
     {
       "@type": "Article",
@@ -3649,7 +3729,8 @@
         "Franchise-SEO Strategie",
         "Franchise-SEO Strategie Local Dominator",
         "Franchise-SEO Strategie DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-mehrstufig-unternehmen#article\", \"headline\": \"Franchise-SEO Strategie: GBP-Management & Markenkonsistenz bei mehreren Standorten\", \"description\": \"Wie Franchise-Unt…"
     },
     {
       "@type": "Article",
@@ -3695,7 +3776,8 @@
         "Local SEO Monthly Checklist",
         "Local SEO Monthly Checklist Local Dominator",
         "Local SEO Monthly Checklist DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-monthly-checklist#article\", \"headline\": \"Local SEO Monthly Checklist: Die monatliche Routine für Top-Rankings\", \"description\": \"Monatliche Local SEO Checkliste mit…"
     },
     {
       "@type": "Article",
@@ -3731,7 +3813,8 @@
         "Local SEO München Local Dominator",
         "Local SEO München DACH",
         "Local SEO München München"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-muenchen#article\", \"headline\": \"Local SEO München: Der Guide für bayerische Unternehmen\", \"description\": \"Local SEO speziell für München und Bayern. Stadtteil-Keywo…"
     },
     {
       "@type": "Article",
@@ -3776,7 +3859,8 @@
         "Notdienst-Keywords",
         "Notdienst-Keywords Local Dominator",
         "Notdienst-Keywords DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-notdienst-keywords#article\", \"headline\": \"Notdienst-Keywords: Wenn Kunden dringend suchen\", \"description\": \"So optimierst du für Notdienst-Suchanfragen. Keywords, G…"
     },
     {
       "@type": "Article",
@@ -3824,7 +3908,8 @@
         "Local SEO für Optiker & Hörakustiker Local Dominator",
         "Local SEO für Optiker & Hörakustiker DACH",
         "Local SEO Optiker DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-optiker#article\", \"headline\": \"Local SEO für Optiker & Hörakustiker: Kunden gewinnen\", \"description\": \"Local SEO speziell für Optiker und Hörakustiker. Von Produktk…"
     },
     {
       "@type": "Article",
@@ -3872,7 +3957,8 @@
         "Local SEO für Physiotherapie & Heilpraktiker Local Dominator",
         "Local SEO für Physiotherapie & Heilpraktiker DACH",
         "Local SEO Physiotherapie DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-physiotherapie#article\", \"headline\": \"Local SEO für Physiotherapie & Heilpraktiker: Patienten gewinnen\", \"description\": \"Local SEO speziell für Physiotherapeuten un…"
     },
     {
       "@type": "Article",
@@ -3919,7 +4005,8 @@
         "Local SEO Ranking-Faktoren erklärt",
         "Local SEO Ranking-Faktoren erklärt Local Dominator",
         "Local SEO Ranking-Faktoren erklärt DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-ranking-faktoren-erklaert#article\", \"headline\": \"Local SEO Ranking-Faktoren erklärt: Alle Signale im Detail 2026\", \"description\": \"Alle Local SEO Ranking-Faktoren:…"
     },
     {
       "@type": "Article",
@@ -3965,7 +4052,8 @@
         "Local SEO Reporting Template",
         "Local SEO Reporting Template Local Dominator",
         "Local SEO Reporting Template DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-reporting-template#article\", \"headline\": \"Local SEO Reporting Template: Monatlicher Report + KPI-Vorlage\", \"description\": \"Kostenlose Local SEO Report-Vorlage mit 1…"
     },
     {
       "@type": "Article",
@@ -4010,7 +4098,8 @@
         "Local SEO Wochenplan",
         "Local SEO Wochenplan Local Dominator",
         "Local SEO Wochenplan DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-roadmap-90-tage#article\", \"headline\": \"Local SEO Wochenplan: 12-Wochen-Timeline mit Gantt-Diagramm & KPI-Meilensteinen\", \"description\": \"Visueller 12-Wochen-Wochenp…"
     },
     {
       "@type": "Article",
@@ -4046,7 +4135,8 @@
         "Local SEO Schweiz Local Dominator",
         "Local SEO Schweiz DACH",
         "Local SEO Schweiz Schweiz"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-schweiz#article\", \"headline\": \"Local SEO Schweiz: Der komplette Leitfaden für KMUs\", \"description\": \"Der nationale Local SEO Guide für Schweizer Unternehmen. Mehrsp…"
     },
     {
       "@type": "Article",
@@ -4094,7 +4184,8 @@
         "Local SEO Städte-Guides – DACH-Region Berlin",
         "Local SEO Städte-Guides – DACH-Region München",
         "Local SEO Städte-Guides – DACH-Region Wien"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-staedte-hub#article\", \"headline\": \"Local SEO Städte-Guides – DACH-Region\", \"description\": \"Stadtspezifische Local SEO Guides für Berlin, Hamburg, München, Wien, Zür…"
     },
     {
       "@type": "Article",
@@ -4142,7 +4233,8 @@
         "Local SEO Statistiken & Daten",
         "Local SEO Statistiken & Daten Local Dominator",
         "Local SEO Statistiken & Daten DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-statistiken-daten#article\", \"headline\": \"Local SEO Statistiken & Daten 2026: 88+ Datenpunkte für 22 Branchen\", \"description\": \"88+ aktuelle Local SEO Statistiken fü…"
     },
     {
       "@type": "Article",
@@ -4189,7 +4281,8 @@
         "Local SEO für Steuerberater & Buchhalter Local Dominator",
         "Local SEO für Steuerberater & Buchhalter DACH",
         "Local SEO Steuerberater DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-steuerberater#article\", \"headline\": \"Local SEO für Steuerberater & Buchhalter: Mandanten gewinnen\", \"description\": \"Wie Steuerberater und Buchhalter durch Local SEO…"
     },
     {
       "@type": "Article",
@@ -4237,7 +4330,8 @@
         "Local SEO Strategie für kleine Unternehmen",
         "Local SEO Strategie für kleine Unternehmen Local Dominator",
         "Local SEO Strategie für kleine Unternehmen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-strategie-kleine-unternehmen#article\", \"headline\": \"Local SEO Strategie für kleine Unternehmen: Der komplette Aktionsplan 2026\", \"description\": \"Die komplette Local…"
     },
     {
       "@type": "Article",
@@ -4282,7 +4376,8 @@
         "Local SEO Strategy Planner",
         "Local SEO Strategy Planner Local Dominator",
         "Local SEO Strategy Planner DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-strategy-planner#article\", \"headline\": \"Local SEO Strategy Planner: 7-Phasen-Aufgabenplan mit Budget & Checkliste\", \"description\": \"Kostenloser Local SEO Strategiep…"
     },
     {
       "@type": "Article",
@@ -4317,7 +4412,8 @@
         "Local SEO Stuttgart Local Dominator",
         "Local SEO Stuttgart DACH",
         "Local SEO Stuttgart Stuttgart"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-stuttgart#article\", \"headline\": \"Local SEO Stuttgart: Automobilregion & mehr\", \"description\": \"Local SEO speziell für Stuttgart und die Region. Industrie-Keywords,…"
     },
     {
       "@type": "Article",
@@ -4364,7 +4460,8 @@
         "Local SEO für Tattoo-Studios & Piercing Local Dominator",
         "Local SEO für Tattoo-Studios & Piercing DACH",
         "Local SEO Tattoo-Studio DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-tattoo-studios#article\", \"headline\": \"Local SEO für Tattoo-Studios & Piercing\", \"description\": \"Wie Tattoo- und Piercing-Studios durch Local SEO mehr Kunden gewinne…"
     },
     {
       "@type": "Article",
@@ -4411,7 +4508,8 @@
         "Local SEO für Tierärzte & Tierpraxen Local Dominator",
         "Local SEO für Tierärzte & Tierpraxen DACH",
         "Local SEO Tierarzt DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-tierarzt#article\", \"headline\": \"Local SEO für Tierärzte & Tierpraxen\", \"description\": \"Wie Tierarztpraxen durch Local SEO mehr Patienten gewinnen. Notfall-Keywords,…"
     },
     {
       "@type": "Article",
@@ -4455,7 +4553,8 @@
         "Local SEO & Voice Search",
         "Local SEO & Voice Search Local Dominator",
         "Local SEO & Voice Search DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-voice-search#article\", \"headline\": \"Local SEO & Voice Search: Hey Google, wo ist...\", \"description\": \"Wie lokale Unternehmen für Sprachsuche optimieren. Conversatio…"
     },
     {
       "@type": "Article",
@@ -4500,7 +4599,8 @@
         "Local SEO vs Maps SEO – Was ist der Unterschied? (2026)",
         "Local SEO vs Maps SEO – Was ist der Unterschied? (2026) Local Dominator",
         "Local SEO vs Maps SEO – Was ist der Unterschied? (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-vs-maps-seo#article\", \"headline\": \"Local SEO vs Maps SEO – Was ist der Unterschied? (2026)\", \"description\": \"Was ist der Unterschied zwischen Local SEO und Google M…"
     },
     {
       "@type": "Article",
@@ -4544,7 +4644,8 @@
         "Local SEO vs. organisches SEO",
         "Local SEO vs. organisches SEO Local Dominator",
         "Local SEO vs. organisches SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-vs-organisch#article\", \"headline\": \"Local SEO vs. organisches SEO: Die wichtigsten Unterschiede\", \"description\": \"Was unterscheidet Local SEO von klassischem SEO? G…"
     },
     {
       "@type": "Article",
@@ -4579,7 +4680,8 @@
         "Local SEO Wien Local Dominator",
         "Local SEO Wien DACH",
         "Local SEO Wien Wien"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-wien#article\", \"headline\": \"Local SEO Wien: Der Österreich-Guide für KMUs\", \"description\": \"Local SEO speziell für Wien und Österreich. Bezirks-Keywords, österreich…"
     },
     {
       "@type": "Article",
@@ -4626,7 +4728,8 @@
         "Local SEO für Yoga-Studios & Pilates Local Dominator",
         "Local SEO für Yoga-Studios & Pilates DACH",
         "Local SEO Yoga-Studio DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-yoga-studios#article\", \"headline\": \"Local SEO für Yoga-Studios & Pilates\", \"description\": \"Wie Yoga- und Pilates-Studios durch Local SEO mehr Teilnehmer gewinnen. K…"
     },
     {
       "@type": "Article",
@@ -4674,7 +4777,8 @@
         "Local SEO für Zahnärzte Local Dominator",
         "Local SEO für Zahnärzte DACH",
         "Local SEO Zahnarzt DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-zahnarzt#article\", \"headline\": \"Local SEO für Zahnärzte: Mehr Patienten durch Google\", \"description\": \"Local SEO speziell für Zahnarztpraxen. Von Behandlungs-Keywor…"
     },
     {
       "@type": "Article",
@@ -4710,7 +4814,8 @@
         "Local SEO Zürich Local Dominator",
         "Local SEO Zürich DACH",
         "Local SEO Zürich Zürich"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/local-seo-zuerich#article\", \"headline\": \"Local SEO Zürich: So dominierst du den Zürcher Markt\", \"description\": \"Der ultimative Local SEO Guide für Zürcher Unternehmen. Stadtt…"
     },
     {
       "@type": "Article",
@@ -4756,7 +4861,8 @@
         "LocalBusiness Schema implementieren",
         "LocalBusiness Schema implementieren Local Dominator",
         "LocalBusiness Schema implementieren DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/localbusiness-schema-implementierung#article\", \"headline\": \"LocalBusiness Schema implementieren: Komplette Anleitung mit Code-Beispielen\", \"description\": \"LocalBusiness Schem…"
     },
     {
       "@type": "Article",
@@ -4801,7 +4907,8 @@
         "Lokale Events für SEO nutzen",
         "Lokale Events für SEO nutzen Local Dominator",
         "Lokale Events für SEO nutzen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/lokale-events-marketing#article\", \"headline\": \"Lokale Events für SEO nutzen: Sponsoring & Veranstaltungen\", \"description\": \"Wie du lokale Events und Sponsoring für bessere Lo…"
     },
     {
       "@type": "Article",
@@ -4846,7 +4953,8 @@
         "Local SEO für Neugründer",
         "Local SEO für Neugründer Local Dominator",
         "Local SEO für Neugründer DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/lokale-seo-fuer-neugruender#article\", \"headline\": \"Local SEO für Neugründer: Von Null zur lokalen Sichtbarkeit\", \"description\": \"Der komplette Local SEO Guide für Gründer und…"
     },
     {
       "@type": "Article",
@@ -4889,7 +4997,8 @@
         "Lokale Suchmaschinenoptimierung",
         "Lokale Suchmaschinenoptimierung Local Dominator",
         "Lokale Suchmaschinenoptimierung DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/lokale-suchmaschinenoptimierung-2026#article\", \"headline\": \"Lokale Suchmaschinenoptimierung 2026: Was wirklich funktioniert\", \"description\": \"Lokale Suchmaschinenoptimierung…"
     },
     {
       "@type": "Article",
@@ -4934,7 +5043,8 @@
         "Mobile Local SEO",
         "Mobile Local SEO Local Dominator",
         "Mobile Local SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/mobile-local-seo#article\", \"headline\": \"Mobile Local SEO: Warum 80% der lokalen Suchen mobil sind\", \"description\": \"Warum Mobile-First für lokale Unternehmen entscheidend ist…"
     },
     {
       "@type": "Article",
@@ -4978,7 +5088,8 @@
         "NAP-Konsistenz",
         "NAP-Konsistenz Local Dominator",
         "NAP-Konsistenz DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/nap-konsistenz-local-seo#article\", \"headline\": \"NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten\", \"description\": \"NAP (Name, Adresse, Telefon) konsistent halten…"
     },
     {
       "@type": "Article",
@@ -5023,7 +5134,8 @@
         "Negative Google Bewertungen",
         "Negative Google Bewertungen Local Dominator",
         "Negative Google Bewertungen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/negative-google-bewertungen#article\", \"headline\": \"Negative Google Bewertungen: So reagierst du professionell\", \"description\": \"Wie du auf negative Google Bewertungen profess…"
     },
     {
       "@type": "Article",
@@ -5068,7 +5180,8 @@
         "Perplexity & Claude für lokale Sichtbarkeit nutzen",
         "Perplexity & Claude für lokale Sichtbarkeit nutzen Local Dominator",
         "Perplexity & Claude für lokale Sichtbarkeit nutzen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/perplexity-claude-lokale-sichtbarkeit#article\", \"headline\": \"Perplexity & Claude für lokale Sichtbarkeit nutzen\", \"description\": \"Wie Perplexity und Claude lokale Unternehmen…"
     },
     {
       "@type": "Article",
@@ -5113,7 +5226,8 @@
         "Google Ranking plötzlich verschwunden – Ursachen & Soforthilfe (2026)",
         "Google Ranking plötzlich verschwunden – Ursachen & Soforthilfe (2026) Local Dominator",
         "Google Ranking plötzlich verschwunden – Ursachen & Soforthilfe (2026) DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ranking-ploetzlich-verschwunden#article\", \"headline\": \"Google Ranking plötzlich verschwunden – Ursachen & Soforthilfe (2026)\", \"description\": \"Dein Google Ranking ist plötzli…"
     },
     {
       "@type": "Article",
@@ -5159,7 +5273,8 @@
         "Review Schema implementieren",
         "Review Schema implementieren Local Dominator",
         "Review Schema implementieren DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/review-schema-implementierung#article\", \"headline\": \"Review Schema implementieren: Bewertungssterne in Google bekommen\", \"description\": \"Review & AggregateRating Schema richt…"
     },
     {
       "@type": "Article",
@@ -5204,7 +5319,8 @@
         "Schema Markup für Local SEO",
         "Schema Markup für Local SEO Local Dominator",
         "Schema Markup für Local SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/schema-markup-local-seo#article\", \"headline\": \"Schema Markup für Local SEO: Der Implementierungsguide\", \"description\": \"Kompletter Guide zur Schema Markup Implementierung für…"
     },
     {
       "@type": "Article",
@@ -5249,7 +5365,8 @@
         "Schema-Strategie für AI-Retrieval",
         "Schema-Strategie für AI-Retrieval Local Dominator",
         "Schema-Strategie für AI-Retrieval DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/schema-strategie-ai-retrieval#article\", \"headline\": \"Schema-Strategie für AI-Retrieval: So wirst du von LLMs gelesen\", \"description\": \"Welche Schema-Markups AI-Suchmaschinen…"
     },
     {
       "@type": "Article",
@@ -5297,7 +5414,8 @@
         "Schema-Strategie",
         "Schema-Strategie Local Dominator",
         "Schema-Strategie DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/schema-strategie-dokument#article\", \"headline\": \"Schema-Strategie: Wann Article, FAQPage, HowTo & LocalBusiness einsetzen\", \"description\": \"Siteweite Schema-Strategie für lok…"
     },
     {
       "@type": "Article",
@@ -5343,7 +5461,8 @@
         "Semantic SEO & Topical Authority",
         "Semantic SEO & Topical Authority Local Dominator",
         "Semantic SEO & Topical Authority DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/semantic-seo-topical-authority#article\", \"headline\": \"Semantic SEO & Topical Authority: Der Komplettguide\", \"description\": \"Was ist Semantic SEO? Wie du mit Topic Clusters Th…"
     },
     {
       "@type": "Article",
@@ -5383,7 +5502,8 @@
         "SEO für Ferienwohnungen DACH",
         "SEO für Ferienwohnungen Schweiz",
         "Local SEO Ferienwohnungen DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/seo-ferienwohnungen#article\", \"headline\": \"SEO für Ferienwohnungen: Schweiz, Bayern & Österreich – Raus aus der OTA-Falle\", \"description\": \"Wie Ferienwohnungen durch SEO bis…"
     },
     {
       "@type": "Article",
@@ -5429,7 +5549,8 @@
         "Die ultimative SEO-Toolbox",
         "Die ultimative SEO-Toolbox Local Dominator",
         "Die ultimative SEO-Toolbox DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/seo-toolbox-kostenlose-ressourcen#article\", \"headline\": \"Die ultimative SEO-Toolbox: 50+ kostenlose Tools & Ressourcen\", \"description\": \"Deine komplette SEO-Toolbox: Über 50…"
     },
     {
       "@type": "Article",
@@ -5479,7 +5600,8 @@
         "Technisches Local SEO",
         "Technisches Local SEO Local Dominator",
         "Technisches Local SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/technisches-local-seo-guide#article\", \"headline\": \"Technisches Local SEO: Der komplette Guide für lokale Unternehmen 2026\", \"description\": \"Technical Local SEO Guide: LocalBu…"
     },
     {
       "@type": "Article",
@@ -5526,7 +5648,8 @@
         "Local SEO",
         "Local SEO Local Dominator",
         "Local SEO DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/ultimate-guide-local-seo#article\", \"headline\": \"Local SEO: Der ultimative Leitfaden für lokale Unternehmen 2026\", \"description\": \"Der umfassendste Local-SEO-Guide im DACH-Rau…"
     },
     {
       "@type": "Article",
@@ -5571,7 +5694,8 @@
         "Was ist GEO? Generative Engine Optimization erklärt",
         "Was ist GEO? Generative Engine Optimization erklärt Local Dominator",
         "Was ist GEO? Generative Engine Optimization erklärt DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/was-ist-geo-generative-engine-optimization#article\", \"headline\": \"Was ist GEO? Generative Engine Optimization erklärt\", \"description\": \"GEO (Generative Engine Optimization) i…"
     },
     {
       "@type": "Article",
@@ -5619,7 +5743,8 @@
         "Website-Content für AI-Suchmaschinen strukturieren",
         "Website-Content für AI-Suchmaschinen strukturieren Local Dominator",
         "Website-Content für AI-Suchmaschinen strukturieren DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/website-content-ai-suchmaschinen#article\", \"headline\": \"Website-Content für AI-Suchmaschinen strukturieren: Der komplette Guide\", \"description\": \"Lerne wie du deinen Website-…"
     },
     {
       "@type": "Article",
@@ -5664,7 +5789,8 @@
         "Google Maps Algorithmus erklärt",
         "Google Maps Algorithmus erklärt Local Dominator",
         "Google Maps Algorithmus erklärt DACH"
-      ]
+      ],
+      "tldr": "```json { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"@id\": \"https://localdominate.org/blog/wie-google-maps-ranking-funktioniert#article\", \"headline\": \"Google Maps Algorithmus erklärt: Nähe, Relevanz & Bekanntheit im Detail\", \"description\": \"So funktioniert der Goog…"
     }
   ]
 }
