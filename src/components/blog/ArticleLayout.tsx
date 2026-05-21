@@ -60,6 +60,32 @@ interface ArticleLayoutProps {
   articleType?: 'standard' | 'medical' | 'legal' | 'financial';
 }
 
+const DACH_AREA_SERVED = [
+  { "@type": "Country", "name": "Deutschland", "alternateName": "Germany", "sameAs": "https://www.wikidata.org/wiki/Q183" },
+  { "@type": "Country", "name": "Österreich", "alternateName": "Austria", "sameAs": "https://www.wikidata.org/wiki/Q40" },
+  { "@type": "Country", "name": "Schweiz", "alternateName": "Switzerland", "sameAs": "https://www.wikidata.org/wiki/Q39" }
+];
+
+const GEO_TARGETS = [
+  { tokens: ["berlin"], name: "Berlin", country: "DE", region: "Berlin", sameAs: "https://www.wikidata.org/wiki/Q64" },
+  { tokens: ["muenchen", "münchen", "munich"], name: "München", country: "DE", region: "Bayern", sameAs: "https://www.wikidata.org/wiki/Q1726" },
+  { tokens: ["hamburg"], name: "Hamburg", country: "DE", region: "Hamburg", sameAs: "https://www.wikidata.org/wiki/Q1055" },
+  { tokens: ["frankfurt"], name: "Frankfurt am Main", country: "DE", region: "Hessen", sameAs: "https://www.wikidata.org/wiki/Q1794" },
+  { tokens: ["koeln", "köln", "cologne"], name: "Köln", country: "DE", region: "Nordrhein-Westfalen", sameAs: "https://www.wikidata.org/wiki/Q365" },
+  { tokens: ["stuttgart"], name: "Stuttgart", country: "DE", region: "Baden-Württemberg", sameAs: "https://www.wikidata.org/wiki/Q1022" },
+  { tokens: ["duesseldorf", "düsseldorf"], name: "Düsseldorf", country: "DE", region: "Nordrhein-Westfalen", sameAs: "https://www.wikidata.org/wiki/Q1718" },
+  { tokens: ["leipzig"], name: "Leipzig", country: "DE", region: "Sachsen", sameAs: "https://www.wikidata.org/wiki/Q2079" },
+  { tokens: ["dresden"], name: "Dresden", country: "DE", region: "Sachsen", sameAs: "https://www.wikidata.org/wiki/Q1731" },
+  { tokens: ["wien", "vienna"], name: "Wien", country: "AT", region: "Wien", sameAs: "https://www.wikidata.org/wiki/Q1741" },
+  { tokens: ["zuerich", "zürich", "zurich"], name: "Zürich", country: "CH", region: "Kanton Zürich", sameAs: "https://www.wikidata.org/wiki/Q72" },
+  { tokens: ["basel"], name: "Basel", country: "CH", region: "Kanton Basel-Stadt", sameAs: "https://www.wikidata.org/wiki/Q78" },
+  { tokens: ["schweiz", "switzerland"], name: "Schweiz", country: "CH", region: "DACH", sameAs: "https://www.wikidata.org/wiki/Q39" },
+  { tokens: ["oesterreich", "österreich", "austria"], name: "Österreich", country: "AT", region: "DACH", sameAs: "https://www.wikidata.org/wiki/Q40" },
+  { tokens: ["deutschland", "germany"], name: "Deutschland", country: "DE", region: "DACH", sameAs: "https://www.wikidata.org/wiki/Q183" }
+];
+
+const normalizeGeoText = (value: string) => value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 const ArticleLayout = ({ 
   article, 
   children, 
