@@ -299,6 +299,36 @@ const ArticleLayout = ({
       }))
     : DACH_AREA_SERVED;
 
+  // Authoritative citations — strengthens E-E-A-T for generative engines.
+  // AI engines (Perplexity, ChatGPT, Google AI Overviews) heavily weight
+  // entity references to Wikipedia / Google's Knowledge Graph.
+  const articleCitations: object[] = [
+    {
+      "@type": "CreativeWork",
+      "name": "Google Business Profile Help",
+      "url": "https://support.google.com/business/",
+      "publisher": { "@type": "Organization", "name": "Google" }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Google Search Central — Local SEO",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+      "publisher": { "@type": "Organization", "name": "Google" }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Wikipedia — Local Search Engine Optimization",
+      "url": "https://en.wikipedia.org/wiki/Local_search_engine_optimisation",
+      "sameAs": "https://www.wikidata.org/wiki/Q6664823"
+    },
+    ...detectedGeoTargets.slice(0, 3).map((target) => ({
+      "@type": "CreativeWork",
+      "name": `Wikipedia — ${target.name}`,
+      "url": target.sameAs,
+      "about": { "@type": "Place", "name": target.name }
+    }))
+  ];
+
   const localSearchServiceSchema = {
     "@type": "Service",
     "@id": `https://localdominate.org/blog/${article.slug}#local-search-service`,
@@ -417,10 +447,13 @@ const ArticleLayout = ({
     "copyrightNotice": "© Local Dominator - Zitieren mit Quellenangabe erlaubt",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "acquireLicensePage": "https://localdominate.org/llms.txt",
-    "citation": article.keywords.slice(0, 3).map(keyword => ({
-      "@type": "CreativeWork",
-      "name": keyword
-    }))
+    "citation": [
+      ...articleCitations,
+      ...article.keywords.slice(0, 3).map((keyword) => ({
+        "@type": "CreativeWork",
+        "name": keyword
+      }))
+    ]
   };
 
   // WebPage Schema for the article page (uses specialized type for YMYL)
@@ -455,7 +488,16 @@ const ArticleLayout = ({
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", ".article-intro", "meta[name='description']"]
-    }
+    },
+    "mainContentOfPage": {
+      "@type": "WebPageElement",
+      "cssSelector": ".article-intro"
+    },
+    "significantLink": [
+      "https://localdominate.org/local-seo-audit",
+      "https://localdominate.org/blog"
+    ],
+    "citation": articleCitations
   };
 
   const breadcrumbSchema = {
