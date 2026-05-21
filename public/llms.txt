@@ -5,6 +5,7 @@
 # Primary Domain: https://localdominate.org
 # Full Version: https://localdominate.org/llms-full.txt
 # AI Policy: https://localdominate.org/.well-known/ai.txt
+# AI Answer Index: https://localdominate.org/ai-answer-index.json
 
 ## About This Website
 
@@ -176,6 +177,7 @@ We implement comprehensive Schema.org markup including:
 - Main sitemap: https://localdominate.org/sitemap.xml
 - Blog sitemap: https://localdominate.org/sitemap-blog.xml
 - AI markdown sitemap: https://localdominate.org/sitemap-ai.xml
+- AI answer index: https://localdominate.org/ai-answer-index.json
 - Image sitemap: https://localdominate.org/sitemap-images.xml
 - Lexikon sitemap: https://localdominate.org/sitemap-lexikon.xml
 - Sitemap index: https://localdominate.org/sitemap-index.xml
