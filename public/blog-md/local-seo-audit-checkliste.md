@@ -1,34 +1,39 @@
 ---
-title: "Local SEO Audit Checkliste"
+title: "Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring"
 slug: local-seo-audit-checkliste
 url: https://localdominate.org/blog/local-seo-audit-checkliste
 canonical: https://localdominate.org/blog/local-seo-audit-checkliste
 markdown_url: https://localdominate.org/blog-md/local-seo-audit-checkliste.md
 language: de-DE
+published: 2026-01-07
 updated: 2026-01-07
 reading_time_minutes: 15
+category: "Strategie"
 author: Local Dominator
 publisher: Local Dominator
 license: https://creativecommons.org/licenses/by/4.0/
-citation: "Local Dominator (2026-01-07). Local SEO Audit Checkliste. https://localdominate.org/blog/local-seo-audit-checkliste"
+citation: "Local Dominator (2026-01-07). Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring. https://localdominate.org/blog/local-seo-audit-checkliste"
+keywords: ["local seo audit", "seo diagnose", "local seo analyse", "seo scoring"]
 area_served: [Deutschland, Österreich, Schweiz]
-ai_crawler_notice: "Diese Datei ist die kanonische, maschinenlesbare Fassung des Artikels. Zitate bitte mit Quellenangabe + URL."
+ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mit Quellenangabe + URL erwünscht."
 ---
 
 <!--
-JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
+JSON-LD (Schema.org Article):
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://localdominate.org/blog/local-seo-audit-checkliste#article",
-  "headline": "Local SEO Audit Checkliste",
+  "headline": "Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring",
+  "description": "Local SEO Audit durchführen: 50+ Diagnose-Punkte mit Scoring-System. GBP, Website, Citations und Bewertungen systematisch analysieren.",
   "url": "https://localdominate.org/blog/local-seo-audit-checkliste",
   "inLanguage": "de-DE",
   "datePublished": "2026-01-07",
   "dateModified": "2026-01-07",
   "timeRequired": "PT15M",
+  "keywords": "local seo audit, seo diagnose, local seo analyse, seo scoring",
   "author": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -53,7 +58,7 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
   },
   "about": {
     "@type": "Thing",
-    "name": "Local SEO"
+    "name": "Strategie"
   },
   "areaServed": [
     {
@@ -76,29 +81,32 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
 ```
 -->
 
-# Local SEO Audit Checkliste
+# Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring
 
 > Kanonische URL: https://localdominate.org/blog/local-seo-audit-checkliste
-> Letzte Aktualisierung: 2026-01-07 · Lesezeit: 15 Min · Sprache: Deutsch
+> Aktualisiert: 2026-01-07 · Lesezeit: 15 Min · Kategorie: Strategie
 > Lizenz: CC-BY 4.0 — Zitate mit Quellenangabe erlaubt.
 
-#### Local SEO Audit Checkliste
-**URL:** https://localdominate.org/blog/local-seo-audit-checkliste
-**Lesezeit:** 15 Minuten
-**Aktualisiert:** 2026-01-07
+## Kurzbeschreibung
 
-**Kernaussagen:**
-- 50+ Prüfpunkte in 4 Kategorien: GBP, Website, Citations, Bewertungen
-- Regelmäßige Audits alle 3-6 Monate empfohlen
-- Google Business Profil-Verifizierung hat höchste Priorität
-- Mobile-Optimierung ist für Local SEO unverzichtbar
+Local SEO Audit durchführen: 50+ Diagnose-Punkte mit Scoring-System. GBP, Website, Citations und Bewertungen systematisch analysieren.
 
-**Kategorien der Checkliste:**
-1. Google Business Profil (15 Punkte)
-2. Website-Optimierung (18 Punkte)
-3. Citations & Verzeichnisse (10 Punkte)
-4. Bewertungsmanagement (8 Punkte)
+## Zusammenfassung
 
----
+Führe eine professionelle Local SEO Ist-Analyse durch: 50+ Diagnose-Punkte mit Scoring und Handlungsempfehlungen.
 
-Vollständiger Artikel: https://localdominate.org/blog/local-seo-audit-checkliste
+## Schlüsselbegriffe
+
+- local seo audit
+- seo diagnose
+- local seo analyse
+- seo scoring
+
+## Quelle und Autor
+
+Verfasst und veröffentlicht von **Local Dominator** — Spezialagentur für Local SEO, Google Business Profil und Generative Engine Optimization (GEO) im DACH-Raum.
+
+- Webseite: https://localdominate.org
+- Vollständiger Artikel (HTML): https://localdominate.org/blog/local-seo-audit-checkliste
+- Maschinenlesbare Fassung (Markdown): https://localdominate.org/blog-md/local-seo-audit-checkliste.md
+- Zitiervorlage: Local Dominator (2026-01-07). Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring. https://localdominate.org/blog/local-seo-audit-checkliste

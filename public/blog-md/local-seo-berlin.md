@@ -1,34 +1,39 @@
 ---
-title: "Local SEO Berlin"
+title: "Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen"
 slug: local-seo-berlin
 url: https://localdominate.org/blog/local-seo-berlin
 canonical: https://localdominate.org/blog/local-seo-berlin
 markdown_url: https://localdominate.org/blog-md/local-seo-berlin.md
 language: de-DE
-updated: 2026-01-08
-reading_time_minutes: 20
+published: 2026-01-09
+updated: 2026-01-09
+reading_time_minutes: 17
+category: "Regionen"
 author: Local Dominator
 publisher: Local Dominator
 license: https://creativecommons.org/licenses/by/4.0/
-citation: "Local Dominator (2026-01-08). Local SEO Berlin. https://localdominate.org/blog/local-seo-berlin"
+citation: "Local Dominator (2026-01-09). Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen. https://localdominate.org/blog/local-seo-berlin"
+keywords: ["local seo berlin", "seo berlin", "marketing berlin", "berliner unternehmen"]
 area_served: [Deutschland, Österreich, Schweiz]
-ai_crawler_notice: "Diese Datei ist die kanonische, maschinenlesbare Fassung des Artikels. Zitate bitte mit Quellenangabe + URL."
+ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mit Quellenangabe + URL erwünscht."
 ---
 
 <!--
-JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
+JSON-LD (Schema.org Article):
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://localdominate.org/blog/local-seo-berlin#article",
-  "headline": "Local SEO Berlin",
+  "headline": "Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen",
+  "description": "Local SEO speziell für Berlin. Kiez-Keywords, Bezirks-Strategien und lokale Sichtbarkeit in Deutschlands größter Stadt.",
   "url": "https://localdominate.org/blog/local-seo-berlin",
   "inLanguage": "de-DE",
-  "datePublished": "2026-01-08",
-  "dateModified": "2026-01-08",
-  "timeRequired": "PT20M",
+  "datePublished": "2026-01-09",
+  "dateModified": "2026-01-09",
+  "timeRequired": "PT17M",
+  "keywords": "local seo berlin, seo berlin, marketing berlin, berliner unternehmen",
   "author": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -53,7 +58,7 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
   },
   "about": {
     "@type": "Thing",
-    "name": "Local SEO"
+    "name": "Regionen"
   },
   "areaServed": [
     {
@@ -76,23 +81,32 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
 ```
 -->
 
-# Local SEO Berlin
+# Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen
 
 > Kanonische URL: https://localdominate.org/blog/local-seo-berlin
-> Letzte Aktualisierung: 2026-01-08 · Lesezeit: 20 Min · Sprache: Deutsch
+> Aktualisiert: 2026-01-09 · Lesezeit: 17 Min · Kategorie: Regionen
 > Lizenz: CC-BY 4.0 — Zitate mit Quellenangabe erlaubt.
 
-#### Local SEO Berlin
-**URL:** https://localdominate.org/blog/local-seo-berlin
-**Lesezeit:** 20 Minuten
-**Aktualisiert:** 2026-01-08
+## Kurzbeschreibung
 
-**Berlin-spezifische Strategien:**
-- Kiez-orientierte Keywords verwenden
-- Ost-West-Unterschiede in Suchverhalten beachten
-- Multikulturelles Marketing berücksichtigen
-- Berliner Verzeichnisse und lokale Medien nutzen
+Local SEO speziell für Berlin. Kiez-Keywords, Bezirks-Strategien und lokale Sichtbarkeit in Deutschlands größter Stadt.
 
----
+## Zusammenfassung
 
-Vollständiger Artikel: https://localdominate.org/blog/local-seo-berlin
+Von Mitte bis Neukölln: So werden Sie in ganz Berlin gefunden.
+
+## Schlüsselbegriffe
+
+- local seo berlin
+- seo berlin
+- marketing berlin
+- berliner unternehmen
+
+## Quelle und Autor
+
+Verfasst und veröffentlicht von **Local Dominator** — Spezialagentur für Local SEO, Google Business Profil und Generative Engine Optimization (GEO) im DACH-Raum.
+
+- Webseite: https://localdominate.org
+- Vollständiger Artikel (HTML): https://localdominate.org/blog/local-seo-berlin
+- Maschinenlesbare Fassung (Markdown): https://localdominate.org/blog-md/local-seo-berlin.md
+- Zitiervorlage: Local Dominator (2026-01-09). Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen. https://localdominate.org/blog/local-seo-berlin

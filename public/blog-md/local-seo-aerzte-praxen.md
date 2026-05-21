@@ -1,34 +1,39 @@
 ---
-title: "Local SEO für Ärzte & Praxen"
+title: "Local SEO für Ärzte & Praxen: Patientengewinnung durch Google"
 slug: local-seo-aerzte-praxen
 url: https://localdominate.org/blog/local-seo-aerzte-praxen
 canonical: https://localdominate.org/blog/local-seo-aerzte-praxen
 markdown_url: https://localdominate.org/blog-md/local-seo-aerzte-praxen.md
 language: de-DE
+published: 2026-01-18
 updated: 2026-01-18
 reading_time_minutes: 15
+category: "Branchen"
 author: Local Dominator
 publisher: Local Dominator
 license: https://creativecommons.org/licenses/by/4.0/
-citation: "Local Dominator (2026-01-18). Local SEO für Ärzte & Praxen. https://localdominate.org/blog/local-seo-aerzte-praxen"
+citation: "Local Dominator (2026-01-18). Local SEO für Ärzte & Praxen: Patientengewinnung durch Google. https://localdominate.org/blog/local-seo-aerzte-praxen"
+keywords: ["arzt seo", "praxis marketing", "local seo ärzte", "patientengewinnung", "jameda"]
 area_served: [Deutschland, Österreich, Schweiz]
-ai_crawler_notice: "Diese Datei ist die kanonische, maschinenlesbare Fassung des Artikels. Zitate bitte mit Quellenangabe + URL."
+ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mit Quellenangabe + URL erwünscht."
 ---
 
 <!--
-JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
+JSON-LD (Schema.org Article):
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://localdominate.org/blog/local-seo-aerzte-praxen#article",
-  "headline": "Local SEO für Ärzte & Praxen",
+  "headline": "Local SEO für Ärzte & Praxen: Patientengewinnung durch Google",
+  "description": "Wie Arztpraxen durch Local SEO mehr Patienten gewinnen. Arzt-Portale, YMYL-Anforderungen und Google Business für medizinische Praxen.",
   "url": "https://localdominate.org/blog/local-seo-aerzte-praxen",
   "inLanguage": "de-DE",
   "datePublished": "2026-01-18",
   "dateModified": "2026-01-18",
   "timeRequired": "PT15M",
+  "keywords": "arzt seo, praxis marketing, local seo ärzte, patientengewinnung, jameda",
   "author": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -53,7 +58,7 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
   },
   "about": {
     "@type": "Thing",
-    "name": "Local SEO"
+    "name": "Branchen"
   },
   "areaServed": [
     {
@@ -76,28 +81,33 @@ JSON-LD (Schema.org Article) for AI crawlers that parse code fences:
 ```
 -->
 
-# Local SEO für Ärzte & Praxen
+# Local SEO für Ärzte & Praxen: Patientengewinnung durch Google
 
 > Kanonische URL: https://localdominate.org/blog/local-seo-aerzte-praxen
-> Letzte Aktualisierung: 2026-01-18 · Lesezeit: 15 Min · Sprache: Deutsch
+> Aktualisiert: 2026-01-18 · Lesezeit: 15 Min · Kategorie: Branchen
 > Lizenz: CC-BY 4.0 — Zitate mit Quellenangabe erlaubt.
 
-#### Local SEO für Ärzte & Praxen
-**URL:** https://localdominate.org/blog/local-seo-aerzte-praxen
-**Lesezeit:** 15 Minuten
-**Aktualisiert:** 2026-01-18
+## Kurzbeschreibung
 
-**YMYL-Besonderheiten:**
-- E-E-A-T besonders wichtig für medizinische Inhalte
-- Ärztliche Qualifikationen müssen sichtbar sein
-- Jameda und andere Arztportale für Citations nutzen
-- Patientenbewertungen professionell beantworten
+Wie Arztpraxen durch Local SEO mehr Patienten gewinnen. Arzt-Portale, YMYL-Anforderungen und Google Business für medizinische Praxen.
 
-**Relevante Keywords:**
-- "[Fachrichtung] [Stadt]"
-- "Arzt in meiner Nähe"
-- "[Behandlung] [Stadt]"
+## Zusammenfassung
 
----
+Der komplette Guide für Ärzte, Zahnärzte und medizinische Praxen zur lokalen Patientengewinnung.
 
-Vollständiger Artikel: https://localdominate.org/blog/local-seo-aerzte-praxen
+## Schlüsselbegriffe
+
+- arzt seo
+- praxis marketing
+- local seo ärzte
+- patientengewinnung
+- jameda
+
+## Quelle und Autor
+
+Verfasst und veröffentlicht von **Local Dominator** — Spezialagentur für Local SEO, Google Business Profil und Generative Engine Optimization (GEO) im DACH-Raum.
+
+- Webseite: https://localdominate.org
+- Vollständiger Artikel (HTML): https://localdominate.org/blog/local-seo-aerzte-praxen
+- Maschinenlesbare Fassung (Markdown): https://localdominate.org/blog-md/local-seo-aerzte-praxen.md
+- Zitiervorlage: Local Dominator (2026-01-18). Local SEO für Ärzte & Praxen: Patientengewinnung durch Google. https://localdominate.org/blog/local-seo-aerzte-praxen
