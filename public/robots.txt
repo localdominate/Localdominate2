@@ -1,24 +1,16 @@
 # robots.txt für localdominate.org
 # Optimiert für Local SEO Crawling - Aktualisiert Januar 2026
 
-# Google Crawler - Höchste Priorität
+# Google Crawler — höchste Priorität (Googlebot ignoriert Crawl-delay)
 User-agent: Googlebot
 Allow: /
-Allow: /blog/
-Allow: /seo-lexikon/
-Crawl-delay: 1
 
 User-agent: Googlebot-Image
-Allow: /src/assets/
-Allow: /public/
-Allow: /*.jpg$
-Allow: /*.png$
-Allow: /*.webp$
+Allow: /
 
 # Bing Crawler
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 2
 
 # Social Media Crawler für Link-Previews
 User-agent: Twitterbot
