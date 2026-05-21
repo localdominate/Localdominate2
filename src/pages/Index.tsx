@@ -45,6 +45,11 @@ const shouldLoadHeatmap = () => {
   return new URLSearchParams(window.location.search).get("heatmap") === "true";
 };
 
+const shouldLoadAdvancedTracking = () => {
+  if (typeof window === "undefined") return false;
+  return new URLSearchParams(window.location.search).get("analytics") === "true";
+};
+
 // Lazy load providers (defer DB calls)
 const AutoOptimizerProvider = lazy(() => 
   import("@/components/AutoOptimizerProvider").then(m => ({ default: m.AutoOptimizerProvider }))
@@ -102,6 +107,7 @@ const TrackingInitializer = () => {
 
 const Index = () => {
   const [isHeatmapEnabled] = useState(shouldLoadHeatmap);
+  const [isAdvancedTrackingEnabled] = useState(shouldLoadAdvancedTracking);
 
   useEffect(() => {
     initDataLayer();
@@ -149,7 +155,70 @@ const Index = () => {
         <ErrorBoundary fallback={<SectionFallback />}>
           <Suspense fallback={<SectionFallback />}>
             <AutoOptimizerProvider>
-              <AdvancedTrackingProvider>
+              {isAdvancedTrackingEnabled ? (
+                <AdvancedTrackingProvider>
+                  <Suspense fallback={<SectionFallback />}>
+                    <RankingComparison />
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <TrackedSection sectionName="pain">
+                      <PainSection />
+                    </TrackedSection>
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <ComparisonTable />
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <TrackedSection sectionName="solution">
+                      <SolutionSection />
+                    </TrackedSection>
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <ROICalculator />
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <TrackedSection sectionName="testimonials">
+                      <TestimonialsSection />
+                    </TrackedSection>
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <ValueStackSection />
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <TrackedSection sectionName="offer">
+                      <OfferSection />
+                    </TrackedSection>
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <GuaranteeSection />
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <ExpertSection />
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <TrackedSection sectionName="faq">
+                      <FAQSection />
+                    </TrackedSection>
+                  </Suspense>
+                  
+                  <Suspense fallback={<SectionFallback />}>
+                    <TrackedSection sectionName="cta">
+                      <FinalCTASection />
+                    </TrackedSection>
+                  </Suspense>
+                </AdvancedTrackingProvider>
+              ) : (
+                <>
               <Suspense fallback={<SectionFallback />}>
                 <RankingComparison />
               </Suspense>
@@ -209,6 +278,8 @@ const Index = () => {
                   <FinalCTASection />
                 </TrackedSection>
               </Suspense>
+                </>
+              )}
               
               <Suspense fallback={<SectionFallback />}>
                 <Footer />
@@ -218,7 +289,6 @@ const Index = () => {
               <Suspense fallback={<NullFallback />}>
                 <MobileStickyBar />
               </Suspense>
-              </AdvancedTrackingProvider>
             </AutoOptimizerProvider>
           </Suspense>
         </ErrorBoundary>
