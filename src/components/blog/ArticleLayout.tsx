@@ -25,6 +25,7 @@ import ArticleGlossary from "./ArticleGlossary";
 import LocalSEOAuditCTA from "./LocalSEOAuditCTA";
 import PillarChecklistLinks from "./PillarChecklistLinks";
 import { ResolvedBlogArticle, getRelatedArticles } from "@/data/blogArticles";
+import { BLOG_MARKDOWN_SLUGS } from "@/data/blogMarkdownSlugs";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 import { getSessionId } from "@/lib/sessionManager";
@@ -135,6 +136,30 @@ const ArticleLayout = ({
       }
     });
   }, [children]);
+
+  // Per-article Markdown alternate for AI crawlers
+  // Overrides the sitewide /llms-full.txt set by SEOHead when an
+  // article-scoped markdown file exists in public/blog-md/.
+  useEffect(() => {
+    if (!BLOG_MARKDOWN_SLUGS.has(article.slug)) return;
+    const href = `https://localdominate.org/blog-md/${article.slug}.md`;
+    let link = document.querySelector(
+      'link[rel="alternate"][type="text/markdown"]'
+    ) as HTMLLinkElement | null;
+    if (!link) {
+      link = document.createElement("link");
+      link.setAttribute("rel", "alternate");
+      link.setAttribute("type", "text/markdown");
+      link.setAttribute("title", "Plain-text article for AI / LLMs");
+      document.head.appendChild(link);
+    }
+    const previous = link.getAttribute("href");
+    link.setAttribute("href", href);
+    return () => {
+      if (previous) link?.setAttribute("href", previous);
+    };
+  }, [article.slug]);
+
   // Track article view and get view ID for engagement tracking
   useEffect(() => {
     if (hasTrackedView.current) return;
