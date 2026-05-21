@@ -299,6 +299,36 @@ const ArticleLayout = ({
       }))
     : DACH_AREA_SERVED;
 
+  // Authoritative citations — strengthens E-E-A-T for generative engines.
+  // AI engines (Perplexity, ChatGPT, Google AI Overviews) heavily weight
+  // entity references to Wikipedia / Google's Knowledge Graph.
+  const articleCitations: object[] = [
+    {
+      "@type": "CreativeWork",
+      "name": "Google Business Profile Help",
+      "url": "https://support.google.com/business/",
+      "publisher": { "@type": "Organization", "name": "Google" }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Google Search Central — Local SEO",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+      "publisher": { "@type": "Organization", "name": "Google" }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Wikipedia — Local Search Engine Optimization",
+      "url": "https://en.wikipedia.org/wiki/Local_search_engine_optimisation",
+      "sameAs": "https://www.wikidata.org/wiki/Q6664823"
+    },
+    ...detectedGeoTargets.slice(0, 3).map((target) => ({
+      "@type": "CreativeWork",
+      "name": `Wikipedia — ${target.name}`,
+      "url": target.sameAs,
+      "about": { "@type": "Place", "name": target.name }
+    }))
+  ];
+
   const localSearchServiceSchema = {
     "@type": "Service",
     "@id": `https://localdominate.org/blog/${article.slug}#local-search-service`,
