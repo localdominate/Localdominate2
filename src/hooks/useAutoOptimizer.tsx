@@ -347,7 +347,7 @@ export function useAutoOptimizer() {
         element_id: runningTest.element_id,
         winning_value: winningValue,
         test_history: [
-          ...((optimizedElements.find(
+          ...(optimizedElements.find(
             e => e.element_type === runningTest.element_type && e.element_id === runningTest.element_id
           )?.test_history || []),
           {
