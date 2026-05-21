@@ -447,10 +447,13 @@ const ArticleLayout = ({
     "copyrightNotice": "© Local Dominator - Zitieren mit Quellenangabe erlaubt",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "acquireLicensePage": "https://localdominate.org/llms.txt",
-    "citation": article.keywords.slice(0, 3).map(keyword => ({
-      "@type": "CreativeWork",
-      "name": keyword
-    }))
+    "citation": [
+      ...articleCitations,
+      ...article.keywords.slice(0, 3).map((keyword) => ({
+        "@type": "CreativeWork",
+        "name": keyword
+      }))
+    ]
   };
 
   // WebPage Schema for the article page (uses specialized type for YMYL)
@@ -485,7 +488,16 @@ const ArticleLayout = ({
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["h1", ".article-intro", "meta[name='description']"]
-    }
+    },
+    "mainContentOfPage": {
+      "@type": "WebPageElement",
+      "cssSelector": ".article-intro"
+    },
+    "significantLink": [
+      "https://localdominate.org/local-seo-audit",
+      "https://localdominate.org/blog"
+    ],
+    "citation": articleCitations
   };
 
   const breadcrumbSchema = {
