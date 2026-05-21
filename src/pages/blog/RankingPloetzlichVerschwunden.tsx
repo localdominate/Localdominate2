@@ -9,7 +9,7 @@ import BlogFAQSection from '../../components/blog/BlogFAQSection';
 import HelpfulnessWidget from '../../components/blog/HelpfulnessWidget';
 import SourcesSection from '../../components/blog/SourcesSection';
 import BlogImage from '../../components/blog/BlogImage';
-import rankingVerschwundenImage from '../../assets/blog/ranking-verschwunden.jpg';
+import rankingVerschwundenImage from '../../assets/blog/ranking-verschwunden.webp';
 
 const RankingPloetzlichVerschwunden: React.FC = () => {
   const articleData = {

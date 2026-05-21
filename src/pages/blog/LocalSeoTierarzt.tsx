@@ -18,7 +18,7 @@ import { industryComparisonData } from "@/data/industryComparisonData";
 import IndustryBenchmarkTable from "@/components/blog/IndustryBenchmarkTable";
 import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoTierarztImg from "@/assets/blog/local-seo-tierarzt.jpg";
+import localSeoTierarztImg from "@/assets/blog/local-seo-tierarzt.webp";
 import { 
   CheckCircle, 
   MapPin,

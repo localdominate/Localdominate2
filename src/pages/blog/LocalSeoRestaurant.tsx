@@ -31,7 +31,7 @@ import { industryBenchmarkData } from "@/data/industryBenchmarkData";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { UtensilsCrossed, Camera, Clock, MapPin, Star, Lightbulb } from "lucide-react";
-import localSeoRestaurantImg from "@/assets/blog/local-seo-restaurant.jpg";
+import localSeoRestaurantImg from "@/assets/blog/local-seo-restaurant.webp";
 
 const LocalSeoRestaurant = () => {
   const { language } = useLanguage();

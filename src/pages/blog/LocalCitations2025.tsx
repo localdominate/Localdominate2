@@ -10,7 +10,7 @@ import LocalCitationWorkflows from '../../components/blog/LocalCitationWorkflows
 import DirectorySubmissionStrategy from '../../components/blog/DirectorySubmissionStrategy';
 import BlogImage from '../../components/blog/BlogImage';
 import DefinitionBox from '../../components/blog/DefinitionBox';
-import localCitationsImage from '../../assets/blog/local-citations.jpg';
+import localCitationsImage from '../../assets/blog/local-citations.webp';
 
 const LocalCitations2025: React.FC = () => {
   const articleData = {

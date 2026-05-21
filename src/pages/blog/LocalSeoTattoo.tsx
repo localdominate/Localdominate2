@@ -25,7 +25,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoTattooImg from "@/assets/blog/local-seo-tattoo.jpg";
+import localSeoTattooImg from "@/assets/blog/local-seo-tattoo.webp";
 import { Palette, Image, Star, Users, TrendingUp, CheckCircle, Lightbulb, MapPin, Shield, Camera } from "lucide-react";
 
 const LocalSeoTattoo = () => {

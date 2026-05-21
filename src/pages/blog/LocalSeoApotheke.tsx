@@ -23,7 +23,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoApothekeImg from "@/assets/blog/local-seo-apotheke.jpg";
+import localSeoApothekeImg from "@/assets/blog/local-seo-apotheke.webp";
 import { Pill, Clock, Star, Users, TrendingUp, CheckCircle, Lightbulb, MapPin, Shield, Heart, Phone } from "lucide-react";
 
 const LocalSeoApotheke = () => {

@@ -7,7 +7,7 @@ import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
 import RelatedCityGuides from "@/components/blog/RelatedCityGuides";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getArticleBySlug } from "@/data/blogArticles";
-import localSeoBaselImg from "@/assets/blog/local-seo-basel.jpg";
+import localSeoBaselImg from "@/assets/blog/local-seo-basel.webp";
 import { MapPin, Building2, TrendingUp, Target, Pill, Lightbulb, Users, Star, CheckCircle, Globe, Languages } from "lucide-react";
 
 const LocalSeoBasel = () => {
