@@ -103,6 +103,59 @@ const ConditionalTrackedSection = ({
   return <TrackedSection sectionName={sectionName}>{children}</TrackedSection>;
 };
 
+const HomeConversionSections = ({ trackingEnabled }: { trackingEnabled: boolean }) => (
+  <>
+    <Suspense fallback={<SectionFallback />}>
+      <RankingComparison />
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ConditionalTrackedSection enabled={trackingEnabled} sectionName="pain">
+        <PainSection />
+      </ConditionalTrackedSection>
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ComparisonTable />
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ConditionalTrackedSection enabled={trackingEnabled} sectionName="solution">
+        <SolutionSection />
+      </ConditionalTrackedSection>
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ROICalculator />
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ConditionalTrackedSection enabled={trackingEnabled} sectionName="testimonials">
+        <TestimonialsSection />
+      </ConditionalTrackedSection>
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ValueStackSection />
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ConditionalTrackedSection enabled={trackingEnabled} sectionName="offer">
+        <OfferSection />
+      </ConditionalTrackedSection>
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <GuaranteeSection />
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ExpertSection />
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ConditionalTrackedSection enabled={trackingEnabled} sectionName="faq">
+        <FAQSection />
+      </ConditionalTrackedSection>
+    </Suspense>
+    <Suspense fallback={<SectionFallback />}>
+      <ConditionalTrackedSection enabled={trackingEnabled} sectionName="cta">
+        <FinalCTASection />
+      </ConditionalTrackedSection>
+    </Suspense>
+  </>
+);
+
 // Hooks must be called unconditionally, so we create wrapper components
 const TrackingInitializer = () => {
   // Dynamic import hooks only after initial render
