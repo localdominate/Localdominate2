@@ -271,6 +271,60 @@ const ArticleLayout = ({
     "worksFor": publisherSchema
   } : null;
 
+  const geoSignalText = normalizeGeoText([
+    article.slug,
+    article.title,
+    article.metaTitle,
+    article.metaDescription,
+    article.excerpt,
+    article.category,
+    ...article.keywords
+  ].join(" "));
+
+  const detectedGeoTargets = GEO_TARGETS.filter((target) =>
+    target.tokens.some((token) => geoSignalText.includes(normalizeGeoText(token)))
+  );
+
+  const articleAreaServed = detectedGeoTargets.length > 0
+    ? detectedGeoTargets.map((target) => ({
+        "@type": target.region === "DACH" ? "Country" : "City",
+        "name": target.name,
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": target.country,
+          "addressRegion": target.region
+        },
+        "sameAs": target.sameAs
+      }))
+    : DACH_AREA_SERVED;
+
+  const localSearchServiceSchema = {
+    "@type": "Service",
+    "@id": `https://localdominate.org/blog/${article.slug}#local-search-service`,
+    "name": language === "de" ? `Local SEO Beratung: ${article.title}` : `Local SEO consulting: ${article.title}`,
+    "serviceType": "Local SEO, Google Maps Optimierung, Google Business Profil Optimierung, Generative Engine Optimization",
+    "category": article.category,
+    "provider": { "@id": "https://localdominate.org/#organization" },
+    "url": `https://localdominate.org/blog/${article.slug}`,
+    "areaServed": articleAreaServed,
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://localdominate.org/",
+      "availableLanguage": ["de", "en", "ar"]
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": language === "de" ? "lokale Unternehmen im DACH-Raum" : "local businesses in the DACH region"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "299",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://localdominate.org/"
+    }
+  };
+
   // Determine WebPage type based on article type
   const getWebPageType = () => {
     switch (articleType) {
