@@ -16,6 +16,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    target: "es2020",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
@@ -31,10 +33,14 @@ export default defineConfig(({ mode }) => ({
           'supabase-vendor': ['@supabase/supabase-js'],
           // Charts (lazy loaded pages)
           'charts-vendor': ['recharts'],
+          // Icons (Lucide) — split off so it's cached and not blocking
+          'icons-vendor': ['lucide-react'],
         },
       },
     },
-    // Increase chunk size warning limit
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 600,
+  },
+  esbuild: {
+    drop: mode === "production" ? ["console", "debugger"] : [],
   },
 }));

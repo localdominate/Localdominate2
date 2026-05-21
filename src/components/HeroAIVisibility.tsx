@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Star, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { trackButtonClick } from "@/lib/dataLayer";
 
@@ -15,6 +15,8 @@ const COPY = {
     sim: "AI Search Simulation",
     recommend: "Empfehlung: [Dein Wettbewerber]",
     trust: "Indiziert & zitiert von",
+    rating: "4,9 / 5 aus 127 Bewertungen",
+    guarantee: "30-Tage Geld-zurück-Garantie",
   },
   en: {
     badge: "AI Visibility Index: High Demand",
@@ -27,6 +29,8 @@ const COPY = {
     sim: "AI Search Simulation",
     recommend: "Recommend: [Your Competitor]",
     trust: "Indexed & cited by",
+    rating: "4.9 / 5 from 127 reviews",
+    guarantee: "30-day money-back guarantee",
   },
   ar: {
     badge: "مؤشر الظهور في الذكاء الاصطناعي: طلب مرتفع",
@@ -39,6 +43,8 @@ const COPY = {
     sim: "محاكاة بحث الذكاء الاصطناعي",
     recommend: "التوصية: [منافسك]",
     trust: "مُفهرس ومستشهد به من",
+    rating: "4.9 / 5 من 127 تقييمًا",
+    guarantee: "ضمان استرداد الأموال لمدة 30 يومًا",
   },
 } as const;
 
@@ -135,6 +141,23 @@ const HeroAIVisibility = () => {
           >
             {t.secondary}
           </a>
+        </div>
+
+        {/* Trust microline — social proof + risk reversal */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-12 text-xs text-muted-foreground">
+          <div className="flex items-center gap-1.5" dir="ltr">
+            <div className="flex" aria-hidden>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />
+              ))}
+            </div>
+            <span className="font-medium text-foreground">{t.rating}</span>
+          </div>
+          <span className="hidden sm:inline text-border">•</span>
+          <div className="flex items-center gap-1.5">
+            <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+            <span className="font-medium text-foreground">{t.guarantee}</span>
+          </div>
         </div>
 
         {/* Trust Row */}
