@@ -210,30 +210,38 @@ const HandwerkerMarketing = () => {
 
   const content = t[language];
 
-  const handwerkerJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Handwerker Pro - Local SEO für Handwerksbetriebe",
-    "description": "Professionelles Google Maps Marketing für Handwerker. Mehr Aufträge durch Top-Rankings in der lokalen Suche.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Local Dominator"
+  const handwerkerJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Handwerker Pro - Local SEO für Handwerksbetriebe",
+      "description": "Professionelles Google Maps Marketing für Handwerker. Mehr Aufträge durch Top-Rankings in der lokalen Suche.",
+      "provider": { "@type": "Organization", "name": "Local Dominator" },
+      "offers": {
+        "@type": "Offer",
+        "price": "349",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2026-12-31"
+      },
+      "serviceType": "Handwerker Marketing"
     },
-    "offers": {
-      "@type": "Offer",
-      "price": "349",
-      "priceCurrency": "EUR",
-      "priceValidUntil": "2026-12-31"
-    },
-    "serviceType": "Handwerker Marketing"
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": content.faq.items.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
       <SEOHead
         title="Handwerker Pro – Mehr Aufträge durch Google Maps"
         description="Professionelles Local SEO für Handwerksbetriebe. Von Seite 3 auf Platz 1 – in nur 4 Wochen. Einmalzahlung, keine Abokosten."
-        canonicalUrl="https://localdominator.de/handwerker-marketing"
+        canonicalUrl="https://localdominate.org/handwerker-marketing"
         keywords="Handwerker Marketing, Elektriker Google Maps, Sanitär SEO, Maler Online Marketing, Handwerker Kundengewinnung"
         lang={language}
         jsonLd={handwerkerJsonLd}
