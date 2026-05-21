@@ -8,7 +8,7 @@ interface OptimizedElement {
   element_type: string;
   element_id: string;
   winning_value: string;
-  test_history?: unknown[];
+  test_history?: unknown;
 }
 
 interface TestQueueItem {
@@ -338,6 +338,10 @@ export function useAutoOptimizer() {
     const winningValue = winner === 'A' 
       ? runningTest.current_variant_a 
       : runningTest.current_variant_b;
+    const previousHistoryRaw = optimizedElements.find(
+      e => e.element_type === runningTest.element_type && e.element_id === runningTest.element_id
+    )?.test_history;
+    const previousHistory = Array.isArray(previousHistoryRaw) ? previousHistoryRaw : [];
 
     // Update optimized_elements
     await supabase
@@ -347,9 +351,7 @@ export function useAutoOptimizer() {
         element_id: runningTest.element_id,
         winning_value: winningValue,
         test_history: [
-          ...(optimizedElements.find(
-            e => e.element_type === runningTest.element_type && e.element_id === runningTest.element_id
-          )?.test_history || []),
+          ...previousHistory,
           {
             variant_a: runningTest.current_variant_a,
             variant_b: runningTest.current_variant_b,
