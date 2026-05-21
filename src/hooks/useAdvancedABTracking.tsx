@@ -216,6 +216,10 @@ const useAdvancedABTracking = (testId: string, variant: string) => {
 
   // Save engagement data to Supabase
   const saveEngagement = useCallback(async () => {
+    if (typeof window !== "undefined" && localStorage.getItem("cookieConsent") !== "all") {
+      return;
+    }
+
     // Skip if no valid test ID
     if (!currentTestId.current || currentTestId.current === 'no_test') {
       console.log('[AdvancedABTracking] Skipping save - no active test');
