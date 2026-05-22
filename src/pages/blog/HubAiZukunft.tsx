@@ -14,6 +14,7 @@ const groups: HubArticleGroup[] = [
       "schema-strategie-ai-retrieval",
       "perplexity-claude-lokale-sichtbarkeit",
       "apple-business-connect-local-seo-2026",
+      "reddit-local-seo-ai-zitate-2026",
       "google-ai-overviews-local-seo",
       "ai-search-optimization-2026",
       "website-content-ai-suchmaschinen",

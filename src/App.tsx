@@ -60,6 +60,7 @@ const SchemaStrategieAiRetrieval = lazy(() => import("./pages/blog/SchemaStrateg
 const PerplexityClaudeLokaleSichtbarkeit = lazy(() => import("./pages/blog/PerplexityClaudeLokaleSichtbarkeit"));
 const ChatgptSearchLokaleUnternehmen2026 = lazy(() => import("./pages/blog/ChatgptSearchLokaleUnternehmen2026"));
 const AppleBusinessConnectLocalSeo2026 = lazy(() => import("./pages/blog/AppleBusinessConnectLocalSeo2026"));
+const RedditLocalSeoAiZitate2026 = lazy(() => import("./pages/blog/RedditLocalSeoAiZitate2026"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -259,6 +260,7 @@ const App = () => (
                 <Route path="/blog/perplexity-claude-lokale-sichtbarkeit" element={<PerplexityClaudeLokaleSichtbarkeit />} />
                 <Route path="/blog/chatgpt-search-lokale-unternehmen-2026" element={<ChatgptSearchLokaleUnternehmen2026 />} />
                 <Route path="/blog/apple-business-connect-local-seo-2026" element={<AppleBusinessConnectLocalSeo2026 />} />
+                <Route path="/blog/reddit-local-seo-ai-zitate-2026" element={<RedditLocalSeoAiZitate2026 />} />
                 <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
