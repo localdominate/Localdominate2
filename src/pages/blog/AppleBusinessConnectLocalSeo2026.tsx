@@ -56,7 +56,7 @@ const AppleBusinessConnectLocalSeo2026 = () => {
     {
       question: "Hilft Apple Business Connect auch bei Siri-Anfragen?",
       answer:
-        "Ja, direkt. Siri zieht für lokale Empfehlungen („Hey Siri, finde einen Zahnarzt in der Nähe") primär aus Apple Maps und damit aus Apple Business Connect. Wer dort vollständige Daten, korrekte Kategorien und Showcases hinterlegt, wird in Siri-Antworten bevorzugt.",
+        'Ja, direkt. Siri zieht für lokale Empfehlungen ("Hey Siri, finde einen Zahnarzt in der Nähe") primär aus Apple Maps und damit aus Apple Business Connect. Wer dort vollständige Daten, korrekte Kategorien und Showcases hinterlegt, wird in Siri-Antworten bevorzugt.',
     },
     {
       question: "Beeinflusst Apple Intelligence das Ranking in Apple Maps?",
