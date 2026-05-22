@@ -902,6 +902,16 @@ const ArticleLayout = ({
           <LlmFriendlySummary slug={article.slug} />
         </article>
 
+        {/* Auto-emits FAQPage JSON-LD by scanning rendered H2 questions.
+            Skipped when the author already passed an explicit faqItems prop
+            (avoids duplicate FAQPage schemas). */}
+        <AutoFaqSchema
+          contentRef={articleContentRef}
+          slug={article.slug}
+          url={`https://localdominate.org/blog/${article.slug}`}
+          disabled={!!(faqItems && faqItems.length > 0)}
+        />
+
         {/* Dynamic Internal Links: Pillar → Hub → Siblings */}
         <ArticleContextLinks articleSlug={article.slug} />
 
