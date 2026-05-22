@@ -4274,6 +4274,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "bing-copilot-local-seo-2026",
+    de: {
+      title: "Bing & Microsoft Copilot 2026: Local SEO für ChatGPT, Edge & Windows",
+      metaTitle: "Bing Copilot Local SEO 2026: Setup & Optimierung",
+      metaDescription: "Bing ist die Datengrundlage für ChatGPT Search und Microsoft Copilot. So richtest du Bing Places ein und optimierst für Copilot, Edge und Windows — 7-Schritte-Plan.",
+      excerpt: "Warum Bing 2026 wieder zur kritischen Suchquelle wird — und wie du Bing Places, Schema und robots.txt für Microsoft Copilot, ChatGPT Search und Edge optimierst.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "Bing & Microsoft Copilot 2026: Local SEO for ChatGPT, Edge & Windows",
+      metaTitle: "Bing Copilot Local SEO 2026: Setup & Optimization",
+      metaDescription: "Bing powers ChatGPT Search and Microsoft Copilot. Here is how to set up Bing Places and optimize for Copilot, Edge and Windows — 7-step plan.",
+      excerpt: "Why Bing is again a critical search source in 2026 — and how to optimize Bing Places, schema and robots.txt for Microsoft Copilot, ChatGPT Search and Edge.",
+      category: "AI & Future",
+    },
+    readingTime: 12,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "🪟",
+    keywords: [
+      "bing local seo",
+      "microsoft copilot seo",
+      "bing places",
+      "edge copilot local",
+      "bingbot robots txt",
+      "microsoft 365 copilot suche",
+      "bing webmaster tools dach",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4414,6 +4445,7 @@ const PUBLISHED_SLUGS = new Set([
   "apple-business-connect-local-seo-2026",
   "reddit-local-seo-ai-zitate-2026",
   "google-ai-mode-local-seo-2026",
+  "bing-copilot-local-seo-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
