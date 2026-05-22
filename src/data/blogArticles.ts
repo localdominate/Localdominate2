@@ -4150,6 +4150,37 @@ export const blogArticles: BlogArticle[] = [
     en: { title: "Using Perplexity & Claude for local visibility", metaTitle: "Perplexity & Claude for Local SEO 2026 | Guide", metaDescription: "How Perplexity and Claude cite local businesses — and how to become optimally visible on both platforms.", excerpt: "Besides ChatGPT and Gemini, Perplexity and Claude are becoming increasingly important for local search.", category: "AI & Future" },
     readingTime: 8, publishedAt: "2026-05-20", updatedAt: "2026-05-20", icon: "🔮", keywords: ["perplexity local seo", "claude ai seo", "ai assistants local business", "llm zitate", "perplexity citations"], featured: false
   },
+  {
+    slug: "chatgpt-search-lokale-unternehmen-2026",
+    de: {
+      title: "ChatGPT Search für lokale Unternehmen 2026 — der komplette Optimierungs-Guide",
+      metaTitle: "ChatGPT Search Local SEO 2026: Optimierungs-Guide & Checkliste",
+      metaDescription: "So wirst du in ChatGPT Search 2026 als lokales Unternehmen zitiert: 7 Ranking-Signale, 7-Schritte-Plan, Bing-Setup, Schema, llms.txt. Mit Checkliste.",
+      excerpt: "ChatGPT Search empfiehlt täglich Millionen lokaler Unternehmen. Hier ist der 7-Schritte-Plan, mit dem du in den Antworten landest — von robots.txt über Bing Places bis Schema und AnswerBlocks.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "ChatGPT Search for Local Businesses 2026 — The Complete Optimization Guide",
+      metaTitle: "ChatGPT Search Local SEO 2026: Optimization Guide & Checklist",
+      metaDescription: "How to get cited in ChatGPT Search 2026 as a local business: 7 ranking signals, 7-step plan, Bing setup, schema, llms.txt. With checklist.",
+      excerpt: "ChatGPT Search recommends millions of local businesses daily. Here is the 7-step plan to land in its answers — from robots.txt to Bing Places, schema and answer blocks.",
+      category: "AI & Future",
+    },
+    readingTime: 11,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "💬",
+    keywords: [
+      "chatgpt search",
+      "chatgpt search local seo",
+      "chatgpt search lokale unternehmen",
+      "openai search optimierung",
+      "oai-searchbot",
+      "bing places chatgpt",
+      "ai visibility chatgpt",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4286,6 +4317,7 @@ const PUBLISHED_SLUGS = new Set([
   "ai-visibility-index-local-seo-metrik",
   "schema-strategie-ai-retrieval",
   "perplexity-claude-lokale-sichtbarkeit",
+  "chatgpt-search-lokale-unternehmen-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
