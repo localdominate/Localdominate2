@@ -45,7 +45,7 @@ const LlmsTxtLokaleUnternehmen2026 = () => {
     {
       question: "Was gehört in eine llms.txt für ein lokales Unternehmen?",
       answer:
-        "Mindestens vier Blöcke: 1) H1 mit Unternehmensname und Standort. 2) Ein-Satz-Blockquote mit dem Kernangebot. 3) Kurzbeschreibung mit Region, Sprache, Zielgruppe. 4) H2-Sektionen mit Markdown-Linklisten zu Hauptseiten (Dienstleistungen, Standorte, Buchung, Über uns, Bewertungen). Optional eine Section „Optional" mit Sekundär-Links. Keine internen Admin-, Login- oder Account-Routen aufnehmen.",
+        "Mindestens vier Blöcke: 1) H1 mit Unternehmensname und Standort. 2) Ein-Satz-Blockquote mit dem Kernangebot. 3) Kurzbeschreibung mit Region, Sprache, Zielgruppe. 4) H2-Sektionen mit Markdown-Linklisten zu Hauptseiten (Dienstleistungen, Standorte, Buchung, Über uns, Bewertungen). Optional eine Section „Optional“ mit Sekundär-Links. Keine internen Admin-, Login- oder Account-Routen aufnehmen.",
     },
     {
       question: "Wo lege ich llms.txt ab?",
@@ -139,10 +139,10 @@ const LlmsTxtLokaleUnternehmen2026 = () => {
           Wie ist eine gute llms.txt aufgebaut?
         </h2>
         <AnswerBlock question="Welche Struktur muss eine spec-konforme llms.txt haben?">
-          Vier Pflichtblöcke: 1) H1 mit Site- bzw. Unternehmensnamen. 2) Optionales Blockquote als Ein-Satz-Zusammenfassung. 3) Freier Markdown mit 2–4 Absätzen Kontext. 4) Mehrere H2-Sektionen mit Markdown-Linklisten im Format `- [Titel](/pfad): Beschreibung`. Optional am Ende eine Sektion „Optional" für Sekundär-Links, die bei knappem Context-Budget übersprungen werden dürfen. Keine tieferen Headings als H2 — die Datei muss flach bleiben.
+          Vier Pflichtblöcke: 1) H1 mit Site- bzw. Unternehmensnamen. 2) Optionales Blockquote als Ein-Satz-Zusammenfassung. 3) Freier Markdown mit 2–4 Absätzen Kontext. 4) Mehrere H2-Sektionen mit Markdown-Linklisten im Format `- [Titel](/pfad): Beschreibung`. Optional am Ende eine Sektion „Optional“ für Sekundär-Links, die bei knappem Context-Budget übersprungen werden dürfen. Keine tieferen Headings als H2 — die Datei muss flach bleiben.
         </AnswerBlock>
         <ul className="list-disc pl-6 space-y-2 mt-4">
-          <li><strong>H1:</strong> Unternehmensname, optional Standort („Local Dominate – Local SEO Agentur DACH").</li>
+          <li><strong>H1:</strong> Unternehmensname, optional Standort („Local Dominate – Local SEO Agentur DACH“).</li>
           <li><strong>Blockquote:</strong> Ein Satz, der erklärt was, für wen, in welcher Region.</li>
           <li><strong>Markdown-Kontext:</strong> 2–4 Absätze über Leistungen, Sprachen, Zielgruppen.</li>
           <li><strong>H2 + Linkliste:</strong> Pro Hauptkategorie eine Sektion (Services, Blog, Standorte, Über uns).</li>
@@ -198,7 +198,7 @@ Die Praxis Dr. Schmidt behandelt seit 2008 Patientinnen und Patienten aus Köln 
           <li><strong>Strukturieren:</strong> H1 mit Markenname, Blockquote, 2–4 Absätze, H2-Sektionen.</li>
           <li><strong>Linkliste pro H2:</strong> `- [Titel](/pfad): kurze Beschreibung` — max. 15 Links pro Sektion.</li>
           <li><strong>Deployment:</strong> Datei unter public/llms.txt — Vite/React serviert sie automatisch unter /llms.txt.</li>
-          <li><strong>Validierung:</strong> Browser-Aufruf, dann Test in ChatGPT und Perplexity mit „Lies https://domain/llms.txt".</li>
+          <li><strong>Validierung:</strong> Browser-Aufruf, dann Test in ChatGPT und Perplexity mit „Lies https://domain/llms.txt“.</li>
           <li><strong>Pflege:</strong> Monatlich Diff zur Sitemap prüfen, neue Hauptseiten ergänzen.</li>
         </ol>
         <p className="mt-6">
