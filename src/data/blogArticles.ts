@@ -4336,6 +4336,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "voice-search-sprachassistenten-local-seo-2026",
+    de: {
+      title: "Voice Search 2026: Local SEO für Alexa, Siri & Google Assistant",
+      metaTitle: "Voice Search Local SEO 2026: Alexa, Siri & Google Assistant",
+      metaDescription: "Voice Search ist 2026 zurück — diesmal funktionsfähig. So optimierst du für Alexa, Siri und Google Assistant. Mit 7-Schritte-Plan und Vergleichstabelle für DACH.",
+      excerpt: "Wie LLM-gestützte Sprachassistenten lokale Anfragen beantworten — und wie du systematisch in Voice-Empfehlungen landest. Mit Plattform-Vergleich, Ranking-Signalen und 7-Schritte-Plan.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "Voice Search 2026: Local SEO for Alexa, Siri & Google Assistant",
+      metaTitle: "Voice Search Local SEO 2026: Alexa, Siri & Google Assistant",
+      metaDescription: "Voice Search is back in 2026 — and finally working. Here is how to optimize for Alexa, Siri and Google Assistant. With 7-step plan and comparison table for DACH.",
+      excerpt: "How LLM-powered voice assistants answer local queries — and how to systematically land in voice recommendations. With platform comparison, ranking signals and 7-step plan.",
+      category: "AI & Future",
+    },
+    readingTime: 12,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "🎙️",
+    keywords: [
+      "voice search local seo",
+      "alexa local seo",
+      "siri local seo",
+      "google assistant local",
+      "sprachsuche dach",
+      "voice search optimierung",
+      "smart speaker seo",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4478,6 +4509,7 @@ const PUBLISHED_SLUGS = new Set([
   "google-ai-mode-local-seo-2026",
   "bing-copilot-local-seo-2026",
   "tiktok-search-local-seo-2026",
+  "voice-search-sprachassistenten-local-seo-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated

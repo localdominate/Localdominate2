@@ -64,6 +64,7 @@ const RedditLocalSeoAiZitate2026 = lazy(() => import("./pages/blog/RedditLocalSe
 const GoogleAiModeLocalSeo2026 = lazy(() => import("./pages/blog/GoogleAiModeLocalSeo2026"));
 const BingCopilotLocalSeo2026 = lazy(() => import("./pages/blog/BingCopilotLocalSeo2026"));
 const TiktokSearchLocalSeo2026 = lazy(() => import("./pages/blog/TiktokSearchLocalSeo2026"));
+const VoiceSearchSprachassistenten2026 = lazy(() => import("./pages/blog/VoiceSearchSprachassistenten2026"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -267,6 +268,7 @@ const App = () => (
                 <Route path="/blog/google-ai-mode-local-seo-2026" element={<GoogleAiModeLocalSeo2026 />} />
                 <Route path="/blog/bing-copilot-local-seo-2026" element={<BingCopilotLocalSeo2026 />} />
                 <Route path="/blog/tiktok-search-local-seo-2026" element={<TiktokSearchLocalSeo2026 />} />
+                <Route path="/blog/voice-search-sprachassistenten-local-seo-2026" element={<VoiceSearchSprachassistenten2026 />} />
                 <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
