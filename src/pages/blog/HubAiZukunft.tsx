@@ -13,6 +13,7 @@ const groups: HubArticleGroup[] = [
       "ai-visibility-index-local-seo-metrik",
       "schema-strategie-ai-retrieval",
       "perplexity-claude-lokale-sichtbarkeit",
+      "apple-business-connect-local-seo-2026",
       "google-ai-overviews-local-seo",
       "ai-search-optimization-2026",
       "website-content-ai-suchmaschinen",
