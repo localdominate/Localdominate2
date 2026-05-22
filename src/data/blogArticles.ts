@@ -4398,6 +4398,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "llms-txt-lokale-unternehmen-2026",
+    de: {
+      title: "llms.txt für lokale Unternehmen 2026: Setup, Beispiel & Best Practices",
+      metaTitle: "llms.txt Local SEO 2026: Spec, Beispiel & 7-Schritte-Setup",
+      metaDescription: "Mit einer spec-konformen llms.txt zitieren ChatGPT, Claude und Perplexity die richtigen Service-Seiten. Aufbau, Beispiel und 7-Schritte-Setup für lokale DACH-Unternehmen.",
+      excerpt: "Wie du mit einer 40–80-zeiligen llms.txt im Site-Root die Zitatrate in ChatGPT, Perplexity und Claude messbar steigerst — inkl. vollständigem Beispiel und 7-Schritte-Setup.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "llms.txt for Local Businesses 2026: Setup, Example & Best Practices",
+      metaTitle: "llms.txt Local SEO 2026: Spec, Example & 7-Step Setup",
+      metaDescription: "A spec-compliant llms.txt makes ChatGPT, Claude and Perplexity cite the right service pages. Structure, example and 7-step setup for local DACH businesses.",
+      excerpt: "How a 40–80-line llms.txt at the site root measurably increases citation rates in ChatGPT, Perplexity and Claude — incl. full example and 7-step setup.",
+      category: "AI & Future",
+    },
+    readingTime: 11,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "📄",
+    keywords: [
+      "llms.txt",
+      "llms txt local seo",
+      "llms.txt beispiel",
+      "chatgpt zitate seo",
+      "perplexity crawler optimierung",
+      "claudebot llms.txt",
+      "ai crawler steuerung",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4542,6 +4573,7 @@ const PUBLISHED_SLUGS = new Set([
   "tiktok-search-local-seo-2026",
   "voice-search-sprachassistenten-local-seo-2026",
   "ai-agents-lokale-buchungen-2026",
+  "llms-txt-lokale-unternehmen-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
