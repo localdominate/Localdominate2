@@ -10,6 +10,7 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "chatgpt-zitiert-lokale-unternehmen",
   "chatgpt-search-lokale-unternehmen-2026",
   "apple-business-connect-local-seo-2026",
+  "reddit-local-seo-ai-zitate-2026",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",

@@ -4212,6 +4212,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "reddit-local-seo-ai-zitate-2026",
+    de: {
+      title: "Reddit für Local SEO 2026: Wie du in ChatGPT- & Perplexity-Antworten zitiert wirst",
+      metaTitle: "Reddit Local SEO 2026: AI-Zitate strategisch aufbauen",
+      metaDescription: "Reddit ist nach Wikipedia die meistzitierte Quelle in AI-Suche. So nutzt du DACH-Subreddits rechtskonform für ChatGPT-, Perplexity- und Google-AI-Sichtbarkeit.",
+      excerpt: "Warum Reddit-Threads in ChatGPT-Antworten landen — und wie lokale Unternehmen in DACH transparent und UWG-konform Sichtbarkeit aufbauen. Mit 5-Schritte-Strategie.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "Reddit for Local SEO 2026: How to Get Cited in ChatGPT & Perplexity",
+      metaTitle: "Reddit Local SEO 2026: Strategic AI Citation Building",
+      metaDescription: "Reddit is the second-most cited source in AI answers after Wikipedia. Here is how to use DACH subreddits legally for ChatGPT, Perplexity and Google AI visibility.",
+      excerpt: "Why Reddit threads appear in ChatGPT answers — and how local DACH businesses can build visibility transparently and within EU consumer law.",
+      category: "AI & Future",
+    },
+    readingTime: 12,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "💬",
+    keywords: [
+      "reddit local seo",
+      "reddit ai zitate",
+      "reddit chatgpt zitiert",
+      "reddit perplexity",
+      "subreddit dach",
+      "geo reddit",
+      "ai visibility reddit",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4350,6 +4381,7 @@ const PUBLISHED_SLUGS = new Set([
   "perplexity-claude-lokale-sichtbarkeit",
   "chatgpt-search-lokale-unternehmen-2026",
   "apple-business-connect-local-seo-2026",
+  "reddit-local-seo-ai-zitate-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
