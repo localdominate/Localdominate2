@@ -17,6 +17,7 @@ const groups: HubArticleGroup[] = [
       "reddit-local-seo-ai-zitate-2026",
       "google-ai-mode-local-seo-2026",
       "bing-copilot-local-seo-2026",
+      "tiktok-search-local-seo-2026",
       "google-ai-overviews-local-seo",
       "ai-search-optimization-2026",
       "website-content-ai-suchmaschinen",

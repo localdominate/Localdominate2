@@ -4305,6 +4305,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "tiktok-search-local-seo-2026",
+    de: {
+      title: "TikTok Search für Local SEO 2026: So wirst du von Gen Z gefunden",
+      metaTitle: "TikTok Local Search 2026: Ranking-Signale & 7-Schritte-Plan",
+      metaDescription: "40 % der Gen Z sucht lokale Empfehlungen in TikTok statt Google. So optimierst du Videos, Hashtags und Standort-Tags für TikTok Local Search — mit 7-Schritte-Plan.",
+      excerpt: "Warum TikTok zur Suchmaschine wurde — und wie du als lokales DACH-Unternehmen in TikTok Search systematisch sichtbar wirst. Mit Ranking-Signalen, Content-Formaten und 7-Schritte-Plan.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "TikTok Search for Local SEO 2026: Get Found by Gen Z",
+      metaTitle: "TikTok Local Search 2026: Ranking Signals & 7-Step Plan",
+      metaDescription: "40% of Gen Z searches local recommendations on TikTok instead of Google. Here is how to optimize videos, hashtags and location tags for TikTok Local Search — with 7-step plan.",
+      excerpt: "Why TikTok became a search engine — and how local DACH businesses can systematically get visible in TikTok Search. With ranking signals, content formats and 7-step plan.",
+      category: "AI & Future",
+    },
+    readingTime: 12,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "🎵",
+    keywords: [
+      "tiktok local seo",
+      "tiktok search",
+      "tiktok suchmaschine",
+      "gen z local search",
+      "tiktok ranking signale",
+      "tiktok hashtags lokal",
+      "tiktok dach marketing",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4446,6 +4477,7 @@ const PUBLISHED_SLUGS = new Set([
   "reddit-local-seo-ai-zitate-2026",
   "google-ai-mode-local-seo-2026",
   "bing-copilot-local-seo-2026",
+  "tiktok-search-local-seo-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
