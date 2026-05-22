@@ -9,6 +9,7 @@ const groups: HubArticleGroup[] = [
     slugs: [
       "was-ist-geo-generative-engine-optimization",
       "chatgpt-zitiert-lokale-unternehmen",
+      "chatgpt-search-lokale-unternehmen-2026",
       "ai-visibility-index-local-seo-metrik",
       "schema-strategie-ai-retrieval",
       "perplexity-claude-lokale-sichtbarkeit",

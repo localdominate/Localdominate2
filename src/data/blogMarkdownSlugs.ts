@@ -8,6 +8,7 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "bewertungen-reputation-hub",
   "bewertungs-antworten-vorlagen",
   "chatgpt-zitiert-lokale-unternehmen",
+  "chatgpt-search-lokale-unternehmen-2026",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",
