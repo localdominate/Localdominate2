@@ -16,6 +16,7 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "tiktok-search-local-seo-2026",
   "voice-search-sprachassistenten-local-seo-2026",
   "ai-agents-lokale-buchungen-2026",
+  "llms-txt-lokale-unternehmen-2026",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",
