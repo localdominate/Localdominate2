@@ -39,5 +39,8 @@ verify_jwt = false
 [functions.ping-google-sitemap]
 verify_jwt = false
 
+[functions.submit-indexnow]
+verify_jwt = false
+
 [functions.upload-customer-file]
 verify_jwt = false
