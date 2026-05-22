@@ -13,6 +13,7 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "reddit-local-seo-ai-zitate-2026",
   "google-ai-mode-local-seo-2026",
   "bing-copilot-local-seo-2026",
+  "tiktok-search-local-seo-2026",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",
