@@ -32,6 +32,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { getSessionId } from "@/lib/sessionManager";
 import { useArticleEngagement } from "@/hooks/useArticleEngagement";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
+import { detectWikidataEntities } from "@/lib/entityWikidata";
 
 interface TOCItem {
   id: string;
