@@ -30,32 +30,32 @@ const RedditLocalSeoAiZitate2026 = () => {
     {
       question: "Warum zitiert ChatGPT so oft Reddit?",
       answer:
-        "ChatGPT, Perplexity und Google AI Overviews bewerten Reddit-Threads als hochwertige Quelle, weil sie echte Nutzererfahrungen mit konkreten Empfehlungen enthalten — also genau die Information, die ein Suchender bei lokalen Fragen sucht. Eine Datenanalyse von Search Engine Land Anfang 2025 zeigt: Reddit ist nach Wikipedia die zweithäufigst zitierte Domain in AI-Suchergebnissen.",
+        'ChatGPT, Perplexity und Google AI Overviews bewerten Reddit-Threads als hochwertige Quelle, weil sie echte Nutzererfahrungen mit konkreten Empfehlungen enthalten — also genau die Information, die ein Suchender bei lokalen Fragen sucht. Eine Datenanalyse von Search Engine Land Anfang 2025 zeigt: Reddit ist nach Wikipedia die zweithäufigst zitierte Domain in AI-Suchergebnissen.',
     },
     {
       question: "Welche DACH-Subreddits sind für lokale Unternehmen relevant?",
       answer:
-        "Stadt-Subreddits wie r/de, r/berlin, r/munich, r/wien, r/zurich, r/koeln sowie Themen-Subreddits (r/Finanzen, r/recht, r/Handwerker, r/Gastronomie) sind die wichtigsten. Diese Communities sind aktiv, deutschsprachig und werden von AI-Modellen indexiert. Reine Werbung wird sofort entfernt — nur hilfreiche, ehrliche Beiträge bleiben sichtbar und werden zitiert.",
+        'Stadt-Subreddits wie r/de, r/berlin, r/munich, r/wien, r/zurich, r/koeln sowie Themen-Subreddits (r/Finanzen, r/recht, r/Handwerker, r/Gastronomie) sind die wichtigsten. Diese Communities sind aktiv, deutschsprachig und werden von AI-Modellen indexiert. Reine Werbung wird sofort entfernt — nur hilfreiche, ehrliche Beiträge bleiben sichtbar und werden zitiert.',
     },
     {
       question: "Darf ich mein eigenes Unternehmen auf Reddit erwähnen?",
       answer:
-        "Ja, aber transparent. Die Reddiquette und Site-Wide-Rules verlangen volle Offenlegung („Disclosure: Ich bin Inhaber von X"). Verdeckte Eigenwerbung wird als Spam markiert, der Account gebannt und der Reputationsverlust ist erheblich. Wer transparent als Experte hilft, gewinnt langfristig Karma, Sichtbarkeit und AI-Zitate.",
+        'Ja, aber transparent. Die Reddiquette und Site-Wide-Rules verlangen volle Offenlegung ("Disclosure: Ich bin Inhaber von X"). Verdeckte Eigenwerbung wird als Spam markiert, der Account gebannt und der Reputationsverlust ist erheblich. Wer transparent als Experte hilft, gewinnt langfristig Karma, Sichtbarkeit und AI-Zitate.',
     },
     {
       question: "Wie schnell wirken Reddit-Aktivitäten auf AI-Zitate?",
       answer:
-        "Wenig vorhersagbar. Threads mit hoher Upvote-Rate (>50) und konstruktiver Diskussion werden meist innerhalb von 2–8 Wochen in ChatGPT- und Perplexity-Antworten zitiert. Threads ohne Engagement verschwinden im Archiv und werden nie referenziert. Qualität schlägt Quantität: ein hilfreicher Beitrag in einem aktiven Sub bringt mehr als 30 kurze Antworten.",
+        'Wenig vorhersagbar. Threads mit hoher Upvote-Rate (>50) und konstruktiver Diskussion werden meist innerhalb von 2–8 Wochen in ChatGPT- und Perplexity-Antworten zitiert. Threads ohne Engagement verschwinden im Archiv und werden nie referenziert. Qualität schlägt Quantität: ein hilfreicher Beitrag in einem aktiven Sub bringt mehr als 30 kurze Antworten.',
     },
     {
       question: "Kann ich Reddit-Marketing automatisieren?",
       answer:
-        "Nein. Reddit erkennt KI-generierte oder gekaufte Aktivität schnell und bannt entsprechende Accounts dauerhaft. Auch Cross-Posting in mehrere Subs oder Multi-Account-Voting verletzt die Site-Wide-Rules. Reddit-Sichtbarkeit muss manuell, persönlich und über mindestens 3–6 Monate aufgebaut werden.",
+        'Nein. Reddit erkennt KI-generierte oder gekaufte Aktivität schnell und bannt entsprechende Accounts dauerhaft. Auch Cross-Posting in mehrere Subs oder Multi-Account-Voting verletzt die Site-Wide-Rules. Reddit-Sichtbarkeit muss manuell, persönlich und über mindestens 3–6 Monate aufgebaut werden.',
     },
     {
       question: "Welche Reddit-Aktivität ist juristisch riskant?",
       answer:
-        "Verdeckte Eigenwerbung kann in DACH als wettbewerbswidrig (UWG §5a) gewertet werden — Abmahnrisiko. Auch das Ausgeben als unabhängiger Kunde bei eigener Empfehlung erfüllt den Tatbestand der Irreführung. Lösung: jede Empfehlung mit klarer Kennzeichnung („Anbieter-Eigenangabe") und keine erfundenen Testimonials.",
+        'Verdeckte Eigenwerbung kann in DACH als wettbewerbswidrig (UWG §5a) gewertet werden — Abmahnrisiko. Auch das Ausgeben als unabhängiger Kunde bei eigener Empfehlung erfüllt den Tatbestand der Irreführung. Lösung: jede Empfehlung mit klarer Kennzeichnung ("Anbieter-Eigenangabe") und keine erfundenen Testimonials.',
     },
   ];
 
