@@ -461,7 +461,26 @@ const ArticleLayout = ({
       "@type": target.region === "DACH" ? "Country" : "Place",
       "name": target.name,
       "sameAs": target.sameAs
-    }))),
+    }))).concat(
+      // Wikidata-linked concept entities (SEO, GBP, ChatGPT, verticals, ...).
+      // Lets LLMs disambiguate topics by entity ID — improves AI citation
+      // accuracy in ChatGPT, Perplexity, Gemini and Google AI Overviews.
+      detectWikidataEntities(
+        [
+          article.title,
+          article.metaTitle,
+          article.metaDescription,
+          article.excerpt,
+          (article.keywords || []).join(" "),
+          article.category,
+        ].filter(Boolean).join(" "),
+        10
+      ).map((entity) => ({
+        "@type": entity.type || "Thing",
+        "name": entity.name,
+        "sameAs": entity.sameAs,
+      }))
+    ),
     "wordCount": article.readingTime * 200,
     "educationalLevel": "intermediate",
     "learningResourceType": "Guide",
