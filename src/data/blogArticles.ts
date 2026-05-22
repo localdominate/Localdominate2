@@ -4367,6 +4367,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "ai-agents-lokale-buchungen-2026",
+    de: {
+      title: "AI Agents 2026: Wie Operator, ChatGPT Agent & Gemini lokale Buchungen autonom erledigen",
+      metaTitle: "AI Agents Local SEO 2026: Operator, Gemini & Comet Setup",
+      metaDescription: "OpenAI Operator, ChatGPT Agent, Google Gemini Agents und Perplexity Comet buchen 2026 autonom lokal. So wirst du agent-ready — mit Schema, ARIA und 7-Schritte-Plan.",
+      excerpt: "Wie autonome AI Agents lokale Buchungen durchführen — und wie du Webseite, Schema und Buchungspfad systematisch agent-ready machst. Mit Plattform-Vergleich, Ranking-Signalen und 7-Schritte-Plan.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "AI Agents 2026: How Operator, ChatGPT Agent & Gemini Book Local Services Autonomously",
+      metaTitle: "AI Agents Local SEO 2026: Operator, Gemini & Comet Setup",
+      metaDescription: "OpenAI Operator, ChatGPT Agent, Google Gemini Agents and Perplexity Comet book locally on their own in 2026. Become agent-ready — with schema, ARIA and a 7-step plan.",
+      excerpt: "How autonomous AI agents handle local bookings — and how to systematically make your website, schema and booking path agent-ready. With platform comparison, ranking signals and 7-step plan.",
+      category: "AI & Future",
+    },
+    readingTime: 13,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "🤖",
+    keywords: [
+      "ai agents local seo",
+      "openai operator local",
+      "chatgpt agent buchung",
+      "gemini agent local",
+      "perplexity comet browser",
+      "agent ready website",
+      "reservation schema dach",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4510,6 +4541,7 @@ const PUBLISHED_SLUGS = new Set([
   "bing-copilot-local-seo-2026",
   "tiktok-search-local-seo-2026",
   "voice-search-sprachassistenten-local-seo-2026",
+  "ai-agents-lokale-buchungen-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
