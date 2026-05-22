@@ -4181,6 +4181,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "apple-business-connect-local-seo-2026",
+    de: {
+      title: "Apple Business Connect: Local SEO für Apple Maps & Siri 2026",
+      metaTitle: "Apple Business Connect 2026: Local SEO für Apple Maps & Siri",
+      metaDescription: "Kompletter Guide zu Apple Business Connect: Einrichtung, Showcases, Siri-Optimierung und Apple-Intelligence-Vorbereitung. Für DACH-Unternehmen.",
+      excerpt: "Ein Drittel der DACH-Smartphone-Nutzer hat ein iPhone — und Apple Maps ist Standard. So richtest du Apple Business Connect ein und optimierst für Siri, Spotlight und Apple Intelligence.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "Apple Business Connect: Local SEO for Apple Maps & Siri 2026",
+      metaTitle: "Apple Business Connect 2026: Local SEO for Apple Maps & Siri",
+      metaDescription: "Complete guide to Apple Business Connect: setup, showcases, Siri optimization and Apple Intelligence readiness for DACH businesses.",
+      excerpt: "A third of DACH smartphone users hold an iPhone — and Apple Maps is the default. Here is how to set up Apple Business Connect and optimize for Siri, Spotlight and Apple Intelligence.",
+      category: "AI & Future",
+    },
+    readingTime: 12,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "🍎",
+    keywords: [
+      "apple business connect",
+      "apple maps seo",
+      "siri local seo",
+      "apple intelligence local seo",
+      "apple maps ranking",
+      "businessconnect apple",
+      "ios local seo dach",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4318,6 +4349,7 @@ const PUBLISHED_SLUGS = new Set([
   "schema-strategie-ai-retrieval",
   "perplexity-claude-lokale-sichtbarkeit",
   "chatgpt-search-lokale-unternehmen-2026",
+  "apple-business-connect-local-seo-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
