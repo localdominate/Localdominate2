@@ -4243,6 +4243,37 @@ export const blogArticles: BlogArticle[] = [
     ],
     featured: true,
   },
+  {
+    slug: "google-ai-mode-local-seo-2026",
+    de: {
+      title: "Google AI Mode 2026: Local SEO für Geminis konversationale Suche",
+      metaTitle: "Google AI Mode Local SEO 2026: Strategie & Optimierung",
+      metaDescription: "Google AI Mode verändert lokale Suche radikal. So optimierst du GBP, Schema und Content für Geminis Query Fan-Out — mit 7-Schritte-Plan für DACH-Unternehmen.",
+      excerpt: "Warum klassisches Top-3-Ranking nicht mehr reicht — und wie du dein Unternehmen für Googles Gemini-gestützten AI Mode aufstellst. Inklusive Vergleichstabelle, Ranking-Signalen und 7-Schritte-Plan.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "Google AI Mode 2026: Local SEO for Gemini's Conversational Search",
+      metaTitle: "Google AI Mode Local SEO 2026: Strategy & Optimization",
+      metaDescription: "Google AI Mode is reshaping local search. Here is how to optimize GBP, schema and content for Gemini's query fan-out — 7-step playbook for DACH businesses.",
+      excerpt: "Why classic top-3 ranking is no longer enough — and how to position your business for Google's Gemini-powered AI Mode. Includes comparison table, ranking signals and 7-step plan.",
+      category: "AI & Future",
+    },
+    readingTime: 13,
+    publishedAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    icon: "✨",
+    keywords: [
+      "google ai mode",
+      "ai mode local seo",
+      "gemini local seo",
+      "query fan-out",
+      "google ai mode dach",
+      "ai mode optimierung",
+      "google gemini suche local",
+    ],
+    featured: true,
+  },
 ];
 
 // Slugs that have actual page components and routes
@@ -4382,6 +4413,7 @@ const PUBLISHED_SLUGS = new Set([
   "chatgpt-search-lokale-unternehmen-2026",
   "apple-business-connect-local-seo-2026",
   "reddit-local-seo-ai-zitate-2026",
+  "google-ai-mode-local-seo-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
