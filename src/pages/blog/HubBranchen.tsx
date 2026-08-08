@@ -9,6 +9,7 @@ const groups: HubArticleGroup[] = [
     slugs: [
       "local-seo-fuer-restaurants",
       "local-seo-baeckerei",
+      "local-seo-baeckerei-konditorei",
       "local-seo-cafe-coffeeshop",
       "local-seo-doener-kebab-imbiss",
       "seo-ferienwohnungen",
@@ -53,6 +54,7 @@ const groups: HubArticleGroup[] = [
       "local-seo-steuerberater",
       "local-seo-immobilienmakler",
       "local-seo-fotograf",
+      "local-seo-hochzeitsdienstleister",
       "local-seo-sprachschule",
     ],
   },

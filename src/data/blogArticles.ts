@@ -4867,6 +4867,8 @@ const PUBLISHED_SLUGS = new Set([
   "local-seo-fahrschule",
   "local-seo-cafe-coffeeshop",
   "local-seo-sprachschule",
+  "local-seo-baeckerei-konditorei",
+  "local-seo-hochzeitsdienstleister",
 ]);
 
 // Get only published articles (with pages), deduplicated
