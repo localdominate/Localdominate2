@@ -72,6 +72,8 @@ const AiZitatMonitoring2026 = lazy(() => import("./pages/blog/AiZitatMonitoring2
 const AiFalschangabenKorrigieren2026 = lazy(() => import("./pages/blog/AiFalschangabenKorrigieren2026"));
 const LocalSeoHeizungSanitaer = lazy(() => import("./pages/blog/LocalSeoHeizungSanitaer"));
 const LocalSeoGebaeudereinigung = lazy(() => import("./pages/blog/LocalSeoGebaeudereinigung"));
+const LocalSeoGartenLandschaftsbau = lazy(() => import("./pages/blog/LocalSeoGartenLandschaftsbau"));
+const LocalSeoUmzugsunternehmen = lazy(() => import("./pages/blog/LocalSeoUmzugsunternehmen"));
 const GbpKiFunktionen2026 = lazy(() => import("./pages/blog/GbpKiFunktionen2026"));
 const GeoContentBriefing2026 = lazy(() => import("./pages/blog/GeoContentBriefing2026"));
 const WhatsappBusinessLocalSeo2026 = lazy(() => import("./pages/blog/WhatsappBusinessLocalSeo2026"));
@@ -289,6 +291,8 @@ const App = () => (
                 <Route path="/blog/unternehmensprofil-ki-funktionen-2026" element={<GbpKiFunktionen2026 />} />
                 <Route path="/blog/local-seo-heizung-sanitaer" element={<LocalSeoHeizungSanitaer />} />
                 <Route path="/blog/local-seo-gebaeudereinigung" element={<LocalSeoGebaeudereinigung />} />
+                <Route path="/blog/local-seo-garten-landschaftsbau" element={<LocalSeoGartenLandschaftsbau />} />
+                <Route path="/blog/local-seo-umzugsunternehmen" element={<LocalSeoUmzugsunternehmen />} />
                 <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />
