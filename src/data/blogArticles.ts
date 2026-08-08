@@ -1309,25 +1309,32 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "local-seo-umzugsunternehmen",
     de: {
-      title: "Local SEO für Umzugsunternehmen & Entrümpelungen",
-      metaTitle: "Local SEO für Umzugsunternehmen | Mehr Aufträge 2026",
-      metaDescription: "Wie Umzugsunternehmen durch Local SEO mehr Aufträge generieren. Umzugs-Keywords, Preisrechner-Integration und Bewertungsstrategien.",
-      excerpt: "Der Guide für Umzugsunternehmen: So bekommen Sie mehr Anfragen.",
+      title: "Local SEO für Umzugsunternehmen: In zwei Städten gefunden werden",
+      metaTitle: "Local SEO Umzugsunternehmen 2026 | Routen & Anfragen",
+      metaDescription: "Local SEO fuer Umzugsfirmen: Standort- und Zielregionsseiten, echte Routenseiten, Preisspannen, Bewertungsroutine und ein 90-Tage-Plan.",
+      excerpt: "Umzugskunden suchen an zwei Orten gleichzeitig. So deckt ein Umzugsunternehmen Auszugs- und Zielregion sauber ab.",
       category: "Branchen"
     },
     en: {
-      title: "Local SEO for Moving Companies & Clearances",
-      metaTitle: "Local SEO for Moving Companies | More Jobs 2026",
-      metaDescription: "How moving companies generate more jobs through Local SEO. Moving keywords, price calculator integration and review strategies.",
-      excerpt: "The guide for moving companies: How to get more inquiries.",
+      title: "Local SEO for Moving Companies: Being Found in Two Cities",
+      metaTitle: "Local SEO Moving Companies 2026 | Routes & Leads",
+      metaDescription: "Local SEO for movers: origin and destination pages, real route pages, price ranges, review routines and a 90-day plan.",
+      excerpt: "Moving customers search in two places at once. How movers cover both origin and destination markets.",
       category: "Industries"
     },
-    readingTime: 12,
-    publishedAt: "2026-03-04",
-    updatedAt: "2026-03-04",
-    icon: "📦",
-    keywords: ["umzugsunternehmen seo", "umzug marketing", "local seo umzug", "entrümpelung seo"],
-    featured: false
+    readingTime: 11,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F69A}",
+    keywords: [
+      "local seo umzugsunternehmen",
+      "umzugsfirma kunden gewinnen",
+      "umzug google ranking",
+      "umzugsanfragen generieren",
+      "fernumzug marketing",
+      "umzugsunternehmen sichtbarkeit"
+    ],
+    featured: false,
   },
   {
     slug: "local-seo-reinigungsunternehmen",
@@ -4575,36 +4582,6 @@ export const blogArticles: BlogArticle[] = [
       "gartenpflege anfragen",
       "gartengestaltung marketing",
       "galabau sichtbarkeit"
-    ],
-    featured: false,
-  },
-  {
-    slug: "local-seo-umzugsunternehmen",
-    de: {
-      title: "Local SEO für Umzugsunternehmen: In zwei Städten gefunden werden",
-      metaTitle: "Local SEO Umzugsunternehmen 2026 | Routen & Anfragen",
-      metaDescription: "Local SEO fuer Umzugsfirmen: Standort- und Zielregionsseiten, echte Routenseiten, Preisspannen, Bewertungsroutine und ein 90-Tage-Plan.",
-      excerpt: "Umzugskunden suchen an zwei Orten gleichzeitig. So deckt ein Umzugsunternehmen Auszugs- und Zielregion sauber ab.",
-      category: "Branchen"
-    },
-    en: {
-      title: "Local SEO for Moving Companies: Being Found in Two Cities",
-      metaTitle: "Local SEO Moving Companies 2026 | Routes & Leads",
-      metaDescription: "Local SEO for movers: origin and destination pages, real route pages, price ranges, review routines and a 90-day plan.",
-      excerpt: "Moving customers search in two places at once. How movers cover both origin and destination markets.",
-      category: "Industries"
-    },
-    readingTime: 11,
-    publishedAt: "2026-08-08",
-    updatedAt: "2026-08-08",
-    icon: "\u{1F69A}",
-    keywords: [
-      "local seo umzugsunternehmen",
-      "umzugsfirma kunden gewinnen",
-      "umzug google ranking",
-      "umzugsanfragen generieren",
-      "fernumzug marketing",
-      "umzugsunternehmen sichtbarkeit"
     ],
     featured: false,
   },
