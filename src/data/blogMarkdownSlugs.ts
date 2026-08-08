@@ -25,6 +25,8 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "unternehmensprofil-ki-funktionen-2026",
   "local-seo-heizung-sanitaer",
   "local-seo-gebaeudereinigung",
+  "local-seo-garten-landschaftsbau",
+  "local-seo-umzugsunternehmen",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",

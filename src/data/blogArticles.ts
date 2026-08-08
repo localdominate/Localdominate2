@@ -4549,6 +4549,66 @@ export const blogArticles: BlogArticle[] = [
     featured: false,
   },
   {
+    slug: "local-seo-garten-landschaftsbau",
+    de: {
+      title: "Local SEO für Garten- & Landschaftsbau: Saison richtig nutzen",
+      metaTitle: "Local SEO Garten- & Landschaftsbau 2026 | GaLaBau",
+      metaDescription: "Local SEO fuer GaLaBau-Betriebe: Saisonplanung, Leistungsseiten, Vorher-Nachher-Referenzen, Anfragequalifizierung und ein Jahresplan fuer volle Auftragsbuecher.",
+      excerpt: "Die Auftraege des Sommers werden im Winter entschieden. So baut ein GaLaBau-Betrieb Sichtbarkeit vor der Saison auf.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Landscaping: Using the Season Correctly",
+      metaTitle: "Local SEO Landscaping 2026 | Garden & Grounds",
+      metaDescription: "Local SEO for landscaping businesses: seasonal planning, service pages, before-and-after references, enquiry qualification and a yearly plan.",
+      excerpt: "Summer jobs are decided in winter. How landscaping businesses build visibility before the season starts.",
+      category: "Industries"
+    },
+    readingTime: 11,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F333}",
+    keywords: [
+      "local seo garten landschaftsbau",
+      "galabau kunden gewinnen",
+      "landschaftsgaertner google ranking",
+      "gartenpflege anfragen",
+      "gartengestaltung marketing",
+      "galabau sichtbarkeit"
+    ],
+    featured: false,
+  },
+  {
+    slug: "local-seo-umzugsunternehmen",
+    de: {
+      title: "Local SEO für Umzugsunternehmen: In zwei Städten gefunden werden",
+      metaTitle: "Local SEO Umzugsunternehmen 2026 | Routen & Anfragen",
+      metaDescription: "Local SEO fuer Umzugsfirmen: Standort- und Zielregionsseiten, echte Routenseiten, Preisspannen, Bewertungsroutine und ein 90-Tage-Plan.",
+      excerpt: "Umzugskunden suchen an zwei Orten gleichzeitig. So deckt ein Umzugsunternehmen Auszugs- und Zielregion sauber ab.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Moving Companies: Being Found in Two Cities",
+      metaTitle: "Local SEO Moving Companies 2026 | Routes & Leads",
+      metaDescription: "Local SEO for movers: origin and destination pages, real route pages, price ranges, review routines and a 90-day plan.",
+      excerpt: "Moving customers search in two places at once. How movers cover both origin and destination markets.",
+      category: "Industries"
+    },
+    readingTime: 11,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F69A}",
+    keywords: [
+      "local seo umzugsunternehmen",
+      "umzugsfirma kunden gewinnen",
+      "umzug google ranking",
+      "umzugsanfragen generieren",
+      "fernumzug marketing",
+      "umzugsunternehmen sichtbarkeit"
+    ],
+    featured: false,
+  },
+  {
     slug: "whatsapp-business-local-seo-2026",
     de: {
       title: "WhatsApp Business für lokale Unternehmen 2026: Setup, NAP-Regeln & Recht",
@@ -4824,6 +4884,8 @@ const PUBLISHED_SLUGS = new Set([
   "unternehmensprofil-ki-funktionen-2026",
   "local-seo-heizung-sanitaer",
   "local-seo-gebaeudereinigung",
+  "local-seo-garten-landschaftsbau",
+  "local-seo-umzugsunternehmen",
 ]);
 
 // Get only published articles (with pages), deduplicated
