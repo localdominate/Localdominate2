@@ -27,6 +27,8 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "local-seo-gebaeudereinigung",
   "local-seo-garten-landschaftsbau",
   "local-seo-umzugsunternehmen",
+  "local-seo-maler-lackierer",
+  "local-seo-fahrschule",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",
