@@ -83,6 +83,8 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "local-seo-baeckerei-konditorei",
   "local-seo-cafe-coffeeshop",
   "local-seo-hochzeitsdienstleister",
+  "local-seo-tracking-kpis",
+  "lokale-landing-pages",
   "local-seo-sprachschule",
   "local-seo-basel",
   "local-seo-berlin",

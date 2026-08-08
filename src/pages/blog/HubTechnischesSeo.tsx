@@ -25,7 +25,7 @@ const groups: HubArticleGroup[] = [
     title: "Analyse & Reporting",
     description: "Audits, Reports und Keyword-Recherche",
     icon: "📊",
-    slugs: ["local-seo-audit-checkliste", "local-seo-reporting-template", "local-seo-keywords-finden"],
+    slugs: ["local-seo-audit-checkliste", "local-seo-reporting-template", "local-seo-keywords-finden", "local-seo-tracking-kpis", "lokale-landing-pages"],
   },
 ];
 
