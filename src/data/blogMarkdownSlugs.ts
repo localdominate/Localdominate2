@@ -21,6 +21,8 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "ai-zitat-monitoring-local-seo-2026",
   "geo-content-briefing-vorlage-2026",
   "whatsapp-business-local-seo-2026",
+  "ai-falschangaben-korrigieren-2026",
+  "unternehmensprofil-ki-funktionen-2026",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",

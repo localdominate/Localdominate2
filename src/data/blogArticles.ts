@@ -4429,6 +4429,66 @@ export const blogArticles: BlogArticle[] = [
     featured: true,
   },
   {
+    slug: "ai-falschangaben-korrigieren-2026",
+    de: {
+      title: "Falschangaben in AI-Antworten korrigieren 2026: 6-Schritte-Prozess",
+      metaTitle: "Falsche AI-Angaben korrigieren 2026: Prozess & Prävention",
+      metaDescription: "ChatGPT, Perplexity oder Gemini nennen falsche Nummern, Zeiten oder Standorte? So findest du die Quelle, korrigierst sie sauber und misst die Wirkung nach.",
+      excerpt: "Falsche Angaben in AI-Antworten entstehen fast immer aus widerspruechlichen Quellen. Der komplette Korrekturprozess von der Ursachensuche bis zur Nachmessung.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "Fixing Wrong Business Data in AI Answers 2026: A 6-Step Process",
+      metaTitle: "Fix Incorrect AI Answers 2026: Process & Prevention",
+      metaDescription: "ChatGPT, Perplexity or Gemini stating wrong numbers, hours or locations? How to trace the source, correct it properly and verify the result.",
+      excerpt: "Wrong data in AI answers almost always comes from conflicting sources. The full correction process, from root cause to follow-up measurement.",
+      category: "AI & Future",
+    },
+    readingTime: 9,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{26A0}\u{FE0F}",
+    keywords: [
+      "falsche angaben chatgpt unternehmen",
+      "ai halluzination firmendaten",
+      "nap fehler korrigieren",
+      "perplexity falsche oeffnungszeiten",
+      "unternehmensdaten bereinigen",
+      "ai antwort korrigieren",
+    ],
+    featured: true,
+  },
+  {
+    slug: "unternehmensprofil-ki-funktionen-2026",
+    de: {
+      title: "Unternehmensprofil & KI 2026: Welche Felder in AI-Antworten landen",
+      metaTitle: "Unternehmensprofil KI-Optimierung 2026: 7 Felder",
+      metaDescription: "Kategorie, Leistungen, Attribute, Q&A: welche Profilfelder KI-Zusammenfassungen wirklich nutzen und wie du sie befuellst — inkl. monatlicher Pflegeroutine.",
+      excerpt: "Strukturierte Profilfelder werden haeufiger zitiert als Fliesstext. Die 7 entscheidenden Felder, das Q&A-Format und eine Pflegeroutine fuer jeden Monat.",
+      category: "Google Business Profile",
+    },
+    en: {
+      title: "Business Profile & AI 2026: Which Fields Reach AI Answers",
+      metaTitle: "Business Profile AI Optimization 2026: 7 Fields",
+      metaDescription: "Category, services, attributes, Q&A: which profile fields AI summaries actually use and how to fill them — including a monthly maintenance routine.",
+      excerpt: "Structured profile fields get cited more often than body copy. The 7 decisive fields, the Q&A format and a monthly maintenance routine.",
+      category: "Google Business Profile",
+    },
+    readingTime: 10,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{2728}",
+    keywords: [
+      "google unternehmensprofil ki",
+      "gbp ai optimierung",
+      "profil kategorien leistungen",
+      "fragen und antworten profil",
+      "ai zusammenfassung lokal",
+      "standortprofil pflege",
+    ],
+    featured: true,
+  },
+  {
     slug: "whatsapp-business-local-seo-2026",
     de: {
       title: "WhatsApp Business für lokale Unternehmen 2026: Setup, NAP-Regeln & Recht",
@@ -4700,6 +4760,8 @@ const PUBLISHED_SLUGS = new Set([
   "ai-zitat-monitoring-local-seo-2026",
   "geo-content-briefing-vorlage-2026",
   "whatsapp-business-local-seo-2026",
+  "ai-falschangaben-korrigieren-2026",
+  "unternehmensprofil-ki-funktionen-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
