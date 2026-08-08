@@ -4399,6 +4399,68 @@ export const blogArticles: BlogArticle[] = [
     featured: true,
   },
   {
+    slug: "ai-crawler-steuern-gptbot-claudebot-2026",
+    de: {
+      title: "AI-Crawler steuern 2026: GPTBot, ClaudeBot & PerplexityBot richtig konfigurieren",
+      metaTitle: "AI-Crawler steuern 2026: robots.txt für GPTBot & Co.",
+      metaDescription: "Welche AI-Crawler du zulassen oder blockieren solltest — mit User-Agent-Tabelle, fertiger robots.txt-Vorlage und 6-Schritte-Setup für lokale Unternehmen.",
+      excerpt: "GPTBot, ClaudeBot, PerplexityBot und Google-Extended entscheiden, ob dein Unternehmen in AI-Antworten auftaucht. Der komplette Konfigurations-Leitfaden inkl. robots.txt-Vorlage.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "Managing AI Crawlers 2026: Configure GPTBot, ClaudeBot & PerplexityBot",
+      metaTitle: "AI Crawler Control 2026: robots.txt for GPTBot & Co.",
+      metaDescription: "Which AI crawlers to allow or block — with a user-agent table, a ready-to-use robots.txt template and a 6-step setup for local businesses.",
+      excerpt: "GPTBot, ClaudeBot, PerplexityBot and Google-Extended decide whether your business appears in AI answers. The full configuration guide incl. robots.txt template.",
+      category: "AI & Future",
+    },
+    readingTime: 10,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F916}",
+    keywords: [
+      "ai crawler steuern",
+      "gptbot robots.txt",
+      "claudebot blockieren",
+      "perplexitybot",
+      "google-extended",
+      "applebot-extended",
+      "ai crawler local seo",
+    ],
+    featured: true,
+  },
+  {
+    slug: "ai-zitat-monitoring-local-seo-2026",
+    de: {
+      title: "AI-Zitat-Monitoring 2026: Erwähnungen in ChatGPT, Perplexity & Gemini messen",
+      metaTitle: "AI-Zitat-Monitoring 2026: 5 Kennzahlen & Prompt-Set",
+      metaDescription: "So misst du systematisch, ob ChatGPT, Perplexity, Gemini und Copilot dein Unternehmen nennen — mit 5 Kennzahlen, Prompt-Set und monatlicher Routine.",
+      excerpt: "Rankings verlieren an Aussagekraft. Dieses Monitoring-System misst Erwähnungsrate, Link-Genauigkeit und Faktentreue in AI-Antworten — in unter 60 Minuten pro Monat.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "AI Citation Monitoring 2026: Measure Mentions in ChatGPT, Perplexity & Gemini",
+      metaTitle: "AI Citation Monitoring 2026: 5 Metrics & Prompt Set",
+      metaDescription: "How to systematically measure whether ChatGPT, Perplexity, Gemini and Copilot mention your business — with 5 metrics, a prompt set and a monthly routine.",
+      excerpt: "Rankings are losing meaning. This monitoring system measures mention rate, link accuracy and factual correctness in AI answers — in under 60 minutes per month.",
+      category: "AI & Future",
+    },
+    readingTime: 11,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F4CA}",
+    keywords: [
+      "ai zitat monitoring",
+      "ai sichtbarkeit messen",
+      "chatgpt erwaehnungen tracken",
+      "perplexity monitoring",
+      "gemini local seo messung",
+      "ai visibility kpi",
+      "share of model",
+    ],
+    featured: true,
+  },
+  {
     slug: "llms-txt-lokale-unternehmen-2026",
     de: {
       title: "llms.txt für lokale Unternehmen 2026: Setup, Beispiel & Best Practices",
@@ -4574,6 +4636,8 @@ const PUBLISHED_SLUGS = new Set([
   "voice-search-sprachassistenten-local-seo-2026",
   "ai-agents-lokale-buchungen-2026",
   "llms-txt-lokale-unternehmen-2026",
+  "ai-crawler-steuern-gptbot-claudebot-2026",
+  "ai-zitat-monitoring-local-seo-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
