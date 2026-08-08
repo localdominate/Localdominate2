@@ -166,7 +166,7 @@ const LocalSeoSprachschule = () => {
         </ol>
         <p className="mt-4">
           Weiterführend: <Link to="/blog/local-seo-fahrschule" className="text-primary underline">Local SEO für Fahrschulen</Link> und{" "}
-          <Link to="/blog/lokale-keyword-recherche" className="text-primary underline">lokale Keyword-Recherche</Link>.
+          <Link to="/blog/local-seo-keywords-finden" className="text-primary underline">lokale Keywords finden</Link>.
         </p>
       </section>
     </ArticleLayout>

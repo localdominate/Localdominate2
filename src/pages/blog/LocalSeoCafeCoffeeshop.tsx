@@ -104,7 +104,7 @@ const LocalSeoCafeCoffeeshop = () => {
           </table>
         </div>
         <p className="mt-4">
-          Kategorienlogik im Detail: <Link to="/blog/google-business-profile-optimieren" className="text-primary underline">Profil optimieren</Link>.
+          Kategorienlogik im Detail: <Link to="/blog/google-my-business-optimieren" className="text-primary underline">Google-Profil optimieren</Link>.
         </p>
       </section>
 
