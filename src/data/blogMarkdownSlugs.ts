@@ -80,6 +80,8 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "local-seo-audit-checkliste",
   "local-seo-autowerkstatt",
   "local-seo-baeckerei",
+  "local-seo-cafe-coffeeshop",
+  "local-seo-sprachschule",
   "local-seo-basel",
   "local-seo-berlin",
   "local-seo-branchen-hub",
