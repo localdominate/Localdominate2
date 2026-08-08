@@ -4399,6 +4399,66 @@ export const blogArticles: BlogArticle[] = [
     featured: true,
   },
   {
+    slug: "geo-content-briefing-vorlage-2026",
+    de: {
+      title: "GEO-Content-Briefing 2026: Vorlage für zitierfähige Texte in AI-Suche",
+      metaTitle: "GEO-Content-Briefing 2026: Vorlage & 8 Bausteine",
+      metaDescription: "Wie ein Content-Briefing aussehen muss, damit ChatGPT, Perplexity und Gemini deine Texte zitieren: 8 Bausteine, Vorlage zum Kopieren und Prüfliste vor der Freigabe.",
+      excerpt: "Frage-Gliederung, 40–60-Wort-Antwortblöcke, Entitätenliste und belegte Fakten: die vollständige Briefing-Vorlage für Texte, die von AI-Assistenten zitiert werden.",
+      category: "AI & Zukunft",
+    },
+    en: {
+      title: "GEO Content Briefing 2026: Template for Citable AI-Search Content",
+      metaTitle: "GEO Content Briefing 2026: Template & 8 Building Blocks",
+      metaDescription: "What a content brief must contain so ChatGPT, Perplexity and Gemini cite your pages: 8 building blocks, a copy-ready template and a pre-publish checklist.",
+      excerpt: "Question-based outlines, 40–60-word answer blocks, entity lists and sourced facts: the complete briefing template for content that AI assistants cite.",
+      category: "AI & Future",
+    },
+    readingTime: 10,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F4DD}",
+    keywords: [
+      "geo content briefing",
+      "content briefing vorlage",
+      "ai suche content",
+      "zitierfaehige texte",
+      "answer block seo",
+      "generative engine optimization content",
+    ],
+    featured: true,
+  },
+  {
+    slug: "whatsapp-business-local-seo-2026",
+    de: {
+      title: "WhatsApp Business für lokale Unternehmen 2026: Setup, NAP-Regeln & Recht",
+      metaTitle: "WhatsApp Business Local SEO 2026: Setup & Rechtsrahmen",
+      metaDescription: "WhatsApp Business richtig aufsetzen: Profilangaben, wa.me-Einbindung, NAP-Konsistenz, Antwortzeiten und Datenschutz — mit 7-Schritte-Setup für lokale Betriebe.",
+      excerpt: "Der Messenger ist der kürzeste Weg von der Suche zur Anfrage. So richtest du Profil, Website-Einbindung und Standortverknüpfung sauber und rechtssicher ein.",
+      category: "Local SEO Grundlagen",
+    },
+    en: {
+      title: "WhatsApp Business for Local Businesses 2026: Setup, NAP Rules & Compliance",
+      metaTitle: "WhatsApp Business Local SEO 2026: Setup & Compliance",
+      metaDescription: "Set up WhatsApp Business properly: profile fields, wa.me links, NAP consistency, response times and data protection — with a 7-step setup for local businesses.",
+      excerpt: "The messenger is the shortest path from search to enquiry. How to set up profile, website integration and location linkage cleanly and compliantly.",
+      category: "Local SEO Basics",
+    },
+    readingTime: 10,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F4AC}",
+    keywords: [
+      "whatsapp business local seo",
+      "wa.me link website",
+      "whatsapp unternehmensprofil",
+      "nap konsistenz messenger",
+      "whatsapp datenschutz unternehmen",
+      "chat kanal lokale kunden",
+    ],
+    featured: false,
+  },
+  {
     slug: "ai-crawler-steuern-gptbot-claudebot-2026",
     de: {
       title: "AI-Crawler steuern 2026: GPTBot, ClaudeBot & PerplexityBot richtig konfigurieren",
@@ -4638,6 +4698,8 @@ const PUBLISHED_SLUGS = new Set([
   "llms-txt-lokale-unternehmen-2026",
   "ai-crawler-steuern-gptbot-claudebot-2026",
   "ai-zitat-monitoring-local-seo-2026",
+  "geo-content-briefing-vorlage-2026",
+  "whatsapp-business-local-seo-2026",
 ]);
 
 // Get only published articles (with pages), deduplicated
