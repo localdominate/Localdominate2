@@ -17,6 +17,8 @@ export const BLOG_MARKDOWN_SLUGS = new Set<string>(
   "voice-search-sprachassistenten-local-seo-2026",
   "ai-agents-lokale-buchungen-2026",
   "llms-txt-lokale-unternehmen-2026",
+  "ai-crawler-steuern-gptbot-claudebot-2026",
+  "ai-zitat-monitoring-local-seo-2026",
   "citation-tracking-template",
   "core-web-vitals-local-seo",
   "duplicate-listing-entfernen",
