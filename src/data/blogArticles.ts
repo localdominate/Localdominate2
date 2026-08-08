@@ -4489,6 +4489,66 @@ export const blogArticles: BlogArticle[] = [
     featured: true,
   },
   {
+    slug: "local-seo-heizung-sanitaer",
+    de: {
+      title: "Local SEO für Heizung & Sanitär (SHK): Notdienst und Projekte",
+      metaTitle: "Local SEO Heizung Sanitaer 2026 | SHK-Betriebe",
+      metaDescription: "Local SEO fuer SHK-Betriebe: Kategorien, Notdienstseite, Waermepumpen-Projekte, Bewertungen und ein 90-Tage-Plan fuer planbare Auftraege.",
+      excerpt: "Notfall und Sanierungsprojekt sind zwei getrennte Suchanlaesse. So bedient ein SHK-Betrieb beide sauber und gewinnt Einsaetze wie Projektauftraege.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Plumbing & Heating: Emergencies and Projects",
+      metaTitle: "Local SEO Plumbing & Heating 2026 | Trade Guide",
+      metaDescription: "Local SEO for plumbing and heating businesses: categories, emergency pages, heat pump projects, reviews and a 90-day plan for predictable jobs.",
+      excerpt: "Emergency calls and renovation projects are two separate search occasions. How to serve both properly and win jobs on either side.",
+      category: "Industries"
+    },
+    readingTime: 11,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F525}",
+    keywords: [
+      "local seo heizung sanitaer",
+      "shk betrieb marketing",
+      "klempner google ranking",
+      "notdienst seite handwerk",
+      "waermepumpe anfragen gewinnen",
+      "heizungsbauer sichtbarkeit"
+    ],
+    featured: false,
+  },
+  {
+    slug: "local-seo-gebaeudereinigung",
+    de: {
+      title: "Local SEO für Gebäudereinigung: Objektanfragen statt Klicks",
+      metaTitle: "Local SEO Gebaeudereinigung 2026 | B2B-Anfragen",
+      metaDescription: "Local SEO fuer Reinigungsbetriebe: Leistungsseiten je Reinigungsart, Referenzstruktur, Servicegebiet und ein Anfrageformular, das Kalkulation ermoeglicht.",
+      excerpt: "Gebaeudereinigung ist ein Vertragsgeschaeft. So entstehen qualifizierte Objektanfragen mit Flaeche, Turnus und Standort statt reiner Preisabfragen.",
+      category: "Branchen"
+    },
+    en: {
+      title: "Local SEO for Commercial Cleaning: Qualified Site Enquiries",
+      metaTitle: "Local SEO Commercial Cleaning 2026 | B2B Leads",
+      metaDescription: "Local SEO for cleaning companies: one page per service, reference structure, service area and an enquiry form that enables real quoting.",
+      excerpt: "Commercial cleaning is a contract business. How to generate qualified enquiries with area, frequency and location instead of price-only requests.",
+      category: "Industries"
+    },
+    readingTime: 11,
+    publishedAt: "2026-08-08",
+    updatedAt: "2026-08-08",
+    icon: "\u{1F9FD}",
+    keywords: [
+      "local seo gebaeudereinigung",
+      "reinigungsfirma kunden gewinnen",
+      "bueroreinigung anfragen",
+      "b2b local seo",
+      "unterhaltsreinigung marketing",
+      "reinigungsdienst sichtbarkeit"
+    ],
+    featured: false,
+  },
+  {
     slug: "whatsapp-business-local-seo-2026",
     de: {
       title: "WhatsApp Business für lokale Unternehmen 2026: Setup, NAP-Regeln & Recht",
@@ -4762,6 +4822,8 @@ const PUBLISHED_SLUGS = new Set([
   "whatsapp-business-local-seo-2026",
   "ai-falschangaben-korrigieren-2026",
   "unternehmensprofil-ki-funktionen-2026",
+  "local-seo-heizung-sanitaer",
+  "local-seo-gebaeudereinigung",
 ]);
 
 // Get only published articles (with pages), deduplicated

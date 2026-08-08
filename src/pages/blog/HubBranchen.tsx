@@ -35,6 +35,8 @@ const groups: HubArticleGroup[] = [
       "local-seo-handwerker",
       "local-seo-autowerkstatt",
       "local-seo-elektrotechnik",
+      "local-seo-heizung-sanitaer",
+      "local-seo-gebaeudereinigung",
     ],
   },
   {
