@@ -114,7 +114,7 @@ const LocalSeoFahrschule = () => {
           Hauptkategorie Fahrschule, korrekte Büroöffnungszeiten statt Theoriezeiten, alle angebotenen Klassen als Leistungen, Bilder von Fahrzeugen, Unterrichtsraum und Team sowie ein direkter Link zur Anmeldeseite. Jede Filiale mit Kundenverkehr braucht ein eigenes Profil und eine eigene Landingpage.
         </AnswerBlock>
         <p className="mt-4">
-          Mehrstandort-Regeln im <Link to="/blog/multi-location-seo" className="text-primary underline">Multi-Location-Guide</Link>.
+          Mehrstandort-Regeln im <Link to="/blog/gbp-mehrere-standorte" className="text-primary underline">Guide für mehrere Standorte</Link>.
         </p>
       </section>
 
