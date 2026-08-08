@@ -23,6 +23,7 @@ const groups: HubArticleGroup[] = [
       "llms-txt-lokale-unternehmen-2026",
       "ai-crawler-steuern-gptbot-claudebot-2026",
       "ai-zitat-monitoring-local-seo-2026",
+      "geo-content-briefing-vorlage-2026",
       "google-ai-overviews-local-seo",
       "ai-search-optimization-2026",
       "website-content-ai-suchmaschinen",

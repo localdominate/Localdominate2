@@ -69,6 +69,8 @@ const AiAgentsLokaleBuchungen2026 = lazy(() => import("./pages/blog/AiAgentsLoka
 const LlmsTxtLokaleUnternehmen2026 = lazy(() => import("./pages/blog/LlmsTxtLokaleUnternehmen2026"));
 const AiCrawlerSteuern2026 = lazy(() => import("./pages/blog/AiCrawlerSteuern2026"));
 const AiZitatMonitoring2026 = lazy(() => import("./pages/blog/AiZitatMonitoring2026"));
+const GeoContentBriefing2026 = lazy(() => import("./pages/blog/GeoContentBriefing2026"));
+const WhatsappBusinessLocalSeo2026 = lazy(() => import("./pages/blog/WhatsappBusinessLocalSeo2026"));
 
 const GoogleMapsRanking = lazy(() => import("./pages/blog/GoogleMapsRanking"));
 const GoogleBewertungen = lazy(() => import("./pages/blog/GoogleBewertungen"));
@@ -277,6 +279,8 @@ const App = () => (
                 <Route path="/blog/llms-txt-lokale-unternehmen-2026" element={<LlmsTxtLokaleUnternehmen2026 />} />
                 <Route path="/blog/ai-crawler-steuern-gptbot-claudebot-2026" element={<AiCrawlerSteuern2026 />} />
                 <Route path="/blog/ai-zitat-monitoring-local-seo-2026" element={<AiZitatMonitoring2026 />} />
+                <Route path="/blog/geo-content-briefing-vorlage-2026" element={<GeoContentBriefing2026 />} />
+                <Route path="/blog/whatsapp-business-local-seo-2026" element={<WhatsappBusinessLocalSeo2026 />} />
                 <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
                 <Route path="/anwalt-marketing" element={<AnwaltMarketing />} />
                 <Route path="/diy-toolkit" element={<DIYToolkit />} />

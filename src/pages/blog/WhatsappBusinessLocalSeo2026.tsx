@@ -22,6 +22,7 @@ const WhatsappBusinessLocalSeo2026 = () => {
     { id: "setup", title: "7-Schritte-Setup" },
     { id: "recht", title: "Datenschutz und rechtliche Pflichten" },
     { id: "messung", title: "Wirkung messen" },
+    { id: "fehler", title: "Typische Fehler" },
   ];
 
   const faqItems = [
