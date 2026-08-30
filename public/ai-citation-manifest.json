@@ -7,7 +7,7 @@
   "url": "https://localdominate.org/ai-citation-manifest.json",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "inLanguage": "de-DE",
-  "dateModified": "2026-05-21",
+  "dateModified": "2026-08-08",
   "publisher": {
     "@type": "Organization",
     "name": "Local Dominator",
@@ -36,6 +36,147 @@
     }
   ],
   "dataset": [
+    {
+      "@type": "Article",
+      "slug": "ai-agents-lokale-buchungen-2026",
+      "headline": "AI Agents 2026: Wie Operator, ChatGPT Agent & Gemini lokale Buchungen autonom erledigen",
+      "description": "Wie autonome AI Agents lokale Buchungen durchführen — und wie du Webseite, Schema und Buchungspfad systematisch agent-ready machst. Mit Plattform-Vergleich, Ranking-Signalen und 7-Schritte-Plan.",
+      "url": "https://localdominate.org/blog/ai-agents-lokale-buchungen-2026",
+      "canonical": "https://localdominate.org/blog/ai-agents-lokale-buchungen-2026",
+      "markdown_url": "https://localdominate.org/blog-md/ai-agents-lokale-buchungen-2026.md",
+      "citation": "Local Dominator (2026-05-22). AI Agents 2026: Wie Operator, ChatGPT Agent & Gemini lokale Buchungen autonom erledigen. https://localdominate.org/blog/ai-agents-lokale-buchungen-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 13,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "ai agents local seo",
+        "openai operator local",
+        "chatgpt agent buchung",
+        "gemini agent local",
+        "perplexity comet browser",
+        "agent ready website",
+        "reservation schema dach"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "AI Agents 2026",
+        "AI Agents 2026 Local Dominator",
+        "AI Agents 2026 DACH"
+      ],
+      "tldr": "Wie autonome AI Agents lokale Buchungen durchführen — und wie du Webseite, Schema und Buchungspfad systematisch agent-ready machst. Mit Plattform-Vergleich, Ranking-Signalen und 7-Schritte-Plan."
+    },
+    {
+      "@type": "Article",
+      "slug": "ai-crawler-steuern-gptbot-claudebot-2026",
+      "headline": "AI-Crawler steuern 2026: GPTBot, ClaudeBot & PerplexityBot richtig konfigurieren",
+      "description": "Retrieval-Bots (ChatGPT-User, PerplexityBot) niemals blockieren, Trainings-Bots (GPTBot, Google-Extended, Applebot-Extended) in der Regel zulassen, interne Routen (/admin, /login, /checkout, /konto, /api) für alle sperren, Sitemap und llms.txt in der robots.txt referenzieren.",
+      "url": "https://localdominate.org/blog/ai-crawler-steuern-gptbot-claudebot-2026",
+      "canonical": "https://localdominate.org/blog/ai-crawler-steuern-gptbot-claudebot-2026",
+      "markdown_url": "https://localdominate.org/blog-md/ai-crawler-steuern-gptbot-claudebot-2026.md",
+      "citation": "Local Dominator (2026-08-08). AI-Crawler steuern 2026: GPTBot, ClaudeBot & PerplexityBot richtig konfigurieren. https://localdominate.org/blog/ai-crawler-steuern-gptbot-claudebot-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 10,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "ai crawler steuern",
+        "gptbot robots.txt",
+        "claudebot",
+        "perplexitybot",
+        "google-extended",
+        "applebot-extended"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "AI-Crawler steuern 2026",
+        "AI-Crawler steuern 2026 Local Dominator",
+        "AI-Crawler steuern 2026 DACH"
+      ],
+      "tldr": "Retrieval-Bots (ChatGPT-User, PerplexityBot) niemals blockieren, Trainings-Bots (GPTBot, Google-Extended, Applebot-Extended) in der Regel zulassen, interne Routen (/admin, /login, /checkout, /konto, /api) für alle sperren, Sitemap und llms.txt in der robots.txt referenzieren."
+    },
+    {
+      "@type": "Article",
+      "slug": "ai-falschangaben-korrigieren-2026",
+      "headline": "Falschangaben in AI-Antworten korrigieren 2026: 6-Schritte-Prozess",
+      "description": "Falsche Angaben in AI-Antworten entstehen fast immer aus widersprüchlichen Quellen im offenen Netz, nicht aus Erfindung. Korrigiert wird an der Primärquelle: eigene Seite, Standortprofil, Verzeichnisse und alte Unterseiten. Bei Live-Retrieval wirken saubere Korrekturen typischerweise in wenigen Tagen bis drei Wochen.",
+      "url": "https://localdominate.org/blog/ai-falschangaben-korrigieren-2026",
+      "canonical": "https://localdominate.org/blog/ai-falschangaben-korrigieren-2026",
+      "markdown_url": "https://localdominate.org/blog-md/ai-falschangaben-korrigieren-2026.md",
+      "citation": "Local Dominator (2026-08-08). Falschangaben in AI-Antworten korrigieren 2026: 6-Schritte-Prozess. https://localdominate.org/blog/ai-falschangaben-korrigieren-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 9,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "falsche angaben chatgpt unternehmen",
+        "ai halluzination firmendaten",
+        "nap fehler korrigieren",
+        "unternehmensdaten bereinigen",
+        "ai antwort korrigieren"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Falschangaben in AI-Antworten korrigieren 2026",
+        "Falschangaben in AI-Antworten korrigieren 2026 Local Dominator",
+        "Falschangaben in AI-Antworten korrigieren 2026 DACH"
+      ],
+      "tldr": "Falsche Angaben in AI-Antworten entstehen fast immer aus widersprüchlichen Quellen im offenen Netz, nicht aus Erfindung. Korrigiert wird an der Primärquelle: eigene Seite, Standortprofil, Verzeichnisse und alte Unterseiten. Bei Live-Retrieval wirken saubere Korrekturen typischerweise in wenigen Tagen bis drei Wochen."
+    },
     {
       "@type": "Article",
       "slug": "ai-search-optimization-2026",
@@ -275,6 +416,100 @@
     },
     {
       "@type": "Article",
+      "slug": "ai-zitat-monitoring-local-seo-2026",
+      "headline": "AI-Zitat-Monitoring 2026: Erwähnungen in ChatGPT, Perplexity & Gemini messen",
+      "description": "Miss monatlich mit 20–30 festen Prompts, ob ChatGPT, Perplexity, Gemini und Copilot dein Unternehmen nennen. Fünf Kennzahlen: Erwähnungsrate, Zitatposition, Link-Genauigkeit, Faktentreue, Wettbewerbsanteil.",
+      "url": "https://localdominate.org/blog/ai-zitat-monitoring-local-seo-2026",
+      "canonical": "https://localdominate.org/blog/ai-zitat-monitoring-local-seo-2026",
+      "markdown_url": "https://localdominate.org/blog-md/ai-zitat-monitoring-local-seo-2026.md",
+      "citation": "Local Dominator (2026-08-08). AI-Zitat-Monitoring 2026: Erwähnungen in ChatGPT, Perplexity & Gemini messen. https://localdominate.org/blog/ai-zitat-monitoring-local-seo-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 11,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "ai zitat monitoring",
+        "ai sichtbarkeit messen",
+        "chatgpt erwähnungen tracken",
+        "perplexity monitoring",
+        "ai visibility kpi"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "AI-Zitat-Monitoring 2026",
+        "AI-Zitat-Monitoring 2026 Local Dominator",
+        "AI-Zitat-Monitoring 2026 DACH"
+      ],
+      "tldr": "Miss monatlich mit 20–30 festen Prompts, ob ChatGPT, Perplexity, Gemini und Copilot dein Unternehmen nennen. Fünf Kennzahlen: Erwähnungsrate, Zitatposition, Link-Genauigkeit, Faktentreue, Wettbewerbsanteil."
+    },
+    {
+      "@type": "Article",
+      "slug": "apple-business-connect-local-seo-2026",
+      "headline": "Apple Business Connect: Local SEO für Apple Maps & Siri 2026",
+      "description": "Ein Drittel der DACH-Smartphone-Nutzer hat ein iPhone — und Apple Maps ist Standard. So richtest du Apple Business Connect ein und optimierst für Siri, Spotlight und Apple Intelligence.",
+      "url": "https://localdominate.org/blog/apple-business-connect-local-seo-2026",
+      "canonical": "https://localdominate.org/blog/apple-business-connect-local-seo-2026",
+      "markdown_url": "https://localdominate.org/blog-md/apple-business-connect-local-seo-2026.md",
+      "citation": "Local Dominator (2026-05-22). Apple Business Connect: Local SEO für Apple Maps & Siri 2026. https://localdominate.org/blog/apple-business-connect-local-seo-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 12,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "apple business connect",
+        "apple maps seo",
+        "siri local seo",
+        "apple intelligence local seo",
+        "apple maps ranking",
+        "businessconnect apple",
+        "ios local seo dach"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Apple Business Connect",
+        "Apple Business Connect Local Dominator",
+        "Apple Business Connect DACH"
+      ],
+      "tldr": "Ein Drittel der DACH-Smartphone-Nutzer hat ein iPhone — und Apple Maps ist Standard. So richtest du Apple Business Connect ein und optimierst für Siri, Spotlight und Apple Intelligence."
+    },
+    {
+      "@type": "Article",
       "slug": "bewertungen-reputation-hub",
       "headline": "Bewertungen & Reputation Hub – Alle Guides",
       "description": "Alle Guides zu Google Bewertungen: Generierung, Antwort-Vorlagen, negative Bewertungen, Review-Schema und Ranking-Impact.",
@@ -364,6 +599,102 @@
         "Bewertungs-Antworten DACH"
       ],
       "tldr": "50 Vorlagen für professionelle Antworten auf Google Bewertungen. Positive, negative und neutrale Rezensionen richtig beantworten."
+    },
+    {
+      "@type": "Article",
+      "slug": "bing-copilot-local-seo-2026",
+      "headline": "Bing & Microsoft Copilot 2026: Local SEO für ChatGPT, Edge & Windows",
+      "description": "Warum Bing 2026 wieder zur kritischen Suchquelle wird — und wie du Bing Places, Schema und robots.txt für Microsoft Copilot, ChatGPT Search und Edge optimierst.",
+      "url": "https://localdominate.org/blog/bing-copilot-local-seo-2026",
+      "canonical": "https://localdominate.org/blog/bing-copilot-local-seo-2026",
+      "markdown_url": "https://localdominate.org/blog-md/bing-copilot-local-seo-2026.md",
+      "citation": "Local Dominator (2026-05-22). Bing & Microsoft Copilot 2026: Local SEO für ChatGPT, Edge & Windows. https://localdominate.org/blog/bing-copilot-local-seo-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 12,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "bing local seo",
+        "microsoft copilot seo",
+        "bing places",
+        "edge copilot local",
+        "bingbot robots txt",
+        "microsoft 365 copilot suche",
+        "bing webmaster tools dach"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Bing & Microsoft Copilot 2026",
+        "Bing & Microsoft Copilot 2026 Local Dominator",
+        "Bing & Microsoft Copilot 2026 DACH"
+      ],
+      "tldr": "Warum Bing 2026 wieder zur kritischen Suchquelle wird — und wie du Bing Places, Schema und robots.txt für Microsoft Copilot, ChatGPT Search und Edge optimierst."
+    },
+    {
+      "@type": "Article",
+      "slug": "chatgpt-search-lokale-unternehmen-2026",
+      "headline": "ChatGPT Search für lokale Unternehmen 2026 — der komplette Optimierungs-Guide",
+      "description": "ChatGPT Search empfiehlt täglich Millionen lokaler Unternehmen. Hier ist der 7-Schritte-Plan, mit dem du in den Antworten landest — von robots.txt über Bing Places bis Schema und AnswerBlocks.",
+      "url": "https://localdominate.org/blog/chatgpt-search-lokale-unternehmen-2026",
+      "canonical": "https://localdominate.org/blog/chatgpt-search-lokale-unternehmen-2026",
+      "markdown_url": "https://localdominate.org/blog-md/chatgpt-search-lokale-unternehmen-2026.md",
+      "citation": "Local Dominator (2026-05-22). ChatGPT Search für lokale Unternehmen 2026 — der komplette Optimierungs-Guide. https://localdominate.org/blog/chatgpt-search-lokale-unternehmen-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 11,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "chatgpt search",
+        "chatgpt search local seo",
+        "chatgpt search lokale unternehmen",
+        "openai search optimierung",
+        "oai-searchbot",
+        "bing places chatgpt",
+        "ai visibility chatgpt"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "ChatGPT Search für lokale Unternehmen 2026",
+        "ChatGPT Search für lokale Unternehmen 2026 Local Dominator",
+        "ChatGPT Search für lokale Unternehmen 2026 DACH"
+      ],
+      "tldr": "ChatGPT Search empfiehlt täglich Millionen lokaler Unternehmen. Hier ist der 7-Schritte-Plan, mit dem du in den Antworten landest — von robots.txt über Bing Places bis Schema und AnswerBlocks."
     },
     {
       "@type": "Article",
@@ -1327,6 +1658,100 @@
     },
     {
       "@type": "Article",
+      "slug": "geo-content-briefing-vorlage-2026",
+      "headline": "GEO-Content-Briefing 2026: Vorlage für zitierfähige Texte in AI-Suche",
+      "description": "Ein GEO-Briefing optimiert auf Zitierbarkeit statt nur auf Rankings: eine echte Nutzerfrage pro H2, darunter ein Antwortblock mit 40–60 Wörtern, ausgeschriebene Entitäten, belegte Zahlen mit Datum und Quelle sowie ein Pillar-Link plus zwei Sibling-Links.",
+      "url": "https://localdominate.org/blog/geo-content-briefing-vorlage-2026",
+      "canonical": "https://localdominate.org/blog/geo-content-briefing-vorlage-2026",
+      "markdown_url": "https://localdominate.org/blog-md/geo-content-briefing-vorlage-2026.md",
+      "citation": "Local Dominator (2026-08-08). GEO-Content-Briefing 2026: Vorlage für zitierfähige Texte in AI-Suche. https://localdominate.org/blog/geo-content-briefing-vorlage-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 10,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "geo content briefing",
+        "content briefing vorlage",
+        "ai suche content",
+        "zitierfähige texte",
+        "answer block seo"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "GEO-Content-Briefing 2026",
+        "GEO-Content-Briefing 2026 Local Dominator",
+        "GEO-Content-Briefing 2026 DACH"
+      ],
+      "tldr": "Ein GEO-Briefing optimiert auf Zitierbarkeit statt nur auf Rankings: eine echte Nutzerfrage pro H2, darunter ein Antwortblock mit 40–60 Wörtern, ausgeschriebene Entitäten, belegte Zahlen mit Datum und Quelle sowie ein Pillar-Link plus zwei Sibling-Links."
+    },
+    {
+      "@type": "Article",
+      "slug": "google-ai-mode-local-seo-2026",
+      "headline": "Google AI Mode 2026: Local SEO für Geminis konversationale Suche",
+      "description": "Warum klassisches Top-3-Ranking nicht mehr reicht — und wie du dein Unternehmen für Googles Gemini-gestützten AI Mode aufstellst. Inklusive Vergleichstabelle, Ranking-Signalen und 7-Schritte-Plan.",
+      "url": "https://localdominate.org/blog/google-ai-mode-local-seo-2026",
+      "canonical": "https://localdominate.org/blog/google-ai-mode-local-seo-2026",
+      "markdown_url": "https://localdominate.org/blog-md/google-ai-mode-local-seo-2026.md",
+      "citation": "Local Dominator (2026-05-22). Google AI Mode 2026: Local SEO für Geminis konversationale Suche. https://localdominate.org/blog/google-ai-mode-local-seo-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 13,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "google ai mode",
+        "ai mode local seo",
+        "gemini local seo",
+        "query fan-out",
+        "google ai mode dach",
+        "ai mode optimierung",
+        "google gemini suche local"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Google AI Mode 2026",
+        "Google AI Mode 2026 Local Dominator",
+        "Google AI Mode 2026 DACH"
+      ],
+      "tldr": "Warum klassisches Top-3-Ranking nicht mehr reicht — und wie du dein Unternehmen für Googles Gemini-gestützten AI Mode aufstellst. Inklusive Vergleichstabelle, Ranking-Signalen und 7-Schritte-Plan."
+    },
+    {
+      "@type": "Article",
       "slug": "google-ai-overviews-local-seo",
       "headline": "Google AI Overviews & Local SEO: Was sich ändert",
       "description": "Wie Google AI Overviews die lokale Suche verändern. Strategien für Unternehmen, um in der neuen AI-Ära sichtbar zu bleiben.",
@@ -2246,6 +2671,54 @@
     },
     {
       "@type": "Article",
+      "slug": "llms-txt-lokale-unternehmen-2026",
+      "headline": "llms.txt für lokale Unternehmen 2026: Setup, Beispiel & Best Practices",
+      "description": "Wie du mit einer 40–80-zeiligen llms.txt im Site-Root die Zitatrate in ChatGPT, Perplexity und Claude messbar steigerst — inkl. vollständigem Beispiel und 7-Schritte-Setup.",
+      "url": "https://localdominate.org/blog/llms-txt-lokale-unternehmen-2026",
+      "canonical": "https://localdominate.org/blog/llms-txt-lokale-unternehmen-2026",
+      "markdown_url": "https://localdominate.org/blog-md/llms-txt-lokale-unternehmen-2026.md",
+      "citation": "Local Dominator (2026-05-22). llms.txt für lokale Unternehmen 2026: Setup, Beispiel & Best Practices. https://localdominate.org/blog/llms-txt-lokale-unternehmen-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 11,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "llms.txt",
+        "llms txt local seo",
+        "llms.txt beispiel",
+        "chatgpt zitate seo",
+        "perplexity crawler optimierung",
+        "claudebot llms.txt",
+        "ai crawler steuerung"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "llms.txt für lokale Unternehmen 2026",
+        "llms.txt für lokale Unternehmen 2026 Local Dominator",
+        "llms.txt für lokale Unternehmen 2026 DACH"
+      ],
+      "tldr": "Wie du mit einer 40–80-zeiligen llms.txt im Site-Root die Zitatrate in ChatGPT, Perplexity und Claude messbar steigerst — inkl. vollständigem Beispiel und 7-Schritte-Setup."
+    },
+    {
+      "@type": "Article",
       "slug": "local-citations-2025",
       "headline": "Top-Verzeichnisse DACH 2026: Branchenspezifische Citation-Quellen nach Relevanz sortiert",
       "description": "Welche Branchenbücher sind 2026 noch relevant? Nach Branche sortierte Verzeichnisliste mit Relevanz-Score und DA-Werten für DACH.",
@@ -2719,6 +3192,52 @@
     },
     {
       "@type": "Article",
+      "slug": "local-seo-baeckerei-konditorei",
+      "headline": "Local SEO für Konditoreien & Tortenbetriebe: Spezialitäten vermarkten",
+      "description": "Tortenbestellungen entstehen Wochen bis Monate vor dem Termin und werden online entschieden. Jeder Anlass braucht eine eigene Seite mit Preisspanne, Vorlaufzeit und eigenen Fotos. Hochzeitstorten sind das umsatzstärkste Segment, saisonale Seiten müssen acht Wochen vor der Nachfragespitze online sein.",
+      "url": "https://localdominate.org/blog/local-seo-baeckerei-konditorei",
+      "canonical": "https://localdominate.org/blog/local-seo-baeckerei-konditorei",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-baeckerei-konditorei.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Konditoreien & Tortenbetriebe: Spezialitäten vermarkten. https://localdominate.org/blog/local-seo-baeckerei-konditorei",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-03-22",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 11,
+      "category": "Branchen",
+      "keywords": [
+        "konditorei seo",
+        "tortenbetrieb marketing",
+        "hochzeitstorte keywords",
+        "motivtorte bestellen",
+        "local seo konditorei"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Konditoreien & Tortenbetriebe",
+        "Local SEO für Konditoreien & Tortenbetriebe Local Dominator",
+        "Local SEO für Konditoreien & Tortenbetriebe DACH"
+      ],
+      "tldr": "Tortenbestellungen entstehen Wochen bis Monate vor dem Termin und werden online entschieden. Jeder Anlass braucht eine eigene Seite mit Preisspanne, Vorlaufzeit und eigenen Fotos. Hochzeitstorten sind das umsatzstärkste Segment, saisonale Seiten müssen acht Wochen vor der Nachfragespitze online sein."
+    },
+    {
+      "@type": "Article",
       "slug": "local-seo-baeckerei",
       "headline": "Local SEO für Bäckereien: Mehr Kunden durch Google (2026)",
       "description": "Wie Bäckereien durch Local SEO mehr Kunden gewinnen. Öffnungszeiten, Food-Fotos, Sonntagsbrötchen-Keywords und saisonales Marketing.",
@@ -2788,9 +3307,14 @@
       ],
       "geoTargets": [
         {
-          "name": "Basel",
-          "country": "CH",
-          "sameAs": "https://www.wikidata.org/wiki/Q78"
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
         },
         {
           "name": "Schweiz",
@@ -2830,9 +3354,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Berlin",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q64"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -2888,6 +3422,52 @@
         "Local SEO Branchen-Guides – 22+ Branchen im Überblick DACH"
       ],
       "tldr": "Branchenspezifische Local SEO Anleitungen für Gastronomie, Gesundheit, Handwerk, Dienstleistungen und Lifestyle."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-cafe-coffeeshop",
+      "headline": "Local SEO für Cafés & Coffee Shops",
+      "description": "Cafés werden mobil und spontan gewählt. Entscheidend sind tagesgenaue Öffnungszeiten, eigene Seiten für Anlässe wie Frühstück, Brunch und Kuchen, explizite Attribute wie WLAN, vegan oder hundefreundlich sowie monatlich neue Fotos. Bewertungen sollten gleichmäßig statt in Wellen entstehen.",
+      "url": "https://localdominate.org/blog/local-seo-cafe-coffeeshop",
+      "canonical": "https://localdominate.org/blog/local-seo-cafe-coffeeshop",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-cafe-coffeeshop.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Cafés & Coffee Shops. https://localdominate.org/blog/local-seo-cafe-coffeeshop",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 12,
+      "category": "Branchen",
+      "keywords": [
+        "cafe seo",
+        "coffeeshop marketing",
+        "local seo cafe",
+        "cafe mit wlan",
+        "frühstück in der nähe"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Cafés & Coffee Shops",
+        "Local SEO für Cafés & Coffee Shops Local Dominator",
+        "Local SEO für Cafés & Coffee Shops DACH"
+      ],
+      "tldr": "Cafés werden mobil und spontan gewählt. Entscheidend sind tagesgenaue Öffnungszeiten, eigene Seiten für Anlässe wie Frühstück, Brunch und Kuchen, explizite Attribute wie WLAN, vegan oder hundefreundlich sowie monatlich neue Fotos. Bewertungen sollten gleichmäßig statt in Wellen entstehen."
     },
     {
       "@type": "Article",
@@ -3057,9 +3637,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Düsseldorf",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q1718"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -3119,6 +3709,52 @@
         "Local SEO Elektrotechnik DACH"
       ],
       "tldr": "Local SEO speziell für Elektriker und Elektrotechnik-Betriebe. Notdienst-SEO, Projektbilder und lokale Sichtbarkeit."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-fahrschule",
+      "headline": "Local SEO für Fahrschulen: Mehr Fahrschüler gewinnen",
+      "description": "Fahrschüler suchen mobil, abends und im engen Radius. Jede angebotene Führerscheinklasse braucht eine eigene Seite, Preise gehören offen ausgewiesen inklusive Beispielrechnung, und Bewertungen werden direkt nach bestandener Prüfung erfragt. Eltern sind Mitentscheider und brauchen eigene Antworten.",
+      "url": "https://localdominate.org/blog/local-seo-fahrschule",
+      "canonical": "https://localdominate.org/blog/local-seo-fahrschule",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-fahrschule.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Fahrschulen: Mehr Fahrschüler gewinnen. https://localdominate.org/blog/local-seo-fahrschule",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-02-20",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 11,
+      "category": "Branchen",
+      "keywords": [
+        "fahrschule seo",
+        "fahrschüler gewinnen",
+        "fahrschule marketing",
+        "führerschein klasse b seite",
+        "local seo fahrschule"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Fahrschulen",
+        "Local SEO für Fahrschulen Local Dominator",
+        "Local SEO für Fahrschulen DACH"
+      ],
+      "tldr": "Fahrschüler suchen mobil, abends und im engen Radius. Jede angebotene Führerscheinklasse braucht eine eigene Seite, Preise gehören offen ausgewiesen inklusive Beispielrechnung, und Bewertungen werden direkt nach bestandener Prüfung erfragt. Eltern sind Mitentscheider und brauchen eigene Antworten."
     },
     {
       "@type": "Article",
@@ -3284,9 +3920,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Frankfurt am Main",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q1794"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -3397,6 +4043,98 @@
     },
     {
       "@type": "Article",
+      "slug": "local-seo-garten-landschaftsbau",
+      "headline": "Local SEO für Garten- & Landschaftsbau: Saison richtig nutzen",
+      "description": "Im GaLaBau werden die Aufträge des Sommers im Winter entschieden. Sichtbarkeit muss drei bis fünf Monate vor der Hauptsaison stehen. Pflegeverträge und Gestaltungsprojekte sind getrennte Angebote mit unterschiedlicher Entscheidungsdauer. Vorher-Nachher-Referenzen sind das stärkste Verkaufsargument der Branche.",
+      "url": "https://localdominate.org/blog/local-seo-garten-landschaftsbau",
+      "canonical": "https://localdominate.org/blog/local-seo-garten-landschaftsbau",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-garten-landschaftsbau.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Garten- & Landschaftsbau: Saison richtig nutzen. https://localdominate.org/blog/local-seo-garten-landschaftsbau",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 11,
+      "category": "Branchen",
+      "keywords": [
+        "local seo garten landschaftsbau",
+        "galabau kunden gewinnen",
+        "gartenpflege anfragen",
+        "gartengestaltung marketing",
+        "landschaftsgärtner google ranking"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Garten- & Landschaftsbau",
+        "Local SEO für Garten- & Landschaftsbau Local Dominator",
+        "Local SEO für Garten- & Landschaftsbau DACH"
+      ],
+      "tldr": "Im GaLaBau werden die Aufträge des Sommers im Winter entschieden. Sichtbarkeit muss drei bis fünf Monate vor der Hauptsaison stehen. Pflegeverträge und Gestaltungsprojekte sind getrennte Angebote mit unterschiedlicher Entscheidungsdauer. Vorher-Nachher-Referenzen sind das stärkste Verkaufsargument der Branche."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-gebaeudereinigung",
+      "headline": "Local SEO für Gebäudereinigung: Objektanfragen statt Klicks",
+      "description": "Gebäudereinigung ist ein Vertragsgeschäft mit mehreren Entscheidern und wochenlanger Prüfung. Sichtbarkeit muss qualifizierte Objektanfragen mit Fläche, Turnus und Standort erzeugen, nicht möglichst viele Klicks. Jede Reinigungsart bekommt eine eigene Leistungsseite.",
+      "url": "https://localdominate.org/blog/local-seo-gebaeudereinigung",
+      "canonical": "https://localdominate.org/blog/local-seo-gebaeudereinigung",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-gebaeudereinigung.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Gebäudereinigung: Objektanfragen statt Klicks. https://localdominate.org/blog/local-seo-gebaeudereinigung",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 11,
+      "category": "Branchen",
+      "keywords": [
+        "local seo gebäudereinigung",
+        "reinigungsfirma kunden gewinnen",
+        "büroreinigung anfragen",
+        "b2b local seo",
+        "unterhaltsreinigung marketing"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Gebäudereinigung",
+        "Local SEO für Gebäudereinigung Local Dominator",
+        "Local SEO für Gebäudereinigung DACH"
+      ],
+      "tldr": "Gebäudereinigung ist ein Vertragsgeschäft mit mehreren Entscheidern und wochenlanger Prüfung. Sichtbarkeit muss qualifizierte Objektanfragen mit Fläche, Turnus und Standort erzeugen, nicht möglichst viele Klicks. Jede Reinigungsart bekommt eine eigene Leistungsseite."
+    },
+    {
+      "@type": "Article",
       "slug": "local-seo-hamburg",
       "headline": "Local SEO Hamburg: Der Hanseatische Marketing-Guide",
       "description": "Local SEO speziell für Hamburg. Stadtteil-Keywords von Altona bis Winterhude, Hamburger Verzeichnisse und Strategien für die Elbmetropole.",
@@ -3417,9 +4155,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Hamburg",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q1055"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -3501,9 +4249,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Hannover",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q1715"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -3514,6 +4272,98 @@
         "Local SEO Hannover Hannover"
       ],
       "tldr": "Local SEO speziell für Hannover und Region. Stadtteile, Messe-SEO, lokale Verzeichnisse und Strategien für die Landeshauptstadt."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-heizung-sanitaer",
+      "headline": "Local SEO für Heizung & Sanitär (SHK): Notdienst und Projekte",
+      "description": "SHK-Betriebe bedienen zwei getrennte Suchanlässe: Notfälle (Rohrbruch, Heizungsausfall) mit Entscheidung in Minuten und Projekte (Badsanierung, Wärmepumpe) mit Entscheidung über Wochen. Beide brauchen eigene Seiten, eigene Keywords und eine passende Hauptkategorie.",
+      "url": "https://localdominate.org/blog/local-seo-heizung-sanitaer",
+      "canonical": "https://localdominate.org/blog/local-seo-heizung-sanitaer",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-heizung-sanitaer.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Heizung & Sanitär (SHK): Notdienst und Projekte. https://localdominate.org/blog/local-seo-heizung-sanitaer",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 11,
+      "category": "Branchen",
+      "keywords": [
+        "local seo heizung sanitär",
+        "shk betrieb marketing",
+        "klempner google ranking",
+        "notdienst seite handwerk",
+        "wärmepumpe anfragen gewinnen"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Heizung & Sanitär (SHK)",
+        "Local SEO für Heizung & Sanitär (SHK) Local Dominator",
+        "Local SEO für Heizung & Sanitär (SHK) DACH"
+      ],
+      "tldr": "SHK-Betriebe bedienen zwei getrennte Suchanlässe: Notfälle (Rohrbruch, Heizungsausfall) mit Entscheidung in Minuten und Projekte (Badsanierung, Wärmepumpe) mit Entscheidung über Wochen. Beide brauchen eigene Seiten, eigene Keywords und eine passende Hauptkategorie."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-hochzeitsdienstleister",
+      "headline": "Local SEO für Hochzeitsdienstleister: Florist bis DJ",
+      "description": "Hochzeitsdienstleister werden sechs bis achtzehn Monate vor dem Termin ausgewählt. Nötig sind eine Seite je Gewerk und Leistungsumfang, Location-Seiten für die wichtigsten Orte im Einzugsgebiet, offene Startpreise und Bewertungen, die ein bis zwei Wochen nach der Hochzeit erfragt werden.",
+      "url": "https://localdominate.org/blog/local-seo-hochzeitsdienstleister",
+      "canonical": "https://localdominate.org/blog/local-seo-hochzeitsdienstleister",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-hochzeitsdienstleister.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Hochzeitsdienstleister: Florist bis DJ. https://localdominate.org/blog/local-seo-hochzeitsdienstleister",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-02-26",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 15,
+      "category": "Branchen",
+      "keywords": [
+        "hochzeitsdienstleister seo",
+        "hochzeitsfotograf marketing",
+        "hochzeits dj sichtbarkeit",
+        "location seite hochzeit",
+        "local seo hochzeit"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Hochzeitsdienstleister",
+        "Local SEO für Hochzeitsdienstleister Local Dominator",
+        "Local SEO für Hochzeitsdienstleister DACH"
+      ],
+      "tldr": "Hochzeitsdienstleister werden sechs bis achtzehn Monate vor dem Termin ausgewählt. Nötig sind eine Seite je Gewerk und Leistungsumfang, Location-Seiten für die wichtigsten Orte im Einzugsgebiet, offene Startpreise und Bewertungen, die ein bis zwei Wochen nach der Hochzeit erfragt werden."
     },
     {
       "@type": "Article",
@@ -3678,9 +4528,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Köln",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q365"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -3691,6 +4551,52 @@
         "Local SEO Köln Köln"
       ],
       "tldr": "Local SEO speziell für Köln und das Rheinland. Kölsche Keywords, Veedel-Strategien und lokale Sichtbarkeit am Dom."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-maler-lackierer",
+      "headline": "Local SEO für Maler & Lackierer: Mehr Aufträge gewinnen",
+      "description": "Malerarbeiten werden visuell gekauft. Privat-, Gewerbe- und Sanierungsaufträge brauchen getrennte Seiten, jede Leistung eine eigene Seite mit Ablauf, Material, Dauer und Preisrahmen. Vorher-Nachher-Bildpaare mit Fläche und Objekttyp sind das stärkste Vertrauenselement. Ziel jeder Seite ist der Aufmaßtermin.",
+      "url": "https://localdominate.org/blog/local-seo-maler-lackierer",
+      "canonical": "https://localdominate.org/blog/local-seo-maler-lackierer",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-maler-lackierer.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Maler & Lackierer: Mehr Aufträge gewinnen. https://localdominate.org/blog/local-seo-maler-lackierer",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-02-22",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 14,
+      "category": "Branchen",
+      "keywords": [
+        "maler seo",
+        "lackierer marketing",
+        "malerbetrieb kunden gewinnen",
+        "fassadenanstrich anfragen",
+        "local seo handwerk"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Maler & Lackierer",
+        "Local SEO für Maler & Lackierer Local Dominator",
+        "Local SEO für Maler & Lackierer DACH"
+      ],
+      "tldr": "Malerarbeiten werden visuell gekauft. Privat-, Gewerbe- und Sanierungsaufträge brauchen getrennte Seiten, jede Leistung eine eigene Seite mit Ablauf, Material, Dauer und Preisrahmen. Vorher-Nachher-Bildpaare mit Fläche und Objekttyp sind das stärkste Vertrauenselement. Ziel jeder Seite ist der Aufmaßtermin."
     },
     {
       "@type": "Article",
@@ -3807,9 +4713,19 @@
       ],
       "geoTargets": [
         {
-          "name": "München",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q1726"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -4129,6 +5045,16 @@
       ],
       "geoTargets": [
         {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
           "name": "Schweiz",
           "country": "CH",
           "sameAs": "https://www.wikidata.org/wiki/Q39"
@@ -4142,6 +5068,52 @@
         "Local SEO Schweiz Schweiz"
       ],
       "tldr": "Der nationale Local SEO Guide für Schweizer Unternehmen. Mehrsprachigkeit, Schweizer Verzeichnisse und Google Business für alle Kantone."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-sprachschule",
+      "headline": "Local SEO für Sprachschulen & Nachhilfe-Institute",
+      "description": "Sprachschulen gewinnen lokal, wenn jede Sprache und jedes Niveau eine eigene Kursseite hat, Prüfungsformate wie telc, Goethe oder IELTS benannt werden, Firmenschulungen eine eigene Anfrageseite bekommen und Kurstermine zwei bis drei Monate vor Start online stehen.",
+      "url": "https://localdominate.org/blog/local-seo-sprachschule",
+      "canonical": "https://localdominate.org/blog/local-seo-sprachschule",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-sprachschule.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Sprachschulen & Nachhilfe-Institute. https://localdominate.org/blog/local-seo-sprachschule",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-03-16",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 12,
+      "category": "Branchen",
+      "keywords": [
+        "sprachschule seo",
+        "nachhilfe marketing",
+        "local seo sprachschule",
+        "telc kurs seite",
+        "firmenschulung sprachkurs"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Sprachschulen & Nachhilfe-Institute",
+        "Local SEO für Sprachschulen & Nachhilfe-Institute Local Dominator",
+        "Local SEO für Sprachschulen & Nachhilfe-Institute DACH"
+      ],
+      "tldr": "Sprachschulen gewinnen lokal, wenn jede Sprache und jedes Niveau eine eigene Kursseite hat, Prüfungsformate wie telc, Goethe oder IELTS benannt werden, Firmenschulungen eine eigene Anfrageseite bekommen und Kurstermine zwei bis drei Monate vor Start online stehen."
     },
     {
       "@type": "Article",
@@ -4166,19 +5138,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Berlin",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q64"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
         },
         {
-          "name": "München",
-          "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q1726"
-        },
-        {
-          "name": "Wien",
+          "name": "Österreich",
           "country": "AT",
-          "sameAs": "https://www.wikidata.org/wiki/Q1741"
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -4406,9 +5378,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Stuttgart",
+          "name": "Deutschland",
           "country": "DE",
-          "sameAs": "https://www.wikidata.org/wiki/Q1022"
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -4515,6 +5497,97 @@
         "Local SEO Tierarzt DACH"
       ],
       "tldr": "Wie Tierarztpraxen durch Local SEO mehr Patienten gewinnen. Notfall-Keywords, Tier-Portale und emotionales Content-Marketing."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-tracking-kpis",
+      "headline": "Local SEO Tracking: KPIs und Reporting richtig aufsetzen",
+      "description": "Sechs Kennzahlen genügen: Anfragen, Anrufe, Routenanfragen, lokale Sichtbarkeit im Einzugsgebiet, Klicks auf Standortseiten und Bewertungsentwicklung. Profil-Statistik und Website-Analytics zählen Unterschiedliches und dürfen nie addiert werden. Ausgewertet wird monatlich gegen den Vorjahresmonat.",
+      "url": "https://localdominate.org/blog/local-seo-tracking-kpis",
+      "canonical": "https://localdominate.org/blog/local-seo-tracking-kpis",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-tracking-kpis.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO Tracking: KPIs und Reporting richtig aufsetzen. https://localdominate.org/blog/local-seo-tracking-kpis",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-03-30",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 16,
+      "category": "Technik",
+      "keywords": [
+        "local seo kpis",
+        "seo tracking",
+        "local seo reporting",
+        "google analytics lokal"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO Tracking",
+        "Local SEO Tracking Local Dominator",
+        "Local SEO Tracking DACH"
+      ],
+      "tldr": "Sechs Kennzahlen genügen: Anfragen, Anrufe, Routenanfragen, lokale Sichtbarkeit im Einzugsgebiet, Klicks auf Standortseiten und Bewertungsentwicklung. Profil-Statistik und Website-Analytics zählen Unterschiedliches und dürfen nie addiert werden. Ausgewertet wird monatlich gegen den Vorjahresmonat."
+    },
+    {
+      "@type": "Article",
+      "slug": "local-seo-umzugsunternehmen",
+      "headline": "Local SEO für Umzugsunternehmen: In zwei Städten gefunden werden",
+      "description": "Umzugskunden suchen an zwei Orten gleichzeitig — am Wohnort und am Zielort. Das Standortprofil wirkt nur am Betriebsstandort, die zweite Region wird über Zielregions- und Routenseiten abgedeckt. Preisspannen mit offenen Zuschlagsgründen senken unpassende Anfragen, Bewertungen werden ein bis zwei Tage nach dem Umzug erfragt.",
+      "url": "https://localdominate.org/blog/local-seo-umzugsunternehmen",
+      "canonical": "https://localdominate.org/blog/local-seo-umzugsunternehmen",
+      "markdown_url": "https://localdominate.org/blog-md/local-seo-umzugsunternehmen.md",
+      "citation": "Local Dominator (2026-08-08). Local SEO für Umzugsunternehmen: In zwei Städten gefunden werden. https://localdominate.org/blog/local-seo-umzugsunternehmen",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 11,
+      "category": "Branchen",
+      "keywords": [
+        "local seo umzugsunternehmen",
+        "umzugsfirma kunden gewinnen",
+        "umzugsanfragen generieren",
+        "fernumzug marketing",
+        "umzug google ranking"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Local SEO für Umzugsunternehmen",
+        "Local SEO für Umzugsunternehmen Local Dominator",
+        "Local SEO für Umzugsunternehmen DACH"
+      ],
+      "tldr": "Umzugskunden suchen an zwei Orten gleichzeitig — am Wohnort und am Zielort. Das Standortprofil wirkt nur am Betriebsstandort, die zweite Region wird über Zielregions- und Routenseiten abgedeckt. Preisspannen mit offenen Zuschlagsgründen senken unpassende Anfragen, Bewertungen werden ein bis zwei Tage nach dem Umzug erfragt."
     },
     {
       "@type": "Article",
@@ -4674,9 +5747,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Wien",
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
           "country": "AT",
-          "sameAs": "https://www.wikidata.org/wiki/Q1741"
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -4808,9 +5891,19 @@
       ],
       "geoTargets": [
         {
-          "name": "Zürich",
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
           "country": "CH",
-          "sameAs": "https://www.wikidata.org/wiki/Q72"
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
         }
       ],
       "industries": [],
@@ -4914,6 +6007,51 @@
         "Lokale Events für SEO nutzen DACH"
       ],
       "tldr": "Wie du lokale Events und Sponsoring für bessere Local SEO nutzt. Backlinks, Markenbekanntheit und lokale Autorität aufbauen."
+    },
+    {
+      "@type": "Article",
+      "slug": "lokale-landing-pages",
+      "headline": "Lokale Landing Pages erstellen: One-Page pro Standort",
+      "description": "Eine lokale Landing Page lohnt sich nur bei echter Präsenz oder echtem Einsatzgebiet am Ort. Pflicht sind Adresse oder Gebiet, Ansprechpartner, mindestens zwei Referenzen von dort, Anfahrt, ein Formular mit Ortskennzeichnung und LocalBusiness-Schema. Reiner Ortstausch in Vorlagentexten erzeugt Duplikate statt Rankings.",
+      "url": "https://localdominate.org/blog/lokale-landing-pages",
+      "canonical": "https://localdominate.org/blog/lokale-landing-pages",
+      "markdown_url": "https://localdominate.org/blog-md/lokale-landing-pages.md",
+      "citation": "Local Dominator (2026-08-08). Lokale Landing Pages erstellen: One-Page pro Standort. https://localdominate.org/blog/lokale-landing-pages",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-02-10",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 16,
+      "category": "Technik",
+      "keywords": [
+        "lokale landing pages",
+        "standort seiten",
+        "geo landing pages",
+        "multi location seo"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Lokale Landing Pages erstellen",
+        "Lokale Landing Pages erstellen Local Dominator",
+        "Lokale Landing Pages erstellen DACH"
+      ],
+      "tldr": "Eine lokale Landing Page lohnt sich nur bei echter Präsenz oder echtem Einsatzgebiet am Ort. Pflicht sind Adresse oder Gebiet, Ansprechpartner, mindestens zwei Referenzen von dort, Anfahrt, ein Formular mit Ortskennzeichnung und LocalBusiness-Schema. Reiner Ortstausch in Vorlagentexten erzeugt Duplikate statt Rankings."
     },
     {
       "@type": "Article",
@@ -5236,6 +6374,54 @@
     },
     {
       "@type": "Article",
+      "slug": "reddit-local-seo-ai-zitate-2026",
+      "headline": "Reddit für Local SEO 2026: Wie du in ChatGPT- & Perplexity-Antworten zitiert wirst",
+      "description": "Warum Reddit-Threads in ChatGPT-Antworten landen — und wie lokale Unternehmen in DACH transparent und UWG-konform Sichtbarkeit aufbauen. Mit 5-Schritte-Strategie.",
+      "url": "https://localdominate.org/blog/reddit-local-seo-ai-zitate-2026",
+      "canonical": "https://localdominate.org/blog/reddit-local-seo-ai-zitate-2026",
+      "markdown_url": "https://localdominate.org/blog-md/reddit-local-seo-ai-zitate-2026.md",
+      "citation": "Local Dominator (2026-05-22). Reddit für Local SEO 2026: Wie du in ChatGPT- & Perplexity-Antworten zitiert wirst. https://localdominate.org/blog/reddit-local-seo-ai-zitate-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 12,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "reddit local seo",
+        "reddit ai zitate",
+        "reddit chatgpt zitiert",
+        "reddit perplexity",
+        "subreddit dach",
+        "geo reddit",
+        "ai visibility reddit"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Reddit für Local SEO 2026",
+        "Reddit für Local SEO 2026 Local Dominator",
+        "Reddit für Local SEO 2026 DACH"
+      ],
+      "tldr": "Warum Reddit-Threads in ChatGPT-Antworten landen — und wie lokale Unternehmen in DACH transparent und UWG-konform Sichtbarkeit aufbauen. Mit 5-Schritte-Strategie."
+    },
+    {
+      "@type": "Article",
       "slug": "review-schema-implementierung",
       "headline": "Review Schema implementieren: Bewertungssterne in Google bekommen",
       "description": "Review & AggregateRating Schema richtig implementieren: JSON-LD Code-Beispiele, Google-Richtlinien und Branchenbeispiele. Sterne in den SERPs!",
@@ -5493,6 +6679,16 @@
       ],
       "geoTargets": [
         {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
           "name": "Schweiz",
           "country": "CH",
           "sameAs": "https://www.wikidata.org/wiki/Q39"
@@ -5610,6 +6806,54 @@
     },
     {
       "@type": "Article",
+      "slug": "tiktok-search-local-seo-2026",
+      "headline": "TikTok Search für Local SEO 2026: So wirst du von Gen Z gefunden",
+      "description": "Warum TikTok zur Suchmaschine wurde — und wie du als lokales DACH-Unternehmen in TikTok Search systematisch sichtbar wirst. Mit Ranking-Signalen, Content-Formaten und 7-Schritte-Plan.",
+      "url": "https://localdominate.org/blog/tiktok-search-local-seo-2026",
+      "canonical": "https://localdominate.org/blog/tiktok-search-local-seo-2026",
+      "markdown_url": "https://localdominate.org/blog-md/tiktok-search-local-seo-2026.md",
+      "citation": "Local Dominator (2026-05-22). TikTok Search für Local SEO 2026: So wirst du von Gen Z gefunden. https://localdominate.org/blog/tiktok-search-local-seo-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 12,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "tiktok local seo",
+        "tiktok search",
+        "tiktok suchmaschine",
+        "gen z local search",
+        "tiktok ranking signale",
+        "tiktok hashtags lokal",
+        "tiktok dach marketing"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "TikTok Search für Local SEO 2026",
+        "TikTok Search für Local SEO 2026 Local Dominator",
+        "TikTok Search für Local SEO 2026 DACH"
+      ],
+      "tldr": "Warum TikTok zur Suchmaschine wurde — und wie du als lokales DACH-Unternehmen in TikTok Search systematisch sichtbar wirst. Mit Ranking-Signalen, Content-Formaten und 7-Schritte-Plan."
+    },
+    {
+      "@type": "Article",
       "slug": "ultimate-guide-local-seo",
       "headline": "Local SEO: Der ultimative Leitfaden für lokale Unternehmen 2026",
       "description": "Der umfassendste Local-SEO-Guide im DACH-Raum: Ranking-Faktoren, Google Business Profil, Bewertungen, NAP & Schema Markup. 10-Schritte-Strategie.",
@@ -5655,6 +6899,100 @@
         "Local SEO DACH"
       ],
       "tldr": "Der umfassendste Local-SEO-Guide im DACH-Raum: Ranking-Faktoren, Google Business Profil, Bewertungen, NAP & Schema Markup. 10-Schritte-Strategie."
+    },
+    {
+      "@type": "Article",
+      "slug": "unternehmensprofil-ki-funktionen-2026",
+      "headline": "Unternehmensprofil & KI 2026: Welche Felder in AI-Antworten landen",
+      "description": "KI-Zusammenfassungen greifen bevorzugt auf strukturierte Profilfelder zurück: Hauptkategorie, Leistungen, Attribute, Öffnungszeiten, Beschreibung und selbst eingestellte Fragen mit Antworten. Diese Felder sind eindeutig lesbar und werden häufiger zitiert als Fließtext auf der Webseite.",
+      "url": "https://localdominate.org/blog/unternehmensprofil-ki-funktionen-2026",
+      "canonical": "https://localdominate.org/blog/unternehmensprofil-ki-funktionen-2026",
+      "markdown_url": "https://localdominate.org/blog-md/unternehmensprofil-ki-funktionen-2026.md",
+      "citation": "Local Dominator (2026-08-08). Unternehmensprofil & KI 2026: Welche Felder in AI-Antworten landen. https://localdominate.org/blog/unternehmensprofil-ki-funktionen-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 10,
+      "category": "Google Business Profile",
+      "keywords": [
+        "google unternehmensprofil ki",
+        "gbp ai optimierung",
+        "profil kategorien leistungen",
+        "fragen und antworten profil",
+        "standortprofil pflege"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Unternehmensprofil & KI 2026",
+        "Unternehmensprofil & KI 2026 Local Dominator",
+        "Unternehmensprofil & KI 2026 DACH"
+      ],
+      "tldr": "KI-Zusammenfassungen greifen bevorzugt auf strukturierte Profilfelder zurück: Hauptkategorie, Leistungen, Attribute, Öffnungszeiten, Beschreibung und selbst eingestellte Fragen mit Antworten. Diese Felder sind eindeutig lesbar und werden häufiger zitiert als Fließtext auf der Webseite."
+    },
+    {
+      "@type": "Article",
+      "slug": "voice-search-sprachassistenten-local-seo-2026",
+      "headline": "Voice Search 2026: Local SEO für Alexa, Siri & Google Assistant",
+      "description": "Wie LLM-gestützte Sprachassistenten lokale Anfragen beantworten — und wie du systematisch in Voice-Empfehlungen landest. Mit Plattform-Vergleich, Ranking-Signalen und 7-Schritte-Plan.",
+      "url": "https://localdominate.org/blog/voice-search-sprachassistenten-local-seo-2026",
+      "canonical": "https://localdominate.org/blog/voice-search-sprachassistenten-local-seo-2026",
+      "markdown_url": "https://localdominate.org/blog-md/voice-search-sprachassistenten-local-seo-2026.md",
+      "citation": "Local Dominator (2026-05-22). Voice Search 2026: Local SEO für Alexa, Siri & Google Assistant. https://localdominate.org/blog/voice-search-sprachassistenten-local-seo-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-05-22",
+      "dateModified": "2026-05-22",
+      "readingTimeMinutes": 12,
+      "category": "AI & Zukunft",
+      "keywords": [
+        "voice search local seo",
+        "alexa local seo",
+        "siri local seo",
+        "google assistant local",
+        "sprachsuche dach",
+        "voice search optimierung",
+        "smart speaker seo"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "Voice Search 2026",
+        "Voice Search 2026 Local Dominator",
+        "Voice Search 2026 DACH"
+      ],
+      "tldr": "Wie LLM-gestützte Sprachassistenten lokale Anfragen beantworten — und wie du systematisch in Voice-Empfehlungen landest. Mit Plattform-Vergleich, Ranking-Signalen und 7-Schritte-Plan."
     },
     {
       "@type": "Article",
@@ -5750,6 +7088,52 @@
         "Website-Content für AI-Suchmaschinen strukturieren DACH"
       ],
       "tldr": "Lerne wie du deinen Website-Content für ChatGPT, Perplexity und Google AI Overviews optimierst. Semantisches HTML, Schema Markup, llms.txt und AI-Attribute."
+    },
+    {
+      "@type": "Article",
+      "slug": "whatsapp-business-local-seo-2026",
+      "headline": "WhatsApp Business für lokale Unternehmen 2026: Setup, NAP-Regeln & Recht",
+      "description": "WhatsApp ist kein Rankingfaktor, wirkt aber über Kontaktrate, Reaktionszeit und Bewertungen. Entscheidend sind identische NAP-Rufnummer, vollständiges Profil, wa.me-Links auf Kontakt-, Leistungs- und Standortseiten, Antwortzeiten unter 15 Minuten sowie ein Datenschutzhinweis am Chat-Einstieg.",
+      "url": "https://localdominate.org/blog/whatsapp-business-local-seo-2026",
+      "canonical": "https://localdominate.org/blog/whatsapp-business-local-seo-2026",
+      "markdown_url": "https://localdominate.org/blog-md/whatsapp-business-local-seo-2026.md",
+      "citation": "Local Dominator (2026-08-08). WhatsApp Business für lokale Unternehmen 2026: Setup, NAP-Regeln & Recht. https://localdominate.org/blog/whatsapp-business-local-seo-2026",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-08-08",
+      "dateModified": "2026-08-08",
+      "readingTimeMinutes": 10,
+      "category": "Local SEO Grundlagen",
+      "keywords": [
+        "whatsapp business local seo",
+        "wa.me link website",
+        "whatsapp unternehmensprofil",
+        "nap konsistenz messenger",
+        "whatsapp datenschutz unternehmen"
+      ],
+      "geoTargets": [
+        {
+          "name": "Deutschland",
+          "country": "DE",
+          "sameAs": "https://www.wikidata.org/wiki/Q183"
+        },
+        {
+          "name": "Österreich",
+          "country": "AT",
+          "sameAs": "https://www.wikidata.org/wiki/Q40"
+        },
+        {
+          "name": "Schweiz",
+          "country": "CH",
+          "sameAs": "https://www.wikidata.org/wiki/Q39"
+        }
+      ],
+      "industries": [],
+      "recommendedRetrievalQueries": [
+        "WhatsApp Business für lokale Unternehmen 2026",
+        "WhatsApp Business für lokale Unternehmen 2026 Local Dominator",
+        "WhatsApp Business für lokale Unternehmen 2026 DACH"
+      ],
+      "tldr": "WhatsApp ist kein Rankingfaktor, wirkt aber über Kontaktrate, Reaktionszeit und Bewertungen. Entscheidend sind identische NAP-Rufnummer, vollständiges Profil, wa.me-Links auf Kontakt-, Leistungs- und Standortseiten, Antwortzeiten unter 15 Minuten sowie ein Datenschutzhinweis am Chat-Einstieg."
     },
     {
       "@type": "Article",
