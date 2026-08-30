@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- AI/LLM Markdown sitemap: canonical plain-text article corpus for GPTBot, ClaudeBot, PerplexityBot and other non-JS crawlers. -->
   <url>
+    <loc>https://localdominate.org/blog-md/index.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/ai-agents-lokale-buchungen-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/ai-crawler-steuern-gptbot-claudebot-2026.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/ai-falschangaben-korrigieren-2026.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/ai-search-optimization-2026.md</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -32,6 +56,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog-md/ai-zitat-monitoring-local-seo-2026.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/apple-business-connect-local-seo-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/bewertungen-reputation-hub.md</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -40,6 +76,18 @@
   <url>
     <loc>https://localdominate.org/blog-md/bewertungs-antworten-vorlagen.md</loc>
     <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/bing-copilot-local-seo-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/chatgpt-search-lokale-unternehmen-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -170,6 +218,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog-md/geo-content-briefing-vorlage-2026.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/google-ai-mode-local-seo-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/google-ai-overviews-local-seo.md</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -278,12 +338,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://localdominate.org/blog-md/index.md</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://localdominate.org/blog-md/ki-tools-local-seo.md</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -292,6 +346,12 @@
   <url>
     <loc>https://localdominate.org/blog-md/kostenloses-seo-guide.md</loc>
     <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/llms-txt-lokale-unternehmen-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -356,6 +416,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog-md/local-seo-baeckerei-konditorei.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/local-seo-baeckerei.md</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -376,6 +442,12 @@
   <url>
     <loc>https://localdominate.org/blog-md/local-seo-branchen-hub.md</loc>
     <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-cafe-coffeeshop.md</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -406,6 +478,12 @@
   <url>
     <loc>https://localdominate.org/blog-md/local-seo-elektrotechnik.md</loc>
     <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-fahrschule.md</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -446,6 +524,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog-md/local-seo-garten-landschaftsbau.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-gebaeudereinigung.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/local-seo-hamburg.md</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -460,6 +550,18 @@
   <url>
     <loc>https://localdominate.org/blog-md/local-seo-hannover.md</loc>
     <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-heizung-sanitaer.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-hochzeitsdienstleister.md</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -484,6 +586,12 @@
   <url>
     <loc>https://localdominate.org/blog-md/local-seo-koeln.md</loc>
     <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-maler-lackierer.md</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -548,6 +656,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog-md/local-seo-sprachschule.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/local-seo-staedte-hub.md</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -592,6 +706,18 @@
   <url>
     <loc>https://localdominate.org/blog-md/local-seo-tierarzt.md</loc>
     <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-tracking-kpis.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/local-seo-umzugsunternehmen.md</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -650,6 +776,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog-md/lokale-landing-pages.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/lokale-seo-fuer-neugruender.md</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -688,6 +820,12 @@
   <url>
     <loc>https://localdominate.org/blog-md/ranking-ploetzlich-verschwunden.md</loc>
     <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/reddit-local-seo-ai-zitate-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -740,8 +878,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://localdominate.org/blog-md/tiktok-search-local-seo-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://localdominate.org/blog-md/ultimate-guide-local-seo.md</loc>
     <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/unternehmensprofil-ki-funktionen-2026.md</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/voice-search-sprachassistenten-local-seo-2026.md</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -754,6 +910,12 @@
   <url>
     <loc>https://localdominate.org/blog-md/website-content-ai-suchmaschinen.md</loc>
     <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://localdominate.org/blog-md/whatsapp-business-local-seo-2026.md</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
