@@ -41,6 +41,32 @@ ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mi
 7. Häufige Fehler
 8. FAQ
 
+## Fragen und Antworten
+
+### Warum ist Bing 2026 plötzlich wieder relevant für Local SEO?
+
+Weil ChatGPT Search, Microsoft Copilot, Edge Copilot, Windows Copilot und das gesamte OpenAI-Ökosystem den Bing-Index als primäre Quelle nutzen. Wer in Bing nicht indexiert ist, taucht in keiner dieser Antworten auf — auch wenn das Google-Ranking exzellent ist. Microsoft hat damit eine eigene AI-Search-Ökonomie aufgebaut, die parallel zu Google läuft.
+
+### Was ist Microsoft Copilot und wie unterscheidet er sich von ChatGPT?
+
+Microsoft Copilot ist die markenseitige Integration des GPT-Modells in Edge, Windows, Office, Teams und Bing. Im Gegensatz zu ChatGPT-Search nutzt Copilot zusätzlich Microsoft-Daten (Outlook, Teams, OneDrive) und blendet im Browser Empfehlungen direkt neben besuchten Seiten ein. Für DACH-Unternehmen ist Copilot besonders relevant, weil viele Unternehmen auf Microsoft 365 standardisiert sind.
+
+### Wie richte ich Bing Places for Business korrekt ein?
+
+Über bingplaces.com mit Microsoft-Konto registrieren, Unternehmen importieren (Google-Business-Profil-Import möglich), alle Felder ausfüllen (NAP, Öffnungszeiten, Kategorien, Fotos, Service-Areas), Verifizierung per Postkarte oder Telefon abschließen. Anschließend Bing Webmaster Tools verbinden, um Indexierung und Performance zu messen. Erstindexierung erfolgt in 7–14 Tagen.
+
+### Welche Ranking-Signale nutzt Microsoft Copilot für lokale Empfehlungen?
+
+Sechs Hauptfaktoren: Bing-Places-Vollständigkeit, Bing-Index-Status der Website (crawlbar, indexiert, schema-valide), strukturierte Daten (LocalBusiness, FAQ, Service), Bewertungssignale (Bing, Yelp, Tripadvisor — Microsoft synthetisiert Drittquellen), Microsoft Reviews-Aggregation und Crawl-Freundlichkeit für den Bingbot. Backlinks zählen weniger als bei Google, semantische Kohärenz mehr.
+
+### Muss ich Bingbot speziell in der robots.txt erlauben?
+
+Ja — explizit. Viele Websites haben unbewusst restriktive robots.txt-Einträge, die Bingbot blockieren. Eine Zeile „User-agent: Bingbot / Allow: /" und ein eingereichter Sitemap-Link über Bing Webmaster Tools sind Pflicht. Zusätzlich solltest du OAI-SearchBot (ChatGPT) und PerplexityBot freigeben, weil sie auf demselben Crawler-Layer aufbauen.
+
+### Wie messe ich, ob mein Unternehmen in Copilot-Antworten erscheint?
+
+Drei Quellen: 1) Bing Webmaster Tools zeigt Impressionen und Klicks. 2) Manuelle Test-Prompts in Copilot (Edge, Bing.com, Windows-App) mit deinen Top-Keywords. 3) Referrer-Traffic von bing.com und edgeservices.bing.com in Analytics. Microsoft hat angekündigt, ab 2026 einen „AI Mentions"-Bericht in Webmaster Tools auszurollen, der explizit Copilot-Citations zählt.
+
 ## Quelle
 
 Local Dominator (2026-05-22). Bing & Microsoft Copilot 2026: Local SEO für ChatGPT, Edge & Windows. https://localdominate.org/blog/bing-copilot-local-seo-2026

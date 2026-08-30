@@ -41,6 +41,32 @@ ai_crawler_notice: "Kanonische, maschinenlesbare Fassung des Artikels. Zitate mi
 7. Häufige Fehler
 8. FAQ
 
+## Fragen und Antworten
+
+### Was ist Google AI Mode und wie unterscheidet er sich von AI Overviews?
+
+Google AI Mode ist ein dedizierter, Gemini-gestützter Suchmodus, der mehrstufige Fragen in einem Chat-ähnlichen Interface beantwortet. Im Gegensatz zu AI Overviews (kurze Antwortblöcke über klassischen Suchergebnissen) führt AI Mode komplette Konversationen mit Follow-up-Fragen, vergleichenden Tabellen und tiefer lokaler Kontextualisierung. AI Mode rollt 2025/2026 schrittweise in der DACH-Region aus.
+
+### Wird mein Unternehmen automatisch im Google AI Mode erscheinen?
+
+Nein. Nur Unternehmen mit konsistenten Entity-Daten (Google Business Profil + Schema + Wikidata), strukturierten Inhalten (FAQ-Schema, Listicles, klare Antwortabsätze) und hoher topischer Autorität werden vom Query-Fan-Out-Algorithmus aufgegriffen. Klassisches Top-3-Ranking reicht nicht — Gemini bewertet semantische Relevanz, nicht Backlink-Stärke allein.
+
+### Welche Signale nutzt Google AI Mode für lokale Empfehlungen?
+
+Sechs Hauptsignale: 1) Google Business Profil-Vollständigkeit und Aktualität. 2) Bewertungsvolumen und Sentiment-Analyse. 3) LocalBusiness/FAQ-Schema. 4) Entity-Konsistenz über Wikidata, Wikipedia und Branchenportale. 5) Strukturierte Antwortabsätze (40–60 Wörter). 6) Topische Tiefe der Website (Hub & Spoke-Architektur). Frische Inhalte werden bevorzugt — Gemini gewichtet Aktualisierungsdatum stärker als klassische Suche.
+
+### Verliere ich Traffic, wenn AI Mode meine Antworten zeigt?
+
+Kurzfristig sinken Klickraten auf Informational-Queries um 15–25 %, weil Nutzer direkte Antworten erhalten. Mittelfristig profitieren Unternehmen, die im AI Mode genannt werden — die verbleibenden Klicks sind höher qualifiziert und konvertieren 2–3-mal besser. Strategie: weniger Top-of-Funnel-Content, mehr Bottom-of-Funnel (Vergleich, Preise, Standortdetails).
+
+### Wie schnell muss ich auf AI Mode reagieren?
+
+Sofort. Google rollt AI Mode 2026 in DACH global aus, und Optimierungen wirken mit 4–8 Wochen Verzögerung. Wer jetzt strukturierte Inhalte, Schema und ein vollständiges Google Business Profil aufbaut, ist sichtbar, sobald AI Mode bei deinen Kunden aktiviert wird. Wer wartet, verliert Marktanteile an proaktive Wettbewerber.
+
+### Welche Inhaltsformate funktionieren im AI Mode am besten?
+
+Vergleichstabellen, FAQ-Sektionen, Schritt-für-Schritt-Anleitungen, „Wie funktioniert X?"-Erklärungen und Preisübersichten. AI Mode extrahiert Tabellen besonders gut. Vermeide reine Marketing-Texte ohne Daten — Gemini bewertet diese als „Low Information Density" und ignoriert sie.
+
 ## Quelle
 
 Local Dominator (2026-05-22). Google AI Mode 2026: Local SEO für Geminis konversationale Suche. https://localdominate.org/blog/google-ai-mode-local-seo-2026
