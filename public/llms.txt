@@ -1,6 +1,6 @@
 # Local Dominator - LLM Information File
-# Version: 2.2
-# Last Updated: 2026-01-12
+# Version: 2.3
+# Last Updated: 2026-08-08
 # Language: German (de-DE)
 # Primary Domain: https://localdominate.org
 # Full Version: https://localdominate.org/llms-full.txt
@@ -277,6 +277,211 @@ Each page ships with LocalBusiness + Service + FAQPage + BreadcrumbList JSON-LD,
 
 For long-form, AI-extractable definitions and answers — including 40–60-word featured-snippet blocks tagged "Quotable Corpus 2026" — see https://localdominate.org/llms-full.txt
 
+## Complete Article Corpus (153 Artikel, Stand 2026-08-08)
+
+Alle Artikel liegen zusätzlich als reines Markdown unter /blog-md/[slug].md vor (kein JavaScript nötig).
+
+### AI & Zukunft
+- [AI Agents 2026: Wie Operator, ChatGPT Agent & Gemini lokale Buchungen autonom erledigen](/blog/ai-agents-lokale-buchungen-2026) — Markdown: /blog-md/ai-agents-lokale-buchungen-2026.md
+- [AI-Crawler steuern 2026: GPTBot, ClaudeBot & PerplexityBot richtig konfigurieren](/blog/ai-crawler-steuern-gptbot-claudebot-2026) — Markdown: /blog-md/ai-crawler-steuern-gptbot-claudebot-2026.md
+- [Falschangaben in AI-Antworten korrigieren 2026: 6-Schritte-Prozess](/blog/ai-falschangaben-korrigieren-2026) — Markdown: /blog-md/ai-falschangaben-korrigieren-2026.md
+- [AI-Suche vs. Traditionelle Suche: Der komplette Vergleich für lokale Unternehmen](/blog/ai-search-vs-traditional-search) — Markdown: /blog-md/ai-search-vs-traditional-search.md
+- [AI Search Optimization für lokale Unternehmen: Der komplette Guide 2026](/blog/ai-suche-lokale-unternehmen) — Markdown: /blog-md/ai-suche-lokale-unternehmen.md
+- [AI Visibility Checklist: Ist deine Website bereit für AI-Suche?](/blog/ai-visibility-checklist) — Markdown: /blog-md/ai-visibility-checklist.md
+- [AI Visibility Index – die neue Local-SEO-Metrik 2026](/blog/ai-visibility-index-local-seo-metrik) — Markdown: /blog-md/ai-visibility-index-local-seo-metrik.md
+- [AI-Zitat-Monitoring 2026: Erwähnungen in ChatGPT, Perplexity & Gemini messen](/blog/ai-zitat-monitoring-local-seo-2026) — Markdown: /blog-md/ai-zitat-monitoring-local-seo-2026.md
+- [Apple Business Connect: Local SEO für Apple Maps & Siri 2026](/blog/apple-business-connect-local-seo-2026) — Markdown: /blog-md/apple-business-connect-local-seo-2026.md
+- [Bing & Microsoft Copilot 2026: Local SEO für ChatGPT, Edge & Windows](/blog/bing-copilot-local-seo-2026) — Markdown: /blog-md/bing-copilot-local-seo-2026.md
+- [ChatGPT Search für lokale Unternehmen 2026 — der komplette Optimierungs-Guide](/blog/chatgpt-search-lokale-unternehmen-2026) — Markdown: /blog-md/chatgpt-search-lokale-unternehmen-2026.md
+- [Wie zitiert ChatGPT lokale Unternehmen?](/blog/chatgpt-zitiert-lokale-unternehmen) — Markdown: /blog-md/chatgpt-zitiert-lokale-unternehmen.md
+- [Entity SEO: Wie Suchmaschinen Entitäten verstehen & nutzen](/blog/entity-seo-guide) — Markdown: /blog-md/entity-seo-guide.md
+- [GEO-Content-Briefing 2026: Vorlage für zitierfähige Texte in AI-Suche](/blog/geo-content-briefing-vorlage-2026) — Markdown: /blog-md/geo-content-briefing-vorlage-2026.md
+- [Google AI Mode 2026: Local SEO für Geminis konversationale Suche](/blog/google-ai-mode-local-seo-2026) — Markdown: /blog-md/google-ai-mode-local-seo-2026.md
+- [llms.txt für lokale Unternehmen 2026: Setup, Beispiel & Best Practices](/blog/llms-txt-lokale-unternehmen-2026) — Markdown: /blog-md/llms-txt-lokale-unternehmen-2026.md
+- [Perplexity & Claude für lokale Sichtbarkeit nutzen](/blog/perplexity-claude-lokale-sichtbarkeit) — Markdown: /blog-md/perplexity-claude-lokale-sichtbarkeit.md
+- [Reddit für Local SEO 2026: Wie du in ChatGPT- & Perplexity-Antworten zitiert wirst](/blog/reddit-local-seo-ai-zitate-2026) — Markdown: /blog-md/reddit-local-seo-ai-zitate-2026.md
+- [Schema-Strategie für AI-Retrieval: So wirst du von LLMs gelesen](/blog/schema-strategie-ai-retrieval) — Markdown: /blog-md/schema-strategie-ai-retrieval.md
+- [Semantic SEO & Topical Authority: Der Komplettguide](/blog/semantic-seo-topical-authority) — Markdown: /blog-md/semantic-seo-topical-authority.md
+- [TikTok Search für Local SEO 2026: So wirst du von Gen Z gefunden](/blog/tiktok-search-local-seo-2026) — Markdown: /blog-md/tiktok-search-local-seo-2026.md
+- [Voice Search 2026: Local SEO für Alexa, Siri & Google Assistant](/blog/voice-search-sprachassistenten-local-seo-2026) — Markdown: /blog-md/voice-search-sprachassistenten-local-seo-2026.md
+- [Was ist GEO? Generative Engine Optimization erklärt](/blog/was-ist-geo-generative-engine-optimization) — Markdown: /blog-md/was-ist-geo-generative-engine-optimization.md
+
+### Beauty & Wellness
+- [Local SEO für Friseursalons & Beauty-Studios: Der ultimative Guide mit Buchungsintegration 2026](/blog/local-seo-friseursalon-beauty) — Markdown: /blog-md/local-seo-friseursalon-beauty.md
+
+### Bewertungen
+- [Bewertungen & Reputation Hub – Alle Guides](/blog/bewertungen-reputation-hub) — Markdown: /blog-md/bewertungen-reputation-hub.md
+- [Bewertungs-Antworten: 50 Vorlagen für jede Situation](/blog/bewertungs-antworten-vorlagen) — Markdown: /blog-md/bewertungs-antworten-vorlagen.md
+- [Google Bewertungen bekommen: 7 bewährte Strategien](/blog/google-bewertungen-bekommen) — Markdown: /blog-md/google-bewertungen-bekommen.md
+- [Negative Google Bewertungen: So reagierst du professionell](/blog/negative-google-bewertungen) — Markdown: /blog-md/negative-google-bewertungen.md
+
+### Branche
+- [SEO für Ferienwohnungen: Schweiz, Bayern & Österreich – Raus aus der OTA-Falle](/blog/seo-ferienwohnungen) — Markdown: /blog-md/seo-ferienwohnungen.md
+
+### Branchen
+- [Local SEO für Ärzte & Praxen: Patientengewinnung durch Google](/blog/local-seo-aerzte-praxen) — Markdown: /blog-md/local-seo-aerzte-praxen.md
+- [Local SEO für Anwälte & Kanzleien: Mandanten durch Google gewinnen](/blog/local-seo-anwaelte-kanzleien) — Markdown: /blog-md/local-seo-anwaelte-kanzleien.md
+- [Local SEO für Apotheken: Lokale Gesundheitsversorgung](/blog/local-seo-apotheken) — Markdown: /blog-md/local-seo-apotheken.md
+- [Local SEO für Autowerkstätten & KFZ-Betriebe](/blog/local-seo-autowerkstatt) — Markdown: /blog-md/local-seo-autowerkstatt.md
+- [Local SEO für Bäckereien: Mehr Kunden durch Google (2026)](/blog/local-seo-baeckerei) — Markdown: /blog-md/local-seo-baeckerei.md
+- [Local SEO für Konditoreien & Tortenbetriebe: Spezialitäten vermarkten](/blog/local-seo-baeckerei-konditorei) — Markdown: /blog-md/local-seo-baeckerei-konditorei.md
+- [Local SEO Branchen-Guides – 22+ Branchen im Überblick](/blog/local-seo-branchen-hub) — Markdown: /blog-md/local-seo-branchen-hub.md
+- [Local SEO für Cafés & Coffee Shops](/blog/local-seo-cafe-coffeeshop) — Markdown: /blog-md/local-seo-cafe-coffeeshop.md
+- [Local SEO für Elektriker & Elektrotechniker: Mehr Aufträge](/blog/local-seo-elektrotechnik) — Markdown: /blog-md/local-seo-elektrotechnik.md
+- [Local SEO für Fahrschulen: Mehr Fahrschüler gewinnen](/blog/local-seo-fahrschule) — Markdown: /blog-md/local-seo-fahrschule.md
+- [Local SEO für Fitnessstudios & Personal Trainer](/blog/local-seo-fitness) — Markdown: /blog-md/local-seo-fitness.md
+- [Local SEO für Fotografen: Mehr Buchungen durch Google](/blog/local-seo-fotograf) — Markdown: /blog-md/local-seo-fotograf.md
+- [Local SEO für Garten- & Landschaftsbau: Saison richtig nutzen](/blog/local-seo-garten-landschaftsbau) — Markdown: /blog-md/local-seo-garten-landschaftsbau.md
+- [Local SEO für Gebäudereinigung: Objektanfragen statt Klicks](/blog/local-seo-gebaeudereinigung) — Markdown: /blog-md/local-seo-gebaeudereinigung.md
+- [Local SEO für Handwerker: Mehr Aufträge durch Google](/blog/local-seo-handwerker) — Markdown: /blog-md/local-seo-handwerker.md
+- [Local SEO für Heizung & Sanitär (SHK): Notdienst und Projekte](/blog/local-seo-heizung-sanitaer) — Markdown: /blog-md/local-seo-heizung-sanitaer.md
+- [Local SEO für Hochzeitsdienstleister: Florist bis DJ](/blog/local-seo-hochzeitsdienstleister) — Markdown: /blog-md/local-seo-hochzeitsdienstleister.md
+- [Local SEO für Hotels & Unterkünfte: Direktbuchungen steigern](/blog/local-seo-hotels) — Markdown: /blog-md/local-seo-hotels.md
+- [Local SEO für Immobilienmakler: Objektanfragen durch Google](/blog/local-seo-immobilienmakler) — Markdown: /blog-md/local-seo-immobilienmakler.md
+- [Local SEO für Maler & Lackierer: Mehr Aufträge gewinnen](/blog/local-seo-maler-lackierer) — Markdown: /blog-md/local-seo-maler-lackierer.md
+- [Local SEO für Optiker & Hörakustiker: Kunden gewinnen](/blog/local-seo-optiker) — Markdown: /blog-md/local-seo-optiker.md
+- [Local SEO für Physiotherapie & Heilpraktiker: Patienten gewinnen](/blog/local-seo-physiotherapie) — Markdown: /blog-md/local-seo-physiotherapie.md
+- [Local SEO für Sprachschulen & Nachhilfe-Institute](/blog/local-seo-sprachschule) — Markdown: /blog-md/local-seo-sprachschule.md
+- [Local SEO für Steuerberater & Buchhalter: Mandanten gewinnen](/blog/local-seo-steuerberater) — Markdown: /blog-md/local-seo-steuerberater.md
+- [Local SEO für Tattoo-Studios & Piercing](/blog/local-seo-tattoo-studios) — Markdown: /blog-md/local-seo-tattoo-studios.md
+- [Local SEO für Tierärzte & Tierpraxen](/blog/local-seo-tierarzt) — Markdown: /blog-md/local-seo-tierarzt.md
+- [Local SEO für Umzugsunternehmen: In zwei Städten gefunden werden](/blog/local-seo-umzugsunternehmen) — Markdown: /blog-md/local-seo-umzugsunternehmen.md
+- [Local SEO für Yoga-Studios & Pilates](/blog/local-seo-yoga-studios) — Markdown: /blog-md/local-seo-yoga-studios.md
+- [Local SEO für Zahnärzte: Mehr Patienten durch Google](/blog/local-seo-zahnarzt) — Markdown: /blog-md/local-seo-zahnarzt.md
+
+### Case Study
+- [Local SEO Case Study: Wie ein Bäcker 200% mehr Kunden gewann](/blog/local-seo-case-study-baecker) — Markdown: /blog-md/local-seo-case-study-baecker.md
+
+### Content & Marketing
+- [Local Link Building Blueprint: Der komplette Leitfaden für lokale Backlinks 2026](/blog/local-link-building-blueprint) — Markdown: /blog-md/local-link-building-blueprint.md
+
+### Daten & Statistiken
+- [Local SEO Statistiken & Daten 2026: 88+ Datenpunkte für 22 Branchen](/blog/local-seo-statistiken-daten) — Markdown: /blog-md/local-seo-statistiken-daten.md
+
+### Gastronomie
+- [Local SEO für Döner & Kebab-Imbisse: Der ultimative Marketing-Guide 2026](/blog/local-seo-doener-kebab-imbiss) — Markdown: /blog-md/local-seo-doener-kebab-imbiss.md
+- [Local SEO für Restaurants: Mehr Gäste durch Google](/blog/local-seo-fuer-restaurants) — Markdown: /blog-md/local-seo-fuer-restaurants.md
+
+### Google Business
+- [Google Business Attribute richtig nutzen – Alle Optionen erklärt (2026)](/blog/gbp-attribute-richtig-nutzen) — Markdown: /blog-md/gbp-attribute-richtig-nutzen.md
+- [Google Business Fotos optimieren: Der komplette Bilder-Guide](/blog/gbp-fotos-optimieren) — Markdown: /blog-md/gbp-fotos-optimieren.md
+- [Google Business für mehrere Standorte verwalten – Der Multi-Location Guide (2026)](/blog/gbp-mehrere-standorte) — Markdown: /blog-md/gbp-mehrere-standorte.md
+- [Google Business Öffnungszeiten & Sondertage richtig einstellen (2026)](/blog/gbp-oeffnungszeiten-sondertage) — Markdown: /blog-md/gbp-oeffnungszeiten-sondertage.md
+- [Google Business Insights richtig verstehen & nutzen](/blog/google-business-insights-verstehen) — Markdown: /blog-md/google-business-insights-verstehen.md
+- [Google Business Kategorien: Welche passt zu deinem Unternehmen?](/blog/google-business-kategorien-guide) — Markdown: /blog-md/google-business-kategorien-guide.md
+- [Google Business Messaging: Kundenkommunikation optimal nutzen](/blog/google-business-messaging) — Markdown: /blog-md/google-business-messaging.md
+- [Google Business Produkte & Services optimal präsentieren](/blog/google-business-produkte-services) — Markdown: /blog-md/google-business-produkte-services.md
+- [Google Business Profil Hub – Alle Guides & Anleitungen](/blog/google-business-profil-hub) — Markdown: /blog-md/google-business-profil-hub.md
+- [Google My Business optimieren: Schritt-für-Schritt Anleitung](/blog/google-my-business-optimieren) — Markdown: /blog-md/google-my-business-optimieren.md
+
+### Google Business Profile
+- [Unternehmensprofil & KI 2026: Welche Felder in AI-Antworten landen](/blog/unternehmensprofil-ki-funktionen-2026) — Markdown: /blog-md/unternehmensprofil-ki-funktionen-2026.md
+
+### Google Maps
+- [Google Maps Audit Template: Vollständige Checkliste mit 75+ Punkten](/blog/google-maps-audit-template) — Markdown: /blog-md/google-maps-audit-template.md
+- [Google Maps Konkurrenzanalyse: So analysierst du Top-Rankings](/blog/google-maps-konkurrenzanalyse) — Markdown: /blog-md/google-maps-konkurrenzanalyse.md
+- [Google Maps Ranking Case Studies: 6 Branchen, 6 Erfolge](/blog/google-maps-ranking-case-studies) — Markdown: /blog-md/google-maps-ranking-case-studies.md
+- [Google Maps Ranking Tracker: So trackst du deine lokalen Rankings](/blog/google-maps-ranking-tracker) — Markdown: /blog-md/google-maps-ranking-tracker.md
+- [Google Maps SEO Hub: Alle Guides für lokale Sichtbarkeit](/blog/google-maps-seo-hub) — Markdown: /blog-md/google-maps-seo-hub.md
+- [Google Maps Spam erkennen & melden: Der komplette Guide](/blog/google-maps-spam-erkennen) — Markdown: /blog-md/google-maps-spam-erkennen.md
+- [Google Maps Algorithmus erklärt: Nähe, Relevanz & Bekanntheit im Detail](/blog/wie-google-maps-ranking-funktioniert) — Markdown: /blog-md/wie-google-maps-ranking-funktioniert.md
+
+### Local SEO
+- [Google Maps Ranking verbessern: 7-Schritte-Aktionsplan 2026](/blog/google-maps-ranking-verbessern) — Markdown: /blog-md/google-maps-ranking-verbessern.md
+- [Google Maps SEO 2026: Alle 20 Ranking-Signale mit Gewichtung](/blog/google-maps-seo-ranking-faktoren) — Markdown: /blog-md/google-maps-seo-ranking-faktoren.md
+- [Top-Verzeichnisse DACH 2026: Branchenspezifische Citation-Quellen nach Relevanz sortiert](/blog/local-citations-2025) — Markdown: /blog-md/local-citations-2025.md
+- [Local SEO vs Maps SEO – Was ist der Unterschied? (2026)](/blog/local-seo-vs-maps-seo) — Markdown: /blog-md/local-seo-vs-maps-seo.md
+- [NAP-Konsistenz: Warum einheitliche Daten dein Ranking boosten](/blog/nap-konsistenz-local-seo) — Markdown: /blog-md/nap-konsistenz-local-seo.md
+
+### Local SEO Grundlagen
+- [WhatsApp Business für lokale Unternehmen 2026: Setup, NAP-Regeln & Recht](/blog/whatsapp-business-local-seo-2026) — Markdown: /blog-md/whatsapp-business-local-seo-2026.md
+
+### Regionen
+- [Local SEO Basel: Grenzregion Schweiz-Deutschland-Frankreich](/blog/local-seo-basel) — Markdown: /blog-md/local-seo-basel.md
+- [Local SEO Berlin: Der Hauptstadt-Guide für Unternehmen](/blog/local-seo-berlin) — Markdown: /blog-md/local-seo-berlin.md
+- [Local SEO Düsseldorf: Mode, Messe & mehr Kunden](/blog/local-seo-duesseldorf) — Markdown: /blog-md/local-seo-duesseldorf.md
+- [Local SEO Frankfurt: Finanzmetropole richtig nutzen](/blog/local-seo-frankfurt) — Markdown: /blog-md/local-seo-frankfurt.md
+- [Local SEO Hamburg: Der Hanseatische Marketing-Guide](/blog/local-seo-hamburg) — Markdown: /blog-md/local-seo-hamburg.md
+- [Local SEO Hannover: Der Guide für niedersächsische Unternehmen](/blog/local-seo-hannover) — Markdown: /blog-md/local-seo-hannover.md
+- [Local SEO Köln: Rheinland-Marketing für lokale Unternehmen](/blog/local-seo-koeln) — Markdown: /blog-md/local-seo-koeln.md
+- [Local SEO München: Der Guide für bayerische Unternehmen](/blog/local-seo-muenchen) — Markdown: /blog-md/local-seo-muenchen.md
+- [Local SEO Schweiz: Der komplette Leitfaden für KMUs](/blog/local-seo-schweiz) — Markdown: /blog-md/local-seo-schweiz.md
+- [Local SEO Stuttgart: Automobilregion & mehr](/blog/local-seo-stuttgart) — Markdown: /blog-md/local-seo-stuttgart.md
+- [Local SEO Wien: Der Österreich-Guide für KMUs](/blog/local-seo-wien) — Markdown: /blog-md/local-seo-wien.md
+- [Local SEO Zürich: So dominierst du den Zürcher Markt](/blog/local-seo-zuerich) — Markdown: /blog-md/local-seo-zuerich.md
+
+### Ressourcen
+- [FAQ: AI & Zukunft im Local SEO](/blog/faq-ai-zukunft-local-seo) — Markdown: /blog-md/faq-ai-zukunft-local-seo.md
+- [FAQ: Bewertungen & Reputation](/blog/faq-bewertungen-reputation) — Markdown: /blog-md/faq-bewertungen-reputation.md
+- [FAQ: Content & Marketing für Local SEO](/blog/faq-content-marketing-local-seo) — Markdown: /blog-md/faq-content-marketing-local-seo.md
+- [FAQ: Google Business Profil](/blog/faq-google-business-profil) — Markdown: /blog-md/faq-google-business-profil.md
+- [FAQ Hub: Alle Local SEO Fragen beantwortet](/blog/faq-hub) — Markdown: /blog-md/faq-hub.md
+- [FAQ: Local SEO Grundlagen](/blog/faq-local-seo-grundlagen) — Markdown: /blog-md/faq-local-seo-grundlagen.md
+- [FAQ: Technisches SEO](/blog/faq-technisches-seo) — Markdown: /blog-md/faq-technisches-seo.md
+
+### Strategie
+- [E-E-A-T für lokale Unternehmen: Expertise beweisen & Vertrauen aufbauen](/blog/e-e-a-t-lokale-unternehmen) — Markdown: /blog-md/e-e-a-t-lokale-unternehmen.md
+- [Google Maps SEO vs. Organic SEO: Ranking-Faktoren, Strategien & ROI im Vergleich](/blog/google-maps-seo-vs-organic-seo) — Markdown: /blog-md/google-maps-seo-vs-organic-seo.md
+- [Kostenloses SEO: Der ultimative Guide für Einsteiger 2026](/blog/kostenloses-seo-guide) — Markdown: /blog-md/kostenloses-seo-guide.md
+- [Local Content Marketing: Content-Strategie für lokale Unternehmen](/blog/local-content-marketing) — Markdown: /blog-md/local-content-marketing.md
+- [Local Link Building: Backlinks für lokale Unternehmen aufbauen](/blog/local-link-building) — Markdown: /blog-md/local-link-building.md
+- [Local SEO Audit: Ist-Analyse mit 50+ Diagnose-Punkten & Scoring](/blog/local-seo-audit-checkliste) — Markdown: /blog-md/local-seo-audit-checkliste.md
+- [Local SEO Implementierungs-Checkliste: 80+ Maßnahmen in 8 Phasen systematisch umsetzen](/blog/local-seo-checkliste-komplett) — Markdown: /blog-md/local-seo-checkliste-komplett.md
+- [Local SEO Fehler: 15 Gründe warum du nicht gefunden wirst](/blog/local-seo-fehler) — Markdown: /blog-md/local-seo-fehler.md
+- [Local SEO Keywords finden: Der komplette Keyword-Recherche Guide 2026](/blog/local-seo-keywords-finden) — Markdown: /blog-md/local-seo-keywords-finden.md
+- [Franchise-SEO Strategie: GBP-Management & Markenkonsistenz bei mehreren Standorten](/blog/local-seo-mehrstufig-unternehmen) — Markdown: /blog-md/local-seo-mehrstufig-unternehmen.md
+- [Notdienst-Keywords: Wenn Kunden dringend suchen](/blog/local-seo-notdienst-keywords) — Markdown: /blog-md/local-seo-notdienst-keywords.md
+- [Local SEO Ranking-Faktoren erklärt: Alle Signale im Detail 2026](/blog/local-seo-ranking-faktoren-erklaert) — Markdown: /blog-md/local-seo-ranking-faktoren-erklaert.md
+- [Local SEO Reporting Template: Monatlicher Report + KPI-Vorlage](/blog/local-seo-reporting-template) — Markdown: /blog-md/local-seo-reporting-template.md
+- [Local SEO Strategie für kleine Unternehmen: Der komplette Aktionsplan 2026](/blog/local-seo-strategie-kleine-unternehmen) — Markdown: /blog-md/local-seo-strategie-kleine-unternehmen.md
+- [Local SEO vs. organisches SEO: Die wichtigsten Unterschiede](/blog/local-seo-vs-organisch) — Markdown: /blog-md/local-seo-vs-organisch.md
+- [Lokale Events für SEO nutzen: Sponsoring & Veranstaltungen](/blog/lokale-events-marketing) — Markdown: /blog-md/lokale-events-marketing.md
+- [Local SEO für Neugründer: Von Null zur lokalen Sichtbarkeit](/blog/lokale-seo-fuer-neugruender) — Markdown: /blog-md/lokale-seo-fuer-neugruender.md
+- [Local SEO: Der ultimative Leitfaden für lokale Unternehmen 2026](/blog/ultimate-guide-local-seo) — Markdown: /blog-md/ultimate-guide-local-seo.md
+
+### Städte
+- [Local SEO Städte-Guides – DACH-Region](/blog/local-seo-staedte-hub) — Markdown: /blog-md/local-seo-staedte-hub.md
+
+### Technik
+- [Core Web Vitals für lokale Websites: Performance-Guide](/blog/core-web-vitals-local-seo) — Markdown: /blog-md/core-web-vitals-local-seo.md
+- [Google Posts optimal nutzen: Der unterschätzte Ranking-Faktor](/blog/google-posts-ranking-faktor) — Markdown: /blog-md/google-posts-ranking-faktor.md
+- [Local SEO Tracking: KPIs und Reporting richtig aufsetzen](/blog/local-seo-tracking-kpis) — Markdown: /blog-md/local-seo-tracking-kpis.md
+- [Local SEO & Voice Search: Hey Google, wo ist...](/blog/local-seo-voice-search) — Markdown: /blog-md/local-seo-voice-search.md
+- [LocalBusiness Schema implementieren: Komplette Anleitung mit Code-Beispielen](/blog/localbusiness-schema-implementierung) — Markdown: /blog-md/localbusiness-schema-implementierung.md
+- [Lokale Landing Pages erstellen: One-Page pro Standort](/blog/lokale-landing-pages) — Markdown: /blog-md/lokale-landing-pages.md
+- [Mobile Local SEO: Warum 80% der lokalen Suchen mobil sind](/blog/mobile-local-seo) — Markdown: /blog-md/mobile-local-seo.md
+- [Review Schema implementieren: Bewertungssterne in Google bekommen](/blog/review-schema-implementierung) — Markdown: /blog-md/review-schema-implementierung.md
+- [Schema Markup für Local SEO: Der Implementierungsguide](/blog/schema-markup-local-seo) — Markdown: /blog-md/schema-markup-local-seo.md
+- [Technisches Local SEO: Der komplette Guide für lokale Unternehmen 2026](/blog/technisches-local-seo-guide) — Markdown: /blog-md/technisches-local-seo-guide.md
+
+### Technisches SEO
+- [Schema-Strategie: Wann Article, FAQPage, HowTo & LocalBusiness einsetzen](/blog/schema-strategie-dokument) — Markdown: /blog-md/schema-strategie-dokument.md
+- [Website-Content für AI-Suchmaschinen strukturieren: Der komplette Guide](/blog/website-content-ai-suchmaschinen) — Markdown: /blog-md/website-content-ai-suchmaschinen.md
+
+### Tools
+- [KI-Tools für Local SEO: Die besten AI-Helfer 2026](/blog/ki-tools-local-seo) — Markdown: /blog-md/ki-tools-local-seo.md
+- [Die ultimative SEO-Toolbox: 50+ kostenlose Tools & Ressourcen](/blog/seo-toolbox-kostenlose-ressourcen) — Markdown: /blog-md/seo-toolbox-kostenlose-ressourcen.md
+
+### Tools & Ressourcen
+- [Citation Tracking Spreadsheet Template: Alle Verzeichnisse im Griff](/blog/citation-tracking-template) — Markdown: /blog-md/citation-tracking-template.md
+- [Local Keyword Research Template: Systematische Keyword-Recherche für lokale Unternehmen](/blog/local-keyword-research-template) — Markdown: /blog-md/local-keyword-research-template.md
+- [Local SEO Monthly Checklist: Die monatliche Routine für Top-Rankings](/blog/local-seo-monthly-checklist) — Markdown: /blog-md/local-seo-monthly-checklist.md
+- [Local SEO Wochenplan: 12-Wochen-Timeline mit Gantt-Diagramm & KPI-Meilensteinen](/blog/local-seo-roadmap-90-tage) — Markdown: /blog-md/local-seo-roadmap-90-tage.md
+- [Local SEO Strategy Planner: 7-Phasen-Aufgabenplan mit Budget & Checkliste](/blog/local-seo-strategy-planner) — Markdown: /blog-md/local-seo-strategy-planner.md
+
+### Trends
+- [AI Search Optimization 2026: So wirst du in der KI-Suche gefunden](/blog/ai-search-optimization-2026) — Markdown: /blog-md/ai-search-optimization-2026.md
+- [Google AI Overviews & Local SEO: Was sich ändert](/blog/google-ai-overviews-local-seo) — Markdown: /blog-md/google-ai-overviews-local-seo.md
+- [Lokale Suchmaschinenoptimierung 2026: Was wirklich funktioniert](/blog/lokale-suchmaschinenoptimierung-2026) — Markdown: /blog-md/lokale-suchmaschinenoptimierung-2026.md
+
+### Troubleshooting
+- [Doppelte Google-Einträge löschen – Duplicate Listing Anleitung (2026)](/blog/duplicate-listing-entfernen) — Markdown: /blog-md/duplicate-listing-entfernen.md
+- [Google Bewertung löschen lassen – Schritt-für-Schritt Anleitung (2026)](/blog/gbp-bewertung-loeschen-anleitung) — Markdown: /blog-md/gbp-bewertung-loeschen-anleitung.md
+- [Google Business Profil nicht in Suche sichtbar – 12 Lösungen (2026)](/blog/gbp-nicht-in-suche-sichtbar) — Markdown: /blog-md/gbp-nicht-in-suche-sichtbar.md
+- [Google Business Profil suspendiert – So stellst du es wieder her (2026 Anleitung)](/blog/gbp-suspendiert-reaktivieren) — Markdown: /blog-md/gbp-suspendiert-reaktivieren.md
+- [Google Business Verifizierung schlägt fehl – 8 Lösungen für alle Probleme (2026)](/blog/gbp-verifizierung-fehlgeschlagen) — Markdown: /blog-md/gbp-verifizierung-fehlgeschlagen.md
+- [Google Ranking plötzlich verschwunden – Ursachen & Soforthilfe (2026)](/blog/ranking-ploetzlich-verschwunden) — Markdown: /blog-md/ranking-ploetzlich-verschwunden.md
+
 ## Updates
 
 This file is maintained and updated with each significant content change. For the most current information about our content and services, please visit https://localdominate.org directly.
@@ -311,5 +516,5 @@ This file is maintained and updated with each significant content change. For th
 
 ---
 # End of llms.txt
-# Last modified: 2026-05-20
+# Last modified: 2026-08-08
 # Contact: kontakt@localdominate.org
