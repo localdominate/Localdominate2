@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { ReactNode } from "react";
 import { Sparkles } from "lucide-react";
 
@@ -15,6 +16,7 @@ interface Props {
  * compact, attributable answer.
  */
 const AnswerBlock = ({ question, children, source = "Local Dominator", className = "" }: Props) => {
+  const isEn = useLanguage().language === "en";
   return (
     <div
       className={`rounded-2xl border border-primary/15 bg-primary/[0.03] p-5 md:p-6 ${className}`}
@@ -36,7 +38,7 @@ const AnswerBlock = ({ question, children, source = "Local Dominator", className
         <div itemProp="text">{children}</div>
       </div>
       <p className="mt-3 text-[11px] text-muted-foreground">
-        Quelle: <span className="font-medium text-foreground">{source}</span> · localdominate.org
+        {isEn ? "Source:" : "Quelle:"} <span className="font-medium text-foreground">{source}</span> · localdominate.org
       </p>
     </div>
   );

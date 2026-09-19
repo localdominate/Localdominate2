@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +20,7 @@ interface RankingFactorChartProps {
  * Accessible, responsive, no external chart library needed.
  */
 const RankingFactorChart = ({ title, factors, caption }: RankingFactorChartProps) => {
+  const isEn = useLanguage().language === "en";
   const maxWeight = Math.max(...factors.map(f => f.weight));
 
   return (
@@ -55,7 +57,9 @@ const RankingFactorChart = ({ title, factors, caption }: RankingFactorChartProps
           })}
         </div>
         <p className="text-xs text-muted-foreground/70 mt-4">
-          Quelle: Whitespark/Moz Local Search Ranking Factors, eigene Analyse 2025/2026
+          {isEn
+            ? "Source: Whitespark/Moz Local Search Ranking Factors, own analysis 2025/2026"
+            : "Quelle: Whitespark/Moz Local Search Ranking Factors, eigene Analyse 2025/2026"}
         </p>
       </Card>
       {caption && (

@@ -3,13 +3,14 @@ import useScrollReveal from "@/hooks/useScrollReveal";
 
 const StatisticsBar = () => {
   const { t } = useLanguage();
+  const isEn = useLanguage().language === "en";
   const { ref, isVisible } = useScrollReveal();
 
   const stats = [
-    { value: "46%", label: "aller Google-Suchen sind lokal" },
-    { value: "88%", label: "kontaktieren innerhalb 24h" },
-    { value: "76%", label: "besuchen am selben Tag" },
-    { value: "78%", label: "klicken auf Top 3 Ergebnisse" },
+    { value: "46%", label: isEn ? "of all Google searches are local" : "aller Google-Suchen sind lokal" },
+    { value: "88%", label: isEn ? "contact a business within 24 hours" : "kontaktieren innerhalb 24h" },
+    { value: "76%", label: isEn ? "visit on the same day" : "besuchen am selben Tag" },
+    { value: "78%", label: isEn ? "click one of the top 3 results" : "klicken auf Top 3 Ergebnisse" },
   ];
 
   return (
@@ -19,7 +20,7 @@ const StatisticsBar = () => {
         className={`container max-w-6xl reveal ${isVisible ? "visible" : ""}`}
       >
         <p className="text-center text-xs text-muted-foreground uppercase tracking-widest mb-6 font-semibold">
-          Quelle: Google/Ipsos & BrightLocal 2025
+          {isEn ? "Source:" : "Quelle:"} Google/Ipsos & BrightLocal 2025
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, i) => (

@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { ExternalLink, BookOpen, FileText } from "lucide-react";
 
 interface Source {
@@ -14,8 +15,10 @@ interface SourcesSectionProps {
 
 const SourcesSection = ({ 
   sources, 
-  title = "Quellen & Weiterführende Links" 
+  title: titleProp
 }: SourcesSectionProps) => {
+  const isEn = useLanguage().language === "en";
+  const title = titleProp ?? (isEn ? "Sources & Further Reading" : "Quellen & Weiterführende Links");
   const getIcon = (type?: string) => {
     switch (type) {
       case "documentation":
@@ -62,7 +65,9 @@ const SourcesSection = ({
       </div>
       
       <p className="text-xs text-muted-foreground mt-4 italic">
-        Alle Links wurden zuletzt am {new Date().toLocaleDateString('de-DE')} geprüft.
+        {isEn
+          ? `All links were last checked on ${new Date().toLocaleDateString('en-GB')}.`
+          : `Alle Links wurden zuletzt am ${new Date().toLocaleDateString('de-DE')} geprüft.`}
       </p>
     </section>
   );

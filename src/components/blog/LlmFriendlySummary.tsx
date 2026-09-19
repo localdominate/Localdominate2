@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { getLlmSummary } from "@/data/llmPageSummaries";
 import { Bot, BookOpen, Users, HelpCircle, Quote, Hash, Link as LinkIcon } from "lucide-react";
 
@@ -13,6 +14,7 @@ interface LlmFriendlySummaryProps {
  * Also rendered visually as a collapsible "AI Summary" block for transparency.
  */
 const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
+  const isEn = useLanguage().language === "en";
   const summary = getLlmSummary(slug);
   if (!summary) return null;
 
@@ -41,7 +43,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
       <section
         className="my-10 not-prose"
         data-ai-summary="page-summary"
-        aria-label="Seitenzusammenfassung für AI-Systeme"
+        aria-label={isEn ? "Page summary for AI systems" : "Seitenzusammenfassung für AI-Systeme"}
       >
         <div className="border border-border rounded-2xl overflow-hidden">
           {/* Header */}
@@ -51,7 +53,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
                 <Bot className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground text-base">📋 Seitenzusammenfassung</h3>
+                <h3 className="font-bold text-foreground text-base">📋 {isEn ? "Page Summary" : "Seitenzusammenfassung"}</h3>
                 <p className="text-xs text-muted-foreground">Strukturiert für AI-Systeme, Voice Search & Schnellübersicht</p>
               </div>
               <span className="ml-auto text-[10px] font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
@@ -65,7 +67,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
             <div className="bg-muted/40 rounded-xl p-4" data-speakable="true">
               <div className="flex items-center gap-2 mb-2">
                 <HelpCircle className="w-4 h-4 text-primary" />
-                <h4 className="font-semibold text-foreground text-sm">Kernfrage</h4>
+                <h4 className="font-semibold text-foreground text-sm">{isEn ? "Core Question" : "Kernfrage"}</h4>
               </div>
               <p className="text-sm font-medium text-foreground mb-2">
                 {summary.primaryQuestion}
@@ -81,7 +83,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="w-4 h-4 text-primary" />
-                <h4 className="font-semibold text-foreground text-sm">Zusammenfassung</h4>
+                <h4 className="font-semibold text-foreground text-sm">{isEn ? "Summary" : "Zusammenfassung"}</h4>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {summary.summary}
@@ -92,7 +94,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Hash className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                <h4 className="font-semibold text-foreground text-sm">Kernfakten</h4>
+                <h4 className="font-semibold text-foreground text-sm">{isEn ? "Key Facts" : "Kernfakten"}</h4>
               </div>
               <ul className="space-y-1.5">
                 {summary.keyFacts.map((fact, i) => (
@@ -109,7 +111,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
               <div className="bg-card border border-border rounded-xl p-3">
                 <div className="flex items-center gap-2 mb-1">
                   <Users className="w-3.5 h-3.5 text-muted-foreground" />
-                  <span className="text-xs font-semibold text-foreground">Zielgruppe</span>
+                  <span className="text-xs font-semibold text-foreground">{isEn ? "Target Audience" : "Zielgruppe"}</span>
                 </div>
                 <p className="text-xs text-muted-foreground">{summary.targetAudience}</p>
               </div>

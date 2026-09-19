@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { BarChart3, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -22,6 +23,7 @@ interface StatisticBoxProps {
 }
 
 const StatisticBox = ({ data, className, variant = "default" }: StatisticBoxProps) => {
+  const isEn = useLanguage().language === "en";
   const isCompact = variant === "compact";
   const isHighlight = variant === "highlight";
 
@@ -89,7 +91,7 @@ const StatisticBox = ({ data, className, variant = "default" }: StatisticBoxProp
         "px-5 py-2 border-t text-xs text-muted-foreground/70",
         isHighlight ? "border-primary/20" : "border-border/40"
       )}>
-        <span>Quelle: </span>
+        <span>{isEn ? "Source: " : "Quelle: "}</span>
         {data.sourceUrl ? (
           <a
             href={data.sourceUrl}

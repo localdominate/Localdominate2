@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie, RadarChart, PolarGrid, PolarAngleAxis, Radar, Legend } from "recharts";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -25,7 +26,9 @@ const COLORS = [
   "hsl(173 58% 39%)",
 ];
 
-export const RankingFactorChart = ({ data, title, source }: RankingFactorChartProps) => (
+export const RankingFactorChart = ({ data, title, source }: RankingFactorChartProps) => {
+  const isEn = useLanguage().language === "en";
+  return (
   <Card className="my-8 not-prose" data-ai-summary="true">
     <CardContent className="pt-6">
       <h4 className="font-bold text-foreground text-sm mb-4">{title}</h4>
@@ -44,10 +47,11 @@ export const RankingFactorChart = ({ data, title, source }: RankingFactorChartPr
           </Bar>
         </BarChart>
       </ResponsiveContainer>
-      {source && <p className="text-xs text-muted-foreground mt-3 pt-2 border-t border-border/40">Quelle: {source}</p>}
+      {source && <p className="text-xs text-muted-foreground mt-3 pt-2 border-t border-border/40">{isEn ? "Source:" : "Quelle:"} {source}</p>}
     </CardContent>
   </Card>
-);
+  );
+};
 
 // ===== 2. Comparison Radar Chart =====
 export interface RadarDataPoint {

@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Lightbulb, AlertTriangle, TrendingUp, Zap, Info, Quote, Star } from "lucide-react";
 import { ReactNode } from "react";
 
@@ -86,6 +87,7 @@ const InsightCalloutBox = ({
   statValue,
   statLabel,
 }: InsightCalloutBoxProps) => {
+  const isEn = useLanguage().language === "en";
   const config = variantConfig[variant];
   const Icon = config.icon;
   const displayTitle = title ?? config.defaultTitle;
@@ -124,7 +126,7 @@ const InsightCalloutBox = ({
       {/* Source */}
       {source && (
         <p className="text-xs text-muted-foreground mt-3 pt-2 border-t border-current/10">
-          Quelle: {source}
+          {isEn ? "Source:" : "Quelle:"} {source}
         </p>
       )}
     </aside>

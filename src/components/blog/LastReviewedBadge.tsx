@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Shield, CheckCircle, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -12,7 +13,8 @@ const LastReviewedBadge = ({
   reviewerName = "Local Dominator Team",
   variant = "default"
 }: LastReviewedBadgeProps) => {
-  const formattedDate = new Date(reviewDate).toLocaleDateString('de-DE', {
+  const isEn = useLanguage().language === "en";
+  const formattedDate = new Date(reviewDate).toLocaleDateString(isEn ? 'en-GB' : 'de-DE', {
     year: 'numeric',
     month: 'long'
   });
@@ -24,7 +26,7 @@ const LastReviewedBadge = ({
         className="bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800 text-green-700 dark:text-green-300 gap-1"
       >
         <Shield className="h-3 w-3" />
-        Geprüft: {formattedDate}
+        {isEn ? "Reviewed:" : "Geprüft:"} {formattedDate}
       </Badge>
     );
   }
