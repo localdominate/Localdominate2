@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { BusinessCategory, getAllStepsForCategory, QuestionnaireStep } from '@/data/questionnaireConfig';
 import type { Json } from '@/integrations/supabase/types';
@@ -24,6 +24,8 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     isComplete: false,
   });
 
+  const sessionRef = useRef<string | null>(null);
+
   // Initialize or fetch customer
   useEffect(() => {
     if (!sessionId && !isTestMode) {
@@ -34,7 +36,7 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     async function initCustomer() {
       try {
         const activeSessionId = isTestMode && !sessionId ? `test_${Date.now()}` : sessionId!;
-        setActiveSession(activeSessionId);
+        sessionRef.current = activeSessionId;
 
         const { data, error } = await supabase.functions.invoke('customer-onboarding', {
           body: { action: 'init', sessionId: activeSessionId },
