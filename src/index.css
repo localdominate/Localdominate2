@@ -1566,6 +1566,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-bottom: 1rem;
+  max-width: 100%;
 }
 
 .mobile-scroll-container::-webkit-scrollbar {
