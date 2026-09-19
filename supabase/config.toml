@@ -44,3 +44,6 @@ verify_jwt = false
 
 [functions.upload-customer-file]
 verify_jwt = false
+
+[functions.customer-onboarding]
+verify_jwt = false
