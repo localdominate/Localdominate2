@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ interface BlogCTAABTestProps {
 }
 
 const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
+  const isEn = useLanguage().language === "en";
   const { variant } = useABTest();
   const hasTrackedView = useRef(false);
 
@@ -78,11 +80,11 @@ const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
       <div className="flex flex-wrap gap-4 mb-6">
         <span className="inline-flex items-center gap-2 text-sm">
           <Shield className="h-4 w-4" />
-          100% Geld-zurück-Garantie
+          {isEn ? "100% money-back guarantee" : "100% Geld-zurück-Garantie"}
         </span>
         <span className="inline-flex items-center gap-2 text-sm">
           <Clock className="h-4 w-4" />
-          Fertig in 7 Tagen
+          {isEn ? "Completed within 7 days" : "Fertig in 7 Tagen"}
         </span>
       </div>
       <div className="flex flex-wrap items-center gap-4">
@@ -97,7 +99,7 @@ const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
           </Button>
         </Link>
         <span className="text-sm text-white/80">
-          Einmalig, keine versteckten Kosten
+          {isEn ? "One-time payment, no hidden fees" : "Einmalig, keine versteckten Kosten"}
         </span>
       </div>
     </div>

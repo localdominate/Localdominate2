@@ -29,6 +29,7 @@ const AmortizationChart = ({
   breakevenDays,
 }: AmortizationChartProps) => {
   const { language } = useLanguage();
+  const isEn = language === "en";
   const [animationProgress, setAnimationProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const chartRef = useRef<HTMLDivElement>(null);
@@ -282,7 +283,7 @@ const AmortizationChart = ({
       <div className="flex items-center justify-center gap-4 mt-2 text-xs text-muted-foreground">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-0.5 bg-destructive rounded" />
-          <span>Vor Breakeven</span>
+          <span>{isEn ? "Before break-even" : "Vor Breakeven"}</span>
         </div>
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-3 rounded-full bg-primary border-2 border-white shadow" />

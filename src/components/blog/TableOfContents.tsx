@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { useState, useEffect } from "react";
 import { List } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -13,6 +14,7 @@ interface TableOfContentsProps {
 }
 
 const TableOfContents = ({ items }: TableOfContentsProps) => {
+  const isEn = useLanguage().language === "en";
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
@@ -69,7 +71,7 @@ const TableOfContents = ({ items }: TableOfContentsProps) => {
     <nav className="bg-muted/50 border border-border rounded-xl p-5 mb-8 xl:hidden">
       <div className="flex items-center gap-2 mb-4">
         <List className="h-5 w-5 text-primary" />
-        <h2 className="font-semibold text-foreground">Inhaltsverzeichnis</h2>
+        <h2 className="font-semibold text-foreground">{isEn ? "Table of Contents" : "Inhaltsverzeichnis"}</h2>
       </div>
       <ol className="space-y-1">
         {items.map((item) => {

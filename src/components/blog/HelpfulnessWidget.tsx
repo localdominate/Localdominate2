@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { useState } from "react";
 import { ThumbsUp, ThumbsDown, CheckCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,9 +11,11 @@ interface HelpfulnessWidgetProps {
 }
 
 const HelpfulnessWidget = ({ 
+  const isEn = useLanguage().language === "en";
   articleSlug,
-  question = "War dieser Artikel hilfreich?"
+  question: questionProp
 }: HelpfulnessWidgetProps) => {
+  const question = questionProp ?? (isEn ? "Was this article helpful?" : "War dieser Artikel hilfreich?");
   const [voted, setVoted] = useState<"yes" | "no" | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedback, setFeedback] = useState("");
@@ -93,7 +96,7 @@ const HelpfulnessWidget = ({
               onClick={() => handleVote("yes")}
             >
               <ThumbsUp className="h-5 w-5" />
-              Ja, sehr hilfreich
+              {isEn ? "Yes, very helpful" : "Ja, sehr hilfreich"}
             </Button>
             <Button
               variant="outline"
@@ -102,7 +105,7 @@ const HelpfulnessWidget = ({
               onClick={() => handleVote("no")}
             >
               <ThumbsDown className="h-5 w-5" />
-              Nein, fehlt etwas
+              {isEn ? "No, something is missing" : "Nein, fehlt etwas"}
             </Button>
           </div>
         )}

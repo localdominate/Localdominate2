@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Twitter, Linkedin, Facebook, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +9,7 @@ interface SocialShareProps {
 }
 
 const SocialShare = ({ url, title, description }: SocialShareProps) => {
+  const isEn = useLanguage().language === "en";
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description || "");
@@ -45,7 +47,7 @@ const SocialShare = ({ url, title, description }: SocialShareProps) => {
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground mr-2">Teilen:</span>
+      <span className="text-sm text-muted-foreground mr-2">{isEn ? "Share:" : "Teilen:"}</span>
       {shareLinks.map((link) => (
         <Button
           key={link.name}

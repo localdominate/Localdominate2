@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,7 @@ interface ArticleCTAProps {
 }
 
 const ArticleCTA = ({ variant = "box" }: ArticleCTAProps) => {
+  const isEn = useLanguage().language === "en";
   if (variant === "inline") {
     return (
       <div className="my-8 p-6 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl">
@@ -32,11 +34,11 @@ const ArticleCTA = ({ variant = "box" }: ArticleCTAProps) => {
       <div className="flex flex-wrap gap-4 mb-6">
         <span className="inline-flex items-center gap-2 text-sm">
           <Shield className="h-4 w-4" />
-          100% Geld-zurück-Garantie
+          {isEn ? "100% money-back guarantee" : "100% Geld-zurück-Garantie"}
         </span>
         <span className="inline-flex items-center gap-2 text-sm">
           <Clock className="h-4 w-4" />
-          Fertig in 7 Tagen
+          {isEn ? "Completed within 7 days" : "Fertig in 7 Tagen"}
         </span>
       </div>
       <div className="flex flex-wrap items-center gap-4">
@@ -51,7 +53,7 @@ const ArticleCTA = ({ variant = "box" }: ArticleCTAProps) => {
           </Button>
         </Link>
         <span className="text-sm text-primary-foreground/80">
-          Einmalig, keine versteckten Kosten
+          {isEn ? "One-time payment, no hidden fees" : "Einmalig, keine versteckten Kosten"}
         </span>
       </div>
     </div>

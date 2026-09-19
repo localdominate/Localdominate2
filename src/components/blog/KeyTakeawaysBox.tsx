@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Lightbulb, CheckCircle } from "lucide-react";
 
 interface KeyTakeawaysBoxProps {
@@ -7,10 +8,12 @@ interface KeyTakeawaysBoxProps {
 }
 
 const KeyTakeawaysBox = ({ 
-  title = "Das lernst du in diesem Artikel:",
+  const isEn = useLanguage().language === "en";
+  title: titleProp,
   items,
   variant = "default"
 }: KeyTakeawaysBoxProps) => {
+  const title = titleProp ?? (isEn ? "What you will learn in this article:" : "Das lernst du in diesem Artikel:");
   if (variant === "compact") {
     return (
       <div 

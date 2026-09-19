@@ -99,6 +99,7 @@ const ArticleLayout = ({
   articleType = 'standard'
 }: ArticleLayoutProps) => {
   const { language } = useLanguage();
+  const isEn = language === "en";
   const relatedArticles = getRelatedArticles(article.slug, 6, language);
   const hasTrackedView = useRef(false);
   const [viewId, setViewId] = useState<string | null>(null);
@@ -831,7 +832,7 @@ const ArticleLayout = ({
           )} aria-label="Inhaltsverzeichnis">
             <div className="flex items-center gap-2 mb-4">
               <List className="h-5 w-5 text-primary" />
-              <h2 className="font-semibold text-foreground text-base">Inhaltsverzeichnis</h2>
+              <h2 className="font-semibold text-foreground text-base">{language === "en" ? "Table of Contents" : "Inhaltsverzeichnis"}</h2>
             </div>
             <ol className="space-y-1">
               {(() => {
