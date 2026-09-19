@@ -219,14 +219,16 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     if (!state.customerId) return null;
 
     try {
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${state.customerId}/${assetType}_${Date.now()}.${fileExt}`;
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('customer_id', state.customerId);
 
-      const { error: uploadError } = await supabase.storage
-        .from('customer-uploads')
-        .upload(fileName, file);
+      const { data, error } = await supabase.functions.invoke('upload-customer-file', {
+        body: formData,
+      });
 
-      if (uploadError) throw uploadError;
+      if (error) throw error;
+      if (!data?.path) throw new Error('Upload failed');
 
       // Save reference in database
       await supabase
@@ -234,15 +236,11 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
         .insert({
           customer_id: state.customerId,
           asset_type: assetType,
-          storage_path: fileName,
+          storage_path: data.path,
           file_name: file.name,
         });
 
-      const { data: { publicUrl } } = supabase.storage
-        .from('customer-uploads')
-        .getPublicUrl(fileName);
-
-      return publicUrl;
+      return data.url ?? data.path;
     } catch (error) {
       console.error('Error uploading file:', error);
       return null;
