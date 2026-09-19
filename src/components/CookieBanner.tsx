@@ -8,6 +8,11 @@ const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { language } = useLanguage();
 
+  const updateConsent = (settings: Record<string, string>) => {
+    const analyticsWindow = window as typeof window & { gtag?: (...args: unknown[]) => void };
+    analyticsWindow.gtag?.('consent', 'update', settings);
+  };
+
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
     if (!consent) {
@@ -24,8 +29,8 @@ const CookieBanner = () => {
     localStorage.setItem("cookieConsentTimestamp", new Date().toISOString());
     
     // Update Google Consent Mode V2
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag('consent', 'update', {
+    if (typeof window !== "undefined") {
+      updateConsent({
         'ad_storage': 'granted',
         'ad_user_data': 'granted',
         'ad_personalization': 'granted',
@@ -52,8 +57,8 @@ const CookieBanner = () => {
     localStorage.setItem("cookieConsentTimestamp", new Date().toISOString());
     
     // Keep consent denied for tracking, only allow functionality
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag('consent', 'update', {
+    if (typeof window !== "undefined") {
+      updateConsent({
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
