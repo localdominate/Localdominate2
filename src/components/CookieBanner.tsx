@@ -4,13 +4,6 @@ import { Cookie, Settings } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 
-declare global {
-  interface Window {
-    dataLayer: Record<string, unknown>[];
-    gtag: (...args: unknown[]) => void;
-  }
-}
-
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { language } = useLanguage();
