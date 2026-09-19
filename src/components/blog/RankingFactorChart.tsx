@@ -20,6 +20,7 @@ interface RankingFactorChartProps {
  * Accessible, responsive, no external chart library needed.
  */
 const RankingFactorChart = ({ title, factors, caption }: RankingFactorChartProps) => {
+  const isEn = useLanguage().language === "en";
   const maxWeight = Math.max(...factors.map(f => f.weight));
 
   return (
@@ -28,7 +29,6 @@ const RankingFactorChart = ({ title, factors, caption }: RankingFactorChartProps
         <h4 className="font-bold text-foreground text-base mb-5">{title}</h4>
         <div className="space-y-3" role="list" aria-label="Ranking-Faktoren Gewichtung">
           {factors.map((factor, i) => {
-  const isEn = useLanguage().language === "en";
             const widthPercent = (factor.weight / maxWeight) * 100;
             const trendIcon = factor.trend === "up" ? "↑" : factor.trend === "down" ? "↓" : "→";
             const trendColor = factor.trend === "up"
