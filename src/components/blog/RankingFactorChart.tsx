@@ -1,3 +1,4 @@
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -27,6 +28,7 @@ const RankingFactorChart = ({ title, factors, caption }: RankingFactorChartProps
         <h4 className="font-bold text-foreground text-base mb-5">{title}</h4>
         <div className="space-y-3" role="list" aria-label="Ranking-Faktoren Gewichtung">
           {factors.map((factor, i) => {
+  const isEn = useLanguage().language === "en";
             const widthPercent = (factor.weight / maxWeight) * 100;
             const trendIcon = factor.trend === "up" ? "↑" : factor.trend === "down" ? "↓" : "→";
             const trendColor = factor.trend === "up"
@@ -55,7 +57,9 @@ const RankingFactorChart = ({ title, factors, caption }: RankingFactorChartProps
           })}
         </div>
         <p className="text-xs text-muted-foreground/70 mt-4">
-          Quelle: Whitespark/Moz Local Search Ranking Factors, eigene Analyse 2025/2026
+          {isEn
+            ? "Source: Whitespark/Moz Local Search Ranking Factors, own analysis 2025/2026"
+            : "Quelle: Whitespark/Moz Local Search Ranking Factors, eigene Analyse 2025/2026"}
         </p>
       </Card>
       {caption && (
