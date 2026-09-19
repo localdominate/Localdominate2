@@ -178,21 +178,10 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     setState(prev => ({ ...prev, isSaving: true }));
 
     try {
-      // Mark questionnaire as complete
-      await supabase
-        .from('customers')
-        .update({
-          questionnaire_completed: true,
-          questionnaire_completed_at: new Date().toISOString(),
-        })
-        .eq('id', state.customerId);
-
-      // Get customer email from responses or customer table
-      const { data: customer } = await supabase
-        .from('customers')
-        .select('email')
-        .eq('id', state.customerId)
-        .single();
+      // Mark questionnaire as complete (server-side, service role)
+      await supabase.functions.invoke('customer-onboarding', {
+        body: { action: 'complete', sessionId: sessionRef.current },
+      });
 
       // Send confirmation email with questionnaire results (uses service role in edge function)
       const recipientEmail = 'markuswimboeck@googlemail.com';
