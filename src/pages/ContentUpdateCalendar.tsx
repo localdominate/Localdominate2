@@ -238,13 +238,13 @@ const ContentUpdateCalendar = () => {
             <Card>
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
-                  <Button variant="ghost" size="icon" onClick={prevMonth}>
+                  <Button aria-label="Vorheriger Monat" variant="ghost" size="icon" onClick={prevMonth}>
                     <ChevronLeft className="h-5 w-5" />
                   </Button>
                   <CardTitle className="text-lg">
                     {MONTHS_DE[currentMonth.getMonth()]} {currentMonth.getFullYear()}
                   </CardTitle>
-                  <Button variant="ghost" size="icon" onClick={nextMonth}>
+                  <Button aria-label="Nächster Monat" variant="ghost" size="icon" onClick={nextMonth}>
                     <ChevronRight className="h-5 w-5" />
                   </Button>
                 </div>

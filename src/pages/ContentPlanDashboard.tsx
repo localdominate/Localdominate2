@@ -311,13 +311,13 @@ const ContentPlanDashboard = () => {
                     {format(currentMonth, "MMMM yyyy", { locale: de })}
                   </CardTitle>
                   <div className="flex items-center gap-2">
-                    <Button variant="outline" size="icon" onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}>
+                    <Button aria-label="Vorheriger Monat" variant="outline" size="icon" onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}>
                       <ChevronLeft className="w-4 h-4" />
                     </Button>
                     <Button variant="outline" size="sm" onClick={() => setCurrentMonth(new Date())}>
                       Heute
                     </Button>
-                    <Button variant="outline" size="icon" onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}>
+                    <Button aria-label="Nächster Monat" variant="outline" size="icon" onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}>
                       <ChevronRight className="w-4 h-4" />
                     </Button>
                   </div>
