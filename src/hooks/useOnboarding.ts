@@ -135,18 +135,16 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
 
       // Update customer basic info if relevant
       if (stepKey === 'basic_info' || stepKey === 'contact') {
-        const updates: Record<string, unknown> = {};
-        if (data.business_name) updates.business_name = data.business_name;
-        if (data.address) updates.address = data.address;
-        if (data.phone) updates.phone = data.phone;
-        if (data.email) updates.email = data.email;
-
-        if (Object.keys(updates).length > 0) {
-          await supabase
-            .from('customers')
-            .update(updates)
-            .eq('id', state.customerId);
-        }
+        await supabase.functions.invoke('customer-onboarding', {
+          body: {
+            action: 'update_profile',
+            sessionId: sessionRef.current,
+            business_name: data.business_name,
+            address: data.address,
+            phone: data.phone,
+            email: data.email,
+          },
+        });
       }
 
       setState(prev => ({
