@@ -1,5 +1,9 @@
 import { trackConversion } from "./analyticsStorage";
 
+export const STANDARD_PRICE_EUR = 299;
+export const PACKAGE_VALUE_EUR = 626;
+export const AGENCY_PRICE_EUR = 1500;
+
 // Base product URLs
 export const STRIPE_URLS = {
   standard: "https://buy.stripe.com/eVq14n73U74jdLocjd0ZW02",  // 299€
@@ -49,7 +53,7 @@ export type AddOnId = keyof typeof ADD_ON_PRODUCTS;
 
 // Calculate total price with add-ons
 export const calculateTotalPrice = (baseType: "standard" | "discount", addOns: AddOnId[] = []): number => {
-  const basePrice = baseType === "standard" ? 299 : 199;
+  const basePrice = baseType === "standard" ? STANDARD_PRICE_EUR : 199;
   const addOnTotal = addOns.reduce((sum, id) => sum + (ADD_ON_PRODUCTS[id]?.price || 0), 0);
   return basePrice + addOnTotal;
 };
@@ -67,7 +71,7 @@ export const openStripeCheckout = (
   ctaText?: string,
   addOns: AddOnId[] = []
 ) => {
-  const baseAmount = type === "standard" ? 299 : 199;
+  const baseAmount = type === "standard" ? STANDARD_PRICE_EUR : 199;
   const totalAmount = calculateTotalPrice(type, addOns);
   
   // Track conversion with add-on info

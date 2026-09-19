@@ -9,6 +9,11 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = "", prefix = "" }: { e
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+      setCount(end);
+      setIsVisible(true);
+      return;
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
@@ -40,7 +45,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = "", prefix = "" }: { e
     requestAnimationFrame(animate);
   }, [isVisible, end, duration]);
 
-  return <span ref={ref}>{prefix}{count}{suffix}</span>;
+  return <span ref={ref}>{prefix}{isVisible ? count : end}{suffix}</span>;
 };
 
 const GoogleLocalPackResult = ({ 
@@ -157,6 +162,9 @@ const RankingComparison = () => {
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             {t.ranking.tagline}
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            {t.ranking.sampleLabel}
           </p>
         </div>
 
@@ -352,7 +360,7 @@ const RankingComparison = () => {
               </div>
               <div className="text-left">
                 <div className="text-sm text-muted-foreground">{t.ranking.avgIncrease}</div>
-                <div className="text-2xl font-bold text-primary">+1.467% {t.ranking.moreCalls}</div>
+                <div className="text-2xl font-bold text-primary">+1.467 % {t.ranking.moreCalls}</div>
               </div>
             </div>
           </div>

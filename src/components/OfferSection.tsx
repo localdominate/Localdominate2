@@ -8,7 +8,7 @@ import AddOnsSection from "@/components/AddOnsSection";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { trackButtonClick } from "@/lib/dataLayer";
-import { openStripeCheckout, calculateTotalPrice, type AddOnId } from "@/lib/stripe";
+import { openStripeCheckout, calculateTotalPrice, STANDARD_PRICE_EUR, AGENCY_PRICE_EUR, type AddOnId } from "@/lib/stripe";
 import { useAutoOptimizerContext } from "@/components/AutoOptimizerProvider";
 import { CTA_COLOR_VARIANTS, PRICE_DISPLAY_VARIANTS } from "@/lib/autoOptimizerConfig";
 import { useABTestConversion } from "@/hooks/useABTestConversion";
@@ -38,13 +38,13 @@ const OfferSection = () => {
   };
   
   // Calculate total price (in EUR base)
-  const basePrice = 299;
+  const basePrice = STANDARD_PRICE_EUR;
   const totalPrice = calculateTotalPrice("standard", selectedAddOns);
   
   // Currency-aware prices
   const displayBasePrice = convertPrice(basePrice, language);
   const displayTotalPrice = convertPrice(totalPrice, language);
-  const displayAnchorPrice = convertPrice(1500, language);
+  const displayAnchorPrice = convertPrice(AGENCY_PRICE_EUR, language);
   const currencyPrefix = getCurrencyPrefix(language);
   const currencySuffix = getCurrencySuffix(language);
   
@@ -114,12 +114,12 @@ const OfferSection = () => {
             <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">{priceDisplayText}</p>
             <div className="flex items-center gap-4 mb-4">
               <div className="text-center">
-                <p className="text-2xl text-muted-foreground/50 line-through">{formatPrice(1500, language)}+</p>
+                 <p className="text-2xl text-muted-foreground/50 line-through">{formatPrice(AGENCY_PRICE_EUR, language)}+</p>
                 <p className="text-xs text-muted-foreground">{agencyLabel}</p>
               </div>
               <span className="text-2xl">→</span>
               <div className="text-center">
-                <p className="text-4xl md:text-5xl font-bold text-foreground">{formatPrice(299, language)}</p>
+                 <p className="text-4xl md:text-5xl font-bold text-foreground">{formatPrice(STANDARD_PRICE_EUR, language)}</p>
                 <p className="text-xs text-primary font-semibold">Local Dominator</p>
               </div>
             </div>
@@ -157,7 +157,7 @@ const OfferSection = () => {
   };
 
   return (
-    <section className="bg-background-alt section-padding px-4">
+    <section id="angebot" className="bg-background-alt section-padding px-4">
       <div ref={ref} className="container max-w-4xl">
         {/* Section header */}
         <div className={`text-center mb-12 reveal ${isVisible ? 'visible' : ''}`}>

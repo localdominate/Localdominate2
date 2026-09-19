@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { formatPrice } from "@/lib/currency";
 
 interface ValueComparisonBarProps {
   totalValue: number;
@@ -59,7 +60,7 @@ const ValueComparisonBar = ({ totalValue, yourPrice }: ValueComparisonBarProps) 
       <div className="space-y-2">
         <div className="flex justify-between text-sm">
           <span className="text-muted-foreground">{t.totalValue}</span>
-          <span className="font-bold text-foreground">{totalValue}€+</span>
+          <span className="font-bold text-foreground">{formatPrice(totalValue, language)}+</span>
         </div>
         <div className="h-4 bg-muted rounded-full overflow-hidden">
           <div 
@@ -73,7 +74,7 @@ const ValueComparisonBar = ({ totalValue, yourPrice }: ValueComparisonBarProps) 
       <div className="space-y-2">
         <div className="flex justify-between text-sm">
           <span className="text-muted-foreground">{t.yourPrice}</span>
-          <span className="font-bold text-primary">{yourPrice}€</span>
+          <span className="font-bold text-primary">{formatPrice(yourPrice, language)}</span>
         </div>
         <div className="h-4 bg-muted rounded-full overflow-hidden">
           <div 
@@ -86,7 +87,7 @@ const ValueComparisonBar = ({ totalValue, yourPrice }: ValueComparisonBarProps) 
       {/* Savings Callout */}
       <div className="flex items-center justify-center gap-2 pt-2">
         <span className="text-sm text-muted-foreground">{t.savings}:</span>
-        <span className="text-lg font-bold text-success">{savings}€+</span>
+        <span className="text-lg font-bold text-success">{formatPrice(savings, language)}+</span>
         <span className="text-xs text-success bg-success/10 px-2 py-0.5 rounded-full">
           {Math.round((savings / totalValue) * 100)}%
         </span>
