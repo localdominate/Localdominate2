@@ -5,6 +5,7 @@ import { getSessionId, getVariant, getTestId } from "@/lib/sessionManager";
 declare global {
   interface Window {
     dataLayer: any[];
+    gtag: (...args: unknown[]) => void;
   }
 }
 
