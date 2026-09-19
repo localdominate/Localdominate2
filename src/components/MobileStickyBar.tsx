@@ -90,7 +90,7 @@ const MobileStickyBar = () => {
           }
 
           return (
-            <button key={item.label} onClick={item.action} className="flex-1 flex justify-center">
+            <button key={item.label} onClick={item.action} className="flex-1 flex justify-center" aria-label={item.label}>
               {content}
             </button>
           );
@@ -100,6 +100,7 @@ const MobileStickyBar = () => {
         <div className="flex-1 px-2 py-1.5">
           <button
             onClick={handleCtaClick}
+            aria-label={t.cta}
             className="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm shadow-md active:scale-[0.97] transition-transform"
           >
             {t.cta}

@@ -399,7 +399,7 @@ const ArticleLayout = ({
   const localSearchServiceSchema = {
     "@type": "Service",
     "@id": `https://localdominate.org/blog/${article.slug}#local-search-service`,
-    "name": language === "de" ? `Local SEO Beratung: ${article.title}` : `Local SEO consulting: ${article.title}`,
+    "name": language === "de" ? `Local SEO Beratung: ${article.title}` : language === "ar" ? `استشارة Local SEO: ${article.title}` : `Local SEO consulting: ${article.title}`,
     "serviceType": "Local SEO, Google Maps Optimierung, Google Business Profil Optimierung, Generative Engine Optimization",
     "category": article.category,
     "provider": { "@id": "https://localdominate.org/#organization" },
@@ -412,7 +412,7 @@ const ArticleLayout = ({
     },
     "audience": {
       "@type": "BusinessAudience",
-      "audienceType": language === "de" ? "lokale Unternehmen im DACH-Raum" : "local businesses in the DACH region"
+      "audienceType": language === "de" ? "lokale Unternehmen im DACH-Raum" : language === "ar" ? "الشركات المحلية في منطقة DACH" : "local businesses in the DACH region"
     },
     "offers": {
       "@type": "Offer",
@@ -448,7 +448,7 @@ const ArticleLayout = ({
       "@type": "Audience",
       "audienceType": language === "de"
         ? "Lokale Unternehmen, Selbstständige, Gastronomen, Handwerker, Ärzte, Anwälte"
-        : "Local businesses, freelancers, restaurants, tradespeople, doctors, lawyers"
+        : language === "ar" ? "الشركات المحلية والمستقلون والمطاعم والحرفيون والأطباء والمحامون" : "Local businesses, freelancers, restaurants, tradespeople, doctors, lawyers"
     },
     "spatialCoverage": articleAreaServed,
     "areaServed": articleAreaServed,
@@ -507,7 +507,7 @@ const ArticleLayout = ({
       "width": 1200,
       "height": 630
     },
-    "inLanguage": language === "de" ? "de-DE" : "en-US",
+    "inLanguage": language === "de" ? "de-DE" : language === "ar" ? "ar" : "en-GB",
     "isPartOf": {
       "@id": "https://localdominate.org/#website"
     },
@@ -529,8 +529,8 @@ const ArticleLayout = ({
       ]
     },
     "usageInfo": "https://localdominate.org/llms.txt",
-    "creditText": "Quelle: Local Dominator (localdominate.org)",
-    "copyrightNotice": "© Local Dominator - Zitieren mit Quellenangabe erlaubt",
+    "creditText": language === "de" ? "Quelle: Local Dominator (localdominate.org)" : language === "ar" ? "المصدر: Local Dominator (localdominate.org)" : "Source: Local Dominator (localdominate.org)",
+    "copyrightNotice": language === "de" ? "© Local Dominator - Zitieren mit Quellenangabe erlaubt" : language === "ar" ? "© Local Dominator — يُسمح بالاقتباس مع ذكر المصدر" : "© Local Dominator — citation permitted with attribution",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "acquireLicensePage": "https://localdominate.org/llms.txt",
     "citation": [
@@ -551,7 +551,7 @@ const ArticleLayout = ({
             "@id": `https://localdominate.org/blog-md/${article.slug}.md`,
             "name": `${article.title} — Markdown (AI-readable)`,
             "encodingFormat": "text/markdown",
-            "inLanguage": language === "de" ? "de-DE" : "en-US",
+            "inLanguage": language === "de" ? "de-DE" : language === "ar" ? "ar" : "en-GB",
             "url": `https://localdominate.org/blog-md/${article.slug}.md`,
             "isAccessibleForFree": true,
             "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -669,7 +669,7 @@ const ArticleLayout = ({
     "@type": "LocalBusiness",
     "@id": "https://localdominate.org/#localbusiness",
     "name": "Local Dominator",
-    "description": "Local SEO Experten für lokale Unternehmen im DACH-Raum",
+    "description": language === "de" ? "Local SEO Experten für lokale Unternehmen im DACH-Raum" : language === "ar" ? "خبراء Local SEO للشركات المحلية في منطقة DACH" : "Local SEO experts for local businesses in the DACH region",
     "url": "https://localdominate.org",
     "address": {
       "@type": "PostalAddress",
@@ -736,9 +736,9 @@ const ArticleLayout = ({
 
   const combinedSchema = buildCombinedSchema();
 
-  const readingTimeText = language === "de" ? "Min. Lesezeit" : "min read";
-  const updatedText = language === "de" ? "Aktualisiert" : "Updated";
-  const dateLocale = language === "de" ? "de-DE" : "en-US";
+  const readingTimeText = language === "de" ? "Min. Lesezeit" : language === "ar" ? "دقيقة قراءة" : "min read";
+  const updatedText = language === "de" ? "Aktualisiert" : language === "ar" ? "محدّث" : "Updated";
+  const dateLocale = language === "de" ? "de-DE" : language === "ar" ? "ar-SA" : "en-GB";
 
   return (
     <div className="min-h-screen bg-background">
@@ -828,10 +828,10 @@ const ArticleLayout = ({
           <nav id="auto-toc-nav" className={cn(
             "bg-muted/50 border border-border rounded-xl p-5 mb-8 not-prose",
             tocItems && tocItems.length > 0 ? "xl:hidden" : "" // Hide on desktop only when sticky TOC exists
-          )} aria-label="Inhaltsverzeichnis">
+          )} aria-label={language === "de" ? "Inhaltsverzeichnis" : language === "ar" ? "جدول المحتويات" : "Table of Contents"}>
             <div className="flex items-center gap-2 mb-4">
               <List className="h-5 w-5 text-primary" />
-              <h2 className="font-semibold text-foreground text-base">{language === "en" ? "Table of Contents" : "Inhaltsverzeichnis"}</h2>
+              <h2 className="font-semibold text-foreground text-base">{language === "de" ? "Inhaltsverzeichnis" : language === "ar" ? "جدول المحتويات" : "Table of Contents"}</h2>
             </div>
             <ol className="space-y-1">
               {(() => {

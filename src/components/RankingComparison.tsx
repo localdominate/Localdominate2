@@ -131,9 +131,11 @@ const GoogleLocalPackResult = ({
       {isHighlighted && (
         <div className="flex gap-2 flex-shrink-0">
           <button className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+            <span className="sr-only">{t.ranking.directions}</span>
             <Navigation className="w-4 h-4 text-primary" />
           </button>
           <button className="p-2 rounded-full bg-success/10 hover:bg-success/20 transition-colors">
+            <span className="sr-only">{t.ranking.call}</span>
             <Phone className="w-4 h-4 text-success" />
           </button>
         </div>

@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
 import { formatPrice } from "@/lib/currency";
+import { ADD_ON_PRODUCTS } from "@/lib/stripe";
 
 export interface AddOn {
   id: string;
@@ -27,23 +28,23 @@ const AddOnsSection = ({ selectedAddOns, onToggleAddOn, showHeader = true }: Add
     {
       id: "express",
       icon: <Clock className="w-5 h-5" />,
-      price: 99,
+      price: ADD_ON_PRODUCTS.express.price,
       popular: true,
     },
     {
       id: "competitor",
       icon: <BarChart3 className="w-5 h-5" />,
-      price: 79,
+      price: ADD_ON_PRODUCTS.competitor.price,
     },
     {
       id: "premium_texts",
       icon: <FileText className="w-5 h-5" />,
-      price: 99,
+      price: ADD_ON_PRODUCTS.premium_texts.price,
     },
     {
       id: "photo_pack",
       icon: <Zap className="w-5 h-5" />,
-      price: 149,
+      price: ADD_ON_PRODUCTS.photo_pack.price,
     },
   ];
 

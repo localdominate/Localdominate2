@@ -1,5 +1,7 @@
 export type Language = "de" | "en" | "ar";
 
+import { STANDARD_PRICE_EUR } from "@/lib/stripe";
+
 export const translations = {
   de: {
     // AnnouncementBar
@@ -18,8 +20,8 @@ export const translations = {
       subheadlineMid: ". Deine Konkurrenten stehen oben.",
       stopIt: "Schluss damit.",
       subheadlineEnd: "Wir katapultieren dich in die Top 3 – zum Festpreis.",
-      ctaFull: "Jetzt Marktherrschaft sichern (299€)",
-      ctaShort: "Jetzt starten (299€)",
+      ctaFull: `Jetzt Marktherrschaft sichern (${STANDARD_PRICE_EUR} €)`,
+      ctaShort: `Jetzt starten (${STANDARD_PRICE_EUR} €)`,
       guarantee: "100% Geld-zurück-Garantie • Kein Risiko",
       urgency: "🔥 NUR NOCH",
       spotsLeft: "7 PLÄTZE",
@@ -36,6 +38,8 @@ export const translations = {
       headline: "So sehen unsere Ergebnisse aus",
       tagline: "Wir verwandeln deine Standorte in lokale Marktführer.",
       sampleLabel: "Illustrative Beispielwerte – keine verifizierten Kundenergebnisse.",
+      directions: "Route öffnen",
+      call: "Unternehmen anrufen",
       before: "VORHER",
       after: "NACHHER",
       position: "Position",
@@ -487,8 +491,8 @@ export const translations = {
       subheadlineMid: "on Google Maps. Your competitors are on top.",
       stopIt: "Enough.",
       subheadlineEnd: "We catapult you into the Top 3 – for a fixed price.",
-      ctaFull: "Claim Market Domination Now (€299)",
-      ctaShort: "Get Started (€299)",
+      ctaFull: `Claim Market Domination Now (€${STANDARD_PRICE_EUR})`,
+      ctaShort: `Get Started (€${STANDARD_PRICE_EUR})`,
       guarantee: "100% Money-Back Guarantee • Zero Risk",
       urgency: "🔥 ONLY",
       spotsLeft: "7 SPOTS",
@@ -505,6 +509,8 @@ export const translations = {
       headline: "This is what our results look like",
       tagline: "We transform your locations into local market leaders.",
       sampleLabel: "Illustrative sample values — not verified customer results.",
+      directions: "Open directions",
+      call: "Call business",
       before: "BEFORE",
       after: "AFTER",
       position: "Position",
@@ -777,8 +783,8 @@ export const translations = {
       headlineWhen: "when",
       headlineEnd: "you act.",
       subheadline: "Every day you wait, customers are calling your competition. You can change that. Today.",
-      ctaFull: "Start Local Dominator Now (€299)",
-      ctaShort: "Get Started (€299)",
+      ctaFull: `Start Local Dominator Now (€${STANDARD_PRICE_EUR})`,
+      ctaShort: `Get Started (€${STANDARD_PRICE_EUR})`,
       footer: "30-Day Money-Back Guarantee • One-Time Payment • Instant Access",
     },
     // Footer
@@ -974,6 +980,8 @@ export const translations = {
       headline: "هكذا تبدو نتائجنا",
       tagline: "نحوّل مواقعك إلى رواد السوق المحلي.",
       sampleLabel: "قيم توضيحية نموذجية وليست نتائج عملاء موثقة.",
+      directions: "فتح الاتجاهات",
+      call: "الاتصال بالنشاط التجاري",
       before: "قبل",
       after: "بعد",
       position: "الترتيب",
