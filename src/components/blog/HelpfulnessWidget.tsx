@@ -11,10 +11,10 @@ interface HelpfulnessWidgetProps {
 }
 
 const HelpfulnessWidget = ({ 
-  const isEn = useLanguage().language === "en";
   articleSlug,
   question: questionProp
 }: HelpfulnessWidgetProps) => {
+  const isEn = useLanguage().language === "en";
   const question = questionProp ?? (isEn ? "Was this article helpful?" : "War dieser Artikel hilfreich?");
   const [voted, setVoted] = useState<"yes" | "no" | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);

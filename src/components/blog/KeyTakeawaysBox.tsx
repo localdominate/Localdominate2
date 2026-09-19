@@ -8,11 +8,11 @@ interface KeyTakeawaysBoxProps {
 }
 
 const KeyTakeawaysBox = ({ 
-  const isEn = useLanguage().language === "en";
   title: titleProp,
   items,
   variant = "default"
 }: KeyTakeawaysBoxProps) => {
+  const isEn = useLanguage().language === "en";
   const title = titleProp ?? (isEn ? "What you will learn in this article:" : "Das lernst du in diesem Artikel:");
   if (variant === "compact") {
     return (

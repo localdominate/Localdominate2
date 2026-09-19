@@ -14,10 +14,10 @@ interface SourcesSectionProps {
 }
 
 const SourcesSection = ({ 
-  const isEn = useLanguage().language === "en";
   sources, 
   title: titleProp
 }: SourcesSectionProps) => {
+  const isEn = useLanguage().language === "en";
   const title = titleProp ?? (isEn ? "Sources & Further Reading" : "Quellen & Weiterführende Links");
   const getIcon = (type?: string) => {
     switch (type) {
