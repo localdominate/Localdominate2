@@ -88,10 +88,9 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     setState(prev => ({ ...prev, isSaving: true }));
 
     try {
-      await supabase
-        .from('customers')
-        .update({ business_category: category })
-        .eq('id', state.customerId);
+      await supabase.functions.invoke('customer-onboarding', {
+        body: { action: 'set_category', sessionId: sessionRef.current, category },
+      });
 
       setState(prev => ({
         ...prev,
