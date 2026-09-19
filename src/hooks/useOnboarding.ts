@@ -33,94 +33,44 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
 
     async function initCustomer() {
       try {
-        // In test mode, create a test customer without stripe session
-        if (isTestMode) {
-          const testSessionId = `test_${Date.now()}`;
-          const { data: newCustomer, error } = await supabase
-            .from('customers')
-            .insert({ stripe_session_id: testSessionId })
-            .select()
-            .single();
+        const activeSessionId = isTestMode && !sessionId ? `test_${Date.now()}` : sessionId!;
+        setActiveSession(activeSessionId);
 
-          if (error) throw error;
+        const { data, error } = await supabase.functions.invoke('customer-onboarding', {
+          body: { action: 'init', sessionId: activeSessionId },
+        });
 
-          // Send notification about new customer (uses service role in edge function)
+        if (error) throw error;
+
+        const customer = data?.customer;
+        if (!customer) throw new Error('No customer returned');
+
+        if (data?.created) {
           try {
             await supabase.functions.invoke('send-new-customer-notification', {
               body: {
-                customerId: newCustomer.id,
+                customerId: customer.id,
                 recipientEmail: 'markuswimboeck@googlemail.com',
               },
             });
-            console.log('New customer notification sent (test mode)');
           } catch (notifyErr) {
             console.error('Failed to send new customer notification:', notifyErr);
           }
-
-          setState(prev => ({
-            ...prev,
-            customerId: newCustomer.id,
-            isLoading: false,
-          }));
-          return;
         }
 
-        // Check if customer already exists
-        const { data: existing } = await supabase
-          .from('customers')
-          .select('*')
-          .eq('stripe_session_id', sessionId)
-          .single();
+        const responsesMap: Record<string, Record<string, unknown>> = {};
+        (data?.responses ?? []).forEach((r: { step_key: string; response_data: unknown }) => {
+          responsesMap[r.step_key] = r.response_data as Record<string, unknown>;
+        });
 
-        if (existing) {
-          // Fetch existing responses
-          const { data: responses } = await supabase
-            .from('questionnaire_responses')
-            .select('step_key, response_data')
-            .eq('customer_id', existing.id);
-
-          const responsesMap: Record<string, Record<string, unknown>> = {};
-          responses?.forEach(r => {
-            responsesMap[r.step_key] = r.response_data as Record<string, unknown>;
-          });
-
-          setState(prev => ({
-            ...prev,
-            customerId: existing.id,
-            selectedCategory: existing.business_category as BusinessCategory | null,
-            responses: responsesMap,
-            isComplete: existing.questionnaire_completed || false,
-            isLoading: false,
-          }));
-        } else {
-          // Create new customer
-          const { data: newCustomer, error } = await supabase
-            .from('customers')
-            .insert({ stripe_session_id: sessionId })
-            .select()
-            .single();
-
-          if (error) throw error;
-
-          // Send notification about new customer (uses service role in edge function)
-          try {
-            await supabase.functions.invoke('send-new-customer-notification', {
-              body: {
-                customerId: newCustomer.id,
-                recipientEmail: 'markuswimboeck@googlemail.com',
-              },
-            });
-            console.log('New customer notification sent');
-          } catch (notifyErr) {
-            console.error('Failed to send new customer notification:', notifyErr);
-          }
-
-          setState(prev => ({
-            ...prev,
-            customerId: newCustomer.id,
-            isLoading: false,
-          }));
-        }
+        setState(prev => ({
+          ...prev,
+          customerId: customer.id,
+          selectedCategory: (customer.business_category as BusinessCategory | null) ?? null,
+          responses: responsesMap,
+          isComplete: customer.questionnaire_completed || false,
+          isLoading: false,
+        }));
       } catch (error) {
         console.error('Error initializing customer:', error);
         setState(prev => ({ ...prev, isLoading: false }));
