@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Cookie, Settings } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -167,7 +167,7 @@ const CookieBanner = () => {
 };
 
 // Small button to re-open cookie settings (for footer/settings)
-export const CookieSettingsButton = () => {
+export const CookieSettingsButton = forwardRef<HTMLButtonElement>((_, ref) => {
   const { language } = useLanguage();
   
   const handleClick = () => {
@@ -177,13 +177,17 @@ export const CookieSettingsButton = () => {
 
   return (
     <button 
+      ref={ref}
       onClick={handleClick}
+      aria-label={language === "ar" ? "إعدادات ملفات تعريف الارتباط" : language === "de" ? "Cookie-Einstellungen" : "Cookie settings"}
       className="text-pain-foreground/60 hover:text-primary transition-colors text-sm flex items-center gap-1"
     >
       <Settings className="w-3 h-3" />
       {language === "ar" ? "إعدادات ملفات تعريف الارتباط" : language === "de" ? "Cookie-Einstellungen" : "Cookie Settings"}
     </button>
   );
-};
+});
+
+CookieSettingsButton.displayName = "CookieSettingsButton";
 
 export default CookieBanner;

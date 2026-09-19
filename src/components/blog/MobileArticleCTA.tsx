@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import { ArrowRight, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
@@ -16,11 +16,11 @@ interface MobileArticleCTAProps {
   articleSlug?: string;
 }
 
-const MobileArticleCTA = ({
+const MobileArticleCTA = forwardRef<HTMLDivElement, MobileArticleCTAProps>(({
   showAfter = 0.3,
   hideAfter = 0.92,
   articleSlug = "unknown",
-}: MobileArticleCTAProps) => {
+}, ref) => {
   const { language } = useLanguage();
   const isMobile = useIsMobile();
   const { scrollPercent, isScrollingUp } = useScrollDirection(5);
@@ -37,6 +37,11 @@ const MobileArticleCTA = ({
       label: "Get your Google profile optimized",
       cta: "Start now – €299",
       ctaShort: "Start now",
+    },
+    ar: {
+      label: "حسّن ملفك التجاري على Google",
+      cta: "ابدأ الآن – $329",
+      ctaShort: "ابدأ الآن",
     },
   }[language];
 
@@ -61,6 +66,7 @@ const MobileArticleCTA = ({
     <AnimatePresence>
       {shouldShow && (
         <motion.div
+          ref={ref}
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
@@ -93,6 +99,8 @@ const MobileArticleCTA = ({
       )}
     </AnimatePresence>
   );
-};
+});
+
+MobileArticleCTA.displayName = "MobileArticleCTA";
 
 export default MobileArticleCTA;

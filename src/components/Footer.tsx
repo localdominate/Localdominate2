@@ -5,18 +5,23 @@ import { Utensils, ArrowRight, Hotel, BookOpen, Wrench, Stethoscope, Scale } fro
 import { CookieSettingsButton } from "@/components/CookieBanner";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const location = useLocation();
   const currentPath = location.pathname;
 
+  const labels = {
+    de: ["📚 Blog", "SEO Lexikon A–Z", "Restaurant-Marketing", "Handwerker-Marketing", "Arztpraxis-Marketing", "Anwalt-Marketing", "Hotel-Website Inspiration"],
+    en: ["📚 Blog", "SEO Lexicon A–Z", "Restaurant Marketing", "Trades Marketing", "Medical Practice Marketing", "Law Firm Marketing", "Hotel Website Inspiration"],
+    ar: ["📚 المدونة", "معجم SEO من A إلى Z", "تسويق المطاعم", "تسويق الحرفيين", "تسويق العيادات", "تسويق مكاتب المحاماة", "إلهام لمواقع الفنادق"],
+  }[language];
   const footerLinks = [
-    { path: '/blog', label: '📚 Blog', icon: null, isExternal: false },
-    { path: '/seo-lexikon', label: 'SEO Lexikon A-Z', icon: BookOpen, isExternal: false },
-    { path: '/restaurant-marketing', label: 'Restaurant-Marketing', icon: Utensils, isExternal: false },
-    { path: '/handwerker-marketing', label: 'Handwerker-Marketing', icon: Wrench, isExternal: false },
-    { path: '/arztpraxis-marketing', label: 'Arztpraxis-Marketing', icon: Stethoscope, isExternal: false },
-    { path: '/anwalt-marketing', label: 'Anwalt-Marketing', icon: Scale, isExternal: false },
-    { path: 'https://www.aureliangrand.com', label: 'Hotel-Website Inspiration', icon: Hotel, isExternal: true },
+    { path: '/blog', label: labels[0], icon: null, isExternal: false },
+    { path: '/seo-lexikon', label: labels[1], icon: BookOpen, isExternal: false },
+    { path: '/restaurant-marketing', label: labels[2], icon: Utensils, isExternal: false },
+    { path: '/handwerker-marketing', label: labels[3], icon: Wrench, isExternal: false },
+    { path: '/arztpraxis-marketing', label: labels[4], icon: Stethoscope, isExternal: false },
+    { path: '/anwalt-marketing', label: labels[5], icon: Scale, isExternal: false },
+    { path: 'https://www.aureliangrand.com', label: labels[6], icon: Hotel, isExternal: true },
   ];
 
   return (
