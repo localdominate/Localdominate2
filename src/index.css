@@ -1557,6 +1557,13 @@
 }
 
 /* Horizontal Scroll Container für Mobile */
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 .mobile-scroll-container {
   display: flex;
   gap: 1rem;
