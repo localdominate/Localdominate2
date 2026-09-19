@@ -36,6 +36,8 @@ const LanguageSwitch = ({ variant = "fixed", showBlogLink = true }: LanguageSwit
             <button
               key={lang}
               onClick={() => setLanguage(lang)}
+              aria-label={lang === "de" ? "Deutsch" : lang === "en" ? "English" : "العربية"}
+              aria-pressed={language === lang}
               className={`px-3 py-1.5 text-sm font-semibold transition-all ${
                 language === lang
                   ? "bg-primary text-primary-foreground"

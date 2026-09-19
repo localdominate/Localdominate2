@@ -1,19 +1,17 @@
-import { useState, useEffect } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Cookie, Settings } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
-
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { language } = useLanguage();
+
+  const updateConsent = (settings: Record<string, string>) => {
+    const analyticsWindow = window as typeof window & { gtag?: (...args: unknown[]) => void };
+    analyticsWindow.gtag?.('consent', 'update', settings);
+  };
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
@@ -31,8 +29,8 @@ const CookieBanner = () => {
     localStorage.setItem("cookieConsentTimestamp", new Date().toISOString());
     
     // Update Google Consent Mode V2
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag('consent', 'update', {
+    if (typeof window !== "undefined") {
+      updateConsent({
         'ad_storage': 'granted',
         'ad_user_data': 'granted',
         'ad_personalization': 'granted',
@@ -59,8 +57,8 @@ const CookieBanner = () => {
     localStorage.setItem("cookieConsentTimestamp", new Date().toISOString());
     
     // Keep consent denied for tracking, only allow functionality
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag('consent', 'update', {
+    if (typeof window !== "undefined") {
+      updateConsent({
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
@@ -167,7 +165,7 @@ const CookieBanner = () => {
 };
 
 // Small button to re-open cookie settings (for footer/settings)
-export const CookieSettingsButton = () => {
+export const CookieSettingsButton = forwardRef<HTMLButtonElement>((_, ref) => {
   const { language } = useLanguage();
   
   const handleClick = () => {
@@ -177,13 +175,17 @@ export const CookieSettingsButton = () => {
 
   return (
     <button 
+      ref={ref}
       onClick={handleClick}
+      aria-label={language === "ar" ? "إعدادات ملفات تعريف الارتباط" : language === "de" ? "Cookie-Einstellungen" : "Cookie settings"}
       className="text-pain-foreground/60 hover:text-primary transition-colors text-sm flex items-center gap-1"
     >
       <Settings className="w-3 h-3" />
       {language === "ar" ? "إعدادات ملفات تعريف الارتباط" : language === "de" ? "Cookie-Einstellungen" : "Cookie Settings"}
     </button>
   );
-};
+});
+
+CookieSettingsButton.displayName = "CookieSettingsButton";
 
 export default CookieBanner;

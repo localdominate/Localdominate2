@@ -9,7 +9,7 @@ const images = [
 ];
 
 const TestimonialsSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const { ref, isVisible } = useScrollReveal();
 
   return (
@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
               <div className="flex items-center gap-3 md:gap-4 pt-3 md:pt-4 border-t border-border/50">
                 <img 
                   src={images[index]} 
-                  alt={`${testimonial.name} - ${testimonial.business} - Kundenbewertung Local Dominator Google Maps Optimierung`}
+                   alt={language === "de" ? `${testimonial.name} – ${testimonial.business}, Kundenbewertung` : language === "ar" ? `${testimonial.name} – ${testimonial.business}، تقييم عميل` : `${testimonial.name} – ${testimonial.business}, customer review`}
                   className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover ring-2 ring-border"
                   loading="lazy"
                 />
@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
                 <img 
                   key={i}
                   src={img} 
-                  alt={`Zufriedener Local Dominator Kunde ${i + 1} - Google Maps Top 3 Ranking erreicht`}
+                   alt=""
                   className="w-8 h-8 rounded-full border-2 border-background"
                   loading="lazy"
                   decoding="async"

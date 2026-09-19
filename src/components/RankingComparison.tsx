@@ -1,46 +1,13 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { MapPin, Star, Phone, Navigation, Clock, TrendingUp, PhoneCall, ChevronRight, CheckCircle2, XCircle } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import type { translations } from "@/i18n/translations";
+
+type RankingTranslations = (typeof translations)[keyof typeof translations];
 
 const AnimatedCounter = ({ end, duration = 2000, suffix = "", prefix = "" }: { end: number; duration?: number; suffix?: string; prefix?: string }) => {
-  const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [isVisible]);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let startTime: number;
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-    requestAnimationFrame(animate);
-  }, [isVisible, end, duration]);
-
-  return <span ref={ref}>{prefix}{count}{suffix}</span>;
+  void duration;
+  return <span>{prefix}{end}{suffix}</span>;
 };
 
 const GoogleLocalPackResult = ({ 
@@ -60,7 +27,7 @@ const GoogleLocalPackResult = ({
   position: number;
   isYourBusiness?: boolean;
   isHidden?: boolean;
-  t: any;
+  t: RankingTranslations;
 }) => {
   return (
     <div className={`flex items-start gap-3 p-3 rounded-lg transition-all duration-300 ${
@@ -126,9 +93,11 @@ const GoogleLocalPackResult = ({
       {isHighlighted && (
         <div className="flex gap-2 flex-shrink-0">
           <button className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+            <span className="sr-only">{t.ranking.directions}</span>
             <Navigation className="w-4 h-4 text-primary" />
           </button>
           <button className="p-2 rounded-full bg-success/10 hover:bg-success/20 transition-colors">
+            <span className="sr-only">{t.ranking.call}</span>
             <Phone className="w-4 h-4 text-success" />
           </button>
         </div>
@@ -157,6 +126,9 @@ const RankingComparison = () => {
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             {t.ranking.tagline}
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            {t.ranking.sampleLabel}
           </p>
         </div>
 
@@ -352,7 +324,7 @@ const RankingComparison = () => {
               </div>
               <div className="text-left">
                 <div className="text-sm text-muted-foreground">{t.ranking.avgIncrease}</div>
-                <div className="text-2xl font-bold text-primary">+1.467% {t.ranking.moreCalls}</div>
+                <div className="text-2xl font-bold text-primary">+1.467 % {t.ranking.moreCalls}</div>
               </div>
             </div>
           </div>

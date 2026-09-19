@@ -10,6 +10,7 @@ import {
   ReferenceLine,
   ReferenceDot,
 } from "recharts";
+import { formatPrice } from "@/lib/currency";
 
 interface AmortizationChartProps {
   dailyProfit: number;
@@ -21,6 +22,12 @@ interface ChartDataPoint {
   day: number;
   profit: number;
   investment: number;
+}
+
+interface ChartTooltipProps {
+  active?: boolean;
+  payload?: Array<{ value?: number }>;
+  label?: number;
 }
 
 const AmortizationChart = ({
@@ -127,9 +134,9 @@ const AmortizationChart = ({
   }, [isVisible]);
 
   // Custom tooltip
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload, label }: ChartTooltipProps) => {
     if (active && payload && payload.length) {
-      const profit = payload[0].value;
+      const profit = payload[0]?.value ?? 0;
       const isProfitable = profit >= investment;
 
       return (
@@ -140,10 +147,10 @@ const AmortizationChart = ({
           <p
             className={`text-sm font-bold ${isProfitable ? "text-green-600" : "text-destructive"}`}
           >
-            {t.profitLabel}: {profit.toLocaleString("de-DE")}€
+            {t.profitLabel}: {formatPrice(profit, language)}
           </p>
           {isProfitable && (
-            <p className="text-xs text-green-600 mt-1">✓ Amortisiert</p>
+            <p className="text-xs text-green-600 mt-1">✓ {isEn ? "Paid back" : language === "ar" ? "تم الاسترداد" : "Amortisiert"}</p>
           )}
         </div>
       );
@@ -160,7 +167,7 @@ const AmortizationChart = ({
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs text-muted-foreground">{t.title}</span>
         <div className="text-xs font-medium text-green-600 bg-green-500/10 px-2 py-1 rounded-full">
-          {t.after90}: +{finalProfit.toLocaleString("de-DE")}€
+          {t.after90}: +{formatPrice(finalProfit, language)}
         </div>
       </div>
 
@@ -251,7 +258,7 @@ const AmortizationChart = ({
               strokeDasharray="5 5"
               strokeWidth={2}
               label={{
-                value: `${investment}€`,
+                value: formatPrice(investment, language),
                 position: "right",
                 fill: "hsl(var(--primary))",
                 fontSize: 10,
@@ -283,7 +290,7 @@ const AmortizationChart = ({
       <div className="flex items-center justify-center gap-4 mt-2 text-xs text-muted-foreground">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-0.5 bg-destructive rounded" />
-          <span>{isEn ? "Before break-even" : "Vor Breakeven"}</span>
+          <span>{isEn ? "Before break-even" : language === "ar" ? "قبل نقطة التعادل" : "Vor Breakeven"}</span>
         </div>
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-3 rounded-full bg-primary border-2 border-white shadow" />

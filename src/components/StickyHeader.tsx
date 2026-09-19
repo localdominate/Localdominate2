@@ -136,7 +136,7 @@ const StickyHeader = () => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden p-2 -ml-2 rounded-lg hover:bg-muted transition-colors touch-target"
-                aria-label="Menu"
+                aria-label={language === "de" ? "Menü" : language === "ar" ? "القائمة" : "Menu"}
                 aria-expanded={isMenuOpen}
               >
                 {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

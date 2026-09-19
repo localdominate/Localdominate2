@@ -10,6 +10,8 @@ import { openStripeCheckout } from "@/lib/stripe";
 import { roiBranchConfigs, branchOrder, type ScenarioType } from "@/data/roiCalculatorConfig";
 import { Database } from "@/integrations/supabase/types";
 import { cn } from "@/lib/utils";
+import { formatPrice } from "@/lib/currency";
+import { STANDARD_PRICE_EUR } from "@/lib/stripe";
 
 type BusinessCategory = Database["public"]["Enums"]["business_category"];
 
@@ -26,7 +28,6 @@ const ROICalculator = () => {
   const [metric2Value, setMetric2Value] = useState(config.metric2.default);
   const [currentReviews, setCurrentReviews] = useState(25);
   
-  const [animatedProfit, setAnimatedProfit] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +43,7 @@ const ROICalculator = () => {
 
   // Calculation logic with profit margins
   const currentMonthlyRevenue = metric1Value * metric2Value * config.daysMultiplier;
-  const additionalUnitsPerMonth = Math.round(metric1Value * visibilityBoost * config.daysMultiplier);
+  const additionalUnitsPerMonth = metric1Value * visibilityBoost * config.daysMultiplier;
   const additionalMonthlyRevenue = additionalUnitsPerMonth * metric2Value;
   
   // NEW: Profit calculations
@@ -51,14 +52,18 @@ const ROICalculator = () => {
   
   const newMonthlyRevenue = currentMonthlyRevenue + additionalMonthlyRevenue;
   
-  const investment = 299;
+  const investment = STANDARD_PRICE_EUR;
   
   // NEW: Breakeven based on profit (not revenue)
   const dailyProfit = additionalMonthlyProfit / 30;
-  const breakevenDays = dailyProfit > 0 ? Math.max(1, Math.round(investment / dailyProfit)) : 999;
+  const breakevenDays = dailyProfit > 0 && Number.isFinite(dailyProfit)
+    ? Math.max(1, Math.round(investment / dailyProfit))
+    : null;
   
   // ROI based on yearly profit
-  const roiPercentage = Math.round((additionalYearlyProfit / investment) * 100);
+  const roiPercentage = investment > 0
+    ? Math.round(((additionalYearlyProfit - investment) / investment) * 100)
+    : 0;
   
   // Cost of inaction
   const weeklyLostProfit = Math.round(additionalMonthlyProfit / 4);
@@ -86,35 +91,17 @@ const ROICalculator = () => {
     return () => observer.disconnect();
   }, [isVisible]);
 
-  // Animate profit counter
-  useEffect(() => {
-    if (!isVisible) return;
-    
-    const duration = 1500;
-    const startTime = Date.now();
-    
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      
-      setAnimatedProfit(Math.round(additionalYearlyProfit * easeOutQuart));
-      
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-    
-    requestAnimationFrame(animate);
-  }, [isVisible, additionalYearlyProfit]);
-
   const handleCTAClick = () => {
-    trackButtonClick("roi_calculator_cta", "roi_calculator", 299);
+    trackButtonClick("roi_calculator_cta", "roi_calculator", STANDARD_PRICE_EUR);
     openStripeCheckout("standard");
   };
 
   const currentBarWidth = 60;
-  const newBarWidth = Math.min(100, (newMonthlyRevenue / currentMonthlyRevenue) * currentBarWidth);
+  const newBarWidth = currentMonthlyRevenue > 0
+    ? Math.min(100, (newMonthlyRevenue / currentMonthlyRevenue) * currentBarWidth)
+    : 0;
+  const numberLocale = language === "de" ? "de-DE" : language === "ar" ? "ar-SA" : "en-GB";
+  const formatPercent = (value: number) => `${new Intl.NumberFormat(numberLocale, { maximumFractionDigits: 0 }).format(Number.isFinite(value) ? value : 0)}%`;
 
   const scenarioLabels = {
     conservative: { de: 'Konservativ', en: 'Conservative' },
@@ -142,7 +129,7 @@ const ROICalculator = () => {
         {/* Branch Selection Tabs */}
         <div className="mb-8">
           <p className="text-center text-sm text-muted-foreground mb-4">
-            {language === 'de' ? 'Wähle deine Branche' : 'Select your industry'}
+            {language === 'de' ? 'Wähle deine Branche' : language === 'ar' ? 'اختر مجالك' : 'Select your industry'}
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {branchOrder.map((categoryId) => {
@@ -231,7 +218,7 @@ const ROICalculator = () => {
                 <label className="text-sm font-medium text-foreground">
                   {config.metric2.label[language]}
                 </label>
-                <span className="text-lg font-bold text-primary">{metric2Value}€</span>
+                <span className="text-lg font-bold text-primary">{formatPrice(metric2Value, language)}</span>
               </div>
               <Slider
                 value={[metric2Value]}
@@ -242,8 +229,8 @@ const ROICalculator = () => {
                 className="w-full"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                <span>{config.metric2.min}€</span>
-                <span>{config.metric2.max}€</span>
+                <span>{formatPrice(config.metric2.min, language)}</span>
+                <span>{formatPrice(config.metric2.max, language)}</span>
               </div>
             </div>
 
@@ -291,7 +278,7 @@ const ROICalculator = () => {
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-muted-foreground">{t.beforeLabel}</span>
                   <span className="font-medium text-foreground">
-                    {currentMonthlyRevenue.toLocaleString("de-DE")}€
+                    {formatPrice(currentMonthlyRevenue, language)}
                   </span>
                 </div>
                 <div className="h-3 bg-muted rounded-full overflow-hidden">
@@ -306,7 +293,7 @@ const ROICalculator = () => {
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-primary font-medium">{t.afterLabel}</span>
                   <span className="font-bold text-primary">
-                    {newMonthlyRevenue.toLocaleString("de-DE")}€
+                    {formatPrice(newMonthlyRevenue, language)}
                   </span>
                 </div>
                 <div className="h-3 bg-muted rounded-full overflow-hidden">
@@ -322,7 +309,7 @@ const ROICalculator = () => {
             <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-5 mb-4 text-center border border-primary/20">
               <p className="text-sm text-muted-foreground mb-1">{t.additionalProfit}</p>
               <p className="text-4xl md:text-5xl font-bold text-primary">
-                +{animatedProfit.toLocaleString("de-DE")}€
+                +{formatPrice(additionalYearlyProfit, language)}
               </p>
               <p className="text-xs text-muted-foreground mt-1">{t.perYear}</p>
             </div>
@@ -330,21 +317,21 @@ const ROICalculator = () => {
             {/* Breakeven highlight */}
             <div className={cn(
               "rounded-xl p-4 mb-4 text-center",
-              breakevenDays <= 30 
+              breakevenDays !== null && breakevenDays <= 30
                 ? "bg-green-500/10 border border-green-500/20" 
                 : "bg-muted/50"
             )}>
               <div className="flex items-center justify-center gap-2 mb-1">
-                <Zap className={cn("h-5 w-5", breakevenDays <= 30 ? "text-green-500" : "text-primary")} />
+                <Zap className={cn("h-5 w-5", breakevenDays !== null && breakevenDays <= 30 ? "text-green-500" : "text-primary")} />
                 <p className="text-sm font-medium text-foreground">{t.breakeven}</p>
               </div>
               <p className={cn(
                 "text-3xl font-bold",
-                breakevenDays <= 30 ? "text-green-600" : "text-foreground"
+                breakevenDays !== null && breakevenDays <= 30 ? "text-green-600" : "text-foreground"
               )}>
-                {breakevenDays} {t.days}
+                {breakevenDays === null ? "—" : `${breakevenDays} ${t.days}`}
               </p>
-              {breakevenDays <= 30 && (
+              {breakevenDays !== null && breakevenDays <= 30 && (
                 <p className="text-xs text-green-600 mt-1">{t.breakevenFast}</p>
               )}
             </div>
@@ -354,13 +341,13 @@ const ROICalculator = () => {
               <div className="flex items-center gap-2 mb-3">
                 <LineChart className="h-4 w-4 text-primary" />
                 <h4 className="text-sm font-medium text-foreground">
-                  {language === 'de' ? 'Gewinnentwicklung über 90 Tage' : 'Profit Development Over 90 Days'}
+                    {language === 'de' ? 'Gewinnentwicklung über 90 Tage' : language === 'ar' ? 'تطور الأرباح خلال 90 يوماً' : 'Profit development over 90 days'}
                 </h4>
               </div>
               <AmortizationChart
                 dailyProfit={dailyProfit}
                 investment={investment}
-                breakevenDays={breakevenDays}
+                breakevenDays={breakevenDays ?? 91}
               />
             </div>
 
@@ -369,7 +356,7 @@ const ROICalculator = () => {
               <div className="bg-muted/50 rounded-lg p-3 text-center">
                 <TrendingUp className="h-4 w-4 text-primary mx-auto mb-1" />
                 <p className="text-xs text-muted-foreground">{t.roi}</p>
-                <p className="text-xl font-bold text-primary">{roiPercentage.toLocaleString("de-DE")}%</p>
+                <p className="text-xl font-bold text-primary">{formatPercent(roiPercentage)}</p>
               </div>
               <div className="bg-muted/50 rounded-lg p-3 text-center">
                 <Clock className="h-4 w-4 text-primary mx-auto mb-1" />
@@ -385,7 +372,7 @@ const ROICalculator = () => {
                 <p className="text-sm font-semibold text-destructive">{t.costOfInaction}</p>
               </div>
               <p className="text-sm text-muted-foreground">
-                {t.weeklyLoss}: <span className="font-bold text-destructive">~{weeklyLostProfit.toLocaleString("de-DE")}€</span>
+                {t.weeklyLoss}: <span className="font-bold text-destructive">~{formatPrice(weeklyLostProfit, language)}</span>
               </p>
               <p className="text-xs text-muted-foreground mt-1">{t.waitingCost}</p>
             </div>
@@ -403,15 +390,15 @@ const ROICalculator = () => {
               <div className="bg-muted/20 rounded-lg p-4 mb-4 space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Google Ads:</span>
-                  <span className="text-foreground">{config.monthlyMarketingAlternative}€/Monat</span>
+                  <span className="text-foreground">{formatPrice(config.monthlyMarketingAlternative, language)} / {language === 'de' ? 'Monat' : language === 'ar' ? 'شهر' : 'month'}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">{t.yearlyAlternative}:</span>
-                  <span className="text-foreground">{yearlyAlternativeCost.toLocaleString("de-DE")}€</span>
+                  <span className="text-foreground">{formatPrice(yearlyAlternativeCost, language)}</span>
                 </div>
                 <div className="border-t border-border pt-2 mt-2 flex justify-between">
                   <span className="text-primary font-medium">Local Dominator:</span>
-                  <span className="text-primary font-bold">299€ {t.oneTime}</span>
+                  <span className="text-primary font-bold">{formatPrice(STANDARD_PRICE_EUR, language)} {t.oneTime}</span>
                 </div>
               </div>
             )}

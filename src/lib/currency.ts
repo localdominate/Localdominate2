@@ -10,7 +10,7 @@ const CURRENCY_CONFIG: Record<Language, {
   rate: number;
 }> = {
   de: { symbol: '€', code: 'EUR', position: 'after', locale: 'de-DE', rate: 1 },
-  en: { symbol: '€', code: 'EUR', position: 'after', locale: 'en-US', rate: 1 },
+  en: { symbol: '€', code: 'EUR', position: 'before', locale: 'en-GB', rate: 1 },
   ar: { symbol: '$', code: 'USD', position: 'before', locale: 'ar-SA', rate: 1.1 },
 };
 
@@ -26,18 +26,18 @@ export const convertPrice = (eurPrice: number, language: Language): number => {
 export const formatPrice = (eurPrice: number, language: Language): string => {
   const config = CURRENCY_CONFIG[language];
   const converted = convertPrice(eurPrice, language);
-  const formatted = converted.toLocaleString(config.locale);
-  
-  if (config.position === 'before') {
-    return `${config.symbol}${formatted}`;
-  }
-  return `${formatted}${config.symbol}`;
+  return new Intl.NumberFormat(config.locale, {
+    style: 'currency',
+    currency: config.code,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(converted);
 };
 
 // Get just the currency suffix for AnimatedPriceCounter
 export const getCurrencySuffix = (language: Language): string => {
   const config = CURRENCY_CONFIG[language];
-  return config.position === 'after' ? config.symbol : '';
+  return config.position === 'after' ? ` ${config.symbol}` : '';
 };
 
 export const getCurrencyPrefix = (language: Language): string => {

@@ -4,6 +4,8 @@ import { Check, Zap, FileText, BarChart3, Clock } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
+import { formatPrice } from "@/lib/currency";
+import { ADD_ON_PRODUCTS } from "@/lib/stripe";
 
 export interface AddOn {
   id: string;
@@ -26,44 +28,27 @@ const AddOnsSection = ({ selectedAddOns, onToggleAddOn, showHeader = true }: Add
     {
       id: "express",
       icon: <Clock className="w-5 h-5" />,
-      price: 99,
+      price: ADD_ON_PRODUCTS.express.price,
       popular: true,
     },
     {
       id: "competitor",
       icon: <BarChart3 className="w-5 h-5" />,
-      price: 79,
+      price: ADD_ON_PRODUCTS.competitor.price,
     },
     {
       id: "premium_texts",
       icon: <FileText className="w-5 h-5" />,
-      price: 99,
+      price: ADD_ON_PRODUCTS.premium_texts.price,
     },
     {
       id: "photo_pack",
       icon: <Zap className="w-5 h-5" />,
-      price: 149,
+      price: ADD_ON_PRODUCTS.photo_pack.price,
     },
   ];
 
-  const addOnTranslations = {
-    express: {
-      title: language === 'de' ? "Express-Setup" : "Express Setup",
-      description: language === 'de' ? "24h statt 48h Lieferzeit" : "24h instead of 48h delivery",
-    },
-    competitor: {
-      title: language === 'de' ? "Konkurrenzanalyse" : "Competitor Analysis",
-      description: language === 'de' ? "Detaillierter Wettbewerbsreport" : "Detailed competitor report",
-    },
-    premium_texts: {
-      title: language === 'de' ? "Premium Texte" : "Premium Copy",
-      description: language === 'de' ? "SEO-optimierte Langbeschreibung" : "SEO-optimized long description",
-    },
-    photo_pack: {
-      title: language === 'de' ? "Foto-Optimierung Pro" : "Photo Optimization Pro",
-      description: language === 'de' ? "15 zusätzliche optimierte Bilder" : "15 additional optimized images",
-    },
-  };
+  const addOnTranslations = t.addOns.items;
 
   const isSelected = (id: string) => selectedAddOns.includes(id);
   
@@ -77,10 +62,10 @@ const AddOnsSection = ({ selectedAddOns, onToggleAddOn, showHeader = true }: Add
       {showHeader && (
         <div className="text-center mb-8">
           <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-2">
-            {language === 'de' ? "Maximiere deine Ergebnisse" : "Maximize your results"}
+            {t.addOns.eyebrow}
           </p>
           <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-            {language === 'de' ? "Optionale Upgrades" : "Optional Upgrades"}
+            {t.addOns.headline}
           </h3>
         </div>
       )}
@@ -103,7 +88,7 @@ const AddOnsSection = ({ selectedAddOns, onToggleAddOn, showHeader = true }: Add
             >
               {addOn.popular && (
                 <span className="absolute -top-2.5 right-3 px-2 py-0.5 bg-highlight text-highlight-foreground text-xs font-semibold rounded-full">
-                  {language === 'de' ? 'Beliebt' : 'Popular'}
+                  {language === 'de' ? 'Beliebt' : language === 'ar' ? 'شائع' : 'Popular'}
                 </span>
               )}
               
@@ -121,7 +106,7 @@ const AddOnsSection = ({ selectedAddOns, onToggleAddOn, showHeader = true }: Add
                       {translation?.title}
                     </h4>
                     <span className="font-bold text-primary whitespace-nowrap">
-                      +{addOn.price}€
+                      +{formatPrice(addOn.price, language)}
                     </span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-0.5">
@@ -146,10 +131,10 @@ const AddOnsSection = ({ selectedAddOns, onToggleAddOn, showHeader = true }: Add
       {selectedAddOns.length > 0 && (
         <div className="mt-4 p-3 bg-success/10 border border-success/30 rounded-lg flex items-center justify-between">
           <span className="text-sm text-success font-medium">
-            {selectedAddOns.length} {language === 'de' ? 'Add-On(s) ausgewählt' : 'add-on(s) selected'}
+            {selectedAddOns.length} {language === 'de' ? 'Add-On(s) ausgewählt' : language === 'ar' ? 'إضافات مختارة' : 'add-on(s) selected'}
           </span>
           <span className="font-bold text-success">
-            +{totalAddOnPrice}€
+            +{formatPrice(totalAddOnPrice, language)}
           </span>
         </div>
       )}

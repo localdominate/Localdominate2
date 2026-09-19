@@ -1,5 +1,7 @@
 export type Language = "de" | "en" | "ar";
 
+import { STANDARD_PRICE_EUR } from "@/lib/stripe";
+
 export const translations = {
   de: {
     // AnnouncementBar
@@ -18,8 +20,8 @@ export const translations = {
       subheadlineMid: ". Deine Konkurrenten stehen oben.",
       stopIt: "Schluss damit.",
       subheadlineEnd: "Wir katapultieren dich in die Top 3 – zum Festpreis.",
-      ctaFull: "Jetzt Marktherrschaft sichern (299€)",
-      ctaShort: "Jetzt starten (299€)",
+      ctaFull: `Jetzt Marktherrschaft sichern (${STANDARD_PRICE_EUR} €)`,
+      ctaShort: `Jetzt starten (${STANDARD_PRICE_EUR} €)`,
       guarantee: "100% Geld-zurück-Garantie • Kein Risiko",
       urgency: "🔥 NUR NOCH",
       spotsLeft: "7 PLÄTZE",
@@ -35,6 +37,9 @@ export const translations = {
       eyebrow: "Echte Resultate",
       headline: "So sehen unsere Ergebnisse aus",
       tagline: "Wir verwandeln deine Standorte in lokale Marktführer.",
+      sampleLabel: "Illustrative Beispielwerte – keine verifizierten Kundenergebnisse.",
+      directions: "Route öffnen",
+      call: "Unternehmen anrufen",
       before: "VORHER",
       after: "NACHHER",
       position: "Position",
@@ -111,10 +116,10 @@ export const translations = {
       },
       bestseller: "Bestseller",
       rows: {
-        cost: { label: "• Kosten:", agency: "1.500€+", diy: "Deine Lebenszeit", local: "299€ Festpreis" },
-        duration: { label: "• Dauer:", agency: "Monate", diy: "Ewig", local: "48 Stunden" },
-        guarantee: { label: "• Garantie:", agency: "Keine", diy: "Keine", local: "100% Geld-zurück" },
-        result: { label: "• Ergebnis:", agency: "Vielleicht", diy: "Frust", local: "Top-Rankings" },
+        cost: { label: "Kosten", agency: "1.500 €+", diy: "Deine Lebenszeit", local: "299 € Festpreis" },
+        duration: { label: "Dauer", agency: "Monate", diy: "Ewig", local: "48 Stunden" },
+        guarantee: { label: "Garantie", agency: "Keine", diy: "Keine", local: "100% Geld-zurück" },
+        result: { label: "Ergebnis", agency: "Vielleicht", diy: "Frust", local: "Top-Rankings" },
       },
     },
     // SolutionSection
@@ -486,8 +491,8 @@ export const translations = {
       subheadlineMid: "on Google Maps. Your competitors are on top.",
       stopIt: "Enough.",
       subheadlineEnd: "We catapult you into the Top 3 – for a fixed price.",
-      ctaFull: "Claim Market Domination Now ($299)",
-      ctaShort: "Get Started ($299)",
+      ctaFull: `Claim Market Domination Now (€${STANDARD_PRICE_EUR})`,
+      ctaShort: `Get Started (€${STANDARD_PRICE_EUR})`,
       guarantee: "100% Money-Back Guarantee • Zero Risk",
       urgency: "🔥 ONLY",
       spotsLeft: "7 SPOTS",
@@ -503,6 +508,9 @@ export const translations = {
       eyebrow: "Real Results",
       headline: "This is what our results look like",
       tagline: "We transform your locations into local market leaders.",
+      sampleLabel: "Illustrative sample values — not verified customer results.",
+      directions: "Open directions",
+      call: "Call business",
       before: "BEFORE",
       after: "AFTER",
       position: "Position",
@@ -579,10 +587,10 @@ export const translations = {
       },
       bestseller: "Bestseller",
       rows: {
-        cost: { label: "• Cost:", agency: "$1,500+", diy: "Your lifetime", local: "$299 fixed" },
-        duration: { label: "• Duration:", agency: "Months", diy: "Forever", local: "48 hours" },
-        guarantee: { label: "• Guarantee:", agency: "None", diy: "None", local: "100% money-back" },
-        result: { label: "• Result:", agency: "Maybe", diy: "Frustration", local: "Top Rankings" },
+        cost: { label: "Cost", agency: "€1,500+", diy: "Your time", local: "€299 fixed" },
+        duration: { label: "Duration", agency: "Months", diy: "Indefinite", local: "48 hours" },
+        guarantee: { label: "Guarantee", agency: "None", diy: "None", local: "100% money-back" },
+        result: { label: "Result", agency: "Uncertain", diy: "Frustration", local: "Top rankings" },
       },
     },
     // SolutionSection
@@ -665,31 +673,31 @@ export const translations = {
         {
           title: "The Core Optimization",
           text: "Complete setup of your Google profile with keyword injection and premium photo uploads.",
-          value: "$299",
+          value: "€299",
           included: true,
         },
         {
           title: "The Review Magnet",
           text: "Print-ready design for your counter display with smart-link technology for instant 5-stars.",
-          value: "$149",
+          value: "€149",
           included: true,
         },
         {
           title: "The Employee Script",
           text: "Psychological conversation guide: How your employees ask for reviews without being annoying.",
-          value: "$99",
+          value: "€99",
           included: true,
         },
         {
           title: "The Ranking Insurance",
           text: "Anti-suspension checklist & guide to keep your profile safely at the top.",
-          value: "$79",
+          value: "€79",
           included: true,
         },
       ],
       totalLabel: "Total package value:",
-      totalValue: "$626",
-      todayPrice: "Today only: $299",
+      totalValue: "€626",
+      todayPrice: "Today only: €299",
       freeLabel: "FREE",
     },
     // OfferSection
@@ -710,7 +718,7 @@ export const translations = {
       yourPrice: "Your price today:",
       oneTime: "One-time. No hidden costs.",
       ctaButton: "Buy Instant Access",
-      bonus: "🎁 BONUS: Order today and get our \"Google Maps Ranking Cheat Sheet\" FREE (Value: $97)",
+      bonus: "🎁 BONUS: Order today and get our \"Google Maps Ranking Cheat Sheet\" FREE (Value: €97)",
     },
     // GuaranteeSection
     guarantee: {
@@ -775,8 +783,8 @@ export const translations = {
       headlineWhen: "when",
       headlineEnd: "you act.",
       subheadline: "Every day you wait, customers are calling your competition. You can change that. Today.",
-      ctaFull: "Start Local Dominator Now ($299)",
-      ctaShort: "Get Started ($299)",
+      ctaFull: `Start Local Dominator Now (€${STANDARD_PRICE_EUR})`,
+      ctaShort: `Get Started (€${STANDARD_PRICE_EUR})`,
       footer: "30-Day Money-Back Guarantee • One-Time Payment • Instant Access",
     },
     // Footer
@@ -971,6 +979,9 @@ export const translations = {
       eyebrow: "نتائج حقيقية",
       headline: "هكذا تبدو نتائجنا",
       tagline: "نحوّل مواقعك إلى رواد السوق المحلي.",
+      sampleLabel: "قيم توضيحية نموذجية وليست نتائج عملاء موثقة.",
+      directions: "فتح الاتجاهات",
+      call: "الاتصال بالنشاط التجاري",
       before: "قبل",
       after: "بعد",
       position: "الترتيب",
@@ -1047,10 +1058,10 @@ export const translations = {
       },
       bestseller: "الأكثر مبيعاً",
       rows: {
-        cost: { label: "• التكلفة:", agency: "+$1,650", diy: "وقت حياتك", local: "$329 سعر ثابت" },
-        duration: { label: "• المدة:", agency: "أشهر", diy: "للأبد", local: "48 ساعة" },
-        guarantee: { label: "• الضمان:", agency: "لا يوجد", diy: "لا يوجد", local: "استرداد 100%" },
-        result: { label: "• النتيجة:", agency: "ربما", diy: "إحباط", local: "مراكز متقدمة" },
+        cost: { label: "التكلفة", agency: "+$1,650", diy: "وقتك", local: "$329 سعر ثابت" },
+        duration: { label: "المدة", agency: "أشهر", diy: "غير محددة", local: "48 ساعة" },
+        guarantee: { label: "الضمان", agency: "لا يوجد", diy: "لا يوجد", local: "استرداد 100%" },
+        result: { label: "النتيجة", agency: "غير مؤكدة", diy: "إحباط", local: "مراكز متقدمة" },
       },
     },
     // SolutionSection

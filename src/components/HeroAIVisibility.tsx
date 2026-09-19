@@ -135,7 +135,7 @@ const HeroAIVisibility = () => {
             <ArrowRight className="w-4 h-4" />
           </Link>
           <a
-            href="#offer"
+            href="#angebot"
             onClick={() => trackButtonClick("hero_demo", "hero_section", 0)}
             className="inline-flex items-center justify-center px-7 py-3.5 bg-card text-foreground font-semibold rounded-lg border border-border hover:bg-muted/50 transition-all"
           >

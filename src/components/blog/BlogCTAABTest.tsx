@@ -12,7 +12,12 @@ interface BlogCTAABTestProps {
 }
 
 const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
-  const isEn = useLanguage().language === "en";
+  const { language } = useLanguage();
+  const copy = {
+    de: { title: "🎯 Professionelle Optimierung zum Festpreis", text: "Spare Zeit und Nerven. Wir optimieren dein Google-Profil für maximale lokale Sichtbarkeit.", guarantee: "100% Geld-zurück-Garantie", delivery: "Fertig in 7 Tagen", cta: "Für nur 299 € starten", payment: "Einmalig, keine versteckten Kosten" },
+    en: { title: "🎯 Professional optimisation at a fixed price", text: "Save time and effort. We optimise your Google profile for maximum local visibility.", guarantee: "100% money-back guarantee", delivery: "Completed within 7 days", cta: "Start for just €299", payment: "One-time payment, no hidden fees" },
+    ar: { title: "🎯 تحسين احترافي بسعر ثابت", text: "وفّر وقتك وجهدك. نحسّن ملفك على Google لأقصى ظهور محلي.", guarantee: "ضمان استرداد الأموال 100%", delivery: "يكتمل خلال 7 أيام", cta: "ابدأ مقابل $329 فقط", payment: "دفعة واحدة، بدون رسوم مخفية" },
+  }[language];
   const { variant } = useABTest();
   const hasTrackedView = useRef(false);
 
@@ -39,7 +44,7 @@ const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
       session_id: sessionId,
       conversion_type: "blog_cta_click",
       cta_location: position,
-      cta_text: "Für nur 299€ starten",
+      cta_text: copy.cta,
       page_path: `/blog/${articleSlug}`,
       ab_variant_color: variant,
       blog_article_slug: articleSlug,
@@ -50,8 +55,8 @@ const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
 
     // Also push to dataLayer
     if (typeof window !== "undefined") {
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      (window as any).dataLayer.push({
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
         event: "blog_cta_click",
         blog_article_slug: articleSlug,
         blog_cta_position: position,
@@ -72,19 +77,19 @@ const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
       }`}
     >
       <h3 className="text-2xl font-bold mb-2">
-        🎯 Professionelle Optimierung zum Festpreis
+        {copy.title}
       </h3>
       <p className="text-white/90 mb-6">
-        Spare Zeit und Nerven. Wir optimieren dein Google-Profil für maximale lokale Sichtbarkeit.
+        {copy.text}
       </p>
       <div className="flex flex-wrap gap-4 mb-6">
         <span className="inline-flex items-center gap-2 text-sm">
           <Shield className="h-4 w-4" />
-          {isEn ? "100% money-back guarantee" : "100% Geld-zurück-Garantie"}
+          {copy.guarantee}
         </span>
         <span className="inline-flex items-center gap-2 text-sm">
           <Clock className="h-4 w-4" />
-          {isEn ? "Completed within 7 days" : "Fertig in 7 Tagen"}
+          {copy.delivery}
         </span>
       </div>
       <div className="flex flex-wrap items-center gap-4">
@@ -94,12 +99,12 @@ const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
             size="lg" 
             className="bg-white text-gray-900 hover:bg-white/90 group font-semibold"
           >
-            Für nur 299€ starten
+            {copy.cta}
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </Link>
         <span className="text-sm text-white/80">
-          {isEn ? "One-time payment, no hidden fees" : "Einmalig, keine versteckten Kosten"}
+          {copy.payment}
         </span>
       </div>
     </div>

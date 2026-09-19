@@ -22,7 +22,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
     <>
       {/* Hidden structured data for AI crawlers — semantic HTML, not display:none */}
       <div
-        className="sr-only"
+        className="hidden"
         data-ai-summary="structured"
         data-speakable="true"
         itemScope
