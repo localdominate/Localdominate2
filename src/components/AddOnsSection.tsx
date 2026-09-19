@@ -4,6 +4,7 @@ import { Check, Zap, FileText, BarChart3, Clock } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { cn } from "@/lib/utils";
+import { formatPrice } from "@/lib/currency";
 
 export interface AddOn {
   id: string;
