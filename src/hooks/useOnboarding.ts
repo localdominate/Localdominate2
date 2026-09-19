@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { BusinessCategory, getAllStepsForCategory, QuestionnaireStep } from '@/data/questionnaireConfig';
 import type { Json } from '@/integrations/supabase/types';
@@ -24,6 +24,8 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     isComplete: false,
   });
 
+  const sessionRef = useRef<string | null>(null);
+
   // Initialize or fetch customer
   useEffect(() => {
     if (!sessionId && !isTestMode) {
@@ -33,94 +35,44 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
 
     async function initCustomer() {
       try {
-        // In test mode, create a test customer without stripe session
-        if (isTestMode) {
-          const testSessionId = `test_${Date.now()}`;
-          const { data: newCustomer, error } = await supabase
-            .from('customers')
-            .insert({ stripe_session_id: testSessionId })
-            .select()
-            .single();
+        const activeSessionId = isTestMode && !sessionId ? `test_${Date.now()}` : sessionId!;
+        sessionRef.current = activeSessionId;
 
-          if (error) throw error;
+        const { data, error } = await supabase.functions.invoke('customer-onboarding', {
+          body: { action: 'init', sessionId: activeSessionId },
+        });
 
-          // Send notification about new customer (uses service role in edge function)
+        if (error) throw error;
+
+        const customer = data?.customer;
+        if (!customer) throw new Error('No customer returned');
+
+        if (data?.created) {
           try {
             await supabase.functions.invoke('send-new-customer-notification', {
               body: {
-                customerId: newCustomer.id,
+                customerId: customer.id,
                 recipientEmail: 'markuswimboeck@googlemail.com',
               },
             });
-            console.log('New customer notification sent (test mode)');
           } catch (notifyErr) {
             console.error('Failed to send new customer notification:', notifyErr);
           }
-
-          setState(prev => ({
-            ...prev,
-            customerId: newCustomer.id,
-            isLoading: false,
-          }));
-          return;
         }
 
-        // Check if customer already exists
-        const { data: existing } = await supabase
-          .from('customers')
-          .select('*')
-          .eq('stripe_session_id', sessionId)
-          .single();
+        const responsesMap: Record<string, Record<string, unknown>> = {};
+        (data?.responses ?? []).forEach((r: { step_key: string; response_data: unknown }) => {
+          responsesMap[r.step_key] = r.response_data as Record<string, unknown>;
+        });
 
-        if (existing) {
-          // Fetch existing responses
-          const { data: responses } = await supabase
-            .from('questionnaire_responses')
-            .select('step_key, response_data')
-            .eq('customer_id', existing.id);
-
-          const responsesMap: Record<string, Record<string, unknown>> = {};
-          responses?.forEach(r => {
-            responsesMap[r.step_key] = r.response_data as Record<string, unknown>;
-          });
-
-          setState(prev => ({
-            ...prev,
-            customerId: existing.id,
-            selectedCategory: existing.business_category as BusinessCategory | null,
-            responses: responsesMap,
-            isComplete: existing.questionnaire_completed || false,
-            isLoading: false,
-          }));
-        } else {
-          // Create new customer
-          const { data: newCustomer, error } = await supabase
-            .from('customers')
-            .insert({ stripe_session_id: sessionId })
-            .select()
-            .single();
-
-          if (error) throw error;
-
-          // Send notification about new customer (uses service role in edge function)
-          try {
-            await supabase.functions.invoke('send-new-customer-notification', {
-              body: {
-                customerId: newCustomer.id,
-                recipientEmail: 'markuswimboeck@googlemail.com',
-              },
-            });
-            console.log('New customer notification sent');
-          } catch (notifyErr) {
-            console.error('Failed to send new customer notification:', notifyErr);
-          }
-
-          setState(prev => ({
-            ...prev,
-            customerId: newCustomer.id,
-            isLoading: false,
-          }));
-        }
+        setState(prev => ({
+          ...prev,
+          customerId: customer.id,
+          selectedCategory: (customer.business_category as BusinessCategory | null) ?? null,
+          responses: responsesMap,
+          isComplete: customer.questionnaire_completed || false,
+          isLoading: false,
+        }));
       } catch (error) {
         console.error('Error initializing customer:', error);
         setState(prev => ({ ...prev, isLoading: false }));
@@ -136,10 +88,9 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     setState(prev => ({ ...prev, isSaving: true }));
 
     try {
-      await supabase
-        .from('customers')
-        .update({ business_category: category })
-        .eq('id', state.customerId);
+      await supabase.functions.invoke('customer-onboarding', {
+        body: { action: 'set_category', sessionId: sessionRef.current, category },
+      });
 
       setState(prev => ({
         ...prev,
@@ -184,18 +135,16 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
 
       // Update customer basic info if relevant
       if (stepKey === 'basic_info' || stepKey === 'contact') {
-        const updates: Record<string, unknown> = {};
-        if (data.business_name) updates.business_name = data.business_name;
-        if (data.address) updates.address = data.address;
-        if (data.phone) updates.phone = data.phone;
-        if (data.email) updates.email = data.email;
-
-        if (Object.keys(updates).length > 0) {
-          await supabase
-            .from('customers')
-            .update(updates)
-            .eq('id', state.customerId);
-        }
+        await supabase.functions.invoke('customer-onboarding', {
+          body: {
+            action: 'update_profile',
+            sessionId: sessionRef.current,
+            business_name: data.business_name,
+            address: data.address,
+            phone: data.phone,
+            email: data.email,
+          },
+        });
       }
 
       setState(prev => ({
@@ -229,21 +178,10 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     setState(prev => ({ ...prev, isSaving: true }));
 
     try {
-      // Mark questionnaire as complete
-      await supabase
-        .from('customers')
-        .update({
-          questionnaire_completed: true,
-          questionnaire_completed_at: new Date().toISOString(),
-        })
-        .eq('id', state.customerId);
-
-      // Get customer email from responses or customer table
-      const { data: customer } = await supabase
-        .from('customers')
-        .select('email')
-        .eq('id', state.customerId)
-        .single();
+      // Mark questionnaire as complete (server-side, service role)
+      await supabase.functions.invoke('customer-onboarding', {
+        body: { action: 'complete', sessionId: sessionRef.current },
+      });
 
       // Send confirmation email with questionnaire results (uses service role in edge function)
       const recipientEmail = 'markuswimboeck@googlemail.com';
@@ -281,14 +219,16 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
     if (!state.customerId) return null;
 
     try {
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${state.customerId}/${assetType}_${Date.now()}.${fileExt}`;
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('customer_id', state.customerId);
 
-      const { error: uploadError } = await supabase.storage
-        .from('customer-uploads')
-        .upload(fileName, file);
+      const { data, error } = await supabase.functions.invoke('upload-customer-file', {
+        body: formData,
+      });
 
-      if (uploadError) throw uploadError;
+      if (error) throw error;
+      if (!data?.path) throw new Error('Upload failed');
 
       // Save reference in database
       await supabase
@@ -296,15 +236,11 @@ export function useOnboarding(sessionId: string | null, isTestMode: boolean = fa
         .insert({
           customer_id: state.customerId,
           asset_type: assetType,
-          storage_path: fileName,
+          storage_path: data.path,
           file_name: file.name,
         });
 
-      const { data: { publicUrl } } = supabase.storage
-        .from('customer-uploads')
-        .getPublicUrl(fileName);
-
-      return publicUrl;
+      return data.url ?? data.path;
     } catch (error) {
       console.error('Error uploading file:', error);
       return null;
