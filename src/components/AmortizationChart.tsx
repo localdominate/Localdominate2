@@ -248,7 +248,7 @@ const AmortizationChart = ({
               tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
               axisLine={{ stroke: "hsl(var(--border))" }}
               tickLine={false}
-              tickFormatter={(value) => `${value}€`}
+              tickFormatter={(value) => formatPrice(Number(value), language)}
               domain={[0, Math.max(investment * 1.5, maxProfit * 1.1)]}
             />
             <Tooltip content={<CustomTooltip />} />
