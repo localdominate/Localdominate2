@@ -24,6 +24,12 @@ interface ChartDataPoint {
   investment: number;
 }
 
+interface ChartTooltipProps {
+  active?: boolean;
+  payload?: Array<{ value?: number }>;
+  label?: number;
+}
+
 const AmortizationChart = ({
   dailyProfit,
   investment,
@@ -128,9 +134,9 @@ const AmortizationChart = ({
   }, [isVisible]);
 
   // Custom tooltip
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload, label }: ChartTooltipProps) => {
     if (active && payload && payload.length) {
-      const profit = payload[0].value;
+      const profit = payload[0]?.value ?? 0;
       const isProfitable = profit >= investment;
 
       return (

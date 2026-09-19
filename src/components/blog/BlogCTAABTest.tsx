@@ -55,8 +55,8 @@ const BlogCTAABTest = ({ articleSlug, position }: BlogCTAABTestProps) => {
 
     // Also push to dataLayer
     if (typeof window !== "undefined") {
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      (window as any).dataLayer.push({
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
         event: "blog_cta_click",
         blog_article_slug: articleSlug,
         blog_cta_position: position,

@@ -2,6 +2,9 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import { MapPin, Star, Phone, Navigation, Clock, TrendingUp, PhoneCall, ChevronRight, CheckCircle2, XCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import type { translations } from "@/i18n/translations";
+
+type RankingTranslations = (typeof translations)[keyof typeof translations];
 
 const AnimatedCounter = ({ end, duration = 2000, suffix = "", prefix = "" }: { end: number; duration?: number; suffix?: string; prefix?: string }) => {
   const [count, setCount] = useState(0);
@@ -28,7 +31,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = "", prefix = "" }: { e
     }
 
     return () => observer.disconnect();
-  }, [isVisible]);
+  }, [isVisible, end]);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -65,7 +68,7 @@ const GoogleLocalPackResult = ({
   position: number;
   isYourBusiness?: boolean;
   isHidden?: boolean;
-  t: any;
+  t: RankingTranslations;
 }) => {
   return (
     <div className={`flex items-start gap-3 p-3 rounded-lg transition-all duration-300 ${
