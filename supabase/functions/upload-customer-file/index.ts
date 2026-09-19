@@ -196,16 +196,16 @@ Deno.serve(async (req) => {
 
     console.log(`[upload-customer-file] Successfully uploaded: ${data.path}`);
 
-    // Get public URL for the uploaded file
-    const { data: urlData } = supabase.storage
+    // Bucket is private: hand back a short-lived signed URL instead of a public one
+    const { data: urlData } = await supabase.storage
       .from('customer-uploads')
-      .getPublicUrl(data.path);
+      .createSignedUrl(data.path, 3600);
 
     return new Response(
       JSON.stringify({
         success: true,
         path: data.path,
-        url: urlData.publicUrl,
+        url: urlData?.signedUrl ?? null,
         remaining_uploads: rateLimit.remaining
       }),
       { 
