@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1789832382487,
+      "tag": "0000_harden_customers_storage_and_has_role",
+      "breakpoints": true
+    }
+  ]
+}
