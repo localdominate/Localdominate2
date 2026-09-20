@@ -1,0 +1,63 @@
+.campsites-page {
+  --camp-forest: 158 58% 16%;
+  --camp-forest-deep: 158 64% 10%;
+  --camp-cream: 43 42% 96%;
+  --camp-paper: 42 33% 98%;
+  --camp-ink: 162 43% 13%;
+  --camp-sage: 145 17% 88%;
+  --camp-gold: 42 91% 55%;
+  --primary: var(--camp-forest);
+  --primary-foreground: 43 42% 96%;
+  --background: var(--camp-paper);
+  --foreground: var(--camp-ink);
+  --card: 0 0% 100%;
+  --card-foreground: var(--camp-ink);
+  --muted: var(--camp-sage);
+  --muted-foreground: 159 14% 37%;
+  --border: 151 14% 82%;
+  --input: 151 14% 78%;
+  color: hsl(var(--camp-ink));
+  background: hsl(var(--camp-paper));
+  overflow-x: clip;
+}
+
+.campsites-page h1,
+.campsites-page h2,
+.campsites-page h3,
+.camp-display {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0;
+}
+
+.camp-script {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 600;
+  line-height: .9;
+  letter-spacing: 0;
+  transform: rotate(-4deg);
+}
+
+.camp-photo-overlay {
+  background: linear-gradient(90deg, hsl(var(--camp-forest-deep) / .92) 0%, hsl(var(--camp-forest-deep) / .68) 42%, hsl(var(--camp-forest-deep) / .08) 76%);
+}
+
+.camp-browser {
+  box-shadow: 0 24px 55px hsl(var(--camp-forest-deep) / .2);
+}
+
+.camp-screen {
+  background:
+    linear-gradient(180deg, hsl(var(--camp-forest-deep) / .2), hsl(var(--camp-forest-deep) / .72)),
+    var(--camp-screen-image) center / cover;
+}
+
+.camp-laptop-base {
+  background: linear-gradient(180deg, hsl(0 0% 94%), hsl(0 0% 72%));
+}
+
+@media (max-width: 767px) {
+  .camp-photo-overlay {
+    background: linear-gradient(90deg, hsl(var(--camp-forest-deep) / .9), hsl(var(--camp-forest-deep) / .42));
+  }
+}

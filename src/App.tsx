@@ -53,6 +53,7 @@ const LawyersHamburg = lazy(() => import("./pages/LawyersHamburg"));
 const PhysiotherapyVienna = lazy(() => import("./pages/PhysiotherapyVienna"));
 const DentistsZurich = lazy(() => import("./pages/DentistsZurich"));
 const BakeriesCologne = lazy(() => import("./pages/BakeriesCologne"));
+const Campsites = lazy(() => import("./pages/Campsites"));
 const WasIstGeo = lazy(() => import("./pages/blog/WasIstGeo"));
 const ChatgptZitiertLokaleUnternehmen = lazy(() => import("./pages/blog/ChatgptZitiertLokaleUnternehmen"));
 const AiVisibilityIndexLocalSeoMetrik = lazy(() => import("./pages/blog/AiVisibilityIndexLocalSeoMetrik"));
@@ -277,6 +278,7 @@ const App = () => (
                 <Route path="/physiotherapy-vienna" element={<PhysiotherapyVienna />} />
                 <Route path="/dentists-zurich" element={<DentistsZurich />} />
                 <Route path="/bakeries-cologne" element={<BakeriesCologne />} />
+                <Route path="/campsites" element={<Campsites />} />
                 <Route path="/blog/was-ist-geo-generative-engine-optimization" element={<WasIstGeo />} />
                 <Route path="/blog/chatgpt-zitiert-lokale-unternehmen" element={<ChatgptZitiertLokaleUnternehmen />} />
                 <Route path="/blog/ai-visibility-index-local-seo-metrik" element={<AiVisibilityIndexLocalSeoMetrik />} />
