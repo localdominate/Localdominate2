@@ -8,6 +8,7 @@ const RequestSchema = z.object({
 });
 
 const notificationRecipient = "markuswimboeck@gmail.com";
+const sandboxRecipientAlias = "markuswimboeck@googlemail.com";
 
 const jsonResponse = (body: Record<string, unknown>, status: number) =>
   new Response(JSON.stringify(body), {
@@ -75,20 +76,31 @@ Deno.serve(async (req) => {
 
     const safeWebsite = escapeHtml(website);
     const safeEmail = escapeHtml(parsed.data.email);
-    const emailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${resendApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+    const sendNotification = (recipient: string) => fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${resendApiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
         from: "LocalDominate Website Check <onboarding@resend.dev>",
-        to: [notificationRecipient],
+        to: [recipient],
         reply_to: parsed.data.email,
         subject: `New campsite website check: ${new URL(website).hostname}`,
         html: `<h1>New campsite website check</h1><p><strong>Website:</strong> <a href="${safeWebsite}">${safeWebsite}</a></p><p><strong>Contact:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>`,
       }),
     });
+
+    let emailResponse = await sendNotification(notificationRecipient);
+    if (!emailResponse.ok) {
+      const details = await emailResponse.text();
+      if (emailResponse.status === 403 && details.includes("testing emails to your own email address")) {
+        emailResponse = await sendNotification(sandboxRecipientAlias);
+      } else {
+        console.error(`Email provider request failed [${emailResponse.status}]: ${details}`);
+        return jsonResponse({ error: "Your request was saved, but the notification email could not be sent." }, 502);
+      }
+    }
 
     if (!emailResponse.ok) {
       const details = await emailResponse.text();
