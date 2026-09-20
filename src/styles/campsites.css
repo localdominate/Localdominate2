@@ -57,6 +57,66 @@
 }
 
 @media (max-width: 767px) {
+  .camp-mobile-header {
+    height: 5rem;
+    gap: .75rem;
+    padding-block: .25rem;
+  }
+
+  .camp-mobile-logo {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+  }
+
+  .camp-hero-eyebrow {
+    margin-bottom: .625rem;
+  }
+
+  .camp-audience-cell {
+    min-height: 5.25rem;
+  }
+
+  .camp-journey-script {
+    margin-top: 1.5rem;
+    font-size: 1.625rem;
+  }
+
+  .camp-journey-mockup {
+    max-width: 100%;
+  }
+
+  .camp-benefit-list {
+    row-gap: 1.125rem;
+  }
+
+  .camp-comparison {
+    row-gap: .75rem;
+  }
+
+  .camp-comparison-arrow {
+    margin-block: -.125rem;
+  }
+
+  .camp-testimonial {
+    padding: 1.75rem;
+  }
+
+  .camp-lead-card {
+    margin-inline: .25rem;
+  }
+
+  .camp-tourism-content {
+    gap: 1.5rem;
+    padding: 3rem 1.875rem;
+  }
+
+  .camp-tourism-script {
+    justify-self: start;
+    margin-top: -.25rem;
+    text-align: left;
+  }
+
   .camp-photo-overlay {
     background: linear-gradient(90deg, hsl(var(--camp-forest-deep) / .9), hsl(var(--camp-forest-deep) / .42));
   }
