@@ -219,7 +219,7 @@ const Campsites = () => {
 
   return (
     <div className="campsites-page min-h-screen">
-      <SEOHead title={title} description={description} canonicalUrl={canonicalUrl} ogImage="https://localdominate.org/assets/campsites-hero.jpg" ogType="website" lang="en-GB" jsonLd={jsonLd} />
+      <SEOHead title={title} exactTitle description={description} canonicalUrl={canonicalUrl} ogImage="https://localdominate.org/campsites-social.jpg" ogType="website" lang="en-GB" jsonLd={jsonLd} />
 
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur">
         <div className="camp-mobile-header mx-auto flex h-16 max-w-7xl items-center gap-5 px-4 lg:px-8">
@@ -240,7 +240,7 @@ const Campsites = () => {
           <div className="relative mx-auto flex min-h-[640px] max-w-7xl items-center px-5 py-14 md:min-h-[680px] lg:px-8">
             <div className="w-full max-w-[640px] text-primary-foreground">
               <p className="camp-hero-eyebrow mb-4 text-xs font-bold uppercase tracking-[.16em]">Websites for campsites, caravan parks & holiday parks</p>
-              <h1 className="text-5xl font-semibold leading-[.86] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[84px]"><span className="block lg:whitespace-nowrap">From Inspiration</span><em className="block font-medium lg:whitespace-nowrap">to Arrival.</em></h1>
+              <h1 className="text-5xl font-semibold leading-[.86] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[84px]"><span className="block lg:whitespace-nowrap">From Inspiration</span>{" "}<em className="block font-medium lg:whitespace-nowrap">to Arrival.</em></h1>
               <p className="mt-7 max-w-lg text-lg leading-snug md:text-xl">We help UK campsites turn online discovery<br className="hidden sm:block" /> into more direct bookings.</p>
               <ul className="mt-6 space-y-2 text-sm md:text-base"><CheckItem dark>More guests, fewer OTA fees</CheckItem><CheckItem dark>A website that reflects what makes your place special</CheckItem><CheckItem dark>Built for the UK outdoor tourism market</CheckItem></ul>
               <div className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7">
