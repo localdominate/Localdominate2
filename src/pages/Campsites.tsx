@@ -1,0 +1,216 @@
+import { FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight, BarChart3, Bus, Caravan, Check, Heart, Instagram, Leaf,
+  Linkedin, LockKeyhole, Mail, Map, MessageCircle, Rocket, Settings,
+  ShieldCheck, Star, TentTree, Trees, Youtube,
+} from "lucide-react";
+import { toast } from "sonner";
+import SEOHead from "@/components/SEOHead";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { supabase } from "@/integrations/supabase/client";
+import { trackButtonClick } from "@/lib/dataLayer";
+import heroImage from "@/assets/campsites-hero.jpg";
+import coastImage from "@/assets/campsites-coast.jpg";
+import glampingImage from "@/assets/campsites-glamping.jpg";
+import "@/styles/campsites.css";
+
+const ctaLabel = "Get My Free Website Check";
+
+const scrollToCheck = (location: string) => {
+  trackButtonClick("campsites_website_check", location, 0);
+  document.getElementById("website-check")?.scrollIntoView({ behavior: "smooth", block: "center" });
+};
+
+const CheckItem = ({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) => (
+  <li className="flex items-start gap-2.5">
+    <span className={`mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full ${dark ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground"}`}>
+      <Check className="h-3.5 w-3.5" strokeWidth={3} />
+    </span>
+    <span>{children}</span>
+  </li>
+);
+
+const SectionTitle = ({ eyebrow, children }: { eyebrow: string; children: React.ReactNode }) => (
+  <div>
+    <p className="mb-3 text-xs font-bold uppercase tracking-[.16em] text-primary">{eyebrow}</p>
+    <h2 className="text-4xl font-semibold leading-[.92] sm:text-5xl lg:text-6xl">{children}</h2>
+  </div>
+);
+
+const WebsiteMockup = ({ after = false, compact = false }: { after?: boolean; compact?: boolean }) => (
+  <div className={`camp-browser rounded-lg border border-border bg-card p-2 ${compact ? "max-w-[310px]" : "w-full max-w-[620px]"}`}>
+    <div className="mb-2 flex gap-1 px-1">
+      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
+      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
+      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
+    </div>
+    <div
+      className={`overflow-hidden rounded ${after ? "camp-screen text-primary-foreground" : "bg-muted text-foreground"}`}
+      style={after ? ({ "--camp-screen-image": `url(${heroImage})` } as React.CSSProperties) : undefined}
+    >
+      <div className={`flex h-7 items-center justify-between px-3 text-[7px] font-bold ${after ? "bg-primary-foreground/90 text-primary" : "border-b border-border bg-card"}`}>
+        <span>{after ? "RIVERSIDE HOLIDAY PARK" : "Campsite Website"}</span><span>STAY · EXPLORE · BOOK</span>
+      </div>
+      <div className={`${compact ? "h-32" : "h-48 md:h-60"} flex flex-col items-center justify-center px-5 text-center`}>
+        <p className={`${after ? "camp-display text-2xl font-semibold" : "text-sm font-medium text-muted-foreground"}`}>
+          {after ? "Make your stay memorable" : "Welcome to our campsite"}
+        </p>
+        <span className={`mt-3 rounded-full px-4 py-1.5 text-[8px] font-bold ${after ? "bg-primary-foreground text-primary" : "bg-muted-foreground/20"}`}>
+          {after ? "BOOK YOUR STAY" : "Find out more"}
+        </span>
+      </div>
+    </div>
+  </div>
+);
+
+const WebsiteCheckForm = () => {
+  const [website, setWebsite] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const submit = async (event: FormEvent) => {
+    event.preventDefault();
+    setLoading(true);
+    const { error } = await supabase.from("leads").insert({
+      email: email.trim(),
+      business_name: website.trim(),
+      notes: `Website check requested for: ${website.trim()}`,
+      source_page: "/campsites",
+      source_cta: "website_check",
+      lead_type: "campsites_website_check",
+    });
+    setLoading(false);
+    if (error) {
+      toast.error("We couldn't send your request. Please try again.");
+      return;
+    }
+    trackButtonClick("campsites_lead_form", "website_check", 0);
+    setSubmitted(true);
+  };
+
+  if (submitted) return (
+    <div className="py-8 text-center" role="status">
+      <ShieldCheck className="mx-auto mb-3 h-10 w-10 text-primary" />
+      <h3 className="text-3xl font-semibold">Thank you.</h3>
+      <p className="mt-2 text-sm text-muted-foreground">We'll review your website and be in touch.</p>
+    </div>
+  );
+
+  return (
+    <form onSubmit={submit} className="space-y-3">
+      <label htmlFor="camp-website" className="sr-only">Website URL</label>
+      <Input id="camp-website" type="url" required value={website} onChange={(e) => setWebsite(e.target.value)} placeholder="Enter your website URL" className="h-12 bg-card" />
+      <label htmlFor="camp-email" className="sr-only">Email address</label>
+      <Input id="camp-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email address" className="h-12 bg-card" />
+      <Button type="submit" disabled={loading} className="w-full rounded-full" size="lg">
+        {loading ? "Sending…" : "Get My Free Check"}<ArrowRight />
+      </Button>
+      <p className="flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground"><LockKeyhole className="h-3 w-3" />Your details are safe. We never share your data.</p>
+    </form>
+  );
+};
+
+const Campsites = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Websites for UK Campsites and Holiday Parks",
+    provider: { "@type": "Organization", name: "LocalDominate", url: "https://localdominate.org" },
+    areaServed: { "@type": "Country", name: "United Kingdom" },
+    serviceType: "Campsite website design",
+    url: "https://localdominate.org/campsites",
+  };
+
+  return (
+    <div className="campsites-page min-h-screen">
+      <SEOHead title="Websites for Campsites & Holiday Parks | LocalDominate" description="High-converting websites for UK campsites, caravan parks, holiday parks and glamping sites. Attract more guests and increase direct bookings with LocalDominate." canonicalUrl="https://localdominate.org/campsites" lang="en-GB" jsonLd={jsonLd} />
+
+      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur">
+        <div className="mx-auto flex h-16 max-w-7xl items-center gap-5 px-4 lg:px-8">
+          <Link to="/" className="shrink-0" aria-label="LocalDominate home"><img src="/logo.png" alt="LocalDominate" width="116" height="46" className="h-10 w-auto" /></Link>
+          <nav className="ml-auto hidden items-center gap-6 text-xs font-semibold lg:flex" aria-label="Campsites page navigation">
+            <a href="#why">Why It Matters</a><a href="#process">How It Works</a><a href="#examples">Examples</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+          </nav>
+          <div className="ml-auto hidden items-center gap-2 border-l border-border pl-5 md:flex lg:ml-2"><span className="text-2xl" aria-hidden="true">🇬🇧</span><span className="text-[10px] leading-tight"><strong className="block">UK Focused</strong>Campsites · Caravan Parks · Holiday Parks</span></div>
+          <Button onClick={() => scrollToCheck("header")} className="ml-auto hidden rounded-full sm:inline-flex lg:ml-0">{ctaLabel}<ArrowRight /></Button>
+          <Button onClick={() => scrollToCheck("header_mobile")} size="icon" className="ml-auto rounded-full sm:hidden" aria-label={ctaLabel}><ArrowRight /></Button>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative min-h-[680px] overflow-hidden md:min-h-[720px]">
+          <img src={heroImage} alt="A couple enjoying a Lake District campsite at sunset" width="1920" height="1080" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <div className="camp-photo-overlay absolute inset-0" />
+          <div className="relative mx-auto flex min-h-[680px] max-w-7xl items-center px-5 py-16 md:min-h-[720px] lg:px-8">
+            <div className="max-w-2xl text-primary-foreground">
+              <p className="mb-4 text-xs font-bold uppercase tracking-[.16em]">Websites for campsites, caravan parks & holiday parks</p>
+              <h1 className="text-6xl font-semibold leading-[.78] sm:text-7xl md:text-8xl lg:text-9xl">From Inspiration<br /><em className="font-medium">to Arrival.</em></h1>
+              <p className="mt-7 max-w-lg text-lg leading-snug md:text-xl">We help UK campsites turn online discovery<br className="hidden sm:block" /> into more direct bookings.</p>
+              <ul className="mt-6 space-y-2 text-sm md:text-base"><CheckItem dark>More guests, fewer OTA fees</CheckItem><CheckItem dark>A website that reflects what makes your place special</CheckItem><CheckItem dark>Built for the UK outdoor tourism market</CheckItem></ul>
+              <div className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-center">
+                <Button onClick={() => scrollToCheck("hero")} size="cta" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">{ctaLabel}<ArrowRight /></Button>
+                <p className="camp-script max-w-[180px] text-xl">No obligation.<br />Real insights.<br />From people who understand campsites.</p>
+              </div>
+            </div>
+            <p className="camp-script absolute right-8 top-16 hidden max-w-[210px] text-right text-3xl text-primary-foreground xl:block">Great places<br />bring great people<br />together.</p>
+            <div className="absolute bottom-7 right-5 rounded-full bg-background/95 px-5 py-3 text-foreground shadow-xl md:right-8">
+              <div className="flex items-center gap-3"><div><div className="flex text-[hsl(var(--camp-gold))]">★★★★★</div><strong className="text-xs">Rated 4.9/5</strong><span className="block text-[9px]">by campsite owners</span></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border bg-background" aria-label="Who we help and key benefits">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-border md:grid-cols-4 lg:grid-cols-7 lg:divide-y-0">
+            {[[TentTree,"Campsites"],[Caravan,"Caravan Parks"],[Map,"Holiday Parks"],[Trees,"Glamping Sites"]].map(([Icon,label]) => { const IconComponent = Icon as typeof TentTree; return <div key={label as string} className="flex min-h-24 flex-col items-center justify-center gap-2 px-3 text-center text-xs font-semibold"><IconComponent className="h-6 w-6 text-primary" />{label as string}</div>; })}
+            <div className="flex min-h-24 items-center justify-center gap-3 px-4"><BarChart3 className="h-7 w-7 text-primary" /><p className="text-xs"><strong className="block text-xl">+48%</strong>more direct bookings<br /><span className="text-muted-foreground">(illustrative)</span></p></div>
+            <div className="flex min-h-24 items-center justify-center gap-3 px-4 text-xs font-semibold"><Heart className="h-7 w-7 text-primary" />Happier guests</div>
+            <div className="col-span-2 flex min-h-24 items-center justify-center gap-3 px-4 text-xs font-semibold md:col-span-1"><Leaf className="h-7 w-7 text-primary" />A more independent business</div>
+          </div>
+        </section>
+
+        <section id="why" className="bg-[hsl(var(--camp-cream))] px-5 py-20 lg:px-8 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
+            <div><SectionTitle eyebrow="A better online journey">Turn Lookers Into<br />Lasting Guests.</SectionTitle><p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">Your campsite is more than a place to stay – it’s the start of memorable journeys. We create websites that inspire trust, showcase what makes your place unique, and make it easy to book directly.</p><Button onClick={() => document.getElementById("process")?.scrollIntoView({ behavior: "smooth" })} variant="outline" className="mt-7 rounded-full border-primary">See How It Works<ArrowRight /></Button><p className="camp-script mt-8 max-w-[190px] text-3xl text-primary">More journeys.<br />More memories.</p></div>
+            <div className="grid gap-8 md:grid-cols-[1fr_220px] md:items-center">
+              <div className="relative pb-10"><WebsiteMockup after /><div className="camp-laptop-base mx-auto h-3 w-[88%] rounded-b-xl" /><div className="absolute -bottom-2 right-2 w-24 rotate-2 md:w-32"><WebsiteMockup after compact /></div></div>
+              <ul className="space-y-4 text-sm font-medium"><CheckItem>Modern, mobile-friendly design</CheckItem><CheckItem>Clearer information</CheckItem><CheckItem>Easier booking journey</CheckItem><CheckItem>Better visibility on Google</CheckItem><CheckItem>A stronger, trust-building presence</CheckItem></ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="examples" className="px-5 py-20 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-7xl"><SectionTitle eyebrow="Real example. Illustrative result.">Same Great Place.<br />A Stronger First Impression.</SectionTitle>
+            <div className="mt-12 grid gap-10 xl:grid-cols-[1.45fr_.7fr_.7fr] xl:items-center">
+              <div className="grid items-center gap-4 sm:grid-cols-[1fr_auto_1fr]"><div><span className="mb-2 inline-block rounded-full bg-muted px-3 py-1 text-xs font-bold">Before</span><WebsiteMockup compact /></div><ArrowRight className="mx-auto h-8 w-8 text-primary sm:mt-8" /><div><span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">After</span><WebsiteMockup after compact /></div></div>
+              <blockquote id="reviews" className="rounded-md bg-muted/55 p-7"><p className="text-sm leading-relaxed">“Our new website has made it so much easier for guests to find information and book directly. We’ve seen a real increase in direct bookings this season.”</p><div className="mt-5 text-[hsl(var(--camp-gold))]">★★★★★</div><strong className="mt-2 block text-sm">James T.</strong><span className="text-xs text-muted-foreground">Campsite Owner, Lake District</span><span className="mt-3 block text-[10px] uppercase tracking-wider text-muted-foreground">Placeholder testimonial</span></blockquote>
+              <div id="website-check" className="rounded-md border-8 border-muted bg-card p-6 shadow-sm"><h2 className="text-3xl font-semibold leading-none">Get Your Free<br />Website Check</h2><p className="my-4 text-sm leading-relaxed text-muted-foreground">Receive a personalised review of your current website with practical recommendations – no obligation.</p><WebsiteCheckForm /></div>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative min-h-[340px] overflow-hidden text-primary-foreground">
+          <img src={coastImage} alt="A campsite overlooking the British coast" width="1920" height="768" loading="lazy" className="absolute inset-0 h-full w-full object-cover" /><div className="camp-photo-overlay absolute inset-0" />
+          <div className="relative mx-auto flex min-h-[340px] max-w-7xl items-center px-5 py-16 lg:px-8"><div className="max-w-2xl"><p className="mb-3 text-xs font-bold uppercase tracking-[.16em]">Supporting a stronger UK tourism industry</p><h2 className="text-5xl font-semibold leading-[.85] md:text-6xl">Great Campsites.<br />Brighter Tomorrows.</h2><p className="mt-5 max-w-xl text-sm leading-relaxed md:text-base">By helping independent campsites grow online, we contribute to stronger local communities and a more vibrant UK outdoor tourism industry.</p></div><p className="camp-script absolute bottom-10 right-8 hidden text-right text-3xl md:block">Local Stays.<br />Local People.<br />Lasting Impact.</p></div>
+        </section>
+
+        <section id="process" className="bg-background px-5 py-20 lg:px-8 lg:py-24">
+          <div className="mx-auto max-w-7xl"><SectionTitle eyebrow="A simple process, designed around you">From First Chat to First Bookings.</SectionTitle>
+            <div className="mt-12 grid gap-px overflow-hidden rounded-md bg-border sm:grid-cols-2 lg:grid-cols-4">{[[MessageCircle,"We review your current website and goals."],[Leaf,"We create a tailored solution."],[Settings,"We build and optimise for bookings."],[Rocket,"You get a modern website that works for you."]].map(([Icon,text],i) => { const IconComponent = Icon as typeof MessageCircle; return <div key={text as string} className="relative flex min-h-48 flex-col items-center justify-center bg-background p-7 text-center"><span className="absolute left-5 top-5 grid h-8 w-8 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{i+1}</span><IconComponent className="mb-5 h-8 w-8 text-primary" /><p className="max-w-[180px] text-sm leading-relaxed">{text as string}</p></div>; })}</div>
+            <div className="mt-10 grid gap-5 md:grid-cols-[1fr_260px]"><div className="flex items-center justify-between gap-8 rounded-md bg-muted/60 p-7"><div><h3 className="text-3xl font-semibold">Everything You Need.<br />Nothing You Don’t.</h3><ul className="mt-5 grid gap-2 text-sm sm:grid-cols-2"><CheckItem>No long contracts</CheckItem><CheckItem>Clear, fixed pricing</CheckItem><CheckItem>Friendly, UK-based support</CheckItem><CheckItem>Built for campsite owners, by people who understand your industry</CheckItem></ul></div></div><img src={glampingImage} alt="A welcoming glamping tent in a woodland setting" width="768" height="1024" loading="lazy" className="h-72 w-full rounded-md object-cover md:h-full" /></div>
+          </div>
+        </section>
+
+        <section id="faq" className="bg-primary px-5 py-16 text-primary-foreground lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_auto_1fr] md:items-center"><div><h2 className="text-4xl font-semibold md:text-5xl">Ready to Welcome More Guests?</h2><p className="mt-3 max-w-xl text-sm opacity-80">Get your free website check today and take the first step towards a brighter future for your park.</p></div><div className="text-center"><Button onClick={() => scrollToCheck("final_cta")} size="cta" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">{ctaLabel}<ArrowRight /></Button><div className="mt-4 flex flex-wrap justify-center gap-4 text-xs"><span>✓ Free</span><span>✓ No obligation</span><span>✓ Practical insights</span></div></div><p className="camp-script hidden text-right text-3xl md:block">Better places<br />for brighter tomorrows.</p></div>
+        </section>
+      </main>
+
+      <footer className="border-t border-border bg-background px-5 py-9 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center md:flex-row md:text-left"><Link to="/" aria-label="LocalDominate home"><img src="/logo.png" alt="LocalDominate – websites for campsites" width="116" height="46" className="h-11 w-auto" /></Link><nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs"><Link to="/ueber-uns">About</Link><Link to="/datenschutz">Privacy</Link><Link to="/agb">Terms</Link><a href="mailto:hello@localdominate.org">Contact</a></nav><div className="flex gap-4" aria-label="Social links"><a href="#instagram" aria-label="Instagram"><Instagram className="h-4 w-4" /></a><a href="#linkedin" aria-label="LinkedIn"><Linkedin className="h-4 w-4" /></a><a href="#youtube" aria-label="YouTube"><Youtube className="h-4 w-4" /></a><a href="mailto:hello@localdominate.org" aria-label="Email"><Mail className="h-4 w-4" /></a></div><p className="ml-auto flex items-center gap-3 text-[10px] leading-tight"><span>Proud to support<br />a stronger UK tourism industry.</span><span className="text-3xl" aria-hidden="true">🇬🇧</span></p></div></footer>
+    </div>
+  );
+};
+
+export default Campsites;
