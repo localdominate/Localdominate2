@@ -74,13 +74,11 @@ const WebsiteCheckForm = () => {
   const submit = async (event: FormEvent) => {
     event.preventDefault();
     setLoading(true);
-    const { error } = await supabase.from("leads").insert({
-      email: email.trim(),
-      business_name: website.trim(),
-      notes: `Website check requested for: ${website.trim()}`,
-      source_page: "/campsites",
-      source_cta: "website_check",
-      lead_type: "campsites_website_check",
+    const normalizedWebsite = /^https?:\/\//i.test(website.trim())
+      ? website.trim()
+      : `https://${website.trim()}`;
+    const { error } = await supabase.functions.invoke("send-campsite-website-check", {
+      body: { website: normalizedWebsite, email: email.trim() },
     });
     setLoading(false);
     if (error) {
@@ -102,7 +100,7 @@ const WebsiteCheckForm = () => {
   return (
     <form onSubmit={submit} className="space-y-3">
       <label htmlFor="camp-website" className="sr-only">Website URL</label>
-      <Input id="camp-website" type="url" required value={website} onChange={(e) => setWebsite(e.target.value)} placeholder="Enter your website URL" className="h-12 bg-card" />
+      <Input id="camp-website" type="text" inputMode="url" autoCapitalize="none" autoCorrect="off" required value={website} onChange={(e) => setWebsite(e.target.value)} placeholder="e.g. mycampsite.co.uk" className="h-12 bg-card" />
       <label htmlFor="camp-email" className="sr-only">Email address</label>
       <Input id="camp-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your email address" className="h-12 bg-card" />
       <Button type="submit" disabled={loading} className="w-full rounded-full" size="lg">
