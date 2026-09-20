@@ -1,9 +1,9 @@
 import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight, BarChart3, Bus, Caravan, Check, Heart, Instagram, Leaf,
-  Linkedin, LockKeyhole, Mail, Map, MessageCircle, Rocket, Settings,
-  ShieldCheck, Star, TentTree, Trees, Youtube,
+  ArrowRight, BarChart3, Caravan, Check, Heart, Leaf,
+  LockKeyhole, Mail, Map, MessageCircle, Rocket, Settings,
+  ShieldCheck, TentTree, Trees,
 } from "lucide-react";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
@@ -208,7 +208,7 @@ const Campsites = () => {
         </section>
       </main>
 
-      <footer className="border-t border-border bg-background px-5 py-9 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center md:flex-row md:text-left"><Link to="/" aria-label="LocalDominate home"><img src="/logo.png" alt="LocalDominate – websites for campsites" width="116" height="46" className="h-11 w-auto" /></Link><nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs"><Link to="/ueber-uns">About</Link><Link to="/datenschutz">Privacy</Link><Link to="/agb">Terms</Link><a href="mailto:hello@localdominate.org">Contact</a></nav><div className="flex gap-4" aria-label="Social links"><a href="#instagram" aria-label="Instagram"><Instagram className="h-4 w-4" /></a><a href="#linkedin" aria-label="LinkedIn"><Linkedin className="h-4 w-4" /></a><a href="#youtube" aria-label="YouTube"><Youtube className="h-4 w-4" /></a><a href="mailto:hello@localdominate.org" aria-label="Email"><Mail className="h-4 w-4" /></a></div><p className="ml-auto flex items-center gap-3 text-[10px] leading-tight"><span>Proud to support<br />a stronger UK tourism industry.</span><span className="text-3xl" aria-hidden="true">🇬🇧</span></p></div></footer>
+      <footer className="border-t border-border bg-background px-5 py-9 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center md:flex-row md:text-left"><Link to="/" aria-label="LocalDominate home"><img src="/logo.png" alt="LocalDominate – websites for campsites" width="116" height="46" className="h-11 w-auto" /></Link><nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs"><Link to="/ueber-uns">About</Link><Link to="/datenschutz">Privacy</Link><Link to="/agb">Terms</Link><a className="inline-flex items-center gap-1.5" href="mailto:hello@localdominate.org"><Mail className="h-3.5 w-3.5" />Contact</a></nav><p className="ml-auto flex items-center gap-3 text-[10px] leading-tight"><span>Proud to support<br />a stronger UK tourism industry.</span><span className="text-3xl" aria-hidden="true">🇬🇧</span></p></div></footer>
     </div>
   );
 };
