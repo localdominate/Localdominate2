@@ -16,6 +16,7 @@ import coastImage from "@/assets/campsites-coast.jpg";
 import glampingImage from "@/assets/campsites-glamping.jpg";
 import mockupDesktopImage from "@/assets/campsites-mockup-desktop.jpg";
 import mockupMobileImage from "@/assets/campsites-mockup-mobile.jpg";
+import campLogo from "@/assets/campsites-logo.png";
 import "@/styles/campsites.css";
 
 const ctaLabel = "Get My Free Website Check";
