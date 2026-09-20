@@ -18,6 +18,7 @@ interface SEOHeadProps {
     de?: string;
     en?: string;
   };
+  exactTitle?: boolean;
 }
 
 const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
@@ -35,12 +36,15 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
   articleAuthor = "Local Dominator",
   articleSection,
   alternateUrls,
+  exactTitle = false,
 }, _ref) => {
   // Build SEO title, ensuring total length stays ≤60 chars
   const SUFFIX = " | Local Dominator";
   const MAX = 60;
   let fullTitle: string;
-  if (title.includes("Local Dominator")) {
+  if (exactTitle) {
+    fullTitle = title;
+  } else if (title.includes("Local Dominator")) {
     fullTitle = title.length > MAX ? title.slice(0, MAX - 1).trimEnd() + "…" : title;
   } else if (title.length + SUFFIX.length <= MAX) {
     fullTitle = title + SUFFIX;
