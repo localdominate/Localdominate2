@@ -14,6 +14,8 @@ import { trackButtonClick } from "@/lib/dataLayer";
 import heroImage from "@/assets/campsites-hero.jpg";
 import coastImage from "@/assets/campsites-coast.jpg";
 import glampingImage from "@/assets/campsites-glamping.jpg";
+import mockupDesktopImage from "@/assets/campsites-mockup-desktop.jpg";
+import mockupMobileImage from "@/assets/campsites-mockup-mobile.jpg";
 import "@/styles/campsites.css";
 
 const ctaLabel = "Get My Free Website Check";
@@ -78,31 +80,45 @@ const SectionTitle = ({ eyebrow, children }: { eyebrow: string; children: React.
   </div>
 );
 
-const WebsiteMockup = ({ after = false, compact = false }: { after?: boolean; compact?: boolean }) => (
-  <div className={`camp-browser rounded-lg border border-border bg-card p-2 ${compact ? "max-w-[310px]" : "w-full max-w-[620px]"}`}>
-    <div className="mb-2 flex gap-1 px-1">
-      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
-      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
-      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
-    </div>
-    <div
-      className={`overflow-hidden rounded ${after ? "camp-screen text-primary-foreground" : "bg-muted text-foreground"}`}
-      style={after ? ({ "--camp-screen-image": `url(${heroImage})` } as React.CSSProperties) : undefined}
-    >
-      <div className={`flex h-7 items-center justify-between px-3 text-[7px] font-bold ${after ? "bg-primary-foreground/90 text-primary" : "border-b border-border bg-card"}`}>
-        <span>{after ? "RIVERSIDE HOLIDAY PARK" : "Campsite Website"}</span><span>STAY · EXPLORE · BOOK</span>
+const WebsiteMockup = ({ after = false, compact = false, phone = false }: { after?: boolean; compact?: boolean; phone?: boolean }) => {
+  if (after) {
+    if (phone) {
+      return (
+        <div className={`camp-phone overflow-hidden rounded-2xl border-4 border-card bg-card shadow-2xl ${compact ? "max-w-[310px]" : "w-full max-w-[620px]"}`}>
+          <img src={mockupMobileImage} alt="Riverside Holiday Park website on mobile" width="768" height="1536" loading="lazy" className="block h-auto w-full" />
+        </div>
+      );
+    }
+    return (
+      <div className={`camp-browser overflow-hidden rounded-xl border border-border bg-card shadow-xl ${compact ? "max-w-[310px]" : "w-full max-w-[620px]"}`}>
+        <div className="flex gap-1.5 px-3 py-2.5">
+          <span className="h-2 w-2 rounded-full bg-muted-foreground/30" />
+          <span className="h-2 w-2 rounded-full bg-muted-foreground/30" />
+          <span className="h-2 w-2 rounded-full bg-muted-foreground/30" />
+        </div>
+        <img src={mockupDesktopImage} alt="Riverside Holiday Park website on desktop" width="1600" height="1008" loading="lazy" className="block h-auto w-full" />
       </div>
-      <div className={`${compact ? "h-32" : "h-48 md:h-60"} flex flex-col items-center justify-center px-5 text-center`}>
-        <p className={`${after ? "camp-display text-2xl font-semibold" : "text-sm font-medium text-muted-foreground"}`}>
-          {after ? "Make your stay memorable" : "Welcome to our campsite"}
-        </p>
-        <span className={`mt-3 rounded-full px-4 py-1.5 text-[8px] font-bold ${after ? "bg-primary-foreground text-primary" : "bg-muted-foreground/20"}`}>
-          {after ? "BOOK YOUR STAY" : "Find out more"}
-        </span>
+    );
+  }
+  return (
+    <div className={`camp-browser rounded-lg border border-border bg-card p-2 ${compact ? "max-w-[310px]" : "w-full max-w-[620px]"}`}>
+      <div className="mb-2 flex gap-1 px-1">
+        <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
+        <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
+        <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30" />
+      </div>
+      <div className="overflow-hidden rounded bg-muted text-foreground">
+        <div className="flex h-7 items-center justify-between border-b border-border bg-card px-3 text-[7px] font-bold">
+          <span>Campsite Website</span><span>STAY · EXPLORE · BOOK</span>
+        </div>
+        <div className={`${compact ? "h-32" : "h-48 md:h-60"} flex flex-col items-center justify-center px-5 text-center`}>
+          <p className="text-sm font-medium text-muted-foreground">Welcome to our campsite</p>
+          <span className="mt-3 rounded-full bg-muted-foreground/20 px-4 py-1.5 text-[8px] font-bold">Find out more</span>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const WebsiteCheckForm = () => {
   const [website, setWebsite] = useState("");
@@ -280,7 +296,7 @@ const Campsites = () => {
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(0,.82fr)_minmax(0,1.18fr)] lg:items-center">
             <div><SectionTitle eyebrow="A better online journey">Turn Lookers Into<br />Lasting Guests.</SectionTitle><p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">Your campsite is more than a place to stay – it’s the start of memorable journeys. We create websites that inspire trust, showcase what makes your place unique, and make it easy to book directly.</p><Button onClick={() => document.getElementById("process")?.scrollIntoView({ behavior: "smooth" })} variant="outline" className="mt-7 rounded-full border-primary">See How It Works<ArrowRight /></Button><p className="camp-journey-script camp-script mt-8 max-w-[190px] text-3xl text-primary">More journeys.<br />More memories.</p></div>
             <div className="grid min-w-0 gap-8 md:grid-cols-[minmax(0,1fr)_210px] md:items-center">
-               <div className="camp-journey-mockup relative min-w-0 pb-8 pr-10 md:pr-12" role="img" aria-label="Responsive campsite website shown on desktop and mobile"><WebsiteMockup after /><div className="camp-laptop-base mx-auto h-3 w-[88%] rounded-b-xl" /><div className="absolute bottom-0 right-0 w-24 rotate-2 md:w-28"><WebsiteMockup after compact /></div></div>
+               <div className="camp-journey-mockup relative min-w-0 pb-8 pr-10 md:pr-12" role="img" aria-label="Responsive campsite website shown on desktop and mobile"><WebsiteMockup after /><div className="camp-laptop-base mx-auto h-3 w-[88%] rounded-b-xl" /><div className="absolute bottom-0 right-0 w-28 rotate-2 md:w-32"><WebsiteMockup after compact phone /></div></div>
               <ul className="camp-benefit-list space-y-4 text-sm font-medium"><CheckItem>Modern, mobile-friendly design</CheckItem><CheckItem>Clearer information</CheckItem><CheckItem>Easier booking journey</CheckItem><CheckItem>Better visibility on Google</CheckItem><CheckItem>A stronger, trust-building presence</CheckItem></ul>
             </div>
           </div>
