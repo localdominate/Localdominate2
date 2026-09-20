@@ -16,6 +16,7 @@ import coastImage from "@/assets/campsites-coast.jpg";
 import glampingImage from "@/assets/campsites-glamping.jpg";
 import mockupDesktopImage from "@/assets/campsites-mockup-desktop.jpg";
 import mockupMobileImage from "@/assets/campsites-mockup-mobile.jpg";
+import campLogo from "@/assets/campsites-logo.png";
 import "@/styles/campsites.css";
 
 const ctaLabel = "Get My Free Website Check";
@@ -239,7 +240,7 @@ const Campsites = () => {
 
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur">
         <div className="camp-mobile-header mx-auto flex h-16 max-w-7xl items-center gap-5 px-4 lg:px-8">
-          <Link to="/" className="shrink-0" aria-label="LocalDominate home"><img src="/logo.png" alt="LocalDominate" width="116" height="46" className="camp-mobile-logo h-10 w-auto" /></Link>
+          <Link to="/" className="shrink-0" aria-label="LocalDominate home"><img src={campLogo} alt="Local Dominator" width="232" height="77" className="camp-logo-img h-10 w-auto" /></Link>
           <nav className="ml-auto hidden items-center gap-6 text-xs font-semibold lg:flex" aria-label="Campsites page navigation">
             <a href="#why">Why It Matters</a><a href="#process">How It Works</a><a href="#examples">Examples</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
           </nav>
@@ -346,7 +347,7 @@ const Campsites = () => {
         </section>
       </main>
 
-      <footer className="border-t border-border bg-background px-5 py-9 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center md:flex-row md:text-left"><Link to="/" aria-label="LocalDominate home"><img src="/logo.png" alt="LocalDominate – websites for campsites" width="116" height="46" className="h-11 w-auto" /></Link><nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs"><Link to="/ueber-uns">About</Link><Link to="/datenschutz">Privacy</Link><Link to="/agb">Terms</Link><a className="inline-flex items-center gap-1.5" href="mailto:hello@localdominate.org"><Mail className="h-3.5 w-3.5" />Contact</a></nav><p className="ml-auto flex items-center gap-3 text-[10px] leading-tight"><span>Proud to support<br />a stronger UK tourism industry.</span><span className="text-3xl" aria-hidden="true">🇬🇧</span></p></div></footer>
+      <footer className="border-t border-border bg-background px-5 py-9 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center md:flex-row md:text-left"><Link to="/" aria-label="LocalDominate home"><img src={campLogo} alt="Local Dominator – websites for campsites" width="232" height="77" className="h-11 w-auto" /></Link><nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs"><Link to="/ueber-uns">About</Link><Link to="/datenschutz">Privacy</Link><Link to="/agb">Terms</Link><a className="inline-flex items-center gap-1.5" href="mailto:hello@localdominate.org"><Mail className="h-3.5 w-3.5" />Contact</a></nav><p className="ml-auto flex items-center gap-3 text-[10px] leading-tight"><span>Proud to support<br />a stronger UK tourism industry.</span><span className="text-3xl" aria-hidden="true">🇬🇧</span></p></div></footer>
     </div>
   );
 };
