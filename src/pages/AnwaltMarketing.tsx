@@ -260,7 +260,8 @@ const AnwaltMarketing = () => {
       <SEOHead
         title={language === 'de' ? "Kanzlei Pro – Mehr Mandanten durch Local SEO | LocalDominator" : "Law Firm Pro – More Clients Through Local SEO | LocalDominator"}
         description={language === 'de' ? "Professionelles Local SEO für Anwälte und Kanzleien. BRAO-konform, E-A-T optimiert. Von Seite 3 auf Platz 1 bei Google." : "Professional Local SEO for lawyers and law firms. Bar-compliant, E-A-T optimized. From page 3 to rank 1 on Google."}
-        canonicalUrl="https://localdominator.de/anwalt-marketing"
+        canonicalUrl="https://localdominate.org/anwalt-marketing"
+        lang={language}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">

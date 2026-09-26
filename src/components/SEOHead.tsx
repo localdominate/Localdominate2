@@ -17,6 +17,7 @@ interface SEOHeadProps {
   alternateUrls?: {
     de?: string;
     en?: string;
+    ar?: string;
   };
   exactTitle?: boolean;
 }
@@ -38,6 +39,11 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
   alternateUrls,
   exactTitle = false,
 }, _ref) => {
+  const effectiveCanonicalUrl = canonicalUrl || (
+    typeof window !== "undefined"
+      ? `https://localdominate.org${window.location.pathname}`
+      : undefined
+  );
   // Build SEO title, ensuring total length stays ≤60 chars
   const SUFFIX = " | Local Dominator";
   const MAX = 60;
@@ -103,9 +109,10 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
     updateMeta("og:image", ogImage, true);
     updateMeta("og:image:width", "1200", true);
     updateMeta("og:image:height", "630", true);
-    updateMeta("og:locale", lang === "de" ? "de_DE" : "en_US", true);
+    const ogLocale = lang === "de" ? "de_DE" : lang === "ar" ? "ar_AR" : "en_GB";
+    updateMeta("og:locale", ogLocale, true);
     updateMeta("og:site_name", "Local Dominator", true);
-    if (canonicalUrl) updateMeta("og:url", canonicalUrl, true);
+    if (effectiveCanonicalUrl) updateMeta("og:url", effectiveCanonicalUrl, true);
 
     // Article-specific Open Graph
     if (ogType === "article") {
@@ -124,13 +131,13 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
 
     // Canonical link
     let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonicalUrl) {
+    if (effectiveCanonicalUrl) {
       if (!canonical) {
         canonical = document.createElement("link");
         canonical.setAttribute("rel", "canonical");
         document.head.appendChild(canonical);
       }
-      canonical.setAttribute("href", canonicalUrl);
+      canonical.setAttribute("href", effectiveCanonicalUrl);
     } else if (canonical) {
       canonical.remove();
     }
@@ -151,14 +158,12 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
     const existingHreflang = document.querySelectorAll('link[rel="alternate"][hreflang]');
     existingHreflang.forEach(el => el.remove());
 
-    if (canonicalUrl) {
-      const baseUrl = canonicalUrl.replace(/\?.*$/, '');
-      const deUrl = alternateUrls?.de || baseUrl;
-      const enUrl = alternateUrls?.en || `${baseUrl}?lang=en`;
-      
-      updateHreflang("de", deUrl);
-      updateHreflang("en", enUrl);
-      updateHreflang("x-default", deUrl);
+    if (alternateUrls) {
+      if (alternateUrls.de) updateHreflang("de", alternateUrls.de);
+      if (alternateUrls.en) updateHreflang("en", alternateUrls.en);
+      if (alternateUrls.ar) updateHreflang("ar", alternateUrls.ar);
+      const defaultUrl = alternateUrls.de || alternateUrls.en || alternateUrls.ar;
+      if (defaultUrl) updateHreflang("x-default", defaultUrl);
     }
 
     // Markdown alternate for AI crawlers (GPTBot, PerplexityBot, ClaudeBot)
@@ -195,7 +200,7 @@ const SEOHead = forwardRef<HTMLDivElement, SEOHeadProps>(({
       const hreflangLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
       hreflangLinks.forEach(link => link.remove());
     };
-  }, [fullTitle, description, canonicalUrl, ogImage, ogType, keywords, noindex, lang, jsonLd, articlePublishedTime, articleModifiedTime, articleAuthor, articleSection, alternateUrls]);
+  }, [fullTitle, description, effectiveCanonicalUrl, ogImage, ogType, keywords, noindex, lang, jsonLd, articlePublishedTime, articleModifiedTime, articleAuthor, articleSection, alternateUrls]);
 
   return null;
 });

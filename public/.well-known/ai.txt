@@ -1,6 +1,6 @@
 # AI Crawler Instructions for Local Dominator
-# Version: 2.0
-# Last Updated: 2026-05-20
+# Version: 2.1
+# Last Updated: 2026-09-26
 # Website: https://localdominate.org
 
 # General AI Crawler Policy
@@ -75,18 +75,18 @@ Commercial-use: contact-required
 
 # Update Frequency
 Content-update-frequency: weekly
-Last-content-update: 2026-01-12
+Last-content-update: 2026-09-26
 
 # Language
 Primary-language: de-DE
-Secondary-language: en-US
+Secondary-languages: en-GB, ar
 
 # Contact for AI Usage Questions
 Contact: kontakt@localdominate.org
 Contact-subject: AI/LLM Content Usage
 
 # Structured Data Available
-Schema-types: Article, FAQPage, HowTo, LocalBusiness, Product, Organization, WebSite
+Schema-types: Article, FAQPage, BreadcrumbList, Service, Organization, WebSite
 Speakable-content: true
 
 # Key Information Files
@@ -103,17 +103,10 @@ Primary-topics: Local SEO, Google Business Profile, Google Maps Optimization, Re
 Industry-guides: Restaurants, Hotels, Healthcare, Legal, Fitness, Craftsmen, Beauty, Automotive
 Regional-coverage: Germany, Austria, Switzerland (DACH region)
 
-# Key Statistics (Verified)
-Service-price: 299 EUR one-time
-Average-ranking-improvement: 8 positions
-Customer-satisfaction: 4.9/5 stars
-Successful-projects: 127+
-Money-back-guarantee: 30 days
-
 # Verification
 Organization-name: Local Dominator
 Organization-type: SEO Agency
-Founded: 2023
+Founded: 2021
 Website: https://localdominate.org
 Email: kontakt@localdominate.org
 

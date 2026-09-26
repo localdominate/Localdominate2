@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import HeroAIVisibility from "@/components/HeroAIVisibility";
 import { initDataLayer, trackPageView } from "@/lib/dataLayer";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import SEOHead from "@/components/SEOHead";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 // Critical components loaded immediately
 import AnnouncementBar from "@/components/AnnouncementBar";
@@ -157,6 +159,7 @@ const HomeConversionSections = ({ trackingEnabled }: { trackingEnabled: boolean 
 );
 
 const Index = () => {
+  const { language } = useLanguage();
   const [isHeatmapEnabled] = useState(shouldLoadHeatmap);
   const [isAdvancedTrackingEnabled] = useState(shouldLoadAdvancedTracking);
 
@@ -167,6 +170,28 @@ const Index = () => {
 
   return (
     <main className="min-h-screen pb-20 md:pb-0">
+      <SEOHead
+        title={language === "en" ? "Local Dominator – Local SEO & AI Visibility" : language === "ar" ? "Local Dominator – تحسين الظهور المحلي وفي بحث AI" : "Local Dominator – Local SEO & AI-Sichtbarkeit"}
+        description={language === "en" ? "Local SEO and AI visibility for local businesses: Google Business Profile optimisation, structured data and practical guidance." : language === "ar" ? "تحسين الظهور المحلي للشركات عبر Google Business Profile والبيانات المنظمة والبحث المدعوم بالذكاء الاصطناعي." : "Local SEO und AI-Sichtbarkeit für lokale Unternehmen: Google Business Profile, strukturierte Daten und praxisnahe Fachbeiträge."}
+        canonicalUrl="https://localdominate.org/"
+        lang={language}
+        alternateUrls={{
+          de: "https://localdominate.org/",
+          en: "https://localdominate.org/?lang=en",
+          ar: "https://localdominate.org/?lang=ar",
+        }}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://localdominate.org/#webpage",
+          "url": "https://localdominate.org/",
+          "name": language === "de" ? "Local Dominator – Local SEO & AI-Sichtbarkeit" : "Local Dominator – Local SEO & AI Visibility",
+          "description": language === "de" ? "Local SEO und AI-Sichtbarkeit für lokale Unternehmen." : "Local SEO and AI visibility for local businesses.",
+          "inLanguage": language === "de" ? "de-DE" : language === "ar" ? "ar" : "en-GB",
+          "isPartOf": { "@id": "https://localdominate.org/#website" },
+          "about": { "@id": "https://localdominate.org/#organization" },
+        }}
+      />
       {/* Critical Above-the-Fold Content - No Suspense wrapping */}
       <AnnouncementBar />
       <LanguageSwitch />

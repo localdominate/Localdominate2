@@ -82,7 +82,7 @@ export default function DIYToolkit() {
       <SEOHead 
         title="Local SEO DIY-Toolkit | Checklisten & Vorlagen für 49€"
         description="Das komplette DIY-Toolkit für lokale Suchmaschinenoptimierung: Checklisten, Excel-Vorlagen, Foto-Guides und Bewertungs-Templates. Sofort-Download für nur 49€."
-        canonicalUrl="https://localdominator.de/diy-toolkit"
+        canonicalUrl="https://localdominate.org/diy-toolkit"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">

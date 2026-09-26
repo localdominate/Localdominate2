@@ -495,16 +495,17 @@ const SeoLexikon = () => {
   const definedTermSetSchema = {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
-    "@id": "https://localdominator.de/seo-lexikon#term-set",
+    "@id": "https://localdominate.org/seo-lexikon#term-set",
     "name": "Local Dominator SEO Lexikon",
     "alternateName": "SEO Glossar A-Z",
     "description": "Umfassendes SEO-Lexikon mit allen wichtigen Begriffen der Suchmaschinenoptimierung für lokale Unternehmen. Von Alt-Text bis Zero-Click Search - verständlich erklärt mit Statistiken und praktischen Tipps.",
-    "url": "https://localdominator.de/seo-lexikon",
+    "url": "https://localdominate.org/seo-lexikon",
     "inLanguage": "de-DE",
     "publisher": {
       "@type": "Organization",
       "name": "Local Dominator",
-      "url": "https://localdominator.de"
+      "@id": "https://localdominate.org/#organization",
+      "url": "https://localdominate.org"
     },
     "datePublished": "2025-01-01",
     "dateModified": new Date().toISOString().split('T')[0],
@@ -513,16 +514,16 @@ const SeoLexikon = () => {
     "numberOfItems": seoLexikonData.length,
     "hasDefinedTerm": seoLexikonData.map(term => ({
       "@type": "DefinedTerm",
-      "@id": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`,
+      "@id": `https://localdominate.org/seo-lexikon#${getTermSlug(term.term)}`,
       "name": term.term,
       "description": term.fullDescription,
       "termCode": getTermSlug(term.term),
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "@id": "https://localdominator.de/seo-lexikon#term-set",
+        "@id": "https://localdominate.org/seo-lexikon#term-set",
         "name": "Local Dominator SEO Lexikon"
       },
-      "url": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`
+      "url": `https://localdominate.org/seo-lexikon#${getTermSlug(term.term)}`
     }))
   };
 
@@ -530,27 +531,27 @@ const SeoLexikon = () => {
   const individualTermSchemas = seoLexikonData.map(term => ({
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
-    "@id": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`,
+    "@id": `https://localdominate.org/seo-lexikon#${getTermSlug(term.term)}`,
     "name": term.term,
     "description": term.fullDescription,
     "termCode": getTermSlug(term.term),
     "inDefinedTermSet": {
       "@type": "DefinedTermSet",
-      "@id": "https://localdominator.de/seo-lexikon#term-set",
+      "@id": "https://localdominate.org/seo-lexikon#term-set",
       "name": "Local Dominator SEO Lexikon",
-      "url": "https://localdominator.de/seo-lexikon"
+      "url": "https://localdominate.org/seo-lexikon"
     },
-    "url": `https://localdominator.de/seo-lexikon#${getTermSlug(term.term)}`,
+    "url": `https://localdominate.org/seo-lexikon#${getTermSlug(term.term)}`,
     ...(term.relatedTerms.length > 0 && {
       "sameAs": term.relatedTerms.slice(0, 3).map(related => {
         const relatedTerm = seoLexikonData.find(t => t.term.toLowerCase() === related.toLowerCase());
-        return relatedTerm ? `https://localdominator.de/seo-lexikon#${getTermSlug(relatedTerm.term)}` : null;
+        return relatedTerm ? `https://localdominate.org/seo-lexikon#${getTermSlug(relatedTerm.term)}` : null;
       }).filter(Boolean)
     }),
     ...(term.relatedArticles && term.relatedArticles.length > 0 && {
       "mainEntityOfPage": term.relatedArticles.map(article => ({
         "@type": "WebPage",
-        "url": `https://localdominator.de/blog/${article.slug}`
+        "url": `https://localdominate.org/blog/${article.slug}`
       }))
     }),
     "audience": {
@@ -568,13 +569,13 @@ const SeoLexikon = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://localdominator.de"
+        "item": "https://localdominate.org"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "SEO Lexikon",
-        "item": "https://localdominator.de/seo-lexikon"
+        "item": "https://localdominate.org/seo-lexikon"
       }
     ]
   };
@@ -607,7 +608,7 @@ const SeoLexikon = () => {
         title="SEO Lexikon A-Z | Alle wichtigen SEO-Begriffe erklärt | Local Dominator"
         description="Das umfassende SEO-Lexikon mit allen wichtigen Begriffen von A-Z. Alt-Text, Backlinks, Citations, Keywords, Local Pack und mehr - verständlich erklärt mit Statistiken und Tipps."
         keywords="SEO Lexikon, SEO Glossar, SEO Begriffe, SEO Wörterbuch, Local SEO Begriffe, SEO Definition, Backlinks erklärt, Keywords erklärt"
-        canonicalUrl="https://localdominator.de/seo-lexikon"
+        canonicalUrl="https://localdominate.org/seo-lexikon"
         jsonLd={seoSchema}
       />
 
