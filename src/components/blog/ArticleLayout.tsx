@@ -325,10 +325,6 @@ const ArticleLayout = ({
       "@type": "ImageObject",
       "url": "https://localdominate.org/logo.png"
     },
-    "sameAs": [
-      "https://twitter.com/localdominator",
-      "https://linkedin.com/company/localdominator"
-    ]
   };
 
   // Expert reviewer for YMYL articles
@@ -677,10 +673,6 @@ const ArticleLayout = ({
     },
     "areaServed": DACH_AREA_SERVED,
     "makesOffer": { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` },
-    "sameAs": [
-      "https://twitter.com/localdominator",
-      "https://linkedin.com/company/localdominator"
-    ]
   };
 
   // Combine all schemas, flatten arrays from additionalSchema

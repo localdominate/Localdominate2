@@ -119,14 +119,10 @@ const UeberUns = () => {
         "foundingDate": "2021",
         "description": t.orgDesc,
         "knowsAbout": ["Local SEO", "Google Business Profile", "Google Maps Optimization", "Local Search Marketing"],
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.5820 },
-          "geoRadius": "500 km"
-        },
-        "sameAs": [
-          "https://twitter.com/localdominator",
-          "https://linkedin.com/company/localdominator"
+        "areaServed": [
+          { "@type": "Country", "name": "Deutschland" },
+          { "@type": "Country", "name": "Österreich" },
+          { "@type": "Country", "name": "Schweiz" }
         ]
       }
     }
