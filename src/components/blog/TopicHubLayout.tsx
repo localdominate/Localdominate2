@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { resolveArticle, blogArticles } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/translations";
+import { generateBreadcrumbSchema } from "@/components/SiteBreadcrumbs";
 
 export interface HubArticleGroup {
   title: string;
@@ -95,10 +96,34 @@ const TopicHubLayout = ({
   };
 
   const totalArticles = groups.reduce((sum, g) => sum + g.slugs.length, 0);
+  const canonicalPath = typeof window !== "undefined" ? window.location.pathname : "/blog";
+  const canonicalUrl = `https://localdominate.org${canonicalPath}`;
+  const hubSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${canonicalUrl}#webpage`,
+    "url": canonicalUrl,
+    "name": title,
+    "description": metaDescription,
+    "inLanguage": language === "de" ? "de-DE" : language === "ar" ? "ar" : "en-GB",
+    "isPartOf": { "@id": "https://localdominate.org/#website" },
+    "about": { "@id": "https://localdominate.org/#organization" },
+  };
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { label: "Blog", href: "/blog" },
+    { label: title },
+  ]);
 
   return (
     <>
-      <SEOHead title={metaTitle} description={metaDescription} jsonLd={jsonLd} lang={language} />
+      <SEOHead
+        title={metaTitle}
+        description={metaDescription}
+        canonicalUrl={canonicalUrl}
+        jsonLd={[hubSchema, breadcrumbSchema, ...(jsonLd ? [jsonLd] : [])]}
+        lang={language}
+        alternateUrls={{ de: canonicalUrl }}
+      />
       <StickyHeader />
 
       <main className="min-h-screen bg-background">
