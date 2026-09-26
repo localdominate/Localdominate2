@@ -17,7 +17,7 @@ export interface BreadcrumbSegment {
 interface SiteBreadcrumbsProps {
   items?: BreadcrumbSegment[];
   className?: string;
-  /** Include BreadcrumbList JSON-LD schema in the page */
+  /** @deprecated Breadcrumb JSON-LD belongs in SEOHead to avoid duplicate schemas. */
   includeSchema?: boolean;
 }
 
@@ -68,24 +68,15 @@ export const generateBreadcrumbSchema = (segments: BreadcrumbSegment[]) => {
 const SiteBreadcrumbs = ({
   items,
   className = "mb-6",
-  includeSchema = false,
+  includeSchema: _includeSchema = false,
 }: SiteBreadcrumbsProps) => {
   const location = useLocation();
   const segments = items ?? ROUTE_MAP[location.pathname];
 
   if (!segments || segments.length === 0) return null;
 
-  const schema = includeSchema ? generateBreadcrumbSchema(segments) : null;
-
   return (
-    <>
-      {schema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      )}
-      <Breadcrumb className={className}>
+    <Breadcrumb className={className}>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
@@ -117,8 +108,7 @@ const SiteBreadcrumbs = ({
             );
           })}
         </BreadcrumbList>
-      </Breadcrumb>
-    </>
+    </Breadcrumb>
   );
 };
 

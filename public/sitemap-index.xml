@@ -2,22 +2,17 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://localdominate.org/sitemap.xml</loc>
-    <lastmod>2026-03-09T12:00:00+00:00</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://localdominate.org/sitemap-images.xml</loc>
-    <lastmod>2026-03-09</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://localdominate.org/sitemap-blog.xml</loc>
-    <lastmod>2026-08-08</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://localdominate.org/sitemap-ai.xml</loc>
-    <lastmod>2026-08-08</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://localdominate.org/sitemap-lexikon.xml</loc>
-    <lastmod>2026-03-09</lastmod>
   </sitemap>
 </sitemapindex>
