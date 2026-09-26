@@ -98,7 +98,9 @@ const TopicHubLayout = ({
   const totalArticles = groups.reduce((sum, g) => sum + g.slugs.length, 0);
   const canonicalPath = typeof window !== "undefined" ? window.location.pathname : "/blog";
   const canonicalUrl = `https://localdominate.org${canonicalPath}`;
+  const suppliedSchema = jsonLd && typeof jsonLd === "object" ? jsonLd as Record<string, unknown> : {};
   const hubSchema = {
+    ...suppliedSchema,
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": `${canonicalUrl}#webpage`,
@@ -120,7 +122,7 @@ const TopicHubLayout = ({
         title={metaTitle}
         description={metaDescription}
         canonicalUrl={canonicalUrl}
-        jsonLd={[hubSchema, breadcrumbSchema, ...(jsonLd ? [jsonLd] : [])]}
+        jsonLd={[hubSchema, breadcrumbSchema]}
         lang={language}
         alternateUrls={{ de: canonicalUrl }}
       />
