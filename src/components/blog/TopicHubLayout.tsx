@@ -98,13 +98,7 @@ const TopicHubLayout = ({
 
   return (
     <>
-      <SEOHead title={metaTitle} description={metaDescription} />
-      {jsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      )}
+      <SEOHead title={metaTitle} description={metaDescription} jsonLd={jsonLd} lang={language} />
       <StickyHeader />
 
       <main className="min-h-screen bg-background">

@@ -20,26 +20,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
 
   return (
     <>
-      {/* Hidden structured data for AI crawlers — semantic HTML, not display:none */}
-      <div
-        className="hidden"
-        data-ai-summary="structured"
-        data-speakable="true"
-        itemScope
-        itemType="https://schema.org/Article"
-        aria-label="AI-readable page summary"
-      >
-        <meta itemProp="headline" content={summary.primaryQuestion} />
-        <div itemProp="abstract">{summary.directAnswer}</div>
-        <div itemProp="description">{summary.summary}</div>
-        <ul>
-          {summary.keyFacts.map((fact, i) => (
-            <li key={i}>{fact}</li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Visible summary block */}
+      {/* Visible summary block: the same facts users and retrieval systems receive. */}
       <section
         className="my-10 not-prose"
         data-ai-summary="page-summary"
@@ -54,7 +35,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
               </div>
               <div>
                 <h3 className="font-bold text-foreground text-base">📋 {isEn ? "Page Summary" : "Seitenzusammenfassung"}</h3>
-                <p className="text-xs text-muted-foreground">Strukturiert für AI-Systeme, Voice Search & Schnellübersicht</p>
+                <p className="text-xs text-muted-foreground">{isEn ? "Structured for AI systems, voice search and quick reading" : "Strukturiert für AI-Systeme, Voice Search & Schnellübersicht"}</p>
               </div>
               <span className="ml-auto text-[10px] font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
                 {summary.pageType}
@@ -118,7 +99,7 @@ const LlmFriendlySummary = ({ slug }: LlmFriendlySummaryProps) => {
               <div className="bg-card border border-border rounded-xl p-3">
                 <div className="flex items-center gap-2 mb-1">
                   <LinkIcon className="w-3.5 h-3.5 text-muted-foreground" />
-                  <span className="text-xs font-semibold text-foreground">Verwandte Themen</span>
+                  <span className="text-xs font-semibold text-foreground">{isEn ? "Related Topics" : "Verwandte Themen"}</span>
                 </div>
                 <div className="flex flex-wrap gap-1 mt-1">
                   {summary.relatedTopics.map((topic, i) => (

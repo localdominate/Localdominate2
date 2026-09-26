@@ -27,7 +27,7 @@ import NicheTrustBar from "./NicheTrustBar";
 import NicheCredibilitySection from "./NicheCredibilitySection";
 import NicheAISearchSection from "./NicheAISearchSection";
 
-const BASE_URL = "https://ejdhisidjs.lovable.app";
+const BASE_URL = "https://localdominate.org";
 
 const useLocalScrollTracking = () => {
   useEffect(() => {
@@ -48,34 +48,12 @@ const useLocalScrollTracking = () => {
 
 const buildJsonLd = (c: NicheConfig) => [
   {
-    "@type": "LocalBusiness",
-    "@id": `${BASE_URL}/${c.slug}#business`,
-    "name": `Local Dominator – ${c.niche} Marketing ${c.city}`,
-    "description": c.metaDescription,
-    "url": `${BASE_URL}/${c.slug}`,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": c.city,
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": c.city,
-      "sameAs": `https://de.wikipedia.org/wiki/${c.city}`
-    },
-    "priceRange": "€€",
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.1351, "longitude": 11.582 },
-      "geoRadius": "25000"
-    }
-  },
-  {
     "@type": "Service",
+    "@id": `${BASE_URL}/${c.slug}#service`,
     "name": `${c.niche} Marketing ${c.city}`,
     "description": `Komplettes Marketing-System für ${c.nicheLabel.toLowerCase()} in ${c.city} – mehr Sichtbarkeit bei Google Maps, mehr Kunden.`,
-    "provider": { "@id": `${BASE_URL}/${c.slug}#business` },
+    "url": `${BASE_URL}/${c.slug}`,
+    "provider": { "@id": `${BASE_URL}/#organization` },
     "areaServed": { "@type": "City", "name": c.city }
   },
   {

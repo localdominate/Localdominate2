@@ -33,7 +33,9 @@ const Blog = () => {
     "description": language === "de" 
       ? "Expertenwissen für lokale Suchmaschinenoptimierung"
       : "Expert knowledge for local search engine optimization",
-    "url": "https://localdominator.de/blog",
+    "@id": "https://localdominate.org/blog#blog",
+    "url": "https://localdominate.org/blog",
+    "isPartOf": { "@id": "https://localdominate.org/#website" },
     "publisher": {
       "@type": "Organization",
       "name": "Local Dominator"
@@ -44,7 +46,7 @@ const Blog = () => {
       "description": article.metaDescription,
       "datePublished": article.publishedAt,
       "dateModified": article.updatedAt,
-      "url": `https://localdominator.de/blog/${article.slug}`
+      "url": `https://localdominate.org/blog/${article.slug}`
     }))
   };
 
@@ -78,7 +80,9 @@ const Blog = () => {
       <SEOHead
         title={t.pageTitle}
         description={t.pageDescription}
-        canonicalUrl="https://localdominator.de/blog"
+        canonicalUrl="https://localdominate.org/blog"
+        lang={language}
+        alternateUrls={{ de: "https://localdominate.org/blog" }}
         keywords="local seo blog, google maps tips, local seo strategies"
         jsonLd={blogSchema}
       />
