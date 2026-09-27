@@ -19,6 +19,11 @@ written approval.** Known defects are recorded, not fixed.
    uses) → `docs/baseline/rendered-en-US.json`. Captured per URL: final path, `<title>`, meta
    description, robots meta, canonical, hreflang, OG title/image/type, `article:*` times, all H1s,
    JSON-LD block count and every `@type`, schema authors and dates, internal links, images, word count.
+   On 2026-09-28 the two JSON files were re-captured with `scripts/seo-check.mjs --update-baseline`
+   from the same code (the page is now scrolled to the bottom before capture so on-scroll sections
+   render deterministically). The only difference to the first capture was the home page `/`
+   (internal links and word count of below-the-fold sections); every title, description, canonical,
+   robots, hreflang, OG, H1 and schema value was unchanged. Two consecutive runs then gave 0 differences.
 3. Production spot-checks in a real browser matched the local render (e.g. `/blog/entity-seo-guide`,
    `/blog/was-ist-geo-generative-engine-optimization`, `/restaurant-marketing`, `/campsites`,
    `/seo-lexikon/alt-text` = 404, `/blog/local-seo-yoga-studios` = blank, `/decision` = 404).
