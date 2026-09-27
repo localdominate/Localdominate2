@@ -1,0 +1,53 @@
+name: Checks
+
+# Build, type-check and SEO regression check on every pull request and on main.
+# Nothing here deploys anything or talks to production services.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build, typecheck, lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx tsc --noEmit -p tsconfig.app.json
+      - name: Lint (report only – 100 pre-existing errors, see docs/TAKEOVER_AUDIT.md)
+        run: npm run lint
+        continue-on-error: true
+
+  seo:
+    name: SEO regression check
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Install Playwright (not a project dependency)
+        run: |
+          npm i --no-save --no-audit --no-fund playwright@1.56.0
+          npx playwright install --with-deps chromium
+      - name: Compare rendered SEO output with docs/baseline
+        run: node scripts/seo-check.mjs
