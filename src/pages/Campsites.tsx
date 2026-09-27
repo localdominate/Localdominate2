@@ -242,7 +242,7 @@ const Campsites = () => {
         <div className="camp-mobile-header mx-auto flex h-16 max-w-7xl items-center gap-5 px-4 lg:px-8">
           <Link to="/" className="shrink-0" aria-label="LocalDominate home"><img src={campLogo} alt="Local Dominator" width="232" height="77" className="camp-logo-img h-10 w-auto" /></Link>
           <nav className="ml-auto hidden items-center gap-6 text-xs font-semibold lg:flex" aria-label="Campsites page navigation">
-            <a href="#why">Why It Matters</a><a href="#process">How It Works</a><a href="#examples">Examples</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+            <a href="#why">Why It Matters</a><a href="#process">How It Works</a><a href="#examples">Examples</a><a href="#faq">FAQ</a>
           </nav>
           <div className="ml-auto hidden items-center gap-2 border-l border-border pl-5 md:flex lg:ml-2"><span className="text-2xl" aria-hidden="true">🇬🇧</span><span className="text-[10px] leading-tight"><strong className="block">UK Focused</strong>Campsites · Caravan Parks · Holiday Parks</span></div>
           <Button onClick={() => scrollToCheck("header")} className="ml-auto hidden rounded-full sm:inline-flex lg:ml-0">{ctaLabel}<ArrowRight /></Button>
@@ -266,9 +266,6 @@ const Campsites = () => {
               </div>
             </div>
             <p className="camp-script absolute right-8 top-12 hidden max-w-[190px] text-right text-2xl text-primary-foreground lg:block xl:text-3xl">Great places<br />bring great people<br />together.</p>
-            <div className="absolute bottom-7 right-5 rounded-full bg-background/95 px-5 py-3 text-foreground shadow-xl md:right-8">
-              <div className="flex items-center gap-3"><div><div className="flex text-[hsl(var(--camp-gold))]">★★★★★</div><strong className="text-xs">Rated 4.9/5</strong><span className="block text-[9px]">by campsite owners</span></div></div>
-            </div>
           </div>
         </section>
 
@@ -307,7 +304,6 @@ const Campsites = () => {
           <div className="mx-auto max-w-7xl"><SectionTitle eyebrow="Real example. Illustrative result.">Same Great Place.<br />A Stronger First Impression.</SectionTitle>
             <div className="mt-12 grid gap-10 xl:grid-cols-[1.45fr_.7fr_.7fr] xl:items-center">
                <div className="camp-comparison grid items-center gap-4 sm:grid-cols-[1fr_auto_1fr]" role="group" aria-label="Campsite website before and after redesign"><div><span className="mb-2 inline-block rounded-full bg-muted px-3 py-1 text-xs font-bold">Before</span><WebsiteMockup compact /></div><ArrowRight className="camp-comparison-arrow mx-auto h-8 w-8 text-primary sm:mt-8" aria-hidden="true" /><div><span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">After</span><WebsiteMockup after compact /></div></div>
-               <blockquote id="reviews" className="camp-testimonial rounded-md bg-muted/55 p-7"><p className="text-sm leading-relaxed">“Our new website has made it so much easier for guests to find information and book directly. We’ve seen a real increase in direct bookings this season.”</p><div className="mt-5 text-[hsl(var(--camp-gold))]">★★★★★</div><strong className="mt-2 block text-sm">REHAM E.</strong><span className="text-xs text-muted-foreground">Campsite Owner, Lake District</span><span className="mt-3 block text-[10px] uppercase tracking-wider text-muted-foreground">TESTIMONIAL</span></blockquote>
               <div id="website-check" className="camp-lead-card rounded-md border-8 border-muted bg-card p-6 shadow-sm"><h2 className="text-3xl font-semibold leading-none">Get Your Free<br />Website Check</h2><p className="my-4 text-sm leading-relaxed text-muted-foreground">Receive a personalised review of your current website with practical recommendations – no obligation.</p><WebsiteCheckForm /></div>
             </div>
           </div>
