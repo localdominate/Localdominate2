@@ -17,7 +17,8 @@ functions in `supabase/functions/`. Hosting today: Lovable (with crawler pre-ren
 ## Commands
 
 ```sh
-npm install          # use npm; bun.lock points at Lovable's private registry and fails outside Lovable
+npm ci               # use npm; package-lock.json pins the same versions as Lovable's bun.lock
+                     # (bun.lock itself points at Lovable's private registry and fails outside Lovable)
 npm run dev          # http://localhost:8080
 npm run build        # dist/
 npx tsc --noEmit -p tsconfig.app.json
@@ -25,7 +26,16 @@ npm run lint         # currently 100 errors / 38 warnings (pre-existing, see aud
 npx vite preview --host 127.0.0.1 --port 4173
 ```
 
-There are no tests yet.
+SEO regression check (also runs in GitHub Actions on every PR, see `.github/workflows/checks.yml`):
+
+```sh
+npm run build
+npm i --no-save playwright@1.56.0 && npx playwright install chromium   # once
+node scripts/seo-check.mjs                     # fails on any change vs docs/baseline
+node scripts/seo-check.mjs --update-baseline   # ONLY after the owner approved the SEO change
+```
+
+There are no unit tests yet.
 
 ## Hard rules (migration phase)
 
@@ -46,8 +56,11 @@ There are no tests yet.
 6. No database migrations or Supabase changes against `minijgyozgjuhqgkmilj` from here; it is managed
    by Lovable Cloud.
 7. Scope discipline: one task per PR, no drive-by refactors, no "improvements" outside the request.
-8. After any change that could affect rendering, run the SEO regression check (render the baseline
-   URLs in `de-DE` and `en-US` and diff against `docs/baseline/rendered-*.json`).
+8. After any change that could affect rendering, run the SEO regression check
+   (`node scripts/seo-check.mjs`); it renders the baseline URLs in `de-DE` and `en-US` and diffs
+   against `docs/baseline/rendered-*.json`.
+9. When adding or changing a dependency, update **both** lockfiles (`bun.lock` for Lovable,
+   `package-lock.json` for everything else) or Lovable and CI will build different versions.
 
 ## Things that surprise people
 
