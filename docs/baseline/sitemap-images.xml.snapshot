@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Blog: Google Maps Ranking -->
+  <url>
+    <loc>https://localdominate.org/blog/google-maps-ranking-verbessern</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/google-maps-ranking.jpg</image:loc>
+      <image:title>Google Maps Ranking verbessern - Local SEO Guide 2026</image:title>
+      <image:caption>So verbesserst du dein Google Maps Ranking und gewinnst mehr lokale Kunden</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google Bewertungen -->
+  <url>
+    <loc>https://localdominate.org/blog/google-bewertungen-bekommen</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/google-bewertungen.jpg</image:loc>
+      <image:title>Google Bewertungen bekommen - 7 Strategien für mehr Rezensionen</image:title>
+      <image:caption>Bewährte Methoden um mehr authentische Google Bewertungen zu erhalten</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google My Business -->
+  <url>
+    <loc>https://localdominate.org/blog/google-my-business-optimieren</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/google-my-business.jpg</image:loc>
+      <image:title>Google My Business optimieren - Schritt-für-Schritt Anleitung</image:title>
+      <image:caption>Komplette Anleitung zur Optimierung deines Google Business Profils</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Audit Checkliste -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-audit-checkliste</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-audit.jpg</image:loc>
+      <image:title>Local SEO Audit Checkliste - 50+ Prüfpunkte</image:title>
+      <image:caption>Die ultimative Checkliste für dein Local SEO Audit</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Handwerker -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-handwerker</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-handwerker.jpg</image:loc>
+      <image:title>Local SEO für Handwerker - Mehr Aufträge durch Google</image:title>
+      <image:caption>Wie Handwerksbetriebe mehr lokale Kunden durch SEO gewinnen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Keywords -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-keywords</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-keywords.jpg</image:loc>
+      <image:title>Local SEO Keywords finden - Keyword-Recherche Guide</image:title>
+      <image:caption>Der komplette Guide zur lokalen Keyword-Recherche</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Restaurant -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-restaurant</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-restaurant.jpg</image:loc>
+      <image:title>Local SEO für Restaurants - Mehr Gäste durch Google</image:title>
+      <image:caption>So optimierst du dein Restaurant für lokale Suchanfragen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Lokale SEO 2026 -->
+  <url>
+    <loc>https://localdominate.org/blog/lokale-seo-2026</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/lokale-seo-2026.jpg</image:loc>
+      <image:title>Lokale Suchmaschinenoptimierung 2026 - Trends und Strategien</image:title>
+      <image:caption>Die wichtigsten Trends für lokale SEO im Jahr 2026</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: NAP Konsistenz -->
+  <url>
+    <loc>https://localdominate.org/blog/nap-konsistenz</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/nap-konsistenz.jpg</image:loc>
+      <image:title>NAP-Konsistenz für Local SEO - Der ultimative Guide</image:title>
+      <image:caption>Warum einheitliche Unternehmensdaten dein Ranking boosten</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: SEO Toolbox -->
+  <url>
+    <loc>https://localdominate.org/blog/seo-toolbox</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/seo-toolbox.jpg</image:loc>
+      <image:title>Kostenlose SEO Tools - Die komplette Toolbox</image:title>
+      <image:caption>Die besten kostenlosen Tools für Local SEO</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google AI Overviews -->
+  <url>
+    <loc>https://localdominate.org/blog/google-ai-overviews</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/google-ai-overviews.jpg</image:loc>
+      <image:title>Google AI Overviews - Auswirkungen auf Local SEO</image:title>
+      <image:caption>Wie KI-gestützte Suchergebnisse lokale Unternehmen beeinflussen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: KI Tools für Local SEO -->
+  <url>
+    <loc>https://localdominate.org/blog/ki-tools-local-seo</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/ki-tools-local-seo.jpg</image:loc>
+      <image:title>KI Tools für Local SEO - Die besten AI-Werkzeuge</image:title>
+      <image:caption>Die besten KI-Tools für lokale Suchmaschinenoptimierung</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Physiotherapie -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-physiotherapie</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-physiotherapie.jpg</image:loc>
+      <image:title>Local SEO für Physiotherapeuten - Mehr Patienten durch Google</image:title>
+      <image:caption>So optimieren Physiotherapie-Praxen ihre lokale Sichtbarkeit</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Zahnarzt -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-zahnarzt</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-zahnarzt.jpg</image:loc>
+      <image:title>Local SEO für Zahnärzte - Mehr Patienten durch lokale Suche</image:title>
+      <image:caption>So gewinnen Zahnarztpraxen mehr Patienten durch Google</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Optiker -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-optiker</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-optiker.jpg</image:loc>
+      <image:title>Local SEO für Optiker - Mehr Kunden durch Google Maps</image:title>
+      <image:caption>So optimieren Optiker ihre lokale Online-Sichtbarkeit</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Elektrotechnik -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-elektrotechnik</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-elektrotechnik.jpg</image:loc>
+      <image:title>Local SEO für Elektrotechniker - Mehr Aufträge durch Google</image:title>
+      <image:caption>So gewinnen Elektriker mehr lokale Kunden</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Apotheke -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-apotheke</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-apotheke.jpg</image:loc>
+      <image:title>Local SEO für Apotheken - Mehr Kunden durch Google</image:title>
+      <image:caption>So optimieren Apotheken ihre lokale Sichtbarkeit</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Tattoo -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-tattoo</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-tattoo.jpg</image:loc>
+      <image:title>Local SEO für Tattoo-Studios - Mehr Kunden durch Google</image:title>
+      <image:caption>So gewinnen Tattoo-Studios mehr lokale Kunden</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Tierarzt -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-tierarzt</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-tierarzt.jpg</image:loc>
+      <image:title>Local SEO für Tierärzte - Mehr Patienten durch lokale Suche</image:title>
+      <image:caption>So optimieren Tierarztpraxen ihre Google-Präsenz</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Yoga -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-yoga</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-yoga.jpg</image:loc>
+      <image:title>Local SEO für Yoga-Studios - Mehr Teilnehmer durch Google</image:title>
+      <image:caption>So gewinnen Yoga-Studios mehr lokale Kunden</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google Business Kategorien -->
+  <url>
+    <loc>https://localdominate.org/blog/google-business-kategorien-guide</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/google-business-kategorien.jpg</image:loc>
+      <image:title>Google Business Kategorien Guide - Die richtige Wahl treffen</image:title>
+      <image:caption>So wählst du die perfekten Google Business Kategorien</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google Business Produkte & Services -->
+  <url>
+    <loc>https://localdominate.org/blog/google-business-produkte-services</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/google-business-produkte.jpg</image:loc>
+      <image:title>Google Business Produkte &amp; Services optimal nutzen</image:title>
+      <image:caption>So präsentierst du Produkte und Dienstleistungen im Google Profil</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Google Business Insights -->
+  <url>
+    <loc>https://localdominate.org/blog/google-business-insights-verstehen</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/google-business-insights.jpg</image:loc>
+      <image:title>Google Business Insights verstehen und nutzen</image:title>
+      <image:caption>So analysierst du die Performance deines Google Business Profils</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Bewertungs-Antworten Vorlagen -->
+  <url>
+    <loc>https://localdominate.org/blog/bewertungs-antworten-vorlagen</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/bewertungs-antworten-vorlagen.jpg</image:loc>
+      <image:title>Bewertungs-Antworten Vorlagen - Professionell reagieren</image:title>
+      <image:caption>Die besten Vorlagen für Antworten auf Google Bewertungen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Notdienst Keywords -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-notdienst-keywords</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-notdienst-keywords.jpg</image:loc>
+      <image:title>Notdienst Keywords für Local SEO - Notfall-Suchen dominieren</image:title>
+      <image:caption>So optimierst du für Notdienst- und Notfall-Suchanfragen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Lokale Events Marketing -->
+  <url>
+    <loc>https://localdominate.org/blog/lokale-events-marketing</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/lokale-events-marketing.jpg</image:loc>
+      <image:title>Lokale Events für Marketing nutzen</image:title>
+      <image:caption>So nutzt du lokale Veranstaltungen für dein Local SEO</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Basel -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-basel</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-basel.jpg</image:loc>
+      <image:title>Local SEO Basel - Der Guide für Basler Unternehmen</image:title>
+      <image:caption>So dominierst du den Basler Markt mit Local SEO</image:caption>
+      <image:geo_location>Schweiz</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Düsseldorf -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-duesseldorf</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-duesseldorf.jpg</image:loc>
+      <image:title>Local SEO Düsseldorf - Der Guide für die Rheinmetropole</image:title>
+      <image:caption>So gewinnst du mehr lokale Kunden in Düsseldorf</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Köln -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-koeln</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-koeln.jpg</image:loc>
+      <image:title>Local SEO Köln - Der komplette Guide für Kölner Unternehmen</image:title>
+      <image:caption>So dominierst du den Kölner Markt mit Local SEO</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Stuttgart -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-stuttgart</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-stuttgart.jpg</image:loc>
+      <image:title>Local SEO Stuttgart - Der Guide für schwäbische Unternehmen</image:title>
+      <image:caption>So gewinnst du mehr lokale Kunden in Stuttgart</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Blog: Local SEO Wien -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-wien</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-wien.jpg</image:loc>
+      <image:title>Local SEO Wien - Der Guide für Wiener Unternehmen</image:title>
+      <image:caption>So dominierst du den Wiener Markt mit Local SEO</image:caption>
+      <image:geo_location>Österreich</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Troubleshooting Artikel -->
+  <url>
+    <loc>https://localdominate.org/blog/gbp-suspendiert-reaktivieren</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/gbp-suspendiert.jpg</image:loc>
+      <image:title>Google Business Profil suspendiert - So reaktivierst du es</image:title>
+      <image:caption>Anleitung zur Reaktivierung eines suspendierten Google Profils</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/gbp-verifizierung-fehlgeschlagen</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/gbp-verifizierung.jpg</image:loc>
+      <image:title>GBP Verifizierung fehlgeschlagen - Lösungen</image:title>
+      <image:caption>So löst du Verifizierungsprobleme bei Google Business</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/duplicate-listing-entfernen</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/duplicate-listing.jpg</image:loc>
+      <image:title>Doppelte Google Einträge entfernen</image:title>
+      <image:caption>Anleitung zum Löschen doppelter Google Business Einträge</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/gbp-bewertung-loeschen-anleitung</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/gbp-bewertung-loeschen.jpg</image:loc>
+      <image:title>Google Bewertung löschen lassen - Anleitung</image:title>
+      <image:caption>So lässt du unangemessene Google Bewertungen entfernen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/ranking-ploetzlich-verschwunden</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/ranking-verschwunden.jpg</image:loc>
+      <image:title>Google Ranking plötzlich verschwunden - Ursachen</image:title>
+      <image:caption>Was tun wenn dein Google Ranking plötzlich weg ist</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/gbp-nicht-in-suche-sichtbar</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/gbp-nicht-sichtbar.jpg</image:loc>
+      <image:title>GBP nicht in Google Suche sichtbar</image:title>
+      <image:caption>Warum dein Google Business Profil nicht gefunden wird</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/gbp-mehrere-standorte</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/gbp-mehrere-standorte.jpg</image:loc>
+      <image:title>Google Business mehrere Standorte verwalten</image:title>
+      <image:caption>So verwaltest du mehrere Standorte im Google Business Profil</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/gbp-oeffnungszeiten-sondertage</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/gbp-oeffnungszeiten.jpg</image:loc>
+      <image:title>GBP Öffnungszeiten und Sondertage richtig einstellen</image:title>
+      <image:caption>So stellst du Öffnungszeiten und Feiertage korrekt ein</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://localdominate.org/blog/gbp-attribute-richtig-nutzen</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/gbp-attribute.jpg</image:loc>
+      <image:title>Google Business Attribute richtig nutzen</image:title>
+      <image:caption>So nutzt du alle Google Business Attribute optimal</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Local SEO Neugründer -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-neugruender</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-neugruender.jpg</image:loc>
+      <image:title>Local SEO für Neugründer - Der Starter Guide</image:title>
+      <image:caption>So starten Gründer mit Local SEO durch</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Local SEO Mehrstufig -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-mehrstufig-unternehmen</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-seo-mehrstufig.jpg</image:loc>
+      <image:title>Local SEO für mehrstufige Unternehmen</image:title>
+      <image:caption>So optimieren Unternehmen mit mehreren Standorten</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Schema Markup -->
+  <url>
+    <loc>https://localdominate.org/blog/schema-markup-local-seo</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/schema-markup-local.jpg</image:loc>
+      <image:title>Schema Markup für Local SEO - Der komplette Guide</image:title>
+      <image:caption>So implementierst du strukturierte Daten für lokale Unternehmen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Local Content Marketing -->
+  <url>
+    <loc>https://localdominate.org/blog/local-content-marketing</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-content-marketing.jpg</image:loc>
+      <image:title>Local Content Marketing - Strategien für lokale Sichtbarkeit</image:title>
+      <image:caption>So erstellst du Content der lokale Kunden anzieht</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Local Link Building -->
+  <url>
+    <loc>https://localdominate.org/blog/local-link-building</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-link-building.jpg</image:loc>
+      <image:title>Local Link Building - Backlinks für lokale Unternehmen</image:title>
+      <image:caption>So baust du wertvolle lokale Backlinks auf</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Local SEO vs Maps -->
+  <url>
+    <loc>https://localdominate.org/blog/local-seo-vs-maps-unterschied</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-vs-maps-seo.jpg</image:loc>
+      <image:title>Local SEO vs Google Maps SEO - Der Unterschied</image:title>
+      <image:caption>Was ist der Unterschied zwischen Local SEO und Maps SEO</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Local Citations -->
+  <url>
+    <loc>https://localdominate.org/blog/local-citations-2025</loc>
+    <image:image>
+      <image:loc>https://localdominate.org/images/blog/local-citations.jpg</image:loc>
+      <image:title>Local Citations 2025 - Die wichtigsten Verzeichnisse</image:title>
+      <image:caption>Die besten Branchenverzeichnisse für lokale Unternehmen</image:caption>
+      <image:geo_location>Deutschland</image:geo_location>
+    </image:image>
+  </url>
+
+</urlset>

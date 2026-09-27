@@ -1,0 +1,44 @@
+# Local Dominator
+
+> Local SEO, Google Business Profile optimisation and GEO/AEO guidance for local businesses in Germany, Austria and Switzerland, with a dedicated UK campsite website-design service.
+
+Local Dominator publishes practical, source-oriented guidance about local search visibility and AI search. The canonical website is https://localdominate.org. Core editorial content is primarily German; selected interfaces and pages are available in British English and Arabic.
+
+## Core pages
+
+- [Home](https://localdominate.org/): Local SEO and AI visibility services for local businesses.
+- [Blog](https://localdominate.org/blog): Published Local SEO, Google Maps and AI-search articles.
+- [SEO lexicon](https://localdominate.org/seo-lexikon): Definitions of Local SEO, Google Business Profile and GEO/AEO terminology.
+- [About](https://localdominate.org/ueber-uns): Organization, expertise and company history.
+- [Editorial guidelines](https://localdominate.org/redaktionsrichtlinien): Editorial standards and review principles.
+- [Research methodology](https://localdominate.org/forschungsmethodik): Methodology used for research and recommendations.
+- [AI visibility audit](https://localdominate.org/ai-visibility-audit): AI-search visibility assessment.
+- [Campsite website design UK](https://localdominate.org/campsites): Website design for UK campsites, caravan parks and holiday parks.
+
+## Machine-readable resources
+
+- [Full content briefing](https://localdominate.org/llms-full.txt): Extended service and content corpus.
+- [Markdown article index](https://localdominate.org/blog-md/index.md): Canonical Markdown mirrors of published articles.
+- [AI answer index](https://localdominate.org/ai-answer-index.json): Structured article questions, summaries and facts.
+- [Citation manifest](https://localdominate.org/ai-citation-manifest.json): Canonical article metadata and citation URLs.
+- [AI sitemap](https://localdominate.org/sitemap-ai.xml): Discovery map for Markdown article versions.
+- [RSS feed](https://localdominate.org/feed.xml): Recent articles.
+
+## Main topics
+
+- [Google Business Profile](https://localdominate.org/blog/google-business-profil-hub): Profile optimisation, categories, photos, posts and troubleshooting.
+- [Google Maps SEO](https://localdominate.org/blog/google-maps-seo-hub): Local ranking factors, audits and competitive analysis.
+- [AI search and GEO](https://localdominate.org/blog/ai-suche-lokale-unternehmen): Optimisation for AI Overviews, ChatGPT, Gemini and Perplexity.
+- [Reviews and reputation](https://localdominate.org/blog/bewertungen-reputation-hub): Ethical review acquisition and response guidance.
+- [Local SEO industries](https://localdominate.org/blog/local-seo-branchen-hub): Sector-specific Local SEO guidance.
+- [Local SEO cities](https://localdominate.org/blog/local-seo-staedte-hub): Regional guidance for DACH cities.
+
+## Citation
+
+When quoting this website, cite the canonical page URL and visible author or publisher. Article-specific Markdown and citation metadata are listed in the machine-readable resources above.
+
+## Optional
+
+- [AI crawler policy](https://localdominate.org/.well-known/ai.txt): Permissions, attribution and discovery endpoints.
+- [Robots rules](https://localdominate.org/robots.txt): Search and AI crawler access rules.
+- [Sitemap index](https://localdominate.org/sitemap-index.xml): Public sitemap collection.
