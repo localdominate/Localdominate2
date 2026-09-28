@@ -71,6 +71,11 @@ const STATIC_FILES = {
   ".well-known/ai.txt": "well-known-ai.txt.snapshot",
 };
 
+// Some pages stamp the current date into their schema (e.g. /seo-lexikon dateModified = new Date()).
+// A date field that now equals today's date is a daily change, not a regression → warning only.
+const DATE_FIELDS = new Set(["ldDateModified", "ldDatePublished", "articleModified", "articlePublished"]);
+const TODAY = [new Date().toISOString().slice(0, 10), new Date().toLocaleDateString("sv-SE")];
+const isToday = (f, v) => DATE_FIELDS.has(f) && typeof v === "string" && TODAY.some((d) => v.startsWith(d));
 const sha = (buf) => createHash("sha256").update(buf).digest("hex");
 const sortArr = (v) => (Array.isArray(v) ? [...v].sort() : v);
 const same = (a, b) => JSON.stringify(sortArr(a) ?? null) === JSON.stringify(sortArr(b) ?? null);
@@ -223,7 +228,7 @@ async function main() {
         if (only && !only.has(b.path)) continue;
         const r = rendered.get(b.path);
         if (!r || r.error) { failures.push(`[${locale}] ${b.path}: render error ${r?.error ?? "missing"}`); continue; }
-        for (const f of STRICT) if (!same(b[f], r[f])) failures.push(`[${locale}] ${b.path} ${f}: ${short(b[f])} → ${short(r[f])}`);
+        for (const f of STRICT) if (!same(b[f], r[f])) (isToday(f, r[f]) ? warnings : failures).push(`[${locale}] ${b.path} ${f}: ${short(b[f])} → ${short(r[f])}`);
         for (const f of SOFT) if (!same(b[f], r[f])) warnings.push(`[${locale}] ${b.path} ${f}: ${short(b[f])} → ${short(r[f])}`);
       }
       if (UPDATE) {
