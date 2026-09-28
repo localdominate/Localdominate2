@@ -24,8 +24,10 @@ Companion documents: `ARCHITECTURE.md`, `CONTENT_ARCHITECTURE.md`, `DEPENDENCIES
   2. **Lovable Cloud** = the Supabase project `minijgyozgjuhqgkmilj` (DB, auth, 19 edge functions,
      7 cron jobs, secrets) which is *not* in any Supabase account we control;
   3. the **AI gateway** used by one edge function and Google sign-in for the admin.
-* The database holds almost nothing of value today: 67 rows of `blog_article_views`, 42 rows of
-  `ab_test_views`, 1 auth user; `leads`, `customers`, `partner_applications`, storage buckets are empty.
+* **Correction 2026-09-28:** the database is **not** empty. Exact counts (the Lovable dashboard shows stale
+  estimates): 7,370 rows, incl. `customers` 13, `leads` 6, `partner_applications` 2,
+  `questionnaire_responses` 100 (personal data), plus analytics/A-B tables. 1 auth user; storage buckets empty.
+  Full schema export in `supabase/export/`; the data was backed up privately (not in Git).
 * The project builds outside Lovable (`npm install && npm run build` ✅, `tsc` ✅) but not with its own
   lockfiles; lint fails (100 errors); there are no tests.
 * **The old GitHub repo `localdominate/localdominate` is a different application** ("Lead Command
@@ -88,9 +90,9 @@ Full table and service graph: DEPENDENCIES.md.
 | R1 | **Production hosting** of localdominate.org | Site goes offline or stops updating; DNS points at Lovable's IP | **CRITICAL** |
 | R2 | **Crawler pre-rendering** | Any replacement static host without pre-render/SSG would show crawlers one generic title for 187 indexable URLs → ranking loss | **CRITICAL** |
 | R3 | **Source code** | Was only in Lovable until this ZIP. Now mitigated **once pushed to GitHub**; until then it exists only as a ZIP on one laptop | **CRITICAL → LOW after push** |
-| R4 | **Supabase ownership** (`minijgyozgjuhqgkmilj` under Lovable Cloud) | Lose DB, auth user, functions, cron, secrets. Data value today is small (109 analytics rows), but all forms (leads, partner, campsite check, onboarding) stop working | **HIGH** |
+| R4 | **Supabase ownership** (`minijgyozgjuhqgkmilj` under Lovable Cloud) | Lose DB, auth user, functions, cron, secrets. Holds 7,370 rows incl. 13 customers, 6 leads, 2 partner applications, 100 questionnaire answers (backed up 2026-09-28, see `supabase/export/README.md`); all forms (leads, partner, campsite check, onboarding) stop working | **HIGH** |
 | R5 | **Secrets** (Resend, Stripe webhook, Stripe secret, internal) | Cannot be exported from Lovable; must be re-issued from provider dashboards | **HIGH** |
-| R6 | **Form submissions** | Stored in Supabase + emailed via Resend; tables are empty today, so no historical loss, but future submissions depend on R4/R5 | **HIGH** |
+| R6 | **Form submissions** | Stored in Supabase + emailed via Resend; existing submissions are backed up (2026-09-28), future submissions depend on R4/R5 | **HIGH** |
 | R7 | **Cron jobs** (7) | Definitions not in repo; silently stop. Most are reporting/optimisation (non-critical); `publish-scheduled-posts` has nothing to publish | **MEDIUM** |
 | R8 | **Domains / DNS** | Registrar/DNS at IONOS (independent). Risk is only that the A record points at Lovable; account ownership unknown | **MEDIUM** (HIGH if IONOS login is not available) |
 | R9 | **Analytics** | GA4 is independent (keep the tag). Custom Supabase analytics (tiny) and Lovable Analytics panel history would be lost | **LOW** |
