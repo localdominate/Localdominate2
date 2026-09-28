@@ -76,7 +76,7 @@ const CheckItem = ({ children, dark = false }: { children: React.ReactNode; dark
 
 const SectionTitle = ({ eyebrow, children }: { eyebrow: string; children: React.ReactNode }) => (
   <div>
-    <p className="mb-3 text-xs font-bold uppercase tracking-[.16em] text-primary">{eyebrow}</p>
+    <p className="camp-eyebrow mb-4 text-xs font-bold uppercase tracking-[.16em] text-primary">{eyebrow}</p>
     <h2 className="text-4xl font-semibold leading-[.92] sm:text-5xl lg:text-6xl">{children}</h2>
   </div>
 );
@@ -240,7 +240,7 @@ const Campsites = () => {
 
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur">
         <div className="camp-mobile-header mx-auto flex h-16 max-w-7xl items-center gap-5 px-4 lg:px-8">
-          <Link to="/" className="shrink-0" aria-label="LocalDominate home"><img src={campLogo} alt="Local Dominator" width="232" height="77" className="camp-logo-img h-10 w-auto" /></Link>
+          <Link to="/" className="shrink-0" aria-label="LocalDominate home"><span className="camp-logo-chip"><img src={campLogo} alt="Local Dominator" width="232" height="77" className="camp-logo-img h-10 w-auto" /></span></Link>
           <nav className="ml-auto hidden items-center gap-6 text-xs font-semibold lg:flex" aria-label="Campsites page navigation">
             <a href="#why">Why It Matters</a><a href="#process">How It Works</a><a href="#examples">Examples</a><a href="#faq">FAQ</a>
           </nav>
@@ -255,23 +255,23 @@ const Campsites = () => {
           <img src={heroImage} alt="UK campsite overlooking a lake at sunset" width="1920" height="1088" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="camp-photo-overlay absolute inset-0" />
           <div className="relative mx-auto flex min-h-[640px] max-w-7xl items-center px-5 py-14 md:min-h-[680px] lg:px-8">
-            <div className="w-full max-w-[640px] text-primary-foreground">
-              <p className="camp-hero-eyebrow mb-4 text-xs font-bold uppercase tracking-[.16em]">Websites for campsites, caravan parks & holiday parks</p>
-              <h1 className="text-5xl font-semibold leading-[.86] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[84px]"><span className="block lg:whitespace-nowrap">From Inspiration</span>{" "}<em className="block font-medium lg:whitespace-nowrap">to Arrival.</em></h1>
-              <p className="mt-7 max-w-lg text-lg leading-snug md:text-xl">We help UK campsites turn online discovery<br className="hidden sm:block" /> into more direct bookings.</p>
+            <div className="w-full max-w-[640px] text-foreground">
+              <p className="camp-hero-eyebrow camp-eyebrow mb-4 text-xs font-bold uppercase tracking-[.16em] text-primary">Websites for campsites, caravan parks & holiday parks</p>
+              <h1 className="text-5xl font-semibold leading-[.86] sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[84px]"><span className="block lg:whitespace-nowrap">From Inspiration</span>{" "}<em className="block font-medium not-italic text-primary lg:whitespace-nowrap">to Arrival.</em></h1>
+              <p className="mt-7 max-w-lg text-lg leading-snug text-muted-foreground md:text-xl">We help UK campsites turn online discovery<br className="hidden sm:block" /> into more direct bookings.</p>
               <ul className="mt-6 space-y-2 text-sm md:text-base"><CheckItem dark>More guests, fewer OTA fees</CheckItem><CheckItem dark>A website that reflects what makes your place special</CheckItem><CheckItem dark>Built for the UK outdoor tourism market</CheckItem></ul>
               <div className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7">
-                <Button onClick={() => scrollToCheck("hero")} size="cta" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">{ctaLabel}<ArrowRight /></Button>
-                <p className="camp-script max-w-[190px] text-xl">No obligation.<br />Real insights.<br />From people who understand campsites.</p>
+                <Button onClick={() => scrollToCheck("hero")} size="cta" className="rounded-full shadow-[0_0_50px_-12px_hsl(var(--primary)/0.6)]">{ctaLabel}<ArrowRight /></Button>
+                <p className="camp-script max-w-[190px] text-xl text-muted-foreground">No obligation.<br />Real insights.<br />From people who understand campsites.</p>
               </div>
             </div>
-            <p className="camp-script absolute right-8 top-12 hidden max-w-[190px] text-right text-2xl text-primary-foreground lg:block xl:text-3xl">Great places<br />bring great people<br />together.</p>
+            <p className="camp-script absolute right-8 top-12 hidden max-w-[190px] text-right text-2xl text-primary lg:block xl:text-3xl">Great places<br />bring great people<br />together.</p>
           </div>
         </section>
 
         <section aria-labelledby="campsite-websites-heading" className="bg-background px-5 py-14 lg:px-8 lg:py-16">
           <div className="mx-auto max-w-4xl">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[.16em] text-primary">Websites built for outdoor tourism</p>
+            <p className="camp-eyebrow mb-4 text-xs font-bold uppercase tracking-[.16em] text-primary">Websites built for outdoor tourism</p>
             <h2 id="campsite-websites-heading" className="text-4xl font-semibold leading-none sm:text-5xl">Websites Built for UK Campsites, Caravan Parks &amp; Holiday Parks</h2>
             <div className="mt-6 max-w-3xl space-y-4 leading-relaxed text-muted-foreground">
               <p>LocalDominate creates websites for independent campsites, caravan parks, holiday parks and glamping businesses in the UK.</p>
@@ -290,7 +290,7 @@ const Campsites = () => {
           </div>
         </section>
 
-        <section id="why" className="bg-[hsl(var(--camp-cream))] px-5 py-20 lg:px-8 lg:py-28">
+        <section id="why" className="camp-light-panel bg-[hsl(var(--camp-cream))] px-5 py-20 lg:px-8 lg:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(0,.82fr)_minmax(0,1.18fr)] lg:items-center">
             <div><SectionTitle eyebrow="A better online journey">Turn Lookers Into<br />Lasting Guests.</SectionTitle><p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">Your campsite is more than a place to stay – it’s the start of memorable journeys. We create websites that inspire trust, showcase what makes your place unique, and make it easy to book directly.</p><Button onClick={() => document.getElementById("process")?.scrollIntoView({ behavior: "smooth" })} variant="outline" className="mt-7 rounded-full border-primary">See How It Works<ArrowRight /></Button><p className="camp-journey-script camp-script mt-8 max-w-[190px] text-3xl text-primary">More journeys.<br />More memories.</p></div>
             <div className="grid min-w-0 gap-8 md:grid-cols-[minmax(0,1fr)_210px] md:items-center">
@@ -304,24 +304,24 @@ const Campsites = () => {
           <div className="mx-auto max-w-7xl"><SectionTitle eyebrow="Real example. Illustrative result.">Same Great Place.<br />A Stronger First Impression.</SectionTitle>
             <div className="mt-12 grid gap-10 xl:grid-cols-[1.45fr_.7fr_.7fr] xl:items-center">
                <div className="camp-comparison grid items-center gap-4 sm:grid-cols-[1fr_auto_1fr]" role="group" aria-label="Campsite website before and after redesign"><div><span className="mb-2 inline-block rounded-full bg-muted px-3 py-1 text-xs font-bold">Before</span><WebsiteMockup compact /></div><ArrowRight className="camp-comparison-arrow mx-auto h-8 w-8 text-primary sm:mt-8" aria-hidden="true" /><div><span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">After</span><WebsiteMockup after compact /></div></div>
-              <div id="website-check" className="camp-lead-card rounded-md border-8 border-muted bg-card p-6 shadow-sm"><h2 className="text-3xl font-semibold leading-none">Get Your Free<br />Website Check</h2><p className="my-4 text-sm leading-relaxed text-muted-foreground">Receive a personalised review of your current website with practical recommendations – no obligation.</p><WebsiteCheckForm /></div>
+              <div id="website-check" className="camp-lead-card rounded-md border-8 border-muted bg-card p-6 shadow-[0_0_70px_-25px_hsl(var(--primary)/0.4)]"><h2 className="text-3xl font-semibold leading-none">Get Your Free<br />Website Check</h2><p className="my-4 text-sm leading-relaxed text-muted-foreground">Receive a personalised review of your current website with practical recommendations – no obligation.</p><WebsiteCheckForm /></div>
             </div>
           </div>
         </section>
 
-        <section className="relative min-h-[340px] overflow-hidden text-primary-foreground">
+        <section className="relative min-h-[340px] overflow-hidden text-foreground">
           <img src={coastImage} alt="UK coastal campsite landscape" width="1920" height="768" loading="lazy" className="absolute inset-0 h-full w-full object-cover" /><div className="camp-photo-overlay absolute inset-0" />
-          <div className="camp-tourism-content relative mx-auto grid min-h-[340px] max-w-7xl items-center gap-10 px-5 py-14 md:grid-cols-[minmax(0,2fr)_minmax(190px,1fr)] lg:px-8"><div className="max-w-2xl"><p className="mb-3 text-xs font-bold uppercase tracking-[.16em]">Supporting a stronger UK tourism industry</p><h2 className="text-5xl font-semibold leading-[.9] md:text-6xl">Great Campsites.<br />Brighter Tomorrows.</h2><p className="mt-5 max-w-lg text-sm leading-relaxed md:text-base">By helping independent campsites grow online, we contribute to stronger local communities and a more vibrant UK outdoor tourism industry.</p></div><p className="camp-tourism-script camp-script max-w-[220px] text-2xl md:justify-self-end md:text-right md:text-3xl">Local Stays.<br />Local People.<br />Lasting Impact.</p></div>
+          <div className="camp-tourism-content relative mx-auto grid min-h-[340px] max-w-7xl items-center gap-10 px-5 py-14 md:grid-cols-[minmax(0,2fr)_minmax(190px,1fr)] lg:px-8"><div className="max-w-2xl"><p className="camp-eyebrow mb-3 text-xs font-bold uppercase tracking-[.16em] text-primary">Supporting a stronger UK tourism industry</p><h2 className="text-5xl font-semibold leading-[.9] md:text-6xl">Great Campsites.<br />Brighter Tomorrows.</h2><p className="mt-5 max-w-lg text-sm leading-relaxed md:text-base">By helping independent campsites grow online, we contribute to stronger local communities and a more vibrant UK outdoor tourism industry.</p></div><p className="camp-tourism-script camp-script max-w-[220px] text-2xl md:justify-self-end md:text-right md:text-3xl">Local Stays.<br />Local People.<br />Lasting Impact.</p></div>
         </section>
 
         <section id="process" className="bg-background px-5 py-20 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl"><SectionTitle eyebrow="A simple process, designed around you">From First Chat to First Bookings.</SectionTitle>
-            <div className="mt-12 grid gap-px overflow-hidden rounded-md bg-border sm:grid-cols-2 lg:grid-cols-4">{[[MessageCircle,"We review your current website and goals."],[Leaf,"We create a tailored solution."],[Settings,"We build and optimise for bookings."],[Rocket,"You get a modern website that works for you."]].map(([Icon,text],i) => { const IconComponent = Icon as typeof MessageCircle; return <div key={text as string} className="relative flex min-h-48 flex-col items-center justify-center bg-background p-7 text-center"><span className="absolute left-5 top-5 grid h-8 w-8 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{i+1}</span><IconComponent className="mb-5 h-8 w-8 text-primary" /><p className="max-w-[180px] text-sm leading-relaxed">{text as string}</p></div>; })}</div>
+            <div className="mt-12 grid gap-px overflow-hidden rounded-md bg-border sm:grid-cols-2 lg:grid-cols-4">{[[MessageCircle,"We review your current website and goals."],[Leaf,"We create a tailored solution."],[Settings,"We build and optimise for bookings."],[Rocket,"You get a modern website that works for you."]].map(([Icon,text],i) => { const IconComponent = Icon as typeof MessageCircle; return <div key={text as string} className="camp-step relative flex min-h-48 flex-col items-center justify-center bg-background p-7 text-center"><span className="camp-step-badge absolute left-5 top-5 grid h-8 w-8 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{i+1}</span><IconComponent className="mb-5 h-8 w-8 text-primary" /><p className="max-w-[180px] text-sm leading-relaxed text-muted-foreground">{text as string}</p></div>; })}</div>
             <div className="mt-10 grid gap-5 md:grid-cols-[1fr_260px]"><div className="flex items-center justify-between gap-8 rounded-md bg-muted/60 p-7"><div><h3 className="text-3xl font-semibold">Everything You Need.<br />Nothing You Don’t.</h3><ul className="mt-5 grid gap-2 text-sm sm:grid-cols-2"><CheckItem>No long contracts</CheckItem><CheckItem>Clear, fixed pricing</CheckItem><CheckItem>Friendly, UK-based support</CheckItem><CheckItem>Built for campsite owners, by people who understand your industry</CheckItem></ul></div></div><img src={glampingImage} alt="A welcoming glamping tent in a woodland setting" width="768" height="1024" loading="lazy" className="h-72 w-full rounded-md object-cover md:h-full" /></div>
           </div>
         </section>
 
-        <section id="faq" aria-labelledby="faq-heading" className="bg-[hsl(var(--camp-cream))] px-5 py-20 lg:px-8 lg:py-24">
+        <section id="faq" aria-labelledby="faq-heading" className="camp-light-panel bg-[hsl(var(--camp-cream))] px-5 py-20 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-4xl">
             <SectionTitle eyebrow="Frequently asked questions"><span id="faq-heading">Questions From Campsite Owners.</span></SectionTitle>
             <div className="mt-10 divide-y divide-border border-y border-border">
@@ -338,12 +338,12 @@ const Campsites = () => {
           </div>
         </section>
 
-        <section className="bg-primary px-5 py-16 text-primary-foreground lg:px-8">
-          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_auto_1fr] md:items-center"><div><h2 className="text-4xl font-semibold md:text-5xl">Ready to Welcome More Guests?</h2><p className="mt-3 max-w-xl text-sm opacity-80">Get your free website check today and take the first step towards a brighter future for your park.</p></div><div className="text-center"><Button onClick={() => scrollToCheck("final_cta")} size="cta" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">{ctaLabel}<ArrowRight /></Button><div className="mt-4 flex flex-wrap justify-center gap-4 text-xs"><span>✓ Free</span><span>✓ No obligation</span><span>✓ Practical insights</span></div></div><p className="camp-script hidden text-right text-3xl md:block">Better places<br />for brighter tomorrows.</p></div>
+        <section className="border-t border-border bg-[hsl(var(--camp-black-deep))] px-5 py-16 text-foreground lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_auto_1fr] md:items-center"><div><h2 className="text-4xl font-semibold md:text-5xl">Ready to Welcome More Guests?</h2><p className="mt-3 max-w-xl text-sm text-muted-foreground">Get your free website check today and take the first step towards a brighter future for your park.</p></div><div className="text-center"><Button onClick={() => scrollToCheck("final_cta")} size="cta" className="rounded-full shadow-[0_0_50px_-12px_hsl(var(--primary)/0.6)]">{ctaLabel}<ArrowRight /></Button><div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-muted-foreground"><span>✓ Free</span><span>✓ No obligation</span><span>✓ Practical insights</span></div></div><p className="camp-script hidden text-right text-3xl text-primary md:block">Better places<br />for brighter tomorrows.</p></div>
         </section>
       </main>
 
-      <footer className="border-t border-border bg-background px-5 py-9 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center md:flex-row md:text-left"><Link to="/" aria-label="LocalDominate home"><img src={campLogo} alt="Local Dominator – websites for campsites" width="232" height="77" className="h-11 w-auto" /></Link><nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs"><Link to="/ueber-uns">About</Link><Link to="/datenschutz">Privacy</Link><Link to="/agb">Terms</Link><a className="inline-flex items-center gap-1.5" href="mailto:hello@localdominate.org"><Mail className="h-3.5 w-3.5" />Contact</a></nav><p className="ml-auto flex items-center gap-3 text-[10px] leading-tight"><span>Proud to support<br />a stronger UK tourism industry.</span><span className="text-3xl" aria-hidden="true">🇬🇧</span></p></div></footer>
+      <footer className="border-t border-border bg-background px-5 py-9 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center md:flex-row md:text-left"><Link to="/" aria-label="LocalDominate home"><span className="camp-logo-chip"><img src={campLogo} alt="Local Dominator – websites for campsites" width="232" height="77" className="h-11 w-auto" /></span></Link><nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs"><Link to="/ueber-uns">About</Link><Link to="/datenschutz">Privacy</Link><Link to="/agb">Terms</Link><a className="inline-flex items-center gap-1.5" href="mailto:hello@localdominate.org"><Mail className="h-3.5 w-3.5" />Contact</a></nav><p className="ml-auto flex items-center gap-3 text-[10px] leading-tight"><span>Proud to support<br />a stronger UK tourism industry.</span><span className="text-3xl" aria-hidden="true">🇬🇧</span></p></div></footer>
     </div>
   );
 };
