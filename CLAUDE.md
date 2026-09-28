@@ -35,6 +35,14 @@ node scripts/seo-check.mjs                     # fails on any change vs docs/bas
 node scripts/seo-check.mjs --update-baseline   # ONLY after the owner approved the SEO change
 ```
 
+Static build with build-time prerendering, for hosting outside Lovable (see `docs/STATIC_HOSTING.md`):
+
+```sh
+npm run build:static                                          # vite build + scripts/prerender.mjs
+node scripts/seo-check.mjs --static --no-js --locales=en-US    # what a non-JS crawler gets
+node scripts/seo-check.mjs --static                            # what a browser / Googlebot gets
+```
+
 There are no unit tests yet.
 
 ## Hard rules (migration phase)

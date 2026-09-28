@@ -15,10 +15,16 @@
  * Options:
  *   --only=/blog/foo,/campsites   check a subset of paths
  *   --port=4173                   preview port
+ *   --static                      serve dist/ like a plain static host (dist/<path>/index.html, else
+ *                                 dist/spa-fallback.html) instead of `vite preview`; use after
+ *                                 `npm run build:static`
+ *   --no-js                       render with JavaScript disabled (what non-JS crawlers get)
+ *   --locales=en-US               only check these locales
  *
  * External requests (Supabase, GA, fonts…) are blocked, so the check never writes to production.
  */
 import { spawn } from "node:child_process";
+import http from "node:http";
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -35,12 +41,15 @@ const args = Object.fromEntries(
 const PORT = Number(args.port || 4173);
 const BASE = `http://127.0.0.1:${PORT}`;
 const UPDATE = Boolean(args["update-baseline"]);
+const STATIC = Boolean(args.static);
+const NO_JS = Boolean(args["no-js"]);
+if (UPDATE && (STATIC || NO_JS)) { console.error("--update-baseline only works with the normal preview"); process.exit(2); }
 const GENERIC_TITLE = "Local Dominator – Local SEO & AI-Sichtbarkeit";
 
 const LOCALES = [
   { file: "rendered-de-DE.json", locale: "de-DE" },
   { file: "rendered-en-US.json", locale: "en-US" },
-];
+].filter((l) => !args.locales || String(args.locales).split(",").includes(l.locale));
 
 // Fields that must match exactly (a difference fails the check).
 const STRICT = [
@@ -104,8 +113,22 @@ async function waitForServer(url, ms = 30000) {
   throw new Error(`preview server did not start on ${url}`);
 }
 
+/** Minimal static host: real files, then <path>/index.html, then the SPA fallback. */
+function staticServer() {
+  const dist = path.join(ROOT, "dist");
+  const fallback = fs.existsSync(path.join(dist, "spa-fallback.html")) ? "spa-fallback.html" : "index.html";
+  const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".svg": "image/svg+xml", ".xml": "application/xml", ".txt": "text/plain" };
+  return http.createServer((req, res) => {
+    const p = decodeURIComponent(new URL(req.url, BASE).pathname);
+    const candidates = [p, path.posix.join(p, "index.html")].map((c) => path.join(dist, c));
+    const file = candidates.find((f) => f.startsWith(dist) && fs.existsSync(f) && fs.statSync(f).isFile()) || path.join(dist, fallback);
+    res.writeHead(200, { "content-type": types[path.extname(file)] || "application/octet-stream" });
+    fs.createReadStream(file).pipe(res);
+  }).listen(PORT, "127.0.0.1");
+}
+
 async function renderAll(browser, locale, paths) {
-  const ctx = await browser.newContext({ locale });
+  const ctx = await browser.newContext({ locale, javaScriptEnabled: !NO_JS });
   await ctx.addInitScript(() => { try { localStorage.setItem("cookieConsent", "essential"); } catch { /* ignore */ } });
   await ctx.route("**/*", (route) => (route.request().url().startsWith(BASE) ? route.continue() : route.abort()));
   const results = new Map();
@@ -121,14 +144,14 @@ async function renderAll(browser, locale, paths) {
           .waitForFunction((g) => document.querySelector("h1") || document.title !== g, GENERIC_TITLE, { timeout: 8000 })
           .catch(() => {});
         // Scroll through the page so lazy / on-scroll sections render, then settle.
-        await page.evaluate(async () => {
+        if (!NO_JS) await page.evaluate(async () => {
           for (let y = 0; y < document.body.scrollHeight; y += 800) {
             window.scrollTo(0, y);
             await new Promise((r) => setTimeout(r, 60));
           }
           window.scrollTo(0, 0);
         });
-        await page.waitForTimeout(1500);
+        if (!NO_JS) await page.waitForTimeout(1500);
         Object.assign(rec, await page.evaluate(extract));
       } catch (e) {
         rec.error = String(e).slice(0, 200);
@@ -212,7 +235,8 @@ async function main() {
   const warnings = [];
   failures.push(...checkStaticFiles().map((p) => `[static] ${p}`));
 
-  const preview = spawn("npx", ["vite", "preview", "--host", "127.0.0.1", "--port", String(PORT), "--strictPort"], { cwd: ROOT, stdio: "ignore" });
+  const server = STATIC ? staticServer() : null;
+  const preview = STATIC ? null : spawn("npx", ["vite", "preview", "--host", "127.0.0.1", "--port", String(PORT), "--strictPort"], { cwd: ROOT, stdio: "ignore" });
   try {
     await waitForServer(BASE + "/");
     const launchOpts = process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {};
@@ -239,11 +263,12 @@ async function main() {
     }
     await browser.close();
   } finally {
-    preview.kill();
+    preview?.kill();
+    server?.close();
   }
 
   const lines = [];
-  lines.push(`## SEO regression check`, "");
+  lines.push(`## SEO regression check${STATIC ? " (static files" + (NO_JS ? ", JavaScript off)" : ")") : NO_JS ? " (JavaScript off)" : ""}`, "");
   if (UPDATE) lines.push("Baseline **updated** from the current build (owner-approved changes).", "");
   lines.push(`- Failures: **${UPDATE ? 0 : failures.length}**`, `- Warnings: ${warnings.length}`, "");
   if (!UPDATE && failures.length) lines.push("### Failures", "", ...failures.slice(0, 300).map((f) => `- ${f}`), "");
