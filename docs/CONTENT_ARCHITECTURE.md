@@ -31,8 +31,8 @@ The social/OG image and Article `image` schema are **derived from the slug**:
 `https://localdominate.org/images/blog/<slug>.jpg` (`ArticleLayout.tsx` line ~290). Only 27 of the 164
 articles have that file in `public/images/blog/`; the other 137 point to a missing image.
 
-The database only holds engagement data about articles (`blog_article_views`: 67 rows,
-`scheduled_posts`: 0 rows). `publish-scheduled-posts` runs every minute but there are no scheduled posts.
+The database only holds engagement data about articles (`blog_article_views`: 2,226 rows) and
+`scheduled_posts` (128 rows, all test entries with slug/title/status only, no article body).
 
 ## 2. Numbers
 

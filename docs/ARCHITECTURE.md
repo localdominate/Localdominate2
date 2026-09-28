@@ -136,11 +136,13 @@ The `generate-sitemap` edge function builds XML on request but is **not** what `
   `supabase/migrations/` (28 files, Jan–May 2026); `internal_linking_audits` and view
   `latest_internal_linking_audits` exist in the database but are not created by any migration (schema drift) – and migration `20260520145005_…sql` runs `ALTER VIEW public.latest_internal_linking_audits`, so **replaying the migrations on a fresh project fails at that file**;
   `drizzle/migrations/0000_harden_customers_storage_and_has_role.sql` is a later hardening migration run
-  via `LOVABLE_DB_MIGRATION_URL`. Row counts on 2026-09-27: `blog_article_views` 67, `ab_test_views` 42,
-  **all other tables 0** (incl. `leads`, `customers`, `partner_applications`, `questionnaire_responses`).
+  via `LOVABLE_DB_MIGRATION_URL`. Exact row counts (2026-09-28, `count(*)`): 7,370 in total, e.g. `ab_test_views` 3,823,
+  `blog_article_views` 2,226, `analytics_events` 467, `customers` 13, `leads` 6, `partner_applications` 2,
+  `questionnaire_responses` 100, `scheduled_posts` 128. Full list and schema: `supabase/export/README.md`.
+  (The Lovable dashboard's "0 rows" figures used on 2026-09-27 were stale estimates.)
 * **Auth**: Supabase Auth. Admin login (`src/components/admin/AdminLoginScreen.tsx`) supports
   email/password and "Sign in with Google" via Lovable's managed OAuth broker
-  (`@lovable.dev/cloud-auth-js`). Admin rights via `user_roles` + `has_role()`. 1 auth user exists.
+  (`@lovable.dev/cloud-auth-js`). Admin rights via `user_roles` + `private.has_role()` (a function in a `private` schema, used by 38 policies). 1 auth user exists.
 * **Storage**: buckets `downloads` (public, empty), `customer-uploads` (private, empty).
 * **Edge Functions** (19): 16 are declared `verify_jwt = false` in `supabase/config.toml`; `generate-ai-audit-report`, `send-campsite-website-check`, `send-partner-notification` have no entry (Supabase default `verify_jwt = true` if redeployed from this repo). See DEPENDENCIES.md.
 * **Cron jobs** (configured in Lovable Cloud, not in the repo): `auto-optimizer-hourly` (hourly),
