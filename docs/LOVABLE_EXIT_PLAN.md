@@ -3,6 +3,16 @@
 Date: 2026-09-29
 Companion to `docs/LOVABLE_DEPENDENCY_AUDIT.md`. Defines how each dependency gets closed out and what "exit complete" means, per the LocalDominate 2.0 master brief §71.
 
+## Status update — 2026-09-29
+
+Done (commit `1683335`, branch `rebrand/localdominate-2.0-foundation`): admin OAuth swapped to native Supabase auth, `lovable-tagger` removed, `previewAuthStorage.ts` deleted. Build and typecheck verified clean.
+
+**New input from Re:** the Stripe checkout flow is reportedly **not currently working**. This wasn't independently verifiable from the code (no feature flag disables it — `stripe.ts` still has live Payment Link URLs and price IDs hard-coded, so it reads as "should be live" from the repo alone). Two implications:
+1. It lowers the immediate risk of the edge-function/data-migration cutover — if checkout is already broken, there's less to protect against interrupting.
+2. It does **not** remove the need to actually diagnose and fix it as part of "going out" cleanly — a broken checkout on the current live site is itself a problem worth root-causing (could be a Lovable-side issue, a Stripe webhook misconfiguration, or something else entirely). Recommend a quick diagnostic pass (check Stripe dashboard for recent webhook delivery failures, check Supabase edge function logs for `stripe-webhook`) before assuming it's safe to deprioritize.
+
+Remaining gated items (bun.lock removal, edge-function redeployment, Supabase data migration) are unchanged — still waiting on the Lovable auto-sync confirmation and the data export.
+
 ## Open question that gates everything else
 
 **Is Lovable auto-sync still active on this GitHub repo?** Cannot be confirmed from the repository alone. Before any substantial rebuild work starts on `rebrand/localdominate-2.0-foundation`, Markus or Re needs to check the Lovable project dashboard and confirm one of:
