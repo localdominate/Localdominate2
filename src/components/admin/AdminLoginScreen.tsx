@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Separator } from '@/components/ui/separator';
-import { lovable } from '@/integrations/lovable/index';
+import { supabase } from '@/integrations/supabase/client';
 
 interface AdminLoginScreenProps {
   onLogin: (email: string, password: string) => Promise<{ success: boolean; error: string | null }>;
@@ -48,12 +48,18 @@ export function AdminLoginScreen({
     setGoogleLoading(true);
     setLocalError(null);
     try {
-      const { error } = await lovable.auth.signInWithOAuth("google", {
-        redirect_uri: window.location.origin,
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin,
+        },
       });
       if (error) {
         setLocalError(error.message || 'Google Login fehlgeschlagen');
       }
+      // On success, Supabase redirects the browser to Google — there is
+      // nothing further to do here; setGoogleLoading(false) in `finally`
+      // below only matters for the error path.
     } catch (err) {
       setLocalError('Google Login fehlgeschlagen');
     } finally {
