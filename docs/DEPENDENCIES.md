@@ -1,6 +1,13 @@
 # Local Dominate – Dependencies (Lovable and external services)
 
-Snapshot 2026-09-27. Classification key for Lovable dependencies:
+Snapshot 2026-09-27. **⚠ See `STATUS_2026-09-30.md` for what changed since**: L1 (hosting) is
+now Netlify, not Lovable — that row is closed. L4–L8 (Lovable Cloud Supabase, cron jobs,
+secrets, AI gateway, admin OAuth broker) are **unchanged and still live** as of 2026-09-30. L9–L13
+(dev/build cruft) were removed **only on the unmerged `rebrand/localdominate-2.0-foundation`
+branch**, not yet on `main`. L14 (Git sync) status: see the new `LOVABLE_SYNC_VERIFICATION.md` —
+**not verified either way**, do not assume disabled.
+
+Classification key for Lovable dependencies:
 
 * **A** – required at runtime (production breaks or degrades without it)
 * **B** – required only during development / build

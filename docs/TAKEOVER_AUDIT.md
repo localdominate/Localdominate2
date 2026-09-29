@@ -13,6 +13,12 @@ Companion documents: `ARCHITECTURE.md`, `CONTENT_ARCHITECTURE.md`, `DEPENDENCIES
 `SEO_BASELINE.md`, `MIGRATION_PLAN.md`, `docs/baseline/*` (raw evidence), and the proposed
 `CLAUDE.md` at repo root.
 
+> **⚠ Superseded in part — see `STATUS_2026-09-30.md`.** Since this audit, production hosting
+> has moved from Lovable to Netlify (DNS repointed at IONOS, SSL provisioning) — **R1/R2 below
+> are closed.** The backend (Lovable Cloud Supabase, all 19 edge functions, the 7 cron jobs,
+> `LOVABLE_API_KEY`) is **unchanged and still live** — R4–R7 are still open. Do not read this
+> document alone as describing current hosting; read `STATUS_2026-09-30.md` first.
+
 ## 1. Executive summary
 
 * The site is a **Vite + React 18 SPA** (211 unique routes, 164 blog URLs) whose entire content lives in the
