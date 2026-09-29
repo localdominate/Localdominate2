@@ -1,9 +1,14 @@
+/* V4 Design Foundation tokens — additive, scoped under .v4, does not touch tokens below.
+   Must stay ABOVE @tailwind: an @import after any other rule is invalid CSS (spec requires
+   @import to precede all rules but @charset) and Vite's production build silently drops it,
+   so every --v4-* custom property resolved to nothing and V4 typography fell back to
+   browser defaults. Found via computed-style inspection when the real font size didn't
+   match the reference on the live deploy preview. */
+@import "./styles/v4-tokens.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* V4 Design Foundation tokens — additive, scoped under .v4, does not touch tokens below */
-@import "./styles/v4-tokens.css";
 
 /* Font loaded async in index.html to prevent render-blocking */
 
