@@ -112,7 +112,7 @@ export default function HomeV4() {
           <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 py-24 md:grid-cols-2 md:items-center md:px-10">
             <div className="flex flex-col gap-8">
               <SystemLabel className="text-v4-ivory/50">Better Brands. Stronger Businesses.</SystemLabel>
-              <h1 id="beat-hero" className="font-v4-serif text-[length:var(--v4-text-hero)] leading-[0.98] text-v4-ivory">
+              <h1 id="beat-hero" className="font-v4-sans font-extrabold tracking-tight text-[length:var(--v4-text-hero)] leading-[0.95] text-v4-ivory">
                 One business.
                 <br />
                 One connected growth system.
