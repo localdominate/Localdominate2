@@ -11,17 +11,21 @@ export function StateField({
   className,
   as: Tag = "section",
   id,
+  "aria-labelledby": ariaLabelledBy,
 }: {
   field: "dark" | "light";
   children: React.ReactNode;
   className?: string;
   as?: "section" | "div";
   id?: string;
+  /** Gives the section a real landmark name from its own heading, per B1.1 §17. */
+  "aria-labelledby"?: string;
 }) {
   return (
     <Tag
       id={id}
       data-field={field}
+      aria-labelledby={ariaLabelledBy}
       className={cn(
         "v4 w-full",
         field === "dark" ? "bg-v4-ink text-v4-ivory" : "bg-v4-ivory text-v4-ink",

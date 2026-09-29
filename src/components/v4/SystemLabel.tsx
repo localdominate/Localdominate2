@@ -8,13 +8,16 @@ export function SystemLabel({
   children,
   className,
   as: Tag = "span",
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   as?: "span" | "div" | "p";
+  id?: string;
 }) {
   return (
     <Tag
+      id={id}
       className={cn(
         "font-v4-mono uppercase tracking-[0.18em]",
         "text-[length:var(--v4-text-label)] leading-none",

@@ -38,20 +38,29 @@ export default function HomeV4() {
 
       <main id="main-content">
         {/* 01 — THE BUSINESS (above the fold) */}
-        <StateField field="dark" as="section" className="min-h-screen flex items-center">
+        <StateField field="dark" as="section" className="min-h-screen flex items-center" aria-labelledby="beat-hero">
           <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 py-24 md:grid-cols-2 md:items-center md:px-10">
             <div className="flex flex-col gap-8">
               <SystemLabel className="text-v4-ivory/50">Better Brands. Stronger Businesses.</SystemLabel>
-              <h1 className="font-v4-serif text-[length:var(--v4-text-hero)] leading-[0.98] text-v4-ivory">
+              <h1 id="beat-hero" className="font-v4-serif text-[length:var(--v4-text-hero)] leading-[0.98] text-v4-ivory">
                 One business.
                 <br />
                 One connected growth system.
               </h1>
               <p className="max-w-md font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">
-                LocalDominate connects Strategy, Brand, Build and Growth — the functions
-                premium businesses and hospitality brands usually buy from four different
-                places — into one operating system.
+                Most premium businesses and hospitality brands buy strategy, brand, a
+                website and marketing from four separate places — and pay for the gaps
+                between them. LocalDominate runs all four as one connected system, so
+                every part informs the next.
               </p>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1" aria-hidden="true">
+                {["Strategy", "Brand", "Build", "Growth"].map((word, i) => (
+                  <span key={word} className="flex items-center gap-3">
+                    <SystemLabel className="text-v4-ivory/40">{word}</SystemLabel>
+                    {i < 3 && <span className="h-px w-4 bg-v4-ivory/20" />}
+                  </span>
+                ))}
+              </div>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#invitation"
@@ -74,7 +83,7 @@ export default function HomeV4() {
         </StateField>
 
         {/* 02 — THE PROBLEM / FRAGMENTATION */}
-        <StateField field="dark" as="section" className="border-t border-v4-ivory/10">
+        <StateField field="dark" as="section" className="border-t border-v4-ivory/10" aria-labelledby="beat-fragmentation">
           <div className="mx-auto max-w-[1000px] px-6 py-20 md:px-10">
             <div className="relative mx-auto mb-16 h-80 max-w-md" aria-hidden="true">
               {FRAGMENTED.map((f) => (
@@ -87,7 +96,7 @@ export default function HomeV4() {
               ))}
             </div>
             <div className="text-center">
-              <EditorialStatement>
+              <EditorialStatement id="beat-fragmentation">
                 Disconnected agencies make growth feel fragmented.
               </EditorialStatement>
               <p className="mx-auto mt-6 max-w-md font-v4-sans text-sm text-v4-ivory/50">
@@ -99,19 +108,21 @@ export default function HomeV4() {
         </StateField>
 
         {/* 03+04 — THE CONNECTION → THE SYSTEM AWAKENS (Signature Interaction, combined) */}
-        <StateField field="dark" as="section" className="border-t border-v4-ivory/10">
+        <StateField field="dark" as="section" className="border-t border-v4-ivory/10" aria-labelledby="beat-signature-system">
           <div className="mx-auto max-w-[1400px] py-16">
             <div className="px-6 md:px-10">
-              <SystemLabel className="text-v4-ivory/50">The Signature System</SystemLabel>
+              <SystemLabel as="p" id="beat-signature-system" className="text-v4-ivory/50">
+                The Signature System — how strategy becomes one connected system
+              </SystemLabel>
             </div>
             <SignatureSystem />
           </div>
         </StateField>
 
         {/* 05 — THE EVIDENCE */}
-        <StateField field="light" id="evidence" as="section" className="border-t border-v4-ink/10">
+        <StateField field="light" id="evidence" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-evidence">
           <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10">
-            <SystemLabel className="mb-6 block text-v4-ink/50">Evidence architecture</SystemLabel>
+            <SystemLabel as="p" id="beat-evidence" className="mb-6 block text-v4-ink/50">Evidence architecture</SystemLabel>
             <p className="max-w-2xl font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
               Three kinds of proof will live here: real client work, real process
               artefacts, and a category benchmark.
@@ -135,10 +146,10 @@ export default function HomeV4() {
         </StateField>
 
         {/* 06 — THE CONTEXT */}
-        <StateField field="light" as="section" className="border-t border-v4-ink/10">
+        <StateField field="light" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-context">
           <div className="mx-auto max-w-[1200px] px-6 py-16 md:px-10">
             <div className="rounded-2xl border border-v4-ink/10 bg-v4-white px-8 py-10 md:px-12">
-              <p className="font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
+              <p id="beat-context" className="font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
                 Different businesses. Same connected growth system.
               </p>
               <span
@@ -152,9 +163,9 @@ export default function HomeV4() {
         </StateField>
 
         {/* 07 — THE OPERATING MODEL + INTELLIGENCE (combined) */}
-        <StateField field="light" as="section" className="border-t border-v4-ink/10">
+        <StateField field="light" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-operating-model">
           <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10">
-            <p className="mb-10 font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
+            <p id="beat-operating-model" className="mb-10 font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
               You don't need another agency. You need a growth system.
             </p>
             <div className="grid gap-10 md:grid-cols-3">
@@ -182,9 +193,9 @@ export default function HomeV4() {
         </StateField>
 
         {/* 08 — THE INVITATION */}
-        <StateField field="light" id="invitation" as="section" className="border-t border-v4-ink/10">
+        <StateField field="light" id="invitation" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-invitation">
           <div className="mx-auto max-w-[900px] px-6 py-28 text-center md:px-10">
-            <p className="font-v4-serif text-[length:var(--v4-text-major)] text-v4-ink">
+            <p id="beat-invitation" className="font-v4-serif text-[length:var(--v4-text-major)] text-v4-ink">
               Start building your system.
             </p>
             <a

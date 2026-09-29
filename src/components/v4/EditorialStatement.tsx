@@ -17,13 +17,16 @@ export function EditorialStatement({
   children,
   className,
   scale = "major",
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   scale?: "major" | "heading";
+  id?: string;
 }) {
   return (
     <p
+      id={id}
       className={cn(
         "font-v4-serif font-normal leading-[1.08] animate-fade-in",
         scale === "major"

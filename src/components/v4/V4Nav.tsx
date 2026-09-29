@@ -33,6 +33,7 @@ export function V4Nav() {
           {NOT_YET_BUILT.map((label) => (
             <span
               key={label}
+              aria-disabled="true"
               className="font-v4-sans text-sm text-v4-ivory/40 cursor-default"
               title="Coming in a later B-batch — not part of B1"
             >
@@ -75,7 +76,7 @@ export function V4Nav() {
           className="md:hidden flex flex-col gap-4 border-t border-v4-ivory/10 px-6 py-6"
         >
           {NOT_YET_BUILT.map((label) => (
-            <span key={label} className="font-v4-sans text-base text-v4-ivory/40">
+            <span key={label} aria-disabled="true" className="font-v4-sans text-base text-v4-ivory/40">
               {label}
             </span>
           ))}

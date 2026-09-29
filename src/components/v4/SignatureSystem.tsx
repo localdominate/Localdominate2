@@ -92,21 +92,74 @@ function StaticResolvedList() {
 }
 
 function NodeChain({ activeIndex, size = "md" }: { activeIndex: number; size?: "sm" | "md" | "lg" }) {
+  const isComplete = activeIndex === LAST;
+
   return (
-    <div className="flex flex-col items-center gap-0" aria-hidden="true">
+    <div className="flex flex-col items-center" aria-hidden="true">
+      <div className="flex flex-col items-center gap-0">
+        {STATES.map((s, i) => {
+          const reached = i <= activeIndex;
+          const state = i === 0 ? "selected" : reached ? "outcome" : "dormant";
+          return (
+            <div key={s.label} className="flex flex-col items-center">
+              <Node label={s.label} state={state} size={i === LAST ? "lg" : size} />
+              {i < LAST && (
+                <Connection active={i < activeIndex} orientation="vertical" className="!h-10" />
+              )}
+            </div>
+          );
+        })}
+      </div>
+      {/* The chain resolving into a closed loop is the one moment the canvas looks
+          materially different from state 0 — "one connected growth system", not just
+          the last item in a list. Only appears once the story actually completes. */}
+      <motion.div
+        className="mt-6 flex items-center gap-1.5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isComplete ? 1 : 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
+        <span className="h-px w-8 bg-v4-signal" />
+        <SystemLabel className="text-v4-signal">Loop closed</SystemLabel>
+        <span className="h-px w-8 bg-v4-signal" />
+        <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
+      </motion.div>
+    </div>
+  );
+}
+
+function ProgressRail({ activeIndex }: { activeIndex: number }) {
+  // Gives the visitor explicit "I caused this" feedback (B1.1 §5) and a way to orient
+  // without decoding the canvas — each dot is a real, always-legible state name.
+  // Decorative for assistive tech: this duplicates, in order, the same 7 states the
+  // sr-only StaticResolvedList already exposes as the canonical accessible narrative —
+  // it exists only as a sighted-user "where am I" cue tied to the scroll canvas.
+  return (
+    <ol className="flex flex-col gap-3" aria-hidden="true">
       {STATES.map((s, i) => {
-        const reached = i <= activeIndex;
-        const state = i === 0 ? "selected" : reached ? "outcome" : "dormant";
+        const isCurrent = i === activeIndex;
+        const isPast = i < activeIndex;
         return (
-          <div key={s.label} className="flex flex-col items-center">
-            <Node label={s.label} state={state} size={i === LAST ? "lg" : size} />
-            {i < LAST && (
-              <Connection active={i < activeIndex} orientation="vertical" className="!h-10" />
-            )}
-          </div>
+          <li key={s.label} aria-current={isCurrent ? "step" : undefined}>
+            <span
+              className={cn(
+                "flex items-center gap-2 font-v4-mono text-[10px] uppercase tracking-[0.18em] transition-colors",
+                isCurrent ? "text-v4-signal" : isPast ? "text-v4-ivory/60" : "text-v4-ivory/25"
+              )}
+            >
+              <span
+                className={cn(
+                  "h-1.5 w-1.5 rounded-full transition-colors",
+                  isCurrent ? "bg-v4-signal" : isPast ? "bg-v4-ivory/60" : "bg-v4-ivory/25"
+                )}
+              />
+              {s.label}
+            </span>
+          </li>
         );
       })}
-    </div>
+    </ol>
   );
 }
 
@@ -122,7 +175,8 @@ function DesktopCanvas() {
 
   return (
     <div ref={wrapperRef} className="hidden md:block" style={{ height: `${STATES.length * 90}vh` }}>
-      <div className="sticky top-0 grid h-screen grid-cols-[1.1fr_0.9fr] items-center gap-16 px-10 lg:px-16">
+      <div className="sticky top-0 grid h-screen grid-cols-[auto_1.1fr_0.9fr] items-center gap-10 px-10 lg:gap-16 lg:px-16">
+        <ProgressRail activeIndex={activeIndex} />
         <div className="relative h-40">
           <AnimatePresence mode="wait">
             <motion.div
@@ -184,12 +238,29 @@ function MobileSpineStep({ index }: { index: number }) {
   );
 }
 
+function MobileLoopSummary() {
+  const [reached, setReached] = useState(false);
+  return (
+    <motion.div
+      className="flex items-center gap-3 pl-[26px] pt-2"
+      onViewportEnter={() => setReached(true)}
+      viewport={{ once: true, amount: 0.6 }}
+    >
+      <span className={cn("h-1.5 w-1.5 rounded-full transition-colors duration-500", reached ? "bg-v4-signal" : "bg-v4-ivory/25")} />
+      <SystemLabel className={cn("transition-colors duration-500", reached ? "text-v4-signal" : "text-v4-ivory/40")}>
+        One connected growth system
+      </SystemLabel>
+    </motion.div>
+  );
+}
+
 function MobileSpine() {
   return (
     <div className="md:hidden flex flex-col gap-2">
       {STATES.map((_, i) => (
         <MobileSpineStep key={STATES[i].label} index={i} />
       ))}
+      <MobileLoopSummary />
     </div>
   );
 }
