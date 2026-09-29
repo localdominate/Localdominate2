@@ -48,15 +48,15 @@ export default function HomeV4() {
                 One connected growth system.
               </h1>
               <p className="max-w-md font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">
-                Most premium businesses and hospitality brands buy strategy, brand, a
-                website and marketing from four separate places — and pay for the gaps
-                between them. LocalDominate runs all four as one connected system, so
-                every part informs the next.
+                Most growth systems fail because strategy, brand, website and marketing
+                operate separately. LocalDominate connects them into one operating
+                system — built for serious premium businesses, especially DACH and
+                hospitality brands, credible anywhere.
               </p>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1" aria-hidden="true">
                 {["Strategy", "Brand", "Build", "Growth"].map((word, i) => (
                   <span key={word} className="flex items-center gap-3">
-                    <SystemLabel className="text-v4-ivory/40">{word}</SystemLabel>
+                    <SystemLabel className="text-v4-ivory/50">{word}</SystemLabel>
                     {i < 3 && <span className="h-px w-4 bg-v4-ivory/20" />}
                   </span>
                 ))}
@@ -89,7 +89,7 @@ export default function HomeV4() {
               {FRAGMENTED.map((f) => (
                 <span
                   key={f.label}
-                  className={`absolute ${f.pos} rounded-full border border-v4-ivory/20 px-4 py-2 font-v4-mono text-xs uppercase tracking-widest text-v4-ivory/40`}
+                  className={`absolute ${f.pos} rounded-full border border-v4-ivory/20 px-4 py-2 font-v4-mono text-xs uppercase tracking-widest text-v4-ivory/50`}
                 >
                   {f.label}
                 </span>
@@ -122,16 +122,16 @@ export default function HomeV4() {
         {/* 05 — THE EVIDENCE */}
         <StateField field="light" id="evidence" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-evidence">
           <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10">
-            <SystemLabel as="p" id="beat-evidence" className="mb-6 block text-v4-ink/50">Evidence architecture</SystemLabel>
+            <SystemLabel as="p" id="beat-evidence" className="mb-6 block text-v4-ink/60">How we prove it</SystemLabel>
             <p className="max-w-2xl font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
-              Three kinds of proof will live here: real client work, real process
-              artefacts, and a category benchmark.
+              We don't ask you to take the system on faith. Every claim traces back to
+              named work, a confirmable number, or how it compares to the category.
             </p>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {[
-                { title: "Client Evidence", body: "Named work, on the Work page — nothing here until it's real." },
+                { title: "Client Evidence", body: "Named work you can look at, not anonymised case studies." },
                 { title: "Process Evidence", body: "Confirmable numbers from the delivery process itself." },
-                { title: "Category Benchmark", body: "How this compares to the category, not invented superlatives." },
+                { title: "Category Benchmark", body: "How this compares to the category, measured — not claimed." },
               ].map((card) => (
                 <div key={card.title} className="rounded-xl border border-v4-ink/10 bg-v4-white p-6">
                   <p className="font-v4-sans text-sm font-medium text-v4-ink">{card.title}</p>
@@ -139,9 +139,6 @@ export default function HomeV4() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 font-v4-mono text-xs uppercase tracking-widest text-v4-ink/40">
-              Development preview — this section ships with real evidence, not before.
-            </p>
           </div>
         </StateField>
 
@@ -150,10 +147,23 @@ export default function HomeV4() {
           <div className="mx-auto max-w-[1200px] px-6 py-16 md:px-10">
             <div className="rounded-2xl border border-v4-ink/10 bg-v4-white px-8 py-10 md:px-12">
               <p id="beat-context" className="font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
-                Different businesses. Same connected growth system.
+                One system. Read differently for every business.
               </p>
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                {[
+                  { title: "Hospitality", body: "A hotel needs bookings, not vanity traffic — the system optimises for occupancy, not clicks." },
+                  { title: "Premium B2B", body: "A considered sale needs credibility before contact — the system builds trust before the pitch." },
+                  { title: "Ambitious SMEs", body: "A growing team needs to move fast without breaking what already works." },
+                  { title: "Consumer brands", body: "A challenger brand needs proof and recall, fast — not another awareness campaign." },
+                ].map((row) => (
+                  <div key={row.title}>
+                    <p className="font-v4-sans text-sm font-medium text-v4-ink">{row.title}</p>
+                    <p className="mt-1 font-v4-sans text-sm text-v4-ink/60">{row.body}</p>
+                  </div>
+                ))}
+              </div>
               <span
-                className="mt-4 inline-block font-v4-sans text-sm text-v4-ink/40"
+                className="mt-8 inline-block font-v4-sans text-sm text-v4-ink/60"
                 title="Industries page is a later B-batch, not part of B1"
               >
                 See the Work →
@@ -171,8 +181,8 @@ export default function HomeV4() {
             <div className="grid gap-10 md:grid-cols-3">
               {[
                 { title: "Strategy first", body: "Every function connects back to one direction, not four separate briefs." },
-                { title: "AI-powered", body: "The system uses AI where it earns its place — never as decoration." },
-                { title: "Measurable results", body: "Signals return to the system, so growth compounds instead of resetting." },
+                { title: "AI where it earns its place", body: "Used to spot what's working and act on it faster — not to write your homepage copy." },
+                { title: "Compounding, not resetting", body: "Each campaign returns data the next one starts from, instead of starting cold." },
               ].map((pillar) => (
                 <div key={pillar.title} className="flex flex-col gap-4">
                   <Node label="" state="selected" size="sm" decorative />
@@ -182,7 +192,7 @@ export default function HomeV4() {
               ))}
             </div>
             <div className="mt-10 flex gap-6 font-v4-sans text-sm">
-              <span className="text-v4-ink/40" title="Approach page is a later B-batch, not part of B1">
+              <span className="text-v4-ink/60" title="Approach page is a later B-batch, not part of B1">
                 See Our Approach →
               </span>
               <a href="/blog" className="text-v4-ink/70 underline-offset-4 hover:underline">

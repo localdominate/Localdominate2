@@ -87,6 +87,10 @@ function StaticResolvedList() {
           </div>
         </div>
       ))}
+      <div className="ml-[52px] flex items-center gap-2 pt-2">
+        <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
+        <SystemLabel className="text-v4-signal">Loop closed — one connected growth system</SystemLabel>
+      </div>
     </div>
   );
 }
@@ -95,8 +99,38 @@ function NodeChain({ activeIndex, size = "md" }: { activeIndex: number; size?: "
   const isComplete = activeIndex === LAST;
 
   return (
-    <div className="flex flex-col items-center" aria-hidden="true">
-      <div className="flex flex-col items-center gap-0">
+    <div className="relative flex items-center" aria-hidden="true">
+      {/* THE SYSTEM AWAKENS — the one deliberately memorable visual moment on the page.
+          A soft signal-green field blooms behind the chain and a closing arc draws itself
+          from the last node back up to the first, only once the story actually completes.
+          This is what makes the end state read as materially different from state 0,
+          not just "the last item in a list". */}
+      <motion.div
+        className="pointer-events-none absolute inset-0 -inset-x-10 rounded-full"
+        style={{ background: "radial-gradient(closest-side, rgba(183,245,42,0.16), transparent 70%)" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isComplete ? 1 : 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      />
+      <svg
+        className="absolute -right-7 top-0 h-full w-14 overflow-visible"
+        viewBox="0 0 40 100"
+        preserveAspectRatio="none"
+      >
+        <motion.path
+          d="M 8 6 C 34 6, 34 94, 8 94"
+          fill="none"
+          stroke="#B7F52A"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: isComplete ? 1 : 0, opacity: isComplete ? 1 : 0 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        />
+      </svg>
+
+      <div className="relative flex flex-col items-center gap-0">
         {STATES.map((s, i) => {
           const reached = i <= activeIndex;
           const state = i === 0 ? "selected" : reached ? "outcome" : "dormant";
@@ -109,22 +143,19 @@ function NodeChain({ activeIndex, size = "md" }: { activeIndex: number; size?: "
             </div>
           );
         })}
+        <motion.div
+          className="mt-6 flex items-center gap-1.5"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isComplete ? 1 : 0 }}
+          transition={{ duration: 0.4, delay: isComplete ? 0.5 : 0 }}
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
+          <span className="h-px w-8 bg-v4-signal" />
+          <SystemLabel className="text-v4-signal">Loop closed</SystemLabel>
+          <span className="h-px w-8 bg-v4-signal" />
+          <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
+        </motion.div>
       </div>
-      {/* The chain resolving into a closed loop is the one moment the canvas looks
-          materially different from state 0 — "one connected growth system", not just
-          the last item in a list. Only appears once the story actually completes. */}
-      <motion.div
-        className="mt-6 flex items-center gap-1.5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isComplete ? 1 : 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
-        <span className="h-px w-8 bg-v4-signal" />
-        <SystemLabel className="text-v4-signal">Loop closed</SystemLabel>
-        <span className="h-px w-8 bg-v4-signal" />
-        <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
-      </motion.div>
     </div>
   );
 }
@@ -145,10 +176,14 @@ function ProgressRail({ activeIndex }: { activeIndex: number }) {
             <span
               className={cn(
                 "flex items-center gap-2 font-v4-mono text-[10px] uppercase tracking-[0.18em] transition-colors",
-                isCurrent ? "text-v4-signal" : isPast ? "text-v4-ivory/60" : "text-v4-ivory/25"
+                // Text always stays at a measured, WCAG AA-passing opacity (ivory/50 on
+                // ink is 4.82:1, verified with axe-core) even for not-yet-reached states —
+                // only the decorative dot beside it is allowed to fade further.
+                isCurrent ? "text-v4-signal" : isPast ? "text-v4-ivory/60" : "text-v4-ivory/50"
               )}
             >
               <span
+                aria-hidden="true"
                 className={cn(
                   "h-1.5 w-1.5 rounded-full transition-colors",
                   isCurrent ? "bg-v4-signal" : isPast ? "bg-v4-ivory/60" : "bg-v4-ivory/25"
@@ -242,13 +277,35 @@ function MobileLoopSummary() {
   const [reached, setReached] = useState(false);
   return (
     <motion.div
-      className="flex items-center gap-3 pl-[26px] pt-2"
+      className="relative flex items-center gap-4 py-6 pl-[26px]"
       onViewportEnter={() => setReached(true)}
       viewport={{ once: true, amount: 0.6 }}
     >
-      <span className={cn("h-1.5 w-1.5 rounded-full transition-colors duration-500", reached ? "bg-v4-signal" : "bg-v4-ivory/25")} />
-      <SystemLabel className={cn("transition-colors duration-500", reached ? "text-v4-signal" : "text-v4-ivory/40")}>
-        One connected growth system
+      {/* Same "system awakens" language as the desktop canvas, scaled down: a soft glow
+          plus a small closed ring — the mobile journey visibly resolves rather than just
+          stopping after the last step (B1.2 §6). */}
+      <motion.div
+        className="pointer-events-none absolute -left-6 h-24 w-24 rounded-full"
+        style={{ background: "radial-gradient(closest-side, rgba(183,245,42,0.18), transparent 70%)" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: reached ? 1 : 0 }}
+        transition={{ duration: 0.8 }}
+      />
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true" className="relative shrink-0">
+        <motion.circle
+          cx="14"
+          cy="14"
+          r="11"
+          stroke="#B7F52A"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: reached ? 1 : 0, opacity: reached ? 1 : 0 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        />
+      </svg>
+      <SystemLabel className={cn("relative transition-colors duration-500", reached ? "text-v4-signal" : "text-v4-ivory/50")}>
+        Loop closed — one connected growth system
       </SystemLabel>
     </motion.div>
   );

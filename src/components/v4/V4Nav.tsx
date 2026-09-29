@@ -34,7 +34,7 @@ export function V4Nav() {
             <span
               key={label}
               aria-disabled="true"
-              className="font-v4-sans text-sm text-v4-ivory/40 cursor-default"
+              className="font-v4-sans text-sm text-v4-ivory/50 cursor-default"
               title="Coming in a later B-batch — not part of B1"
             >
               {label}
@@ -46,7 +46,7 @@ export function V4Nav() {
           >
             Insights
           </Link>
-          <SystemLabel as="span" className="text-v4-ivory/40">
+          <SystemLabel as="span" className="text-v4-ivory/50">
             DE&nbsp;/&nbsp;EN
           </SystemLabel>
           <a
@@ -76,7 +76,7 @@ export function V4Nav() {
           className="md:hidden flex flex-col gap-4 border-t border-v4-ivory/10 px-6 py-6"
         >
           {NOT_YET_BUILT.map((label) => (
-            <span key={label} aria-disabled="true" className="font-v4-sans text-base text-v4-ivory/40">
+            <span key={label} aria-disabled="true" className="font-v4-sans text-base text-v4-ivory/50">
               {label}
             </span>
           ))}

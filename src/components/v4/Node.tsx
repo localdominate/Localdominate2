@@ -61,6 +61,7 @@ export function Node({
       {!decorative && (
         <SystemLabel
           className={cn(
+            "max-w-[4.5rem] text-center leading-[1.3]",
             isFilled ? "text-v4-signal" : "text-current opacity-70"
           )}
         >

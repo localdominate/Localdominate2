@@ -78,7 +78,7 @@ export default function DesignSystemPreview() {
       </StateField>
 
       <StateField field="light" className="border-t border-v4-ink/10 px-6 py-16 md:px-10">
-        <SystemLabel className="mb-6 block text-v4-ink/50">Living Growth System — 4-node primitive (design-system demo)</SystemLabel>
+        <SystemLabel className="mb-6 block text-v4-ink/60">Living Growth System — 4-node primitive (design-system demo)</SystemLabel>
         <div className="rounded-2xl bg-v4-ink px-6 py-14">
           <LivingGrowthSystem endState="outcome" />
         </div>
@@ -94,12 +94,12 @@ export default function DesignSystemPreview() {
       </StateField>
 
       <StateField field="light" className="border-t border-v4-ink/10 px-6 py-16 md:px-10">
-        <SystemLabel className="mb-6 block text-v4-ink/50">Provisional mark</SystemLabel>
+        <SystemLabel className="mb-6 block text-v4-ink/60">Provisional mark</SystemLabel>
         <ProvisionalMark>Unverified claims render like this, never as confident fact.</ProvisionalMark>
       </StateField>
 
       <StateField field="light" className="border-t border-v4-ink/10 px-6 py-16 md:px-10">
-        <SystemLabel className="mb-6 block text-v4-ink/50">Buttons &amp; focus states</SystemLabel>
+        <SystemLabel className="mb-6 block text-v4-ink/60">Buttons &amp; focus states</SystemLabel>
         <div className="flex flex-wrap gap-4">
           <a href="#" className="rounded-full bg-v4-signal px-7 py-3 font-v4-sans text-sm font-medium text-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal">
             Primary CTA
@@ -108,7 +108,7 @@ export default function DesignSystemPreview() {
             Secondary
           </a>
         </div>
-        <p className="mt-4 font-v4-sans text-xs text-v4-ink/50">Tab to the buttons above to check the focus ring.</p>
+        <p className="mt-4 font-v4-sans text-xs text-v4-ink/60">Tab to the buttons above to check the focus ring.</p>
       </StateField>
     </div>
   );
