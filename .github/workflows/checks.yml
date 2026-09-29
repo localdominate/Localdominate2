@@ -32,6 +32,8 @@ jobs:
       - name: Lint (report only – 100 pre-existing errors, see docs/TAKEOVER_AUDIT.md)
         run: npm run lint
         continue-on-error: true
+      - name: Zero-Lovable guard (docs/ZERO_LOVABLE_GUARD.md) – blocking, allowlist covers known in-progress items
+        run: npm run check:lovable
 
   seo:
     name: SEO regression check

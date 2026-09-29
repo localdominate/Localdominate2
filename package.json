@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "build:static": "vite build && node scripts/prerender.mjs",
+    "check:lovable": "node scripts/check-lovable.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
