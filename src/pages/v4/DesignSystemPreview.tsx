@@ -5,6 +5,7 @@ import { EditorialStatement } from "@/components/v4/EditorialStatement";
 import { Node } from "@/components/v4/Node";
 import { Connection } from "@/components/v4/Connection";
 import { LivingGrowthSystem } from "@/components/v4/LivingGrowthSystem";
+import { SignatureSystem } from "@/components/v4/SignatureSystem";
 import { ProvisionalMark } from "@/components/v4/ProvisionalMark";
 
 const SWATCHES = [
@@ -77,10 +78,19 @@ export default function DesignSystemPreview() {
       </StateField>
 
       <StateField field="light" className="border-t border-v4-ink/10 px-6 py-16 md:px-10">
-        <SystemLabel className="mb-6 block text-v4-ink/50">Living Growth System — full sequence</SystemLabel>
+        <SystemLabel className="mb-6 block text-v4-ink/50">Living Growth System — 4-node primitive (design-system demo)</SystemLabel>
         <div className="rounded-2xl bg-v4-ink px-6 py-14">
           <LivingGrowthSystem endState="outcome" />
         </div>
+      </StateField>
+
+      <StateField field="dark" className="border-t border-v4-ivory/10 px-6 py-16 md:px-10">
+        <SystemLabel className="mb-6 block text-v4-ivory/50">
+          Signature System — the real Home interaction (B1.1). Scroll through this block on
+          desktop; on mobile it becomes a vertical activation spine; with reduced motion it
+          renders fully resolved with no scroll dependency.
+        </SystemLabel>
+        <SignatureSystem />
       </StateField>
 
       <StateField field="light" className="border-t border-v4-ink/10 px-6 py-16 md:px-10">

@@ -1,39 +1,42 @@
-import { motion, useReducedMotion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
 import { V4Nav } from "@/components/v4/V4Nav";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { EditorialStatement } from "@/components/v4/EditorialStatement";
 import { Node } from "@/components/v4/Node";
-import { LivingGrowthSystem } from "@/components/v4/LivingGrowthSystem";
-import { ProvisionalMark } from "@/components/v4/ProvisionalMark";
+import { SignatureSystem } from "@/components/v4/SignatureSystem";
 
-const revealProps = (prefersReducedMotion: boolean | null) => ({
-  initial: prefersReducedMotion ? undefined : { opacity: 0, y: 24 },
-  whileInView: prefersReducedMotion ? undefined : { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.4 },
-  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
-});
+const FRAGMENTED = [
+  { label: "Strategy", pos: "top-0 left-4 md:left-10" },
+  { label: "Brand", pos: "top-10 right-6 md:right-24" },
+  { label: "Website", pos: "top-40 left-10 md:left-32" },
+  { label: "Marketing", pos: "top-48 right-4 md:right-10" },
+  { label: "Data", pos: "top-72 left-1/2 -translate-x-1/2" },
+] as const;
 
 /**
  * LocalDominate V4 — Home, "The Business Awakens".
- * B1 implementation per docs/HOME_IMPLEMENTATION_CONTRACT.md's 8-beat arc.
- * New, unlinked, noindex preview route — the live `/` is untouched (B1_SCOPE, Hard Rule #1).
+ * B1.1 quality pass on top of B1 v1's foundation. New, unlinked, noindex preview route —
+ * the live `/` is untouched (B1_SCOPE, Hard Rule #1).
  */
 export default function HomeV4() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <div className="v4 font-v4-sans">
       <SEOHead
         title="LocalDominate V4 Preview — Home"
-        description="Internal B1 preview of the LocalDominate V4 Home redesign. Not the live site."
+        description="Internal B1.1 preview of the LocalDominate V4 Home redesign. Not the live site."
         noindex
         lang="en"
       />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-v4-signal focus:px-4 focus:py-2 focus:text-v4-ink"
+      >
+        Skip to content
+      </a>
       <V4Nav />
 
-      <main>
+      <main id="main-content">
         {/* 01 — THE BUSINESS (above the fold) */}
         <StateField field="dark" as="section" className="min-h-screen flex items-center">
           <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 py-24 md:grid-cols-2 md:items-center md:px-10">
@@ -46,7 +49,8 @@ export default function HomeV4() {
               </h1>
               <p className="max-w-md font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">
                 LocalDominate connects Strategy, Brand, Build and Growth — the functions
-                businesses usually buy separately — into one operating system.
+                premium businesses and hospitality brands usually buy from four different
+                places — into one operating system.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -69,49 +73,63 @@ export default function HomeV4() {
           </div>
         </StateField>
 
-        {/* 02 — THE PROBLEM */}
-        <StateField field="dark" as="section" className="flex min-h-[45vh] items-center border-t border-v4-ivory/10">
-          <div className="mx-auto max-w-[1000px] px-6 py-20 text-center md:px-10">
-            <EditorialStatement>
-              Disconnected agencies make growth feel fragmented.
-            </EditorialStatement>
-          </div>
-        </StateField>
-
-        {/* 03 — THE CONNECTION */}
+        {/* 02 — THE PROBLEM / FRAGMENTATION */}
         <StateField field="dark" as="section" className="border-t border-v4-ivory/10">
-          <div className="mx-auto max-w-[1200px] px-6 py-24 md:px-10">
-            <motion.div {...revealProps(prefersReducedMotion)}>
-              <SystemLabel className="mb-10 block text-v4-ivory/50">These aren't separate services</SystemLabel>
-              <LivingGrowthSystem endState="connected" />
-            </motion.div>
+          <div className="mx-auto max-w-[1000px] px-6 py-20 md:px-10">
+            <div className="relative mx-auto mb-16 h-80 max-w-md" aria-hidden="true">
+              {FRAGMENTED.map((f) => (
+                <span
+                  key={f.label}
+                  className={`absolute ${f.pos} rounded-full border border-v4-ivory/20 px-4 py-2 font-v4-mono text-xs uppercase tracking-widest text-v4-ivory/40`}
+                >
+                  {f.label}
+                </span>
+              ))}
+            </div>
+            <div className="text-center">
+              <EditorialStatement>
+                Disconnected agencies make growth feel fragmented.
+              </EditorialStatement>
+              <p className="mx-auto mt-6 max-w-md font-v4-sans text-sm text-v4-ivory/50">
+                Not broken. Not incompetent. Simply five things that were never meant to
+                talk to each other.
+              </p>
+            </div>
           </div>
         </StateField>
 
-        {/* 04 — THE SYSTEM AWAKENS (peak beat) */}
-        <StateField field="light" as="section" className="border-t border-v4-ink/10">
-          <div className="mx-auto max-w-[1200px] px-6 py-28 md:px-10">
-            <motion.div {...revealProps(prefersReducedMotion)} className="mb-14 text-center">
-              <EditorialStatement scale="major" className="text-v4-ink">
-                Watch one business become a complete, connected system.
-              </EditorialStatement>
-            </motion.div>
-            <div className="rounded-2xl bg-v4-ink px-6 py-16 md:px-10">
-              <LivingGrowthSystem endState="outcome" />
+        {/* 03+04 — THE CONNECTION → THE SYSTEM AWAKENS (Signature Interaction, combined) */}
+        <StateField field="dark" as="section" className="border-t border-v4-ivory/10">
+          <div className="mx-auto max-w-[1400px] py-16">
+            <div className="px-6 md:px-10">
+              <SystemLabel className="text-v4-ivory/50">The Signature System</SystemLabel>
             </div>
+            <SignatureSystem />
           </div>
         </StateField>
 
         {/* 05 — THE EVIDENCE */}
         <StateField field="light" id="evidence" as="section" className="border-t border-v4-ink/10">
           <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10">
-            <SystemLabel className="mb-6 block text-v4-ink/50">Evidence</SystemLabel>
-            <div className="flex flex-wrap gap-10 font-v4-serif text-[length:var(--v4-text-heading)]">
-              <ProvisionalMark>Client results — coming with the Work page (later batch)</ProvisionalMark>
+            <SystemLabel className="mb-6 block text-v4-ink/50">Evidence architecture</SystemLabel>
+            <p className="max-w-2xl font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
+              Three kinds of proof will live here: real client work, real process
+              artefacts, and a category benchmark.
+            </p>
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {[
+                { title: "Client Evidence", body: "Named work, on the Work page — nothing here until it's real." },
+                { title: "Process Evidence", body: "Confirmable numbers from the delivery process itself." },
+                { title: "Category Benchmark", body: "How this compares to the category, not invented superlatives." },
+              ].map((card) => (
+                <div key={card.title} className="rounded-xl border border-v4-ink/10 bg-v4-white p-6">
+                  <p className="font-v4-sans text-sm font-medium text-v4-ink">{card.title}</p>
+                  <p className="mt-2 font-v4-sans text-sm text-v4-ink/60">{card.body}</p>
+                </div>
+              ))}
             </div>
-            <p className="mt-6 max-w-lg font-v4-sans text-sm text-v4-ink/60">
-              B1 ships no fabricated stats or client names, per the standing rule against
-              inventing proof. Real evidence lands with the Work page build.
+            <p className="mt-6 font-v4-mono text-xs uppercase tracking-widest text-v4-ink/40">
+              Development preview — this section ships with real evidence, not before.
             </p>
           </div>
         </StateField>
