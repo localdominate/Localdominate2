@@ -7,12 +7,12 @@ import { Node } from "@/components/v4/Node";
 import { Connection } from "@/components/v4/Connection";
 import { SignatureSystem } from "@/components/v4/SignatureSystem";
 
-import heroImg from "@/assets/v4/r1c1_pool_mountain_sunset.jpg";
+import heroImg from "@/assets/v4/hq_pool_building_mountain.jpg";
 import kempinskiImg from "@/assets/v4/r4c2_wood_building_pool.jpg";
 import dadicationImg from "@/assets/v4/r2c3_concrete_plant.jpg";
 import kloversImg from "@/assets/v4/r3c2_woman_smiling.jpg";
 import saveSpaceImg from "@/assets/v4/r3c4_phone_app_data.jpg";
-import journeyImg from "@/assets/v4/r2c2_mountain_lake_road.jpg";
+import journeyImg from "@/assets/v4/hq_mountain_lake_sunset.jpg";
 
 const FRAGMENTED = [
   { label: "Strategy", pos: "top-0 left-4 md:left-10" },
