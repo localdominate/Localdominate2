@@ -2,16 +2,27 @@
 
 Date: 2026-09-30. This is the single next blocking action, per `docs/FIRST_MANUAL_GATE.md`.
 
-1. **Go to:** `https://supabase.com/dashboard/organizations` (the link already shared).
-2. **Click:** "New project" (from an organization page — see step 4 first if no org exists yet).
-3. **Project name:** something that does not read as a Lovable artifact and is clearly the production
-   target, e.g. `localdominate-production` or `localdominate-independent`. Avoid reusing
-   "Local Dominator Blueprint" (that's the Lovable project's own name) to keep the two unmistakably
-   separate in the dashboard.
-4. **Organization:** if Markus/Re already has a Supabase organization unrelated to Lovable, use it. If
-   the only existing Supabase presence is the one Lovable manages (`minijgyozgjuhqgkmilj`), create a new
-   organization first — this keeps the independent project's billing/ownership cleanly separate from
-   anything Lovable could still touch.
+## Update — an empty project already existed, decision made
+
+An org ("localdominate's Org", Free plan) and a project named `localdominate-prod`
+(ref `crtcrbbuzummnkcpazvb`) already existed. Checked before building on it: dashboard shows **Healthy,
+No repository connected, No migrations, No backups, 0 total requests** — genuinely empty, nothing was
+migrated to it out-of-band. A second project, "localdominate's Project" (ap-northeast-2), also exists,
+paused — not in use.
+
+The one open issue: `localdominate-prod` is in **ap-southeast-1 (Singapore)**, not an EU region, which
+matters for latency to the DACH customer base and for GDPR data residency once real customer PII lands
+in it. **Decision (confirmed by Re): create a fresh project in Frankfurt instead of using the Singapore
+one.** `localdominate-prod` is left as-is for now — not deleted, just not the target. The steps below are
+updated accordingly; the org already exists, so step 4 (create an org) is no longer needed.
+
+1. **Go to:** `https://supabase.com/dashboard/org/vrkxrohixwnyuvjmvdov` (the existing "localdominate's Org").
+2. **Click:** "New project" from within that org — no need to create a new org, it already exists.
+3. **Project name:** something that clearly reads as the real target and doesn't collide with the
+   existing empty `localdominate-prod` (Singapore), e.g. `localdominate-prod-eu` or
+   `localdominate-frankfurt`. Avoid reusing "Local Dominator Blueprint" (that's the Lovable project's own
+   name).
+4. **Organization:** already exists — "localdominate's Org". Nothing to create.
 5. **Region: Frankfurt (`eu-central-1`)**, or whichever EU region Supabase lists as closest to Frankfurt
    if naming differs. The business is DACH-market local SEO (`localdominate.org`, German/Austrian/Swiss
    customers per `CLAUDE.md`), so an EU region minimizes latency for both site visitors and the admin
