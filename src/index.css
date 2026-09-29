@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* V4 Design Foundation tokens — additive, scoped under .v4, does not touch tokens below */
+@import "./styles/v4-tokens.css";
+
 /* Font loaded async in index.html to prevent render-blocking */
 
 @layer base {
