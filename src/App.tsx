@@ -223,6 +223,11 @@ const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse")
 const FaqHub = lazy(() => import("./pages/blog/FaqHub"));
 const FaqSubHub = lazy(() => import("./pages/blog/FaqSubHub"));
 
+// V4 redesign — B1 (Design Foundation + Home). New, noindex, unlinked preview routes only;
+// the live "/" is untouched. See docs/B1_SCOPE.md.
+const HomeV4 = lazy(() => import("./pages/v4/HomeV4"));
+const DesignSystemPreview = lazy(() => import("./pages/v4/DesignSystemPreview"));
+
 // Lazy load CoreWebVitalsTracker - not needed for initial render
 const CoreWebVitalsTracker = lazy(() => import("@/components/CoreWebVitalsTracker"));
 
@@ -461,6 +466,9 @@ const App = () => (
                 <Route path="/citation-verzeichnisse" element={<CitationVerzeichnisse />} />
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
+                {/* V4 redesign — B1 preview routes, noindex, not linked from nav/sitemap */}
+                <Route path="/preview/home-v3" element={<HomeV4 />} />
+                <Route path="/design-system" element={<DesignSystemPreview />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

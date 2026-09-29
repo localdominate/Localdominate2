@@ -17,6 +17,10 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         'menu-serif': ['Cormorant Garamond', 'Georgia', 'serif'],
         'menu-sans': ['Lato', 'system-ui', 'sans-serif'],
+        // V4 redesign type voices — additive, used only under the `.v4` scope
+        'v4-serif': ['Instrument Serif', 'Times New Roman', 'serif'],
+        'v4-sans': ['Geist', 'Inter', 'system-ui', 'sans-serif'],
+        'v4-mono': ['IBM Plex Mono', 'Söhne Mono', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -73,6 +77,17 @@ export default {
         "alert-orange": {
           DEFAULT: "hsl(var(--alert-orange))",
           foreground: "hsl(var(--alert-orange-foreground))",
+        },
+        // V4 redesign palette — additive, exact hexes per DESIGN_SYSTEM_PLAN.md, used only
+        // under the `.v4` scope. Not wired into any existing token above.
+        v4: {
+          ink: "#0A0A09",
+          ivory: "#F4F0E7",
+          white: "#FFFFFF",
+          forest: "#17352B",
+          signal: "#B7F52A",
+          cobalt: "#315CFF",
+          coral: "#FF5A3D",
         },
         "menu": {
           dark: "hsl(var(--menu-dark))",
@@ -149,6 +164,16 @@ export default {
           "0%, 100%": { boxShadow: "0 0 0 0 hsl(0 84% 60% / 0.5)" },
           "50%": { boxShadow: "0 0 25px 8px hsl(0 84% 60% / 0.2)" },
         },
+        // V4 — dormant node idle breathe (beat 01) and system-active pulse (beat 04→05)
+        "v4-node-breathe": {
+          "0%, 100%": { opacity: "0.45" },
+          "50%": { opacity: "0.75" },
+        },
+        "v4-signal-pulse": {
+          "0%": { boxShadow: "0 0 0 0 rgba(183, 245, 42, 0.45)" },
+          "70%": { boxShadow: "0 0 0 16px rgba(183, 245, 42, 0)" },
+          "100%": { boxShadow: "0 0 0 0 rgba(183, 245, 42, 0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -160,6 +185,8 @@ export default {
         "slide-in-right": "slide-in-right 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards",
         "pop-in": "pop-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards",
         "glow-pulse-red": "glow-pulse-red 2s ease-in-out infinite",
+        "v4-node-breathe": "v4-node-breathe 3.4s ease-in-out infinite",
+        "v4-signal-pulse": "v4-signal-pulse 0.6s cubic-bezier(0.16,1,0.3,1) 1",
       },
     },
   },

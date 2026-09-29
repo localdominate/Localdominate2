@@ -1,0 +1,76 @@
+/**
+ * LocalDominate V4 — Design Foundation tokens.
+ * Additive only: does not redefine or remove any existing --variable in src/index.css.
+ * Scoped under a `.v4` root class so nothing outside V4 surfaces (/design-system,
+ * /preview/home-v3, and future V4 pages) is affected.
+ * Source: docs/DESIGN_SYSTEM_PLAN.md + Master Initialisation Prompt §14.
+ */
+
+.v4 {
+  /* ---- Core palette (hex, not HSL — V4 tokens are semantic wrappers around exact hexes) ---- */
+  --v4-ink: #0A0A09;
+  --v4-ivory: #F4F0E7;
+  --v4-white: #FFFFFF;
+  --v4-forest: #17352B;
+  --v4-signal: #B7F52A;
+  --v4-cobalt: #315CFF;
+  --v4-coral: #FF5A3D;
+
+  /* ---- Semantic aliases (what components should reference, not the raw hex above) ---- */
+  --v4-field-dark: var(--v4-ink);
+  --v4-field-light: var(--v4-ivory);
+  --v4-text-on-dark: var(--v4-ivory);
+  --v4-text-on-light: var(--v4-ink);
+  --v4-signal-active: var(--v4-signal);
+  --v4-accent-cobalt: var(--v4-cobalt);
+  --v4-accent-coral: var(--v4-coral);
+  --v4-border-on-dark: rgba(244, 240, 231, 0.16);
+  --v4-border-on-light: rgba(10, 10, 9, 0.12);
+
+  /* ---- Typography ---- */
+  --v4-font-serif: "Instrument Serif", "Times New Roman", serif;
+  --v4-font-sans: "Geist", "Inter", system-ui, sans-serif;
+  --v4-font-mono: "IBM Plex Mono", "Söhne Mono", monospace;
+
+  /* Responsive type scale — clamp(min, preferred-vw, max) per B1_SCOPE / master prompt §10 */
+  --v4-text-hero: clamp(2.75rem, 2rem + 4.5vw, 7.5rem);      /* 72–120px */
+  --v4-text-major: clamp(2rem, 1.5rem + 3vw, 5rem);          /* 48–80px */
+  --v4-text-heading: clamp(1.75rem, 1.4rem + 1.8vw, 3.5rem); /* 32–56px */
+  --v4-text-subhead: clamp(1.375rem, 1.2rem + 0.9vw, 2.25rem); /* 24–36px */
+  --v4-text-body: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);    /* 16–20px */
+  --v4-text-ui: clamp(0.8125rem, 0.78rem + 0.15vw, 1rem);    /* 13–16px */
+  --v4-text-label: clamp(0.6875rem, 0.66rem + 0.1vw, 0.8125rem); /* 11–13px */
+
+  /* ---- Spacing (V4 wants ~20–30% more air than dense agency defaults) ---- */
+  --v4-space-section: clamp(4rem, 3rem + 6vw, 10rem);
+  --v4-space-block: clamp(2rem, 1.5rem + 3vw, 5rem);
+  --v4-space-inline: clamp(1rem, 0.8rem + 1vw, 2rem);
+
+  /* ---- Motion ---- */
+  --v4-ease-signal: cubic-bezier(0.16, 1, 0.3, 1);
+  --v4-duration-fill: 500ms;
+  --v4-duration-connection: 300ms;
+  --v4-duration-pulse: 600ms;
+}
+
+.v4[data-field="dark"] {
+  background-color: var(--v4-field-dark);
+  color: var(--v4-text-on-dark);
+}
+
+.v4[data-field="light"] {
+  background-color: var(--v4-field-light);
+  color: var(--v4-text-on-light);
+}
+
+/* Reduced-motion: V4 components read this class rather than only the media query, so
+   Framer Motion variants can be swapped in JS (useReducedMotion) while CSS-only motion
+   (idle breathe, hover micro-motion) is killed here as a hard backstop. */
+@media (prefers-reduced-motion: reduce) {
+  .v4 * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
