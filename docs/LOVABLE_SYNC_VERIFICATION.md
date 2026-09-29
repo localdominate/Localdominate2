@@ -52,6 +52,40 @@ or to keep working. Its on/off state lives entirely in two places this session h
 Neither was checked, because neither is reachable from this session (no Lovable login, no
 GitHub Settings API scope here).
 
+## Two separate questions this document must not blur
+
+The phrase "Lovable dependency" covers two unrelated risks with **different blockers**. Keeping
+"NOT VERIFIED" as the status of the first must not be read as blocking the second.
+
+### CODE SAFETY BLOCKER — could Lovable still modify GitHub?
+
+This is what this document classifies as **NOT VERIFIED**. It is a hard gate on repository
+hygiene: if the Lovable GitHub App can still push, then any long-lived branch (redesign or
+otherwise) risks divergence, silent overwrite, or merge conflicts with something Lovable's
+editor pushes independently. **This blocks starting a long-lived static-only branch with
+confidence** until checked — not because static work is unsafe in itself, but because working
+for days on a branch that a third-party integration might also be writing to is the actual risk.
+
+### BACKEND MIGRATION — Lovable Cloud / Supabase / edge functions still exist
+
+This is fully verified and **known**, not uncertain: `STATUS_2026-09-30.md` §1 already confirms
+Lovable Cloud (Supabase project `minijgyozgjuhqgkmilj`), all 19 edge functions, and
+`LOVABLE_API_KEY` are unchanged and still the live backend. There is nothing to "verify" here —
+it's a known, tracked, open item (`LOVABLE_EXIT_PLAN.md`'s remaining-gated-items list), not an
+unknown.
+
+### The distinction that matters for B1
+
+**Backend migration status does NOT block a static-only B1** (Design Foundation + a new Home
+page with no Supabase reads/writes, per the Experience Architecture contract). Nothing about an
+unmigrated database, unmigrated edge functions, or the still-active `stripe-webhook` prevents
+building or previewing static pages.
+
+**The CODE SAFETY BLOCKER (auto-sync) is what actually gates starting that branch** — not
+because of what the branch contains, but because of what else might be pushed to the same repo
+while it's open. This is the one item in this document that must be resolved, or explicitly
+risk-accepted with the mitigation below, before B1's branch is opened.
+
 ## Exact manual check needed (for Markus or Re)
 
 1. Open the Lovable project ("Local Dominator Blueprint") → **Settings → Git**. Confirm whether

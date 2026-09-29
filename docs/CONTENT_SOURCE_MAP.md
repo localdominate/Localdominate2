@@ -1,5 +1,22 @@
 # Content Source Map — the "208 vs 154" Article Gap, Resolved
 
+> ## ⚠ CANONICAL STATEMENT OF TRUTH — ARTICLE COUNTS
+> **This is the single source of truth for article counts on this project. Any other document,
+> including this project's own earlier drafts, that states "208 articles" or "230 articles" is
+> wrong and should be read as superseded by this block.**
+>
+> - **188** — actual unique articles registered in `src/data/blogArticles.ts`.
+> - Of those 188: **153 are fully live** (route + component + markdown mirror), **5 are live but
+>   missing their markdown mirror** (route + component exist, no `.md` file), **30 are backlog
+>   only** (registry entry exists, no route, no component, no markdown — not live, not indexed,
+>   zero SEO exposure).
+> - Separately, **16 slugs are registered twice** (32 objects, 16 duplicate pairs) inside
+>   `blogArticles.ts` — this does not change the 188 unique-slug count, but see §3/§4 below for
+>   what it does affect.
+> - **158 live pages** = 153 (route+component+md) + 5 (route+component, no md).
+> - Any future Claude session inheriting this project should read this block before repeating a
+>   different article count anywhere — in conversation, in a commit message, or in a new document.
+
 Date: 2026-09-30. Investigates the discrepancy first noted in
 `LOCALDOMINATE_REBUILD_PLAN.md` ("208 entries in `blogArticles.ts`, 154 mirrored markdown
 files… gap worth investigating"). **No article was modified to produce this document** — read-only
@@ -104,6 +121,47 @@ downstream code reads the array by `find()` vs `filter()`).
 **Recommendation:** flag for investigation alongside the existing blank-page defect in
 `SEO_BASELINE.md` — do not touch without approval per Hard Rule #1/#2, since fixing it likely
 means editing article registry data.
+
+## 3a. Per-duplicate risk classification (investigation, not a fix)
+
+For all 16, verified directly: **exactly 1 `<Route>`, 1 `sitemap-blog.xml` entry, 1
+`blog-md/*.md` file each** — the duplication is confined to the `blogArticles.ts` data array; it
+does not produce a second URL, a second sitemap `<loc>`, or a second canonical anywhere.
+
+**How the registry is actually consumed** (checked directly): `blogArticles.find(a => a.slug ===
+slug)` in `ArticleContextLinks.tsx` and `TopicHubLayout.tsx` (related-article widgets) — `.find()`
+always resolves to the **first** matching object in source order. `new Map(blogArticles.map(a =>
+[a.slug, a]))` in `ContentUpdateCalendar.tsx` (an admin tool) — `Map` construction means the
+**second** (later) object silently wins there instead. So two different parts of the site can
+already disagree about a duplicated article's title/excerpt/date depending on which lookup
+pattern touches it.
+
+**Spot-check confirms the duplicates are not identical copies.** Compared the two
+`local-seo-apotheken` objects directly: different `title`, different `metaTitle`, different
+`metaDescription`, different `excerpt`, different `publishedAt`/`updatedAt` (2026-02-14 vs
+2026-01-10), different `keywords`. This is two genuinely different drafts under one slug, not a
+harmless copy-paste. The other 15 were not individually diffed (time-boxed), but share the exact
+same structural pattern (two full objects, same slug, both non-trivial) and should be assumed to
+diverge similarly until checked.
+
+| Duplicated slug | Routing risk | Sitemap risk | Content data risk | Notes |
+|---|---|---|---|---|
+| `local-seo-apotheken` | NO CURRENT RISK | NO CURRENT RISK | **CONTENT DATA RISK** (verified diverging) | Also a known blank live page (`SEO_BASELINE.md`) — **NEEDS MANUAL REVIEW** together |
+| `local-seo-tattoo-studios` | NO CURRENT RISK | NO CURRENT RISK | CONTENT DATA RISK (inferred) | Also a known blank live page — **NEEDS MANUAL REVIEW** together |
+| `local-seo-yoga-studios` | NO CURRENT RISK | NO CURRENT RISK | CONTENT DATA RISK (inferred) | Also a known blank live page — **NEEDS MANUAL REVIEW** together |
+| `schema-markup-local-seo`, `local-seo-wien`, `local-seo-tierarzt`, `local-seo-stuttgart`, `local-seo-physiotherapie`, `local-seo-optiker`, `local-seo-notdienst-keywords`, `local-seo-mehrstufig-unternehmen`, `local-seo-koeln`, `local-seo-duesseldorf`, `local-seo-basel`, `local-link-building`, `local-content-marketing` (13 remaining) | NO CURRENT RISK | NO CURRENT RISK | CONTENT DATA RISK (inferred from pattern, not individually diffed) | Live pages, not known to be blank — lower priority than the 3 above, still **NEEDS MANUAL REVIEW** before any registry edit |
+
+**Build/TypeScript risk: NO CURRENT RISK.** A plain array of objects with a repeated `slug`
+field is not a TypeScript or ESLint error (only duplicate *keys within one object literal*
+would be); `TAKEOVER_AUDIT.md` already confirms `tsc --noEmit` passes clean, consistent with
+this. **Indexing risk: NO CURRENT RISK** — one canonical URL exists per slug either way; the
+duplication affects which *data* backs UI widgets referencing that slug, not how many URLs
+exist or what any URL's canonical tag says (the live page's own `SEOHead` props were not traced
+back to this registry for all 16 — flagged as part of the manual review, not assumed safe).
+
+**No fix applied.** This section is investigation only, per instruction — any fix (e.g. removing
+the stale duplicate object) is a content-registry edit gated behind Hard Rule #1/#2 and explicit
+approval, and is not in scope for B0.5 or B1.
 
 ## 4. Bottom line
 
