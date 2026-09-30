@@ -34,7 +34,7 @@ const DIST = path.join(ROOT, "dist");
 const args = Object.fromEntries(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, "").split("="); return [k, v ?? true]; }));
 const PORT = Number(args.port || 4180);
 const BASE = `http://127.0.0.1:${PORT}`;
-const GENERIC_TITLE = "Local Dominator – Local SEO & AI-Sichtbarkeit";
+const GENERIC_TITLE = "Local Dominator â€“ Local SEO & AI-Sichtbarkeit";
 const LOCALE = "en-US";
 
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json",
@@ -97,7 +97,8 @@ async function main() {
 
   const server = serve(markedShell);
   const launchOpts = process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {};
-  const browser = await playwright.chromium.launch({ ...launchOpts, args: ["--no-proxy-server"] });
+  const extraArgs = (process.env.CHROMIUM_EXTRA_ARGS || "").split(/\s+/).filter(Boolean);
+  const browser = await playwright.chromium.launch({ ...launchOpts, args: ["--no-proxy-server", ...extraArgs] });
   const ctx = await browser.newContext({ locale: LOCALE });
   await ctx.addInitScript(() => { try { localStorage.setItem("cookieConsent", "essential"); } catch { /* ignore */ } });
   await ctx.route("**/*", (route) => (route.request().url().startsWith(BASE) ? route.continue() : route.abort()));
