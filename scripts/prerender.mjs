@@ -38,7 +38,7 @@ const GENERIC_TITLE = "Local Dominator â€“ Local SEO & AI-Sichtbarkeit";
 const LOCALE = "en-US";
 // Live pages that are newer than the frozen SEO baseline. They are prerendered like the baseline
 // URLs but are not part of the baseline, so seo-check does not compare them.
-const EXTRA_PATHS = ["/services"];
+const EXTRA_PATHS = ["/services", "/work"];
 
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json",
   ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp",

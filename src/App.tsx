@@ -226,6 +226,7 @@ const FaqSubHub = lazy(() => import("./pages/blog/FaqSubHub"));
 // "/preview/home-v3" and "/design-system" stay noindex.
 const HomeV4 = lazy(() => import("./pages/v4/HomeV4"));
 const ServicesV4 = lazy(() => import("./pages/v4/ServicesV4"));
+const WorkV4 = lazy(() => import("./pages/v4/WorkV4"));
 const DesignSystemPreview = lazy(() => import("./pages/v4/DesignSystemPreview"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -256,6 +257,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<HomeV4 />} />
                 <Route path="/services" element={<ServicesV4 />} />
+                <Route path="/work" element={<WorkV4 />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/ab-test" element={<ABTestDashboard />} />
                 <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
