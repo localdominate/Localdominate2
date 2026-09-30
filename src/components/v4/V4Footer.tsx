@@ -9,6 +9,7 @@ import { SystemLabel } from "./SystemLabel";
  */
 const EXPLORE = [
   { to: "/services", label: "Services" },
+  { to: "/work", label: "Work" },
   { to: "/blog", label: "Blog" },
   { to: "/seo-lexikon", label: "SEO Lexicon A–Z" },
   { to: "/ai-visibility-audit", label: "AI Visibility Audit" },

@@ -13,14 +13,12 @@ import { Connection } from "@/components/v4/Connection";
 import { SignatureSystem } from "@/components/v4/SignatureSystem";
 
 import { verifiedProof } from "@/data/v4Proof";
+import { caseLabel, publishedCases } from "@/data/v4Cases";
+import { DadicationFilm } from "@/components/v4/DadicationFilm";
 
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 
 import heroImg from "@/assets/v4/hq_pool_building_mountain.jpg";
-import kempinskiImg from "@/assets/v4/r4c2_wood_building_pool.jpg";
-import dadicationImg from "@/assets/v4/r2c3_concrete_plant.jpg";
-import kloversImg from "@/assets/v4/r3c2_woman_smiling.jpg";
-import saveSpaceImg from "@/assets/v4/r3c4_phone_app_data.jpg";
 import journeyImg from "@/assets/v4/hq_mountain_lake_sunset.jpg";
 
 const FRAGMENTED = [
@@ -40,35 +38,6 @@ const SYSTEM_FACTS = [
 
 const MILESTONES = ["Strategy", "Brand", "Build", "Launch"] as const;
 
-// Capability previews, not case claims: no client names, figures or ratings. Named clients and
-// metrics may only appear via `verifiedProof()` (src/data/v4Proof.ts) once evidence is on file.
-const WORK_PREVIEWS = [
-  {
-    category: "Hospitality",
-    title: "Direct-booking journeys",
-    blurb: "Brand, website and booking funnel for hotels and resorts.",
-    image: kempinskiImg,
-  },
-  {
-    category: "Consumer Brand",
-    title: "Brand and commerce builds",
-    blurb: "Shopify store, content and launch for challenger brands.",
-    image: dadicationImg,
-  },
-  {
-    category: "Education",
-    title: "Learning platforms",
-    blurb: "Brand, website and gamified platform for education products.",
-    image: kloversImg,
-  },
-  {
-    category: "Premium B2B",
-    title: "Positioning and acquisition",
-    blurb: "Positioning, website and lead system for considered sales.",
-    image: saveSpaceImg,
-  },
-] as const;
-
 /**
  * LocalDominate V4 — Home, "The Business Awakens". Live on `/`.
  * Photography cropped from a set the owner supplied directly. No client names or metrics are
@@ -78,6 +47,9 @@ const WORK_PREVIEWS = [
  * as the previous home page, so the switch changes page content only (CLAUDE.md Hard Rule 1). The
  * same component also serves the noindex preview route (`preview`).
  */
+// Teaser: the non-video published cases, first three (the video case has its own block).
+const homeCases = publishedCases().filter((c) => !c.hasVideo).slice(0, 3);
+
 export default function HomeV4({ preview = false }: { preview?: boolean }) {
   const { language } = useLanguage();
   return (
@@ -261,30 +233,39 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
           </div>
         </StateField>
 
-        {/* 05 — THE WORK: capability previews; case studies follow once evidence is on file */}
+        {/* 05 — THE WORK: published cases (src/data/v4Cases.ts); no figures unless verified */}
         <StateField field="light" id="evidence" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-evidence">
           <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10">
-            <SystemLabel as="p" id="beat-evidence" className="mb-6 block text-v4-ink/60">Where we work</SystemLabel>
+            <SystemLabel as="p" id="beat-evidence" className="mb-6 block text-v4-ink/60">Selected work</SystemLabel>
             <p className="max-w-2xl font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
-              Case studies are in preparation. We publish results only when we can document them.
+              Each project is labelled for what it is. We publish results only when we can document them.
             </p>
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
-              {WORK_PREVIEWS.map((w) => (
-                <div key={w.title} className="overflow-hidden rounded-2xl border border-v4-ink/10 bg-v4-white">
-                  <div className="relative aspect-[16/9]">
-                    <img src={w.image} alt="" aria-hidden="true" className="h-full w-full object-cover" loading="lazy" />
-                  </div>
-                  <div className="p-6">
-                    <SystemLabel className="text-v4-ink/60">{w.category}</SystemLabel>
-                    <p className="mt-2 font-v4-sans text-lg font-semibold text-v4-ink">{w.title}</p>
-                    <p className="mt-1 font-v4-sans text-sm text-v4-ink/60">{w.blurb}</p>
-                    <span className="mt-5 inline-block font-v4-sans text-sm text-v4-ink/60">
-                      Case study in preparation
-                    </span>
-                  </div>
-                </div>
-              ))}
+            <div className="mt-10 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+              <div>
+                <DadicationFilm />
+                <p className="mt-4 font-v4-sans text-sm text-v4-ink/70">
+                  <span className="font-medium text-v4-ink">Dadication</span>: US e-commerce brand launch, from
+                  briefing to Shopify store. Pre-launch.
+                </p>
+              </div>
+              <ul className="flex flex-col gap-4">
+                {homeCases.map((c) => (
+                  <li key={c.id} className="rounded-2xl border border-v4-ink/10 bg-v4-white p-6">
+                    <SystemLabel className="text-v4-ink/60">
+                      {caseLabel(c, false)}
+                    </SystemLabel>
+                    <p className="mt-2 font-v4-sans text-lg font-semibold text-v4-ink">{c.name}</p>
+                    <p className="mt-1 font-v4-sans text-sm text-v4-ink/60">{c.title}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
+            <Link
+              to="/work"
+              className="mt-10 inline-block font-v4-sans text-sm text-v4-ink/70 underline-offset-4 hover:underline"
+            >
+              See all work →
+            </Link>
           </div>
         </StateField>
 
