@@ -1,4 +1,4 @@
-﻿// Vercel build wrapper: runs the static build (vite build + prerender) on Vercel's build image,
+// Vercel build wrapper: runs the static build (vite build + prerender) on Vercel's build image,
 // which has no system libraries for a stock Playwright Chromium (libnss3, libnspr4, ...).
 // We use the self-contained Chromium from @sparticuz/chromium (bundles its own libs) instead.
 // Both packages are installed with --no-save in vercel.json, so no lockfile changes.
