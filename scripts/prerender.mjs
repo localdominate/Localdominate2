@@ -69,7 +69,29 @@ function capture() {
   }
   return {
     head: keep,
-    root: document.getElementById("root").innerHTML,
+    root: (() => {
+      // Empty notification regions (toast/sonner) are added on the client after mount, so they are left
+      // out of the prerendered HTML; this keeps the markup identical to React's first client render
+      // and lets the V4 pages hydrate without a mismatch.
+      const clone = document.getElementById("root").cloneNode(true);
+      clone.querySelectorAll('[role="region"][aria-label^="Notifications"], section[aria-label^="Notifications"]').forEach((n) => n.remove());
+      // The V4 pages are hydrated in the browser. React expects an opening and closing Suspense marker
+      // around the content of the route boundary in App.tsx; a client-rendered snapshot has none.
+      const hydrated = ["/", "/services", "/work"].includes(location.pathname.replace(/\/+$/, "") || "/");
+      if (!hydrated) return clone.innerHTML;
+      // framer-motion leaves an inline "transform: none" once an animation has finished; the first
+      // client render does not have it, so it is dropped from the snapshot.
+      clone.querySelectorAll('[style="transform: none;"], [style="opacity: 1; transform: none;"]').forEach((n) => n.removeAttribute("style"));
+      // innerHTML merges adjacent text nodes (e.g. "Delivery: " + "72 hours"); React's server output
+      // separates them with an empty comment and hydration expects that.
+      const texts = [];
+      const walker = document.createTreeWalker(clone, NodeFilter.SHOW_TEXT);
+      while (walker.nextNode()) texts.push(walker.currentNode);
+      for (const t of texts) {
+        if (t.previousSibling && t.previousSibling.nodeType === 3) t.parentNode.insertBefore(document.createComment(""), t);
+      }
+      return "<!--$-->" + clone.innerHTML + "<!--/$-->";
+    })(),
     lang: document.documentElement.lang,
     finalPath: location.pathname,
   };

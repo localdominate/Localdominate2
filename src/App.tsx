@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./i18n/LanguageContext";  
 import { ABTestProvider } from "@/hooks/useABTest";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { AfterMount } from "@/components/v4/AfterMount";
+import { lazyV4Page } from "@/lib/v4Pages";
 
 // Critical pages loaded immediately
 import TrafficSplitter from "./components/TrafficSplitter";
@@ -224,9 +226,9 @@ const FaqSubHub = lazy(() => import("./pages/blog/FaqSubHub"));
 
 // V4 redesign: HomeV4 is the live "/" and ServicesV4 the live "/services" (see docs/B1_SCOPE.md).
 // "/preview/home-v3" and "/design-system" stay noindex.
-const HomeV4 = lazy(() => import("./pages/v4/HomeV4"));
-const ServicesV4 = lazy(() => import("./pages/v4/ServicesV4"));
-const WorkV4 = lazy(() => import("./pages/v4/WorkV4"));
+const HomeV4 = lazyV4Page("/");
+const ServicesV4 = lazyV4Page("/services");
+const WorkV4 = lazyV4Page("/work");
 const DesignSystemPreview = lazy(() => import("./pages/v4/DesignSystemPreview"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -247,11 +249,15 @@ const App = () => (
       <ABTestProvider>
         <LanguageProvider>
           <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <Suspense fallback={null}>
-              <CoreWebVitalsTracker trackToDatabase={false} />
-            </Suspense>
+            <AfterMount>
+              <Toaster />
+              <Sonner />
+            </AfterMount>
+            <AfterMount>
+              <Suspense fallback={null}>
+                <CoreWebVitalsTracker trackToDatabase={false} />
+              </Suspense>
+            </AfterMount>
             <BrowserRouter>
               <Suspense fallback={<PageFallback />}>
               <Routes>

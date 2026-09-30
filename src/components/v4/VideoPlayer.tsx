@@ -10,18 +10,24 @@ type VideoSource = { src: string; media?: string };
  */
 export function VideoPlayer({
   poster,
+  posterSmall,
   sources,
   title,
   width = 1280,
   height = 720,
+  priority = false,
   className,
 }: {
   poster: string;
+  /** Optional 640 px wide version of the poster, used on small screens. */
+  posterSmall?: string;
   sources: readonly VideoSource[];
   /** Accessible name, e.g. "Dadication store, hero film". */
   title: string;
   width?: number;
   height?: number;
+  /** True when the poster is in the first viewport: loads it eagerly with high fetch priority. */
+  priority?: boolean;
   className?: string;
 }) {
   const [playing, setPlaying] = useState(false);
@@ -55,10 +61,13 @@ export function VideoPlayer({
         >
           <img
             src={poster}
+            srcSet={posterSmall ? `${posterSmall} 640w, ${poster} 1280w` : undefined}
+            sizes={posterSmall ? "(max-width: 1023px) 640px, 60vw" : undefined}
             alt=""
             width={width}
             height={height}
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
             decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
           />

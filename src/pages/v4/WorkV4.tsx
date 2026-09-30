@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import SEOHead from "@/components/SEOHead";
 import { V4Nav } from "@/components/v4/V4Nav";
+import { AfterMount } from "@/components/v4/AfterMount";
 import { V4Footer } from "@/components/v4/V4Footer";
 import { BookCallButton } from "@/components/v4/BookCallButton";
 import { StateField } from "@/components/v4/StateField";
@@ -141,7 +142,7 @@ export default function WorkV4() {
                 Featured
               </SystemLabel>
               <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
-                <DadicationFilm />
+                <DadicationFilm priority />
                 <div>
                   <Meta c={featured} />
                   <h2
@@ -199,9 +200,11 @@ export default function WorkV4() {
       </main>
 
       <V4Footer />
-      <Suspense fallback={null}>
-        <CookieBanner />
-      </Suspense>
+      <AfterMount>
+        <Suspense fallback={null}>
+          <CookieBanner />
+        </Suspense>
+      </AfterMount>
     </div>
   );
 }

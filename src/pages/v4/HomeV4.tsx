@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { V4Nav } from "@/components/v4/V4Nav";
+import { AfterMount } from "@/components/v4/AfterMount";
 import { V4Footer } from "@/components/v4/V4Footer";
 import { BookCallButton } from "@/components/v4/BookCallButton";
 import { StateField } from "@/components/v4/StateField";
@@ -353,9 +354,11 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
       </main>
 
       <V4Footer />
-      <Suspense fallback={null}>
-        <CookieBanner />
-      </Suspense>
+      <AfterMount>
+        <Suspense fallback={null}>
+          <CookieBanner />
+        </Suspense>
+      </AfterMount>
     </div>
   );
 }
