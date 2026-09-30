@@ -36,6 +36,9 @@ const PORT = Number(args.port || 4180);
 const BASE = `http://127.0.0.1:${PORT}`;
 const GENERIC_TITLE = "Local Dominator â€“ Local SEO & AI-Sichtbarkeit";
 const LOCALE = "en-US";
+// Live pages that are newer than the frozen SEO baseline. They are prerendered like the baseline
+// URLs but are not part of the baseline, so seo-check does not compare them.
+const EXTRA_PATHS = ["/services"];
 
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json",
   ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp",
@@ -93,7 +96,7 @@ async function main() {
 
   const baseline = JSON.parse(fs.readFileSync(path.join(ROOT, "docs", "baseline", "rendered-en-US.json"), "utf8"));
   const only = args.only ? new Set(String(args.only).split(",")) : null;
-  const paths = baseline.map((r) => r.path).filter((p) => !only || only.has(p));
+  const paths = [...new Set([...baseline.map((r) => r.path), ...EXTRA_PATHS])].filter((p) => !only || only.has(p));
 
   const server = serve(markedShell);
   const launchOpts = process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {};

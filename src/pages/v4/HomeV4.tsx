@@ -1,5 +1,10 @@
+import { lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { V4Nav } from "@/components/v4/V4Nav";
+import { V4Footer } from "@/components/v4/V4Footer";
+import { BookCallButton } from "@/components/v4/BookCallButton";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { EditorialStatement } from "@/components/v4/EditorialStatement";
@@ -8,6 +13,8 @@ import { Connection } from "@/components/v4/Connection";
 import { SignatureSystem } from "@/components/v4/SignatureSystem";
 
 import { verifiedProof } from "@/data/v4Proof";
+
+const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 
 import heroImg from "@/assets/v4/hq_pool_building_mountain.jpg";
 import kempinskiImg from "@/assets/v4/r4c2_wood_building_pool.jpg";
@@ -63,21 +70,49 @@ const WORK_PREVIEWS = [
 ] as const;
 
 /**
- * LocalDominate V4 — Home, "The Business Awakens".
- * B1.3 visual-reference pass: rebuilt to match the owner-approved photography-driven
- * reference (photography cropped from a set the owner supplied directly). No client names or
- * metrics are rendered unless they pass `verifiedProof()`. Still Home only, still a
- * new, unlinked, noindex preview route — the live `/` is untouched (B1_SCOPE, Hard Rule #1).
+ * LocalDominate V4 — Home, "The Business Awakens". Live on `/`.
+ * Photography cropped from a set the owner supplied directly. No client names or metrics are
+ * rendered unless they pass `verifiedProof()`.
+ *
+ * SEO: on `/` the head (title, description, canonical, hreflang, JSON-LD) is deliberately the same
+ * as the previous home page, so the switch changes page content only (CLAUDE.md Hard Rule 1). The
+ * same component also serves the noindex preview route (`preview`).
  */
-export default function HomeV4() {
+export default function HomeV4({ preview = false }: { preview?: boolean }) {
+  const { language } = useLanguage();
   return (
     <div className="v4 font-v4-sans">
-      <SEOHead
-        title="LocalDominate V4 Preview — Home"
-        description="Internal preview of the LocalDominate V4 Home redesign. Not the live site."
-        noindex
-        lang="en"
-      />
+      {preview ? (
+        <SEOHead
+          title="LocalDominate V4 Preview — Home"
+          description="Internal preview of the LocalDominate V4 Home redesign. Not the live site."
+          noindex
+          lang="en"
+        />
+      ) : (
+        <SEOHead
+          title={language === "en" ? "Local Dominator – Local SEO & AI Visibility" : language === "ar" ? "Local Dominator – تحسين الظهور المحلي وفي بحث AI" : "Local Dominator – Local SEO & AI-Sichtbarkeit"}
+          description={language === "en" ? "Local SEO and AI visibility for local businesses: Google Business Profile optimisation, structured data and practical guidance." : language === "ar" ? "تحسين الظهور المحلي للشركات عبر Google Business Profile والبيانات المنظمة والبحث المدعوم بالذكاء الاصطناعي." : "Local SEO und AI-Sichtbarkeit für lokale Unternehmen: Google Business Profile, strukturierte Daten und praxisnahe Fachbeiträge."}
+          canonicalUrl="https://localdominate.org/"
+          lang={language}
+          alternateUrls={{
+            de: "https://localdominate.org/",
+            en: "https://localdominate.org/?lang=en",
+            ar: "https://localdominate.org/?lang=ar",
+          }}
+          jsonLd={{
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://localdominate.org/#webpage",
+            "url": "https://localdominate.org/",
+            "name": language === "de" ? "Local Dominator – Local SEO & AI-Sichtbarkeit" : "Local Dominator – Local SEO & AI Visibility",
+            "description": language === "de" ? "Local SEO und AI-Sichtbarkeit für lokale Unternehmen." : "Local SEO and AI visibility for local businesses.",
+            "inLanguage": language === "de" ? "de-DE" : language === "ar" ? "ar" : "en-GB",
+            "isPartOf": { "@id": "https://localdominate.org/#website" },
+            "about": { "@id": "https://localdominate.org/#organization" },
+          }}
+        />
+      )}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-v4-signal focus:px-4 focus:py-2 focus:text-v4-ink"
@@ -112,18 +147,13 @@ export default function HomeV4() {
                 ))}
               </div>
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="#invitation"
-                  className="rounded-full bg-v4-signal px-7 py-3 font-v4-sans text-sm font-medium text-v4-ink transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
-                >
-                  Start a Project
-                </a>
-                <a
-                  href="#evidence"
+                <BookCallButton />
+                <Link
+                  to="/services"
                   className="rounded-full border border-v4-ivory/30 px-7 py-3 font-v4-sans text-sm font-medium text-v4-ivory/90 transition-colors hover:border-v4-ivory/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
                 >
-                  See the Evidence
-                </a>
+                  See services and prices
+                </Link>
               </div>
             </div>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl md:aspect-[5/6]">
@@ -248,10 +278,7 @@ export default function HomeV4() {
                     <SystemLabel className="text-v4-ink/60">{w.category}</SystemLabel>
                     <p className="mt-2 font-v4-sans text-lg font-semibold text-v4-ink">{w.title}</p>
                     <p className="mt-1 font-v4-sans text-sm text-v4-ink/60">{w.blurb}</p>
-                    <span
-                      className="mt-5 inline-block font-v4-sans text-sm text-v4-ink/60"
-                      title="Work page is a later B-batch, not part of B1"
-                    >
+                    <span className="mt-5 inline-block font-v4-sans text-sm text-v4-ink/60">
                       Case study in preparation
                     </span>
                   </div>
@@ -290,12 +317,12 @@ export default function HomeV4() {
                     </div>
                   ))}
                 </div>
-                <span
-                  className="mt-8 inline-block font-v4-sans text-sm text-v4-ink/60"
-                  title="Industries page is a later B-batch, not part of B1"
+                <Link
+                  to="/services"
+                  className="mt-8 inline-block font-v4-sans text-sm text-v4-ink/70 underline-offset-4 hover:underline"
                 >
-                  See the Work →
-                </span>
+                  See services and prices →
+                </Link>
               </div>
             </div>
           </div>
@@ -321,12 +348,12 @@ export default function HomeV4() {
               ))}
             </div>
             <div className="mt-10 flex gap-6 font-v4-sans text-sm">
-              <span className="text-v4-ink/60" title="Approach page is a later B-batch, not part of B1">
-                See Our Approach →
-              </span>
-              <a href="/blog" className="text-v4-ink/70 underline-offset-4 hover:underline">
+              <Link to="/services" className="text-v4-ink/70 underline-offset-4 hover:underline">
+                See services and prices →
+              </Link>
+              <Link to="/blog" className="text-v4-ink/70 underline-offset-4 hover:underline">
                 Explore Insights →
-              </a>
+              </Link>
             </div>
           </div>
         </StateField>
@@ -337,16 +364,17 @@ export default function HomeV4() {
             <p id="beat-invitation" className="font-v4-serif text-[length:var(--v4-text-major)] text-v4-ink">
               Start building your system.
             </p>
-            <a
-              href="#invitation"
-              title="Wires to the real Start a Project flow in a later batch — not part of B1"
-              className="mt-10 inline-block rounded-full bg-v4-signal px-9 py-4 font-v4-sans text-base font-medium text-v4-ink transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
-            >
-              Start a Project
-            </a>
+            <div className="mt-10">
+              <BookCallButton className="px-9 py-4 text-base" />
+            </div>
           </div>
         </StateField>
       </main>
+
+      <V4Footer />
+      <Suspense fallback={null}>
+        <CookieBanner />
+      </Suspense>
     </div>
   );
 }

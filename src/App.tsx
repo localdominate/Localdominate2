@@ -9,7 +9,6 @@ import { ABTestProvider } from "@/hooks/useABTest";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
 // Critical pages loaded immediately
-import Index from "./pages/Index";
 import TrafficSplitter from "./components/TrafficSplitter";
 
 // Lazy load non-critical pages
@@ -223,9 +222,10 @@ const CitationVerzeichnisse = lazy(() => import("./pages/CitationVerzeichnisse")
 const FaqHub = lazy(() => import("./pages/blog/FaqHub"));
 const FaqSubHub = lazy(() => import("./pages/blog/FaqSubHub"));
 
-// V4 redesign — B1 (Design Foundation + Home). New, noindex, unlinked preview routes only;
-// the live "/" is untouched. See docs/B1_SCOPE.md.
+// V4 redesign: HomeV4 is the live "/" and ServicesV4 the live "/services" (see docs/B1_SCOPE.md).
+// "/preview/home-v3" and "/design-system" stay noindex.
 const HomeV4 = lazy(() => import("./pages/v4/HomeV4"));
+const ServicesV4 = lazy(() => import("./pages/v4/ServicesV4"));
 const DesignSystemPreview = lazy(() => import("./pages/v4/DesignSystemPreview"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -254,7 +254,8 @@ const App = () => (
             <BrowserRouter>
               <Suspense fallback={<PageFallback />}>
               <Routes>
-                <Route path="/" element={<Index />} />
+                <Route path="/" element={<HomeV4 />} />
+                <Route path="/services" element={<ServicesV4 />} />
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/ab-test" element={<ABTestDashboard />} />
                 <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />
@@ -467,7 +468,7 @@ const App = () => (
                 <Route path="/partner" element={<Partner />} />
                 <Route path="/test-b" element={<TestB />} />
                 {/* V4 redesign — B1 preview routes, noindex, not linked from nav/sitemap */}
-                <Route path="/preview/home-v3" element={<HomeV4 />} />
+                <Route path="/preview/home-v3" element={<HomeV4 preview />} />
                 <Route path="/design-system" element={<DesignSystemPreview />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
