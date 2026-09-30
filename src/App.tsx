@@ -9,6 +9,7 @@ import { ABTestProvider } from "@/hooks/useABTest";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { AfterMount } from "@/components/v4/AfterMount";
 import { lazyV4Page } from "@/lib/v4Pages";
+import { PILLAR_BASE, PILLAR_INDEX, pillarPath } from "@/data/v4PillarIndex";
 
 // Critical pages loaded immediately
 import TrafficSplitter from "./components/TrafficSplitter";
@@ -229,6 +230,8 @@ const FaqSubHub = lazy(() => import("./pages/blog/FaqSubHub"));
 const HomeV4 = lazyV4Page("/");
 const ServicesV4 = lazyV4Page("/services");
 const WorkV4 = lazyV4Page("/work");
+const ApproachV4 = lazyV4Page(PILLAR_BASE);
+const PillarV4 = lazyV4Page(pillarPath("diagnose")); // one module serves all seven step pages
 const DesignSystemPreview = lazy(() => import("./pages/v4/DesignSystemPreview"));
 
 // Lazy load CoreWebVitalsTracker - not needed for initial render
@@ -264,6 +267,10 @@ const App = () => (
                 <Route path="/" element={<HomeV4 />} />
                 <Route path="/services" element={<ServicesV4 />} />
                 <Route path="/work" element={<WorkV4 />} />
+                <Route path={PILLAR_BASE} element={<ApproachV4 />} />
+                {PILLAR_INDEX.map((p) => (
+                  <Route key={p.id} path={pillarPath(p.id)} element={<PillarV4 />} />
+                ))}
                 <Route path="/analytics" element={<Analytics />} />
                 <Route path="/ab-test" element={<ABTestDashboard />} />
                 <Route path="/ab-test-zentrale" element={<ABTestZentrale />} />

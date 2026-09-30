@@ -10,12 +10,12 @@ import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { EditorialStatement } from "@/components/v4/EditorialStatement";
 import { Node } from "@/components/v4/Node";
-import { Connection } from "@/components/v4/Connection";
 import { SignatureSystem } from "@/components/v4/SignatureSystem";
 
 import { verifiedProof } from "@/data/v4Proof";
 import { caseLabel, publishedCases } from "@/data/v4Cases";
 import { DadicationFilm } from "@/components/v4/DadicationFilm";
+import { PILLAR_INDEX, PILLAR_BASE, pillarPath } from "@/data/v4PillarIndex";
 
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 
@@ -32,12 +32,10 @@ const FRAGMENTED = [
 
 // Verifiable facts only (Project Bible V4, Hard Rule 06 — Truth first).
 const SYSTEM_FACTS = [
-  { value: "5", label: "Functions, one system" },
-  { value: "1", label: "Connected System" },
+  { value: "7", label: "Steps, diagnosis to scale" },
+  { value: "1", label: "Connected system" },
   { value: "DE + EN", label: "Markets" },
 ] as const;
-
-const MILESTONES = ["Strategy", "Brand", "Build", "Launch"] as const;
 
 /**
  * LocalDominate V4 — Home, "The Business Awakens". Live on `/`.
@@ -106,10 +104,9 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
                 One connected growth system.
               </h1>
               <p className="max-w-md font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">
-                Most growth systems fail because strategy, brand, website and marketing
-                operate separately. LocalDominate connects them into one operating
-                system — built for serious premium businesses, especially DACH and
-                hospitality brands, credible anywhere.
+                Strategy, brand, website and marketing usually run as separate jobs with
+                separate briefs. We run them as one sequence, for hotels, premium service
+                businesses and brands in the DACH region and beyond.
               </p>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1" aria-hidden="true">
                 {["Strategy", "Brand", "Build", "Growth"].map((word, i) => (
@@ -174,11 +171,11 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
             </div>
             <div className="text-center">
               <EditorialStatement id="beat-fragmentation">
-                Disconnected agencies make growth feel fragmented.
+                Growth stalls when five jobs are done by five parties.
               </EditorialStatement>
               <p className="mx-auto mt-6 max-w-md font-v4-sans text-sm text-v4-ivory/50">
-                Not broken. Not incompetent. Simply five things that were never meant to
-                talk to each other.
+                Each job can be done well and still not add up, because nobody owns how
+                strategy, brand, website, marketing and data fit together.
               </p>
             </div>
           </div>
@@ -189,41 +186,49 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
           <div className="mx-auto max-w-[1400px] py-16">
             <div className="px-6 md:px-10">
               <SystemLabel as="p" id="beat-signature-system" className="text-v4-ivory/50">
-                The Signature System — how strategy becomes one connected system
+                The Signature System: how strategy becomes one connected system
               </SystemLabel>
             </div>
             <SignatureSystem />
           </div>
         </StateField>
 
-        {/* A COMPLETE SYSTEM. MEASURABLE IMPACT. */}
-        <StateField field="light" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-impact">
+        {/* THE SEVEN STEPS: the same order as the showreel; each step has its own page */}
+        <StateField field="light" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-steps">
           <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10">
-            <SystemLabel as="p" id="beat-impact" className="mb-4 block text-v4-ink/60">
-              A complete system. One direction.
+            <SystemLabel as="p" className="mb-6 block text-v4-ink/60">
+              The system in seven steps
             </SystemLabel>
-            <div className="flex items-center gap-0 overflow-x-auto pb-2" aria-hidden="true">
-              {MILESTONES.map((m, i) => (
-                <div key={m} className="flex shrink-0 items-center">
-                  {/* Node's built-in label uses Signal Green when filled, which reads at ~1.1:1
-                      against the light StateField here — fine on the dark Signature System
-                      background it was designed for, not here. Render it decorative (no label
-                      text of its own) and caption it separately in v4-ink, which is legible. */}
-                  <Node label="" state={i === 0 ? "selected" : "outcome"} size="sm" decorative />
-                  <Connection active orientation="horizontal" className="!w-14" />
-                </div>
+            <h2
+              id="beat-steps"
+              className="max-w-2xl font-v4-serif text-[length:var(--v4-text-major)] font-normal leading-[1.08] text-v4-ink"
+            >
+              From the first look at the numbers to the next market.
+            </h2>
+            <ol className="mt-12 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-4">
+              {PILLAR_INDEX.map((p) => (
+                <li key={p.id} className="border-t border-v4-ink/10">
+                  <Link
+                    to={pillarPath(p.id)}
+                    className="group flex h-full flex-col gap-2 py-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal"
+                  >
+                    <SystemLabel className="text-v4-ink/60">{p.n}</SystemLabel>
+                    <span className="font-v4-sans text-xl font-semibold tracking-tight text-v4-ink group-hover:underline">
+                      {p.name}
+                    </span>
+                    <span className="font-v4-sans text-sm text-v4-ink/70">{p.question}</span>
+                    <span className="mt-1 font-v4-sans text-xs text-v4-ink/60">{p.parts.join(" · ")}</span>
+                  </Link>
+                </li>
               ))}
-              <SystemLabel className="ml-2 whitespace-nowrap text-v4-ink">Grow →</SystemLabel>
-            </div>
-            <div className="mt-2 flex items-center gap-0 overflow-x-auto" aria-hidden="true">
-              {MILESTONES.map((m) => (
-                <div key={m} className="flex w-[4.5rem] shrink-0 justify-center">
-                  <SystemLabel className="text-v4-ink/60">{m}</SystemLabel>
-                </div>
-              ))}
-            </div>
-            <span className="sr-only">Growth milestones, in order: {MILESTONES.join(", ")}, then Grow.</span>
-            <div className="mt-12 grid grid-cols-3 gap-6">
+            </ol>
+            <Link
+              to={PILLAR_BASE}
+              className="mt-8 inline-block font-v4-sans text-sm text-v4-ink/70 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal"
+            >
+              How the seven steps fit together →
+            </Link>
+            <div className="mt-14 grid grid-cols-3 gap-6 border-t border-v4-ink/10 pt-10">
               {SYSTEM_FACTS.map((s) => (
                 <div key={s.label}>
                   <p className="font-v4-serif text-3xl text-v4-ink">{s.value}</p>
@@ -284,14 +289,14 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
               </div>
               <div className="px-8 py-10 md:pl-0 md:pr-12">
                 <p id="beat-context" className="font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
-                  One system. Read differently for every business.
+                  One system, applied differently to each kind of business.
                 </p>
                 <div className="mt-8 grid gap-6 sm:grid-cols-2">
                   {[
-                    { title: "Hospitality", body: "A hotel needs bookings, not vanity traffic — the system optimises for occupancy, not clicks." },
-                    { title: "Premium B2B", body: "A considered sale needs credibility before contact — the system builds trust before the pitch." },
+                    { title: "Hospitality", body: "A hotel needs direct bookings, not just visits. We judge the website by the bookings it produces." },
+                    { title: "Premium B2B", body: "A considered sale needs credibility before the first contact. Proof comes before the pitch." },
                     { title: "Ambitious SMEs", body: "A growing team needs to move fast without breaking what already works." },
-                    { title: "Consumer brands", body: "A challenger brand needs proof and recall, fast — not another awareness campaign." },
+                    { title: "Consumer brands", body: "A challenger brand needs proof and recognition early, more than another awareness campaign." },
                   ].map((row) => (
                     <div key={row.title}>
                       <p className="font-v4-sans text-sm font-medium text-v4-ink">{row.title}</p>
@@ -314,13 +319,13 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
         <StateField field="light" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-operating-model">
           <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10">
             <p id="beat-operating-model" className="mb-10 font-v4-serif text-[length:var(--v4-text-subhead)] text-v4-ink">
-              You don't need another agency. You need a growth system.
+              Why one team for all seven steps.
             </p>
             <div className="grid gap-10 md:grid-cols-3">
               {[
-                { title: "Strategy first", body: "Every function connects back to one direction, not four separate briefs." },
-                { title: "AI where it earns its place", body: "Used to spot what's working and act on it faster — not to write your homepage copy." },
-                { title: "Compounding, not resetting", body: "Each campaign returns data the next one starts from, instead of starting cold." },
+                { title: "One direction", body: "Every step refers back to the same diagnosis and positioning, not to four separate briefs." },
+                { title: "AI for routine work", body: "We use it for research, analysis and repetitive tasks. People decide and edit what goes live." },
+                { title: "Data carries forward", body: "Each campaign leaves data that the next one starts from, instead of starting cold." },
               ].map((pillar) => (
                 <div key={pillar.title} className="flex flex-col gap-4">
                   <Node label="" state="selected" size="sm" decorative />
@@ -344,7 +349,7 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
         <StateField field="light" id="invitation" as="section" className="border-t border-v4-ink/10" aria-labelledby="beat-invitation">
           <div className="mx-auto max-w-[900px] px-6 py-28 text-center md:px-10">
             <p id="beat-invitation" className="font-v4-serif text-[length:var(--v4-text-major)] text-v4-ink">
-              Start building your system.
+              Tell us where the business is stuck.
             </p>
             <div className="mt-10">
               <BookCallButton className="px-9 py-4 text-base" />

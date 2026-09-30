@@ -6,10 +6,11 @@ import { BOOKING_IS_EXTERNAL, BOOKING_LABEL, BOOKING_URL } from "@/lib/booking";
 /**
  * V4 global navigation — slim, low-chrome (moodboard principle, DESIGN_SYSTEM_PLAN.md §A).
  * Used by the live V4 pages (`/`, `/services`) and the design-system preview. Only destinations
- * that exist are linked: Services, Work and Insights (the existing /blog). The primary action is the
+ * that exist are linked: Approach, Services, Work and Insights (the existing /blog). The primary action is the
  * single "Book a 15-min call" button.
  */
 const NAV_LINKS = [
+  { to: "/approach", label: "Approach" },
   { to: "/services", label: "Services" },
   { to: "/work", label: "Work" },
   { to: "/blog", label: "Insights" },

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CookieSettingsButton } from "@/components/CookieBanner";
 import { SystemLabel } from "./SystemLabel";
+import { PILLAR_INDEX, pillarPath } from "@/data/v4PillarIndex";
 
 /**
  * V4 footer for the live V4 pages. Carries the legal pages (Impressum, Datenschutz, AGB) that must
@@ -8,12 +9,15 @@ import { SystemLabel } from "./SystemLabel";
  * so none of them is orphaned when the home page changes.
  */
 const EXPLORE = [
+  { to: "/approach", label: "Approach" },
   { to: "/services", label: "Services" },
   { to: "/work", label: "Work" },
   { to: "/blog", label: "Blog" },
   { to: "/seo-lexikon", label: "SEO Lexicon A–Z" },
   { to: "/ai-visibility-audit", label: "AI Visibility Audit" },
 ] as const;
+
+const STEPS = PILLAR_INDEX.map((p) => ({ to: pillarPath(p.id), label: `${p.n} ${p.name}` }));
 
 const INDUSTRIES = [
   { to: "/restaurant-marketing", label: "Restaurant Marketing" },
@@ -53,7 +57,7 @@ function LinkGroup({ title, links }: { title: string; links: readonly { to: stri
 export function V4Footer() {
   return (
     <footer className="v4 border-t border-v4-ivory/10 bg-v4-ink text-v4-ivory">
-      <div className="mx-auto grid max-w-[1400px] gap-10 px-6 py-14 md:grid-cols-4 md:px-10">
+      <div className="mx-auto grid max-w-[1400px] gap-10 px-6 py-14 md:grid-cols-3 lg:grid-cols-5 md:px-10">
         <div className="flex flex-col gap-3">
           <Link to="/" className="font-v4-sans text-base font-semibold tracking-tight text-v4-ivory">
             LocalDominate
@@ -66,6 +70,7 @@ export function V4Footer() {
           </a>
         </div>
         <LinkGroup title="Explore" links={EXPLORE} />
+        <LinkGroup title="The seven steps" links={STEPS} />
         <LinkGroup title="Industries" links={INDUSTRIES} />
         <LinkGroup title="Legal" links={LEGAL} />
       </div>

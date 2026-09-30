@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import { V4Nav } from "@/components/v4/V4Nav";
 import { AfterMount } from "@/components/v4/AfterMount";
@@ -160,6 +161,13 @@ export default function ServicesV4() {
             <p className="mt-8 max-w-2xl font-v4-sans text-sm text-v4-ink/60">
               Starting prices. Final scope and price are confirmed in writing before we start.
             </p>
+            <p className="mt-3 max-w-2xl font-v4-sans text-sm text-v4-ink/60">
+              Not sure which offer fits? The{" "}
+              <Link to="/approach" className="text-v4-ink underline underline-offset-4">
+                seven steps
+              </Link>{" "}
+              show where each one sits in a full project.
+            </p>
           </div>
         </StateField>
 
@@ -183,10 +191,10 @@ export default function ServicesV4() {
         <StateField field="light" as="section" aria-labelledby="services-promise">
           <div className="mx-auto max-w-[900px] px-6 py-24 text-center md:px-10">
             <p id="services-promise" className="font-v4-serif text-[length:var(--v4-text-major)] text-v4-ink">
-              We don't promise results. We show you exactly what we changed.
+              We do not promise results. We document every change.
             </p>
             <p className="mx-auto mt-6 max-w-xl font-v4-sans text-sm text-v4-ink/70">
-              That way you can measure it with your own numbers. If a first look shows a bigger
+              You can then measure the effect with your own numbers. If a first look shows a bigger
               job, we send a separate quote, with no obligation.
             </p>
             <div className="mt-10">

@@ -38,7 +38,8 @@ const GENERIC_TITLE = "Local Dominator â€“ Local SEO & AI-Sichtbarkeit";
 const LOCALE = "en-US";
 // Live pages that are newer than the frozen SEO baseline. They are prerendered like the baseline
 // URLs but are not part of the baseline, so seo-check does not compare them.
-const EXTRA_PATHS = ["/services", "/work"];
+const PILLAR_IDS = ["diagnose", "position", "create", "build", "launch", "grow", "scale"]; // keep in sync with src/data/v4PillarIndex.ts
+const EXTRA_PATHS = ["/services", "/work", "/approach", ...PILLAR_IDS.map((id) => `/approach/${id}`)];
 
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json",
   ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp",
@@ -59,7 +60,7 @@ function serve(shell) {
 }
 
 // Runs in the page: collect what the app rendered.
-function capture() {
+function capture(hydratedPaths) {
   const keep = [];
   for (const el of document.head.children) {
     const tag = el.tagName.toLowerCase();
@@ -77,7 +78,7 @@ function capture() {
       clone.querySelectorAll('[role="region"][aria-label^="Notifications"], section[aria-label^="Notifications"]').forEach((n) => n.remove());
       // The V4 pages are hydrated in the browser. React expects an opening and closing Suspense marker
       // around the content of the route boundary in App.tsx; a client-rendered snapshot has none.
-      const hydrated = ["/", "/services", "/work"].includes(location.pathname.replace(/\/+$/, "") || "/");
+      const hydrated = hydratedPaths.includes(location.pathname.replace(/\/+$/, "") || "/");
       if (!hydrated) return clone.innerHTML;
       // framer-motion leaves an inline "transform: none" once an animation has finished; the first
       // client render does not have it, so it is dropped from the snapshot.
@@ -143,7 +144,7 @@ async function main() {
           window.scrollTo(0, 0);
         });
         await page.waitForTimeout(1500);
-        const cap = await page.evaluate(capture);
+        const cap = await page.evaluate(capture, ["/", ...EXTRA_PATHS]);
         if (cap.finalPath !== p) { errors.push(`${p}: client redirected to ${cap.finalPath}, not prerendered`); continue; }
         results.push({ path: p, ...cap });
       } catch (e) {
