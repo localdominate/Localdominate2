@@ -5,6 +5,7 @@ import { BookCallButton } from "@/components/v4/BookCallButton";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { StepRail } from "@/components/v4/StepRail";
+import { ShowreelFilm } from "@/components/v4/ShowreelFilm";
 import { caseLabel, publishedCases } from "@/data/v4Cases";
 import { PILLAR_BASE, PILLAR_INDEX, pillarPath } from "@/data/v4PillarIndex";
 import { PILLAR_COPY, pillarCases } from "@/data/v4Pillars";
@@ -147,6 +148,15 @@ export default function ApproachV4() {
 
       <StateField field="dark" as="div" className="border-t border-v4-ivory/10">
         <StepRail />
+      </StateField>
+
+      <StateField field="dark" as="section" className="border-t border-v4-ivory/10" aria-label="Showreel">
+        <div className="mx-auto max-w-[1000px] px-6 py-16 md:px-10">
+          <ShowreelFilm />
+          <p className="mt-4 font-v4-sans text-sm text-v4-ivory/60">
+            The seven steps in 20 seconds. Silent, click to play.
+          </p>
+        </div>
       </StateField>
 
       <StateField field="light" as="section" aria-labelledby="approach-steps">

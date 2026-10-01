@@ -15,6 +15,7 @@ import { SignatureSystem } from "@/components/v4/SignatureSystem";
 import { verifiedProof } from "@/data/v4Proof";
 import { caseLabel, publishedCases } from "@/data/v4Cases";
 import { DadicationFilm } from "@/components/v4/DadicationFilm";
+import { ShowreelFilm } from "@/components/v4/ShowreelFilm";
 import { PILLAR_INDEX, PILLAR_BASE, pillarPath } from "@/data/v4PillarIndex";
 
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
@@ -235,6 +236,34 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
                   <SystemLabel className="mt-1 block text-v4-ink/60">{s.label}</SystemLabel>
                 </div>
               ))}
+            </div>
+          </div>
+        </StateField>
+
+        {/* SHOWREEL: the seven steps in 20 seconds, click to play, silent */}
+        <StateField field="dark" as="section" className="border-t border-v4-ivory/10" aria-labelledby="beat-showreel">
+          <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10">
+            <SystemLabel as="p" className="mb-6 block text-v4-ivory/50">
+              Showreel
+            </SystemLabel>
+            <h2
+              id="beat-showreel"
+              className="max-w-2xl font-v4-serif text-[length:var(--v4-text-major)] font-normal leading-[1.08] text-v4-ivory"
+            >
+              The system in 20 seconds.
+            </h2>
+            <ShowreelFilm className="mt-10" />
+            <p className="mt-5 max-w-xl font-v4-sans text-sm text-v4-ivory/60">
+              A silent ride through the seven steps, from Diagnose to Scale. It shows the method, not
+              results. Projects we can document are on the work page.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-v4-sans text-sm">
+              <Link to="/approach" className="text-v4-ivory/80 underline-offset-4 hover:underline">
+                Read the seven steps →
+              </Link>
+              <Link to="/work" className="text-v4-ivory/80 underline-offset-4 hover:underline">
+                See the work →
+              </Link>
             </div>
           </div>
         </StateField>
