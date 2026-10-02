@@ -28,6 +28,10 @@ const Impressum = () => {
       title: "Impressum",
       back: "Zurück zur Startseite",
       operatedBy: "Betrieben von:",
+      country: "Vereinigtes Königreich",
+      register: "Register:",
+      registerValue: "Companies House, Nummer 16902019",
+      vatNote: "Das Unternehmen ist derzeit nicht umsatzsteuerlich registriert.",
       contact: "Kontakt",
       responsibleForContent: "Verantwortlich für den Inhalt:",
       representedBy: "Vertreten durch:",
@@ -66,6 +70,10 @@ const Impressum = () => {
       title: "Legal Notice",
       back: "Back to Homepage",
       operatedBy: "Operated by:",
+      country: "United Kingdom",
+      register: "Register:",
+      registerValue: "Companies House, number 16902019",
+      vatNote: "The company is not currently VAT-registered.",
       contact: "Contact",
       responsibleForContent: "Responsible for Content:",
       representedBy: "Represented by:",
@@ -104,6 +112,10 @@ const Impressum = () => {
       title: "البيانات القانونية",
       back: "العودة للصفحة الرئيسية",
       operatedBy: "تديره:",
+      country: "المملكة المتحدة",
+      register: "السجل:",
+      registerValue: "Companies House، رقم 16902019",
+      vatNote: "الشركة غير مسجلة حاليًا في ضريبة القيمة المضافة.",
       contact: "التواصل",
       responsibleForContent: "المسؤول عن المحتوى:",
       representedBy: "يُمثَّل بواسطة:",
@@ -163,6 +175,11 @@ const Impressum = () => {
               <p className="text-lg mb-4">
                 <strong>Local Dominator</strong> {t.operatedBy} <strong>EXPLORE SAUDI ARABIA LTD</strong>
               </p>
+              <address className="not-italic text-muted-foreground mb-4">
+                128 City Road<br />
+                London EC1V 2NX<br />
+                {t.country}
+              </address>
               
               <div className="mb-4">
                 <h3 className="font-semibold mb-2">{t.contact}</h3>
@@ -186,6 +203,10 @@ const Impressum = () => {
               <p className="text-muted-foreground mb-2">
                 <strong>{t.legalForm}</strong> Ltd.
               </p>
+              <p className="text-muted-foreground mb-2">
+                <strong>{t.register}</strong> {t.registerValue}
+              </p>
+              <p className="text-muted-foreground mb-2">{t.vatNote}</p>
               <p className="text-muted-foreground">{t.independentNote}</p>
             </div>
 

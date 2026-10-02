@@ -57,6 +57,7 @@ Hinweis zur verantwortlichen Stelle
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
 Local Dominator, betrieben von EXPLORE SAUDI ARABIA LTD
+128 City Road, London EC1V 2NX, Vereinigtes Königreich
 Vertreten durch: Markus Wimböck
 E-Mail: info@localdominate.org
 
@@ -149,6 +150,7 @@ Information about the Responsible Party
 The responsible party for data processing on this website is:
 
 Local Dominator, operated by EXPLORE SAUDI ARABIA LTD
+128 City Road, London EC1V 2NX, United Kingdom
 Represented by: Markus Wimböck
 Email: info@localdominate.org
 
@@ -241,6 +243,7 @@ Without the details in the required fields we cannot handle your request. If you
 الجهة المسؤولة عن معالجة البيانات على هذا الموقع هي:
 
 Local Dominator، تديره شركة EXPLORE SAUDI ARABIA LTD
+128 City Road, London EC1V 2NX، المملكة المتحدة
 يمثلها: Markus Wimböck
 البريد الإلكتروني: info@localdominate.org
 
