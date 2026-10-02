@@ -74,3 +74,29 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* The seven-step chain on the home page (src/components/v4/home/SystemSteps.tsx).
+   Progressive enhancement: where scroll timelines exist and motion is allowed, each step starts
+   dimmed and lights up while it enters the viewport. Everywhere else the chain is fully lit. */
+@keyframes v4-chain-step-light {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+@keyframes v4-chain-node-light {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .v4-chain-step > a {
+      animation: v4-chain-step-light linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+    .v4-chain-node {
+      animation: v4-chain-node-light linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+  }
+}
