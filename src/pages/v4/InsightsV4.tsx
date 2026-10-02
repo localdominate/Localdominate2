@@ -74,7 +74,14 @@ export default function InsightsV4() {
 
   return (
     <V4Page>
-      <SEOHead title={TITLE} description={DESCRIPTION} canonicalUrl={PAGE_URL} lang="en" jsonLd={JSON_LD} />
+      <SEOHead
+        title={TITLE}
+        description={DESCRIPTION}
+        canonicalUrl={PAGE_URL}
+        lang="en"
+        jsonLd={JSON_LD}
+        ogImage="https://localdominate.org/images/v4/social/ld-social-insights-1200x630.jpg"
+      />
 
       <InsightsHero
         query={filter.query}

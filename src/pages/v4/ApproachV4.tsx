@@ -148,6 +148,7 @@ export default function ApproachV4() {
         canonicalUrl={PAGE_URL}
         lang="en"
         jsonLd={JSON_LD}
+        ogImage="https://localdominate.org/images/v4/social/ld-social-approach-1200x630.jpg"
       />
 
       <StateField field="dark" as="section" aria-labelledby="approach-hero">
