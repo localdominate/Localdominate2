@@ -36,7 +36,7 @@ export const CARE_FIRST_YEAR =
 /** 2000 -> "2,000". Written by hand so the result never depends on the browser's locale data. */
 const amount = (value: number): string => String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 /** On screen the figure and the euro sign stay on one line (no-break space). */
-const eur = (value: number): string => `${amount(value)} €`;
+const eur = (value: number): string => `${amount(value)}\u00A0€`;
 /** Plain spaces for meta description, form options and email subject. */
 const eurPlain = (value: number): string => `${amount(value)} €`;
 
@@ -50,6 +50,7 @@ export const CREATOR_ANCHORS = {
   included: "included",
   compare: "compare",
   prices: "prices",
+  more: "more",
   steps: "steps",
   rules: "rules",
   faq: "faq",
@@ -68,13 +69,17 @@ export const CREATORS_SEO = {
 /* ------------------------------------------------------------------ demo */
 
 export const DEMO = {
-  url: "/creator-demo/",
+  // The Vite dev server has no directory index for files in public/, the static host has one.
+  url: import.meta.env.DEV ? "/creator-demo/index.html" : "/creator-demo/",
   iframeTitle: "Demo portfolio of the fictional creator Noa Valmère",
   address: "noavalmere.example",
   phonePreview: { src: "/creator-demo/preview-phone.webp", width: 780, height: 1560 },
   desktopPreview: { src: "/creator-demo/preview-desktop.webp", width: 1600, height: 1000 },
+  /** Phone still further down the page, where the portrait is in view. Used in the hero only. */
+  phonePortrait: { src: "/creator-demo/preview-phone-portrait.webp", width: 780, height: 1560 },
   phoneAlt: "First screen of the demo portfolio of the fictional creator Noa Valmère, phone view",
   desktopAlt: "First screen of the demo portfolio of the fictional creator Noa Valmère, desktop view",
+  phonePortraitAlt: "Portrait section of the demo portfolio of the fictional creator Noa Valmère, phone view",
 } as const;
 
 /* ------------------------------------------------------------------ 1 hero */
@@ -85,7 +90,7 @@ export const HERO = {
   text: "One page that answers what a brand or hotel asks before it replies: who follows you, what you reach, what you have done and how to book you. We build it from your profile and your insights. You approve it. It goes live on your own domain.",
   primary: "Get my page",
   secondary: "Try the live demo",
-  caption: "Demo profile: Noa Valmère, a fictional creator.",
+  caption: "Demo profile: Noa Valmère, a fictional creator. Photos AI-generated.",
   terms: ["Offer and price in writing before we start", "Your domain, your page", "Only numbers you can show"],
 } as const;
 
@@ -149,6 +154,7 @@ export const DEMO_SECTION = {
   ],
   open: "Open the demo in a new tab",
   caption: "Fictional creator. Example data. Photos AI-generated.",
+  action: "Get a page like this",
   devices: { phone: "Phone", desktop: "Desktop" },
   switchLabel: "Demo size",
 } as const;
@@ -327,8 +333,10 @@ export const CREATOR_TIERS: readonly CreatorTier[] = [
       "The same one-page portfolio, built for you",
       "Live on your own domain",
       "Handed over on acceptance: the page is yours",
+      "Hosting set up in your own account, no monthly fee to us",
       "Updates later: add the care plan or book single changes",
     ],
+    ownership: "No subscription. The page is yours from the day you accept it.",
     cta: "Order the one-page",
   },
   {
@@ -343,6 +351,7 @@ export const CREATOR_TIERS: readonly CreatorTier[] = [
       "Media kit PDF generated from the same data as the page",
       "Monthly numbers and a short report",
     ],
+    ownership: "Domain, hosting account and code are in your name at hand-over.",
     cta: "Plan the system",
     withCall: true,
   },
@@ -434,6 +443,41 @@ export const CREATOR_FAQ: readonly { q: string; a: string }[] = [
 
 export const FAQ_SECTION = { label: "Questions", title: "Short answers before you start." } as const;
 
+/* ------------------------------------------------------------------ more services */
+
+/**
+ * Further services for creators (owner's instruction of 2 October 2026): social media management,
+ * social media analytics and custom social media software, all priced on request. Descriptions
+ * state scope only: no results, no client names.
+ */
+export const MORE = {
+  label: "Beyond the page",
+  title: "More for creators, priced on request.",
+  text: "The page is the start. If you want the work behind it done as well, we offer three more services. Scope and price are agreed in writing after a short call.",
+  priceLabel: "Price on request",
+  services: [
+    {
+      id: "management",
+      name: "Social media management",
+      body: "We plan and publish with you: content calendar, captions, scheduling and replies, in your voice. Nothing goes out without your approval.",
+      points: ["Monthly content calendar", "Scheduling and publishing", "Community replies by agreed rules"],
+    },
+    {
+      id: "analytics",
+      name: "Social media analytics",
+      body: "A monthly report that shows what worked: reach, engagement and audience per platform, with source and date, ready to hand to a brand.",
+      points: ["Numbers per platform and format", "What to repeat and what to drop", "The same figures feed your page"],
+    },
+    {
+      id: "software",
+      name: "Social media software, built for you",
+      body: "Software adapted to how you work: for example a content planner, a brand inquiry inbox or a reporting dashboard for you and your team.",
+      points: ["Scoped around your channels and workflow", "Built and tested with your real data", "Written hand-over, yours to keep"],
+    },
+  ],
+  action: "Ask for a quote",
+} as const;
+
 /* ------------------------------------------------------------------ 10 form */
 
 export const FORM_SECTION = {
@@ -459,6 +503,7 @@ export const CREATOR_FORM: CheckFormTexts = {
     `Care plan: ${eurPlain(P.careSetup)} set-up, ${eurPlain(P.careMonthly)} per month`,
     `One-page: ${eurPlain(P.onePage)} once`,
     `Studio system: from ${eurPlain(P.studioFrom)}`,
+    "Social media management, analytics or software: price on request",
     "Not sure yet",
   ],
   goal: "Anything we should know?",

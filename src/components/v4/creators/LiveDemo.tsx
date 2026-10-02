@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { BROWSER_SHELL, BrowserBar, PHONE_SCREEN, PHONE_SHELL, PhoneSpeaker } from "@/components/v4/creators/DeviceFrames";
+import { GetPageButton } from "@/components/v4/creators/AnchorButton";
 import { CREATOR_ANCHORS, DEMO, DEMO_SECTION } from "@/data/v4Creators";
 
 type Device = "phone" | "desktop";
@@ -130,6 +131,7 @@ export function LiveDemo() {
                 </li>
               ))}
             </ol>
+            <GetPageButton label={DEMO_SECTION.action} className="mt-8 w-full sm:w-auto" />
           </div>
         </div>
 

@@ -35,13 +35,3 @@ export function BrowserBar({ address }: { address: string }) {
     </div>
   );
 }
-
-/** A phone with a fixed 1:2 screen. Used for the still image in the hero. */
-export function PhoneFrame({ className, children }: { className?: string; children: React.ReactNode }) {
-  return (
-    <div className={cn(PHONE_SHELL, className)}>
-      <PhoneSpeaker />
-      <div className={cn(PHONE_SCREEN, "aspect-[1/2]")}>{children}</div>
-    </div>
-  );
-}

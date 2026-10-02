@@ -2,13 +2,14 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BOOKING_IS_EXTERNAL, BOOKING_LABEL, BOOKING_URL } from "@/lib/booking";
-import { CHECK_DE, CHECK_LABEL, CHECK_LABEL_SHORT, CHECK_PATH } from "@/lib/check";
+import { CHECK_CREATORS, CHECK_DE, CHECK_LABEL, CHECK_LABEL_SHORT, CHECK_PATH } from "@/lib/check";
 import { v4NavLinks } from "@/lib/v4Routes";
 
 /**
  * V4 global navigation: slim, low-chrome (DESIGN_SYSTEM_PLAN.md §A). Links come from the route
  * registry (src/lib/v4Routes.ts), so only finished pages are linked. The one primary action is
- * "Get a free check"; "Book a 15-min call" is the second action, shown in the mobile menu.
+ * "Get a free check"; "Book a 15-min call" is the second action, shown in the mobile menu. Two pages
+ * have their own primary action: /de (German form on that page) and /creators ("Get my page").
  */
 const NAV_LINKS = v4NavLinks();
 
@@ -22,9 +23,23 @@ export function V4Nav() {
   // The path is the same in the prerender and in the browser, so this is hydration-safe.
   const { pathname } = useLocation();
   const german = pathname === CHECK_DE.prefix || pathname.startsWith(`${CHECK_DE.prefix}/`);
-  const check = german
-    ? { to: CHECK_DE.path, label: CHECK_DE.label, short: CHECK_DE.short }
-    : { to: CHECK_PATH, label: CHECK_LABEL, short: CHECK_LABEL_SHORT };
+  const creators = pathname === CHECK_CREATORS.prefix;
+  // On /creators the action is an anchor on the same page: a plain link, the browser scrolls.
+  const check = creators
+    ? { to: `#${CHECK_CREATORS.anchor}`, label: CHECK_CREATORS.label, short: CHECK_CREATORS.short, anchor: true }
+    : german
+      ? { to: CHECK_DE.path, label: CHECK_DE.label, short: CHECK_DE.short, anchor: false }
+      : { to: CHECK_PATH, label: CHECK_LABEL, short: CHECK_LABEL_SHORT, anchor: false };
+  const action = (className: string, children: string) =>
+    check.anchor ? (
+      <a href={check.to} onClick={closeMenu} className={className}>
+        {children}
+      </a>
+    ) : (
+      <Link to={check.to} onClick={closeMenu} className={className}>
+        {children}
+      </Link>
+    );
 
   return (
     <header className="v4 sticky top-0 z-40 border-b border-v4-ivory/10 bg-v4-ink/90 backdrop-blur">
@@ -54,23 +69,12 @@ export function V4Nav() {
               {l.label}
             </NavLink>
           ))}
-          <Link
-            to={check.to}
-            className="rounded-full bg-v4-signal px-5 py-2 font-v4-sans text-sm font-medium text-v4-ink transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
-          >
-            {check.label}
-          </Link>
+          {action("rounded-full bg-v4-signal px-5 py-2 font-v4-sans text-sm font-medium text-v4-ink transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal", check.label)}
         </nav>
 
         {/* Mobile and tablet: the primary action stays visible next to the menu button */}
         <div className="flex items-center gap-4 lg:hidden">
-          <Link
-            to={check.to}
-            onClick={closeMenu}
-            className="rounded-full bg-v4-signal px-4 py-2 font-v4-sans text-xs font-medium text-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
-          >
-            {check.short}
-          </Link>
+          {action("rounded-full bg-v4-signal px-4 py-2 font-v4-sans text-xs font-medium text-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal", check.short)}
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
@@ -104,13 +108,7 @@ export function V4Nav() {
               {l.label}
             </NavLink>
           ))}
-          <Link
-            to={check.to}
-            onClick={closeMenu}
-            className="mt-6 rounded-full bg-v4-signal px-5 py-3 text-center font-v4-sans text-sm font-medium text-v4-ink"
-          >
-            {check.label}
-          </Link>
+          {action("mt-6 rounded-full bg-v4-signal px-5 py-3 text-center font-v4-sans text-sm font-medium text-v4-ink", check.label)}
           <a
             href={BOOKING_URL}
             {...bookingProps}

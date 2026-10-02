@@ -1,37 +1,30 @@
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { AnchorButton, GetPageButton } from "@/components/v4/creators/AnchorButton";
-import { PhoneFrame } from "@/components/v4/creators/DeviceFrames";
+import { BROWSER_SHELL, BrowserBar } from "@/components/v4/creators/DeviceFrames";
 import { CREATOR_ANCHORS, DEMO, HERO, HERO_PRICES } from "@/data/v4Creators";
-
-/** The pieces of the page that the phone in the hero stands for. Section names, nothing more. */
-const CALLOUTS = [
-  { text: "Numbers with date and source", className: "left-0 top-[16%]" },
-  { text: "Audience charts", className: "right-0 top-[44%]" },
-  { text: "Collab planner", className: "left-2 top-[72%]" },
-] as const;
 
 /**
  * 01 HERO. What it is, the two actions, the three prices and the terms on the left. On the right
- * (below on phones) a still of the demo in a phone frame, labelled as a fictional profile. The H1
- * is the largest element and everything is visible at once: no entrance animation.
+ * (below on phones) two stills of the demo, a browser window and a phone in front of it, labelled
+ * as a fictional profile. The stills show the creator's portrait on purpose: the product is a
+ * glossy page about a person. Everything is visible at once: no entrance animation.
  */
 export function CreatorsHero() {
-  const { phonePreview } = DEMO;
+  const { desktopPreview, phonePortrait } = DEMO;
   return (
     <StateField field="dark" as="section" aria-labelledby="creators-hero" className="overflow-hidden">
-      <div className="mx-auto grid w-full max-w-[1300px] gap-12 px-6 pb-16 pt-10 md:px-10 md:pb-20 md:pt-14 lg:grid-cols-[1.25fr_0.75fr] lg:items-center lg:gap-10">
+      <div className="mx-auto grid w-full max-w-[1300px] gap-12 px-6 pb-16 pt-10 md:px-10 md:pb-20 md:pt-14 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-14">
         <div className="flex flex-col gap-6 md:gap-7">
           <SystemLabel as="p" className="leading-relaxed text-v4-ivory/60">
             {HERO.label}
           </SystemLabel>
           <h1
             id="creators-hero"
-            className="font-v4-sans text-[length:clamp(2.5rem,1.25rem+3.3vw,4.5rem)] font-extrabold leading-[0.97] tracking-tight text-v4-ivory"
+            className="font-v4-sans text-[length:clamp(2.5rem,1.2rem+2.9vw,4.1rem)] font-extrabold leading-[0.98] tracking-tight text-v4-ivory"
           >
-            {HERO.titleLines[0]}
-            <br />
-            {HERO.titleLines[1]}
+            <span className="block text-balance">{HERO.titleLines[0]}</span>{" "}
+            <span className="block text-balance">{HERO.titleLines[1]}</span>
           </h1>
           <p className="max-w-xl font-v4-sans text-[length:var(--v4-text-body)] leading-relaxed text-v4-ivory/70">
             {HERO.text}
@@ -74,34 +67,37 @@ export function CreatorsHero() {
           </ul>
         </div>
 
-        <figure className="relative mx-auto w-full max-w-[380px] lg:max-w-none">
+        <figure className="relative mx-auto w-full max-w-[560px] lg:max-w-none">
           <span
             aria-hidden="true"
             className="absolute left-1/2 top-1/2 h-[70%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-v4-ivory/10 blur-3xl"
           />
-          <PhoneFrame className="relative mx-auto w-[min(100%,300px)] lg:rotate-[3deg]">
-            <img
-              src={phonePreview.src}
-              width={phonePreview.width}
-              height={phonePreview.height}
-              alt={DEMO.phoneAlt}
-              decoding="async"
-              {...{ fetchpriority: "high" }}
-              className="h-full w-full object-cover object-top"
-            />
-          </PhoneFrame>
-          <ul aria-hidden="true" className="hidden lg:block">
-            {CALLOUTS.map((callout) => (
-              <li
-                key={callout.text}
-                className={`absolute flex items-center gap-2 whitespace-nowrap rounded-full border border-v4-ivory/15 bg-v4-ink/85 px-3.5 py-2 font-v4-sans text-xs text-v4-ivory/90 backdrop-blur ${callout.className}`}
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
-                {callout.text}
-              </li>
-            ))}
-          </ul>
-          <figcaption className="relative mt-5 text-center font-v4-sans text-sm text-v4-ivory/60">{HERO.caption}</figcaption>
+          {/* room on the left and at the bottom for the phone that stands in front of the window */}
+          <div className="relative pb-[30%] pl-[12%]">
+            <div className={BROWSER_SHELL}>
+              <BrowserBar address={DEMO.address} />
+              <img
+                src={desktopPreview.src}
+                width={desktopPreview.width}
+                height={desktopPreview.height}
+                alt={DEMO.desktopAlt}
+                decoding="async"
+                {...{ fetchpriority: "high" }}
+                className="block aspect-[16/10] w-full bg-v4-ivory object-cover object-top"
+              />
+            </div>
+            <div className="absolute bottom-0 left-0 w-[28%] rounded-[1.1rem] border border-v4-ivory/25 bg-[#1A1A18] p-[5px] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.9)] sm:rounded-[1.6rem] sm:p-2 lg:-rotate-[4deg]">
+              <img
+                src={phonePortrait.src}
+                width={phonePortrait.width}
+                height={phonePortrait.height}
+                alt={DEMO.phonePortraitAlt}
+                decoding="async"
+                className="block aspect-[1/2] w-full rounded-[0.8rem] bg-v4-ivory object-cover object-top sm:rounded-[1.15rem]"
+              />
+            </div>
+          </div>
+          <figcaption className="relative mt-5 text-center font-v4-sans text-sm text-v4-ivory/60 lg:pl-[12%]">{HERO.caption}</figcaption>
         </figure>
       </div>
     </StateField>

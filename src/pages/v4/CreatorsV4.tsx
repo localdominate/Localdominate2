@@ -7,6 +7,7 @@ import { LiveDemo } from "@/components/v4/creators/LiveDemo";
 import { PageSections } from "@/components/v4/creators/PageSections";
 import { Comparison } from "@/components/v4/creators/Comparison";
 import { PriceCards } from "@/components/v4/creators/PriceCards";
+import { MoreServices } from "@/components/v4/creators/MoreServices";
 import { CreatorRules, CreatorSteps } from "@/components/v4/creators/CreatorSteps";
 import { CreatorForm, CreatorsFaq } from "@/components/v4/creators/CreatorsFaq";
 import { CREATORS_JSON_LD, CREATORS_SEO, CREATORS_URL, CREATOR_ANCHOR_IDS } from "@/data/v4Creators";
@@ -16,7 +17,7 @@ import { CREATORS_JSON_LD, CREATORS_SEO, CREATORS_URL, CREATOR_ANCHOR_IDS } from
  *
  * Top to bottom: what it is and what it costs (hero), what a brand checks, the live demo of a
  * fictional creator, what is on the page, the comparison with what creators use today, the three
- * prices, the four steps, the rules, the FAQ and the request form.
+ * prices, three further services on request, the four steps, the rules, the FAQ and the request form.
  *
  * Differences to the other V4 pages (owner's instruction of 2 October 2026): the primary action is
  * "Get my page", an anchor to the form on this page, and the prices come from v4Creators.ts.
@@ -56,6 +57,7 @@ export default function CreatorsV4() {
       <PageSections />
       <Comparison />
       <PriceCards />
+      <MoreServices />
       <CreatorSteps />
       <CreatorRules />
       <CreatorsFaq />
