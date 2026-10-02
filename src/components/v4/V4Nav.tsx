@@ -1,8 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { BOOKING_IS_EXTERNAL, BOOKING_LABEL, BOOKING_URL } from "@/lib/booking";
-import { CHECK_LABEL, CHECK_PATH } from "@/lib/check";
+import { CHECK_DE, CHECK_LABEL, CHECK_LABEL_SHORT, CHECK_PATH } from "@/lib/check";
 import { v4NavLinks } from "@/lib/v4Routes";
 
 /**
@@ -19,6 +19,12 @@ const focusRing = "focus-visible:outline focus-visible:outline-2 focus-visible:o
 export function V4Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+  // The path is the same in the prerender and in the browser, so this is hydration-safe.
+  const { pathname } = useLocation();
+  const german = pathname === CHECK_DE.prefix || pathname.startsWith(`${CHECK_DE.prefix}/`);
+  const check = german
+    ? { to: CHECK_DE.path, label: CHECK_DE.label, short: CHECK_DE.short }
+    : { to: CHECK_PATH, label: CHECK_LABEL, short: CHECK_LABEL_SHORT };
 
   return (
     <header className="v4 sticky top-0 z-40 border-b border-v4-ivory/10 bg-v4-ink/90 backdrop-blur">
@@ -49,21 +55,21 @@ export function V4Nav() {
             </NavLink>
           ))}
           <Link
-            to={CHECK_PATH}
+            to={check.to}
             className="rounded-full bg-v4-signal px-5 py-2 font-v4-sans text-sm font-medium text-v4-ink transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
           >
-            {CHECK_LABEL}
+            {check.label}
           </Link>
         </nav>
 
         {/* Mobile and tablet: the primary action stays visible next to the menu button */}
         <div className="flex items-center gap-4 lg:hidden">
           <Link
-            to={CHECK_PATH}
+            to={check.to}
             onClick={closeMenu}
             className="rounded-full bg-v4-signal px-4 py-2 font-v4-sans text-xs font-medium text-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
           >
-            Free check
+            {check.short}
           </Link>
           <button
             type="button"
@@ -99,11 +105,11 @@ export function V4Nav() {
             </NavLink>
           ))}
           <Link
-            to={CHECK_PATH}
+            to={check.to}
             onClick={closeMenu}
             className="mt-6 rounded-full bg-v4-signal px-5 py-3 text-center font-v4-sans text-sm font-medium text-v4-ink"
           >
-            {CHECK_LABEL}
+            {check.label}
           </Link>
           <a
             href={BOOKING_URL}

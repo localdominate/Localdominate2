@@ -67,7 +67,7 @@ export function VideoPlayer({
             width={width}
             height={height}
             loading={priority ? "eager" : "lazy"}
-            fetchPriority={priority ? "high" : "auto"}
+            {...{ fetchpriority: priority ? "high" : "auto" }}
             decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
           />

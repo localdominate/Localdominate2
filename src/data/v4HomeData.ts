@@ -35,17 +35,17 @@ export const WORLDS = [
   {
     anchor: "holiday-rentals",
     title: "Holiday rentals",
-    body: "Hosts with several properties pay commission on every platform booking. An own booking page gives guests a direct way to book.",
+    body: "Hosts with several properties pay a fee on every platform booking. An own booking page gives guests a direct way to book.",
   },
   {
     anchor: "trades",
     title: "Trades",
-    body: "Most jobs come by recommendation. The Google profile and the website are where a recommended business gets checked.",
+    body: "A recommendation ends at your Google profile and your website. We make sure what the customer finds there matches the recommendation.",
   },
   {
     anchor: "premium-services",
     title: "Premium local services",
-    body: "A considered purchase needs credibility before the first contact. Proof comes before the pitch.",
+    body: "When customers choose carefully, the profile and the website explain who you are and what you do before the first call.",
   },
 ] as const;
 
@@ -53,4 +53,4 @@ export const WORLDS = [
 export const HERO_OFFER_ORDER = ["website-5-days", "conversion-sprint", "ai-automation-starter", "google-profile"] as const;
 
 /** Terms shown under the hero buttons. Each one is spelled out in "How we work" further down. */
-export const HERO_TERMS = ["Price in writing before we start", "Everything belongs to you", "Cancel monthly"] as const;
+export const HERO_TERMS = ["Price in writing before we start", "Everything belongs to you", "Ongoing care cancellable monthly"] as const;

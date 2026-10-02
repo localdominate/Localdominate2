@@ -44,6 +44,9 @@ const homeCases = publishedCases().filter((c) => !c.hasVideo).slice(0, 3);
 
 // Until /industries is finished, the worlds link to the offers instead.
 const industries = v4Route("industries");
+// Until /insights is finished, "Insights" points at the existing blog index.
+const insights = v4Route("insights");
+const insightsHref = insights.ready ? insights.path : "/blog";
 const worldHref = (anchor: string) => (industries.ready ? `${industries.path}#${anchor}` : "/services");
 
 const sectionLabel = "mb-6 block";
@@ -162,7 +165,7 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
               </h2>
               <p className="mt-6 max-w-md font-v4-sans text-[length:var(--v4-text-body)] leading-relaxed text-v4-ink/70">
                 Each job can be done well and still not add up, because nobody owns the hand-overs
-                between them. These are the five questions that usually have no owner.
+                between them. Check whether someone owns these five questions.
               </p>
             </div>
             <ol className="flex flex-col self-end">
@@ -269,7 +272,7 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
               <div className="relative min-h-[240px]">
                 <img
                   src={journeyImg}
-                  alt="A road winding through a forested mountain valley toward a lake"
+                  alt="Illustration: a mountain lake at sunset, framed by pine trees"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -319,7 +322,7 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
                 <Link to="/services" className={`${textLink} text-v4-ink/70`}>
                   See services and prices →
                 </Link>
-                <Link to="/blog" className={`${textLink} text-v4-ink/70`}>
+                <Link to={insightsHref} className={`${textLink} text-v4-ink/70`}>
                   Explore Insights →
                 </Link>
               </div>

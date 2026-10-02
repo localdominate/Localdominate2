@@ -12,7 +12,7 @@ const SITE = "https://localdominate.org";
 const PAGE_URL = `${SITE}${CHECK_PATH}`;
 const TITLE = "Get a Free Check: Start a Project";
 const DESCRIPTION =
-  "Request a free check of your Google profile or website. Send your link and get up to three concrete points to fix first, each with a reason. No obligation.";
+  "Send the link to your Google profile or website. We check it by hand and email you up to three points to fix first, each with a reason. No obligation.";
 
 const JSON_LD = {
   "@context": "https://schema.org",
@@ -68,11 +68,11 @@ export default function StartProjectV4() {
               id="check-title"
               className="font-v4-sans text-[length:var(--v4-text-major)] font-extrabold leading-[0.98] tracking-tight text-v4-ivory"
             >
-              Get a free check.
+              Get a free check of your Google profile or website.
             </h1>
             <p className="max-w-lg font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">
-              Send us the link to your Google profile or your website. We tell you what we would fix
-              first and why, by email within {CHECK_REPLY_TIME}. You owe us nothing for it.
+              Send us the link. We tell you by email what we would fix first and why, within{" "}
+              {CHECK_REPLY_TIME}. You owe us nothing for it.
             </p>
             <ul className="flex max-w-lg flex-col">
               {WHAT_YOU_GET.map((point) => (

@@ -30,11 +30,11 @@ export const V4_ROUTES: readonly V4Route[] = [
   { id: "approach", path: "/approach", label: "Approach", ready: true, nav: true },
   { id: "services", path: "/services", label: "Services", ready: true, nav: true },
   { id: "work", path: "/work", label: "Work", ready: true, nav: true },
-  { id: "industries", path: "/industries", label: "Industries", ready: false, nav: true },
+  { id: "industries", path: "/industries", label: "Industries", ready: true, nav: true },
   { id: "insights", path: "/insights", label: "Insights", ready: false, nav: true },
-  { id: "about", path: "/about", label: "About", ready: false, nav: true },
+  { id: "about", path: "/about", label: "About", ready: true, nav: true },
   { id: "start", path: "/start-a-project", label: "Free check", ready: true, nav: false },
-  { id: "de", path: "/de", label: "Deutsch", ready: false, nav: false },
+  { id: "de", path: "/de", label: "Deutsch", ready: true, nav: false },
 ] as const;
 
 export const v4Route = (id: V4RouteId): V4Route => {
