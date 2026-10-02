@@ -4,8 +4,10 @@ import { cn } from "@/lib/utils";
 import type { DeSegment, SegmentId } from "@/data/v4De";
 
 /**
- * Segment-Weiche: drei Felder, genau eines ist gewählt (Radiogruppe mit Pfeiltasten).
- * Startzustand ist immer dasselbe Segment, damit Vorrendern und Hydration übereinstimmen.
+ * Segment-Weiche: drei Felder, genau eines ist gewählt (Radiogruppe mit Pfeiltasten, ein
+ * Tabstopp). Sie steht über allem, was sie ändert, damit beim Wechsel nichts unter dem Finger
+ * verrutscht. Auf dem Handy drei volle Zeilen, ab 768 px drei Spalten.
+ * Der Startzustand ist immer dasselbe Segment, damit Vorrendern und Hydration übereinstimmen.
  */
 export function DeSegmentPicker({
   segments,
@@ -20,24 +22,30 @@ export function DeSegmentPicker({
 }) {
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  const move = (from: number, step: number) => {
-    const next = (from + step + segments.length) % segments.length;
-    onChange(segments[next].id);
-    refs.current[next]?.focus();
+  const select = (index: number) => {
+    onChange(segments[index].id);
+    refs.current[index]?.focus();
   };
 
   const onKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
-    if (event.key === "ArrowDown" || event.key === "ArrowRight") {
-      event.preventDefault();
-      move(index, 1);
-    } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
-      event.preventDefault();
-      move(index, -1);
-    }
+    const last = segments.length - 1;
+    const next =
+      event.key === "ArrowDown" || event.key === "ArrowRight"
+        ? index === last ? 0 : index + 1
+        : event.key === "ArrowUp" || event.key === "ArrowLeft"
+          ? index === 0 ? last : index - 1
+          : event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? last
+              : null;
+    if (next === null) return;
+    event.preventDefault();
+    select(next);
   };
 
   return (
-    <div role="radiogroup" aria-labelledby={labelId} className="flex flex-col gap-2">
+    <div role="radiogroup" aria-labelledby={labelId} className="grid gap-2 md:grid-cols-3 md:gap-3">
       {segments.map((segment, index) => {
         const active = segment.id === value;
         return (
@@ -53,17 +61,15 @@ export function DeSegmentPicker({
             onClick={() => onChange(segment.id)}
             onKeyDown={(event) => onKeyDown(event, index)}
             className={cn(
-              "flex min-h-14 items-center gap-4 rounded-xl border px-5 py-3 text-left font-v4-sans text-base transition-[border-color,background-color,color] duration-200",
+              "flex min-h-16 items-center gap-4 rounded-xl border px-4 py-3 text-left transition-[border-color,background-color] duration-200 md:items-start md:px-5 md:py-4",
               "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal",
-              active
-                ? "border-v4-signal bg-v4-ivory/10 text-v4-ivory"
-                : "border-v4-ivory/25 text-v4-ivory/80 hover:border-v4-ivory/60 hover:text-v4-ivory"
+              active ? "border-v4-signal bg-v4-ivory/10" : "border-v4-ivory/25 hover:border-v4-ivory/60"
             )}
           >
             <span
               aria-hidden="true"
               className={cn(
-                "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-200",
+                "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-200 md:mt-0.5",
                 active ? "border-v4-signal" : "border-v4-ivory/50"
               )}
             >
@@ -74,7 +80,12 @@ export function DeSegmentPicker({
                 )}
               />
             </span>
-            {segment.choice}
+            <span className="flex flex-col gap-1">
+              <span className={cn("font-v4-sans text-base font-medium leading-snug", active ? "text-v4-ivory" : "text-v4-ivory/85")}>
+                {segment.choice}
+              </span>
+              <span className="font-v4-sans text-sm leading-snug text-v4-ivory/60">{segment.choiceNote}</span>
+            </span>
           </button>
         );
       })}
