@@ -11,3 +11,9 @@ export const CHECK_LABEL_SHORT = "Free check";
 export const CHECK_DE = { prefix: "/de", path: "/de#check", label: "Kostenlosen Check anfordern", short: "Check" } as const;
 /** Reply time promised for the free check (owner decision, 2026-10-02). Change it here only. */
 export const CHECK_REPLY_TIME = "two working days";
+
+/**
+ * On the creators landing page the primary action is "Get my page", an anchor to the request form
+ * on that page (owner's instruction of 2026-10-02). The navigation follows it there.
+ */
+export const CHECK_CREATORS = { prefix: "/creators", anchor: "get-yours", label: "Get my page", short: "Get my page" } as const;
