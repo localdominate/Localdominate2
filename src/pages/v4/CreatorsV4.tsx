@@ -51,6 +51,7 @@ export default function CreatorsV4() {
         canonicalUrl={CREATORS_URL}
         lang="en"
         jsonLd={CREATORS_JSON_LD}
+        ogImage="https://localdominate.org/images/v4/social/ld-social-creators-1200x630.jpg"
       />
       <CreatorsHero />
       <BrandAnswers />

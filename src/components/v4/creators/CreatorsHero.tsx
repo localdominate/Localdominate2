@@ -51,6 +51,8 @@ export function CreatorsHero() {
               <BrowserBar address={DEMO.address} />
               <img
                 src={desktopPreview.src}
+                srcSet={`${desktopPreview.small} 800w, ${desktopPreview.src} 1600w`}
+                sizes="(min-width: 1024px) 480px, 70vw"
                 width={desktopPreview.width}
                 height={desktopPreview.height}
                 alt={DEMO.desktopAlt}
@@ -62,10 +64,13 @@ export function CreatorsHero() {
             <div className="absolute bottom-0 left-0 w-[44%] -rotate-[3deg] rounded-[1.4rem] border border-v4-ivory/25 bg-[#1A1A18] p-[6px] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.9)] ring-1 ring-inset ring-white/10 sm:rounded-[1.9rem] sm:p-2 lg:w-[26%] lg:-rotate-[4deg] lg:rounded-[1.6rem]">
               <img
                 src={phonePortrait.src}
+                srcSet={`${phonePortrait.small} 390w, ${phonePortrait.src} 780w`}
+                sizes="(min-width: 1024px) 170px, 44vw"
                 width={phonePortrait.width}
                 height={phonePortrait.height}
                 alt={DEMO.phonePortraitAlt}
                 decoding="async"
+                {...{ fetchpriority: "high" }}
                 className="block aspect-[1/2] w-full rounded-[1.05rem] bg-v4-ivory object-cover object-top sm:rounded-[1.45rem] lg:rounded-[1.15rem]"
               />
             </div>

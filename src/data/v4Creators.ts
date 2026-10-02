@@ -74,9 +74,14 @@ export const DEMO = {
   iframeTitle: "Demo portfolio of the fictional creator Noa Valmère",
   address: "noavalmere.example",
   phonePreview: { src: "/creator-demo/preview-phone.webp", width: 780, height: 1560 },
-  desktopPreview: { src: "/creator-demo/preview-desktop.webp", width: 1600, height: 1000 },
+  desktopPreview: { src: "/creator-demo/preview-desktop.webp", small: "/creator-demo/preview-desktop-800.webp", width: 1600, height: 1000 },
   /** Phone still further down the page, where the portrait is in view. Used in the hero only. */
-  phonePortrait: { src: "/creator-demo/preview-phone-portrait.webp", width: 780, height: 1560 },
+  phonePortrait: {
+    src: "/creator-demo/preview-phone-portrait.webp",
+    small: "/creator-demo/preview-phone-portrait-390.webp",
+    width: 780,
+    height: 1560,
+  },
   phoneAlt: "First screen of the demo portfolio of the fictional creator Noa Valmère, phone view",
   desktopAlt: "First screen of the demo portfolio of the fictional creator Noa Valmère, desktop view",
   phonePortraitAlt: "Portrait section of the demo portfolio of the fictional creator Noa Valmère, phone view",
