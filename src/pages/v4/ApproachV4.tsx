@@ -240,7 +240,7 @@ export default function ApproachV4() {
             Which project covered which step
           </h2>
           <p className="mt-4 max-w-2xl font-v4-sans text-sm text-v4-ink/70">
-            A dot means the project included that step. Open a step to read what exactly was done. Only
+            A marked step means the project included it. Open a step to read what exactly was done. Only
             published projects are listed, and Aurelian Grand is our own concept, not a client.
           </p>
           <div className="mt-10">
