@@ -3,7 +3,7 @@ import { SystemLabel } from "@/components/v4/SystemLabel";
 import { CREATOR_ANCHORS, RULES, STEPS } from "@/data/v4Creators";
 
 /**
- * 07 HOW IT WORKS. Four steps on one line: a rail with the numbers, the text below. On a phone the
+ * HOW IT WORKS. Four steps on one line: a rail with the numbers, the text below. On a phone the
  * rail runs down the left edge. The reply time comes from CHECK_REPLY_TIME (via v4Creators.ts).
  */
 export function CreatorSteps() {
@@ -56,7 +56,7 @@ export function CreatorSteps() {
 const ruleLink =
   "text-v4-ivory underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal";
 
-/** 08 OUR RULES. The truth rule of the product, stated to the customer. Short on purpose. */
+/** OUR RULES. The truth rule of the product, stated to the customer. Short on purpose. */
 export function CreatorRules() {
   return (
     <StateField field="dark" as="section" id={CREATOR_ANCHORS.rules} aria-labelledby="creators-rules" className="scroll-mt-16">

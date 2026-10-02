@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
  * strings are exported so the live demo can change the frame around one and the same iframe.
  */
 export const PHONE_SHELL =
-  "rounded-[2.6rem] border border-v4-ivory/20 bg-[#1A1A18] p-2.5 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.9)]";
+  "rounded-[2.6rem] border border-v4-ivory/20 bg-[#1A1A18] p-2.5 shadow-[0_40px_90px_-30px_rgba(0,0,0,0.9)] ring-1 ring-inset ring-white/10";
 export const PHONE_SCREEN = "overflow-hidden rounded-[2rem] bg-v4-ivory";
 export const BROWSER_SHELL =
-  "overflow-hidden rounded-2xl border border-v4-ivory/20 bg-[#1A1A18] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.9)]";
+  "overflow-hidden rounded-2xl border border-v4-ivory/20 bg-[#1A1A18] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.9)] ring-1 ring-inset ring-white/10";
 
 /** The speaker slit in the top edge of the phone. It sits in the bezel, so it never covers the page. */
 export function PhoneSpeaker() {

@@ -63,7 +63,7 @@ export const CREATOR_ANCHOR_IDS: readonly string[] = Object.values(CREATOR_ANCHO
 
 export const CREATORS_SEO = {
   title: "Creator Portfolio and Media Kit Pages",
-  description: `We build your creator portfolio as a live page: numbers with date and source, audience, past work and a collab planner. ${eurPlain(P.careSetup)} set-up or ${eurPlain(P.onePage)} once.`,
+  description: `We build your creator portfolio as a live page: numbers with date and source, audience, past work and a collab planner. ${eurPlain(P.onePage)} once or ${eurPlain(P.careMonthly)} per month.`,
 } as const;
 
 /* ------------------------------------------------------------------ demo */
@@ -86,17 +86,20 @@ export const DEMO = {
 
 export const HERO = {
   label: "For creators · Portfolio and media kit pages",
-  titleLines: ["Your media kit as a live page.", "Built for you, kept current."],
-  text: "One page that answers what a brand or hotel asks before it replies: who follows you, what you reach, what you have done and how to book you. We build it from your profile and your insights. You approve it. It goes live on your own domain.",
+  titleLines: ["Your media kit as a live page.", "We build it for you."],
+  text: "One link that shows a brand who follows you, what you reach, what you have done and how to book you. Nothing goes live until you approve it.",
   primary: "Get my page",
   secondary: "Try the live demo",
   caption: "Demo profile: Noa Valmère, a fictional creator. Photos AI-generated.",
-  terms: ["Offer and price in writing before we start", "Your domain, your page", "Only numbers you can show"],
+  terms: ["Preview before anything is public", "No password, screenshots are enough", "Your domain, in your name"],
 } as const;
 
-/** The three offers in one row. The figure is the typographic part, the note names the offer. */
+/**
+ * The three offers in one row. The figure is the typographic part, the note names the offer.
+ * "0 € set-up" never stands without the monthly fee and the minimum term.
+ */
 export const HERO_PRICES: readonly { figure: string; note: string }[] = [
-  { figure: `${eur(P.careSetup)} set-up`, note: `with the care plan, ${eur(P.careMonthly)} per month` },
+  { figure: `${eur(P.careSetup)} set-up`, note: `Care plan: then ${eur(P.careMonthly)} per month, ${P.careMinimumMonths} months minimum` },
   { figure: `${eur(P.onePage)} once`, note: "One-page" },
   { figure: `from ${eur(P.studioFrom)}`, note: "Studio system" },
 ];
@@ -105,7 +108,7 @@ export const HERO_PRICES: readonly { figure: string; note: string }[] = [
 
 export const WHY = {
   label: "What brands check",
-  title: "A brand wants five answers. A link list gives none of them.",
+  title: "A brand wants five answers. A plain link list gives none of them.",
   text: "Guides for creators from Hootsuite, Later and Shopify list the same things a media kit should show. Your page puts them on one screen, each with date and source.",
   answers: [
     {
@@ -130,7 +133,7 @@ export const WHY = {
   },
   contrasts: [
     "A PDF answers these once. Then your numbers change.",
-    "A link list sends fans to your links. It does not answer a brand.",
+    "A plain link list sends fans to your links. It does not answer a brand.",
   ],
   sources: [
     { name: "Hootsuite", date: "Sep 2025", url: "https://blog.hootsuite.com/influencer-media-kit/" },
@@ -144,7 +147,8 @@ export const WHY = {
 export const DEMO_SECTION = {
   label: "Live demo",
   title: "Try the page before you ask for yours.",
-  text: "This is a complete page for Noa Valmère, a creator we invented for this demo. Her numbers, brands and quotes are examples and her photos are AI-generated. Everything you can click here, we build for you with your own content.",
+  text: "This is a complete page for Noa Valmère, a creator we invented for this demo. Her numbers, brands and quotes are examples and her photos are AI-generated. Your page is built from the same parts with your own content. Which parts you need is settled in the written offer.",
+  scale: "Noa is drawn as a large travel account. Your page uses your own numbers and rates, at 20K followers or at 2M. Rates can also read “on request”.",
   tryLabel: "Things to try",
   tries: [
     "Pull the ribbon in the first screen.",
@@ -153,6 +157,7 @@ export const DEMO_SECTION = {
     "Open the travel map and scrub through a hotel stay.",
   ],
   open: "Open the demo in a new tab",
+  openShort: "Open the live demo",
   caption: "Fictional creator. Example data. Photos AI-generated.",
   action: "Get a page like this",
   devices: { phone: "Phone", desktop: "Desktop" },
@@ -163,7 +168,7 @@ export const DEMO_SECTION = {
 
 export const INCLUDED = {
   label: "What you get",
-  title: "Twelve sections, written and built for you.",
+  title: "What is on your page.",
   cards: [
     {
       icon: "numbers",
@@ -218,7 +223,13 @@ export const COMPARE = {
       id: "link-in-bio",
       name: "Link-in-bio tool",
       ours: false,
-      values: ["Fans who want your links", "You", "No", "You update", "On paid plans"],
+      values: [
+        "Fans who want your links",
+        "You",
+        "Not in a plain link list. Some tools add a media kit on paid plans.",
+        "You update",
+        "On paid plans",
+      ],
     },
     {
       id: "pdf",
@@ -275,17 +286,18 @@ export type CreatorTier = {
   name: string;
   /** Only the care plan carries a label. It names a fact (lowest first payment), not popularity. */
   badge?: string;
-  price: { prefix?: string; figure: string; unit?: string };
+  /** The small word (SET-UP / ONCE / FROM) stands above the figure, so the three figures line up. */
+  price: { overline: string; figure: string };
   /** Second price line of the care plan: the monthly fee. */
-  then?: { figure: string; unit: string };
+  then?: { prefix: string; figure: string; unit: string };
   terms: string;
   /** Printed in full weight right after the terms: the first-year total of the care plan. */
   total?: string;
   includes: readonly string[];
   ownership?: string;
   cta: string;
-  /** The Studio system is scoped in a call, so its card also offers the 15-minute call. */
-  withCall?: boolean;
+  /** The Studio system is scoped in a call, so its card also links to the 15-minute call. */
+  callLink?: string;
 };
 
 export const PRICES_SECTION = {
@@ -310,9 +322,9 @@ export const CREATOR_TIERS: readonly CreatorTier[] = [
     id: "care",
     name: "Care plan",
     badge: "Lowest start",
-    price: { figure: eur(P.careSetup), unit: "set-up" },
-    then: { figure: eur(P.careMonthly), unit: "per month" },
-    terms: `${P.careMinimumMonths}-month minimum term, then cancel monthly.`,
+    price: { overline: "set-up", figure: eur(P.careSetup) },
+    then: { prefix: "then", figure: eur(P.careMonthly), unit: "per month" },
+    terms: `${P.careMinimumMonths}-month minimum term from the day your page goes live, then cancel monthly.`,
     total: `First year: ${eur(CARE_FIRST_YEAR)}.`,
     includes: [
       "Your one-page portfolio, built for you",
@@ -327,7 +339,7 @@ export const CREATOR_TIERS: readonly CreatorTier[] = [
   {
     id: "one-page",
     name: "One-page",
-    price: { figure: eur(P.onePage), unit: "once" },
+    price: { overline: "once", figure: eur(P.onePage) },
     terms: "50 % on order, 50 % on acceptance. One revision round included.",
     includes: [
       "The same one-page portfolio, built for you",
@@ -342,7 +354,7 @@ export const CREATOR_TIERS: readonly CreatorTier[] = [
   {
     id: "studio",
     name: "Studio system",
-    price: { prefix: "from", figure: eur(P.studioFrom) },
+    price: { overline: "from", figure: eur(P.studioFrom) },
     terms: `Typical range ${amount(P.studioFrom)} to ${eur(P.studioTo)}. Scope and fixed price after a short call.`,
     includes: [
       "Multi-page site with a page per collaboration",
@@ -353,7 +365,7 @@ export const CREATOR_TIERS: readonly CreatorTier[] = [
     ],
     ownership: "Domain, hosting account and code are in your name at hand-over.",
     cta: "Plan the system",
-    withCall: true,
+    callLink: "Or book a 15-min call",
   },
 ];
 
@@ -483,8 +495,10 @@ export const MORE = {
 export const FORM_SECTION = {
   label: "Get your page",
   title: `Send your handle. We answer within ${CHECK_REPLY_TIME}.`,
-  text: "You get a written offer and the short list of what we need from you. No obligation.",
+  text: "You get a written offer and the short list of what we need from you. Sending this costs nothing and commits you to nothing.",
   callTitle: "Prefer to talk first?",
+  /** The sentence after the name is taken from the verified copy of /about (PRINCIPLES in v4About.ts). */
+  who: { lead: "Behind LocalDominate: Markus Wimböck.", link: "About Markus" },
 } as const;
 
 /**
@@ -500,7 +514,7 @@ export const CREATOR_FORM: CheckFormTexts = {
   businessType: "Which option interests you?",
   businessTypePlaceholder: "Please choose",
   businessTypes: [
-    `Care plan: ${eurPlain(P.careSetup)} set-up, ${eurPlain(P.careMonthly)} per month`,
+    `Care plan: ${eurPlain(P.careSetup)} set-up, ${eurPlain(P.careMonthly)} per month, ${P.careMinimumMonths} months minimum`,
     `One-page: ${eurPlain(P.onePage)} once`,
     `Studio system: from ${eurPlain(P.studioFrom)}`,
     "Social media management, analytics or software: price on request",

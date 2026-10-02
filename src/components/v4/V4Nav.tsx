@@ -43,7 +43,7 @@ export function V4Nav() {
 
   return (
     <header className="v4 sticky top-0 z-40 border-b border-v4-ivory/10 bg-v4-ink/90 backdrop-blur">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-2.5 md:px-10 lg:py-4">
         <Link
           to="/"
           onClick={closeMenu}
@@ -74,13 +74,13 @@ export function V4Nav() {
 
         {/* Mobile and tablet: the primary action stays visible next to the menu button */}
         <div className="flex items-center gap-4 lg:hidden">
-          {action("rounded-full bg-v4-signal px-4 py-2 font-v4-sans text-xs font-medium text-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal", check.short)}
+          {action("inline-flex min-h-[44px] items-center rounded-full bg-v4-signal px-4 py-2 font-v4-sans text-xs font-medium text-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal", check.short)}
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen}
             aria-controls="v4-mobile-menu"
-            className={cn("py-2 font-v4-mono text-xs uppercase tracking-widest text-v4-ivory", focusRing)}
+            className={cn("inline-flex min-h-[44px] items-center py-2 font-v4-mono text-xs uppercase tracking-widest text-v4-ivory", focusRing)}
           >
             {menuOpen ? "Close" : "Menu"}
           </button>

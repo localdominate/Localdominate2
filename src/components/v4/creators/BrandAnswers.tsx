@@ -6,7 +6,7 @@ const externalLink =
   "underline underline-offset-4 hover:text-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-ink";
 
 /**
- * 02 WHAT BRANDS CHECK. The page is positioned against the checklist of the person who decides on
+ * WHAT BRANDS CHECK. The page is positioned against the checklist of the person who decides on
  * a collaboration, not against other tools. The one quote and the three guides are real and
  * linked. Nothing else is attributed to anyone.
  */
@@ -35,8 +35,13 @@ export function BrandAnswers() {
               >
                 {WHY.quote.text}
               </blockquote>
-              <figcaption className="mt-3 font-v4-sans text-sm text-v4-ink/70">
-                <a href={WHY.quote.url} target="_blank" rel="noopener noreferrer" className={externalLink}>
+              <figcaption className="mt-1 font-v4-sans text-sm text-v4-ink/70">
+                <a
+                  href={WHY.quote.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${externalLink} inline-flex min-h-[44px] items-center`}
+                >
                   {WHY.quote.source}
                 </a>
               </figcaption>
@@ -54,18 +59,19 @@ export function BrandAnswers() {
                   <h3 className="font-v4-sans text-lg font-semibold leading-snug tracking-tight text-v4-ink">
                     {answer.title}
                   </h3>
-                  <p className="col-start-2 mt-1 font-v4-sans text-base leading-relaxed text-v4-ink/70 sm:col-start-3 sm:mt-0">
+                  <p className="col-start-2 mt-1 font-v4-sans text-sm leading-relaxed text-v4-ink/70 sm:col-start-3 sm:mt-0 sm:text-base">
                     {answer.body}
                   </p>
                 </li>
               ))}
             </ol>
 
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+            {/* one card with a hairline on phones, two cards from 640 px */}
+            <ul className="mt-8 rounded-2xl border border-v4-ink/10 bg-v4-white sm:grid sm:grid-cols-2 sm:gap-4 sm:rounded-none sm:border-0 sm:bg-transparent">
               {WHY.contrasts.map((contrast) => (
                 <li
                   key={contrast}
-                  className="flex gap-4 rounded-2xl border border-v4-ink/10 bg-v4-white p-6 font-v4-serif text-[length:var(--v4-text-subhead)] leading-[1.15] text-v4-ink"
+                  className="flex gap-4 border-t border-v4-ink/10 p-5 font-v4-serif text-[length:var(--v4-text-subhead)] leading-[1.15] text-v4-ink first:border-t-0 sm:rounded-2xl sm:border sm:bg-v4-white sm:p-6 sm:first:border-t"
                 >
                   <span aria-hidden="true" className="mt-[0.55em] h-px w-5 shrink-0 bg-v4-ink/40" />
                   {contrast}
@@ -73,19 +79,25 @@ export function BrandAnswers() {
               ))}
             </ul>
 
-            <p className="mt-6 font-v4-sans text-xs leading-relaxed text-v4-ink/60">
-              Sources:{" "}
-              {WHY.sources.map((source, i) => (
-                <span key={source.name}>
-                  {i > 0 && ", "}
-                  <a href={source.url} target="_blank" rel="noopener noreferrer" className={externalLink}>
-                    {source.name}
-                  </a>{" "}
-                  ({source.date})
-                </span>
-              ))}
-              . Links open in a new tab.
-            </p>
+            <div className="mt-5 font-v4-sans text-xs leading-relaxed text-v4-ink/60 sm:mt-6">
+              <ul aria-label="Sources" className="flex flex-wrap items-center gap-x-5">
+                <li aria-hidden="true">Sources:</li>
+                {WHY.sources.map((source) => (
+                  <li key={source.name}>
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${externalLink} inline-flex min-h-[44px] items-center`}
+                    >
+                      {source.name}
+                    </a>{" "}
+                    ({source.date})
+                  </li>
+                ))}
+              </ul>
+              <p>Links open in a new tab.</p>
+            </div>
           </div>
         </div>
       </div>

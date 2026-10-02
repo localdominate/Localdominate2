@@ -64,58 +64,55 @@ function Icon({ name }: { name: PageSectionIcon }) {
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-6 w-6"
+      className="mt-0.5 h-5 w-5 shrink-0 text-v4-ink"
     >
       {ICON_PATHS[name]}
     </svg>
   );
 }
 
-/** 04 WHAT IS ON YOUR PAGE. Eight cards that name the parts of the page the demo shows. */
+/**
+ * WHAT IS ON YOUR PAGE. Eight parts of the page as hairline rows: icon, name, one sentence.
+ * Two columns from 768 px. On phones the rows become compact tiles in two columns that show icon
+ * and name; the sentence stays in the HTML and appears from 640 px.
+ */
 export function PageSections() {
   return (
     <StateField field="light" as="section" id={CREATOR_ANCHORS.included} aria-labelledby="creators-included" className="scroll-mt-16">
-      <div className="mx-auto max-w-[1300px] px-6 py-20 md:px-10 md:py-28">
-        <SystemLabel as="p" className="mb-6 block text-v4-ink/60">
-          {INCLUDED.label}
-        </SystemLabel>
-        <h2
-          id="creators-included"
-          className="max-w-3xl text-balance font-v4-serif text-[length:var(--v4-text-heading)] font-normal leading-[1.08] text-v4-ink"
-        >
-          {INCLUDED.title}
-        </h2>
+      <div className="mx-auto grid max-w-[1300px] gap-10 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div>
+          <SystemLabel as="p" className="mb-6 block text-v4-ink/60">
+            {INCLUDED.label}
+          </SystemLabel>
+          <h2
+            id="creators-included"
+            className="text-balance font-v4-serif text-[length:var(--v4-text-heading)] font-normal leading-[1.08] text-v4-ink"
+          >
+            {INCLUDED.title}
+          </h2>
+          <p className="mt-6 max-w-md font-v4-sans text-[length:var(--v4-text-body)] leading-relaxed text-v4-ink/70">
+            {INCLUDED.line}
+          </p>
+        </div>
 
-        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-          {INCLUDED.cards.map((card, i) => (
-            <li
-              key={card.title}
-              className="grid grid-cols-[2.75rem_1fr] gap-x-4 rounded-2xl border border-v4-ink/10 bg-v4-white p-5 sm:block sm:p-6"
-            >
-              <div className="flex items-start justify-between sm:mb-8">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-v4-ivory text-v4-ink">
-                  <Icon name={card.icon} />
-                </span>
-                <SystemLabel className="hidden pt-1 text-v4-ink/60 sm:block">{String(i + 1).padStart(2, "0")}</SystemLabel>
-              </div>
+        <ul className="grid grid-cols-2 gap-x-5 border-b border-v4-ink/15 sm:grid-cols-1 md:grid-cols-2 md:gap-x-10">
+          {INCLUDED.cards.map((card) => (
+            <li key={card.title} className="flex gap-3 border-t border-v4-ink/15 py-4 sm:gap-4 sm:py-5">
+              <Icon name={card.icon} />
               <div>
-                <h3 className="font-v4-sans text-lg font-semibold leading-snug tracking-tight text-v4-ink">{card.title}</h3>
-                <p className="mt-2 font-v4-sans text-sm leading-relaxed text-v4-ink/70">{card.body}</p>
+                <h3 className="font-v4-sans text-base font-semibold leading-snug tracking-tight text-v4-ink">{card.title}</h3>
+                <p className="mt-1.5 hidden font-v4-sans text-sm leading-relaxed text-v4-ink/70 sm:block">{card.body}</p>
               </div>
             </li>
           ))}
-        </ol>
-
-        <p className="mt-10 border-t border-v4-ink/15 pt-6 font-v4-serif text-[length:var(--v4-text-subhead)] leading-[1.15] text-v4-ink">
-          {INCLUDED.line}
-        </p>
+        </ul>
       </div>
     </StateField>
   );

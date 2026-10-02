@@ -16,8 +16,9 @@ import { CREATORS_JSON_LD, CREATORS_SEO, CREATORS_URL, CREATOR_ANCHOR_IDS } from
  * LocalDominate V4: Creators. Sales page for done-for-you creator portfolio and media kit pages.
  *
  * Top to bottom: what it is and what it costs (hero), what a brand checks, the live demo of a
- * fictional creator, what is on the page, the comparison with what creators use today, the three
- * prices, three further services on request, the four steps, the rules, the FAQ and the request form.
+ * fictional creator, what is on the page, the three prices, the four steps, the comparison with
+ * what creators use today, the rules, the FAQ, three further services on request and the request
+ * form.
  *
  * Differences to the other V4 pages (owner's instruction of 2 October 2026): the primary action is
  * "Get my page", an anchor to the form on this page, and the prices come from v4Creators.ts.
@@ -55,12 +56,12 @@ export default function CreatorsV4() {
       <BrandAnswers />
       <LiveDemo />
       <PageSections />
-      <Comparison />
       <PriceCards />
-      <MoreServices />
       <CreatorSteps />
+      <Comparison />
       <CreatorRules />
       <CreatorsFaq />
+      <MoreServices />
       <CreatorForm />
     </V4Page>
   );
