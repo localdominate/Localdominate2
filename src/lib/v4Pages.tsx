@@ -13,6 +13,11 @@ const LOADERS: Record<string, PageLoader> = {
   "/services": () => import("@/pages/v4/ServicesV4"),
   "/work": () => import("@/pages/v4/WorkV4"),
   [PILLAR_BASE]: () => import("@/pages/v4/ApproachV4"),
+  "/industries": () => import("@/pages/v4/IndustriesV4"),
+  "/insights": () => import("@/pages/v4/InsightsV4"),
+  "/about": () => import("@/pages/v4/AboutV4"),
+  "/start-a-project": () => import("@/pages/v4/StartProjectV4"),
+  "/de": () => import("@/pages/v4/DeV4"),
   ...Object.fromEntries(PILLAR_INDEX.map((p) => [pillarPath(p.id), loadPillar])),
 };
 

@@ -20,7 +20,7 @@ export function V4Page({ children }: { children: React.ReactNode }) {
       <V4Footer />
       <AfterMount>
         <Suspense fallback={null}>
-          <CookieBanner />
+          <CookieBanner variant="v4" />
         </Suspense>
       </AfterMount>
     </div>

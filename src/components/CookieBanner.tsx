@@ -4,7 +4,11 @@ import { Cookie, Settings } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
 
-const CookieBanner = () => {
+/**
+ * `variant="v4"` only changes how the banner looks on the V4 pages (ink panel, compact on phones).
+ * Consent logic, storage keys and the Consent Mode updates are identical in both variants.
+ */
+const CookieBanner = ({ variant = "default" }: { variant?: "default" | "v4" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const { language } = useLanguage();
 
@@ -110,6 +114,41 @@ const CookieBanner = () => {
   const t = content[language] || content.de;
 
   if (!isVisible) return null;
+
+  if (variant === "v4") {
+    return (
+      <div className="v4 fixed inset-x-0 bottom-0 z-[60] p-3 md:p-5">
+        <div
+          role="region"
+          aria-label={t.title}
+          className="mx-auto flex max-w-3xl flex-col gap-3 rounded-2xl border border-v4-ivory/15 bg-v4-ink/95 p-4 text-v4-ivory shadow-2xl backdrop-blur md:flex-row md:items-center md:gap-6 md:p-5"
+        >
+          <p className="flex-1 font-v4-sans text-xs leading-relaxed text-v4-ivory/70 md:text-sm">
+            {t.text}{" "}
+            <Link to="/datenschutz" className="text-v4-ivory underline underline-offset-2">
+              {t.privacyLink}
+            </Link>
+          </p>
+          <div className="flex shrink-0 gap-2">
+            <button
+              type="button"
+              onClick={handleAcceptEssential}
+              className="flex-1 rounded-full border border-v4-ivory/30 px-4 py-2 font-v4-sans text-xs font-medium text-v4-ivory hover:border-v4-ivory/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal md:flex-none md:text-sm"
+            >
+              {t.essentialOnly}
+            </button>
+            <button
+              type="button"
+              onClick={handleAcceptAll}
+              className="flex-1 rounded-full border border-v4-ivory bg-v4-ivory px-4 py-2 font-v4-sans text-xs font-medium text-v4-ink hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal md:flex-none md:text-sm"
+            >
+              {t.acceptAll}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="fixed bottom-16 md:bottom-0 left-0 right-0 z-[60] p-3 md:p-6 animate-fade-in">

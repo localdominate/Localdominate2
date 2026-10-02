@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import { V4Page } from "@/components/v4/V4Page";
 import { BookCallButton } from "@/components/v4/BookCallButton";
+import { CheckButton } from "@/components/v4/CheckButton";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { StepRail } from "@/components/v4/StepRail";
@@ -97,7 +98,10 @@ export default function PillarV4() {
           </h1>
           <p className="mt-8 max-w-xl font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">{copy.lead}</p>
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <BookCallButton />
+            <span className="flex flex-wrap items-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="outline" />
+            </span>
             <Link
               to={PILLAR_BASE}
               className="font-v4-sans text-sm text-v4-ivory/70 underline-offset-4 hover:text-v4-ivory hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal"
@@ -284,7 +288,10 @@ export default function PillarV4() {
                 Tell us what is not working in a 15-minute call. You get an honest answer on where to start.
               </p>
               <div className="mt-6">
-                <BookCallButton />
+                <span className="flex flex-wrap items-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="outline" />
+            </span>
               </div>
             </div>
           </div>

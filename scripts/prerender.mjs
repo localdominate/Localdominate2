@@ -39,7 +39,8 @@ const LOCALE = "en-US";
 // Live pages that are newer than the frozen SEO baseline. They are prerendered like the baseline
 // URLs but are not part of the baseline, so seo-check does not compare them.
 const PILLAR_IDS = ["diagnose", "position", "create", "build", "launch", "grow", "scale"]; // keep in sync with src/data/v4PillarIndex.ts
-const EXTRA_PATHS = ["/services", "/work", "/approach", ...PILLAR_IDS.map((id) => `/approach/${id}`)];
+const EXTRA_PATHS = ["/services", "/work", "/approach", ...PILLAR_IDS.map((id) => `/approach/${id}`),
+  "/industries", "/insights", "/about", "/start-a-project", "/de"];
 
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json",
   ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp",

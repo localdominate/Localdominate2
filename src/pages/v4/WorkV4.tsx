@@ -4,6 +4,7 @@ import { V4Nav } from "@/components/v4/V4Nav";
 import { AfterMount } from "@/components/v4/AfterMount";
 import { V4Footer } from "@/components/v4/V4Footer";
 import { BookCallButton } from "@/components/v4/BookCallButton";
+import { CheckButton } from "@/components/v4/CheckButton";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { DadicationFilm } from "@/components/v4/DadicationFilm";
@@ -130,7 +131,10 @@ export default function WorkV4() {
               a role or a concept. Numbers appear only once we can document them.
             </p>
             <div className="mt-10">
-              <BookCallButton />
+              <span className="flex flex-wrap items-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="outline" />
+            </span>
             </div>
           </div>
         </StateField>
@@ -193,7 +197,10 @@ export default function WorkV4() {
               how we can help.
             </p>
             <div className="mt-10">
-              <BookCallButton />
+              <span className="flex flex-wrap items-center justify-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="outline" />
+            </span>
             </div>
           </div>
         </StateField>
@@ -202,7 +209,7 @@ export default function WorkV4() {
       <V4Footer />
       <AfterMount>
         <Suspense fallback={null}>
-          <CookieBanner />
+          <CookieBanner variant="v4" />
         </Suspense>
       </AfterMount>
     </div>

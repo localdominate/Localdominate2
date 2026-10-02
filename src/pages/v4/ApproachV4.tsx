@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import { V4Page } from "@/components/v4/V4Page";
 import { BookCallButton } from "@/components/v4/BookCallButton";
+import { CheckButton } from "@/components/v4/CheckButton";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { StepRail } from "@/components/v4/StepRail";
@@ -141,7 +142,10 @@ export default function ApproachV4() {
             Each step has its own page, its own outputs and the projects that show where it appeared.
           </p>
           <div className="mt-10">
-            <BookCallButton />
+            <span className="flex flex-wrap items-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="outline" />
+            </span>
           </div>
         </div>
       </StateField>
@@ -232,7 +236,10 @@ export default function ApproachV4() {
             any work starts.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
-            <BookCallButton />
+            <span className="flex flex-wrap items-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="outline" />
+            </span>
             <Link
               to="/services"
               className="font-v4-sans text-sm text-v4-ivory/70 underline-offset-4 hover:text-v4-ivory hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal"

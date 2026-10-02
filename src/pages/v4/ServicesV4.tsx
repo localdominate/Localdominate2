@@ -5,6 +5,7 @@ import { V4Nav } from "@/components/v4/V4Nav";
 import { AfterMount } from "@/components/v4/AfterMount";
 import { V4Footer } from "@/components/v4/V4Footer";
 import { BookCallButton } from "@/components/v4/BookCallButton";
+import { CheckButton } from "@/components/v4/CheckButton";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { Node } from "@/components/v4/Node";
@@ -97,7 +98,7 @@ function OfferCard({ offer }: { offer: Offer }) {
       </p>
 
       <div className="mt-8">
-        <BookCallButton className="w-full sm:w-auto" />
+        <CheckButton className="w-full sm:w-auto" />
       </div>
     </article>
   );
@@ -143,7 +144,10 @@ export default function ServicesV4() {
               you get the exact scope and price in writing before any work begins.
             </p>
             <div className="mt-10">
-              <BookCallButton />
+              <span className="flex flex-wrap items-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="outline" />
+            </span>
             </div>
           </div>
         </StateField>
@@ -198,7 +202,10 @@ export default function ServicesV4() {
               job, we send a separate quote, with no obligation.
             </p>
             <div className="mt-10">
-              <BookCallButton />
+              <span className="flex flex-wrap items-center justify-center gap-4">
+              <CheckButton />
+              <BookCallButton tone="ink" />
+            </span>
             </div>
           </div>
         </StateField>
@@ -207,7 +214,7 @@ export default function ServicesV4() {
       <V4Footer />
       <AfterMount>
         <Suspense fallback={null}>
-          <CookieBanner />
+          <CookieBanner variant="v4" />
         </Suspense>
       </AfterMount>
     </div>
