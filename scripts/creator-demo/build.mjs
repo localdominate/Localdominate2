@@ -32,6 +32,7 @@ const html = `<!doctype html>
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#1E140C">
 <link rel="icon" href="${icon}">
+<link rel="preload" href="/creator-demo/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/creator-demo/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/creator-demo/fonts/fraunces-latin-opsz-italic.woff2" as="font" type="font/woff2" crossorigin>
 <script>if ("IntersectionObserver" in window) document.documentElement.className += " js";</script>
