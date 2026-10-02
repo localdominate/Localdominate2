@@ -6,7 +6,7 @@ const FUNCTIONS = [
   { key: "strategy", label: "Strategy", description: "Direction is set." },
   { key: "brand", label: "Brand", description: "Identity forms, linked to strategy." },
   { key: "build", label: "Build", description: "The work gets made, on-strategy, on-brand." },
-  { key: "growth", label: "Growth", description: "Growth feeds back into strategy — it's a system, not a funnel." },
+  { key: "growth", label: "Growth", description: "Growth feeds back into strategy. It is a system, not a funnel." },
 ] as const;
 
 /**
@@ -89,7 +89,7 @@ export function LivingGrowthSystem({
         <ol className="mt-6 space-y-1 font-v4-mono text-xs uppercase tracking-widest text-v4-ivory/60">
           {FUNCTIONS.map((fn, i) => (
             <li key={fn.key}>
-              {String(i + 1).padStart(2, "0")} — {fn.label}: {fn.description}
+              {String(i + 1).padStart(2, "0")} · {fn.label}: {fn.description}
             </li>
           ))}
         </ol>

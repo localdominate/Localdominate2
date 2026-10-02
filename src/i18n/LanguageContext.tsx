@@ -13,7 +13,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const RTL_LANGUAGES: Language[] = ["ar"];
 
-const getInitialLanguage = (): Language => {
+export const getInitialLanguage = (): Language => {
   if (typeof window === "undefined") return "de";
   
   const saved = localStorage.getItem("language") as Language;

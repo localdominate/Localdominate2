@@ -42,8 +42,9 @@ export default defineConfig(({ mode }) => ({
           'animation-vendor': ['framer-motion'],
           // Supabase
           'supabase-vendor': ['@supabase/supabase-js'],
-          // Charts (lazy loaded pages)
-          'charts-vendor': ['recharts'],
+          // recharts is deliberately NOT a manual chunk: forcing it into one chunk pulled shared
+          // helpers into it, so the entry chunk imported the whole 116 KB on every public page.
+          // Left to Rollup it stays inside the lazy admin/blog chart pages.
           // Icons (Lucide) — split off so it's cached and not blocking
           'icons-vendor': ['lucide-react'],
         },

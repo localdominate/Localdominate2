@@ -48,8 +48,26 @@
       })();
     </script>
     
-    <!-- Google tag (gtag.js) - loads AFTER consent defaults are set -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM"></script>
+    <!-- Google tag (gtag.js) - loads AFTER consent defaults are set. The library itself is fetched on the
+         first user interaction, or 6 s after the page has loaded, so its ~180 KB and ~0.4 s of main-thread
+         work no longer compete with first render. Events queued on dataLayer below are sent once it loads. -->
+    <script>
+      (function () {
+        var started = false;
+        function loadGtag() {
+          if (started) return;
+          started = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-BS2B48THVM';
+          document.head.appendChild(s);
+        }
+        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+          window.addEventListener(evt, loadGtag, { once: true, passive: true });
+        });
+        window.addEventListener('load', function () { setTimeout(loadGtag, 6000); });
+      })();
+    </script>
     <script>
       gtag('js', new Date());
       gtag('config', 'G-BS2B48THVM', {

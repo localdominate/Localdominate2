@@ -34,37 +34,37 @@ const STATES = [
   {
     label: "Business",
     statement: "One business.",
-    meaning: "Real potential — not yet connected to anything.",
+    meaning: "Real potential, not yet connected to anything.",
   },
   {
     label: "Strategy",
     statement: "Understanding activates.",
-    meaning: "We understand before we execute — direction becomes clear.",
+    meaning: "We understand before we execute. Direction becomes clear.",
   },
   {
     label: "Brand",
     statement: "Direction becomes expression.",
-    meaning: "The business becomes recognisable — not a separate service, a consequence of strategy.",
+    meaning: "The business becomes recognisable. Brand follows from strategy; it is not a separate service.",
   },
   {
     label: "Build",
     statement: "The idea becomes an experience.",
-    meaning: "Positioning turns into an actual product, website, or system a customer can use.",
+    meaning: "Positioning turns into a product, website or system that a customer can use.",
   },
   {
     label: "Growth",
     statement: "Demand enters the system.",
-    meaning: "Marketing connects to what's already been built — not a detached channel.",
+    meaning: "Marketing connects to what has been built. It is not a detached channel.",
   },
   {
     label: "Data",
     statement: "Signals return.",
-    meaning: "Decisions improve. Growth isn't a straight line — it's a loop that learns.",
+    meaning: "Decisions improve. Growth is not a straight line, it is a loop that learns.",
   },
   {
     label: "Living System",
     statement: "One connected growth system.",
-    meaning: "Strategy, Brand, Build and Growth — feeding each other, continuously.",
+    meaning: "Strategy, Brand, Build and Growth feed each other, continuously.",
   },
 ] as const;
 
@@ -80,7 +80,7 @@ function StaticResolvedList() {
           <Node label={s.label} state={i === 0 ? "selected" : "outcome"} size="sm" />
           <div>
             <SystemLabel className="opacity-50">
-              {String(i).padStart(2, "0")} — {s.label}
+              {String(i).padStart(2, "0")} · {s.label}
             </SystemLabel>
             <p className="mt-1 font-v4-serif text-[length:var(--v4-text-subhead)]">{s.statement}</p>
             <p className="mt-1 max-w-md font-v4-sans text-sm opacity-70">{s.meaning}</p>
@@ -89,7 +89,7 @@ function StaticResolvedList() {
       ))}
       <div className="ml-[52px] flex items-center gap-2 pt-2">
         <span className="h-1.5 w-1.5 rounded-full bg-v4-signal" />
-        <SystemLabel className="text-v4-signal">Loop closed — one connected growth system</SystemLabel>
+        <SystemLabel className="text-v4-signal">Loop closed: one connected growth system</SystemLabel>
       </div>
     </div>
   );
@@ -222,7 +222,7 @@ function DesktopCanvas() {
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             >
               <SystemLabel className="opacity-50">
-                {String(activeIndex).padStart(2, "0")} — {STATES[activeIndex].label}
+                {String(activeIndex).padStart(2, "0")} · {STATES[activeIndex].label}
               </SystemLabel>
               <p className="mt-3 font-v4-serif text-[length:var(--v4-text-major)] leading-[1.05]">
                 {STATES[activeIndex].statement}
@@ -264,7 +264,7 @@ function MobileSpineStep({ index }: { index: number }) {
           above, never this content's opacity, per the B1.1 content-visibility fix. */}
       <div>
         <SystemLabel className="opacity-50">
-          {String(index).padStart(2, "0")} — {s.label}
+          {String(index).padStart(2, "0")} · {s.label}
         </SystemLabel>
         <p className="mt-1 font-v4-serif text-[length:var(--v4-text-subhead)]">{s.statement}</p>
         <p className="mt-1 font-v4-sans text-sm opacity-70">{s.meaning}</p>
@@ -305,7 +305,7 @@ function MobileLoopSummary() {
         />
       </svg>
       <SystemLabel className={cn("relative transition-colors duration-500", reached ? "text-v4-signal" : "text-v4-ivory/50")}>
-        Loop closed — one connected growth system
+        Loop closed: one connected growth system
       </SystemLabel>
     </motion.div>
   );
