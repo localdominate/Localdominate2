@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -55,9 +55,15 @@ export function CheckForm({
   texts: t,
   className,
   id = "check",
+  option,
 }: {
   texts: CheckFormTexts;
   className?: string;
+  /**
+   * Optional: one of `texts.businessTypes`, chosen elsewhere on the page (for example by a price
+   * card). It is applied after mount and whenever it changes; the visitor can still change it.
+   */
+  option?: string;
   /**
    * Prefix of the field ids. A fixed string, not useId(): the prerendered HTML comes from a client
    * render, so useId() would give different ids before and after hydration.
@@ -70,6 +76,10 @@ export function CheckForm({
   const honeypot = useRef<HTMLInputElement>(null);
   const resultRef = useRef<HTMLDivElement>(null);
   const failedRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (option && t.businessTypes.includes(option)) setValues((prev) => ({ ...prev, businessType: option }));
+  }, [option, t.businessTypes]);
 
   const set = <K extends keyof Values>(key: K, value: Values[K]) => {
     setValues((prev) => ({ ...prev, [key]: value }));

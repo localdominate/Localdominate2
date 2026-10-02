@@ -14,17 +14,20 @@ export function AnchorButton({
   tone = "signal",
   arrow = tone === "signal",
   className,
+  onClick,
   children,
 }: {
   href: string;
   tone?: Tone;
   arrow?: boolean;
   className?: string;
+  onClick?: () => void;
   children: React.ReactNode;
 }) {
   return (
     <a
       href={href}
+      onClick={onClick}
       className={cn(
         "inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full px-6 py-3 text-center font-v4-sans text-sm font-medium sm:px-7",
         "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal",

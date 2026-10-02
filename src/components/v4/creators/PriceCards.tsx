@@ -3,7 +3,7 @@ import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { AnchorButton } from "@/components/v4/creators/AnchorButton";
 import { BOOKING_IS_EXTERNAL, BOOKING_URL } from "@/lib/booking";
-import { CREATOR_ANCHORS, CREATOR_TIERS, PRICES_SECTION } from "@/data/v4Creators";
+import { CREATOR_ANCHORS, CREATOR_TIERS, PRICES_SECTION, selectCreatorOption } from "@/data/v4Creators";
 import type { CreatorTier } from "@/data/v4Creators";
 
 const overlineClass = "block font-v4-mono text-[length:var(--v4-text-label)] uppercase leading-none tracking-[0.16em] text-v4-ivory/60";
@@ -84,7 +84,13 @@ function TierCard({ tier }: { tier: CreatorTier }) {
       </div>
 
       <div className="mt-auto flex flex-col items-center lg:mt-0 lg:self-start">
-        <AnchorButton href={`#${CREATOR_ANCHORS.form}`} tone={featured ? "signal" : "outline"} arrow className="w-full">
+        <AnchorButton
+          href={`#${CREATOR_ANCHORS.form}`}
+          tone={featured ? "signal" : "outline"}
+          arrow
+          className="w-full"
+          onClick={() => selectCreatorOption(tier.id)}
+        >
           {tier.cta}
         </AnchorButton>
         {tier.callLink && (

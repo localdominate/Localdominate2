@@ -1,9 +1,18 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { BookCallButton } from "@/components/v4/BookCallButton";
 import { CheckForm } from "@/components/v4/check/CheckForm";
-import { CREATOR_ANCHORS, CREATOR_FAQ, CREATOR_FORM, FAQ_SECTION, FORM_SECTION, HERO } from "@/data/v4Creators";
+import {
+  CREATOR_ANCHORS,
+  CREATOR_FAQ,
+  CREATOR_FORM,
+  FAQ_SECTION,
+  FORM_SECTION,
+  HERO,
+  onCreatorOption,
+} from "@/data/v4Creators";
 import { ABOUT_PATH, PORTRAIT, PRINCIPLES } from "@/data/v4About";
 
 /**
@@ -56,6 +65,10 @@ export function CreatorsFaq() {
 const onePerson = PRINCIPLES.find((principle) => principle.title === "One person on the project");
 
 export function CreatorForm() {
+  // A price card or "Ask for a quote" can choose the option before the visitor reaches the form.
+  const [option, setOption] = useState<string>();
+  useEffect(() => onCreatorOption(setOption), []);
+
   return (
     <StateField field="dark" as="section" id={CREATOR_ANCHORS.form} aria-labelledby="creators-form" className="scroll-mt-16">
       <div className="mx-auto grid max-w-[1300px] gap-10 px-6 py-20 md:px-10 md:py-28 lg:grid-cols-[1fr_1.05fr] lg:gap-x-20 lg:gap-y-12">
@@ -88,6 +101,7 @@ export function CreatorForm() {
         <CheckForm
           texts={CREATOR_FORM}
           id="creator"
+          option={option}
           className="self-start lg:col-start-2 lg:row-span-2 lg:row-start-1"
         />
 

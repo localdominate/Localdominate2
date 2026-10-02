@@ -1,6 +1,6 @@
 import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
-import { CREATOR_ANCHORS, MORE } from "@/data/v4Creators";
+import { CREATOR_ANCHORS, MORE, selectCreatorOption } from "@/data/v4Creators";
 
 /**
  * MORE FOR CREATORS. Three further services, all priced on request (owner's instruction of
@@ -59,6 +59,7 @@ export function MoreServices() {
           </div>
           <a
             href={`#${CREATOR_ANCHORS.form}`}
+            onClick={() => selectCreatorOption("more")}
             className="mt-8 inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full border border-v4-ink/30 px-7 py-3 font-v4-sans text-sm font-medium text-v4-ink transition-colors hover:border-v4-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-ink"
           >
             {MORE.action}

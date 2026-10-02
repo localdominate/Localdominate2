@@ -507,6 +507,34 @@ export const FORM_SECTION = {
 } as const;
 
 /**
+ * The options of the request form. The buttons of the price cards and of "More for creators"
+ * choose one of them before they jump to the form (see selectCreatorOption).
+ */
+export const CREATOR_FORM_OPTIONS = {
+  care: `Care plan: ${eurPlain(P.careSetup)} set-up, ${eurPlain(P.careMonthly)} per month, ${P.careMinimumMonths} months minimum`,
+  "one-page": `One-page: ${eurPlain(P.onePage)} once`,
+  studio: `Studio system: from ${eurPlain(P.studioFrom)}`,
+  more: "Social media management, analytics or software: price on request",
+  unsure: "Not sure yet",
+} as const;
+
+export type CreatorOptionId = keyof typeof CREATOR_FORM_OPTIONS;
+
+const CREATOR_OPTION_EVENT = "creators:option";
+
+/** Called by a button: tells the form which option to show as chosen. */
+export const selectCreatorOption = (id: CreatorOptionId): void => {
+  window.dispatchEvent(new CustomEvent<string>(CREATOR_OPTION_EVENT, { detail: CREATOR_FORM_OPTIONS[id] }));
+};
+
+/** Used by the form section: calls back with the option text whenever a button chose one. */
+export const onCreatorOption = (listener: (option: string) => void): (() => void) => {
+  const handle = (event: Event) => listener((event as CustomEvent<string>).detail);
+  window.addEventListener(CREATOR_OPTION_EVENT, handle);
+  return () => window.removeEventListener(CREATOR_OPTION_EVENT, handle);
+};
+
+/**
  * Texts of the request form. CheckForm builds the email subject as `${subject}: ${option}` (form
  * service) or `${subject}` (pre-filled email) and the email body from the field labels, so the
  * labels below also name the lines of the email.
@@ -518,13 +546,7 @@ export const CREATOR_FORM: CheckFormTexts = {
   linkHint: "Instagram, TikTok or YouTube.",
   businessType: "Which option interests you?",
   businessTypePlaceholder: "Please choose",
-  businessTypes: [
-    `Care plan: ${eurPlain(P.careSetup)} set-up, ${eurPlain(P.careMonthly)} per month, ${P.careMinimumMonths} months minimum`,
-    `One-page: ${eurPlain(P.onePage)} once`,
-    `Studio system: from ${eurPlain(P.studioFrom)}`,
-    "Social media management, analytics or software: price on request",
-    "Not sure yet",
-  ],
+  businessTypes: Object.values(CREATOR_FORM_OPTIONS),
   goal: "Anything we should know?",
   goalHint: "Optional. For example your niche, your follower range or a deadline.",
   errors: {
