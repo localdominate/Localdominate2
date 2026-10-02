@@ -428,7 +428,7 @@
     var P = %%PINS%%;
     var W = 1000, H = 510, ASPECT = W / H;
     var SIDE = { Italy: -1, Indonesia: -1 };
-    var LEFT = { "Amalfi Coast": 1, "Essaouira": 1 };
+    var LEFT = { "Amalfi Coast": 1, "Comporta": 1 };
     var HINT = "Click a country, or pick one above, to zoom in on the places Noa has shown.";
     var NS = "http://www.w3.org/2000/svg";
     var mapEl = $("map"), cap = $("map-cap");
@@ -762,7 +762,7 @@
       dest: {
         t: "Destinations", src: "/creator-demo/img/scarf.webp", w: 880, h: 1232, pos: "50% 24%", cap: "On the water, off the coast",
         alt: "Noa seen from behind at a ship\u2019s railing, a long saffron silk scarf flowing down her back",
-        lede: "She already maps Italy, Greece, Morocco and Indonesia for her followers. Put your region on that map with a route they can copy.",
+        lede: "She already maps Italy, Greece, Portugal and Indonesia for her followers. Put your region on that map with a route they can copy.",
         gets: [["pin", "Story route through the region"], ["film", "Reel from the trip"], ["star", "Highlight that stays pinned"], ["link", "Itinerary post with your link"]],
         flow: [["pin", "Plan the route", "Agree places, dates and what to show.", "Week 0"], ["plane", "Travel and film", "She films as she goes and posts stories live.", "Days 1 to 5"], ["story", "Publish", "Reel and post follow, the highlight stays up.", "Weeks 1 to 2"], ["chart", "Report", "Views, reach and link taps come back to you.", "Week 3"]],
         note: "Stay or trip package: &euro;22,000", who: "destinations"
