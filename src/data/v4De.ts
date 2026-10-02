@@ -322,6 +322,8 @@ export const CHECK_FORM_DE: CheckFormTexts = {
   goalHint: "Ein Satz genügt. Zum Beispiel: mehr Direktbuchungen, ein vollständiges Profil.",
   consentBefore:
     "Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. Mehr dazu in der ",
+  consentBeforeWithService:
+    "Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet und über den Formular-Dienst Web3Forms an LocalDominate übermittelt werden. Ich kann meine Einwilligung jederzeit widerrufen. Mehr dazu in der ",
   consentLink: "Datenschutzerklärung",
   consentAfter: ".",
   submit: "Kostenlosen Check anfordern",

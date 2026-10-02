@@ -278,7 +278,7 @@ export function CheckForm({
             className="mt-0.5 h-5 w-5 shrink-0 rounded border-v4-ink/40 accent-[#0A0A09]"
           />
           <span>
-            {t.consentBefore}
+            {(formKey && t.consentBeforeWithService) || t.consentBefore}
             <Link to="/datenschutz" className="underline underline-offset-2">
               {t.consentLink}
             </Link>

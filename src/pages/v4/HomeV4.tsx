@@ -25,7 +25,8 @@ import { CHECK_REPLY_TIME } from "@/lib/check";
 
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 
-import journeyImg from "@/assets/v4/hq_mountain_lake_sunset.jpg";
+import journeyImg from "@/assets/v4/ld-home-4-5-1600.webp";
+import journeyImgSmall from "@/assets/v4/ld-home-4-5-800.webp";
 
 /**
  * LocalDominate V4: Home. Live on `/`.
@@ -273,8 +274,12 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
             <div className="grid overflow-hidden rounded-2xl border border-v4-ink/10 bg-v4-white lg:grid-cols-[0.8fr_1.2fr]">
               <div className="relative min-h-[240px]">
                 <img
-                  src={journeyImg}
-                  alt="Illustration: a mountain lake at sunset, framed by pine trees"
+                  src={journeyImgSmall}
+                  srcSet={`${journeyImgSmall} 800w, ${journeyImg} 1600w`}
+                  sizes="(max-width: 1023px) 92vw, 520px"
+                  width={1600}
+                  height={2000}
+                  alt="Illustration: a wooden terrace deck beside a calm mountain lake at sunset"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
                 />

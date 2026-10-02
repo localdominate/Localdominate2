@@ -56,10 +56,11 @@ Hinweis zur verantwortlichen Stelle
 
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
-[Dein Firmenname]
-[Deine Adresse]
-[Deine E-Mail]
-[Deine Telefonnummer]`
+Local Dominator, betrieben von EXPLORE SAUDI ARABIA LTD
+Vertreten durch: Markus Wimböck
+E-Mail: info@localdominate.org
+
+Weitere Angaben stehen im Impressum dieser Website.`
         },
         {
           title: "4. Datenerfassung auf dieser Website",
@@ -90,6 +91,28 @@ Google Analytics verwendet so genannte „Cookies". Das sind Textdateien, die au
 • Datenübertragbarkeit zu verlangen
 • Widerspruch gegen die Verarbeitung einzulegen
 • Eine erteilte Einwilligung zu widerrufen`
+        },
+        {
+          title: "7. Formular „Kostenloser Check“ und Formular-Dienst Web3Forms",
+          content: `Wenn Sie unser Formular „Kostenlosen Check anfordern“ („Get a free check“) nutzen, verarbeiten wir die Angaben, die Sie eingeben: Name, E-Mail-Adresse, den Link zu Ihrem Profil oder Ihrer Website, die Art Ihres Betriebs und, falls Sie es ausfüllen, Ihr Ziel. Wir verwenden diese Angaben, um Ihre Anfrage zu bearbeiten und zu beantworten.
+
+Rechtsgrundlage
+
+Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, die Sie vor dem Absenden durch das Setzen des Häkchens erteilen. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, zum Beispiel per E-Mail an info@localdominate.org.
+
+Formular-Dienst
+
+Für den Versand setzen wir den Formular-Dienst Web3Forms ein (Anbieter laut dessen Datenschutzhinweisen: Web3Forms, Indien). Beim Absenden werden Ihre Eingaben an Web3Forms übertragen und von dort per E-Mail an uns weitergeleitet. Nach den Angaben des Anbieters werden Formulareingaben höchstens drei Jahre gespeichert und danach automatisch gelöscht. Der Anbieter nutzt nach eigenen Angaben Infrastruktur von Amazon Web Services, Cloudflare und Hetzner.
+
+Da der Anbieter seinen Sitz in Indien hat, kann Ihre Anfrage in ein Land außerhalb der EU übermittelt werden. Der Anbieter stellt einen Auftragsverarbeitungsvertrag bereit, der Teil seiner Nutzungsbedingungen ist, und stützt solche Übermittlungen nach eigenen Angaben auf Standardvertragsklauseln. Weitere Informationen: https://web3forms.com/privacy
+
+Speicherdauer bei uns
+
+Wir speichern Ihre Anfrage, solange wir sie bearbeiten, und löschen sie spätestens sechs Monate nach dem letzten Kontakt, sofern kein Auftrag zustande kommt und keine gesetzliche Aufbewahrungspflicht besteht.
+
+Ohne Formular-Dienst
+
+Ohne Ihre Angaben in den Pflichtfeldern können wir Ihre Anfrage nicht bearbeiten. Wenn Sie keinen Formular-Dienst nutzen möchten, können Sie uns stattdessen direkt an info@localdominate.org schreiben.`
         }
       ]
     },
@@ -125,10 +148,11 @@ Information about the Responsible Party
 
 The responsible party for data processing on this website is:
 
-[Your Company Name]
-[Your Address]
-[Your Email]
-[Your Phone Number]`
+Local Dominator, operated by EXPLORE SAUDI ARABIA LTD
+Represented by: Markus Wimböck
+Email: info@localdominate.org
+
+Further details are in the legal notice of this website.`
         },
         {
           title: "4. Data Collection on This Website",
@@ -159,6 +183,28 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
 • Request data portability
 • Object to processing
 • Revoke consent given`
+        },
+        {
+          title: "7. Form \"Get a free check\" and the form service Web3Forms",
+          content: `When you use our form "Get a free check", we process the details you enter: name, email address, the link to your profile or website, the type of your business and, if you fill it in, your goal. We use these details to handle and answer your request.
+
+Legal basis
+
+The legal basis is your consent under Art. 6(1)(a) GDPR, which you give by ticking the box before sending. You can withdraw your consent at any time with effect for the future, for example by email to info@localdominate.org.
+
+Form service
+
+To send the form we use the form service Web3Forms (provider according to its privacy notice: Web3Forms, India). When you send the form, your entries are transmitted to Web3Forms and forwarded to us by email. According to the provider, form submissions are stored for a maximum of three years and then deleted automatically. According to its own information the provider uses infrastructure from Amazon Web Services, Cloudflare and Hetzner.
+
+As the provider is based in India, your request may be transferred to a country outside the EU. The provider offers a data processing agreement, which is part of its terms, and states that such transfers are based on Standard Contractual Clauses. More information: https://web3forms.com/privacy
+
+How long we keep it
+
+We keep your request for as long as we handle it and delete it no later than six months after the last contact, unless an order follows or a statutory retention period applies.
+
+Without the form service
+
+Without the details in the required fields we cannot handle your request. If you do not want to use a form service, you can write to us directly at info@localdominate.org instead.`
         }
       ]
     },
@@ -194,10 +240,11 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
 
 الجهة المسؤولة عن معالجة البيانات على هذا الموقع هي:
 
-[اسم شركتك]
-[عنوانك]
-[بريدك الإلكتروني]
-[رقم هاتفك]`
+Local Dominator، تديره شركة EXPLORE SAUDI ARABIA LTD
+يمثلها: Markus Wimböck
+البريد الإلكتروني: info@localdominate.org
+
+توجد بيانات إضافية في الإشعار القانوني لهذا الموقع.`
         },
         {
           title: "4. جمع البيانات على هذا الموقع",
@@ -228,6 +275,28 @@ Google Analytics uses so-called "cookies". These are text files that are stored 
 • طلب نقل البيانات
 • الاعتراض على المعالجة
 • إلغاء الموافقة الممنوحة`
+        },
+        {
+          title: "7. نموذج «الفحص المجاني» وخدمة النماذج Web3Forms",
+          content: `عند استخدامك نموذج «Get a free check» نعالج البيانات التي تدخلها: الاسم، عنوان البريد الإلكتروني، رابط ملفك أو موقعك، نوع نشاطك، وهدفك إن كتبته. نستخدم هذه البيانات لمعالجة طلبك والرد عليه.
+
+الأساس القانوني
+
+الأساس القانوني هو موافقتك وفق المادة 6 (1) (أ) من اللائحة العامة لحماية البيانات، وتمنحها بوضع علامة في المربع قبل الإرسال. يمكنك سحب موافقتك في أي وقت بأثر مستقبلي، مثلاً عبر البريد الإلكتروني info@localdominate.org.
+
+خدمة النماذج
+
+نستخدم للإرسال خدمة النماذج Web3Forms (المزوّد وفق إشعار الخصوصية الخاص به: Web3Forms، الهند). عند الإرسال تُنقل بياناتك إلى Web3Forms ثم تُحوَّل إلينا بالبريد الإلكتروني. وفق المزوّد تُحفظ بيانات النماذج مدة أقصاها ثلاث سنوات ثم تُحذف تلقائياً. ويستخدم المزوّد وفق بياناته بنية تحتية من Amazon Web Services و Cloudflare و Hetzner.
+
+لأن مقر المزوّد في الهند، قد يُنقل طلبك إلى بلد خارج الاتحاد الأوروبي. يوفّر المزوّد اتفاقية معالجة بيانات هي جزء من شروطه، ويذكر أن هذا النقل يستند إلى البنود التعاقدية القياسية. معلومات إضافية: https://web3forms.com/privacy
+
+مدة الحفظ لدينا
+
+نحتفظ بطلبك ما دمنا نعالجه ونحذفه في موعد أقصاه ستة أشهر بعد آخر تواصل، ما لم ينتج عنه تكليف أو توجد مدة حفظ قانونية.
+
+بدون خدمة النماذج
+
+بدون البيانات في الحقول الإلزامية لا يمكننا معالجة طلبك. إن لم ترغب في استخدام خدمة نماذج يمكنك مراسلتنا مباشرة على info@localdominate.org.`
         }
       ]
     }

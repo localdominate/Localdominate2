@@ -78,6 +78,7 @@ export default function ServicesV4() {
   return (
     <V4Page>
       <SEOHead
+        ogImage="https://localdominate.org/images/v4/social/ld-social-services-1200x630.jpg"
         title="Services & Fixed-Price Offers – Local Dominator"
         description="Four fixed-scope offers with clear starting prices: 72h Conversion Sprint, AI Automation Starter, Google Profile Quick-Fix and Website in 5 Days."
         canonicalUrl={PAGE_URL}

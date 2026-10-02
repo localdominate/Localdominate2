@@ -46,6 +46,7 @@ export default function WorkV4() {
   return (
     <V4Page>
       <SEOHead
+        ogImage="https://localdominate.org/images/v4/social/ld-social-work-1200x630.jpg"
         title="Selected Work & Case Studies – Local Dominator"
         description="Selected projects from Local Dominator: a US e-commerce brand launch, an AI-native travel platform, a non-profit web platform and a hotel direct-booking concept."
         canonicalUrl={PAGE_URL}

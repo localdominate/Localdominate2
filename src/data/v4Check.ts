@@ -16,6 +16,8 @@ export type CheckFormTexts = {
   goal: string;
   goalHint: string;
   consentBefore: string;
+  /** Used instead of consentBefore when the form service is active (VITE_WEB3FORMS_KEY is set). */
+  consentBeforeWithService?: string;
   consentLink: string;
   consentAfter: string;
   submit: string;
@@ -49,6 +51,8 @@ export const CHECK_FORM_EN: CheckFormTexts = {
   goal: "What should improve?",
   goalHint: "Optional. One or two sentences are enough. For example: more direct bookings, a complete Google profile, a faster website.",
   consentBefore: "I agree that my details are used to answer this request. See the ",
+  consentBeforeWithService:
+    "I agree that my details are used to answer this request and are sent to LocalDominate through the form service Web3Forms. I can withdraw my consent at any time. See the ",
   consentLink: "privacy policy",
   consentAfter: ".",
   submit: "Send request",

@@ -58,7 +58,7 @@ const NEXT_STEPS = [
 export default function StartProjectV4() {
   return (
     <V4Page>
-      <SEOHead title={TITLE} description={DESCRIPTION} canonicalUrl={PAGE_URL} lang="en" jsonLd={JSON_LD} />
+      <SEOHead title={TITLE} description={DESCRIPTION} canonicalUrl={PAGE_URL} lang="en" jsonLd={JSON_LD} ogImage="https://localdominate.org/images/v4/social/ld-social-start-a-project-1200x630.jpg" />
 
       <StateField field="dark" as="section" aria-labelledby="check-title">
         <div className="mx-auto grid max-w-[1300px] gap-12 px-6 pb-20 pt-16 md:px-10 md:pt-24 lg:grid-cols-[1fr_1.05fr] lg:gap-20">

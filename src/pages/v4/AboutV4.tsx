@@ -73,7 +73,7 @@ const linkOnDark =
 export default function AboutV4() {
   return (
     <V4Page>
-      <SEOHead title={ABOUT_TITLE} description={ABOUT_DESCRIPTION} canonicalUrl={PAGE_URL} lang="en" jsonLd={JSON_LD} />
+      <SEOHead title={ABOUT_TITLE} description={ABOUT_DESCRIPTION} canonicalUrl={PAGE_URL} lang="en" jsonLd={JSON_LD} ogImage="https://localdominate.org/images/v4/social/ld-social-about-1200x630.jpg" />
 
       {/* 01 HERO: who, what background, how to start. On phones the portrait sits beside the name. */}
       <StateField field="dark" as="section" aria-labelledby="about-title">

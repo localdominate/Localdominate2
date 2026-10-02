@@ -1,22 +1,38 @@
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import type { WorldVisualKind } from "@/data/v4Industries";
 
-import hotelImg from "@/assets/v4/hq_pool_building_mountain.jpg";
-import lakeImg from "@/assets/v4/hq_mountain_lake_sunset.jpg";
+import hospitality from "@/assets/v4/industries/ld-industries-hospitality-16-10-1600.webp";
+import hospitalitySmall from "@/assets/v4/industries/ld-industries-hospitality-16-10-800.webp";
+import rentals from "@/assets/v4/industries/ld-industries-holiday-rentals-16-10-1600.webp";
+import rentalsSmall from "@/assets/v4/industries/ld-industries-holiday-rentals-16-10-800.webp";
+import trades from "@/assets/v4/industries/ld-industries-trades-16-10-1600.webp";
+import tradesSmall from "@/assets/v4/industries/ld-industries-trades-16-10-800.webp";
+import premium from "@/assets/v4/industries/ld-industries-premium-services-16-10-1600.webp";
+import premiumSmall from "@/assets/v4/industries/ld-industries-premium-services-16-10-800.webp";
 
 /**
- * One visual per world, so no world outweighs another: two atmosphere photographs (labelled as
- * such, never a client property) and two schematics drawn in code. All of them sit below the first
- * screen, so the photographs load lazily inside fixed-ratio boxes.
+ * One atmosphere image per world (image set CC-3, generated, labelled as illustration and never
+ * as a client's premises), and for trades and premium services a schematic drawn in code below
+ * it. All of them sit below the first screen, so the images load lazily inside fixed-ratio boxes.
  */
 
-function Photo({ src, alt, width, height, ratio }: { src: string; alt: string; width: number; height: number; ratio: string }) {
+function Photo({ src, srcSmall, alt }: { src: string; srcSmall: string; alt: string }) {
   return (
     <figure>
-      <div className={`overflow-hidden rounded-2xl bg-v4-ink/5 ${ratio}`}>
-        <img src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+      <div className="aspect-[16/10] overflow-hidden rounded-2xl bg-v4-ink/5">
+        <img
+          src={srcSmall}
+          srcSet={`${srcSmall} 800w, ${src} 1600w`}
+          sizes="(max-width: 1023px) 92vw, 440px"
+          alt={alt}
+          width={1600}
+          height={1000}
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full object-cover"
+        />
       </div>
-      <figcaption className="mt-3 font-v4-sans text-xs text-v4-ink/60">Atmosphere image, not a client property.</figcaption>
+      <figcaption className="mt-3 font-v4-sans text-xs text-v4-ink/60">Illustration, not a client's premises.</figcaption>
     </figure>
   );
 }
@@ -116,26 +132,40 @@ export function WorldVisual({ kind }: { kind: WorldVisualKind }) {
     case "hotel-photo":
       return (
         <Photo
-          src={hotelImg}
-          alt="A hotel terrace with sun loungers beside an infinity pool, above a lake with mountains at sunset"
-          width={509}
-          height={483}
-          ratio="aspect-[4/3]"
+          src={hospitality}
+          srcSmall={hospitalitySmall}
+          alt="Illustration: a wooden hotel building with balconies and a terrace above a mountain lake at sunset"
         />
       );
     case "lake-photo":
       return (
         <Photo
-          src={lakeImg}
-          alt="A mountain lake at sunset, framed by forest and snow-covered peaks"
-          width={919}
-          height={535}
-          ratio="aspect-[16/10] lg:aspect-square"
+          src={rentals}
+          srcSmall={rentalsSmall}
+          alt="Illustration: the living room of a holiday apartment with a large window onto a mountain lake at sunset"
         />
       );
     case "profile-fields":
-      return <ProfileFields />;
+      return (
+        <div className="flex flex-col gap-6">
+          <Photo
+            src={trades}
+            srcSmall={tradesSmall}
+            alt="Illustration: a carpentry workshop with hand tools on a workbench and a window onto green hills"
+          />
+          <ProfileFields />
+        </div>
+      );
     case "locations":
-      return <Locations />;
+      return (
+        <div className="flex flex-col gap-6">
+          <Photo
+            src={premium}
+            srcSmall={premiumSmall}
+            alt="Illustration: a quiet office with a desk in front of a floor-to-ceiling window onto green hills at sunset"
+          />
+          <Locations />
+        </div>
+      );
   }
 }
