@@ -59,7 +59,32 @@ function CaseMatrix() {
     PILLAR_INDEX.map((p) => [p.id, new Map(pillarCases(p.id).map((x) => [x.case.id, x.note]))] as const)
   );
   return (
-    <div className="relative overflow-x-auto rounded-2xl border border-v4-ink/10 bg-v4-white">
+    <>
+      <ul className="flex flex-col gap-4 lg:hidden">
+        {cases.map((c) => {
+          const covered = PILLAR_INDEX.filter((p) => coverage.get(p.id)?.has(c.id));
+          return (
+            <li key={c.id} className="rounded-2xl border border-v4-ink/10 bg-v4-white p-5">
+              <p className="font-v4-sans text-base font-semibold text-v4-ink">{c.name}</p>
+              <p className="mt-1 font-v4-sans text-xs text-v4-ink/70">{caseLabel(c, false)}</p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {covered.map((p) => (
+                  <li key={p.id}>
+                    <Link
+                      to={pillarPath(p.id)}
+                      className="inline-flex min-h-[2.75rem] items-center rounded-full border border-v4-ink/20 px-4 font-v4-sans text-sm text-v4-ink hover:border-v4-ink/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal"
+                    >
+                      <span className="mr-2 font-v4-mono text-xs tabular-nums text-v4-ink/60">{p.n}</span>
+                      {p.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        })}
+      </ul>
+    <div className="relative hidden overflow-x-auto rounded-2xl border border-v4-ink/10 bg-v4-white lg:block">
       <table className="w-full min-w-[720px] border-collapse text-left">
         <caption className="sr-only">Published projects and the steps they covered</caption>
         <thead>
@@ -109,6 +134,7 @@ function CaseMatrix() {
         </tbody>
       </table>
     </div>
+    </>
   );
 }
 
@@ -175,7 +201,7 @@ export default function ApproachV4() {
                   to={pillarPath(p.id)}
                   className="group grid gap-4 py-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal md:grid-cols-[6rem_1fr_1.2fr] md:gap-8"
                 >
-                  <span className="font-v4-serif text-5xl leading-none text-v4-ink/30 group-hover:text-v4-ink">
+                  <span className="font-v4-serif text-5xl leading-none text-v4-ink/60 group-hover:text-v4-ink">
                     {p.n}
                   </span>
                   <span>
@@ -186,6 +212,10 @@ export default function ApproachV4() {
                   </span>
                   <span>
                     <span className="block font-v4-sans text-sm text-v4-ink/80">{PILLAR_COPY[p.id].lead}</span>
+                    <span className="mt-3 block font-v4-sans text-sm text-v4-ink/80">
+                      <span className="font-medium text-v4-ink">You get: </span>
+                      {PILLAR_COPY[p.id].deliverables.map((d) => d.name).join(", ")}.
+                    </span>
                     <span className="mt-4 flex flex-wrap gap-2">
                       {p.parts.map((part) => (
                         <span key={part} className={tagClass}>
@@ -210,7 +240,7 @@ export default function ApproachV4() {
             Which project covered which step
           </h2>
           <p className="mt-4 max-w-2xl font-v4-sans text-sm text-v4-ink/70">
-            A dot means the project included that step. Open a step to read what exactly was done. Only
+            A marked step means the project included it. Open a step to read what exactly was done. Only
             published projects are listed, and Aurelian Grand is our own concept, not a client.
           </p>
           <div className="mt-10">

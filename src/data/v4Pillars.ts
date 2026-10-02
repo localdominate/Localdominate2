@@ -20,6 +20,8 @@ export type PillarPart = { name: string; text: string };
 export type PillarFaq = { q: string; a: string };
 export type PillarLink = { to: string; label: string };
 export type PillarCaseNote = { caseId: string; note: string };
+/** One thing the customer holds at the end of the step: what it is, in which form, what it contains. */
+export type PillarDeliverable = { name: string; kind: string; text: string };
 
 export type PillarCopy = {
   /** <title>, about 60 characters. */
@@ -31,7 +33,12 @@ export type PillarCopy = {
   /** One sentence shown under "Where this step sits". */
   place: string;
   parts: readonly PillarPart[];
+  /** Short outcome lines. Home (`v4HomeData.ts` STEP_OUTPUT) is written from these, keep them in sync. */
   produces: readonly string[];
+  /** The same outputs as tangible hand-over items, shown on the step page under "What you get". */
+  deliverables: readonly PillarDeliverable[];
+  /** Plain-words description of the sketch on the step page, also read by screen readers. */
+  sketchCaption: string;
   signs: readonly string[];
   /** Ids from `v4Offers.ts` that start or contain this step. */
   offerIds: readonly string[];
@@ -47,7 +54,7 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "Step 1 of 7: a written diagnosis of your market, audience, competitors and tracking data, so later spending rests on facts instead of assumptions.",
     h1: "Diagnose the business before you fix it.",
     lead:
-      "Most projects start with a solution. This step starts with the facts: who buys, who else competes for them, and what your own numbers already show.",
+      "This step starts with the facts: who buys, who else competes for them, and what your own numbers already show. No solution is chosen before they are on the table.",
     place: "First step. Everything after it uses what it finds.",
     parts: [
       {
@@ -77,6 +84,12 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "Traffic looks fine, but few people enquire.",
       "You are about to rebuild the website and nobody has checked why the current one underperforms.",
     ],
+    deliverables: [
+      { name: "Findings summary", kind: "Written report", text: "Every finding ranked by effect and effort, so you can see what to fix first." },
+      { name: "Measurement list", kind: "Checklist", text: "What is tracked today, what is missing and what cannot be trusted yet." },
+      { name: "Next-step recommendation", kind: "Recommendation", text: "Which step comes next, including the option to stop here." },
+    ],
+    sketchCaption: "Sketch of the findings summary: five findings ranked by effect, with the tracking list below it.",
     offerIds: ["conversion-sprint", "google-profile"],
     caseNotes: [],
     faq: [
@@ -127,6 +140,12 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "Team members describe the business in different ways.",
       "The website text could belong to any of your competitors.",
     ],
+    deliverables: [
+      { name: "Positioning statement", kind: "One page", text: "Audience, promise, proof and tone, written so that everyone on the team says the same thing." },
+      { name: "Offer structure", kind: "Document", text: "The packages and the logic behind the prices." },
+      { name: "Claims list", kind: "Checklist", text: "The claims you may use, each with the evidence behind it." },
+    ],
+    sketchCaption: "Sketch of the positioning map: competitors in grey, your business in the one place a customer can check, and the claims list beside it.",
     offerIds: [],
     caseNotes: [
       { caseId: "dadication", note: "Brand strategy and product positioning for a new US e-commerce brand." },
@@ -178,6 +197,12 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "Texts were written by several people and read like it.",
       "Mobile pages are a shrunk copy of the desktop pages.",
     ],
+    deliverables: [
+      { name: "Design basics", kind: "Design files", text: "Type, colour and components that your team can apply without us." },
+      { name: "Page content", kind: "Text", text: "Written and structured for each page in scope, in your customers' words." },
+      { name: "Page and flow designs", kind: "Screens", text: "Mobile and desktop screens, ready to build." },
+    ],
+    sketchCaption: "Sketch of the design hand-over: a type sample, colour swatches and two phone screens joined by one path.",
     offerIds: [],
     caseNotes: [
       { caseId: "dadication", note: "Brand direction, messaging, copy and content structure for the store." },
@@ -229,6 +254,12 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "The site is slow on mobile.",
       "Nobody knows which form or button produced a booking.",
     ],
+    deliverables: [
+      { name: "Working site or store", kind: "Live", text: "On your domain and your accounts." },
+      { name: "Tracking", kind: "Set-up", text: "Records the actions that matter: bookings, orders and enquiries." },
+      { name: "Hand-over note", kind: "Short document", text: "How it is set up and how to run it without us." },
+    ],
+    sketchCaption: "Sketch of the connections: a form on the site creates a CRM contact, alerts the team and sends the first reply.",
     offerIds: ["website-5-days", "ai-automation-starter"],
     caseNotes: [
       { caseId: "dadication", note: "Shopify store and UX / UI for a new US e-commerce brand." },
@@ -288,6 +319,12 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "Your Google profile is incomplete or inconsistent.",
       "Campaigns run, but nobody can say what they returned.",
     ],
+    deliverables: [
+      { name: "Launch plan", kind: "Plan", text: "Channels, budget and dates, with one goal per channel." },
+      { name: "SEO and profile fixes", kind: "Applied changes", text: "Made on the site and the Google profile, and listed." },
+      { name: "Launch tracking", kind: "Set-up", text: "So that you can read what the launch did." },
+    ],
+    sketchCaption: "Sketch of the launch plan: four channels across eight weeks, a go-live line and a budget cap on the campaign row.",
     offerIds: ["google-profile"],
     caseNotes: [
       { caseId: "dadication", note: "Launch system for a new e-commerce brand, from briefing to a market-ready store." },
@@ -346,6 +383,12 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "Past customers never hear from you again.",
       "Reports contain many numbers and no decision.",
     ],
+    deliverables: [
+      { name: "Ranked change list", kind: "List", text: "Each change with its expected effect and its effort." },
+      { name: "Live changes", kind: "Documented", text: "What changed, when and why, so you can compare before and after." },
+      { name: "Numbers view", kind: "Monthly or quarterly", text: "The few numbers that drive decisions, in one place." },
+    ],
+    sketchCaption: "Sketch of the booking funnel: four stages narrowing, the largest drop marked, and a loop for returning customers.",
     offerIds: ["conversion-sprint"],
     caseNotes: [
       { caseId: "aurelian-grand", note: "Revenue journey and CRO thinking for a fictional hotel concept." },
@@ -396,6 +439,12 @@ export const PILLAR_COPY: Record<PillarId, PillarCopy> = {
       "You receive international enquiries that your site cannot serve.",
       "Revenue depends on a single channel or a single offer.",
     ],
+    deliverables: [
+      { name: "Market shortlist", kind: "List", text: "Market by market, with effort and risk." },
+      { name: "Market template", kind: "Reusable set", text: "What can be copied into the next market." },
+      { name: "Pilot plan", kind: "Plan", text: "A small first run with a clear stop rule." },
+    ],
+    sketchCaption: "Sketch of the template: one working market feeds a second market and a small pilot that has a stop rule.",
     offerIds: [],
     caseNotes: [
       { caseId: "explore-saudi", note: "Multilingual publishing with i18n and RTL controls." },
