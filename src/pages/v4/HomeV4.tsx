@@ -11,7 +11,8 @@ import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { HowWeWork } from "@/components/v4/HowWeWork";
 import { SystemSteps } from "@/components/v4/home/SystemSteps";
-import { OfferPanel } from "@/components/v4/home/OfferPanel";
+import { OfferBand } from "@/components/v4/home/OfferBand";
+import { SystemOrbit } from "@/components/v4/home/SystemOrbit";
 import { DadicationFilm } from "@/components/v4/DadicationFilm";
 import { ShowreelFilm } from "@/components/v4/ShowreelFilm";
 
@@ -98,9 +99,9 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
       <V4Nav />
 
       <main id="main-content">
-        {/* 01 HERO: what LocalDominate is, what can be ordered, the one action */}
+        {/* 01 HERO: what LocalDominate is (headline and the animated system), what can be ordered (band) */}
         <StateField field="dark" as="section" aria-labelledby="beat-hero">
-          <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 pb-16 pt-12 md:px-10 md:pb-24 md:pt-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-16">
+          <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-6 pb-10 pt-10 md:px-10 md:pb-12 md:pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
             <div className="flex flex-col gap-7">
               <SystemLabel className="leading-relaxed text-v4-ivory/60">
                 Growth studio · Strategy, brand, website, marketing
@@ -131,8 +132,9 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
                 ))}
               </ul>
             </div>
-            <OfferPanel />
+            <SystemOrbit className="mx-auto w-full max-w-[440px] lg:max-w-none" />
           </div>
+          <OfferBand />
         </StateField>
 
         {/* TRUSTED BY: renders only verified, evidenced entries (none yet) */}
