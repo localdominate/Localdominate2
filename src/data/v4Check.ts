@@ -1,3 +1,5 @@
+import { CHECK_REPLY_TIME } from "@/lib/check";
+
 /**
  * Copy of the free-check form. The form component (src/components/v4/check/CheckForm.tsx) takes
  * these texts as a prop, so the German page can pass its own set without copying the component.
@@ -63,7 +65,7 @@ export const CHECK_FORM_EN: CheckFormTexts = {
   },
   success: {
     title: "Thank you. Your request has arrived.",
-    body: "We look at your profile or website and reply by email with up to three concrete points.",
+    body: `We look at your profile or website and reply by email within ${CHECK_REPLY_TIME} with up to three concrete points.`,
   },
   mailOpened: {
     title: "Your email program should have opened.",

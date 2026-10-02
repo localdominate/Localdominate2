@@ -5,3 +5,5 @@
  */
 export const CHECK_PATH = "/start-a-project";
 export const CHECK_LABEL = "Get a free check";
+/** Reply time promised for the free check (owner decision, 2026-10-02). Change it here only. */
+export const CHECK_REPLY_TIME = "two working days";

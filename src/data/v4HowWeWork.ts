@@ -24,3 +24,7 @@ export const HOW_WE_WORK: readonly Commitment[] = [
     body: "We do not promise positions or revenue. You get a written list of what we changed and why.",
   },
 ] as const;
+
+/** Owner decision, 2026-10-02: the two-step payment and the revision round do not apply to the 79 € offer. */
+export const HOW_WE_WORK_NOTE =
+  "The 79 € Google Profile Quick-Fix is the exception: it is paid in full with the order and has no revision round.";

@@ -6,7 +6,7 @@ import { BookCallButton } from "@/components/v4/BookCallButton";
 import { HowWeWork } from "@/components/v4/HowWeWork";
 import { CheckForm } from "@/components/v4/check/CheckForm";
 import { CHECK_FORM_EN } from "@/data/v4Check";
-import { CHECK_PATH } from "@/lib/check";
+import { CHECK_PATH, CHECK_REPLY_TIME } from "@/lib/check";
 
 const SITE = "https://localdominate.org";
 const PAGE_URL = `${SITE}${CHECK_PATH}`;
@@ -48,7 +48,10 @@ const WHAT_YOU_GET = [
 const NEXT_STEPS = [
   { title: "You send the link", body: "Name, email, the link and the type of business. That is all we need." },
   { title: "We check by hand", body: "A person looks at the profile or page. No automated score, no generic report." },
-  { title: "You get the points by email", body: "You decide whether to fix them yourself or have us do it at a fixed price." },
+  {
+    title: "You get the points by email",
+    body: `Within ${CHECK_REPLY_TIME}. You decide whether to fix them yourself or have us do it at a fixed price.`,
+  },
 ] as const;
 
 /** LocalDominate V4: Start a Project. The free check is the primary action of the whole site. */
@@ -69,7 +72,7 @@ export default function StartProjectV4() {
             </h1>
             <p className="max-w-lg font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">
               Send us the link to your Google profile or your website. We tell you what we would fix
-              first and why. You owe us nothing for it.
+              first and why, by email within {CHECK_REPLY_TIME}. You owe us nothing for it.
             </p>
             <ul className="flex max-w-lg flex-col">
               {WHAT_YOU_GET.map((point) => (

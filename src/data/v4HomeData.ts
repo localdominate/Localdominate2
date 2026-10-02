@@ -49,5 +49,8 @@ export const WORLDS = [
   },
 ] as const;
 
+/** Offer ids (v4Offers.ts) in the order the hero panel lists them: largest scope first. */
+export const HERO_OFFER_ORDER = ["website-5-days", "conversion-sprint", "ai-automation-starter", "google-profile"] as const;
+
 /** Terms shown under the hero buttons. Each one is spelled out in "How we work" further down. */
 export const HERO_TERMS = ["Price in writing before we start", "Everything belongs to you", "Cancel monthly"] as const;

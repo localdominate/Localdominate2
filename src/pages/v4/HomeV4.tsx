@@ -11,6 +11,7 @@ import { StateField } from "@/components/v4/StateField";
 import { SystemLabel } from "@/components/v4/SystemLabel";
 import { HowWeWork } from "@/components/v4/HowWeWork";
 import { SystemSteps } from "@/components/v4/home/SystemSteps";
+import { OfferPanel } from "@/components/v4/home/OfferPanel";
 import { DadicationFilm } from "@/components/v4/DadicationFilm";
 import { ShowreelFilm } from "@/components/v4/ShowreelFilm";
 
@@ -19,16 +20,16 @@ import { caseLabel, publishedCases } from "@/data/v4Cases";
 import { PILLAR_BASE } from "@/data/v4PillarIndex";
 import { HANDOVERS, HERO_TERMS, WORLDS } from "@/data/v4HomeData";
 import { v4Route } from "@/lib/v4Routes";
+import { CHECK_REPLY_TIME } from "@/lib/check";
 
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 
-import heroImg from "@/assets/v4/hq_pool_building_mountain.jpg";
 import journeyImg from "@/assets/v4/hq_mountain_lake_sunset.jpg";
 
 /**
  * LocalDominate V4: Home. Live on `/`.
  *
- * One story from top to bottom: who it is for (hero), why growth stalls (the hand-overs nobody
+ * One story from top to bottom: what LocalDominate is and what can be ordered (hero), why growth stalls (the hand-overs nobody
  * owns), the seven steps as one connected chain (the signature moment, with the showreel), the
  * work we can document, the kinds of business we work for, the terms, and the free check.
  * Photography cropped from a set the owner supplied directly. No client names or metrics are
@@ -94,12 +95,12 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
       <V4Nav />
 
       <main id="main-content">
-        {/* 01 HERO: what it is, who it is for, the one action */}
+        {/* 01 HERO: what LocalDominate is, what can be ordered, the one action */}
         <StateField field="dark" as="section" aria-labelledby="beat-hero">
-          <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 pb-16 pt-12 md:px-10 md:pb-24 md:pt-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16">
+          <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 pb-16 pt-12 md:px-10 md:pb-24 md:pt-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-16">
             <div className="flex flex-col gap-7">
               <SystemLabel className="leading-relaxed text-v4-ivory/60">
-                For hotels, holiday rentals and local businesses · DACH
+                Growth studio · Strategy, brand, website, marketing
               </SystemLabel>
               <h1
                 id="beat-hero"
@@ -110,18 +111,13 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
                 One connected growth system.
               </h1>
               <p className="max-w-xl font-v4-sans text-[length:var(--v4-text-body)] leading-relaxed text-v4-ivory/70">
-                Strategy, brand, website and marketing usually run as separate jobs with separate
-                briefs. We run them as one sequence of seven steps, with scope and price in writing
-                before any work starts.
+                LocalDominate plans, builds and markets your brand, your website and your Google
+                presence as one project instead of four separate jobs. Seven steps, one team, scope
+                and price in writing before any work starts.
               </p>
               <div className="flex flex-wrap gap-4">
                 <CheckButton />
-                <Link
-                  to="/services"
-                  className="rounded-full border border-v4-ivory/30 px-7 py-3 font-v4-sans text-sm font-medium text-v4-ivory/90 transition-colors hover:border-v4-ivory/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-v4-signal"
-                >
-                  See services and prices
-                </Link>
+                <BookCallButton tone="outline" />
               </div>
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 {HERO_TERMS.map((term) => (
@@ -132,15 +128,7 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
                 ))}
               </ul>
             </div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl lg:aspect-[5/6]">
-              <img
-                src={heroImg}
-                alt="Premium hospitality property at sunset, overlooking a mountain lake"
-                className="h-full w-full object-cover"
-                loading="eager"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-v4-ink/40 via-transparent to-transparent" />
-            </div>
+            <OfferPanel />
           </div>
         </StateField>
 
@@ -348,7 +336,7 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
             </h2>
             <p className="mx-auto mt-6 max-w-md font-v4-sans text-[length:var(--v4-text-body)] text-v4-ivory/70">
               Send the link to your Google profile or website. You get up to three concrete points
-              to fix first, by email. No obligation.
+              to fix first, by email within {CHECK_REPLY_TIME}. No obligation.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <CheckButton className="px-9 py-4 text-base" />

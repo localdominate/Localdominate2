@@ -1,24 +1,28 @@
 import { cn } from "@/lib/utils";
 import { SystemLabel } from "@/components/v4/SystemLabel";
-import { HOW_WE_WORK } from "@/data/v4HowWeWork";
+import { HOW_WE_WORK, HOW_WE_WORK_NOTE } from "@/data/v4HowWeWork";
 import type { Commitment } from "@/data/v4HowWeWork";
 
 /**
  * The four commitments as a numbered list. `tone` matches the field the list sits on.
- * Pass `items` to render another language (the German page).
+ * Pass `items` and `note` to render another language (the German page).
  */
 export function HowWeWork({
   tone = "light",
   items = HOW_WE_WORK,
+  note = HOW_WE_WORK_NOTE,
   className,
 }: {
   tone?: "light" | "dark";
   items?: readonly Commitment[];
+  /** The exception printed under the list. Pass an empty string to hide it. */
+  note?: string;
   className?: string;
 }) {
   const dark = tone === "dark";
   return (
-    <ol className={cn("grid gap-x-10 sm:grid-cols-2", className)}>
+    <div className={className}>
+    <ol className="grid gap-x-10 sm:grid-cols-2">
       {items.map((item, i) => (
         <li
           key={item.title}
@@ -38,5 +42,11 @@ export function HowWeWork({
         </li>
       ))}
     </ol>
+      {note && (
+        <p className={cn("border-t pt-5 font-v4-sans text-xs leading-relaxed", dark ? "border-v4-ivory/15 text-v4-ivory/60" : "border-v4-ink/15 text-v4-ink/60")}>
+          {note}
+        </p>
+      )}
+    </div>
   );
 }
