@@ -1236,7 +1236,7 @@ const LocalSeoFriseur: React.FC = () => {
       <IndustryKeywordOpportunities config={industryKeywordConfigs.friseur} />
       <IndustryRankingChallenges config={industryRankingConfigs.friseur} />
       <ContentUpgradeSection config={contentUpgradeConfigs.friseur} />
-      <HelpfulnessWidget articleSlug="local-seo-friseur" />
+      <HelpfulnessWidget articleSlug="local-seo-friseursalon-beauty" />
     </ArticleLayout>
   );
 };

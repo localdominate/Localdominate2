@@ -1096,7 +1096,7 @@ const LocalSeoKeywords = () => {
         ]}
       />
 
-      <HelpfulnessWidget articleSlug="local-seo-keywords" />
+      <HelpfulnessWidget articleSlug="local-seo-keywords-finden" />
     </ArticleLayout>
   );
 };

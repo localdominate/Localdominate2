@@ -883,7 +883,7 @@ const LocalSeoFitness = () => {
       <IndustryKeywordOpportunities config={industryKeywordConfigs.fitness} />
       <IndustryRankingChallenges config={industryRankingConfigs.fitness} />
       <ContentUpgradeSection config={contentUpgradeConfigs.fitness} />
-      <HelpfulnessWidget articleSlug="local-seo-fitnessstudio-gym" />
+      <HelpfulnessWidget articleSlug="local-seo-fitness" />
     </ArticleLayout>
   );
 };
