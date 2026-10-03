@@ -2,7 +2,6 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
 import TableOfContents from "@/components/blog/TableOfContents";
-import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -64,12 +63,6 @@ const LocalSeoZahnarzt = () => {
   return (
     <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
-
-      <BlogImage
-        src="/placeholder.svg"
-        alt="Moderne Zahnarztpraxis mit Google-Suche"
-        caption="Lokale Sichtbarkeit entscheidet über den Erfolg einer Zahnarztpraxis"
-      />
 
       <KeyTakeawaysBox items={keyTakeaways} />
 

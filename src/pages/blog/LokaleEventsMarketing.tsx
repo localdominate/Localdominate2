@@ -1,6 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
-import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -35,12 +34,6 @@ const LokaleEventsMarketing = () => {
   return (
     <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
-
-      <BlogImage
-        src="/placeholder.svg"
-        alt="Lokales Community-Event mit Sponsoren"
-        caption="Lokale Events schaffen echte Verbindungen und wertvolle SEO-Signale"
-      />
 
       <KeyTakeawaysBox items={keyTakeaways} />
 

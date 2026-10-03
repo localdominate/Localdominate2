@@ -1,6 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
-import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -59,12 +58,6 @@ const LocalSeoOptiker = () => {
   return (
     <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
-
-      <BlogImage
-        src="/placeholder.svg"
-        alt="Optiker-Geschäft mit modernen Brillen"
-        caption="Lokale Sichtbarkeit ist entscheidend für Optiker und Hörakustiker"
-      />
 
       <KeyTakeawaysBox items={keyTakeaways} />
 
