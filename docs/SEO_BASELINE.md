@@ -81,6 +81,24 @@ Sitemap coverage: 187 indexable URLs, of which 21 are in **no** sitemap (`/camps
    (133 routes declare none).
 10. `html lang` is not always updated to match the rendered language in the en-US render.
 
+## 4b. Approved changes since the freeze
+
+**2026-10-03, owner approval (GEO core, branch `v5/geo-core`).** Baseline files re-captured from the
+build with `node scripts/seo-check.mjs --update-baseline`; the tables in section 5 below still show
+the original freeze.
+
+- Home `/`: title, meta description, OG title (new studio positioning), WebPage JSON-LD with
+  `dateModified`, new FAQPage JSON-LD. The home H1, links and word count in the baseline are now those of the V4 home
+  (live before this change, never re-captured).
+- `index.html`: Organization JSON-LD (name LocalDominate, legalName Explore Saudi Arabia Ltd, London address,
+  founder, e-mail info@) and WebSite JSON-LD. Every URL's `schemaTypes` changes for that reason
+  (no more Country, Offer, OfferCatalog, Service; PostalAddress added).
+- `/ueber-uns`: meta description and body without the unproven figures (500+ clients, 50+ cities, 4.9/5, 92 %).
+- Static files: `llms.txt`, `llms-full.txt`, `sitemap-ai.xml` (snapshots replaced).
+- Not in this baseline (it only lists the pre-V4 URLs): `/services`, `/work`, `/approach*`, `/industries`,
+  `/about`, `/start-a-project`, `/insights`, `/creators`, `/de`. Their `dateModified` and FAQPage JSON-LD are
+  checked by the GEO verification script, not by `seo-check.mjs`.
+
 ## 5. Baseline tables
 
 ### A. Indexable URLs (187) – must keep path, title, description, canonical, H1, schema
