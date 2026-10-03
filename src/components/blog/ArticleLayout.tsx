@@ -53,12 +53,6 @@ interface ArticleLayoutProps {
   tocItems?: TOCItem[];
   /** FAQ items for FAQPage schema generation */
   faqItems?: FAQItem[];
-  /** For YMYL articles - adds reviewedBy schema */
-  reviewedBy?: {
-    name: string;
-    credentials: string;
-    reviewDate: string;
-  };
   /** Article type for specialized schema */
   articleType?: 'standard' | 'medical' | 'legal' | 'financial';
 }
@@ -95,7 +89,6 @@ const ArticleLayout = ({
   additionalSchema, 
   tocItems,
   faqItems,
-  reviewedBy,
   articleType = 'standard'
 }: ArticleLayoutProps) => {
   const { language } = useLanguage();
@@ -295,45 +288,52 @@ const ArticleLayout = ({
   
   // Author Profile & Schema
   const articleAuthor = getArticleAuthor(article.slug);
-  const authorSchema = {
-    "@type": "Person" as const,
-    "@id": `https://localdominate.org/#person-${articleAuthor.slug}`,
-    "name": articleAuthor.name,
-    "jobTitle": articleAuthor.schemaOrg.jobTitle,
-    "worksFor": {
-      "@type": "Organization",
-      "@id": "https://localdominate.org/#organization",
-      "name": "Local Dominator",
-      "url": "https://localdominate.org",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://localdominate.org/logo.png",
-        "width": 512,
-        "height": 512
-      }
-    },
-    "knowsAbout": articleAuthor.schemaOrg.knowsAbout,
-    "sameAs": articleAuthor.schemaOrg.sameAs,
+  const organizationAddress = {
+    "@type": "PostalAddress",
+    "streetAddress": "128 City Road",
+    "addressLocality": "London",
+    "postalCode": "EC1V 2NX",
+    "addressCountry": "GB"
   };
 
+  // Organization as stated in the legal notice: operated by Explore Saudi Arabia Ltd, London.
   const publisherSchema = {
     "@type": "Organization",
     "@id": "https://localdominate.org/#organization",
-    "name": "Local Dominator",
+    "name": "LocalDominate",
+    "alternateName": ["Local Dominator"],
     "url": "https://localdominate.org",
     "logo": {
       "@type": "ImageObject",
       "url": "https://localdominate.org/logo.png"
     },
+    "email": "info@localdominate.org",
+    "address": organizationAddress,
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Explore Saudi Arabia Ltd",
+      "address": organizationAddress
+    }
   };
 
-  // Expert reviewer for YMYL articles
-  const reviewerSchema = reviewedBy ? {
-    "@type": "Person",
-    "name": reviewedBy.name,
-    "jobTitle": reviewedBy.credentials,
-    "worksFor": publisherSchema
-  } : null;
+  // Every article is written by the editorial team; Markus Wimböck is accountable for it.
+  const authorSchema = {
+    "@type": "Organization" as const,
+    "@id": "https://localdominate.org/#editorial-team",
+    "name": articleAuthor.name,
+    "url": "https://localdominate.org/blog",
+    "parentOrganization": { "@id": "https://localdominate.org/#organization" }
+  };
+
+  const accountablePersonSchema = {
+    "@type": "Person" as const,
+    "@id": "https://localdominate.org/#person-markus-wimboeck",
+    "name": articleAuthor.accountable.name,
+    "jobTitle": "Founder",
+    "url": `https://localdominate.org${articleAuthor.accountable.profilePath}`,
+    "sameAs": [articleAuthor.accountable.linkedin],
+    "worksFor": { "@id": "https://localdominate.org/#organization" }
+  };
 
   const geoSignalText = normalizeGeoText([
     article.slug,
@@ -409,13 +409,6 @@ const ArticleLayout = ({
     "audience": {
       "@type": "BusinessAudience",
       "audienceType": language === "de" ? "lokale Unternehmen im DACH-Raum" : language === "ar" ? "الشركات المحلية في منطقة DACH" : "local businesses in the DACH region"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "299",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock",
-      "url": "https://localdominate.org/"
     }
   };
 
@@ -478,18 +471,14 @@ const ArticleLayout = ({
         "sameAs": entity.sameAs,
       }))
     ),
-    "wordCount": article.readingTime * 200,
     "educationalLevel": "intermediate",
     "learningResourceType": "Guide",
     "disambiguatingDescription": language === "de"
       ? `Praxis-Guide aus dem Local Dominator Blog zum Thema ${article.category}. Verfasst von ${articleAuthor.name}, zuletzt aktualisiert ${article.updatedAt}.`
       : `Practical guide from the Local Dominator blog on ${article.category}. Written by ${articleAuthor.name}, last updated ${article.updatedAt}.`,
     "author": authorSchema,
+    "accountablePerson": accountablePersonSchema,
     "publisher": publisherSchema,
-    ...(reviewerSchema && {
-      "reviewedBy": reviewerSchema,
-      "lastReviewed": reviewedBy?.reviewDate
-    }),
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
     ...(article.lastReviewedAt && { "lastReviewed": article.lastReviewedAt }),
@@ -591,10 +580,6 @@ const ArticleLayout = ({
     },
     "datePublished": article.publishedAt,
     "dateModified": article.updatedAt,
-    ...(reviewerSchema && {
-      "reviewedBy": reviewerSchema,
-      "lastReviewed": reviewedBy?.reviewDate
-    }),
     "breadcrumb": {
       "@id": `https://localdominate.org/blog/${article.slug}#breadcrumb`
     },
@@ -658,23 +643,6 @@ const ArticleLayout = ({
     }))
   } : null;
 
-  // LocalBusiness reference schema - auto-generated for all articles
-  // Connects articles to the local business context they discuss
-  const localBusinessReferenceSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://localdominate.org/#localbusiness",
-    "name": "Local Dominator",
-    "description": language === "de" ? "Local SEO Experten für lokale Unternehmen im DACH-Raum" : language === "ar" ? "خبراء Local SEO للشركات المحلية في منطقة DACH" : "Local SEO experts for local businesses in the DACH region",
-    "url": "https://localdominate.org",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "DE"
-    },
-    "areaServed": DACH_AREA_SERVED,
-    "makesOffer": { "@id": `https://localdominate.org/blog/${article.slug}#local-search-service` },
-  };
-
   // Combine all schemas, flatten arrays from additionalSchema
   const buildCombinedSchema = () => {
     // Proprietary brand terminology — teaches AI engines (Perplexity, ChatGPT,
@@ -714,7 +682,7 @@ const ArticleLayout = ({
       ]
     };
 
-    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localBusinessReferenceSchema, localSearchServiceSchema, definedTermSetSchema];
+    const baseSchemas: object[] = [articleSchema, webPageSchema, breadcrumbSchema, localSearchServiceSchema, definedTermSetSchema];
     
     if (faqSchema) baseSchemas.push(faqSchema);
     
@@ -800,7 +768,7 @@ const ArticleLayout = ({
             {article.lastReviewedAt && (
               <LastReviewedBadge 
                 reviewDate={article.lastReviewedAt} 
-                reviewerName={article.lastReviewedBy || "Local Dominator Team"}
+                reviewerName={article.lastReviewedBy || "LocalDominate Redaktion"}
                 variant="compact"
               />
             )}

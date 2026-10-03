@@ -10,7 +10,7 @@ interface LastReviewedBadgeProps {
 
 const LastReviewedBadge = ({ 
   reviewDate, 
-  reviewerName = "Local Dominator Team",
+  reviewerName = "LocalDominate Redaktion",
   variant = "default"
 }: LastReviewedBadgeProps) => {
   const isEn = useLanguage().language === "en";

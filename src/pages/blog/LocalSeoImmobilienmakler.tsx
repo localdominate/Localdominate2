@@ -71,23 +71,11 @@ const LocalSeoImmobilienmakler = () => {
   ];
 
 
-  const realEstateAgentSchema = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "Beispiel Immobilienmakler",
-    "description": "Local SEO Best Practices für Immobilienmakler",
-    "areaServed": {
-      "@type": "City",
-      "name": "Beispielstadt"
-    }
-  };
-
   return (
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
       faqItems={faqItems}
-      additionalSchema={realEstateAgentSchema}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 not-prose">

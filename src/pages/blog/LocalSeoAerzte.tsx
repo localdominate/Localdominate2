@@ -71,26 +71,12 @@ const LocalSeoAerzte = () => {
   ];
 
 
-  const medicalBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Beispiel Arztpraxis",
-    "description": "Local SEO Best Practices für Arztpraxen",
-    "medicalSpecialty": "GeneralPractice"
-  };
-
   return (
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
       faqItems={faqItems}
-      additionalSchema={medicalBusinessSchema}
       articleType="medical"
-      reviewedBy={{
-        name: "Dr. Med. Fachredaktion",
-        credentials: "Medizinische Fachredaktion",
-        reviewDate: "2026-01-08"
-      }}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 not-prose">
@@ -128,7 +114,7 @@ const LocalSeoAerzte = () => {
       <section id="intro" className="mb-12">
         <LastReviewedBadge 
           reviewDate="2026-01-08" 
-          reviewerName="Dr. med. Fachredaktion" 
+          reviewerName="LocalDominate Redaktion" 
           variant="detailed" 
         />
 

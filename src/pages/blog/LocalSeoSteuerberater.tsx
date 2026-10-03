@@ -73,14 +73,6 @@ const LocalSeoSteuerberater = () => {
   ];
 
 
-  const accountingServiceSchema = {
-    "@context": "https://schema.org",
-    "@type": "AccountingService",
-    "name": "Beispiel Steuerkanzlei",
-    "description": "Local SEO Best Practices für Steuerberater",
-    "serviceType": ["Steuerberatung", "Buchhaltung", "Jahresabschluss"]
-  };
-
   const mandantenTypen = [
     { typ: "Arbeitnehmer", suchverhalten: "Einmal jährlich, Frühjahr", keywords: "Steuererklärung machen lassen, Lohnsteuerhilfe Alternative", wert: "Mittel" },
     { typ: "Selbstständige", suchverhalten: "Ganzjährig, Beratungsbedarf", keywords: "Steuerberater für Selbstständige, Freelancer Steuer", wert: "Hoch" },
@@ -105,17 +97,11 @@ const LocalSeoSteuerberater = () => {
       article={article} 
       tocItems={tocItems}
       faqItems={faqItems}
-      additionalSchema={accountingServiceSchema}
       articleType="financial"
-      reviewedBy={{
-        name: "Steuerberater Fachredaktion",
-        credentials: "Steuerrechtliche Fachredaktion",
-        reviewDate: "2026-01-08"
-      }}
     >
       <LastReviewedBadge 
         reviewDate="2026-01-08" 
-        reviewerName="Steuerberater Fachredaktion" 
+        reviewerName="LocalDominate Redaktion" 
         variant="detailed" 
       />
 
