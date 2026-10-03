@@ -103,7 +103,6 @@ const LocalSeoSchweiz = lazy(() => import("./pages/blog/LocalSeoSchweiz"));
 const LocalSeoZuerich = lazy(() => import("./pages/blog/LocalSeoZuerich"));
 const LocalSeoMuenchen = lazy(() => import("./pages/blog/LocalSeoMuenchen"));
 const LocalSeoAerzte = lazy(() => import("./pages/blog/LocalSeoAerzte"));
-const LocalSeoAnwaelte = lazy(() => import("./pages/blog/LocalSeoAnwaelte"));
 const LocalSeoHotels = lazy(() => import("./pages/blog/LocalSeoHotels"));
 const LocalSeoFitness = lazy(() => import("./pages/blog/LocalSeoFitness"));
 const SchemaMarkupLocalSeo = lazy(() => import("./pages/blog/SchemaMarkupLocalSeo"));
@@ -372,7 +371,6 @@ const App = () => (
                 <Route path="/blog/local-seo-zuerich" element={<LocalSeoZuerich />} />
                 <Route path="/blog/local-seo-muenchen" element={<LocalSeoMuenchen />} />
                 <Route path="/blog/local-seo-aerzte-praxen" element={<LocalSeoAerzte />} />
-                <Route path="/blog/local-seo-anwaelte-kanzleien" element={<LocalSeoAnwaelte />} />
                 <Route path="/blog/local-seo-hotels" element={<LocalSeoHotels />} />
                 <Route path="/blog/local-seo-fitness" element={<LocalSeoFitness />} />
                 <Route path="/blog/schema-markup-local-seo" element={<SchemaMarkupLocalSeo />} />
