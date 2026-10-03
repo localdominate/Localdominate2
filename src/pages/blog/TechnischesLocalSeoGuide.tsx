@@ -44,32 +44,32 @@ const TechnischesLocalSeoGuide = () => {
     { id: "strukturierte-daten", title: "Strukturierte Daten: Alle Schema-Typen", level: 2 },
     { id: "site-speed", title: "Site Speed & Core Web Vitals", level: 2 },
     { id: "mobile-optimierung", title: "Mobile Optimierung & Mobile-First", level: 2 },
-    { id: "interne-verlinkung", title: "Interne Verlinkung fur lokale SEO", level: 2 },
+    { id: "interne-verlinkung", title: "Interne Verlinkung für lokale SEO", level: 2 },
     { id: "indexierung", title: "Indexierungsstrategien", level: 2 },
     { id: "https-sicherheit", title: "HTTPS & Sicherheit", level: 2 },
     { id: "checkliste", title: "Technische Checkliste (40 Punkte)", level: 2 },
     { id: "deep-dive-guides", title: "Alle Deep-Dive-Guides", level: 2 },
-    { id: "faq", title: "Haufig gestellte Fragen", level: 2 },
+    { id: "faq", title: "Häufig gestellte Fragen", level: 2 },
   ];
 
   const keyTakeaways = [
-    "LocalBusiness Schema ist der starkste technische Ranking-Faktor fur lokale Suchergebnisse",
+    "LocalBusiness Schema ist der stärkste technische Ranking-Faktor für lokale Suchergebnisse",
     "Core Web Vitals (LCP <2.5s, INP <200ms, CLS <0.1) sind seit 2021 offizieller Ranking-Faktor",
     "92 % der lokalen Suchen kommen vom Smartphone — Mobile-First ist Pflicht",
-    "Interne Verlinkung mit lokalen Ankertexten starkt die geografische Relevanz jeder Unterseite",
+    "Interne Verlinkung mit lokalen Ankertexten stärkt die geografische Relevanz jeder Unterseite",
     "XML-Sitemaps, robots.txt und Canonical Tags bestimmen, welche Seiten indexiert werden",
     "Geo-Markup (GeoCoordinates, serviceArea) hilft Google, den Einzugsbereich exakt zu verstehen",
   ];
 
   const faqItems = [
-    { question: "Was ist technisches Local SEO?", answer: "Technisches Local SEO umfasst alle technischen Massnahmen, die Suchmaschinen das Crawlen, Indexieren und Verstehen Ihrer lokalen Website erleichtern. Dazu gehoren Schema Markup, Core Web Vitals, Mobile-Optimierung, interne Verlinkung, Indexierungssteuerung und Sicherheit (HTTPS)." },
-    { question: "Welches Schema Markup braucht ein lokales Unternehmen?", answer: "Mindestens LocalBusiness (mit Name, Adresse, Telefon, Offnungszeiten) und FAQPage fur haufige Fragen. Zusatzlich empfohlen: AggregateRating fur Bewertungssterne, Product/Service fur Angebote, GeoCoordinates fur den Standort und BreadcrumbList fur die Navigation." },
-    { question: "Wie wichtig sind Core Web Vitals fur lokale Rankings?", answer: "Core Web Vitals sind seit 2021 ein offizieller Google-Ranking-Faktor. Da 92 % der lokalen Suchen mobil erfolgen, ist besonders die mobile Performance entscheidend. Seiten mit guten CWV-Werten haben im Durchschnitt 24 % niedrigere Absprungraten." },
-    { question: "Wie verbessere ich die Ladezeit meiner lokalen Website?", answer: "Die wichtigsten Massnahmen: Bilder in WebP/AVIF komprimieren, JavaScript und CSS minimieren, Lazy Loading fur Bilder unterhalb des Folds aktivieren, ein CDN nutzen, Server-Response-Zeit optimieren (TTFB <800ms) und Browser-Caching konfigurieren." },
-    { question: "Was bedeutet Mobile-First-Index fur lokale Unternehmen?", answer: "Google bewertet und rankt Ihre Website basierend auf der mobilen Version. Das bedeutet: Wenn Ihre mobile Seite langsam ladt, Inhalte fehlen oder nicht responsive ist, verlieren Sie Rankings — auch in der Desktop-Suche." },
-    { question: "Wie baue ich eine gute interne Verlinkung fur Local SEO auf?", answer: "Erstellen Sie Standortseiten, die untereinander und mit der Startseite verlinkt sind. Nutzen Sie lokale Ankertexte (z.B. 'Zahnarzt in Munchen Schwabing'). Erstellen Sie eine Hub-Spoke-Struktur mit einer zentralen Serviceseite und spezifischen Unterseiten pro Stadtteil." },
-    { question: "Wie stelle ich sicher, dass Google meine Seiten korrekt indexiert?", answer: "Reichen Sie eine XML-Sitemap in der Search Console ein, prufen Sie Ihre robots.txt auf Crawl-Blockaden, setzen Sie Canonical Tags gegen Duplicate Content, nutzen Sie hreflang fur mehrsprachige Seiten und uberwachen Sie den Indexierungsstatus regelmaessig." },
-    { question: "Brauche ich HTTPS fur meine lokale Website?", answer: "Ja, HTTPS ist seit 2014 ein Ranking-Faktor und fur E-E-A-T-Signale unerlasslich. Ausserdem warnen Browser vor unsicheren Seiten, was das Nutzervertrauen zerstort. SSL-Zertifikate sind kostenlos uber Let's Encrypt verfugbar." },
+    { question: "Was ist technisches Local SEO?", answer: "Technisches Local SEO umfasst alle technischen Maßnahmen, die Suchmaschinen das Crawlen, Indexieren und Verstehen Ihrer lokalen Website erleichtern. Dazu gehören Schema Markup, Core Web Vitals, Mobile-Optimierung, interne Verlinkung, Indexierungssteuerung und Sicherheit (HTTPS)." },
+    { question: "Welches Schema Markup braucht ein lokales Unternehmen?", answer: "Mindestens LocalBusiness (mit Name, Adresse, Telefon, Öffnungszeiten) und FAQPage für häufige Fragen. Zusätzlich empfohlen: AggregateRating für Bewertungssterne, Product/Service für Angebote, GeoCoordinates für den Standort und BreadcrumbList für die Navigation." },
+    { question: "Wie wichtig sind Core Web Vitals für lokale Rankings?", answer: "Core Web Vitals sind seit 2021 ein offizieller Google-Ranking-Faktor. Da 92 % der lokalen Suchen mobil erfolgen, ist besonders die mobile Performance entscheidend. Seiten mit guten CWV-Werten haben im Durchschnitt 24 % niedrigere Absprungraten." },
+    { question: "Wie verbessere ich die Ladezeit meiner lokalen Website?", answer: "Die wichtigsten Maßnahmen: Bilder in WebP/AVIF komprimieren, JavaScript und CSS minimieren, Lazy Loading für Bilder unterhalb des Folds aktivieren, ein CDN nutzen, Server-Response-Zeit optimieren (TTFB <800ms) und Browser-Caching konfigurieren." },
+    { question: "Was bedeutet Mobile-First-Index für lokale Unternehmen?", answer: "Google bewertet und rankt Ihre Website basierend auf der mobilen Version. Das bedeutet: Wenn Ihre mobile Seite langsam lädt, Inhalte fehlen oder nicht responsive ist, verlieren Sie Rankings — auch in der Desktop-Suche." },
+    { question: "Wie baue ich eine gute interne Verlinkung für Local SEO auf?", answer: "Erstellen Sie Standortseiten, die untereinander und mit der Startseite verlinkt sind. Nutzen Sie lokale Ankertexte (z.B. 'Zahnarzt in München Schwabing'). Erstellen Sie eine Hub-Spoke-Struktur mit einer zentralen Serviceseite und spezifischen Unterseiten pro Stadtteil." },
+    { question: "Wie stelle ich sicher, dass Google meine Seiten korrekt indexiert?", answer: "Reichen Sie eine XML-Sitemap in der Search Console ein, prüfen Sie Ihre robots.txt auf Crawl-Blockaden, setzen Sie Canonical Tags gegen Duplicate Content, nutzen Sie hreflang für mehrsprachige Seiten und überwachen Sie den Indexierungsstatus regelmäßig." },
+    { question: "Brauche ich HTTPS für meine lokale Website?", answer: "Ja, HTTPS ist seit 2014 ein Ranking-Faktor und für E-E-A-T-Signale unerlässlich. Außerdem warnen Browser vor unsicheren Seiten, was das Nutzervertrauen zerstört. SSL-Zertifikate sind kostenlos über Let's Encrypt verfügbar." },
   ];
 
   const sources = [
@@ -81,14 +81,14 @@ const TechnischesLocalSeoGuide = () => {
   ];
 
   const technicalArticles = [
-    { slug: "localbusiness-schema-implementierung", title: "LocalBusiness Schema implementieren", desc: "JSON-LD Code fur jede Branche, kopierfertig", icon: <Code className="h-5 w-5" />, cat: "Schema" },
-    { slug: "schema-markup-local-seo", title: "Schema Markup fur Local SEO", desc: "Alle Schema-Typen fur lokale Unternehmen", icon: <FileCode className="h-5 w-5" />, cat: "Schema" },
+    { slug: "localbusiness-schema-implementierung", title: "LocalBusiness Schema implementieren", desc: "JSON-LD Code für jede Branche, kopierfertig", icon: <Code className="h-5 w-5" />, cat: "Schema" },
+    { slug: "schema-markup-local-seo", title: "Schema Markup für Local SEO", desc: "Alle Schema-Typen für lokale Unternehmen", icon: <FileCode className="h-5 w-5" />, cat: "Schema" },
     { slug: "review-schema-implementierung", title: "Review Schema implementieren", desc: "AggregateRating & Bewertungssterne", icon: <BarChart3 className="h-5 w-5" />, cat: "Schema" },
-    { slug: "core-web-vitals-local-seo", title: "Core Web Vitals fur Local SEO", desc: "LCP, INP & CLS optimieren", icon: <Gauge className="h-5 w-5" />, cat: "Performance" },
+    { slug: "core-web-vitals-local-seo", title: "Core Web Vitals für Local SEO", desc: "LCP, INP & CLS optimieren", icon: <Gauge className="h-5 w-5" />, cat: "Performance" },
     { slug: "mobile-local-seo", title: "Mobile Local SEO", desc: "Mobile-First, AMP & responsive Design", icon: <Smartphone className="h-5 w-5" />, cat: "Mobile" },
-    { slug: "nap-konsistenz-local-seo", title: "NAP-Konsistenz", desc: "Name, Adresse, Telefon uberall einheitlich", icon: <MapPin className="h-5 w-5" />, cat: "Grundlagen" },
-    { slug: "local-citations-2025", title: "Local Citations 2025", desc: "Branchenverzeichnisse & Eintraege", icon: <Globe className="h-5 w-5" />, cat: "Citations" },
-    { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste", desc: "50+ Punkte fur maximale Sichtbarkeit", icon: <CheckCircle2 className="h-5 w-5" />, cat: "Audit" },
+    { slug: "nap-konsistenz-local-seo", title: "NAP-Konsistenz", desc: "Name, Adresse, Telefon überall einheitlich", icon: <MapPin className="h-5 w-5" />, cat: "Grundlagen" },
+    { slug: "local-citations-2025", title: "Local Citations 2025", desc: "Branchenverzeichnisse & Einträge", icon: <Globe className="h-5 w-5" />, cat: "Citations" },
+    { slug: "local-seo-audit-checkliste", title: "Local SEO Audit Checkliste", desc: "50+ Punkte für maximale Sichtbarkeit", icon: <CheckCircle2 className="h-5 w-5" />, cat: "Audit" },
   ];
 
   return (
@@ -161,9 +161,9 @@ const TechnischesLocalSeoGuide = () => {
 
       {/* Warum Technical SEO */}
       <section id="warum-technical-seo" data-ai-summary="true">
-        <h2>Warum technisches SEO fur lokale Unternehmen entscheidend ist</h2>
+        <h2>Warum technisches SEO für lokale Unternehmen entscheidend ist</h2>
         <p data-featured-snippet="true" data-speakable="true">
-          <strong>Technisches Local SEO</strong> ist die unsichtbare Grundlage jedes lokalen Rankings. Wahrend Content und Backlinks die sichtbaren Saulen sind, entscheidet die technische Infrastruktur daruber, ob Google Ihre Website uberhaupt korrekt crawlen, indexieren und verstehen kann. Fur lokale Unternehmen ist das besonders kritisch: 92 % der lokalen Suchen kommen vom Smartphone, und fehlendes Schema Markup bedeutet fehlende Rich Snippets im <LexikonLink term="Local Pack" />.
+          <strong>Technisches Local SEO</strong> ist die unsichtbare Grundlage jedes lokalen Rankings. Während Content und Backlinks die sichtbaren Säulen sind, entscheidet die technische Infrastruktur darüber, ob Google Ihre Website überhaupt korrekt crawlen, indexieren und verstehen kann. Für lokale Unternehmen ist das besonders kritisch: 92 % der lokalen Suchen kommen vom Smartphone, und fehlendes Schema Markup bedeutet fehlende Rich Snippets im <LexikonLink term="Local Pack" />.
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 my-6">
@@ -177,7 +177,7 @@ const TechnischesLocalSeoGuide = () => {
                 <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" /> Core Web Vitals = offizieller Ranking-Faktor</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" /> Schema Markup = Rich Snippets mit Sternen</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" /> Mobile-First-Index priorisiert schnelle Seiten</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" /> Interne Links starken Standortseiten-Relevanz</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" /> Interne Links stärken Standortseiten-Relevanz</li>
               </ul>
             </CardContent>
           </Card>
@@ -185,7 +185,7 @@ const TechnischesLocalSeoGuide = () => {
             <CardContent className="p-5">
               <div className="flex items-center gap-2 mb-3">
                 <AlertTriangle className="h-5 w-5 text-destructive" />
-                <h3 className="font-semibold">Kosten bei Vernachlassigung</h3>
+                <h3 className="font-semibold">Kosten bei Vernachlässigung</h3>
               </div>
               <ul className="text-sm space-y-2 text-muted-foreground">
                 <li className="flex items-start gap-2"><AlertTriangle className="h-4 w-4 text-destructive mt-0.5 shrink-0" /> 53 % verlassen Seiten mit &gt;3 Sek. Ladezeit</li>
@@ -203,7 +203,7 @@ const TechnischesLocalSeoGuide = () => {
               <TableHead className="font-bold">Technischer Faktor</TableHead>
               <TableHead className="font-bold">Ranking-Einfluss</TableHead>
               <TableHead className="font-bold">Aufwand</TableHead>
-              <TableHead className="font-bold">Prioritat</TableHead>
+              <TableHead className="font-bold">Priorität</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -236,7 +236,7 @@ const TechnischesLocalSeoGuide = () => {
       <section id="localbusiness-schema" data-ai-summary="true">
         <h2>LocalBusiness Schema Markup: Das Fundament</h2>
         <p data-featured-snippet="true" data-speakable="true">
-          <strong>LocalBusiness Schema</strong> ist der wichtigste strukturierte Datentyp fur lokale Unternehmen. Es teilt Google prazise mit, wer Sie sind, wo Sie sind, wann Sie geoffnet haben und was Sie anbieten. Ohne dieses Markup entgehen Ihnen Rich Snippets mit Sternen, Offnungszeiten und Kontaktinfos in den Suchergebnissen.
+          <strong>LocalBusiness Schema</strong> ist der wichtigste strukturierte Datentyp für lokale Unternehmen. Es teilt Google präzise mit, wer Sie sind, wo Sie sind, wann Sie geöffnet haben und was Sie anbieten. Ohne dieses Markup entgehen Ihnen Rich Snippets mit Sternen, Öffnungszeiten und Kontaktinfos in den Suchergebnissen.
         </p>
 
         <h3>Minimales LocalBusiness Schema (Pflicht)</h3>
@@ -245,12 +245,12 @@ const TechnischesLocalSeoGuide = () => {
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Backerei Schmidt",
+  "name": "Bäckerei Schmidt",
   "image": "https://example.com/images/baeckerei-schmidt.jpg",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Hauptstrasse 42",
-    "addressLocality": "Munchen",
+    "streetAddress": "Hauptstraße 42",
+    "addressLocality": "München",
     "addressRegion": "Bayern",
     "postalCode": "80331",
     "addressCountry": "DE"
@@ -300,7 +300,7 @@ const TechnischesLocalSeoGuide = () => {
             <TableRow>
               <TableHead className="font-bold">Branche</TableHead>
               <TableHead className="font-bold">Schema-Typ</TableHead>
-              <TableHead className="font-bold">Zusatzliche Properties</TableHead>
+              <TableHead className="font-bold">Zusätzliche Properties</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -324,7 +324,7 @@ const TechnischesLocalSeoGuide = () => {
         </Table>
 
         <p>
-          Komplette Implementierung mit branchenspezifischen Vorlagen: <Link to="/blog/localbusiness-schema-implementierung" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">LocalBusiness Schema Implementierung Guide</Link>. Alle Schema-Typen im Uberblick: <Link to="/blog/schema-markup-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Schema Markup fur Local SEO</Link>.
+          Komplette Implementierung mit branchenspezifischen Vorlagen: <Link to="/blog/localbusiness-schema-implementierung" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">LocalBusiness Schema Implementierung Guide</Link>. Alle Schema-Typen im Überblick: <Link to="/blog/schema-markup-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Schema Markup für Local SEO</Link>.
         </p>
       </section>
 
@@ -332,14 +332,14 @@ const TechnischesLocalSeoGuide = () => {
       <section id="geo-markup" data-ai-summary="true">
         <h2>Geo-Markup & standortbezogene Signale</h2>
         <p data-featured-snippet="true">
-          <strong>Geo-Markup</strong> hilft Google, den exakten Standort und Einzugsbereich Ihres Unternehmens zu verstehen. Das ist besonders wichtig fur „in der Nahe"-Suchen und das <LexikonLink term="Local Pack" />-Ranking.
+          <strong>Geo-Markup</strong> hilft Google, den exakten Standort und Einzugsbereich Ihres Unternehmens zu verstehen. Das ist besonders wichtig für „in der Nähe"-Suchen und das <LexikonLink term="Local Pack" />-Ranking.
         </p>
 
         <h3>GeoCoordinates im LocalBusiness Schema</h3>
         <pre className="bg-muted/50 rounded-lg p-4 text-sm overflow-x-auto my-4">
 {`{
   "@type": "LocalBusiness",
-  "name": "Zahnarztpraxis Dr. Muller",
+  "name": "Zahnarztpraxis Dr. Müller",
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 48.1351,
@@ -348,7 +348,7 @@ const TechnischesLocalSeoGuide = () => {
   "areaServed": [
     {
       "@type": "City",
-      "name": "Munchen"
+      "name": "München"
     },
     {
       "@type": "AdministrativeArea",
@@ -379,12 +379,12 @@ const TechnischesLocalSeoGuide = () => {
           <TableBody>
             {[
               ["GeoCoordinates", "JSON-LD im LocalBusiness Schema", "Exakte Standort-Zuordnung"],
-              ["areaServed", "Stadte/Stadtteile als Schema-Property", "Einzugsgebiet fur Service-Businesses"],
-              ["serviceArea + GeoCircle", "Radius um den Standort", "Fur mobile Dienste (Handwerker, Lieferdienst)"],
-              ["Google Maps Embed", "iframe auf Kontaktseite", "Bestatigt den Standort visuell"],
-              ["Standort in Title & H1", "z.B. 'Zahnarzt Munchen Schwabing'", "On-Page Geo-Signal"],
-              ["Lokale Landingpages", "Pro Stadtteil/Stadt eine Seite", "Starkstes organisches Geo-Signal"],
-              ["hreflang (DACH)", "de-DE, de-AT, de-CH Tags", "Landerspezifische Auslieferung"],
+              ["areaServed", "Städte/Stadtteile als Schema-Property", "Einzugsgebiet für Service-Businesses"],
+              ["serviceArea + GeoCircle", "Radius um den Standort", "Für mobile Dienste (Handwerker, Lieferdienst)"],
+              ["Google Maps Embed", "iframe auf Kontaktseite", "Bestätigt den Standort visuell"],
+              ["Standort in Title & H1", "z.B. 'Zahnarzt München Schwabing'", "On-Page Geo-Signal"],
+              ["Lokale Landingpages", "Pro Stadtteil/Stadt eine Seite", "Stärkstes organisches Geo-Signal"],
+              ["hreflang (DACH)", "de-DE, de-AT, de-CH Tags", "Länderspezifische Auslieferung"],
             ].map(([signal, umsetzung, wirkung], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{signal}</TableCell>
@@ -396,7 +396,7 @@ const TechnischesLocalSeoGuide = () => {
         </Table>
 
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-6">
-          <p className="font-semibold text-foreground mb-2">💡 DACH-Tipp: hreflang fur mehrsprachige Regionen</p>
+          <p className="font-semibold text-foreground mb-2">💡 DACH-Tipp: hreflang für mehrsprachige Regionen</p>
           <pre className="text-sm bg-muted/50 rounded p-3 overflow-x-auto">
 {`<link rel="alternate" hreflang="de-DE" href="https://example.de/zahnarzt-muenchen" />
 <link rel="alternate" hreflang="de-AT" href="https://example.at/zahnarzt-wien" />
@@ -408,7 +408,7 @@ const TechnischesLocalSeoGuide = () => {
 
       {/* Strukturierte Daten */}
       <section id="strukturierte-daten">
-        <h2>Strukturierte Daten: Alle Schema-Typen fur lokale Unternehmen</h2>
+        <h2>Strukturierte Daten: Alle Schema-Typen für lokale Unternehmen</h2>
         <p>
           Neben LocalBusiness gibt es weitere <LexikonLink term="Schema Markup" />-Typen, die lokale Sichtbarkeit steigern:
         </p>
@@ -418,17 +418,17 @@ const TechnischesLocalSeoGuide = () => {
             <TableRow>
               <TableHead className="font-bold">Schema-Typ</TableHead>
               <TableHead className="font-bold">Rich-Snippet-Effekt</TableHead>
-              <TableHead className="font-bold">Prioritat</TableHead>
+              <TableHead className="font-bold">Priorität</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {[
-              ["LocalBusiness", "Offnungszeiten, Adresse, Telefon in SERPs", "🔴 Pflicht"],
+              ["LocalBusiness", "Öffnungszeiten, Adresse, Telefon in SERPs", "🔴 Pflicht"],
               ["FAQPage", "FAQ-Akkordeon direkt in Google", "🔴 Pflicht"],
               ["AggregateRating", "Sterne-Bewertung in den SERPs", "🔴 Pflicht"],
-              ["BreadcrumbList", "Brotkrumel-Navigation in Google", "🟡 Empfohlen"],
-              ["Product / Service", "Preise, Verfugbarkeit in SERPs", "🟡 Empfohlen"],
-              ["HowTo", "Schritt-fur-Schritt-Anleitungen", "🟡 Empfohlen"],
+              ["BreadcrumbList", "Brotkrümel-Navigation in Google", "🟡 Empfohlen"],
+              ["Product / Service", "Preise, Verfügbarkeit in SERPs", "🟡 Empfohlen"],
+              ["HowTo", "Schritt-für-Schritt-Anleitungen", "🟡 Empfohlen"],
               ["Event", "Veranstaltungen in Google Events", "🟢 Optional"],
               ["Speakable", "AI-Suchmaschinen-Zitate", "🟢 Zukunftssicher"],
             ].map(([typ, effekt, prio], i) => (
@@ -492,12 +492,12 @@ const TechnischesLocalSeoGuide = () => {
           </Card>
         </div>
 
-        <h3>Speed-Optimierung: Die 10 wichtigsten Massnahmen</h3>
+        <h3>Speed-Optimierung: Die 10 wichtigsten Maßnahmen</h3>
         <Table className="my-6">
           <TableHeader>
             <TableRow>
               <TableHead className="font-bold">#</TableHead>
-              <TableHead className="font-bold">Massnahme</TableHead>
+              <TableHead className="font-bold">Maßnahme</TableHead>
               <TableHead className="font-bold">Wirkung auf</TableHead>
               <TableHead className="font-bold">Aufwand</TableHead>
             </TableRow>
@@ -505,7 +505,7 @@ const TechnischesLocalSeoGuide = () => {
           <TableBody>
             {[
               ["1", "Bilder in WebP/AVIF komprimieren", "LCP", "Niedrig"],
-              ["2", "Lazy Loading fur Below-the-Fold-Bilder", "LCP", "Niedrig"],
+              ["2", "Lazy Loading für Below-the-Fold-Bilder", "LCP", "Niedrig"],
               ["3", "CSS/JS minifizieren & bundlen", "LCP, INP", "Mittel"],
               ["4", "CDN (Content Delivery Network) nutzen", "LCP, TTFB", "Mittel"],
               ["5", "Server-Response optimieren (TTFB <800ms)", "LCP", "Hoch"],
@@ -526,7 +526,7 @@ const TechnischesLocalSeoGuide = () => {
         </Table>
 
         <p>
-          Vollstandiger Deep-Dive: <Link to="/blog/core-web-vitals-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Core Web Vitals fur Local SEO</Link>.
+          Vollständiger Deep-Dive: <Link to="/blog/core-web-vitals-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Core Web Vitals für Local SEO</Link>.
         </p>
       </section>
 
@@ -537,13 +537,13 @@ const TechnischesLocalSeoGuide = () => {
           Google bewertet und rankt Ihre Website basierend auf der <strong>mobilen Version</strong> (Mobile-First-Index). Da 92 % der lokalen Suchen mobil erfolgen, ist perfekte mobile Performance keine Option, sondern Pflicht.
         </p>
 
-        <h3>Mobile-Checkliste fur lokale Websites</h3>
+        <h3>Mobile-Checkliste für lokale Websites</h3>
         <div className="grid md:grid-cols-2 gap-4 my-6">
           {[
             { icon: Smartphone, title: "Responsive Design", desc: "Alle Inhalte auf jedem Bildschirm optimal dargestellt. Viewport-Meta-Tag gesetzt." },
             { icon: Zap, title: "Schnelle mobile Ladezeit", desc: "Unter 3 Sekunden auf 4G. Bilder komprimiert, JS minimiert." },
-            { icon: MapPin, title: "Click-to-Call & Maps", desc: "Telefonnummer als klickbarer Link, Google Maps Embed fur Wegbeschreibung." },
-            { icon: Eye, title: "Lesbare Schriftgrosse", desc: "Minimum 16px fur Fliesstext, 48px Mindestgrosse fur Touch-Targets." },
+            { icon: MapPin, title: "Click-to-Call & Maps", desc: "Telefonnummer als klickbarer Link, Google Maps Embed für Wegbeschreibung." },
+            { icon: Eye, title: "Lesbare Schriftgröße", desc: "Minimum 16px für Fließtext, 48px Mindestgröße für Touch-Targets." },
           ].map((item, i) => (
             <Card key={i} className="border border-border/50">
               <CardContent className="p-5">
@@ -571,7 +571,7 @@ const TechnischesLocalSeoGuide = () => {
               ["Anteil lokaler Suchen", "92 %", "8 %"],
               ["Suchintention", "Sofortige Aktion", "Recherche / Vergleich"],
               ["Click-to-Call nutzbar", "Ja", "Nein"],
-              ["Maps-Navigation direkt", "Ja", "Nur uber Link"],
+              ["Maps-Navigation direkt", "Ja", "Nur über Link"],
               ["Ladezeit-Toleranz", "<3 Sekunden", "<5 Sekunden"],
               ["Konversionsweg", "Anruf > Besuch", "Formular > E-Mail"],
             ].map(([aspekt, mobile, desktop], i) => (
@@ -585,23 +585,23 @@ const TechnischesLocalSeoGuide = () => {
         </Table>
 
         <p>
-          Vollstandiger Guide: <Link to="/blog/mobile-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Mobile Local SEO Optimierung</Link>.
+          Vollständiger Guide: <Link to="/blog/mobile-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Mobile Local SEO Optimierung</Link>.
         </p>
       </section>
 
       {/* Interne Verlinkung */}
       <section id="interne-verlinkung" data-ai-summary="true">
-        <h2>Interne Verlinkung fur lokale SEO</h2>
+        <h2>Interne Verlinkung für lokale SEO</h2>
         <p data-featured-snippet="true">
-          <strong>Interne Verlinkung</strong> ist einer der am meisten unterschatzten lokalen Ranking-Faktoren. Durch strategische interne Links verteilen Sie Link-Equity auf Standortseiten, starken die thematische Relevanz und helfen Google, die Seitenstruktur zu verstehen.
+          <strong>Interne Verlinkung</strong> ist einer der am meisten unterschätzten lokalen Ranking-Faktoren. Durch strategische interne Links verteilen Sie Link-Equity auf Standortseiten, stärken die thematische Relevanz und helfen Google, die Seitenstruktur zu verstehen.
         </p>
 
-        <h3>Hub-Spoke-Modell fur lokale Websites</h3>
+        <h3>Hub-Spoke-Modell für lokale Websites</h3>
         <div className="bg-muted/50 rounded-xl p-6 my-6">
           <div className="text-center space-y-4">
             <div className="inline-block bg-primary/10 border border-primary/30 rounded-lg px-6 py-3">
               <p className="font-bold text-primary">🏠 Startseite / Hauptservice</p>
-              <p className="text-xs text-muted-foreground">"Zahnarzt Munchen"</p>
+              <p className="text-xs text-muted-foreground">"Zahnarzt München"</p>
             </div>
             <div className="flex justify-center">
               <ArrowRight className="h-5 w-5 text-primary rotate-90" />
@@ -628,11 +628,11 @@ const TechnischesLocalSeoGuide = () => {
           </div>
         </div>
 
-        <h3>Best Practices fur interne Links</h3>
+        <h3>Best Practices für interne Links</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>Lokale Ankertexte verwenden:</strong> "Zahnarzt in Munchen Schwabing" statt "hier klicken"</li>
+          <li><strong>Lokale Ankertexte verwenden:</strong> "Zahnarzt in München Schwabing" statt "hier klicken"</li>
           <li><strong>Breadcrumb-Navigation:</strong> Startseite → Stadt → Stadtteil → Service</li>
-          <li><strong>Kontextrelevante Links im Content:</strong> Naturlich in Fliesstext eingebaut</li>
+          <li><strong>Kontextrelevante Links im Content:</strong> Natürlich in Fließtext eingebaut</li>
           <li><strong>Footer-Links zu Standortseiten:</strong> Alle Stadtteile/Filialen verlinken</li>
           <li><strong>Silo-Struktur:</strong> Verwandte Themen und Standorte miteinander vernetzen</li>
           <li><strong>Maximal 100 interne Links pro Seite:</strong> Fokus auf die wichtigsten Seiten</li>
@@ -647,7 +647,7 @@ const TechnischesLocalSeoGuide = () => {
     { "@type": "ListItem", "position": 1,
       "name": "Startseite", "item": "https://example.de" },
     { "@type": "ListItem", "position": 2,
-      "name": "Zahnarzt Munchen", "item": "https://example.de/zahnarzt-muenchen" },
+      "name": "Zahnarzt München", "item": "https://example.de/zahnarzt-muenchen" },
     { "@type": "ListItem", "position": 3,
       "name": "Schwabing", "item": "https://example.de/zahnarzt-muenchen-schwabing" }
   ]
@@ -658,9 +658,9 @@ const TechnischesLocalSeoGuide = () => {
 
       {/* Indexierung */}
       <section id="indexierung" data-ai-summary="true">
-        <h2>Indexierungsstrategien fur lokale Websites</h2>
+        <h2>Indexierungsstrategien für lokale Websites</h2>
         <p data-featured-snippet="true">
-          <strong>Indexierungssteuerung</strong> bestimmt, welche Seiten Google in den Index aufnimmt und in den Suchergebnissen anzeigt. Fur lokale Unternehmen ist das besonders wichtig bei Standortseiten, Duplicate Content und mehrsprachigen Seiten im DACH-Raum.
+          <strong>Indexierungssteuerung</strong> bestimmt, welche Seiten Google in den Index aufnimmt und in den Suchergebnissen anzeigt. Für lokale Unternehmen ist das besonders wichtig bei Standortseiten, Duplicate Content und mehrsprachigen Seiten im DACH-Raum.
         </p>
 
         <h3>XML-Sitemap</h3>
@@ -696,7 +696,7 @@ Sitemap: https://example.de/sitemap.xml`}
           <TableHeader>
             <TableRow>
               <TableHead className="font-bold">Problem</TableHead>
-              <TableHead className="font-bold">Losung</TableHead>
+              <TableHead className="font-bold">Lösung</TableHead>
               <TableHead className="font-bold">Beispiel</TableHead>
             </TableRow>
           </TableHeader>
@@ -705,7 +705,7 @@ Sitemap: https://example.de/sitemap.xml`}
               ["Gleicher Inhalt mit/ohne www", "301-Redirect + Canonical", "www.example.de → example.de"],
               ["HTTP + HTTPS parallel", "301-Redirect auf HTTPS", "http:// → https://"],
               ["URL-Parameter (Filter, Sortierung)", "Canonical auf Hauptseite", "?sort=price → Canonical ohne Parameter"],
-              ["Ahnliche Standortseiten", "Einzigartigen lokalen Content erstellen", "Munchen ≠ Augsburg ≠ Nurnberg"],
+              ["Ähnliche Standortseiten", "Einzigartigen lokalen Content erstellen", "München ≠ Augsburg ≠ Nürnberg"],
               ["Paginated Inhalte", "rel=next/prev + Canonical", "Seite 1 = kanonisch"],
               ["Mehrsprachig (DACH)", "hreflang Tags", "de-DE, de-AT, de-CH"],
             ].map(([problem, loesung, beispiel], i) => (
@@ -719,7 +719,7 @@ Sitemap: https://example.de/sitemap.xml`}
         </Table>
 
         <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-6 my-6">
-          <p className="font-semibold text-foreground mb-2">⚠️ Haufiger Fehler: Standortseiten ohne einzigartigen Content</p>
+          <p className="font-semibold text-foreground mb-2">⚠️ Häufiger Fehler: Standortseiten ohne einzigartigen Content</p>
           <p className="text-muted-foreground text-sm">
             Viele lokale Unternehmen erstellen Standortseiten, die sich nur in der Stadt-Nennung unterscheiden. Google erkennt das als Thin Content / Duplicate Content und indexiert solche Seiten schlecht oder gar nicht. <strong>Jede Standortseite braucht einzigartigen, lokal relevanten Content</strong> (lokale Referenzen, Teamfotos, Anfahrtsbeschreibung, lokale Bewertungen).
           </p>
@@ -730,10 +730,10 @@ Sitemap: https://example.de/sitemap.xml`}
       <section id="https-sicherheit">
         <h2>HTTPS & Sicherheit</h2>
         <p>
-          HTTPS ist seit 2014 ein Google-Ranking-Faktor und fur <LexikonLink term="E-E-A-T" />-Signale unerlasslich:
+          HTTPS ist seit 2014 ein Google-Ranking-Faktor und für <LexikonLink term="E-E-A-T" />-Signale unerlässlich:
         </p>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>SSL-Zertifikat:</strong> Kostenlos uber Let's Encrypt, bei jedem Hoster verfugbar</li>
+          <li><strong>SSL-Zertifikat:</strong> Kostenlos über Let's Encrypt, bei jedem Hoster verfügbar</li>
           <li><strong>301-Redirect:</strong> Alle HTTP-URLs auf HTTPS umleiten</li>
           <li><strong>Mixed Content vermeiden:</strong> Keine HTTP-Ressourcen (Bilder, Scripts) auf HTTPS-Seiten</li>
           <li><strong>HSTS-Header:</strong> Erzwingt HTTPS und verhindert Downgrade-Angriffe</li>
@@ -753,19 +753,19 @@ Sitemap: https://example.de/sitemap.xml`}
             "Robots.txt korrekt konfiguriert (keine wichtigen Seiten blockiert)",
             "Canonical Tags auf allen Seiten",
             "Keine verwaisten Seiten (Orphan Pages)",
-            "hreflang fur mehrsprachige Seiten (DACH)",
+            "hreflang für mehrsprachige Seiten (DACH)",
             "Keine Soft-404-Fehler",
-            "Indexierungsstatus in Search Console regelmaessig prufen",
+            "Indexierungsstatus in Search Console regelmäßig prüfen",
             "Broken Links identifizieren und beheben",
           ]},
           { cat: "Strukturierte Daten", icon: Code, items: [
-            "LocalBusiness Schema mit vollstandigen Geschaftsdaten",
+            "LocalBusiness Schema mit vollständigen Geschäftsdaten",
             "GeoCoordinates im Schema",
             "FAQPage Schema auf relevanten Seiten",
             "AggregateRating / Review Schema",
             "BreadcrumbList Schema",
             "Schema-Validierung mit Google Rich Results Test",
-            "Speakable Properties fur AI-Suchmaschinen",
+            "Speakable Properties für AI-Suchmaschinen",
             "Keine Schema-Fehler in der Search Console",
           ]},
           { cat: "Performance & Core Web Vitals", icon: Gauge, items: [
@@ -774,17 +774,17 @@ Sitemap: https://example.de/sitemap.xml`}
             "CLS unter 0,1",
             "TTFB unter 800ms",
             "Bilder in WebP/AVIF mit Lazy Loading",
-            "CSS/JS minimiert und gebundelt",
+            "CSS/JS minimiert und gebündelt",
             "Schriften lokal gehostet mit font-display: swap",
-            "CDN fur statische Ressourcen",
+            "CDN für statische Ressourcen",
           ]},
           { cat: "Mobile & UX", icon: Smartphone, items: [
-            "Responsive Design auf allen Geraten",
+            "Responsive Design auf allen Geräten",
             "Viewport Meta-Tag korrekt gesetzt",
             "Touch-Targets mindestens 48x48px",
-            "Click-to-Call fur Telefonnummern",
+            "Click-to-Call für Telefonnummern",
             "Google Maps Embed auf Kontaktseite",
-            "Schriftgrosse mindestens 16px",
+            "Schriftgröße mindestens 16px",
             "Kein horizontales Scrollen",
             "Mobile Ladezeit unter 3 Sekunden",
           ]},
@@ -792,10 +792,10 @@ Sitemap: https://example.de/sitemap.xml`}
             "HTTPS auf allen Seiten (SSL-Zertifikat aktiv)",
             "Kein Mixed Content",
             "301-Redirect von HTTP auf HTTPS",
-            "Impressum & Datenschutzerklarung vorhanden",
+            "Impressum & Datenschutzerklärung vorhanden",
             "Cookie-Banner DSGVO-konform",
             "HSTS-Header aktiviert",
-            "Regelmaessige Sicherheits-Updates",
+            "Regelmäßige Sicherheits-Updates",
             "Backup-Strategie vorhanden",
           ]},
         ].map((section, i) => (
@@ -826,7 +826,7 @@ Sitemap: https://example.de/sitemap.xml`}
 
       {/* Deep-Dive-Guides */}
       <section id="deep-dive-guides">
-        <h2>Alle Deep-Dive-Guides im Uberblick</h2>
+        <h2>Alle Deep-Dive-Guides im Überblick</h2>
         <p className="text-muted-foreground mb-6">
           Jedes Thema wird in einem eigenen Artikel detailliert behandelt:
         </p>
@@ -869,7 +869,7 @@ Sitemap: https://example.de/sitemap.xml`}
                 <span className="text-2xl">🏆</span>
                 <div>
                   <h4 className="font-semibold text-sm">Ultimate Guide Local SEO</h4>
-                  <p className="text-xs text-muted-foreground">Die Gesamtstrategie fur lokale Sichtbarkeit</p>
+                  <p className="text-xs text-muted-foreground">Die Gesamtstrategie für lokale Sichtbarkeit</p>
                 </div>
               </CardContent>
             </Card>
@@ -896,7 +896,7 @@ Sitemap: https://example.de/sitemap.xml`}
 
       {/* FAQ */}
       <section id="faq">
-        <h2>Haufig gestellte Fragen</h2>
+        <h2>Häufig gestellte Fragen</h2>
         <BlogFAQSection faqs={faqItems} />
       </section>
 
