@@ -11,9 +11,12 @@ import { OfferCard } from "@/components/v4/services/OfferCard";
 import { OfferIndex } from "@/components/v4/services/OfferIndex";
 import { ServicesFaq } from "@/components/v4/services/ServicesFaq";
 import { HERO_OFFER_ORDER, HERO_TERMS } from "@/data/v4HomeData";
+import { SERVICES_FAQ, faqEntries } from "@/data/v4Faq";
 import { OFFERS } from "@/data/v4Offers";
 import type { Offer } from "@/data/v4Offers";
 import { CHECK_REPLY_TIME } from "@/lib/check";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
+import { faqPageJsonLd } from "@/lib/seoFaq";
 
 const PAGE_URL = "https://localdominate.org/services";
 
@@ -47,6 +50,7 @@ const SERVICES_JSON_LD = {
       name: "Services & Fixed-Price Offers – Local Dominator",
       isPartOf: { "@id": "https://localdominate.org/#website" },
       about: { "@id": "https://localdominate.org/#organization" },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
     {
@@ -55,6 +59,8 @@ const SERVICES_JSON_LD = {
       name: "Local Dominator offers",
       itemListElement: OFFERS.map(offerToJsonLd),
     },
+    // Same array as the visible list under "Short answers" (ServicesFaq).
+    faqPageJsonLd(PAGE_URL, faqEntries(SERVICES_FAQ)),
   ],
 };
 

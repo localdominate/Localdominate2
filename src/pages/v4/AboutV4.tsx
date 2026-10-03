@@ -18,7 +18,11 @@ import {
   PRINCIPLES,
   TODAY_LINKS,
 } from "@/data/v4About";
+import { PageFaqSection } from "@/components/v4/PageFaq";
+import { ABOUT_FAQ, faqEntries } from "@/data/v4Faq";
 import { CHECK_REPLY_TIME } from "@/lib/check";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
+import { faqPageJsonLd } from "@/lib/seoFaq";
 
 const SITE = "https://localdominate.org";
 const PAGE_URL = `${SITE}${ABOUT_PATH}`;
@@ -38,6 +42,7 @@ const JSON_LD = {
       about: { "@id": `${SITE}/#organization` },
       mainEntity: { "@id": PERSON_ID },
       breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
     {
@@ -57,6 +62,7 @@ const JSON_LD = {
       sameAs: [CONTACT.linkedIn],
       knowsLanguage: ["German", "English"],
     },
+    faqPageJsonLd(PAGE_URL, faqEntries(ABOUT_FAQ)),
   ],
 };
 
@@ -285,7 +291,10 @@ export default function AboutV4() {
         </div>
       </StateField>
 
-      {/* 07 CONTACT: both actions, plus the direct ways to reach him */}
+      {/* 07 SHORT ANSWERS: same array as the FAQPage JSON-LD */}
+      <PageFaqSection id="about-faq" title="Short answers about the studio." items={ABOUT_FAQ} />
+
+      {/* 08 CONTACT: both actions, plus the direct ways to reach him */}
       <StateField field="dark" as="section" aria-labelledby="about-contact">
         <div className="mx-auto grid max-w-[1300px] gap-12 px-6 py-24 md:px-10 md:py-32 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-20">
           <div>

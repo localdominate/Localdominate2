@@ -6,7 +6,11 @@ import { BookCallButton } from "@/components/v4/BookCallButton";
 import { HowWeWork } from "@/components/v4/HowWeWork";
 import { CheckForm } from "@/components/v4/check/CheckForm";
 import { CHECK_FORM_EN } from "@/data/v4Check";
+import { PageFaqSection } from "@/components/v4/PageFaq";
+import { START_FAQ, faqEntries } from "@/data/v4Faq";
 import { CHECK_PATH, CHECK_REPLY_TIME } from "@/lib/check";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
+import { faqPageJsonLd } from "@/lib/seoFaq";
 
 const SITE = "https://localdominate.org";
 const PAGE_URL = `${SITE}${CHECK_PATH}`;
@@ -26,6 +30,7 @@ const JSON_LD = {
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#organization` },
       breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
     {
@@ -36,6 +41,7 @@ const JSON_LD = {
         { "@type": "ListItem", position: 2, name: "Free check", item: PAGE_URL },
       ],
     },
+    faqPageJsonLd(PAGE_URL, faqEntries(START_FAQ)),
   ],
 };
 
@@ -120,6 +126,8 @@ export default function StartProjectV4() {
           <HowWeWork />
         </div>
       </StateField>
+
+      <PageFaqSection id="check-faq" title="Short answers before you send the link." items={START_FAQ} />
 
       <StateField field="dark" as="section" aria-labelledby="check-call">
         <div className="mx-auto flex max-w-[1300px] flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between md:px-10">

@@ -9,11 +9,15 @@ import { CaseSection } from "@/components/v4/work/CaseSection";
 import { FeaturedCase } from "@/components/v4/work/FeaturedCase";
 import { publishedCases } from "@/data/v4Cases";
 import { PILLAR_BASE } from "@/data/v4PillarIndex";
+import { PageFaqSection } from "@/components/v4/PageFaq";
+import { WORK_FAQ, faqEntries } from "@/data/v4Faq";
 import { CHECK_REPLY_TIME } from "@/lib/check";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
+import { faqPageJsonLd } from "@/lib/seoFaq";
 
 const PAGE_URL = "https://localdominate.org/work";
 
-/** Frozen (CLAUDE.md Hard Rule 1). */
+/** Head changes need the owner's approval (CLAUDE.md Hard Rule 1). */
 const WORK_JSON_LD = {
   "@context": "https://schema.org",
   "@graph": [
@@ -24,8 +28,10 @@ const WORK_JSON_LD = {
       name: "Selected Work & Case Studies – Local Dominator",
       isPartOf: { "@id": "https://localdominate.org/#website" },
       about: { "@id": "https://localdominate.org/#organization" },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
+    faqPageJsonLd(PAGE_URL, faqEntries(WORK_FAQ)),
   ],
 };
 
@@ -119,7 +125,10 @@ export default function WorkV4() {
         </StateField>
       )}
 
-      {/* 04 THE INVITATION */}
+      {/* 04 SHORT ANSWERS: same array as the FAQPage JSON-LD */}
+      <PageFaqSection id="work-faq" title="Short answers about the projects." items={WORK_FAQ} />
+
+      {/* 05 THE INVITATION */}
       <StateField field="dark" as="section" aria-labelledby="work-cta">
         <div className="mx-auto max-w-[1000px] px-6 py-24 text-center md:px-10 md:py-32">
           <h2 id="work-cta" className={`${h2Serif} text-[length:var(--v4-text-major)] text-v4-ivory`}>

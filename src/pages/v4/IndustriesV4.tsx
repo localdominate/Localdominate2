@@ -9,7 +9,11 @@ import { WorldNav } from "@/components/v4/industries/WorldNav";
 import { WorldSection } from "@/components/v4/industries/WorldSection";
 import { CommissionCalculator } from "@/components/v4/industries/CommissionCalculator";
 import { CALCULATOR_ANCHOR, INDUSTRY_ANCHORS, INDUSTRY_WORLDS } from "@/data/v4Industries";
+import { PageFaqSection } from "@/components/v4/PageFaq";
+import { INDUSTRIES_FAQ, faqEntries } from "@/data/v4Faq";
 import { CHECK_REPLY_TIME } from "@/lib/check";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
+import { faqPageJsonLd } from "@/lib/seoFaq";
 
 const SITE = "https://localdominate.org";
 const PAGE_URL = `${SITE}/industries`;
@@ -29,6 +33,7 @@ const JSON_LD = {
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#organization` },
       breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
     {
@@ -50,6 +55,7 @@ const JSON_LD = {
         url: `${PAGE_URL}#${world.id}`,
       })),
     },
+    faqPageJsonLd(PAGE_URL, faqEntries(INDUSTRIES_FAQ)),
   ],
 };
 
@@ -119,6 +125,8 @@ export default function IndustriesV4() {
           )}
         </WorldSection>
       ))}
+
+      <PageFaqSection id="industries-faq" title="Short answers for your kind of business." items={INDUSTRIES_FAQ} />
 
       <StateField field="dark" as="section" aria-labelledby="industries-start">
         <div className="mx-auto max-w-[1000px] px-6 py-24 text-center md:px-10 md:py-32">
