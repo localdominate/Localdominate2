@@ -82,7 +82,7 @@ const FaqSubHub = () => {
   return (
     <>
       <SEOHead
-        title={`FAQ: ${category.title} — ${category.faqs.length} Antworten | BuiltLocal`}
+        title={`FAQ: ${category.title} — ${category.faqs.length} Antworten`}
         description={`${category.faqs.length} häufig gestellte Fragen zu ${category.title}. ${category.description}`}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
