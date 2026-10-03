@@ -289,7 +289,7 @@ export default function DIYToolkit() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Praxiserprobt</h3>
                 <p className="text-muted-foreground">
-                  Die gleichen Tools, die wir für unsere 500+ Kunden nutzen.
+                  Die gleichen Tools, die wir in unserer eigenen Arbeit nutzen.
                 </p>
               </motion.div>
 
