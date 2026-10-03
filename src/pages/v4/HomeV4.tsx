@@ -19,9 +19,13 @@ import { ShowreelFilm } from "@/components/v4/ShowreelFilm";
 import { verifiedProof } from "@/data/v4Proof";
 import { caseLabel, publishedCases } from "@/data/v4Cases";
 import { PILLAR_BASE } from "@/data/v4PillarIndex";
-import { HANDOVERS, HERO_TERMS, WORLDS } from "@/data/v4HomeData";
+import { HANDOVERS, HERO_TERMS, HOME_SEO, WORLDS } from "@/data/v4HomeData";
+import { HOME_FAQ, faqEntries } from "@/data/v4Faq";
+import { PageFaqSection } from "@/components/v4/PageFaq";
 import { v4Route } from "@/lib/v4Routes";
 import { CHECK_REPLY_TIME } from "@/lib/check";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
+import { faqPageJsonLd } from "@/lib/seoFaq";
 
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 
@@ -37,9 +41,9 @@ import journeyImgSmall from "@/assets/v4/ld-home-4-5-800.webp";
  * Photography cropped from a set the owner supplied directly. No client names or metrics are
  * rendered unless they pass `verifiedProof()`.
  *
- * SEO: on `/` the head (title, description, canonical, hreflang, JSON-LD) is deliberately the same
- * as the previous home page (CLAUDE.md Hard Rule 1). The same component also serves the noindex
- * preview route (`preview`).
+ * SEO: title and description follow the studio positioning (HOME_SEO in v4HomeData.ts, owner
+ * approval of 2026-10-03); canonical and hreflang are unchanged. The same component also serves
+ * the noindex preview route (`preview`).
  */
 // Teaser: the non-video published cases, first three (the video case has its own block).
 const homeCases = publishedCases().filter((c) => !c.hasVideo).slice(0, 3);
@@ -58,6 +62,7 @@ const textLink =
 
 export default function HomeV4({ preview = false }: { preview?: boolean }) {
   const { language } = useLanguage();
+  const seo = HOME_SEO[language] ?? HOME_SEO.en;
   return (
     <div className="v4 font-v4-sans">
       {preview ? (
@@ -69,8 +74,8 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
         />
       ) : (
         <SEOHead
-          title={language === "en" ? "Local Dominator – Local SEO & AI Visibility" : language === "ar" ? "Local Dominator – تحسين الظهور المحلي وفي بحث AI" : "Local Dominator – Local SEO & AI-Sichtbarkeit"}
-          description={language === "en" ? "Local SEO and AI visibility for local businesses: Google Business Profile optimisation, structured data and practical guidance." : language === "ar" ? "تحسين الظهور المحلي للشركات عبر Google Business Profile والبيانات المنظمة والبحث المدعوم بالذكاء الاصطناعي." : "Local SEO und AI-Sichtbarkeit für lokale Unternehmen: Google Business Profile, strukturierte Daten und praxisnahe Fachbeiträge."}
+          title={seo.title}
+          description={seo.description}
           canonicalUrl="https://localdominate.org/"
           lang={language}
           alternateUrls={{
@@ -78,17 +83,22 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
             en: "https://localdominate.org/?lang=en",
             ar: "https://localdominate.org/?lang=ar",
           }}
-          jsonLd={{
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "@id": "https://localdominate.org/#webpage",
-            "url": "https://localdominate.org/",
-            "name": language === "de" ? "Local Dominator – Local SEO & AI-Sichtbarkeit" : "Local Dominator – Local SEO & AI Visibility",
-            "description": language === "de" ? "Local SEO und AI-Sichtbarkeit für lokale Unternehmen." : "Local SEO and AI visibility for local businesses.",
-            "inLanguage": language === "de" ? "de-DE" : language === "ar" ? "ar" : "en-GB",
-            "isPartOf": { "@id": "https://localdominate.org/#website" },
-            "about": { "@id": "https://localdominate.org/#organization" },
-          }}
+          jsonLd={[
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://localdominate.org/#webpage",
+              "url": "https://localdominate.org/",
+              "name": seo.title,
+              "description": seo.description,
+              "inLanguage": seo.locale,
+              "dateModified": SEO_DATE_MODIFIED,
+              "isPartOf": { "@id": "https://localdominate.org/#website" },
+              "about": { "@id": "https://localdominate.org/#organization" },
+            },
+            // Same array as the visible "Short answers" section below.
+            { "@context": "https://schema.org", ...faqPageJsonLd("https://localdominate.org/", faqEntries(HOME_FAQ)) },
+          ]}
         />
       )}
       <a
@@ -338,7 +348,10 @@ export default function HomeV4({ preview = false }: { preview?: boolean }) {
           </div>
         </StateField>
 
-        {/* 07 THE INVITATION */}
+        {/* 07 SHORT ANSWERS: same array as the FAQPage JSON-LD */}
+        <PageFaqSection id="home-faq" title="Short answers before you start." items={HOME_FAQ} />
+
+        {/* 08 THE INVITATION */}
         <StateField field="dark" id="invitation" as="section" aria-labelledby="beat-invitation">
           <div className="mx-auto max-w-[1000px] px-6 py-24 text-center md:px-10 md:py-32">
             <h2 id="beat-invitation" className={`${h2Serif} text-[length:var(--v4-text-major)] text-v4-ivory`}>

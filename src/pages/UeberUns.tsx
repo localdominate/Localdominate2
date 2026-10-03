@@ -1,38 +1,45 @@
 import { Link } from "react-router-dom";
-import { Award, Users, Target, TrendingUp, CheckCircle, MapPin, Star } from "lucide-react";
+import { Award, Users, Target, CheckCircle, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
 import SiteBreadcrumbs from "@/components/SiteBreadcrumbs";
 
+/**
+ * Older page, kept at its URL. Everything it says comes from the published pages /about,
+ * /approach and /services (src/data/v4About.ts, v4Offers.ts); the earlier client counts, rating and
+ * ranking figures were not documented and are gone (Truth first, owner brief of 2026-10-03).
+ */
 const translations = {
   de: {
     title: "Über Local Dominator",
-    metaDesc: "Erfahren Sie, wer hinter Local Dominator steht. Unser Team, unsere Mission und warum über 500 Unternehmen uns vertrauen.",
-    orgDesc: "Local Dominator hilft lokalen Unternehmen im DACH-Raum, in Google Maps und der lokalen Suche sichtbar zu werden.",
-    subtitle: "Wir machen lokale Unternehmen in der Google-Suche und auf Google Maps sichtbar – mit datengetriebenen Strategien, die nachweislich funktionieren.",
-    mission: "Unsere Mission",
-    missionText: "Jedes lokale Unternehmen verdient es, von den richtigen Kunden gefunden zu werden. Wir kombinieren SEO-Expertise mit lokaler Marktkenntnis, um genau das zu ermöglichen – transparent, messbar und nachhaltig.",
-    clients: "Kunden",
-    cities: "Städte",
-    rankingImprovement: "Ranking-Verbesserung",
-    whatSetsUsApart: "Was uns auszeichnet",
+    metaDesc: "Wer hinter LocalDominate steht: Markus Wimböck, über sieben Jahre in Hotellerie und digitalem Marketing, und eine Person, die Ihr Projekt verantwortet.",
+    orgDesc: "LocalDominate ist ein Wachstumsstudio für Hotels, Ferienvermieter, Handwerk, Premium-Dienstleister und Creators.",
+    subtitle: "LocalDominate ist ein Wachstumsstudio von Markus Wimböck. Es plant, baut und vermarktet Marke, Website und Google-Auftritt als ein Projekt.",
+    mission: "Unser Ansatz",
+    missionText: "Strategie, Marke, Website und Marketing als ein Projekt in sieben Schritten. Umfang und Festpreis stehen schriftlich fest, bevor die Arbeit beginnt.",
+    stats: [
+      { value: "7+", label: "Jahre in Hotellerie und digitalem Marketing" },
+      { value: "1", label: "Person verantwortet jedes Projekt" },
+      { value: "7", label: "Schritte von der Diagnose bis zur Skalierung" },
+      { value: "4", label: "Angebote zum Festpreis" },
+    ],
+    whatSetsUsApart: "Wie wir arbeiten",
     highlights: [
-      "Spezialisierung auf lokale Suchmaschinenoptimierung – kein Generalisten-SEO",
-      "Eigene Datenbank mit Ranking-Faktoren aus über 500 Kundenprojekten",
-      "Transparente Methodik: Jede Empfehlung ist quellenbasiert und praxisvalidiert",
-      "DACH-Fokus: Wir verstehen die lokalen Suchgewohnheiten in Deutschland, Österreich und der Schweiz",
-      "Kontinuierliche Weiterbildung: Unser Team verfolgt jedes Google-Update in Echtzeit"
+      "Eine Person verantwortet Ihr Projekt vom ersten Check bis zur Übergabe",
+      "Truth first: keine erfundenen Zahlen, ein Ergebnis wird nur veröffentlicht, wenn es belegt ist",
+      "KI wird für Recherche und Routine genutzt, ein Mensch entscheidet und redigiert, was live geht",
+      "Umfang und Festpreis schriftlich vor Arbeitsbeginn, keine Ranking-Versprechen"
     ],
-    ourStory: "Unsere Geschichte",
+    ourStory: "Der Werdegang des Gründers",
     milestones: [
-      { year: "2021", event: "Gründung mit Fokus auf Google Maps Optimierung im DACH-Raum" },
-      { year: "2022", event: "100. Kundenprojekt erfolgreich abgeschlossen" },
-      { year: "2023", event: "Start des Local SEO Knowledge Hubs mit 50+ Fachartikeln" },
-      { year: "2024", event: "500+ betreute Unternehmen, Expansion in die Schweiz und nach Österreich" },
-      { year: "2025", event: "Launch des AI-optimierten Content Frameworks für Local SEO" },
+      { year: "2004", event: "Ausbildung im Hotelfach an den Tourismusschulen Klessheim, Österreich" },
+      { year: "2019", event: "Stellvertretender Resortleiter im VAYA Resort, Galtür, Österreich" },
+      { year: "2023", event: "Assistant Manager eCommerce & Digital Strategy im Grand Hotel des Bains Kempinski, St. Moritz" },
+      { year: "2025", event: "Gründer eigener Travel-Tech- und Web-Produkte, darunter LocalDominate" },
     ],
+    aboutLink: "→ Mehr über Markus Wimböck",
     standards: "Unsere Standards",
     editorialGuidelines: "→ Redaktionsrichtlinien",
     researchMethodology: "→ Forschungsmethodik",
@@ -40,30 +47,32 @@ const translations = {
   },
   en: {
     title: "About Local Dominator",
-    metaDesc: "Learn who's behind Local Dominator. Our team, our mission, and why 500+ businesses trust us.",
-    orgDesc: "Local Dominator helps local businesses in the DACH region become visible in Google Maps and local search.",
-    subtitle: "We make local businesses visible in Google Search and Google Maps – with data-driven strategies that are proven to work.",
-    mission: "Our Mission",
-    missionText: "Every local business deserves to be found by the right customers. We combine SEO expertise with local market knowledge to make that happen – transparently, measurably, and sustainably.",
-    clients: "Clients",
-    cities: "Cities",
-    rankingImprovement: "Ranking Improvement",
-    whatSetsUsApart: "What Sets Us Apart",
+    metaDesc: "Learn who is behind LocalDominate: Markus Wimböck, over seven years in hospitality and digital marketing, and one person responsible for your project.",
+    orgDesc: "LocalDominate is a growth studio for hotels, holiday rentals, trades, premium local services and creators.",
+    subtitle: "LocalDominate is a growth studio run by Markus Wimböck. It plans, builds and markets brand, website and Google presence as one project.",
+    mission: "Our approach",
+    missionText: "Strategy, brand, website and marketing as one project in seven steps. Scope and a fixed price are agreed in writing before any work starts.",
+    stats: [
+      { value: "7+", label: "Years in hospitality and digital marketing" },
+      { value: "1", label: "Person responsible for each project" },
+      { value: "7", label: "Steps from diagnosis to scale" },
+      { value: "4", label: "Fixed-price offers" },
+    ],
+    whatSetsUsApart: "How we work",
     highlights: [
-      "Specialization in local search engine optimization – no generalist SEO",
-      "Proprietary database of ranking factors from 500+ client projects",
-      "Transparent methodology: Every recommendation is source-based and practice-validated",
-      "DACH focus: We understand local search behavior in Germany, Austria, and Switzerland",
-      "Continuous learning: Our team monitors every Google update in real-time"
+      "One person is responsible for your project from the first check to the hand-over",
+      "Truth first: no invented numbers, a result is published only when it is documented",
+      "AI is used for research and routine work, a person decides and edits what goes live",
+      "Scope and a fixed price in writing before any work starts, no ranking promises"
     ],
-    ourStory: "Our Story",
+    ourStory: "The founder's career",
     milestones: [
-      { year: "2021", event: "Founded with focus on Google Maps optimization in the DACH region" },
-      { year: "2022", event: "100th client project successfully completed" },
-      { year: "2023", event: "Launch of the Local SEO Knowledge Hub with 50+ expert articles" },
-      { year: "2024", event: "500+ managed businesses, expansion into Switzerland and Austria" },
-      { year: "2025", event: "Launch of AI-optimized content framework for Local SEO" },
+      { year: "2004", event: "Training in hotel management at Tourismusschulen Klessheim, Austria" },
+      { year: "2019", event: "Deputy Resort Manager at VAYA Resort, Galtür, Austria" },
+      { year: "2023", event: "Assistant Manager eCommerce & Digital Strategy at Grand Hotel des Bains Kempinski, St. Moritz" },
+      { year: "2025", event: "Founder of own travel-tech and web products, including LocalDominate" },
     ],
+    aboutLink: "→ More about Markus Wimböck",
     standards: "Our Standards",
     editorialGuidelines: "→ Editorial Guidelines",
     researchMethodology: "→ Research Methodology",
@@ -71,30 +80,32 @@ const translations = {
   },
   ar: {
     title: "عن Local Dominator",
-    metaDesc: "تعرف على من يقف خلف Local Dominator. فريقنا ومهمتنا ولماذا يثق بنا أكثر من 500 عمل تجاري.",
-    orgDesc: "يساعد Local Dominator الأعمال المحلية في منطقة DACH على الظهور في خرائط Google والبحث المحلي.",
-    subtitle: "نجعل الأعمال المحلية مرئية في بحث Google وخرائط Google – باستراتيجيات مبنية على البيانات ومثبتة الفعالية.",
-    mission: "مهمتنا",
-    missionText: "كل عمل محلي يستحق أن يجده العملاء المناسبون. نجمع بين خبرة SEO والمعرفة بالسوق المحلي لتحقيق ذلك – بشفافية وقابلية القياس والاستدامة.",
-    clients: "عملاء",
-    cities: "مدن",
-    rankingImprovement: "تحسين الترتيب",
-    whatSetsUsApart: "ما يميزنا",
+    metaDesc: "تعرّف على من يقف خلف LocalDominate: ماركوس فيمبوك، أكثر من سبع سنوات في الضيافة والتسويق الرقمي، وشخص واحد مسؤول عن مشروعك.",
+    orgDesc: "LocalDominate استوديو نمو للفنادق وإيجارات العطلات والحِرف والخدمات المحلية المتميزة وصنّاع المحتوى.",
+    subtitle: "LocalDominate استوديو نمو يديره ماركوس فيمبوك. يخطط ويبني ويسوّق العلامة التجارية والموقع والحضور على Google كمشروع واحد.",
+    mission: "نهجنا",
+    missionText: "الاستراتيجية والعلامة والموقع والتسويق كمشروع واحد في سبع خطوات. يُتفق على النطاق والسعر الثابت كتابةً قبل بدء أي عمل.",
+    stats: [
+      { value: "7+", label: "سنوات في الضيافة والتسويق الرقمي" },
+      { value: "1", label: "شخص مسؤول عن كل مشروع" },
+      { value: "7", label: "خطوات من التشخيص إلى التوسع" },
+      { value: "4", label: "عروض بسعر ثابت" },
+    ],
+    whatSetsUsApart: "كيف نعمل",
     highlights: [
-      "تخصص في تحسين محركات البحث المحلية – لسنا وكالة SEO عامة",
-      "قاعدة بيانات خاصة بعوامل الترتيب من أكثر من 500 مشروع عميل",
-      "منهجية شفافة: كل توصية مبنية على مصادر ومُثبتة عملياً",
-      "تركيز على منطقة DACH: نفهم سلوك البحث المحلي في ألمانيا والنمسا وسويسرا",
-      "تعلم مستمر: فريقنا يتابع كل تحديث من Google في الوقت الفعلي"
+      "شخص واحد مسؤول عن مشروعك من الفحص الأول حتى التسليم",
+      "الحقيقة أولاً: لا أرقام مختلقة، ولا تُنشر نتيجة إلا إذا كانت موثقة",
+      "يُستخدم الذكاء الاصطناعي للبحث والمهام الروتينية، وشخص يقرر ويحرر ما يُنشر",
+      "النطاق وسعر ثابت كتابةً قبل بدء أي عمل، ولا وعود بالترتيب"
     ],
-    ourStory: "قصتنا",
+    ourStory: "مسيرة المؤسس",
     milestones: [
-      { year: "2021", event: "التأسيس مع التركيز على تحسين خرائط Google في منطقة DACH" },
-      { year: "2022", event: "إتمام المشروع رقم 100 بنجاح" },
-      { year: "2023", event: "إطلاق مركز معرفة Local SEO مع أكثر من 50 مقالاً متخصصاً" },
-      { year: "2024", event: "أكثر من 500 عمل تجاري مُدار، التوسع إلى سويسرا والنمسا" },
-      { year: "2025", event: "إطلاق إطار محتوى محسّن بالذكاء الاصطناعي لـ Local SEO" },
+      { year: "2004", event: "تدريب في إدارة الفنادق في Tourismusschulen Klessheim بالنمسا" },
+      { year: "2019", event: "نائب مدير المنتجع في VAYA Resort، غالتور، النمسا" },
+      { year: "2023", event: "Assistant Manager eCommerce & Digital Strategy في Grand Hotel des Bains Kempinski، سانت موريتز" },
+      { year: "2025", event: "مؤسس منتجات خاصة في السياحة التقنية والويب، من بينها LocalDominate" },
     ],
+    aboutLink: "→ المزيد عن ماركوس فيمبوك",
     standards: "معاييرنا",
     editorialGuidelines: "→ إرشادات التحرير",
     researchMethodology: "→ منهجية البحث",
@@ -112,19 +123,8 @@ const UeberUns = () => {
       "@type": "AboutPage",
       "name": t.title,
       "url": "https://localdominate.org/ueber-uns",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "Local Dominator",
-        "url": "https://localdominate.org",
-        "foundingDate": "2021",
-        "description": t.orgDesc,
-        "knowsAbout": ["Local SEO", "Google Business Profile", "Google Maps Optimization", "Local Search Marketing"],
-        "areaServed": [
-          { "@type": "Country", "name": "Deutschland" },
-          { "@type": "Country", "name": "Österreich" },
-          { "@type": "Country", "name": "Schweiz" }
-        ]
-      }
+      "mainEntity": { "@id": "https://localdominate.org/#organization" },
+      "description": t.orgDesc,
     }
   ];
 
@@ -166,10 +166,10 @@ const UeberUns = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {[
-              { icon: Users, value: "500+", label: t.clients },
-              { icon: MapPin, value: "50+", label: t.cities },
-              { icon: Star, value: "4.9/5", label: "Rating" },
-              { icon: TrendingUp, value: "92%", label: t.rankingImprovement }
+              { icon: Users, ...t.stats[0] },
+              { icon: Target, ...t.stats[1] },
+              { icon: MapPin, ...t.stats[2] },
+              { icon: Star, ...t.stats[3] }
             ].map((stat, i) => {
               const Icon = stat.icon;
               return (
@@ -218,6 +218,9 @@ const UeberUns = () => {
           <div className="p-6 bg-muted/30 rounded-xl border border-border">
             <h3 className="font-semibold text-foreground mb-3">{t.standards}</h3>
             <div className="flex flex-wrap gap-3">
+              <Link to="/about" className="text-primary hover:underline text-sm">
+                {t.aboutLink}
+              </Link>
               <Link to="/redaktionsrichtlinien" className="text-primary hover:underline text-sm">
                 {t.editorialGuidelines}
               </Link>

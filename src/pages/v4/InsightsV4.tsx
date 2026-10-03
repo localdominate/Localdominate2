@@ -9,6 +9,7 @@ import { InsightsHero, RESULTS_ID } from "@/components/v4/insights/InsightsHero"
 import { InsightsResults } from "@/components/v4/insights/InsightsResults";
 import { useInsightsFilter } from "@/components/v4/insights/useInsightsFilter";
 import { INSIGHT_ARTICLES, featuredPicks, insightPath } from "@/data/v4Insights";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
 import "@/components/v4/insights/insights.css";
 
 const SITE = "https://localdominate.org";
@@ -27,6 +28,7 @@ const JSON_LD = {
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#organization` },
       breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
     {

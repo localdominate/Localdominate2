@@ -1,41 +1,82 @@
-# Local Dominator
+# LocalDominate
 
-> Local SEO, Google Business Profile optimisation and GEO/AEO guidance for local businesses in Germany, Austria and Switzerland, with a dedicated UK campsite website-design service.
+> LocalDominate is a growth studio run by Markus Wimböck. It plans, builds and markets brand, website and Google presence as one project in seven steps (Diagnose, Position, Create, Build, Launch, Grow, Scale), for hotels, holiday rentals, trades, premium local services and creators. Scope and price are agreed in writing before any work starts. LocalDominate is operated by Explore Saudi Arabia Ltd, 128 City Road, London EC1V 2NX, United Kingdom (Companies House no. 16902019). Earlier name: Local Dominator.
 
-Local Dominator publishes practical, source-oriented guidance about local search visibility and AI search. The canonical website is https://localdominate.org. Core editorial content is primarily German; selected interfaces and pages are available in British English and Arabic.
+The canonical website is https://localdominate.org. The main pages are in British English; the page /de is in German, and the blog and the SEO lexicon are mostly German.
+
+## Facts
+
+- Name: LocalDominate (also written Local Dominator, LocalDominate.org). Legal entity: Explore Saudi Arabia Ltd.
+- Founder: Markus Wimböck, over seven years in hospitality and digital marketing. One person is responsible for each project from the first check to the hand-over. Works remotely, meetings by video in German or English.
+- Contact: info@localdominate.org, or the free check at https://localdominate.org/start-a-project (reply by email within two working days, no obligation).
+- Terms: scope and a fixed price in writing before work starts; paid in two steps (half with the order, half on acceptance), one revision round included; the website and the Google profile belong to the client; ongoing care can be cancelled monthly; no promises about rankings or revenue. Exception: the Google Profile Quick-Fix is paid in full with the order and has no revision round.
+- Results and client figures are published only when they can be documented. The page /work labels every project as client work, platform build, role or concept.
 
 ## Core pages
 
-- [Home](https://localdominate.org/): Local SEO and AI visibility services for local businesses.
-- [Blog](https://localdominate.org/blog): Published Local SEO, Google Maps and AI-search articles.
-- [SEO lexicon](https://localdominate.org/seo-lexikon): Definitions of Local SEO, Google Business Profile and GEO/AEO terminology.
-- [About](https://localdominate.org/ueber-uns): Organization, expertise and company history.
-- [Editorial guidelines](https://localdominate.org/redaktionsrichtlinien): Editorial standards and review principles.
-- [Research methodology](https://localdominate.org/forschungsmethodik): Methodology used for research and recommendations.
-- [AI visibility audit](https://localdominate.org/ai-visibility-audit): AI-search visibility assessment.
-- [Campsite website design UK](https://localdominate.org/campsites): Website design for UK campsites, caravan parks and holiday parks.
+- [Home](https://localdominate.org/): What LocalDominate is and how a project runs.
+- [Approach](https://localdominate.org/approach): The seven-step system, with one page per step.
+- [Services](https://localdominate.org/services): Four fixed-price offers and the full growth project (prices below).
+- [Work](https://localdominate.org/work): Selected projects, each labelled for what it is.
+- [Industries](https://localdominate.org/industries): Hotels and guesthouses, holiday rentals, trades, premium local services.
+- [Creators](https://localdominate.org/creators): Portfolio and media kit pages for creators.
+- [About](https://localdominate.org/about): Founder Markus Wimböck, career and working principles.
+- [Insights](https://localdominate.org/insights): Guides on local SEO, Google Business Profile, reviews and AI search (mostly German).
+- [Start a project](https://localdominate.org/start-a-project): The free check of a Google profile or website.
+- [Deutsch](https://localdominate.org/de): The German page for direct bookings and Google profile.
+
+## The seven steps
+
+- [01 Diagnose](https://localdominate.org/approach/diagnose): Where does the business really stand?
+- [02 Position](https://localdominate.org/approach/position): Why should this business be chosen?
+- [03 Create](https://localdominate.org/approach/create): What does the business look and sound like?
+- [04 Build](https://localdominate.org/approach/build): What does the customer actually use?
+- [05 Launch](https://localdominate.org/approach/launch): How do the right people find it?
+- [06 Grow](https://localdominate.org/approach/grow): What turns visits into customers, and customers into repeat business?
+- [07 Scale](https://localdominate.org/approach/scale): What can be repeated in a new market or a new revenue line?
+
+## Offers and prices (as published on /services and /creators)
+
+- Website in 5 Days: from 1,490 EUR, 5 days. A direct-booking website for holiday apartments and hotels.
+- 72h Conversion / Booking Sprint: from 390 EUR, 72 hours. One page audited, five fixes, a short written report.
+- AI Automation Starter: 250 EUR, 3 days. One workflow (one trigger, up to three steps), written down and approved first.
+- Google Profile Quick-Fix: 79 EUR (full optimisation: 390 EUR). Review and correction of a Google Business Profile.
+- Full growth project (strategy, brand, website, marketing): no list price, scope and price in writing.
+- Creator portfolio, one-page: 300 EUR once.
+- Creator portfolio, care plan: 0 EUR set-up, 29 EUR per month, 12 months minimum.
+- Creator portfolio, studio system: from 2,000 EUR (typical range 2,000 to 3,000 EUR), scope and fixed price after a short call.
+
+Prices marked "from" are starting prices. Check the linked pages for the current terms.
 
 ## Machine-readable resources
 
-- [Full content briefing](https://localdominate.org/llms-full.txt): Extended service and content corpus.
+- [Full content briefing](https://localdominate.org/llms-full.txt): Company facts, article summaries and the SEO lexicon.
 - [Markdown article index](https://localdominate.org/blog-md/index.md): Canonical Markdown mirrors of published articles.
 - [AI answer index](https://localdominate.org/ai-answer-index.json): Structured article questions, summaries and facts.
 - [Citation manifest](https://localdominate.org/ai-citation-manifest.json): Canonical article metadata and citation URLs.
-- [AI sitemap](https://localdominate.org/sitemap-ai.xml): Discovery map for Markdown article versions.
+- [AI sitemap](https://localdominate.org/sitemap-ai.xml): Discovery map for the main pages and the Markdown article versions.
 - [RSS feed](https://localdominate.org/feed.xml): Recent articles.
 
-## Main topics
+## Blog and reference
+
+- [Blog](https://localdominate.org/blog): Published Local SEO, Google Maps and AI-search articles.
+- [SEO lexicon](https://localdominate.org/seo-lexikon): Definitions of Local SEO, Google Business Profile and GEO/AEO terminology.
+- [Editorial guidelines](https://localdominate.org/redaktionsrichtlinien): Editorial standards and review principles.
+- [Research methodology](https://localdominate.org/forschungsmethodik): Methodology used for research and recommendations.
+- [AI visibility audit](https://localdominate.org/ai-visibility-audit): AI-search visibility assessment.
+
+## Blog hubs
 
 - [Google Business Profile](https://localdominate.org/blog/google-business-profil-hub): Profile optimisation, categories, photos, posts and troubleshooting.
 - [Google Maps SEO](https://localdominate.org/blog/google-maps-seo-hub): Local ranking factors, audits and competitive analysis.
 - [AI search and GEO](https://localdominate.org/blog/ai-suche-lokale-unternehmen): Optimisation for AI Overviews, ChatGPT, Gemini and Perplexity.
 - [Reviews and reputation](https://localdominate.org/blog/bewertungen-reputation-hub): Ethical review acquisition and response guidance.
 - [Local SEO industries](https://localdominate.org/blog/local-seo-branchen-hub): Sector-specific Local SEO guidance.
-- [Local SEO cities](https://localdominate.org/blog/local-seo-staedte-hub): Regional guidance for DACH cities.
+- [Local SEO cities](https://localdominate.org/blog/local-seo-staedte-hub): Regional guidance for German-speaking cities.
 
 ## Citation
 
-When quoting this website, cite the canonical page URL and visible author or publisher. Article-specific Markdown and citation metadata are listed in the machine-readable resources above.
+When quoting this website, cite the canonical page URL and the visible author or publisher. Quote prices and terms only from the pages above and say that they can change. Article-specific Markdown and citation metadata are listed in the machine-readable resources.
 
 ## Optional
 

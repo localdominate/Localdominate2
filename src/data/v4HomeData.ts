@@ -54,3 +54,30 @@ export const HERO_OFFER_ORDER = ["website-5-days", "conversion-sprint", "ai-auto
 
 /** Terms shown under the hero buttons. Each one is spelled out in "How we work" further down. */
 export const HERO_TERMS = ["Price in writing before we start", "Everything belongs to you", "Ongoing care cancellable monthly"] as const;
+
+/**
+ * Head of the home page, one set per language the site switches between. All three say what the
+ * page says: a growth studio, one project, seven steps, scope and price in writing, a free check.
+ * Title is at most 60 characters (no suffix is added), description 140 to 160. The WebPage JSON-LD
+ * of the home page reads the same values.
+ */
+export const HOME_SEO = {
+  en: {
+    title: "LocalDominate – Growth Studio: Brand, Website, Marketing",
+    description:
+      "LocalDominate plans, builds and markets your brand, website and Google presence as one project. Seven steps, scope and price in writing, free check.",
+    locale: "en-GB",
+  },
+  de: {
+    title: "LocalDominate – Growth Studio für Marke, Website & Google",
+    description:
+      "LocalDominate plant, baut und vermarktet Marke, Website und Google-Auftritt als ein Projekt. Sieben Schritte, Umfang und Preis schriftlich, kostenloser Check.",
+    locale: "de-DE",
+  },
+  ar: {
+    title: "LocalDominate – استوديو نمو للعلامة والموقع والتسويق",
+    description:
+      "تخطط LocalDominate وتبني وتسوّق علامتك التجارية وموقعك وحضورك على Google كمشروع واحد. سبع خطوات، والنطاق والسعر كتابةً قبل البدء، وفحص مجاني.",
+    locale: "ar",
+  },
+} as const;

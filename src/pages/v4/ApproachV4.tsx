@@ -10,6 +10,7 @@ import { ShowreelFilm } from "@/components/v4/ShowreelFilm";
 import { caseLabel, publishedCases } from "@/data/v4Cases";
 import { PILLAR_BASE, PILLAR_INDEX, pillarPath } from "@/data/v4PillarIndex";
 import { PILLAR_COPY, pillarCases } from "@/data/v4Pillars";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
 
 const SITE = "https://localdominate.org";
 const PAGE_URL = `${SITE}${PILLAR_BASE}`;
@@ -26,6 +27,7 @@ const JSON_LD = {
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#organization` },
       breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
     {

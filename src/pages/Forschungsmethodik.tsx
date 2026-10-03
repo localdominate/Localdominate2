@@ -31,10 +31,10 @@ const Forschungsmethodik = () => {
       title: "Datenerhebung",
       description: "Wir sammeln Daten aus mehreren Quellen, um ein vollständiges Bild der lokalen Suchlandschaft zu erhalten.",
       details: [
-        "Google Business Profile Insights von über 500 betreuten Unternehmen",
+        "Google Business Profile Insights aus den Profilen, an denen wir arbeiten",
         "Google Search Console Daten für lokale Suchanfragen",
         "Ranking-Tracking über spezialisierte Local SEO Tools (BrightLocal, Whitespark)",
-        "Analyse von Google Maps Pack Ergebnissen in über 50 Städten im DACH-Raum",
+        "Analyse von Google Maps Pack Ergebnissen für die jeweiligen Standorte",
         "Auswertung von Bewertungsprofilen und Antwortverhalten"
       ]
     },
@@ -97,10 +97,10 @@ const Forschungsmethodik = () => {
       title: "Data Collection",
       description: "We collect data from multiple sources to build a complete picture of the local search landscape.",
       details: [
-        "Google Business Profile Insights from 500+ managed businesses",
+        "Google Business Profile Insights from the profiles we work on",
         "Google Search Console data for local search queries",
         "Rank tracking via specialized Local SEO tools (BrightLocal, Whitespark)",
-        "Analysis of Google Maps Pack results across 50+ cities in DACH region",
+        "Analysis of Google Maps Pack results for the locations concerned",
         "Evaluation of review profiles and response patterns"
       ]
     },
@@ -246,13 +246,13 @@ const Forschungsmethodik = () => {
           {/* Trust Badges */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
             {(language === "de" ? [
-              { label: "500+", desc: "Betreute Unternehmen" },
-              { label: "50+", desc: "Analysierte Städte" },
-              { label: "5+ Jahre", desc: "Praxiserfahrung" }
+              { label: "7+ Jahre", desc: "Hotellerie und digitales Marketing" },
+              { label: "1", desc: "Person verantwortet jedes Projekt" },
+              { label: "7", desc: "Schritte von der Diagnose bis zur Skalierung" }
             ] : [
-              { label: "500+", desc: "Managed Businesses" },
-              { label: "50+", desc: "Cities Analyzed" },
-              { label: "5+ Years", desc: "Hands-on Experience" }
+              { label: "7+ Years", desc: "Hospitality and digital marketing" },
+              { label: "1", desc: "Person responsible for each project" },
+              { label: "7", desc: "Steps from diagnosis to scale" }
             ]).map((badge, i) => (
               <div key={i} className="text-center p-4 bg-muted/30 rounded-xl border border-border">
                 <div className="text-2xl font-bold text-primary">{badge.label}</div>

@@ -1,6 +1,7 @@
 import { CHECK_FORM_EN } from "@/data/v4Check";
 import type { CheckFormTexts } from "@/data/v4Check";
 import { CHECK_REPLY_TIME } from "@/lib/check";
+import { SEO_DATE_MODIFIED } from "@/lib/seo-dates";
 
 /**
  * Everything the landing page /creators says: prices, copy, FAQ, form texts and JSON-LD.
@@ -587,6 +588,7 @@ export const CREATORS_JSON_LD = {
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${CREATORS_URL}#service` },
       breadcrumb: { "@id": `${CREATORS_URL}#breadcrumb` },
+      dateModified: SEO_DATE_MODIFIED,
       inLanguage: "en",
     },
     {
