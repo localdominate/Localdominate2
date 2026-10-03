@@ -48,22 +48,8 @@ const SchemaMarkupLocalSeo = () => {
     { question: "Kann Schema auf dynamischen Seiten verwendet werden?", answer: "Ja, aber stellen Sie sicher, dass das Schema beim Server-Side Rendering oder nach dem JavaScript-Laden im HTML-DOM vorhanden ist. Statisches HTML ist zuverlässiger." },
   ];
 
-  const localBusinessReferenceSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://localdominate.org/#localbusiness-example",
-    "name": "Beispiel lokales Unternehmen",
-    "description": "Schema Markup Implementierungsbeispiel für lokale Unternehmen",
-    "url": "https://localdominate.org",
-    "telephone": "+49-XXX-XXXXXXX",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "DE"
-    }
-  };
-
   return (
-    <ArticleLayout article={article} tocItems={tocItems} additionalSchema={localBusinessReferenceSchema} faqItems={faqItems}>
+    <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <p className="lead text-xl text-muted-foreground mb-8" id="intro">
         Schema Markup ist der <strong>unsichtbare Turbo für Ihre lokale Sichtbarkeit</strong>. 
         Während Ihre Konkurrenz mit einfachen Suchergebnissen kämpft, können Sie mit 
