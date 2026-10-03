@@ -11,7 +11,7 @@ import gbpMehrereStandorteImage from '../../assets/blog/gbp-mehrere-standorte.jp
 
 const GbpMehrereStandorte: React.FC = () => {
   const articleData = {
-    slug: "gbp-mehrere-standorte-verwalten",
+    slug: "gbp-mehrere-standorte",
     title: "Mehrere Google Business Standorte verwalten – Der komplette Guide 2026",
     metaTitle: "Mehrere GBP Standorte verwalten | Multi-Location Guide 2026",
     metaDescription: "Du hast mehrere Filialen? Lerne wie du alle Google Business Profile effizient verwaltest. Mit Bulk-Upload, Gruppenorganisation und Konsistenz-Tipps.",

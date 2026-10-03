@@ -29,7 +29,7 @@ import localSeoTattooImg from "@/assets/blog/local-seo-tattoo.webp";
 import { Palette, Image, Star, Users, TrendingUp, CheckCircle, Lightbulb, MapPin, Shield, Camera } from "lucide-react";
 
 const LocalSeoTattoo = () => {
-  const article = getArticleBySlug("local-seo-tattoo-piercing");
+  const article = getArticleBySlug("local-seo-tattoo-studios");
   if (!article) return null;
 
   const tocItems = [
@@ -140,7 +140,7 @@ const LocalSeoTattoo = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-tattoo-piercing" position="middle" />
+      <BlogCTAABTest articleSlug="local-seo-tattoo-studios" position="middle" />
 
       <section id="google-business" className="mb-12 scroll-mt-20">
         <h2 className="flex items-center gap-3 text-2xl font-bold mb-4">
@@ -187,7 +187,7 @@ const LocalSeoTattoo = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-tattoo-piercing" position="end" />
+      <BlogCTAABTest articleSlug="local-seo-tattoo-studios" position="end" />
 
       {industryStats.tattoo?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
@@ -221,7 +221,7 @@ const LocalSeoTattoo = () => {
       <IndustryKeywordOpportunities config={industryKeywordConfigs.tattoo} />
       <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
       <ContentUpgradeSection config={contentUpgradeConfigs.tattoo} />
-      <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
+      <HelpfulnessWidget articleSlug="local-seo-tattoo-studios" />
       <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />
     </ArticleLayout>

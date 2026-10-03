@@ -13,7 +13,7 @@ import localVsMapsImage from '../../assets/blog/local-vs-maps-seo.webp';
 
 const LocalSeoVsMaps: React.FC = () => {
   const articleData = {
-    slug: "local-seo-vs-maps-unterschied",
+    slug: "local-seo-vs-maps-seo",
     title: "Local SEO vs. Google Maps SEO – Was ist der Unterschied?",
     metaTitle: "Local SEO vs. Google Maps SEO: Der komplette Vergleich 2026",
     metaDescription: "Local SEO und Google Maps SEO werden oft verwechselt. Lerne die Unterschiede, Gemeinsamkeiten und welche Strategie du priorisieren solltest.",

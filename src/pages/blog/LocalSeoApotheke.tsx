@@ -27,7 +27,7 @@ import localSeoApothekeImg from "@/assets/blog/local-seo-apotheke.webp";
 import { Pill, Clock, Star, Users, TrendingUp, CheckCircle, Lightbulb, MapPin, Shield, Heart, Phone } from "lucide-react";
 
 const LocalSeoApotheke = () => {
-  const article = getArticleBySlug("local-seo-apotheke");
+  const article = getArticleBySlug("local-seo-apotheken");
   if (!article) return null;
 
   const tocItems = [
@@ -138,7 +138,7 @@ const LocalSeoApotheke = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-apotheke" position="middle" />
+      <BlogCTAABTest articleSlug="local-seo-apotheken" position="middle" />
 
       <section id="google-business" className="mb-12 scroll-mt-20">
         <h2 className="flex items-center gap-3 text-2xl font-bold mb-4">
@@ -185,7 +185,7 @@ const LocalSeoApotheke = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-apotheke" position="end" />
+      <BlogCTAABTest articleSlug="local-seo-apotheken" position="end" />
 
       {industryStats.apotheke?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
@@ -217,7 +217,7 @@ const LocalSeoApotheke = () => {
       <IndustryKeywordOpportunities config={industryKeywordConfigs.apotheke} />
       <IndustryRankingChallenges config={industryRankingConfigs.apotheke} />
       <ContentUpgradeSection config={contentUpgradeConfigs.apotheke} />
-      <HelpfulnessWidget articleSlug="local-seo-apotheke" />
+      <HelpfulnessWidget articleSlug="local-seo-apotheken" />
       <RelatedIndustryGuides currentSlug="local-seo-apotheken" />
       <SourcesSection sources={sources} />
     </ArticleLayout>

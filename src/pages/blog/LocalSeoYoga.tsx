@@ -29,7 +29,7 @@ import localSeoYogaImg from "@/assets/blog/local-seo-yoga.webp";
 import { Heart, Calendar, Star, Image, Users, TrendingUp, CheckCircle, Lightbulb, MapPin, Clock } from "lucide-react";
 
 const LocalSeoYoga = () => {
-  const article = getArticleBySlug("local-seo-yoga-pilates");
+  const article = getArticleBySlug("local-seo-yoga-studios");
   if (!article) return null;
 
   const tocItems = [
@@ -127,7 +127,7 @@ const LocalSeoYoga = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-yoga-pilates" position="middle" />
+      <BlogCTAABTest articleSlug="local-seo-yoga-studios" position="middle" />
 
       <section id="google-business" className="mb-12 scroll-mt-20">
         <h2 className="flex items-center gap-3 text-2xl font-bold mb-4">
@@ -188,7 +188,7 @@ const LocalSeoYoga = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-yoga-pilates" position="end" />
+      <BlogCTAABTest articleSlug="local-seo-yoga-studios" position="end" />
 
       {industryStats.yoga?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
@@ -222,7 +222,7 @@ const LocalSeoYoga = () => {
       <IndustryKeywordOpportunities config={industryKeywordConfigs.yoga} />
       <IndustryRankingChallenges config={industryRankingConfigs.yoga} />
       <ContentUpgradeSection config={contentUpgradeConfigs.yoga} />
-      <HelpfulnessWidget articleSlug="local-seo-yoga-pilates" />
+      <HelpfulnessWidget articleSlug="local-seo-yoga-studios" />
       <RelatedIndustryGuides currentSlug="local-seo-yoga-studios" />
       <SourcesSection sources={sources} />
     </ArticleLayout>
