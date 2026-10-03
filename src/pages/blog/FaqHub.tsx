@@ -51,7 +51,8 @@ const FaqHub = () => {
   return (
     <>
       <SEOHead
-        title="FAQ Hub: Alle Local SEO Fragen beantwortet"
+        title="FAQ Hub: Alle Local SEO Fragen beantwortet | Local Dominator"
+        exactTitle
         description={`${totalCount}+ häufig gestellte Fragen zu Local SEO — von Grundlagen über Google Business Profil bis AI-Optimierung. Sofortige Antworten für DACH-Unternehmen.`}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
