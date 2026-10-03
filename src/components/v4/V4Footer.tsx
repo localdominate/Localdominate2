@@ -26,6 +26,9 @@ const INDUSTRIES = [
   { to: "/anwalt-marketing", label: "Law Firm Marketing" },
 ] as const;
 
+/** The travel platform shown on /work (src/data/v4Cases.ts). */
+const EXPLORE_SAUDI_URL = "https://explore-saudi.com";
+
 const LEGAL = [
   { to: "/impressum", label: "Legal Notice (Impressum)" },
   { to: "/datenschutz", label: "Privacy Policy" },
@@ -92,6 +95,25 @@ export function V4Footer() {
           <a href="mailto:info@localdominate.org" className={linkClass}>
             info@localdominate.org
           </a>
+          <address className="mt-2 max-w-xs font-v4-sans text-xs not-italic leading-relaxed text-v4-ivory/60">
+            LocalDominate is operated by Explore Saudi Arabia Ltd, 128 City Road, London EC1V 2NX,
+            United Kingdom (Companies House no. 16902019).
+          </address>
+          <p className="max-w-xs font-v4-sans text-xs leading-relaxed text-v4-ivory/60">
+            <a
+              href={EXPLORE_SAUDI_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-v4-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal"
+            >
+              Explore Saudi<span className="sr-only"> (opens in a new tab)</span>
+            </a>{" "}
+            is the founder&rsquo;s own travel platform for Saudi Arabia, listed under{" "}
+            <Link to="/work" className="underline underline-offset-4 transition-colors hover:text-v4-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-v4-signal">
+              Work
+            </Link>
+            .
+          </p>
         </div>
         <LinkGroup title="Explore" links={EXPLORE} />
         <LinkGroup title="The seven steps" links={STEPS} />
