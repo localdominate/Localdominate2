@@ -18,8 +18,6 @@ import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -316,13 +314,6 @@ const LocalSeoRestaurant = () => {
             </div>
           ))}
         </div>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-6">Praxisbeispiel: Restaurant steigert Auslastung durch Google</h2>
-        {industryCaseStudies.restaurant.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <ReviewAcquisitionScripts

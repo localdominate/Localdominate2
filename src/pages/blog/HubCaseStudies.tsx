@@ -6,7 +6,7 @@ import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { TrendingUp, ArrowRight, BookOpen, Target, BarChart3, Users } from "lucide-react";
+import { TrendingUp, ArrowRight, BookOpen } from "lucide-react";
 
 const caseStudyGroups = [
   {
@@ -53,14 +53,10 @@ const caseStudyGroups = [
   },
 ];
 
-const summaryStats = [
-  { label: "Fallstudien", value: String(Object.values(industryCaseStudies).flat().length) + "+", icon: <BarChart3 className="w-5 h-5" /> },
-  { label: "Branchen abgedeckt", value: "22+", icon: <Target className="w-5 h-5" /> },
-  { label: "Ø Ranking-Verbesserung", value: "+5 Plätze", icon: <TrendingUp className="w-5 h-5" /> },
-  { label: "Ø Anfragen-Steigerung", value: "+280%", icon: <Users className="w-5 h-5" /> },
-];
-
 const HubCaseStudies = () => {
+  // Case studies are published only for real, approved client results (see data/industryCaseStudies.ts).
+  const hasCaseStudies = Object.values(industryCaseStudies).some((studies) => studies.length > 0);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -96,98 +92,100 @@ const HubCaseStudies = () => {
             <h1 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
               Local SEO Fallstudien & Praxisbeispiele
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hypothetische, aber realitätsnahe Fallstudien zeigen, wie lokale Unternehmen aus verschiedenen Branchen 
-              ihre Google-Sichtbarkeit, Kundenanfragen und Umsätze durch gezielte SEO-Maßnahmen steigern.
-            </p>
+            {hasCaseStudies && (
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Fallstudien zeigen, wie lokale Unternehmen aus verschiedenen Branchen
+                ihre Google-Sichtbarkeit, Kundenanfragen und Umsätze durch gezielte SEO-Maßnahmen steigern.
+              </p>
+            )}
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {summaryStats.map((stat, i) => (
-              <Card key={i} className="text-center">
-                <CardContent className="pt-6 pb-4">
-                  <div className="flex justify-center text-primary mb-2">{stat.icon}</div>
-                  <p className="text-2xl font-bold text-foreground">{stat.value}</p>
-                  <p className="text-xs text-muted-foreground">{stat.label}</p>
+          {hasCaseStudies ? (
+            <>
+              {/* Quick Nav */}
+              <Card className="mb-12">
+                <CardContent className="pt-6">
+                  <h2 className="font-bold text-foreground mb-3">Springe zu einer Branche</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {caseStudyGroups.map((group) => (
+                      <a
+                        key={group.title}
+                        href={`#${group.title.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-muted hover:bg-primary/10 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {group.icon} {group.title}
+                      </a>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
 
-          {/* Quick Nav */}
-          <Card className="mb-12">
-            <CardContent className="pt-6">
-              <h2 className="font-bold text-foreground mb-3">Springe zu einer Branche</h2>
-              <div className="flex flex-wrap gap-2">
-                {caseStudyGroups.map((group) => (
-                  <a
+              {/* Case Study Groups */}
+              {caseStudyGroups.map((group) => {
+                const studies = group.keys.flatMap((key) => industryCaseStudies[key] || []);
+                if (studies.length === 0) return null;
+
+                return (
+                  <section
                     key={group.title}
-                    href={`#${group.title.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-muted hover:bg-primary/10 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    id={group.title.toLowerCase().replace(/[^a-z0-9]/g, "-")}
+                    className="mb-16"
                   >
-                    {group.icon} {group.title}
-                  </a>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-2xl">{group.icon}</span>
+                      <h2 className="text-2xl font-bold text-foreground">{group.title}</h2>
+                    </div>
+                    <p className="text-muted-foreground mb-6">{group.description}</p>
 
-          {/* Case Study Groups */}
-          {caseStudyGroups.map((group) => {
-            const studies = group.keys.flatMap((key) => industryCaseStudies[key] || []);
-            if (studies.length === 0) return null;
+                    {studies.map((study, i) => (
+                      <CaseStudyCard key={i} study={study} />
+                    ))}
+                  </section>
+                );
+              })}
 
-            return (
-              <section
-                key={group.title}
-                id={group.title.toLowerCase().replace(/[^a-z0-9]/g, "-")}
-                className="mb-16"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="text-2xl">{group.icon}</span>
-                  <h2 className="text-2xl font-bold text-foreground">{group.title}</h2>
-                </div>
-                <p className="text-muted-foreground mb-6">{group.description}</p>
-
-                {studies.map((study, i) => (
-                  <CaseStudyCard key={i} study={study} />
-                ))}
-              </section>
-            );
-          })}
-
-          {/* Key Insights */}
-          <Card className="mb-12 border-primary/30 bg-primary/5">
-            <CardContent className="pt-6">
-              <h2 className="font-bold text-foreground mb-4 flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-primary" />
-                Was alle Fallstudien gemeinsam haben
-              </h2>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Google Business Profil</strong> ist der wichtigste erste Schritt für jede Branche</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Bewertungen</strong> sind der stärkste Vertrauensfaktor – aktives Bewertungsmanagement zahlt sich immer aus</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Spezialisierung</strong> auf Nischen-Keywords bringt schnellere Ergebnisse als Kampf um generische Begriffe</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Lokaler Content</strong> mit Ortsbezug schlägt generischen Content in der lokalen Suche</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Ergebnisse</strong> sind typischerweise in 3–6 Monaten sichtbar, mit dem größten Hebel in den ersten 90 Tagen</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+              {/* Key Insights */}
+              <Card className="mb-12 border-primary/30 bg-primary/5">
+                <CardContent className="pt-6">
+                  <h2 className="font-bold text-foreground mb-4 flex items-center gap-2">
+                    <BookOpen className="w-5 h-5 text-primary" />
+                    Was alle Fallstudien gemeinsam haben
+                  </h2>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span><strong>Google Business Profil</strong> ist der wichtigste erste Schritt für jede Branche</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span><strong>Bewertungen</strong> sind der stärkste Vertrauensfaktor – aktives Bewertungsmanagement zahlt sich immer aus</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span><strong>Spezialisierung</strong> auf Nischen-Keywords bringt schnellere Ergebnisse als Kampf um generische Begriffe</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span><strong>Lokaler Content</strong> mit Ortsbezug schlägt generischen Content in der lokalen Suche</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <TrendingUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span><strong>Ergebnisse</strong> sind typischerweise in 3–6 Monaten sichtbar, mit dem größten Hebel in den ersten 90 Tagen</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </>
+          ) : (
+            <Card className="mb-12">
+              <CardContent className="pt-6">
+                <p className="text-sm text-muted-foreground">
+                  Hier erscheinen Fallstudien, sobald echte Kundenergebnisse mit schriftlicher Freigabe vorliegen.
+                  Bis dahin zeigen wir keine Beispiele.
+                </p>
+              </CardContent>
+            </Card>
+          )}
 
           {/* Related Hubs & Resources */}
           <Card className="mb-12">
@@ -215,10 +213,6 @@ const HubCaseStudies = () => {
             </CardContent>
           </Card>
 
-          <p className="text-xs text-muted-foreground text-center italic">
-            Alle Fallstudien sind hypothetisch und dienen der Veranschaulichung typischer Local SEO Ergebnisse. 
-            Tatsächliche Ergebnisse variieren je nach Branche, Standort und Wettbewerb.
-          </p>
         </div>
       </main>
       <Footer />

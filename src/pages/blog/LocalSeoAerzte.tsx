@@ -27,8 +27,6 @@ import {
 import { Users, Star, Shield, Award, CheckCircle2, XCircle, AlertTriangle, FileText, Building2, MessageSquare } from "lucide-react";
 import MedicalPortalsTable from "@/components/blog/MedicalPortalsTable";
 import MedicalSpecialtySelector from "@/components/blog/MedicalSpecialtySelector";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -51,7 +49,6 @@ const LocalSeoAerzte = () => {
     { id: "keywords", title: "Fachgebiets-Keywords" },
     { id: "google-business", title: "Google Business für Praxen" },
     { id: "bewertungen", title: "Medizinische Bewertungen" },
-    { id: "case-study", title: "Erfolgsbeispiel" },
     { id: "faq", title: "FAQ" }
   ];
 
@@ -727,16 +724,6 @@ const LocalSeoAerzte = () => {
       </section>
 
       {/* Case Study Section */}
-      <section id="case-study" className="mb-12">
-        <h2>Erfolgsbeispiel: Arztpraxis mit Local SEO</h2>
-        {industryCaseStudies.aerzte.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
-        <p className="text-muted-foreground italic text-sm mt-4">
-          * Anonymisiertes Beispiel basierend auf typischen Ergebnissen. Individuelle Ergebnisse können variieren.
-        </p>
-      </section>
-
       <ArticleCTA />
 
       {industryStats.aerzte?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}

@@ -12,8 +12,6 @@ import { searchIntentConfigs } from "@/data/searchIntentData";
 import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
 import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -521,13 +519,6 @@ const LocalSeoAutowerkstatt = () => {
             </AccordionItem>
           ))}
         </Accordion>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Freie Werkstatt gegen Vertragshändler</h2>
-        {industryCaseStudies.autowerkstatt.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <SearchIntentAnalysis config={searchIntentConfigs.autowerkstatt} />

@@ -17,8 +17,6 @@ import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -274,13 +272,6 @@ const LocalSeoZahnarzt = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2>Praxisbeispiel: Zahnarztpraxis steigert Online-Sichtbarkeit</h2>
-        {industryCaseStudies.zahnarzt.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <ReviewAcquisitionScripts
