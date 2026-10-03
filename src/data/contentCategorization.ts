@@ -110,7 +110,7 @@ export const HUB_DEFINITIONS: Record<HubId, HubDefinition> = {
     id: "staedte",
     label: "Städte-Guides",
     icon: "🏙️",
-    href: "/blog/staedte-hub",
+    href: "/blog/local-seo-staedte-hub",
     description: "Stadtspezifische Local SEO Guides für den DACH-Raum",
     pillarSlugs: ["ultimate-guide-local-seo", "lokale-suchmaschinenoptimierung-2026"],
   },

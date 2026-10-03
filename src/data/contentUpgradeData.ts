@@ -16,26 +16,26 @@ const commonGuides: Record<string, ContentUpgrade> = {
   gbpOptimieren: {
     title: "Google Business Profil optimieren",
     description: "Der ultimative Leitfaden für maximale Sichtbarkeit in Google Maps & der lokalen Suche.",
-    href: "/blog/google-business-profil-optimieren",
+    href: "/blog/google-my-business-optimieren",
     type: "guide",
     badge: "Pillar Guide",
   },
   napKonsistenz: {
     title: "NAP-Konsistenz sicherstellen",
     description: "Warum einheitliche Firmendaten überall entscheidend für dein Ranking sind.",
-    href: "/blog/nap-konsistenz",
+    href: "/blog/nap-konsistenz-local-seo",
     type: "guide",
   },
   bewertungenStrategie: {
     title: "Google Bewertungen Strategie",
     description: "Systematisch mehr & bessere Bewertungen für dein Unternehmen gewinnen.",
-    href: "/blog/google-bewertungen-strategie",
+    href: "/blog/google-bewertungen-bekommen",
     type: "guide",
   },
   localSeoChecklist: {
     title: "Local SEO Checkliste",
     description: "45+ Punkte, die du für eine lückenlose lokale Optimierung abhaken solltest.",
-    href: "/blog/local-seo-checkliste",
+    href: "/blog/local-seo-checkliste-komplett",
     type: "checklist",
     badge: "Interaktiv",
   },
@@ -55,7 +55,7 @@ const commonGuides: Record<string, ContentUpgrade> = {
   keywordRecherche: {
     title: "Lokale Keyword-Recherche",
     description: "In 5 Schritten die besten lokalen Suchbegriffe für deine Branche finden.",
-    href: "/blog/lokale-keyword-recherche-template",
+    href: "/blog/local-keyword-research-template",
     type: "template",
   },
   seoStrategyPlanner: {
@@ -67,7 +67,7 @@ const commonGuides: Record<string, ContentUpgrade> = {
   monatlicheWartung: {
     title: "Monatliche SEO-Wartung",
     description: "45+ Aufgaben für die laufende Pflege deiner lokalen Sichtbarkeit.",
-    href: "/blog/local-seo-monthly-maintenance",
+    href: "/blog/local-seo-monthly-checklist",
     type: "checklist",
   },
   rankingTracker: {
@@ -79,13 +79,13 @@ const commonGuides: Record<string, ContentUpgrade> = {
   technischesSeo: {
     title: "Technisches Local SEO",
     description: "Schema Markup, Core Web Vitals und technische Grundlagen für lokale Seiten.",
-    href: "/blog/technisches-local-seo",
+    href: "/blog/technisches-local-seo-guide",
     type: "guide",
   },
   bewertungsHub: {
     title: "Bewertungen & Reputation Hub",
     description: "Alles zum Thema Online-Bewertungen: Strategien, Templates und Best Practices.",
-    href: "/blog/topic/bewertungen-reputation",
+    href: "/blog/bewertungen-reputation-hub",
     type: "hub",
   },
 };

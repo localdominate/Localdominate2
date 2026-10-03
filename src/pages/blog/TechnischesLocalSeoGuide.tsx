@@ -883,7 +883,7 @@ Sitemap: https://example.de/sitemap.xml`}
         resources={[
           { label: "Schema Markup Guide", href: "/blog/schema-markup-local-seo", type: "guide", description: "Alle Schema-Typen" },
           { label: "Core Web Vitals optimieren", href: "/blog/core-web-vitals-local-seo", type: "guide", description: "LCP, INP, CLS" },
-          { label: "Mobile-First Local SEO", href: "/blog/mobile-first-local-seo", type: "guide", description: "Mobile Optimierung" },
+          { label: "Mobile-First Local SEO", href: "/blog/mobile-local-seo", type: "guide", description: "Mobile Optimierung" },
           { label: "Technisches SEO Hub", href: "/blog/technisches-seo-hub", type: "hub", description: "Alle technischen Guides" },
           { label: "Local SEO Audit Checkliste", href: "/blog/local-seo-audit-checkliste", type: "tool", description: "Technischen Status prüfen" },
           { label: "AI-Suche Guide", href: "/blog/ai-suche-lokale-unternehmen", type: "pillar", description: "Schema für AI" },

@@ -665,12 +665,11 @@ const LocalSeoStrategieKleineUnternehmen = () => {
         subtitle="Praktische Hilfen für deine Local SEO Strategie"
         variant="grid"
         resources={[
-          { label: "90-Tage Local SEO Roadmap", href: "/blog/90-tage-local-seo-roadmap", type: "tool", description: "Interaktiver Zeitplan" },
+          { label: "90-Tage Local SEO Roadmap", href: "/blog/local-seo-roadmap-90-tage", type: "tool", description: "Interaktiver Zeitplan" },
           { label: "Local SEO Checkliste Komplett", href: "/blog/local-seo-checkliste-komplett", type: "checklist", description: "80+ Punkte" },
-          { label: "Google Business Profil optimieren", href: "/blog/google-business-profil-optimieren", type: "checklist", description: "GBP-Setup" },
+          { label: "Google Business Profil optimieren", href: "/blog/google-my-business-optimieren", type: "checklist", description: "GBP-Setup" },
           { label: "Kostenlose SEO-Tools", href: "/blog/seo-toolbox-kostenlose-ressourcen", type: "tool", description: "Gratis Tools" },
-          { label: "Local SEO Budget-Rechner", href: "/blog/local-seo-kosten-budgetplanung", type: "tool", description: "Budget planen" },
-          { label: "Branchen-Hub", href: "/blog/branchen-hub", type: "hub", description: "Branchenspezifische Guides" },
+          { label: "Branchen-Hub", href: "/blog/local-seo-branchen-hub", type: "hub", description: "Branchenspezifische Guides" },
         ]}
       />
 

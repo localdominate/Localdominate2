@@ -149,9 +149,6 @@ const LokaleLandingPages = () => {
         <AnswerBlock question="Warum ranken Standortseiten oft nicht?">
           Weil sie aus einer Vorlage stammen, in der nur der Ortsname getauscht wurde. Solche Seiten konkurrieren untereinander um dieselben Begriffe, verwässern die interne Verlinkung und werden als Duplikate behandelt. Weniger Seiten mit echten Belegen liefern verlässlich bessere Ergebnisse.
         </AnswerBlock>
-        <p className="mt-4">
-          Vertiefung: <Link to="/blog/lokale-keyword-kannibalisierung" className="text-primary underline">Keyword-Kannibalisierung vermeiden</Link>.
-        </p>
       </section>
 
       <section id="messung" className="mb-12">

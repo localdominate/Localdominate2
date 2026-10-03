@@ -735,7 +735,7 @@ const LocalSeoAerzte = () => {
 
         <p>
           Weitere Strategien für den Umgang mit negativen Bewertungen finden Sie in unserem 
-          Artikel zu <Link to="/blog/google-bewertungen-sammeln" className="text-primary hover:underline">
+          Artikel zu <Link to="/blog/google-bewertungen-bekommen" className="text-primary hover:underline">
           Google Bewertungen</Link>.
         </p>
       </section>
@@ -923,7 +923,7 @@ const LocalSeoAerzte = () => {
           <li>3. Arztportale (besonders Jameda) aktiv pflegen</li>
           <li>4. Fachspezifische Keywords gezielt einsetzen</li>
           <li>5. Bewertungsmanagement rechtssicher etablieren</li>
-          <li>6. <Link to="/blog/nap-konsistenz" className="text-primary hover:underline">NAP-Konsistenz</Link> in allen Verzeichnissen sicherstellen</li>
+          <li>6. <Link to="/blog/nap-konsistenz-local-seo" className="text-primary hover:underline">NAP-Konsistenz</Link> in allen Verzeichnissen sicherstellen</li>
         </ol>
 
         <p>

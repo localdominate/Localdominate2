@@ -461,7 +461,7 @@ const AiSearchVsTraditionalSearch = () => {
           <li>→ <Link to="/blog/ai-suche-lokale-unternehmen" className="text-primary underline decoration-primary/30 hover:decoration-primary">AI Search Optimization für lokale Unternehmen (Pillar Guide)</Link></li>
           <li>→ <Link to="/blog/ai-search-optimization-2026" className="text-primary underline decoration-primary/30 hover:decoration-primary">AI Search Optimization 2026: Der GEO-Guide</Link></li>
           <li>→ <Link to="/blog/website-content-ai-suchmaschinen" className="text-primary underline decoration-primary/30 hover:decoration-primary">Website-Content für AI-Suchmaschinen optimieren</Link></li>
-          <li>→ <Link to="/blog/google-ai-overviews" className="text-primary underline decoration-primary/30 hover:decoration-primary">Google AI Overviews: Was lokale Unternehmen wissen müssen</Link></li>
+          <li>→ <Link to="/blog/google-ai-overviews-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary">Google AI Overviews: Was lokale Unternehmen wissen müssen</Link></li>
           <li>→ <Link to="/blog/schema-markup-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary">Schema Markup für Local SEO</Link></li>
           <li>→ <Link to="/blog/local-seo-vs-organisch" className="text-primary underline decoration-primary/30 hover:decoration-primary">Local SEO vs. Organic SEO</Link></li>
         </ul>

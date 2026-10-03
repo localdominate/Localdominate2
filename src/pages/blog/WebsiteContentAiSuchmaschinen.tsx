@@ -389,9 +389,9 @@ const WebsiteContentAiSuchmaschinen = () => {
 - Schema Markup & Technical SEO
 
 ## Wichtigste Guides
-- [Lokale SEO 2026](/blog/lokale-seo-2026)
-- [Google Maps Ranking](/blog/google-maps-ranking)
-- [Google Bewertungen](/blog/google-bewertungen)`}</pre>
+- [Lokale SEO 2026](/blog/lokale-suchmaschinenoptimierung-2026)
+- [Google Maps Ranking](/blog/google-maps-ranking-verbessern)
+- [Google Bewertungen](/blog/google-bewertungen-bekommen)`}</pre>
         </div>
       </section>
 
