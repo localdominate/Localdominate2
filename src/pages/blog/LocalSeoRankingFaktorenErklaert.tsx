@@ -692,7 +692,7 @@ const LocalSeoRankingFaktorenErklaert = () => {
         title="📚 Ressourcen zu den Ranking-Faktoren"
         variant="grid"
         resources={[
-          { label: "Google Business Profil optimieren", href: "/blog/google-business-profil-optimieren", type: "checklist", description: "GBP-Signale maximieren" },
+          { label: "Google Business Profil optimieren", href: "/blog/google-my-business-optimieren", type: "checklist", description: "GBP-Signale maximieren" },
           { label: "Google Bewertungen bekommen", href: "/blog/google-bewertungen-bekommen", type: "guide", description: "Bewertungs-Strategie" },
           { label: "Local Linkbuilding Blueprint", href: "/blog/local-link-building-blueprint", type: "pillar", description: "Link-Signale aufbauen" },
           { label: "NAP-Konsistenz Guide", href: "/blog/nap-konsistenz-local-seo", type: "guide", description: "Citation-Signale" },

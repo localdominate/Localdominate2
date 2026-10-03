@@ -11,8 +11,6 @@ import { searchIntentConfigs } from "@/data/searchIntentData";
 import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
 import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import SourcesSection from "@/components/blog/SourcesSection";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -29,7 +27,7 @@ import localSeoTattooImg from "@/assets/blog/local-seo-tattoo.webp";
 import { Palette, Image, Star, Users, TrendingUp, CheckCircle, Lightbulb, MapPin, Shield, Camera } from "lucide-react";
 
 const LocalSeoTattoo = () => {
-  const article = getArticleBySlug("local-seo-tattoo-piercing");
+  const article = getArticleBySlug("local-seo-tattoo-studios");
   if (!article) return null;
 
   const tocItems = [
@@ -140,7 +138,7 @@ const LocalSeoTattoo = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-tattoo-piercing" position="middle" />
+      <BlogCTAABTest articleSlug="local-seo-tattoo-studios" position="middle" />
 
       <section id="google-business" className="mb-12 scroll-mt-20">
         <h2 className="flex items-center gap-3 text-2xl font-bold mb-4">
@@ -187,7 +185,7 @@ const LocalSeoTattoo = () => {
         </div>
       </section>
 
-      <BlogCTAABTest articleSlug="local-seo-tattoo-piercing" position="end" />
+      <BlogCTAABTest articleSlug="local-seo-tattoo-studios" position="end" />
 
       {industryStats.tattoo?.map((stat, i) => <StatisticBox key={i} data={stat} variant={i === 0 ? "highlight" : "default"} />)}
       <StatisticBox data={generalLocalSeoStats} variant="compact" />
@@ -210,18 +208,11 @@ const LocalSeoTattoo = () => {
         </Accordion>
       </section>
 
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Tattoo-Studio verdreifacht Anfragen</h2>
-        {industryCaseStudies.tattoo.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
-      </section>
-
       <SearchIntentAnalysis config={searchIntentConfigs.tattoo} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.tattoo} />
       <IndustryRankingChallenges config={industryRankingConfigs.tattoo} />
       <ContentUpgradeSection config={contentUpgradeConfigs.tattoo} />
-      <HelpfulnessWidget articleSlug="local-seo-tattoo-piercing" />
+      <HelpfulnessWidget articleSlug="local-seo-tattoo-studios" />
       <RelatedIndustryGuides currentSlug="local-seo-tattoo-studios" />
       <SourcesSection sources={sources} />
     </ArticleLayout>

@@ -2,7 +2,6 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
 import TableOfContents from "@/components/blog/TableOfContents";
-import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -18,8 +17,6 @@ import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import ReviewEmailTemplates from "@/components/blog/ReviewEmailTemplates";
 import SmsReviewTemplates from "@/components/blog/SmsReviewTemplates";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -64,12 +61,6 @@ const LocalSeoZahnarzt = () => {
   return (
     <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
-
-      <BlogImage
-        src="/placeholder.svg"
-        alt="Moderne Zahnarztpraxis mit Google-Suche"
-        caption="Lokale Sichtbarkeit entscheidet über den Erfolg einer Zahnarztpraxis"
-      />
 
       <KeyTakeawaysBox items={keyTakeaways} />
 
@@ -281,13 +272,6 @@ const LocalSeoZahnarzt = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2>Praxisbeispiel: Zahnarztpraxis steigert Online-Sichtbarkeit</h2>
-        {industryCaseStudies.zahnarzt.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <ReviewAcquisitionScripts

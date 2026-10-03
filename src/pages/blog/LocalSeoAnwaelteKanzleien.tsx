@@ -1,6 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
-import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -16,8 +15,6 @@ import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import ReviewAcquisitionScripts from "@/components/blog/ReviewAcquisitionScripts";
 import SourcesSection from "@/components/blog/SourcesSection";
 import IndustryLandingCTA from "@/components/blog/IndustryLandingCTA";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -56,12 +53,6 @@ const LocalSeoAnwaelteKanzleien = () => {
   return (
     <ArticleLayout article={article} tocItems={tocItems}>
       <TableOfContents items={tocItems} />
-
-      <BlogImage
-        src="/placeholder.svg"
-        alt="Moderne Anwaltskanzlei mit digitalem Marketing"
-        caption="Lokale Sichtbarkeit entscheidet, welche Kanzlei neue Mandanten gewinnt"
-      />
 
       <KeyTakeawaysBox items={keyTakeaways} />
 
@@ -372,13 +363,6 @@ const LocalSeoAnwaelteKanzleien = () => {
       </section>
 
       {/* Case Study */}
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Kanzlei-Erfolg durch Local SEO</h2>
-        {industryCaseStudies.anwaelte.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
-      </section>
-
       <ReviewAcquisitionScripts
         industries={["anwalt"]}
         title="Bewertungs-Scripts fuer Kanzleien"

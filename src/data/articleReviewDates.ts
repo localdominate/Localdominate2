@@ -2,7 +2,7 @@
  * Centralized review metadata for all articles.
  * Maps article slugs to their last-reviewed date and reviewer name.
  * This data powers the LastReviewedBadge auto-display in ArticleLayout
- * and feeds into schema.org dateModified/reviewedBy signals.
+ * and feeds into the schema.org lastReviewed signal.
  */
 
 export interface ArticleReviewMeta {
@@ -12,11 +12,13 @@ export interface ArticleReviewMeta {
 }
 
 /**
- * YMYL articles get specialist reviewers; standard articles get the editorial team.
+ * Truth rule: the only reviewer named here is the editorial team. There are no specialist
+ * reviewers (no doctors, lawyers or tax advisors) and none may be added without the owner's
+ * written confirmation of a real person.
  */
-const YMYL_REVIEWER = "Fachredaktion YMYL";
-const EDITORIAL_TEAM = "Local Dominator Redaktion";
-const TECH_REVIEWER = "Technische Redaktion";
+const EDITORIAL_TEAM = "LocalDominate Redaktion";
+const YMYL_REVIEWER = EDITORIAL_TEAM;
+const TECH_REVIEWER = EDITORIAL_TEAM;
 
 export const articleReviewDates: Record<string, ArticleReviewMeta> = {
   // === PILLAR PAGES (quarterly review) ===
@@ -50,9 +52,9 @@ export const articleReviewDates: Record<string, ArticleReviewMeta> = {
   "local-seo-fehler": { lastReviewedAt: "2026-03-01", lastReviewedBy: EDITORIAL_TEAM, reviewCycle: "quarterly" },
 
   // === YMYL ARTICLES (monthly review) ===
-  "local-seo-aerzte-praxen": { lastReviewedAt: "2026-03-01", lastReviewedBy: "Dr. med. Fachredaktion", reviewCycle: "monthly" },
-  "local-seo-anwaelte-kanzleien": { lastReviewedAt: "2026-03-01", lastReviewedBy: "Rechtsanwalt Fachredaktion", reviewCycle: "monthly" },
-  "local-seo-steuerberater": { lastReviewedAt: "2026-03-01", lastReviewedBy: "Steuerberater Fachredaktion", reviewCycle: "monthly" },
+  "local-seo-aerzte-praxen": { lastReviewedAt: "2026-03-01", lastReviewedBy: EDITORIAL_TEAM, reviewCycle: "monthly" },
+  "local-seo-anwaelte-kanzleien": { lastReviewedAt: "2026-03-01", lastReviewedBy: EDITORIAL_TEAM, reviewCycle: "monthly" },
+  "local-seo-steuerberater": { lastReviewedAt: "2026-03-01", lastReviewedBy: EDITORIAL_TEAM, reviewCycle: "monthly" },
   "local-seo-apotheken": { lastReviewedAt: "2026-02-20", lastReviewedBy: YMYL_REVIEWER, reviewCycle: "monthly" },
 
   // === BRANCHEN GUIDES (biannual review) ===

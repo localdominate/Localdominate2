@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import type { IndustryBenchmarkGroupData, IndustryBenchmark } from "@/data/industryBenchmarkData";
 
 interface IndustryBenchmarkTableProps {
-  data: IndustryBenchmarkGroupData;
+  data?: IndustryBenchmarkGroupData;
   className?: string;
 }
 
@@ -23,6 +23,9 @@ const BarIndicator = ({ value, max, color }: { value: number; max: number; color
 };
 
 const IndustryBenchmarkTable = ({ data, className }: IndustryBenchmarkTableProps) => {
+  // No sourced benchmark rows, no section: nothing is rendered, not even the heading.
+  if (!data || data.rows.length === 0) return null;
+
   const maxReviews = Math.max(...data.rows.map((r) => r.topPerformerReviews));
   const maxCitations = Math.max(...data.rows.map((r) => r.topPerformerCitations));
   const maxBacklinks = Math.max(...data.rows.map((r) => r.topPerformerBacklinks));

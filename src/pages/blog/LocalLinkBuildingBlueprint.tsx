@@ -31,61 +31,61 @@ const LocalLinkBuildingBlueprint = () => {
 
   const tocItems = [
     { id: "warum-lokale-links", title: "Warum lokale Links so wertvoll sind", level: 2 },
-    { id: "link-wert-bewerten", title: "Lokale Links bewerten: Die Qualitatsmatrix", level: 2 },
+    { id: "link-wert-bewerten", title: "Lokale Links bewerten: Die Qualitätsmatrix", level: 2 },
     { id: "partnerschaften", title: "Strategie 1: Lokale Partnerschaften", level: 2 },
     { id: "sponsoring", title: "Strategie 2: Sponsoring & Vereine", level: 2 },
     { id: "lokale-pr", title: "Strategie 3: Lokale PR & Pressearbeit", level: 2 },
     { id: "events", title: "Strategie 4: Event-Links & Community", level: 2 },
-    { id: "ihk-kammern", title: "Strategie 5: IHK, Kammern & Verbande", level: 2 },
+    { id: "ihk-kammern", title: "Strategie 5: IHK, Kammern & Verbände", level: 2 },
     { id: "bildung-institutionen", title: "Strategie 6: Bildung & Institutionen", level: 2 },
     { id: "unlinked-mentions", title: "Strategie 7: Unlinked Brand Mentions", level: 2 },
     { id: "content-linkbait", title: "Strategie 8: Lokaler Content als Linkbait", level: 2 },
     { id: "outreach-templates", title: "Outreach-Templates zum Kopieren", level: 2 },
     { id: "dach-link-quellen", title: "DACH-spezifische Link-Quellen", level: 2 },
     { id: "linkbuilding-plan", title: "Der 90-Tage-Linkbuilding-Plan", level: 2 },
-    { id: "fehler", title: "Die 10 grossten Linkbuilding-Fehler", level: 2 },
-    { id: "faq", title: "Haufig gestellte Fragen", level: 2 },
+    { id: "fehler", title: "Die 10 größten Linkbuilding-Fehler", level: 2 },
+    { id: "faq", title: "Häufig gestellte Fragen", level: 2 },
   ];
 
   const keyTakeaways = [
     "Lokale Backlinks signalisieren Google geografische Relevanz und Community-Verankerung",
     "10-20 hochwertige lokale Links schlagen 100 minderwertige Verzeichnis-Links",
-    "IHK-, Handwerkskammer- und Verbandslinks gehoren zu den starksten lokalen Trust-Signalen",
+    "IHK-, Handwerkskammer- und Verbandslinks gehören zu den stärksten lokalen Trust-Signalen",
     "Sponsoring von Vereinen und Events liefert Links + PR + Community-Sichtbarkeit in einem",
-    "Im DACH-Raum bieten regionale Institutionen (WKO, local.ch, Stadtportale) einzigartige Link-Moglichkeiten",
+    "Im DACH-Raum bieten regionale Institutionen (WKO, local.ch, Stadtportale) einzigartige Link-Möglichkeiten",
   ];
 
   const faqItems = [
     {
       question: "Wie viele lokale Backlinks braucht ein kleines Unternehmen?",
-      answer: "Qualitat schlagt Quantitat. 10-20 hochwertige lokale Backlinks von relevanten Quellen (Zeitungen, Verbande, Institutionen) sind mehr wert als 100 Verzeichnis-Links. Fokussiere dich auf Diversitat: verschiedene Quelltypen, verschiedene Domains."
+      answer: "Qualität schlägt Quantität. 10-20 hochwertige lokale Backlinks von relevanten Quellen (Zeitungen, Verbände, Institutionen) sind mehr wert als 100 Verzeichnis-Links. Fokussiere dich auf Diversität: verschiedene Quelltypen, verschiedene Domains."
     },
     {
       question: "Was kostet lokales Linkbuilding?",
-      answer: "Viele lokale Links sind kostenlos (IHK-Eintrag, Unlinked Mentions, Kooperationen). Vereinssponsoring kostet typischerweise 200-1.000 EUR/Jahr und liefert Link + Sichtbarkeit. PR und Events erfordern vor allem Zeitinvestition. Budget: 0-500 EUR/Monat fur KMU."
+      answer: "Viele lokale Links sind kostenlos (IHK-Eintrag, Unlinked Mentions, Kooperationen). Vereinssponsoring kostet typischerweise 200-1.000 EUR/Jahr und liefert Link + Sichtbarkeit. PR und Events erfordern vor allem Zeitinvestition. Budget: 0-500 EUR/Monat für KMU."
     },
     {
-      question: "Sind gekaufte Links fur Local SEO gefahrlich?",
-      answer: "Ja. Google erkennt gekaufte Links zunehmend und bestraft sie mit Ranking-Verlusten. Fur lokale Unternehmen ist das Risiko besonders hoch, da der lokale Markt uberschaubar ist. Setze stattdessen auf die organischen Strategien in diesem Guide."
+      question: "Sind gekaufte Links für Local SEO gefährlich?",
+      answer: "Ja. Google erkennt gekaufte Links zunehmend und bestraft sie mit Ranking-Verlusten. Für lokale Unternehmen ist das Risiko besonders hoch, da der lokale Markt überschaubar ist. Setze stattdessen auf die organischen Strategien in diesem Guide."
     },
     {
       question: "Wie lange dauert es, bis lokale Backlinks wirken?",
-      answer: "Einzelne Links konnen innerhalb von 2-4 Wochen Wirkung zeigen. Ein systematischer Linkbuilding-Aufbau braucht 3-6 Monate fur messbare Ranking-Verbesserungen. Die starkste Wirkung entfaltet sich in Kombination mit GBP-Optimierung und Bewertungen."
+      answer: "Einzelne Links können innerhalb von 2-4 Wochen Wirkung zeigen. Ein systematischer Linkbuilding-Aufbau braucht 3-6 Monate für messbare Ranking-Verbesserungen. Die stärkste Wirkung entfaltet sich in Kombination mit GBP-Optimierung und Bewertungen."
     },
     {
       question: "Was sind die besten lokalen Link-Quellen in Deutschland?",
-      answer: "Die Top-5 sind: 1) IHK/Handwerkskammer-Eintrags-Seiten (DA 70+), 2) Lokale Tageszeitungen und Stadtmagazine, 3) Stadtportale und kommunale Websites, 4) Branchenverbande und Innungen, 5) Lokale Vereine und Sponsoring-Seiten."
+      answer: "Die Top-5 sind: 1) IHK/Handwerkskammer-Eintrags-Seiten (DA 70+), 2) Lokale Tageszeitungen und Stadtmagazine, 3) Stadtportale und kommunale Websites, 4) Branchenverbände und Innungen, 5) Lokale Vereine und Sponsoring-Seiten."
     },
     {
-      question: "Funktioniert Gastbeitrag-Linkbuilding fur lokale Unternehmen?",
-      answer: "Ja, aber anders als bei nationalem SEO. Schreibe fur lokale Blogs, Stadtmagazine und regionale Fachportale. Ein Gastbeitrag in der lokalen Zeitung uber dein Fachthema bringt mehr als 10 Gastbeitrage auf nationalen Blogs ohne lokalen Bezug."
+      question: "Funktioniert Gastbeitrag-Linkbuilding für lokale Unternehmen?",
+      answer: "Ja, aber anders als bei nationalem SEO. Schreibe für lokale Blogs, Stadtmagazine und regionale Fachportale. Ein Gastbeitrag in der lokalen Zeitung über dein Fachthema bringt mehr als 10 Gastbeiträge auf nationalen Blogs ohne lokalen Bezug."
     },
     {
       question: "Wie finde ich Unlinked Brand Mentions?",
-      answer: "Nutze Google Alerts fur deinen Firmennamen, Google-Suche mit 'Firmenname -site:deinewebsite.de' oder Tools wie Ahrefs Content Explorer. Kontaktiere Website-Betreiber hoflich und bitte um Verlinkung - die Erfolgsquote liegt bei 30-40 %."
+      answer: "Nutze Google Alerts für deinen Firmennamen, Google-Suche mit 'Firmenname -site:deinewebsite.de' oder Tools wie Ahrefs Content Explorer. Kontaktiere Website-Betreiber höflich und bitte um Verlinkung - die Erfolgsquote liegt bei 30-40 %."
     },
     {
-      question: "Zahlen NoFollow-Links fur lokales SEO?",
+      question: "Zahlen NoFollow-Links für lokales SEO?",
       answer: "NoFollow-Links vererben keinen direkten PageRank, sind aber trotzdem wertvoll. Sie diversifizieren dein Linkprofil, bringen Traffic und Markenbekanntheit. Ein NoFollow-Link von einer lokalen Tageszeitung oder einem IHK-Portal ist oft wertvoller als ein DoFollow-Link von einem unbekannten Blog."
     },
   ];
@@ -133,7 +133,7 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="warum-lokale-links" data-ai-summary="true">
         <h2>Warum lokale Backlinks so wertvoll sind</h2>
         <p data-featured-snippet="true" data-speakable="true">
-          <strong>Lokale Backlinks</strong> sind Verlinkungen von regional relevanten Websites auf dein Unternehmen. Sie signalisieren Google zwei entscheidende Dinge: geografische Relevanz (dein Business ist in der Region verankert) und Vertrauenswurdigkeit (andere lokale Akteure burgen fur dich). Laut der Whitespark-Studie 2024 machen Link-Signale 13 % der Local-Pack-Rankings und 31 % der organischen lokalen Rankings aus.
+          <strong>Lokale Backlinks</strong> sind Verlinkungen von regional relevanten Websites auf dein Unternehmen. Sie signalisieren Google zwei entscheidende Dinge: geografische Relevanz (dein Business ist in der Region verankert) und Vertrauenswürdigkeit (andere lokale Akteure bürgen für dich). Laut der Whitespark-Studie 2024 machen Link-Signale 13 % der Local-Pack-Rankings und 31 % der organischen lokalen Rankings aus.
         </p>
 
         <Table className="my-6">
@@ -179,15 +179,15 @@ const LocalLinkBuildingBlueprint = () => {
         </Table>
 
         <p>
-          Grundlagen zu allen Ranking-Faktoren: <Link to="/blog/local-seo-ranking-faktoren-erklaert" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Ranking-Faktoren erklart</Link>. Fur die Gesamtstrategie: <Link to="/blog/ultimate-guide-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Ultimate Guide Local SEO</Link>.
+          Grundlagen zu allen Ranking-Faktoren: <Link to="/blog/local-seo-ranking-faktoren-erklaert" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Ranking-Faktoren erklärt</Link>. Für die Gesamtstrategie: <Link to="/blog/ultimate-guide-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Ultimate Guide Local SEO</Link>.
         </p>
       </section>
 
-      {/* Qualitatsmatrix */}
+      {/* Qualitätsmatrix */}
       <section id="link-wert-bewerten" data-ai-summary="true">
-        <h2>Lokale Links bewerten: Die Qualitatsmatrix</h2>
+        <h2>Lokale Links bewerten: Die Qualitätsmatrix</h2>
         <p>
-          Nicht jeder lokale Link ist gleich wertvoll. Nutze diese Matrix, um Prioritaten zu setzen:
+          Nicht jeder lokale Link ist gleich wertvoll. Nutze diese Matrix, um Prioritäten zu setzen:
         </p>
 
         <Table className="my-6">
@@ -237,7 +237,7 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="partnerschaften">
         <h2>Strategie 1: Lokale Partnerschaften & Kooperationen</h2>
         <p>
-          Komplementare lokale Unternehmen sind die einfachste und nachhaltigste Quelle fur lokale Links:
+          Komplementäre lokale Unternehmen sind die einfachste und nachhaltigste Quelle für lokale Links:
         </p>
 
         <h3>Partnerschafts-Modelle</h3>
@@ -245,8 +245,8 @@ const LocalLinkBuildingBlueprint = () => {
           {[
             { icon: Handshake, title: "Gegenseitige Empfehlung", desc: "Partner-Seite mit Logo + Link auf beiden Websites. Beispiel: Zahnarzt empfiehlt Kieferorthopaden, Hochzeitsfotograf empfiehlt Florist." },
             { icon: Users, title: "Gemeinsame Aktionen", desc: "Gemeinsames Angebot oder Event bewerben. Beispiel: Restaurant + Weinhandlung = 'Wine & Dine'-Abend mit gegenseitiger Verlinkung." },
-            { icon: MapPin, title: "Nachbarschafts-Netzwerk", desc: "Alle Unternehmen in einer Strasse oder einem Quartier verlinken sich gegenseitig. Starkes lokales Cluster-Signal." },
-            { icon: Megaphone, title: "Lieferanten-Links", desc: "Lass dich als Referenzkunde auf den Websites deiner Lieferanten listen. Oft ubersehen, aber sehr effektiv." },
+            { icon: MapPin, title: "Nachbarschafts-Netzwerk", desc: "Alle Unternehmen in einer Straße oder einem Quartier verlinken sich gegenseitig. Starkes lokales Cluster-Signal." },
+            { icon: Megaphone, title: "Lieferanten-Links", desc: "Lass dich als Referenzkunde auf den Websites deiner Lieferanten listen. Oft übersehen, aber sehr effektiv." },
           ].map((item, i) => (
             <Card key={i} className="border border-border/50">
               <CardContent className="p-5">
@@ -263,7 +263,7 @@ const LocalLinkBuildingBlueprint = () => {
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-6">
           <p className="font-semibold text-foreground mb-2">💡 Praxis-Tipp</p>
           <p className="text-muted-foreground">
-            Erstelle eine <strong>„Unsere Partner"</strong>-Seite auf deiner Website und lade Partner ein, dasselbe zu tun. Das schafft naturliche, kontextrelevante Links — genau was Google belohnt.
+            Erstelle eine <strong>„Unsere Partner"</strong>-Seite auf deiner Website und lade Partner ein, dasselbe zu tun. Das schafft natürliche, kontextrelevante Links — genau was Google belohnt.
           </p>
         </div>
       </section>
@@ -272,7 +272,7 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="sponsoring">
         <h2>Strategie 2: Sponsoring & Vereine</h2>
         <p data-featured-snippet="true">
-          <strong>Vereinssponsoring</strong> ist eine der effektivsten lokalen Linkbuilding-Strategien. Fur 200-1.000 EUR pro Jahr erhaltst du einen Backlink von der Vereinswebsite, lokale Markenbekanntheit und Community-Engagement — alles positive SEO-Signale, die zusammen starker wirken als der Link allein.
+          <strong>Vereinssponsoring</strong> ist eine der effektivsten lokalen Linkbuilding-Strategien. Für 200-1.000 EUR pro Jahr erhältst du einen Backlink von der Vereinswebsite, lokale Markenbekanntheit und Community-Engagement — alles positive SEO-Signale, die zusammen stärker wirken als der Link allein.
         </p>
 
         <Table className="my-6">
@@ -280,7 +280,7 @@ const LocalLinkBuildingBlueprint = () => {
             <TableRow>
               <TableHead className="font-bold">Sponsoring-Typ</TableHead>
               <TableHead className="font-bold">Typische Kosten</TableHead>
-              <TableHead className="font-bold">Link-Qualitat</TableHead>
+              <TableHead className="font-bold">Link-Qualität</TableHead>
               <TableHead className="font-bold">Zusatznutzen</TableHead>
             </TableRow>
           </TableHeader>
@@ -290,8 +290,8 @@ const LocalLinkBuildingBlueprint = () => {
               ["Jugendmannschaft", "100-300 EUR/Jahr", "Hoch", "Besonders gutes Community-Signal"],
               ["Kulturverein / Chor", "100-300 EUR/Jahr", "Mittel", "Konzert-Programme, Flyer"],
               ["Freiwillige Feuerwehr", "200-500 EUR/Jahr", "Hoch", "Hohes lokales Ansehen, DA oft 30+"],
-              ["Schulforderverein", "100-300 EUR/Jahr", "Mittel-Hoch", "Schulwebsite = .edu-ahnliches Signal"],
-              ["Charity / Soziales", "Spende variabel", "Hoch", "CSR-Signal, PR-Moglichkeit"],
+              ["Schulförderverein", "100-300 EUR/Jahr", "Mittel-Hoch", "Schulwebsite = .edu-ähnliches Signal"],
+              ["Charity / Soziales", "Spende variabel", "Hoch", "CSR-Signal, PR-Möglichkeit"],
             ].map(([typ, kosten, qualitaet, zusatz], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{typ}</TableCell>
@@ -316,7 +316,7 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="lokale-pr">
         <h2>Strategie 3: Lokale PR & Pressearbeit</h2>
         <p>
-          Lokale Medien-Links gehoren zu den <strong>wertvollsten Backlinks uberhaupt</strong> (DA 60-80). Die Hurde ist hoher, aber der Effekt enorm:
+          Lokale Medien-Links gehören zu den <strong>wertvollsten Backlinks überhaupt</strong> (DA 60-80). Die Hürde ist höher, aber der Effekt enorm:
         </p>
 
         <h3>PR-Anlass-Typen, die funktionieren</h3>
@@ -330,12 +330,12 @@ const LocalLinkBuildingBlueprint = () => {
           </TableHeader>
           <TableBody>
             {[
-              ["Geschaftseroffnung / Jubilaum", "Hoch", "20 Jahre Backerei Schmidt in Schwabing"],
+              ["Geschäftseröffnung / Jubiläum", "Hoch", "20 Jahre Bäckerei Schmidt in Schwabing"],
               ["Auszeichnung / Award", "Sehr hoch", "Handwerkspreis, Beste Pizzeria 2026"],
-              ["Soziales Engagement", "Hoch", "Freie Haarschnitte fur Obdachlose"],
-              ["Lokale Studie / Datenerhebung", "Sehr hoch", "Umfrage: Was Munchner uber Zahnarzte denken"],
+              ["Soziales Engagement", "Hoch", "Freie Haarschnitte für Obdachlose"],
+              ["Lokale Studie / Datenerhebung", "Sehr hoch", "Umfrage: Was Münchner über Zahnärzte denken"],
               ["Expertenmeinung zu aktuellem Thema", "Mittel", "Handwerker-Tipps: Heizung winterfest machen"],
-              ["Ungewohnliche Geschichte", "Sehr hoch", "Wie ein Donerstand zum Google-Maps-Star wurde"],
+              ["Ungewöhnliche Geschichte", "Sehr hoch", "Wie ein Dönerstand zum Google-Maps-Star wurde"],
             ].map(([anlass, interesse, beispiel], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{anlass}</TableCell>
@@ -357,9 +357,9 @@ const LocalLinkBuildingBlueprint = () => {
         <h3>Lokale Medien-Kontaktliste aufbauen</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
           <li><strong>Tageszeitungen:</strong> Lokalteil-Redaktion direkt kontaktieren (Name des Redakteurs recherchieren)</li>
-          <li><strong>Stadtmagazine:</strong> Oft offener fur ungewohnliche Geschichten</li>
-          <li><strong>Lokale Radio-Sender:</strong> Morgenshow-Teams suchen standig lokale Stories</li>
-          <li><strong>Regionale Online-Portale:</strong> Niedrigere Hurde, oft schneller verlinkt</li>
+          <li><strong>Stadtmagazine:</strong> Oft offener für ungewöhnliche Geschichten</li>
+          <li><strong>Lokale Radio-Sender:</strong> Morgenshow-Teams suchen ständig lokale Stories</li>
+          <li><strong>Regionale Online-Portale:</strong> Niedrigere Hürde, oft schneller verlinkt</li>
           <li><strong>Lokale Blogger & Influencer:</strong> Micro-Influencer mit 1.000-10.000 Followern in deiner Stadt</li>
         </ul>
       </section>
@@ -368,15 +368,15 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="events">
         <h2>Strategie 4: Event-Links & Community-Engagement</h2>
         <p>
-          Events generieren naturliche Links von Veranstaltungs-Kalendern, lokalen Medien und Teilnehmer-Blogs:
+          Events generieren natürliche Links von Veranstaltungs-Kalendern, lokalen Medien und Teilnehmer-Blogs:
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 my-6">
           {[
-            { icon: Calendar, title: "Eigene Events veranstalten", desc: "Tag der offenen Tur, Workshops, Tastings. Eintrage in lokale Event-Kalender = automatische Links." },
+            { icon: Calendar, title: "Eigene Events veranstalten", desc: "Tag der offenen Tür, Workshops, Tastings. Einträge in lokale Event-Kalender = automatische Links." },
             { icon: Trophy, title: "Wettbewerbe sponsern", desc: "Lokale Kochwettbewerbe, Schreib-Contests, Sport-Turniere. Dein Name + Link auf allen Werbematerialien." },
-            { icon: Heart, title: "Charity-Events", desc: "Benefiz-Aktionen generieren PR + Links + Community-Goodwill. Dreifach-Effekt fur lokales SEO." },
-            { icon: GraduationCap, title: "Bildungs-Events", desc: "Kostenlose Workshops (z.B. 'Steuerberater erklart die Steuererklarung'). Positioniert als Experte + generiert Links." },
+            { icon: Heart, title: "Charity-Events", desc: "Benefiz-Aktionen generieren PR + Links + Community-Goodwill. Dreifach-Effekt für lokales SEO." },
+            { icon: GraduationCap, title: "Bildungs-Events", desc: "Kostenlose Workshops (z.B. 'Steuerberater erklärt die Steuererklärung'). Positioniert als Experte + generiert Links." },
           ].map((item, i) => (
             <Card key={i} className="border border-border/50">
               <CardContent className="p-5">
@@ -397,9 +397,9 @@ const LocalLinkBuildingBlueprint = () => {
 
       {/* Strategie 5: IHK & Kammern */}
       <section id="ihk-kammern" data-ai-summary="true">
-        <h2>Strategie 5: IHK, Kammern & Verbande</h2>
+        <h2>Strategie 5: IHK, Kammern & Verbände</h2>
         <p data-featured-snippet="true">
-          <strong>Links von Industrie- und Handelskammern, Handwerkskammern und Berufsverbanden</strong> gehoren zu den starksten lokalen Trust-Signalen. Diese Websites haben typischerweise eine Domain Authority von 70-85 und gelten bei Google als besonders vertrauenswurdig. Die Eintragung ist in den meisten Fallen kostenlos uber die bestehende Mitgliedschaft.
+          <strong>Links von Industrie- und Handelskammern, Handwerkskammern und Berufsverbänden</strong> gehören zu den stärksten lokalen Trust-Signalen. Diese Websites haben typischerweise eine Domain Authority von 70-85 und gelten bei Google als besonders vertrauenswürdig. Die Eintragung ist in den meisten Fällen kostenlos über die bestehende Mitgliedschaft.
         </p>
 
         <Table className="my-6">
@@ -414,13 +414,13 @@ const LocalLinkBuildingBlueprint = () => {
           </TableHeader>
           <TableBody>
             {[
-              ["IHK (Industrie- und Handelskammer)", "DE", "75-85", "Mitgliederverzeichnis", "Profil vollstandig ausfuellen"],
-              ["HWK (Handwerkskammer)", "DE", "65-80", "Betriebsdatenbank", "Eintrag prufen + Website-Link"],
-              ["Arztekammer / Zahnarztkammer", "DE", "60-75", "Arztsuche", "Profil mit Website verlinken"],
+              ["IHK (Industrie- und Handelskammer)", "DE", "75-85", "Mitgliederverzeichnis", "Profil vollständig ausfüllen"],
+              ["HWK (Handwerkskammer)", "DE", "65-80", "Betriebsdatenbank", "Eintrag prüfen + Website-Link"],
+              ["Ärztekammer / Zahnarztkammer", "DE", "60-75", "Arztsuche", "Profil mit Website verlinken"],
               ["Rechtsanwaltskammer", "DE", "65-80", "Anwaltssuche", "Kanzlei-Website eintragen"],
               ["WKO (Wirtschaftskammer)", "AT", "80-90", "Firmen A-Z", "Firmenprofil aktualisieren"],
               ["Gewerbeverein / KMU-Verband", "CH", "40-60", "Mitglieder-Seite", "Logo + Link einreichen"],
-              ["Branchenverband / Innung", "DACH", "40-65", "Mitglieder-Liste", "Website-Link hinzufuegen"],
+              ["Branchenverband / Innung", "DACH", "40-65", "Mitglieder-Liste", "Website-Link hinzufügen"],
             ].map(([inst, land, da, art, aktion], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{inst}</TableCell>
@@ -438,11 +438,11 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="bildung-institutionen">
         <h2>Strategie 6: Bildung & Institutionen</h2>
         <p>
-          Links von Bildungseinrichtungen und offentlichen Institutionen haben besonders hohes Vertrauen:
+          Links von Bildungseinrichtungen und öffentlichen Institutionen haben besonders hohes Vertrauen:
         </p>
         <ul className="list-disc pl-6 space-y-2 my-4">
           <li><strong>Hochschulen:</strong> Praktikums-Angebote, Gastvorlesungen, Forschungskooperationen</li>
-          <li><strong>VHS / Volkshochschule:</strong> Dozenten-Tatigkeit mit Link auf Kursseite</li>
+          <li><strong>VHS / Volkshochschule:</strong> Dozenten-Tätigkeit mit Link auf Kursseite</li>
           <li><strong>Schulen:</strong> Berufsinformationstage, Schulpatenschaften, Schulprojekte</li>
           <li><strong>Stadtbibliothek:</strong> Lesungen, Workshops, Empfehlungslisten</li>
           <li><strong>Kommunale Websites:</strong> Gewerberegister, Neuburger-Informationen</li>
@@ -453,21 +453,21 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="unlinked-mentions">
         <h2>Strategie 7: Unlinked Brand Mentions</h2>
         <p>
-          Oft wirst du bereits online erwahnt — nur ohne Link. Diese <strong>Unlinked Mentions</strong> sind die niedrig hangendsten Fruchte:
+          Oft wirst du bereits online erwähnt — nur ohne Link. Diese <strong>Unlinked Mentions</strong> sind die niedrig hängendsten Früchte:
         </p>
 
         <h3>So findest du Unlinked Mentions</h3>
         <ol className="list-decimal pl-6 space-y-2 my-4">
-          <li><strong>Google-Suche:</strong> <code>"Firmenname" -site:deinewebsite.de</code> — zeigt alle Erwahnungen</li>
-          <li><strong>Google Alerts:</strong> Richte Alerts fur deinen Firmennamen + Inhabernamen ein</li>
-          <li><strong>Ahrefs Content Explorer:</strong> Suche nach Marken-Erwahnungen ohne Backlink</li>
-          <li><strong>Manuell:</strong> Prufe Branchenberichte, Presseartikel, Blog-Erwahnungen</li>
+          <li><strong>Google-Suche:</strong> <code>"Firmenname" -site:deinewebsite.de</code> — zeigt alle Erwähnungen</li>
+          <li><strong>Google Alerts:</strong> Richte Alerts für deinen Firmennamen + Inhabernamen ein</li>
+          <li><strong>Ahrefs Content Explorer:</strong> Suche nach Marken-Erwähnungen ohne Backlink</li>
+          <li><strong>Manuell:</strong> Prüfe Branchenberichte, Presseartikel, Blog-Erwähnungen</li>
         </ol>
 
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-6">
           <p className="font-semibold text-foreground mb-2">📊 Erfolgsquote</p>
           <p className="text-muted-foreground">
-            Die Erfolgsquote bei Unlinked-Mention-Outreach liegt bei <strong>30-40 %</strong>. Besonders hoch bei Zeitungsartikeln und Blog-Posts, wo der Autor dich bereits positiv erwahnt.
+            Die Erfolgsquote bei Unlinked-Mention-Outreach liegt bei <strong>30-40 %</strong>. Besonders hoch bei Zeitungsartikeln und Blog-Posts, wo der Autor dich bereits positiv erwähnt.
           </p>
         </div>
       </section>
@@ -489,11 +489,11 @@ const LocalLinkBuildingBlueprint = () => {
           </TableHeader>
           <TableBody>
             {[
-              ["Lokale Studie / Umfrage", "Die 10 beliebtesten Restaurants in Koln (eigene Umfrage)", "Einzigartige Daten, die niemand sonst hat"],
-              ["Lokaler Guide", "Ultimativer Guide: Wohnungssanierung in Wiener Altbauten", "Referenz-Resource fur ein lokales Thema"],
-              ["Infografik mit Lokaldaten", "Mietpreisentwicklung in Zurich nach Quartier", "Visuell teilbar, leicht zu verlinken"],
-              ["Jahrliche Ubersicht", "Die besten Handwerker-Tipps fur den Hamburger Winter", "Wiederkehrender Anlass, saisonale Links"],
-              ["Kostenloser Rechner / Tool", "Renovierungskosten-Rechner fur Munchen", "Dauerhafter Nutzen = dauerhafte Links"],
+              ["Lokale Studie / Umfrage", "Die 10 beliebtesten Restaurants in Köln (eigene Umfrage)", "Einzigartige Daten, die niemand sonst hat"],
+              ["Lokaler Guide", "Ultimativer Guide: Wohnungssanierung in Wiener Altbauten", "Referenz-Resource für ein lokales Thema"],
+              ["Infografik mit Lokaldaten", "Mietpreisentwicklung in Zürich nach Quartier", "Visuell teilbar, leicht zu verlinken"],
+              ["Jährliche Übersicht", "Die besten Handwerker-Tipps für den Hamburger Winter", "Wiederkehrender Anlass, saisonale Links"],
+              ["Kostenloser Rechner / Tool", "Renovierungskosten-Rechner für München", "Dauerhafter Nutzen = dauerhafte Links"],
             ].map(([typ, beispiel, warum], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{typ}</TableCell>
@@ -513,7 +513,7 @@ const LocalLinkBuildingBlueprint = () => {
       <section id="outreach-templates">
         <LinkBuildingOutreachTemplates
           title="Outreach-Templates zum Kopieren"
-          description="15 kopierfertige E-Mail-Vorlagen fuer jede Link-Building-Strategie. Waehle eine Kategorie, passe die [Platzhalter] an und sende ab."
+          description="15 kopierfertige E-Mail-Vorlagen für jede Link-Building-Strategie. Wähle eine Kategorie, passe die [Platzhalter] an und sende ab."
         />
       </section>
 
@@ -523,19 +523,19 @@ const LocalLinkBuildingBlueprint = () => {
 
         <h3>🇩🇪 Deutschland</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>IHK-Mitgliederverzeichnis</strong> (DA 75-85) — Pflicht fur jedes Unternehmen</li>
+          <li><strong>IHK-Mitgliederverzeichnis</strong> (DA 75-85) — Pflicht für jedes Unternehmen</li>
           <li><strong>Stadtportale</strong> (muenchen.de, hamburg.de, etc.) — Gewerbeverzeichnisse</li>
-          <li><strong>Regionale Tageszeitungen</strong> (Suddeutsche, Hamburger Abendblatt, Kolner Stadt-Anzeiger)</li>
-          <li><strong>meinestadt.de</strong> (DA 70+) — Branchen- und Veranstaltungs-Eintraege</li>
+          <li><strong>Regionale Tageszeitungen</strong> (Süddeutsche, Hamburger Abendblatt, Kölner Stadt-Anzeiger)</li>
+          <li><strong>meinestadt.de</strong> (DA 70+) — Branchen- und Veranstaltungs-Einträge</li>
           <li><strong>Lokale Netzwerke:</strong> BNI-Gruppen, Unternehmerstammtische</li>
         </ul>
 
-        <h3>🇦🇹 Osterreich</h3>
+        <h3>🇦🇹 Österreich</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>WKO Firmen A-Z</strong> (DA 85+) — Starkster osterreichischer Verzeichnis-Link</li>
+          <li><strong>WKO Firmen A-Z</strong> (DA 85+) — Stärkster österreichischer Verzeichnis-Link</li>
           <li><strong>Herold.at</strong> (DA 70+) — Pflicht-Eintrag</li>
           <li><strong>Regionale Medien:</strong> Kurier, Kleine Zeitung, OON</li>
-          <li><strong>Tourismusverbande</strong> — Besonders wertvoll fur Gastro und Hotels</li>
+          <li><strong>Tourismusverbände</strong> — Besonders wertvoll für Gastro und Hotels</li>
         </ul>
 
         <h3>🇨🇭 Schweiz</h3>
@@ -543,7 +543,7 @@ const LocalLinkBuildingBlueprint = () => {
           <li><strong>local.ch / search.ch</strong> (DA 80+) — Die dominierenden Verzeichnisse</li>
           <li><strong>Gewerbevereine</strong> — Kantonale und kommunale Netzwerke</li>
           <li><strong>Regionale Medien:</strong> NZZ (lokal), Tages-Anzeiger, Basler Zeitung</li>
-          <li><strong>Schweiz Tourismus</strong> — Fur Gastro, Hotels, Erlebnisanbieter</li>
+          <li><strong>Schweiz Tourismus</strong> — Für Gastro, Hotels, Erlebnisanbieter</li>
         </ul>
 
         <p>
@@ -560,54 +560,54 @@ const LocalLinkBuildingBlueprint = () => {
         <h3>Woche 1-2: Quick Wins (0 EUR)</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
           <li>IHK/HWK/WKO-Profil mit Website-Link aktualisieren</li>
-          <li>Branchenverband/Innung-Mitgliederprofil prufen</li>
+          <li>Branchenverband/Innung-Mitgliederprofil prüfen</li>
           <li>5 Unlinked Brand Mentions finden und Outreach starten</li>
           <li>Partner-Seite auf eigener Website erstellen</li>
-          <li>3 komplementare lokale Unternehmen fur Kooperation kontaktieren</li>
+          <li>3 komplementäre lokale Unternehmen für Kooperation kontaktieren</li>
         </ul>
 
         <h3>Woche 3-4: Sponsoring & Community (200-500 EUR)</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li>2-3 lokale Vereine fur Sponsoring recherchieren</li>
-          <li>Sponsoring-Vertrage abschliessen, Logo + Link auf Vereinswebsites</li>
-          <li>Lokale Event-Kalender nach Teilnahme-Moglichkeiten durchsuchen</li>
-          <li>Lieferanten-Websites prufen — als Referenzkunde listen lassen</li>
+          <li>2-3 lokale Vereine für Sponsoring recherchieren</li>
+          <li>Sponsoring-Verträge abschließen, Logo + Link auf Vereinswebsites</li>
+          <li>Lokale Event-Kalender nach Teilnahme-Möglichkeiten durchsuchen</li>
+          <li>Lieferanten-Websites prüfen — als Referenzkunde listen lassen</li>
         </ul>
 
         <h3>Woche 5-8: PR & Content (Zeitinvestition)</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
           <li>Lokale Medien-Kontaktliste mit 10+ Kontakten aufbauen</li>
-          <li>1 PR-wurdigen Anlass planen (Jubilaum, Aktion, Studie)</li>
+          <li>1 PR-würdigen Anlass planen (Jubiläum, Aktion, Studie)</li>
           <li>1 Linkbait-Content erstellen (lokaler Guide, Infografik, Rechner)</li>
-          <li>Gastbeitrag fur lokalen Blog oder Stadtmagazin anbieten</li>
+          <li>Gastbeitrag für lokalen Blog oder Stadtmagazin anbieten</li>
         </ul>
 
         <h3>Woche 9-12: Skalieren & Pflegen</h3>
         <ul className="list-disc pl-6 space-y-2 my-4">
           <li>Backlink-Profil in Search Console / Ahrefs analysieren</li>
           <li>Kaputte/verlorene Links identifizieren und wiederherstellen</li>
-          <li>Neue Kooperationen und Sponsoring-Moglichkeiten evaluieren</li>
+          <li>Neue Kooperationen und Sponsoring-Möglichkeiten evaluieren</li>
           <li>Linkbuilding-Prozess dokumentieren und monatlich wiederholen</li>
         </ul>
 
         <p>
-          Gesamtstrategie fur KMU: <Link to="/blog/local-seo-strategie-kleine-unternehmen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Strategie fur kleine Unternehmen</Link>.
+          Gesamtstrategie für KMU: <Link to="/blog/local-seo-strategie-kleine-unternehmen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Strategie für kleine Unternehmen</Link>.
         </p>
       </section>
 
       {/* Fehler */}
       <section id="fehler">
-        <h2>Die 10 grossten Linkbuilding-Fehler</h2>
+        <h2>Die 10 größten Linkbuilding-Fehler</h2>
         <ol className="list-decimal pl-6 space-y-3 my-4">
           <li><strong>Links kaufen</strong> — Google erkennt das zunehmend, Abstrafung droht</li>
-          <li><strong>Nur auf DA achten, lokale Relevanz ignorieren</strong> — Ein DA-25-Link vom Nachbarschaftsverein schlagt einen DA-60-Link ohne Ortsbezug</li>
-          <li><strong>Massen-Verzeichnis-Eintrage</strong> — 20 qualitative Eintraege schlagen 200 Spam-Verzeichnisse</li>
-          <li><strong>Unaturliche Ankertexte</strong> — Immer den gleichen Keyword-Ankertext verwenden ist ein Red Flag</li>
+          <li><strong>Nur auf DA achten, lokale Relevanz ignorieren</strong> — Ein DA-25-Link vom Nachbarschaftsverein schlägt einen DA-60-Link ohne Ortsbezug</li>
+          <li><strong>Massen-Verzeichnis-Einträge</strong> — 20 qualitative Einträge schlagen 200 Spam-Verzeichnisse</li>
+          <li><strong>Unnatürliche Ankertexte</strong> — Immer den gleichen Keyword-Ankertext verwenden ist ein Red Flag</li>
           <li><strong>Linkbuilding ohne Content</strong> — Ohne gute Landingpage verpufft der beste Link</li>
-          <li><strong>IHK/Kammer-Links vergessen</strong> — Die einfachsten, starksten lokalen Links, oft ubersehen</li>
-          <li><strong>Nicht auf nofollow/dofollow achten</strong> — Beides ist wertvoll, aber dofollow-Links haben starkere Ranking-Wirkung</li>
-          <li><strong>Einmalige Aktion statt Prozess</strong> — Linkbuilding ist ein Dauerlaufer, kein Sprint</li>
-          <li><strong>Keine Link-Pflege</strong> — Links konnen verschwinden (Redesigns, 404s) — regelmaessig prufen</li>
+          <li><strong>IHK/Kammer-Links vergessen</strong> — Die einfachsten, stärksten lokalen Links, oft übersehen</li>
+          <li><strong>Nicht auf nofollow/dofollow achten</strong> — Beides ist wertvoll, aber dofollow-Links haben stärkere Ranking-Wirkung</li>
+          <li><strong>Einmalige Aktion statt Prozess</strong> — Linkbuilding ist ein Dauerläufer, kein Sprint</li>
+          <li><strong>Keine Link-Pflege</strong> — Links können verschwinden (Redesigns, 404s) — regelmäßig prüfen</li>
           <li><strong>Konkurrenz ignorieren</strong> — Analysiere die Backlinks deiner Top-3-Konkurrenten und lerne daraus</li>
         </ol>
 
@@ -634,20 +634,20 @@ const LocalLinkBuildingBlueprint = () => {
       <PressOutreachTemplates
         types={["opening", "award", "expert", "trend", "followup"]}
         title="Presse-Vorlagen: PR-gesteuerte Backlinks gewinnen"
-        description="Kopierfertige E-Mail-Templates fuer lokale Journalisten – ideal fuer Pressemitteilungen mit Link-Potenzial."
+        description="Kopierfertige E-Mail-Templates für lokale Journalisten – ideal für Pressemitteilungen mit Link-Potenzial."
       />
 
       <GuestPostOutlines
         categories={["general", "craft", "legal"]}
-        title="Gastbeitrag-Outlines: Content-Vorlagen fuer Link-Kampagnen"
-        description="Fertige Artikel-Gliederungen mit SEO-Hinweisen – ideal fuer systematisches Gastbeitrag-Linkbuilding."
+        title="Gastbeitrag-Outlines: Content-Vorlagen für Link-Kampagnen"
+        description="Fertige Artikel-Gliederungen mit SEO-Hinweisen – ideal für systematisches Gastbeitrag-Linkbuilding."
       />
 
       <HelpfulnessWidget articleSlug="local-link-building-blueprint" />
 
       {/* FAQ */}
       <section id="faq">
-        <h2>Haufig gestellte Fragen</h2>
+        <h2>Häufig gestellte Fragen</h2>
         <BlogFAQSection faqs={faqItems} />
       </section>
 

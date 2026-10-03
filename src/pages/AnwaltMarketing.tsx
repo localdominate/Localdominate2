@@ -592,7 +592,7 @@ const AnwaltMarketing = () => {
                   </CardContent>
                 </Card>
               </Link>
-              <Link to="/blog/e-e-a-t-local-seo" className="group">
+              <Link to="/blog/e-e-a-t-lokale-unternehmen" className="group">
                 <Card className="bg-slate-800/50 border-slate-700 hover:border-amber-500/50 transition-colors h-full">
                   <CardContent className="p-6">
                     <Award className="w-8 h-8 text-amber-400 mb-4" />

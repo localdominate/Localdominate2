@@ -7,8 +7,6 @@ import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import HelpfulnessWidget from "@/components/blog/HelpfulnessWidget";
 import RelatedIndustryGuides from "@/components/blog/RelatedIndustryGuides";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -594,13 +592,6 @@ const LocalSeoTierarzt = () => {
             </div>
           ))}
         </div>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Tierarzt-Notdienst als Patientenmagnet</h2>
-        {industryCaseStudies.tierarzt.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <HelpfulnessWidget articleSlug="local-seo-tierarzt" />

@@ -27,6 +27,9 @@ const StatisticBox = ({ data, className, variant = "default" }: StatisticBoxProp
   const isCompact = variant === "compact";
   const isHighlight = variant === "highlight";
 
+  // No verified figures, no box: nothing is rendered, not even a heading.
+  if (!data || data.stats.length === 0) return null;
+
   return (
     <div
       className={cn(

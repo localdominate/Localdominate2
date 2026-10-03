@@ -7,8 +7,6 @@ import AiCitationStrategyBox from "@/components/blog/AiCitationStrategyBox";
 import SourcesSection from "@/components/blog/SourcesSection";
 import InsightCalloutBox from "@/components/blog/InsightCalloutBox";
 import BlogCTAABTest from "@/components/blog/BlogCTAABTest";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import { Link } from "react-router-dom";
 import { getArticleBySlug } from "@/data/blogArticles";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -446,14 +444,6 @@ const AiSearchVsTraditionalSearch = () => {
       </section>
 
       {/* Case Studies */}
-      <section id="praxisbeispiele" className="mb-12">
-        <h2 className="text-2xl font-bold text-foreground mb-2">Praxisbeispiele: AI-Suche vs. Traditionelle Suche</h2>
-        <p className="text-muted-foreground mb-6">Hypothetische Fallstudien zeigen, wie Unternehmen sich für beide Suchwelten optimieren.</p>
-        {industryCaseStudies["ai-search-vs-traditional-search"]?.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
-      </section>
-
       {/* Internal Links */}
       <section className="mb-12 p-6 bg-muted/30 rounded-xl">
         <h3 className="font-bold text-foreground mb-4">Weiterführende Artikel</h3>
@@ -461,7 +451,7 @@ const AiSearchVsTraditionalSearch = () => {
           <li>→ <Link to="/blog/ai-suche-lokale-unternehmen" className="text-primary underline decoration-primary/30 hover:decoration-primary">AI Search Optimization für lokale Unternehmen (Pillar Guide)</Link></li>
           <li>→ <Link to="/blog/ai-search-optimization-2026" className="text-primary underline decoration-primary/30 hover:decoration-primary">AI Search Optimization 2026: Der GEO-Guide</Link></li>
           <li>→ <Link to="/blog/website-content-ai-suchmaschinen" className="text-primary underline decoration-primary/30 hover:decoration-primary">Website-Content für AI-Suchmaschinen optimieren</Link></li>
-          <li>→ <Link to="/blog/google-ai-overviews" className="text-primary underline decoration-primary/30 hover:decoration-primary">Google AI Overviews: Was lokale Unternehmen wissen müssen</Link></li>
+          <li>→ <Link to="/blog/google-ai-overviews-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary">Google AI Overviews: Was lokale Unternehmen wissen müssen</Link></li>
           <li>→ <Link to="/blog/schema-markup-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary">Schema Markup für Local SEO</Link></li>
           <li>→ <Link to="/blog/local-seo-vs-organisch" className="text-primary underline decoration-primary/30 hover:decoration-primary">Local SEO vs. Organic SEO</Link></li>
         </ul>

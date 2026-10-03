@@ -131,12 +131,12 @@ const AiSucheLokaleUnternehmen = () => {
               <TableCell className="text-muted-foreground">Tendenz stark steigend</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>CTR-Ruckgang bei AI-Antworten (informationell)</TableCell>
+              <TableCell>CTR-Rückgang bei AI-Antworten (informationell)</TableCell>
               <TableCell className="font-semibold text-destructive">-40 %</TableCell>
               <TableCell className="text-muted-foreground">Deutlich weniger Klicks auf Websites</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>CTR-Ruckgang bei AI-Antworten (lokal/transaktional)</TableCell>
+              <TableCell>CTR-Rückgang bei AI-Antworten (lokal/transaktional)</TableCell>
               <TableCell className="font-semibold text-primary">-5–10 %</TableCell>
               <TableCell className="text-muted-foreground">Lokale Suchen weniger betroffen</TableCell>
             </TableRow>
@@ -191,11 +191,11 @@ const AiSucheLokaleUnternehmen = () => {
         <div className="grid md:grid-cols-2 gap-4 my-6">
           {[
             { icon: Target, title: "1. Relevanz-Match", desc: "Beantwortet die Seite die Frage direkt und vollständig? AI bevorzugt Inhalte mit klaren Definitionen und fact-first Struktur." },
-            { icon: Shield, title: "2. Autorenschaft (E-E-A-T)", desc: "Wer steht hinter dem Inhalt? Schema Author Markup, Impressum, Uber-uns-Seite und Fachexpertise-Nachweise zahlen ein." },
+            { icon: Shield, title: "2. Autorenschaft (E-E-A-T)", desc: "Wer steht hinter dem Inhalt? Schema Author Markup, Impressum, Über-uns-Seite und Fachexpertise-Nachweise zahlen ein." },
             { icon: Brain, title: "3. Maschinenlesbarkeit", desc: "Strukturierte Daten (JSON-LD), semantisches HTML, klare Heading-Hierarchie und speakable-Attribute erleichtern die Extraktion." },
             { icon: Sparkles, title: "4. Faktische Klarheit", desc: "Zahlen, Statistiken, konkrete Aussagen mit Quellenangaben. AI vermeidet vage, werbliche Sprache." },
             { icon: Eye, title: "5. Aktualität", desc: "Regelmäßig aktualisierte Inhalte mit dateModified-Signal werden bevorzugt. Veraltete Daten werden abgestraft." },
-            { icon: Globe, title: "6. Zitierbarkeit", desc: "llms.txt, Creative-Commons-Lizenz und explizite Zitierlaubnis (creditText im Schema) erhöhen die Zitierhaufigkeit." },
+            { icon: Globe, title: "6. Zitierbarkeit", desc: "llms.txt, Creative-Commons-Lizenz und explizite Zitierlaubnis (creditText im Schema) erhöhen die Zitierhäufigkeit." },
           ].map((item, i) => (
             <Card key={i} className="border border-border/50">
               <CardContent className="p-5">
@@ -212,10 +212,10 @@ const AiSucheLokaleUnternehmen = () => {
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-6">
           <p className="font-semibold text-foreground flex items-center gap-2 mb-2">
             <Bot className="h-5 w-5 text-primary" />
-            Kernregel fur AI-Sichtbarkeit
+            Kernregel für AI-Sichtbarkeit
           </p>
           <p className="text-muted-foreground">
-            Schreibe so, dass ein <strong>kluger Praktikant deine Kernaussage in 10 Sekunden extrahieren</strong> kann. Wenn ein Mensch sie schnell findet, findet sie auch die AI. Das bedeutet: Kernaussage im ersten Satz, Fakten vor Meinungen, Struktur vor Prosa.
+            Schreibe so, dass ein <strong>klüger Praktikant deine Kernaussage in 10 Sekunden extrahieren</strong> kann. Wenn ein Mensch sie schnell findet, findet sie auch die AI. Das bedeutet: Kernaussage im ersten Satz, Fakten vor Meinungen, Struktur vor Prosa.
           </p>
         </div>
       </section>
@@ -262,9 +262,9 @@ const AiSucheLokaleUnternehmen = () => {
         </Table>
       </section>
 
-      {/* Content fur AI strukturieren */}
+      {/* Content für AI strukturieren */}
       <section id="content-struktur" data-ai-summary="true">
-        <h2>Content fur AI-Antworten strukturieren</h2>
+        <h2>Content für AI-Antworten strukturieren</h2>
         <p>
           AI-Systeme extrahieren Informationen anders als Menschen. Sie suchen nach <strong>klar abgrenzbaren Informationseinheiten</strong>. Hier die Regeln:
         </p>
@@ -275,10 +275,10 @@ const AiSucheLokaleUnternehmen = () => {
             <CardContent className="p-5">
               <div className="flex items-center gap-2 mb-3">
                 <XCircle className="h-5 w-5 text-destructive" />
-                <span className="font-semibold text-destructive text-sm">Schlecht (fur AI)</span>
+                <span className="font-semibold text-destructive text-sm">Schlecht (für AI)</span>
               </div>
               <p className="text-muted-foreground text-sm italic">
-                „In der heutigen digitalen Welt ist es wichtiger denn je, online gefunden zu werden. Viele Unternehmen fragen sich, wie sie ihre Sichtbarkeit verbessern konnen. Es gibt verschiedene Ansatze..."
+                „In der heutigen digitalen Welt ist es wichtiger denn je, online gefunden zu werden. Viele Unternehmen fragen sich, wie sie ihre Sichtbarkeit verbessern können. Es gibt verschiedene Ansätze..."
               </p>
             </CardContent>
           </Card>
@@ -286,7 +286,7 @@ const AiSucheLokaleUnternehmen = () => {
             <CardContent className="p-5">
               <div className="flex items-center gap-2 mb-3">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="font-semibold text-primary text-sm">Gut (fur AI)</span>
+                <span className="font-semibold text-primary text-sm">Gut (für AI)</span>
               </div>
               <p className="text-muted-foreground text-sm italic">
                 „Local SEO steigert die Sichtbarkeit in standortbezogenen Suchergebnissen. Die drei wichtigsten Ranking-Faktoren sind: Google Business Profil (36 %), On-Page SEO (18 %) und Bewertungen (17 %)."
@@ -295,27 +295,27 @@ const AiSucheLokaleUnternehmen = () => {
           </Card>
         </div>
 
-        <h3>Die 5 Content-Strukturregeln fur AI</h3>
+        <h3>Die 5 Content-Strukturregeln für AI</h3>
         <ol className="list-decimal pl-6 space-y-3 my-4">
           <li>
             <strong>Kernaussage im ersten Satz:</strong> Jeder Abschnitt beginnt mit der Hauptinformation — nicht mit einer Einleitung
           </li>
           <li>
-            <strong>Definitionen im „X ist/bezeichnet..."-Format:</strong> AI extrahiert bevorzugt Satze, die mit dem Suchbegriff beginnen und direkt definieren
+            <strong>Definitionen im „X ist/bezeichnet..."-Format:</strong> AI extrahiert bevorzugt Sätze, die mit dem Suchbegriff beginnen und direkt definieren
           </li>
           <li>
-            <strong>Zahlen und Fakten vor Meinungen:</strong> Statistiken, Prozentwerte und konkrete Daten werden haufiger zitiert als subjektive Aussagen
+            <strong>Zahlen und Fakten vor Meinungen:</strong> Statistiken, Prozentwerte und konkrete Daten werden häufiger zitiert als subjektive Aussagen
           </li>
           <li>
-            <strong>Klare Heading-Hierarchie (H2 → H3 → H4):</strong> AI nutzt Uberschriften zur thematischen Zuordnung — keine Ebene uberspringen
+            <strong>Klare Heading-Hierarchie (H2 → H3 → H4):</strong> AI nutzt Überschriften zur thematischen Zuordnung — keine Ebene überspringen
           </li>
           <li>
-            <strong>Listen und Tabellen fur Vergleiche:</strong> Strukturierte Formate werden 2-3x haufiger fur Featured Snippets und AI-Antworten extrahiert
+            <strong>Listen und Tabellen für Vergleiche:</strong> Strukturierte Formate werden 2-3x häufiger für Featured Snippets und AI-Antworten extrahiert
           </li>
         </ol>
 
         <p>
-          Vollstandige Content-Strukturierungsanleitung: <Link to="/blog/website-content-ai-suchmaschinen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Website-Content fur AI-Suchmaschinen strukturieren</Link>.
+          Vollständige Content-Strukturierungsanleitung: <Link to="/blog/website-content-ai-suchmaschinen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Website-Content für AI-Suchmaschinen strukturieren</Link>.
         </p>
       </section>
 
@@ -323,10 +323,10 @@ const AiSucheLokaleUnternehmen = () => {
       <section id="schema-markup-ai" data-ai-summary="true">
         <h2>Schema Markup: Die Sprache der AI</h2>
         <p data-featured-snippet="true">
-          <strong>Schema Markup</strong> ist fur AI-Suchsysteme, was eine Visitenkarte fur Menschen ist: Es liefert strukturierte, maschinenlesbare Informationen uber dein Unternehmen. Lokale Unternehmen mit vollstandigem Schema Markup werden laut Studien <strong>3x haufiger</strong> in AI-generierten Antworten zitiert als solche ohne.
+          <strong>Schema Markup</strong> ist für AI-Suchsysteme, was eine Visitenkarte für Menschen ist: Es liefert strukturierte, maschinenlesbare Informationen über dein Unternehmen. Lokale Unternehmen mit vollständigem Schema Markup werden laut Studien <strong>3x häufiger</strong> in AI-generierten Antworten zitiert als solche ohne.
         </p>
 
-        <h3>Die 5 wichtigsten Schemas fur lokale AI-Sichtbarkeit</h3>
+        <h3>Die 5 wichtigsten Schemas für lokale AI-Sichtbarkeit</h3>
         <Table className="my-6">
           <TableHeader>
             <TableRow>
@@ -340,7 +340,7 @@ const AiSucheLokaleUnternehmen = () => {
             <TableRow>
               <TableCell className="font-medium">LocalBusiness</TableCell>
               <TableCell><span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/15 text-primary">Pflicht</span></TableCell>
-              <TableCell className="text-muted-foreground text-sm">NAP, Offnungszeiten, Geo-Koordinaten, Preisbereich</TableCell>
+              <TableCell className="text-muted-foreground text-sm">NAP, Öffnungszeiten, Geo-Koordinaten, Preisbereich</TableCell>
               <TableCell>
                 <Link to="/blog/localbusiness-schema-implementierung" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium text-sm">Schema Guide</Link>
               </TableCell>
@@ -348,7 +348,7 @@ const AiSucheLokaleUnternehmen = () => {
             <TableRow>
               <TableCell className="font-medium">FAQPage</TableCell>
               <TableCell><span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/15 text-primary">Pflicht</span></TableCell>
-              <TableCell className="text-muted-foreground text-sm">Haufige Fragen — bevorzugte Quelle fur AI-Antworten</TableCell>
+              <TableCell className="text-muted-foreground text-sm">Häufige Fragen — bevorzugte Quelle für AI-Antworten</TableCell>
               <TableCell>
                 <Link to="/blog/schema-markup-local-seo" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium text-sm">Markup Guide</Link>
               </TableCell>
@@ -356,7 +356,7 @@ const AiSucheLokaleUnternehmen = () => {
             <TableRow>
               <TableCell className="font-medium">Review / AggregateRating</TableCell>
               <TableCell><span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary">Hoch</span></TableCell>
-              <TableCell className="text-muted-foreground text-sm">Bewertungen als Trust-Signal fur AI-Empfehlungen</TableCell>
+              <TableCell className="text-muted-foreground text-sm">Bewertungen als Trust-Signal für AI-Empfehlungen</TableCell>
               <TableCell>
                 <Link to="/blog/review-schema-implementierung" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium text-sm">Review Guide</Link>
               </TableCell>
@@ -364,13 +364,13 @@ const AiSucheLokaleUnternehmen = () => {
             <TableRow>
               <TableCell className="font-medium">Speakable</TableCell>
               <TableCell><span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary">Hoch</span></TableCell>
-              <TableCell className="text-muted-foreground text-sm">Markiert vorlesbare Abschnitte fur Voice Search + AI</TableCell>
+              <TableCell className="text-muted-foreground text-sm">Markiert vorlesbare Abschnitte für Voice Search + AI</TableCell>
               <TableCell className="text-muted-foreground text-sm">schema.org/speakable</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium">Article + Author</TableCell>
               <TableCell><span className="text-xs font-medium px-2 py-0.5 rounded-full bg-accent/50 text-accent-foreground">Mittel</span></TableCell>
-              <TableCell className="text-muted-foreground text-sm">E-E-A-T Signale fur Blog-Content und Ratgeber</TableCell>
+              <TableCell className="text-muted-foreground text-sm">E-E-A-T Signale für Blog-Content und Ratgeber</TableCell>
               <TableCell>
                 <Link to="/blog/e-e-a-t-lokale-unternehmen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium text-sm">E-E-A-T Guide</Link>
               </TableCell>
@@ -412,16 +412,16 @@ const AiSucheLokaleUnternehmen = () => {
                 llms.txt
               </h4>
               <p className="text-muted-foreground text-sm mb-3">
-                Strukturierte Ubersicht deiner wichtigsten Inhalte fur LLMs. Wie eine Sitemap, aber fur AI.
+                Strukturierte Übersicht deiner wichtigsten Inhalte für LLMs. Wie eine Sitemap, aber für AI.
               </p>
               <pre className="bg-muted/50 rounded p-3 text-xs overflow-x-auto">
 {`# Pizzeria da Luigi
-> Authentische italienische Kuche
-> in Munchen-Schwabing seit 1995.
+> Authentische italienische Küche
+> in München-Schwabing seit 1995.
 
-## Uber uns
+## Über uns
 Familienbetrieb mit 30 Jahren 
-Erfahrung. Preisgekronte Pizza 
+Erfahrung. Preisgekrönte Pizza 
 und hausgemachte Pasta.
 
 ## Leistungen
@@ -430,7 +430,7 @@ und hausgemachte Pasta.
 - Catering (ab 10 Personen)
 
 ## Kontakt
-Leopoldstr. 42, 80802 Munchen
+Leopoldstr. 42, 80802 München
 Tel: 089-12345678`}
               </pre>
             </CardContent>
@@ -443,7 +443,7 @@ Tel: 089-12345678`}
                 .well-known/ai.txt
               </h4>
               <p className="text-muted-foreground text-sm mb-3">
-                Anweisungen fur AI-Crawler: Was darf zitiert werden, wie soll die Quellenangabe aussehen?
+                Anweisungen für AI-Crawler: Was darf zitiert werden, wie soll die Quellenangabe aussehen?
               </p>
               <pre className="bg-muted/50 rounded p-3 text-xs overflow-x-auto">
 {`# AI Crawler Instructions
@@ -455,7 +455,7 @@ Preferred-citation: "Pizzeria
 # Kontaktdaten
 Business-name: Pizzeria da Luigi
 Business-type: Restaurant
-Location: Munchen, Deutschland
+Location: München, Deutschland
 Language: de
 
 # Zitierlaubnis
@@ -467,7 +467,7 @@ Attribution-required: yes`}
         </div>
 
         <p>
-          Ausfuhrliche Anleitung zur Implementierung: <Link to="/blog/website-content-ai-suchmaschinen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Website-Content fur AI-Suchmaschinen strukturieren</Link>.
+          Ausführliche Anleitung zur Implementierung: <Link to="/blog/website-content-ai-suchmaschinen" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Website-Content für AI-Suchmaschinen strukturieren</Link>.
         </p>
       </section>
 
@@ -475,28 +475,28 @@ Attribution-required: yes`}
       <section id="lokale-ai-optimierung" data-ai-summary="true">
         <h2>Lokale Unternehmen in AI-Empfehlungen bringen</h2>
         <p>
-          Wenn ein Nutzer fragt: <em>„Was ist der beste Italiener in Munchen-Schwabing?"</em> — wie stellst du sicher, dass die AI <strong>dich</strong> empfiehlt?
+          Wenn ein Nutzer fragt: <em>„Was ist der beste Italiener in München-Schwabing?"</em> — wie stellst du sicher, dass die AI <strong>dich</strong> empfiehlt?
         </p>
 
-        <h3>Die 7 Hebel fur lokale AI-Sichtbarkeit</h3>
+        <h3>Die 7 Hebel für lokale AI-Sichtbarkeit</h3>
         <Table className="my-6">
           <TableHeader>
             <TableRow>
               <TableHead className="font-bold">Hebel</TableHead>
               <TableHead className="font-bold">Warum AI das nutzt</TableHead>
-              <TableHead className="font-bold">Prioritat</TableHead>
+              <TableHead className="font-bold">Priorität</TableHead>
               <TableHead className="font-bold">Zeitaufwand</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {[
-              ["Google Business Profil (vollstandig)", "Primare Datenquelle fur lokale AI-Antworten", "Pflicht", "1–2 Std."],
+              ["Google Business Profil (vollständig)", "Primäre Datenquelle für lokale AI-Antworten", "Pflicht", "1–2 Std."],
               ["50+ Google-Bewertungen (4,5+ Sterne)", "AI zitiert Bewertungen als Social Proof", "Pflicht", "Laufend"],
               ["LocalBusiness Schema Markup", "Maschinenlesbare Unternehmens-Metadaten", "Pflicht", "1 Std."],
-              ["FAQ-Seite mit Schema", "Direkte Antwort-Quelle fur AI", "Hoch", "2 Std."],
-              ["llms.txt Datei", "Strukturierte Info fur LLM-Crawler", "Hoch", "30 Min."],
-              ["Lokale Content-Seiten", "Topische Autoritat fur Region + Branche", "Mittel", "4+ Std."],
-              ["Citations in 20+ Verzeichnissen", "Bestatigung uber mehrere Quellen", "Mittel", "3–4 Std."],
+              ["FAQ-Seite mit Schema", "Direkte Antwort-Quelle für AI", "Hoch", "2 Std."],
+              ["llms.txt Datei", "Strukturierte Info für LLM-Crawler", "Hoch", "30 Min."],
+              ["Lokale Content-Seiten", "Topische Autorität für Region + Branche", "Mittel", "4+ Std."],
+              ["Citations in 20+ Verzeichnissen", "Bestätigung über mehrere Quellen", "Mittel", "3–4 Std."],
             ].map(([hebel, warum, prio, zeit], i) => (
               <TableRow key={i}>
                 <TableCell className="font-medium">{hebel}</TableCell>
@@ -523,7 +523,7 @@ Attribution-required: yes`}
 
       {/* GEO vs. SEO */}
       <section id="geo-vs-seo" data-ai-summary="true">
-        <h2>GEO vs. SEO: Was sich andert, was bleibt</h2>
+        <h2>GEO vs. SEO: Was sich ändert, was bleibt</h2>
 
         <Table className="my-6">
           <TableHeader>
@@ -539,19 +539,19 @@ Attribution-required: yes`}
               <TableCell className="font-medium">Ziel</TableCell>
               <TableCell className="text-center text-sm">Top-10 bei Google</TableCell>
               <TableCell className="text-center text-sm">Als Quelle in AI-Antwort zitiert</TableCell>
-              <TableCell className="text-sm"><span className="text-primary font-medium">Erganzend</span></TableCell>
+              <TableCell className="text-sm"><span className="text-primary font-medium">Ergänzend</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium">Keywords</TableCell>
               <TableCell className="text-center text-sm">Exakte & Long-Tail-Keywords</TableCell>
-              <TableCell className="text-center text-sm">Naturliche Sprache, Frage-Antwort</TableCell>
+              <TableCell className="text-center text-sm">Natürliche Sprache, Frage-Antwort</TableCell>
               <TableCell className="text-sm"><span className="text-primary font-medium">Erweitert</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium">Content-Stil</TableCell>
               <TableCell className="text-center text-sm">Umfassend, keyword-optimiert</TableCell>
               <TableCell className="text-center text-sm">Fact-first, klar, extrahierbar</TableCell>
-              <TableCell className="text-sm"><span className="text-primary font-medium">Andert sich</span></TableCell>
+              <TableCell className="text-sm"><span className="text-primary font-medium">Ändert sich</span></TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium">Technisch</TableCell>
@@ -568,7 +568,7 @@ Attribution-required: yes`}
             <TableRow>
               <TableCell className="font-medium">Bewertungen</TableCell>
               <TableCell className="text-center text-sm">Ranking-Faktor im Local Pack</TableCell>
-              <TableCell className="text-center text-sm">Trust-Signal fur AI-Empfehlungen</TableCell>
+              <TableCell className="text-center text-sm">Trust-Signal für AI-Empfehlungen</TableCell>
               <TableCell className="text-sm"><span className="text-muted-foreground">Bleibt</span></TableCell>
             </TableRow>
             <TableRow>
@@ -583,12 +583,12 @@ Attribution-required: yes`}
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-6">
           <p className="font-semibold text-foreground mb-2">📊 Strategische Erkenntnis</p>
           <p className="text-muted-foreground">
-            GEO ersetzt SEO nicht — es <strong>baut darauf auf</strong>. Wer heute gutes Local SEO betreibt, hat bereits 70 % der Arbeit fur AI-Optimierung erledigt. Die fehlenden 30 % sind: Fact-first Content, Schema-Erweiterungen und llms.txt.
+            GEO ersetzt SEO nicht — es <strong>baut darauf auf</strong>. Wer heute gutes Local SEO betreibt, hat bereits 70 % der Arbeit für AI-Optimierung erledigt. Die fehlenden 30 % sind: Fact-first Content, Schema-Erweiterungen und llms.txt.
           </p>
         </div>
 
         <p>
-          Alle Ranking-Faktoren im Detail: <Link to="/blog/local-seo-ranking-faktoren-erklaert" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Ranking-Faktoren erklart</Link>.
+          Alle Ranking-Faktoren im Detail: <Link to="/blog/local-seo-ranking-faktoren-erklaert" className="text-primary underline decoration-primary/30 hover:decoration-primary font-medium">Local SEO Ranking-Faktoren erklärt</Link>.
         </p>
       </section>
 
@@ -610,11 +610,11 @@ Attribution-required: yes`}
           </TableHeader>
           <TableBody>
             {[
-              ["Arzte & Gesundheit", "Sehr hoch", "Welcher Zahnarzt in Wien nimmt neue Patienten?", "FAQ-Schema + Jameda + E-E-A-T"],
-              ["Anwalte & Berater", "Sehr hoch", "Brauche ich einen Fachanwalt fur Mietrecht in Berlin?", "Fachseiten + Article Schema + E-E-A-T"],
-              ["Gastronomie", "Hoch", "Bestes italienisches Restaurant mit Terrasse in Zurich?", "GBP-Fotos + Bewertungen + Speisekarte"],
-              ["Handwerk", "Mittel", "Wer repariert Heizungen am Wochenende in Munchen?", "Notdienst-Keywords + Einzugsgebiet"],
-              ["Einzelhandel", "Mittel", "Wo gibt es Bio-Lebensmittel in Basel?", "GBP-Produkte + Lagerverfugbarkeit"],
+              ["Ärzte & Gesundheit", "Sehr hoch", "Welcher Zahnarzt in Wien nimmt neue Patienten?", "FAQ-Schema + Jameda + E-E-A-T"],
+              ["Anwälte & Berater", "Sehr hoch", "Brauche ich einen Fachanwalt für Mietrecht in Berlin?", "Fachseiten + Article Schema + E-E-A-T"],
+              ["Gastronomie", "Hoch", "Bestes italienisches Restaurant mit Terrasse in Zürich?", "GBP-Fotos + Bewertungen + Speisekarte"],
+              ["Handwerk", "Mittel", "Wer repariert Heizungen am Wochenende in München?", "Notdienst-Keywords + Einzugsgebiet"],
+              ["Einzelhandel", "Mittel", "Wo gibt es Bio-Lebensmittel in Basel?", "GBP-Produkte + Lagerverfügbarkeit"],
               ["Hotels", "Hoch", "Familienfreundliches Hotel am Bodensee unter 150 EUR?", "Bewertungen + Preise + Booking-Schema"],
             ].map(([branche, impact, frage, optimierung], i) => (
               <TableRow key={i}>
@@ -682,13 +682,13 @@ Attribution-required: yes`}
         <h2>Praxis-Checkliste: AI-ready in 7 Tagen</h2>
         <div className="bg-card border border-border rounded-xl p-6 my-6 space-y-3">
           {[
-            { day: "Tag 1", task: "Google Business Profil vollstandig ausfüllen (Beschreibung, Kategorien, Fotos, Produkte)" },
+            { day: "Tag 1", task: "Google Business Profil vollständig ausfüllen (Beschreibung, Kategorien, Fotos, Produkte)" },
             { day: "Tag 2", task: "LocalBusiness Schema Markup auf der Website implementieren" },
             { day: "Tag 3", task: "FAQ-Seite erstellen mit FAQPage Schema (10+ Fragen)" },
             { day: "Tag 4", task: "llms.txt Datei erstellen und unter /llms.txt bereitstellen" },
             { day: "Tag 5", task: "Speakable-Markup auf Hauptseiten + Key-Content hinzufugen" },
             { day: "Tag 6", task: "Content audit: Kernaussagen in ersten Satz jedes Abschnitts verschieben" },
-            { day: "Tag 7", task: "Apple Maps + Bing Places Eintrage prufen/erstellen, Monitoring einrichten" },
+            { day: "Tag 7", task: "Apple Maps + Bing Places Einträge prüfen/erstellen, Monitoring einrichten" },
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-3">
               <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded flex-shrink-0 mt-0.5">
@@ -705,25 +705,25 @@ Attribution-required: yes`}
         <h2>Die 8 großten Fehler bei AI-Optimierung</h2>
         <ol className="list-decimal pl-6 space-y-3 my-4">
           <li><strong>AI ignorieren und nur auf klassisches SEO setzen</strong> — 30 %+ der Suchen haben bereits AI-Antworten</li>
-          <li><strong>Content fur AI umschreiben statt strukturieren</strong> — Es geht um Maschinenlesbarkeit, nicht um Neufassung</li>
-          <li><strong>Schema Markup vergessen</strong> — Ohne strukturierte Daten ist dein Content fur AI schwer extrahierbar</li>
+          <li><strong>Content für AI umschreiben statt strukturieren</strong> — Es geht um Maschinenlesbarkeit, nicht um Neufassung</li>
+          <li><strong>Schema Markup vergessen</strong> — Ohne strukturierte Daten ist dein Content für AI schwer extrahierbar</li>
           <li><strong>Vage, werbliche Sprache statt Fakten</strong> — AI bevorzugt konkrete Zahlen und klare Definitionen</li>
-          <li><strong>E-E-A-T vernachlassigen</strong> — Autorenschaft und Expertise-Nachweise sind fur AI-Vertrauen kritisch</li>
+          <li><strong>E-E-A-T vernachlässigen</strong> — Autorenschaft und Expertise-Nachweise sind für AI-Vertrauen kritisch</li>
           <li><strong>Nur Google optimieren</strong> — ChatGPT, Perplexity und Apple Intelligence wachsen stark</li>
-          <li><strong>Bewertungen nicht aktiv managen</strong> — AI nutzt Bewertungen als primare Trust-Quelle fur lokale Empfehlungen</li>
+          <li><strong>Bewertungen nicht aktiv managen</strong> — AI nutzt Bewertungen als primäre Trust-Quelle für lokale Empfehlungen</li>
           <li><strong>Erfolg nicht messen</strong> — Ohne AI-spezifisches Tracking weißt du nicht, ob deine Maßnahmen wirken</li>
         </ol>
       </section>
 
       {/* Zukunft */}
       <section id="zukunft">
-        <h2>Ausblick: AI-Suche 2027 und daruber hinaus</h2>
+        <h2>Ausblick: AI-Suche 2027 und darüber hinaus</h2>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>Multimodale Suche:</strong> Nutzer fotografieren ein Problem und fragen: „Wer repariert das in meiner Nahe?" — Bild + Text + Standort</li>
-          <li><strong>Echtzeit-Verfugbarkeit:</strong> AI zeigt nicht nur Unternehmen, sondern auch aktuelle Wartezeiten, freie Termine und Lagerbestande</li>
+          <li><strong>Multimodale Suche:</strong> Nutzer fotografieren ein Problem und fragen: „Wer repariert das in meiner Nähe?" — Bild + Text + Standort</li>
+          <li><strong>Echtzeit-Verfügbarkeit:</strong> AI zeigt nicht nur Unternehmen, sondern auch aktuelle Wartezeiten, freie Termine und Lagerbestände</li>
           <li><strong>Proaktive Empfehlungen:</strong> AI-Assistenten empfehlen Unternehmen bevor der Nutzer fragt — basierend auf Kontext und Gewohnheiten</li>
-          <li><strong>Voice-Commerce lokal:</strong> „Hey Google, bestell mir eine Pizza bei Luigi" — direkter Abschluss uber Voice + AI</li>
-          <li><strong>AI-Bewertungsanalyse:</strong> AI fasst Bewertungen zusammen statt einzelne anzuzeigen — „Gaste loben die Pizza, kritisieren die Wartezeit"</li>
+          <li><strong>Voice-Commerce lokal:</strong> „Hey Google, bestell mir eine Pizza bei Luigi" — direkter Abschluss über Voice + AI</li>
+          <li><strong>AI-Bewertungsanalyse:</strong> AI fasst Bewertungen zusammen statt einzelne anzuzeigen — „Gäste loben die Pizza, kritisieren die Wartezeit"</li>
         </ul>
 
         <p>
@@ -753,7 +753,7 @@ Attribution-required: yes`}
 
       {/* FAQ */}
       <section id="faq">
-        <h2>Haufig gestellte Fragen</h2>
+        <h2>Häufig gestellte Fragen</h2>
         <BlogFAQSection faqs={faqItems} />
       </section>
 

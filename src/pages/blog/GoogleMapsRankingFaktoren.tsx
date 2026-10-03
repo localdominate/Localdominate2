@@ -608,7 +608,7 @@ const GoogleMapsRankingFaktoren = () => {
         ]}
       />
 
-      <HelpfulnessWidget articleSlug="google-maps-ranking-faktoren" />
+      <HelpfulnessWidget articleSlug="google-maps-seo-ranking-faktoren" />
     </ArticleLayout>
   );
 };

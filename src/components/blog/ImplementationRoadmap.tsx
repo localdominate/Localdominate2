@@ -9,7 +9,6 @@ import {
   XCircle,
   Shield,
   Zap,
-  Users,
   TrendingUp,
   type LucideIcon,
 } from "lucide-react";
@@ -222,10 +221,6 @@ const ImplementationRoadmap = ({ data, className }: ImplementationRoadmapProps) 
             <span className="inline-flex items-center gap-1">
               <Shield className="h-4 w-4" />
               30 Tage Geld-zurück
-            </span>
-            <span className="inline-flex items-center gap-1">
-              <Users className="h-4 w-4" />
-              500+ zufriedene Kunden
             </span>
           </div>
         </div>

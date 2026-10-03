@@ -1,6 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
-import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -14,10 +13,8 @@ import { searchIntentConfigs } from "@/data/searchIntentData";
 import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
 import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import SourcesSection from "@/components/blog/SourcesSection";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -61,12 +58,6 @@ const LocalSeoElektrotechnik = () => {
   return (
     <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
-
-      <BlogImage
-        src="/placeholder.svg"
-        alt="Elektriker bei der Arbeit mit Google-Suche"
-        caption="Lokale Sichtbarkeit bringt Elektrikern kontinuierlich neue Aufträge"
-      />
 
       <KeyTakeawaysBox items={keyTakeaways} />
 
@@ -283,13 +274,6 @@ const LocalSeoElektrotechnik = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Smart Home als Nische für Elektriker</h2>
-        {industryCaseStudies.elektrotechnik.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <SearchIntentAnalysis config={searchIntentConfigs.elektrotechnik} />

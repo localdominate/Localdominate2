@@ -1,6 +1,5 @@
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import TableOfContents from "@/components/blog/TableOfContents";
-import BlogImage from "@/components/blog/BlogImage";
 import KeyTakeawaysBox from "@/components/blog/KeyTakeawaysBox";
 import AutoLexikonText from "@/components/blog/AutoLexikonText";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -13,8 +12,6 @@ import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
 import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
 import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -59,12 +56,6 @@ const LocalSeoOptiker = () => {
   return (
     <ArticleLayout article={article} tocItems={tocItems} faqItems={faqItems}>
       <TableOfContents items={tocItems} />
-
-      <BlogImage
-        src="/placeholder.svg"
-        alt="Optiker-Geschäft mit modernen Brillen"
-        caption="Lokale Sichtbarkeit ist entscheidend für Optiker und Hörakustiker"
-      />
 
       <KeyTakeawaysBox items={keyTakeaways} />
 
@@ -264,13 +255,6 @@ const LocalSeoOptiker = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Einzeloptiker gegen Ketten</h2>
-        {industryCaseStudies.optiker.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <SearchIntentAnalysis config={searchIntentConfigs.optiker} />

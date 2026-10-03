@@ -10,10 +10,8 @@ import SearchIntentAnalysis from "@/components/blog/SearchIntentAnalysis";
 import { searchIntentConfigs } from "@/data/searchIntentData";
 import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
 import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
 import MiniSuccessStory from "@/components/blog/MiniSuccessStory";
 import { miniSuccessStories } from "@/data/miniSuccessStories";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -872,18 +870,11 @@ const LocalSeoFitness = () => {
         <MiniSuccessStory key={i} story={story} />
       ))}
 
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Boutique-Gym gegen Ketten</h2>
-        {industryCaseStudies.fitness.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
-      </section>
-
       <SearchIntentAnalysis config={searchIntentConfigs.fitness} />
       <IndustryKeywordOpportunities config={industryKeywordConfigs.fitness} />
       <IndustryRankingChallenges config={industryRankingConfigs.fitness} />
       <ContentUpgradeSection config={contentUpgradeConfigs.fitness} />
-      <HelpfulnessWidget articleSlug="local-seo-fitnessstudio-gym" />
+      <HelpfulnessWidget articleSlug="local-seo-fitness" />
     </ArticleLayout>
   );
 };

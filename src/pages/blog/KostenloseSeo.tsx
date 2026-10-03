@@ -1046,7 +1046,7 @@ const KostenloseSeo = () => {
         ]}
       />
 
-      <HelpfulnessWidget articleSlug="kostenlose-seo-massnahmen" />
+      <HelpfulnessWidget articleSlug="kostenloses-seo-guide" />
     </ArticleLayout>
   );
 };

@@ -12,8 +12,6 @@ import { searchIntentConfigs } from "@/data/searchIntentData";
 import ContentUpgradeSection from "@/components/blog/ContentUpgradeSection";
 import { contentUpgradeConfigs } from "@/data/contentUpgradeData";
 import AutoLexikonParagraph from "@/components/blog/AutoLexikonParagraph";
-import CaseStudyCard from "@/components/blog/CaseStudyCard";
-import { industryCaseStudies } from "@/data/industryCaseStudies";
 import StatisticBox from "@/components/blog/StatisticBox";
 import { industryStats, generalLocalSeoStats } from "@/data/industryStatistics";
 import ImplementationRoadmap from "@/components/blog/ImplementationRoadmap";
@@ -71,23 +69,11 @@ const LocalSeoImmobilienmakler = () => {
   ];
 
 
-  const realEstateAgentSchema = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "Beispiel Immobilienmakler",
-    "description": "Local SEO Best Practices für Immobilienmakler",
-    "areaServed": {
-      "@type": "City",
-      "name": "Beispielstadt"
-    }
-  };
-
   return (
     <ArticleLayout 
       article={article} 
       tocItems={tocItems}
       faqItems={faqItems}
-      additionalSchema={realEstateAgentSchema}
     >
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 not-prose">
@@ -798,13 +784,6 @@ Herzliche Grüße,
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </section>
-
-      <section id="praxisbeispiel" className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Praxisbeispiel: Makler wird Stadtteil-Experte</h2>
-        {industryCaseStudies.immobilienmakler.map((study, i) => (
-          <CaseStudyCard key={i} study={study} />
-        ))}
       </section>
 
       <SearchIntentAnalysis config={searchIntentConfigs.immobilienmakler} />

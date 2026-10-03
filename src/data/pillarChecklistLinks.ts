@@ -42,7 +42,7 @@ export const pillarChecklistLinks: Record<string, ChecklistLink[]> = {
       icon: "planner",
     },
     {
-      slug: "local-seo-roadmap",
+      slug: "local-seo-roadmap-90-tage",
       title: { de: "90-Tage Local SEO Roadmap", en: "90-Day Local SEO Roadmap" },
       description: { de: "Gantt-Zeitplan für die ersten 90 Tage", en: "Gantt timeline for the first 90 days" },
       type: "template",
@@ -92,7 +92,7 @@ export const pillarChecklistLinks: Record<string, ChecklistLink[]> = {
       icon: "planner",
     },
     {
-      slug: "local-seo-roadmap",
+      slug: "local-seo-roadmap-90-tage",
       title: { de: "90-Tage Local SEO Roadmap", en: "90-Day Local SEO Roadmap" },
       description: { de: "Gantt-Zeitplan für die ersten 90 Tage", en: "Gantt timeline for the first 90 days" },
       type: "template",
@@ -178,7 +178,7 @@ export const pillarChecklistLinks: Record<string, ChecklistLink[]> = {
       icon: "checklist",
     },
     {
-      slug: "local-seo-roadmap",
+      slug: "local-seo-roadmap-90-tage",
       title: { de: "90-Tage Local SEO Roadmap", en: "90-Day Local SEO Roadmap" },
       description: { de: "Gantt-Zeitplan für die ersten 90 Tage", en: "Gantt timeline for the first 90 days" },
       type: "template",
@@ -340,7 +340,7 @@ export const pillarChecklistLinks: Record<string, ChecklistLink[]> = {
       icon: "checklist",
     },
     {
-      slug: "local-seo-roadmap",
+      slug: "local-seo-roadmap-90-tage",
       title: { de: "90-Tage Local SEO Roadmap", en: "90-Day Local SEO Roadmap" },
       description: { de: "Zeitplan für 2026", en: "Timeline for 2026" },
       type: "template",
